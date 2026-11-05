@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0d1720" />
+    <title>Autonomous Warfare v0.1</title>
+  </head>
+  <body>
+    <main id="app">
+      <header>
+        <div>
+          <small>TACTICAL SIMULATION</small>
+          <h1>Autonomous Warfare <em>v0.1</em></h1>
+        </div>
+        <span id="counts"></span>
+      </header>
+      <div id="game"></div>
+      <aside id="inspect">
+        Tap a soldier to inspect • Drag to pan • Pinch to zoom
+      </aside>
+      <nav>
+        <button id="pause">Pause</button
+        ><button data-speed="1" class="active">1×</button
+        ><button data-speed="2">2×</button><button data-speed="4">4×</button
+        ><button id="restart">Restart</button>
+      </nav>
+      <div id="outcome" hidden></div>
+      <footer>
+        ELIMINATION · USMC vs Russian infantry · autonomous squads
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
