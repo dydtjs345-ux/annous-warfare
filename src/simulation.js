@@ -1,4 +1,13 @@
-import { W, H, blocked, sight, cover, path } from "./world.js";
+import {
+  W,
+  H,
+  blocked,
+  sight,
+  cover,
+  path,
+  reachableGoal,
+  key,
+} from "./world.js";
 export const parts = [
   "head",
   "torso",
@@ -15,8 +24,8 @@ export class Battle {
     this.result = null;
     this.shots = [];
     this.squads = [
-      { goal: { x: 13, y: 8 }, timer: 0 },
-      { goal: { x: 16, y: 18 }, timer: 0 },
+      { goal: { x: 13, y: 8 }, timer: 8 },
+      { goal: { x: 16, y: 18 }, timer: 8 },
     ];
     this.units = [];
     for (let team = 0; team < 2; team++)
@@ -50,6 +59,10 @@ export class Battle {
           hit: 0,
           facing: team ? Math.PI : 0,
           treat: 0,
+          order: "Advance",
+          target: null,
+          navigation: "Awaiting update",
+          replanAt: 0,
         });
   }
   injury(u, p, damage) {
@@ -59,6 +72,8 @@ export class Battle {
       u.active = false;
       u.dead = true;
       u.state = "Eliminated";
+      u.order = u.navigation = "Eliminated";
+      u.target = null;
     } else if (
       u.health.torso < 22 ||
       u.health.head < 25 ||
@@ -66,6 +81,8 @@ export class Battle {
     ) {
       u.active = false;
       u.state = "Incapacitated";
+      u.order = u.navigation = "Incapacitated";
+      u.target = null;
     }
   }
   step(dt) {
@@ -81,18 +98,22 @@ export class Battle {
         const known = alive
           .map((u) => u.memory)
           .filter((m) => m && this.time - m.time < 12);
-        squad.goal = known.length
+        const desired = known.length
           ? { x: Math.round(known[0].x), y: Math.round(known[0].y) }
           : {
               x: 2 + Math.floor(this.random() * (W - 4)),
               y: 2 + Math.floor(this.random() * (H - 4)),
             };
+        squad.goal = reachableGoal(leader, desired);
         squad.timer = 8;
       }
     }
     for (const u of this.units) {
       u.hit = Math.max(0, u.hit - dt);
       if (!u.active) continue;
+      u.order = "Hold";
+      u.target = null;
+      u.navigation = "Holding";
       u.cooldown -= dt;
       const enemies = this.units
         .filter(
@@ -108,6 +129,7 @@ export class Battle {
       if (u.reload > 0) {
         u.reload -= dt;
         u.state = "Reloading";
+        u.order = "Reload";
         if (u.reload <= 0) {
           const n = Math.min(u.mag, u.reserve);
           u.ammo = n;
@@ -127,6 +149,7 @@ export class Battle {
           .sort((a, b) => dist(u, a) - dist(u, b))[0];
         if (patient) {
           u.state = "Moving to casualty";
+          u.order = "Treat casualty";
           if (dist(u, patient) < 1.4) {
             u.state = "Treating";
             u.treat += dt;
@@ -151,11 +174,14 @@ export class Battle {
       }
       if (u.ammo === 0 && u.reserve > 0) {
         u.reload = u.role === "LMG" ? 4.5 : 2.6;
+        u.state = "Reloading";
+        u.order = "Reload";
         continue;
       }
       if (enemy && dist(u, enemy) <= u.range && u.ammo > 0) {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
         u.state = "Engaging";
+        u.order = "Engage visible enemy";
         if (u.cooldown <= 0) {
           u.ammo--;
           u.cooldown = u.role === "LMG" ? 0.2 : 0.65;
@@ -196,7 +222,12 @@ export class Battle {
             }
           if (options.length) {
             u.state = "Seeking cover";
-            this.move(u, options[0], dt);
+            u.order = "Seek cover";
+            this.move(
+              u,
+              options.find((a) => this.spaceFree(u, a)) || options[0],
+              dt,
+            );
           }
         }
         continue;
@@ -215,7 +246,8 @@ export class Battle {
           u.memory && this.time - u.memory.time < 10
             ? "Searching last contact"
             : "Patrolling";
-      this.move(u, goal, dt);
+      u.order = u.state;
+      this.move(u, this.formationGoal(u, goal), dt);
     }
     const counts = [0, 1].map(
       (t) => this.units.filter((u) => u.team === t && u.active).length,
@@ -228,29 +260,122 @@ export class Battle {
             ? "USMC victory"
             : "Russian infantry victory";
   }
+  // Assign nearby distinct cells without changing the squad's tactical objective.
+  formationGoal(u, goal) {
+    const offsets = [
+      [0, 0],
+      [-1, 0],
+      [0, 1],
+      [1, 0],
+      [0, -1],
+      [-1, 1],
+    ];
+    const [dx, dy] = offsets[u.id % 6];
+    const desired = { x: Math.round(goal.x) + dx, y: Math.round(goal.y) + dy };
+    if (u.formationKey === key(desired.x, desired.y)) return u.formationTarget;
+    const candidates = [];
+    for (let x = desired.x - 2; x <= desired.x + 2; x++)
+      for (let y = desired.y - 2; y <= desired.y + 2; y++) {
+        if (
+          !blocked(x, y) &&
+          !this.units.some(
+            (a) =>
+              a !== u &&
+              a.team === u.team &&
+              a.active &&
+              a.formationTarget?.x === x &&
+              a.formationTarget?.y === y,
+          )
+        )
+          candidates.push({ x, y });
+      }
+    candidates.sort((a, b) => dist(a, desired) - dist(b, desired));
+    const target = candidates.find(
+      (a) =>
+        (Math.round(u.x) === a.x && Math.round(u.y) === a.y) ||
+        path(u, a).length,
+    );
+    u.formationKey = key(desired.x, desired.y);
+    u.formationTarget = target || reachableGoal(u, desired);
+    return u.formationTarget;
+  }
+  spaceFree(u, position) {
+    return (
+      !blocked(Math.round(position.x), Math.round(position.y)) &&
+      !this.units.some(
+        (a) => a !== u && !a.dead && dist(a, position) < 0.6 - 1e-8,
+      )
+    );
+  }
   move(u, goal, dt) {
+    u.target = { x: Math.round(goal.x), y: Math.round(goal.y) };
+    if (blocked(u.target.x, u.target.y)) u.target = reachableGoal(u, u.target);
+    const goalKey = key(u.target.x, u.target.y);
     if (
-      !u.route.length ||
-      u.routeGoal !== `${Math.round(goal.x)},${Math.round(goal.y)}`
+      u.routeGoal !== goalKey ||
+      (!u.route.length && this.time >= u.replanAt)
     ) {
-      u.route = path(u, goal);
-      u.routeGoal = `${Math.round(goal.x)},${Math.round(goal.y)}`;
+      u.route = path(u, u.target);
+      u.routeBlockedByUnits = false;
+      u.routeGoal = goalKey;
+      u.replanAt = this.time + 0.6;
+    }
+    // BFS starts at a rounded cell; finish the remaining fractional step inside it.
+    if (
+      !u.route.length &&
+      Math.round(u.x) === u.target.x &&
+      Math.round(u.y) === u.target.y &&
+      dist(u, u.target) > 0.01
+    ) {
+      u.route = [[u.target.x, u.target.y]];
     }
     const n = u.route[0];
-    if (!n) return;
+    if (!n) {
+      u.navigation =
+        dist(u, u.target) < 0.1
+          ? "Arrived"
+          : u.routeBlockedByUnits
+            ? "Waiting for spacing"
+            : "No route";
+      return;
+    }
     const dx = n[0] - u.x,
       dy = n[1] - u.y,
       d = Math.hypot(dx, dy);
-    const legs = (u.health["left leg"] + u.health["right leg"]) / 200,
-      speed = 1.7 * (0.25 + 0.75 * legs);
-    if (d < speed * dt) {
-      u.x = n[0];
-      u.y = n[1];
-      u.route.shift();
-    } else {
-      u.x += (dx / d) * speed * dt;
-      u.y += (dy / d) * speed * dt;
+    const legs = (u.health["left leg"] + u.health["right leg"]) / 200;
+    const step = Math.min(d, 1.7 * (0.25 + 0.75 * legs) * dt);
+    const next = d
+      ? { x: u.x + (dx / d) * step, y: u.y + (dy / d) * step }
+      : { x: u.x, y: u.y };
+    // Sweep short increments so accelerated simulation cannot cross another unit.
+    let clear = true;
+    for (let t = 0.2; t <= 1.001; t += 0.2)
+      if (
+        !this.spaceFree(u, {
+          x: u.x + (next.x - u.x) * t,
+          y: u.y + (next.y - u.y) * t,
+        })
+      )
+        clear = false;
+    if (!clear) {
+      u.navigation = "Waiting for spacing";
+      if (this.time >= u.replanAt) {
+        const occupied = new Set(
+          this.units
+            .filter((a) => a !== u && !a.dead)
+            .map((a) => key(Math.round(a.x), Math.round(a.y))),
+        );
+        occupied.delete(key(Math.round(u.x), Math.round(u.y)));
+        u.route = path(u, u.target, occupied);
+        u.routeBlockedByUnits = true;
+        u.replanAt = this.time + 0.6;
+      }
+      return;
     }
+    u.x = next.x;
+    u.y = next.y;
     u.facing = Math.atan2(dy, dx);
+    u.navigation = "Moving";
+    if (d <= step) u.route.shift();
   }
 }

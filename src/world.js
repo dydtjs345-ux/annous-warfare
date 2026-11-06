@@ -67,7 +67,7 @@ export function cover(target, attacker) {
   }
   return result;
 }
-export function path(a, b) {
+export function path(a, b, occupied = new Set()) {
   const start = key(Math.round(a.x), Math.round(a.y)),
     goal = key(Math.round(b.x), Math.round(b.y));
   const queue = [start],
@@ -83,7 +83,7 @@ export function path(a, b) {
       [0, -1],
     ]) {
       const n = key(x + dx, y + dy);
-      if (!blocked(x + dx, y + dy) && !prev.has(n)) {
+      if (!blocked(x + dx, y + dy) && !occupied.has(n) && !prev.has(n)) {
         prev.set(n, k);
         queue.push(n);
       }
@@ -97,4 +97,36 @@ export function path(a, b) {
     k = prev.get(k);
   }
   return out;
+}
+
+// Resolve invalid orders to the closest reachable terrain cell, never a wall.
+export function reachableGoal(start, desired) {
+  const queue = [[Math.round(start.x), Math.round(start.y)]];
+  const seen = new Set([key(...queue[0])]);
+  let best = queue[0],
+    score = Infinity;
+  for (let i = 0; i < queue.length; i++) {
+    const [x, y] = queue[i],
+      d = Math.hypot(x - desired.x, y - desired.y);
+    if (d < score) {
+      best = [x, y];
+      score = d;
+    }
+    if (d === 0) break;
+    for (const [dx, dy] of [
+      [1, 0],
+      [-1, 0],
+      [0, 1],
+      [0, -1],
+    ]) {
+      const nx = x + dx,
+        ny = y + dy,
+        k = key(nx, ny);
+      if (!blocked(nx, ny) && !seen.has(k)) {
+        seen.add(k);
+        queue.push([nx, ny]);
+      }
+    }
+  }
+  return { x: best[0], y: best[1] };
 }
