@@ -55,6 +55,7 @@ reports/v027-movement-final-v3.json
 reports/v027-movement-final.json
 reports/v027-movement-initial.json
 reports/v027-playback-parity.json
+reports/v027-pr-description.md
 reports/v027-problem-cases-final.json
 reports/v027-problem-cases-v3.json
 reports/v027-problem-cases.json
