@@ -713,7 +713,11 @@ test("continuous radio refresh cannot indefinitely hold a healthy rifleman witho
     longestHold = 0;
   for (let i = 0; i < 400; i++) {
     b.step(0.05);
-    reacquired ||= b.units[1].state === "Reacquiring contact";
+    // A reloading enemy can now move into this soldier's own firing lane;
+    // actual engagement is useful reacquisition without requiring a recon label.
+    reacquired ||=
+      b.units[1].state === "Reacquiring contact" ||
+      b.units[1].firedAt === b.time;
     held = b.units[1].state === "Holding contact" ? held + 0.05 : 0;
     longestHold = Math.max(longestHold, held);
   }

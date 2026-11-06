@@ -1,3 +1,5 @@
+import { squadThreats, uncertainThreats } from "./intelligence.js";
+import { protectionAt, exposure, positionScore } from "./tactics.js";
 import { sight } from "./world.js";
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export function firingStatus(battle, u, enemy) {
@@ -6,6 +8,8 @@ export function firingStatus(battle, u, enemy) {
       permitted: false,
       reason: u.dead ? "Eliminated" : "Incapacitated",
     };
+  if (["deploying", "unmounting"].includes(u.mount?.state))
+    return { permitted: false, reason: `LMG ${u.mount.state}` };
   if (u.reload > 0) return { permitted: false, reason: "Reloading" };
   if (u.ammo <= 0)
     return {
@@ -37,6 +41,10 @@ export function firingStatus(battle, u, enemy) {
   return { permitted: true, reason: "Clear firing opportunity" };
 }
 const reasons = {
+  "Deploying LMG":
+    "Deploying weapon support on a verified low-wall firing lane",
+  "Unmounting LMG":
+    "Releasing support before repositioning / changing firing lane",
   Engaging: "Maintaining a visible firing solution",
   Aiming: "Acquiring a directly visible target",
   Reloading: "Reloading individual weapon",
@@ -82,7 +90,19 @@ export function refreshDiagnostics(battle, u) {
         : "none";
   const target = direct ?? memory;
   const firing = firingStatus(battle, u, direct);
+  const threats = [
+    ...squadThreats(battle, u.team),
+    ...uncertainThreats(battle, u),
+  ];
   u.diagnostics = {
+    now: battle.time,
+    cover: threats.length
+      ? {
+          protection: protectionAt(u, threats),
+          exposure: exposure(u, threats),
+          score: positionScore(u, u, threats),
+        }
+      : null,
     source,
     targetId: target?.enemyId ?? direct?.id ?? null,
     targetDistance: target ? distance(u, target) : null,

@@ -337,7 +337,9 @@ test("rejected rifleman candidates do not permanently starve a reachable acting 
       acted ||= b.units[0].state === "Reacquiring contact";
     }
     assert.ok(acted);
-    assert.ok(b.units[0].x > 4);
+    // Reloading enemies can now seek cover, changing the observation route.
+    // Check real progress from the spawn rather than imposing an east-only path.
+    assert.ok(Math.hypot(b.units[0].x - 3, b.units[0].y - 11) > 1);
   } finally {
     for (const d of doors) obstacles.delete(d);
   }

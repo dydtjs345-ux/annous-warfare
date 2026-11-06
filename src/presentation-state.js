@@ -64,6 +64,8 @@ export function activityKind(u) {
   if (!u.active) return null;
   if (p.treating) return "treating";
   if (p.reloading) return "reloading";
+  if (p.shotThisStep) return "engaging";
+  if (["deploying", "unmounting"].includes(u.mount?.state)) return "cover";
   if (p.shotThisStep || (["Engaging", "Aiming"].includes(u.state) && p.direct))
     return "engaging";
   if (p.moving)
@@ -156,7 +158,10 @@ export function finishPresentationStep(battle, dt) {
         p.overwatch ||
         lane;
       const bucket =
-        kind === "reloading" || (p.moving && !useful)
+        kind === "reloading" ||
+        (["deploying", "unmounting"].includes(u.mount?.state) &&
+          !p.shotThisStep) ||
+        (p.moving && !useful)
           ? "preparation"
           : useful
             ? "contribution"

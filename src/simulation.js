@@ -1,3 +1,4 @@
+import { updateMount, releaseMount, mountBonus } from "./mounting.js";
 import {
   initializePresentation,
   beginPresentationStep,
@@ -126,7 +127,10 @@ export class Battle {
       u.order = u.navigation = "Incapacitated";
       u.target = null;
     }
-    if (wasActive && !u.active) recordCombatLoss(this, u);
+    if (wasActive && !u.active) {
+      recordCombatLoss(this, u);
+      releaseMount(this, u, "Combat ineffective");
+    }
     if (u.health[p] < oldHealth)
       emitVisualEvent(this, "damage", u, {
         part: p,
@@ -177,12 +181,17 @@ export class Battle {
       u.cooldown -= dt;
       const enemies = u.visibleEnemies.filter((e) => e.active && sight(u, e));
       const enemy = selectEnemy(this, u, enemies);
+      updateMount(this, u, enemy);
       u.treat =
         this.time - (u.treatmentAt ?? -Infinity) <= dt + 1e-8 ? u.treat : 0;
       if (u.reload > 0) {
+        // Reload timing remains authoritative; hands being busy must not prevent
+        // a short defensive move after direct contact / an incoming-fire report.
+        const threats = enemies.length ? enemies : uncertainThreats(this, u);
+        const relocating = threats.length && localCover(this, u, threats, dt);
         u.reload -= dt;
         u.state = "Reloading";
-        u.order = "Reload";
+        u.order = relocating ? "Reload; improve protected position" : "Reload";
         if (u.reload <= 0) {
           const n = Math.min(u.mag, u.reserve);
           u.ammo = n;
@@ -286,6 +295,7 @@ export class Battle {
             targetY: enemy.y,
             angle: u.facing,
             weapon: u.role === "LMG" ? "LMG" : "rifle",
+            supported: u.mount?.state === "mounted",
           });
           incomingFire(this, u, enemy);
           markObservedFire(this, u);
@@ -295,6 +305,7 @@ export class Battle {
             (0.72 - dist(u, enemy) * 0.033) *
               (0.4 + 0.6 * arms) *
               accuracyFactor(u) *
+              mountBonus(u, "accuracy") *
               (1 - cover(enemy, u)),
           );
           if (this.random() < chance) {
@@ -316,8 +327,16 @@ export class Battle {
         this.squads[u.team].searches?.delete(u.id);
         u.contactWait = null;
         const maneuver = this.squads[u.team].maneuver;
-        if (!followManeuver(this, u, maneuver, dt))
-          localCover(this, u, enemies, dt);
+        if (!localCover(this, u, enemies, dt))
+          followManeuver(this, u, maneuver, dt);
+        if (
+          ["Engaging", "Aiming"].includes(u.state) &&
+          ["deploying", "unmounting"].includes(u.mount?.state)
+        ) {
+          u.state =
+            u.mount.state === "deploying" ? "Deploying LMG" : "Unmounting LMG";
+          u.order = u.mount.reason;
+        }
         continue;
       }
       const tactical = this.squads[u.team],
@@ -326,6 +345,27 @@ export class Battle {
       const alertReady =
         u.alert && this.time >= u.alert.readyAt && this.time < u.alert.until;
       const uncertain = alertReady ? uncertainThreats(this, u) : [];
+      // Local self-preservation precedes radio assignments and coordination waits.
+      const defensive = enemies.length
+        ? enemies
+        : [
+            ...squadThreats(this, u.team).filter(
+              (t) =>
+                t.confidence > 0.7 &&
+                t.clearedAt == null &&
+                dist(u, t) <= u.range,
+            ),
+            ...uncertain,
+          ];
+      if (
+        defensive.length &&
+        (enemies.length ||
+          u.assignment?.type !== "recon" ||
+          u.coverTarget ||
+          u.suppression > 0.65) &&
+        localCover(this, u, defensive, dt)
+      )
+        continue;
       if (followManeuver(this, u, maneuver, dt)) continue;
       if (followAssignment(this, u, dt)) continue;
       if (recent) {
@@ -472,6 +512,13 @@ export class Battle {
     }
   }
   move(u, goal, dt) {
+    if (!u.active) return false;
+    if (u.mount && u.mount.state !== "unsupported" && dist(u, goal) > 0.2) {
+      releaseMount(this, u, "Movement objective requires unmounting");
+      u.navigation = "Unmounting before movement";
+      u.state = "Unmounting LMG";
+      return true;
+    }
     if (
       this.time - (u.lastMoveCall ?? -Infinity) > 1 ||
       !u.navPosition ||
