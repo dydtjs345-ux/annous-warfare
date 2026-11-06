@@ -4,6 +4,7 @@ import { Battle } from "../src/simulation.js";
 import { cover, sight, path, blocked } from "../src/world.js";
 test("squads have required roles and independent ammunition", () => {
   const b = new Battle();
+  assert.ok(b.squads.every((s) => s.intention === "Advance"));
   for (const team of [0, 1]) {
     const squad = b.units.filter((u) => u.team === team);
     assert.equal(squad.length, 6);
@@ -380,7 +381,8 @@ test("a covering element fires while only a minority reposition", () => {
   b.units[6].x = 9;
   b.units[6].y = 11;
   const before = b.units.map((u) => ({ x: u.x, y: u.y, ammo: u.ammo }));
-  b.step(0.05);
+  updateSquadTactics(b, 0);
+  for (let i = 0; i < 16; i++) b.step(0.05);
   assert.ok(b.squads[0].maneuver);
   assert.ok(
     b.units.filter((u) => u.team === 0 && u.ammo < before[u.id].ammo).length >=
@@ -418,4 +420,260 @@ test("pressure prevents blind exposure even without a located threat", () => {
   assert.equal(u.state, "Pinned");
   assert.equal(u.x, p.x);
   assert.equal(u.y, p.y);
+});
+
+import {
+  perceive,
+  adoptContact,
+  contacts,
+  squadThreats,
+  reportIncoming,
+  selectEnemy,
+} from "../src/intelligence.js";
+import { inspectSoldier } from "../src/inspection.js";
+
+function sightingFixture() {
+  const b = new Battle(seeded(9));
+  b.units[0].x = 3;
+  b.units[0].y = 11;
+  b.units[1].x = 6;
+  b.units[1].y = 6;
+  b.units[6].x = 9;
+  b.units[6].y = 11;
+  return b;
+}
+
+test("confirmed sightings are instantly available to every living squad member, including casualties", () => {
+  const b = sightingFixture(),
+    observer = b.units[0],
+    recipient = b.units[1];
+  recipient.active = false;
+  assert.equal(sight(recipient, b.units[6]), false);
+  perceive(b);
+  assert.equal(observer.intel, recipient.intel);
+  assert.deepEqual(recipient.intel.contacts.get(6), {
+    kind: "sighting",
+    enemyId: 6,
+    x: 9,
+    y: 11,
+    time: 0,
+  });
+  assert.equal(b.units[5].intel.contacts.has(6), true);
+  assert.equal(recipient.visibleEnemies.length, 0);
+});
+
+test("last-known snapshots decay, never follow hidden enemies, and expire", () => {
+  const b = sightingFixture();
+  perceive(b);
+  for (const u of b.units.filter((u) => u.team === 0)) {
+    u.x = 2;
+    u.y = 5;
+  }
+  b.units[6].x = 27;
+  b.units[6].y = 20;
+  b.time = 2;
+  perceive(b);
+  const contact = contacts(b, 0).find((c) => c.enemyId === 6);
+  assert.equal(contact.x, 9);
+  assert.equal(contact.y, 11);
+  assert.equal(contact.confirmed, false);
+  assert.equal(contact.confidence, 0.75);
+  b.time = 2.5;
+  adoptContact(b, b.units[0]);
+  assert.equal(b.units[0].memory.x, 9);
+  b.time = 8;
+  perceive(b);
+  adoptContact(b, b.units[0]);
+  assert.equal(contacts(b, 0).length, 0);
+  assert.equal(b.units[0].memory, null);
+  assert.equal(squadThreats(b, 0).length, 0);
+});
+
+test("a visibly empty last-known location clears the report instead of creating endless pursuit", () => {
+  const b = sightingFixture();
+  perceive(b);
+  b.units[6].x = 27;
+  b.units[6].y = 20;
+  b.time = 0.5;
+  perceive(b);
+  assert.equal(b.squads[0].intel.contacts.has(6), false);
+});
+
+test("incoming fire shares a coarse direction without an enemy identity or position", () => {
+  const b = new Battle(seeded(1)),
+    receiver = b.units[0],
+    hidden = b.units[6];
+  hidden.x = 22;
+  hidden.y = 20;
+  reportIncoming(b, receiver, hidden);
+  const r = b.units[5].intel.incoming.get(receiver.id);
+  assert.deepEqual(Object.keys(r).sort(), [
+    "bearing",
+    "kind",
+    "origin",
+    "reporterId",
+    "time",
+  ]);
+  assert.equal(r.kind, "direction");
+  assert.equal(
+    r.bearing / (Math.PI / 4),
+    Math.round(r.bearing / (Math.PI / 4)),
+  );
+  assert.deepEqual(r.origin, { x: receiver.x, y: receiver.y });
+  assert.equal(b.squads[0].intel.contacts.size, 0);
+  b.time = 1;
+  adoptContact(b, b.units[1]);
+  assert.equal(b.units[1].memory, null);
+  assert.equal(
+    b.units[5].alert,
+    undefined,
+    "distant soldiers receive intel but no forced local reaction",
+  );
+  assert.ok(b.units[1].alert.readyAt > b.time - 1);
+});
+
+test("shared knowledge cannot create a firing solution through walls", () => {
+  const b = sightingFixture();
+  perceive(b);
+  b.time = 0.7;
+  const u = b.units[1];
+  adoptContact(b, u);
+  assert.equal(u.memory.enemyId, 6);
+  assert.equal(selectEnemy(b, u, u.visibleEnemies), null);
+  assert.equal(sight(u, b.units[6]), false);
+});
+
+test("reactions and aiming take time; target assignments stay independent", () => {
+  const b = sightingFixture(),
+    u = b.units[0];
+  perceive(b);
+  const target = selectEnemy(b, u, u.visibleEnemies);
+  assert.ok(target);
+  assert.ok(u.aimAt >= 0.35);
+  const ready = u.aimAt;
+  b.time = 0.1;
+  selectEnemy(b, u, u.visibleEnemies);
+  assert.equal(u.aimAt, ready);
+  const other = b.units[7];
+  other.x = 10;
+  other.y = 11;
+  u.engagementId = other.id;
+  assert.equal(selectEnemy(b, u, [target, other]), other);
+  b.units[2].engagementId = target.id;
+  assert.equal(selectEnemy(b, b.units[2], [target, other]), target);
+  const ammo = u.ammo;
+  b.step(0.05);
+  assert.equal(u.ammo, ammo);
+});
+
+test("incoming fire prompts delayed local support without inventing a contact", () => {
+  const b = new Battle(seeded(1)),
+    u = b.units[1];
+  reportIncoming(b, b.units[0], { x: 20, y: 20 });
+  b.step(0.05);
+  assert.notEqual(u.state, "Watching reported sector");
+  for (let i = 0; i < 12; i++) b.step(0.05);
+  assert.ok(
+    ["Watching reported sector", "Seeking cover"].includes(u.state),
+    u.state,
+  );
+  assert.equal(u.memory, null);
+  assert.equal(b.squads[0].intel.contacts.size, 0);
+});
+
+test("casualty reports reach the squad and trigger reassessment and delayed covering", () => {
+  const b = new Battle(seeded(1)),
+    patient = b.units[1],
+    leader = b.units[0];
+  b.injury(patient, "torso", 85);
+  assert.equal(b.units[5].intel.casualties.has(patient.id), true);
+  assert.ok(leader.alert.readyAt > 0);
+  assert.ok(b.squads[0].nextTactical <= 0.45);
+  for (let i = 0; i < 12; i++) b.step(0.05);
+  assert.equal(leader.state, "Covering casualty");
+  assert.equal(b.squads[0].intention, "Protect casualty");
+});
+
+test("medics cannot treat through house walls", () => {
+  const b = new Battle(seeded(1)),
+    medic = b.units[5],
+    patient = b.units[1];
+  medic.x = 4.4;
+  medic.y = 6;
+  patient.x = 5.6;
+  patient.y = 6;
+  patient.reload = 10;
+  b.injury(patient, "torso", 60);
+  assert.equal(sight(medic, patient), false);
+  for (let i = 0; i < 24; i++) b.step(0.05);
+  assert.equal(patient.health.torso, 40);
+  assert.notEqual(medic.state, "Treating");
+});
+
+test("treatment progress resets after interruption or changing patients", () => {
+  const b = new Battle(seeded(1)),
+    medic = b.units[5],
+    patient = b.units[1];
+  patient.health.torso = 40;
+  patient.reload = 10;
+  medic.x = patient.x;
+  medic.y = patient.y;
+  medic.treat = 0.95;
+  medic.patientId = patient.id;
+  medic.treatmentAt = -5;
+  b.step(0.1);
+  assert.equal(patient.health.torso, 40);
+  assert.equal(medic.treat, 0.1);
+  medic.treat = 0.95;
+  medic.patientId = 0;
+  medic.treatmentAt = b.time;
+  b.step(0.1);
+  assert.equal(patient.health.torso, 40);
+  assert.equal(medic.treat, 0.1);
+});
+
+test("flank cooldown applies from assignment and persists after cancellation", () => {
+  const b = flankFixture();
+  updateSquadTactics(b, 0);
+  const s = b.squads[0];
+  assert.ok(s.maneuver);
+  assert.ok(s.flankCooldown >= b.time + 30);
+  s.maneuver.until = b.time;
+  b.time += 3;
+  for (const u of b.units) if (u.memory) u.memory.time = b.time;
+  updateSquadTactics(b, 0);
+  assert.equal(s.maneuver, null);
+  assert.ok(s.flankCooldown >= b.time + 24);
+  assert.equal(planFlank(b, 0, [{ x: 9, y: 11 }]), null);
+});
+
+test("the compact inspector displays actual state, objective, suppression and injuries", () => {
+  const u = new Battle(seeded(1)).units[0];
+  u.state = "Pinned";
+  u.order = "Hold under incoming fire";
+  u.suppression = 0.73;
+  u.health["left arm"] = 42;
+  const text = inspectSoldier(u);
+  assert.match(text, /Action: Pinned/);
+  assert.match(text, /Objective: Hold under incoming fire/);
+  assert.match(text, /Suppression 73%/);
+  assert.match(text, /LA 42\*/);
+  assert.match(text, /Ammo 30\/180/);
+});
+
+test("approximate bearings and low-confidence sightings cannot authorize flanks", () => {
+  const b = flankFixture();
+  assert.equal(planFlank(b, 0, [{ x: 9, y: 11, approximate: true }]), null);
+  assert.equal(planFlank(b, 0, [{ x: 9, y: 11, confidence: 0.4 }]), null);
+  assert.ok(planFlank(b, 0, [{ x: 9, y: 11, confidence: 1 }]));
+});
+
+test("clearing all contacts retains the maneuver cancellation cooldown", () => {
+  const b = flankFixture();
+  updateSquadTactics(b, 0);
+  assert.ok(b.squads[0].maneuver);
+  b.time += 10;
+  updateSquadTactics(b, 0);
+  assert.equal(b.squads[0].maneuver, null);
+  assert.ok(b.squads[0].flankCooldown >= b.time + 24);
 });
