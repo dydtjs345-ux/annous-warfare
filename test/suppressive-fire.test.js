@@ -108,3 +108,30 @@ test("a casualty cannot retain an active suppression-task diagnostic", () => {
   b.step(0.1);
   assert.equal(u.suppressionTask.active, false);
 });
+test("stopped suppressive fire records an actual friendly-lane rejection rather than the old positive reason", () => {
+  const { b, u } = fixture();
+  suppressiveFire(b, u);
+  Object.assign(b.units[1], { active: true, dead: false, x: 3, y: 11.8 });
+  assert.equal(suppressiveFire(b, u), false);
+  assert.match(u.suppressionTask.reason, /Friendly body/);
+});
+test("arm injuries reduce remembered-lane hit probability while ammunition and near-miss pressure remain real", () => {
+  const results = [];
+  for (const injured of [false, true]) {
+    const { b, u, e } = fixture();
+    e.posture = null;
+    b.random = () => 0.04;
+    if (injured) {
+      u.health["left arm"] = 0;
+      u.health["right arm"] = 0;
+    }
+    suppressiveFire(b, u);
+    b.time = 1.7;
+    suppressiveFire(b, u);
+    results.push(e.health.head);
+    assert.equal(u.ammo, 59);
+    assert.ok(e.suppression > 0);
+  }
+  assert.equal(results[0], 35);
+  assert.equal(results[1], 100);
+});

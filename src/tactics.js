@@ -300,6 +300,13 @@ export function updateSquadTactics(battle, team) {
   )
     return;
   if (m) {
+    m.stopReason ??= !u?.active
+      ? "Maneuver soldier combat ineffective"
+      : distance(u, m.target) < 0.5
+        ? "Reached maneuver objective"
+        : m.until <= battle.time
+          ? "Maneuver interval expired"
+          : "Changed contact, pressure or physical capability";
     squad.maneuver = null;
     squad.flankCooldown = battle.time + 24;
   }
@@ -467,6 +474,7 @@ export function followManeuver(battle, u, m, dt) {
     u.health["left leg"] + u.health["right leg"] <= 120 ||
     !leader
   ) {
+    m.stopReason = "Immediate suppression, injury or command loss";
     m.until = battle.time;
     return false;
   }
@@ -488,6 +496,11 @@ export function followManeuver(battle, u, m, dt) {
           distance(t, m.threat) <= 3,
       )
     ) {
+      m.stopReason = !threats.length
+        ? "Contact expired"
+        : risk.average > 0.6 || risk.longest > 3
+          ? "Route exposure changed"
+          : "Threat moved away from evaluated angle";
       m.until = battle.time;
       return false;
     }
@@ -512,6 +525,7 @@ export function followManeuver(battle, u, m, dt) {
         ? 1
         : 2)
     ) {
+      m.stopReason = "Insufficient capable covering element";
       m.until = battle.time;
       return false;
     }
@@ -521,6 +535,7 @@ export function followManeuver(battle, u, m, dt) {
   u.state = "Flanking";
   u.order = squad.intention;
   if (battle.move(u, m.target, dt) === false) {
+    m.stopReason = `Navigation: ${u.movementBlocker}`;
     m.until = battle.time;
     return false;
   }

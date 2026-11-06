@@ -2,10 +2,11 @@
 import { sight, blocked, streetAt } from "./world.js";
 const angle = (a, b) => Math.atan2(b.y - a.y, b.x - a.x);
 export function observes(u, p) {
-  if (!sight(u, p)) return false;
-  if (u.observationHeading == null) return true;
-  if (Math.hypot(p.x - u.x, p.y - u.y) <= 2.5) return true;
-  return Math.cos(angle(u, p) - u.observationHeading) >= Math.cos(1.4);
+  const inCone =
+    u.observationHeading == null ||
+    Math.hypot(p.x - u.x, p.y - u.y) <= 2.5 ||
+    Math.cos(angle(u, p) - u.observationHeading) >= Math.cos(1.4);
+  return inCone && sight(u, p);
 }
 export function updateSecurity(b, u) {
   if (!b.tacticalEnabled || !u.active) return;

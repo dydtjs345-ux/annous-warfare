@@ -156,6 +156,12 @@ class Battlefield extends Phaser.Scene {
             zoom: c.zoom,
           },
           bounds: { ...this.geometry.bounds },
+          grenadeStats: { ...this.battle.grenadeStats },
+          grenadeEffects: this.grenadeVisuals.effects.map((e) => ({
+            kind: e.kind,
+            x: e.x,
+            y: e.y,
+          })),
           squads: this.battle.squads.map((q) => ({
             phase: q.search?.phase,
             commander: q.commanderId,

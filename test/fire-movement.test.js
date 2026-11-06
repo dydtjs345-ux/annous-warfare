@@ -95,3 +95,28 @@ test("two-survivor planning is optional, geometry-constrained, and command succe
   b.squads[0].commanderId = 2;
   assert.equal(planFlank(b, 0, [{ x: 9, y: 11, time: 20 }]), null);
 });
+test("a late support gap gets its own bounded recovery interval rather than using maneuver age", () => {
+  const b = fixture(),
+    q = b.squads[0];
+  q.maneuver = planFlank(b, 0, [{ x: 9, y: 11, time: 20 }]);
+  coordinateFireMovement(b, 0);
+  const m = q.maneuver,
+    u = b.units[m.unitId];
+  b.time = 22;
+  b.units[4].firedAt = 22;
+  coordinateFireMovement(b, 0);
+  assert.equal(maneuverSupported(b, u, m), true);
+  b.time = 24;
+  assert.equal(maneuverSupported(b, u, m), false);
+  assert.ok(m.until > b.time, "brief late gap pauses rather than cancels");
+  b.time = 24.5;
+  b.units[4].firedAt = b.time;
+  coordinateFireMovement(b, 0);
+  assert.equal(maneuverSupported(b, u, m), true);
+  b.time = 26.2;
+  assert.equal(maneuverSupported(b, u, m), false);
+  assert.ok(m.until > b.time);
+  b.time = 29.3;
+  assert.equal(maneuverSupported(b, u, m), false);
+  assert.equal(m.until, b.time);
+});

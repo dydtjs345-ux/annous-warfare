@@ -16,6 +16,8 @@ export function segmentDistance(a, end, p) {
     : Math.hypot(p.x - a.x - t * dx, p.y - a.y - t * dy);
 }
 export function suppressionCandidate(b, u) {
+  if (!b.tacticalEnabled) return null;
+  u.suppressionRejection = "No eligible remembered contact";
   if (
     !b.tacticalEnabled ||
     !u.active ||
@@ -26,18 +28,40 @@ export function suppressionCandidate(b, u) {
     u.posture?.mode === "full" ||
     u.grenadePrep ||
     ["deploying", "unmounting"].includes(u.mount?.state)
-  )
+  ) {
+    u.suppressionRejection = "Survival, role or weapon-handling priority";
     return null;
-  if (b.squads[u.team].maneuver?.unitId === u.id) return null;
+  }
+  if (b.squads[u.team].maneuver?.unitId === u.id) {
+    u.suppressionRejection = "Assigned maneuver takes priority";
+    return null;
+  }
   if (
     ["search", "escort", "recon", "care"].includes(u.assignment?.type) &&
     u.tacticalRole !== "support"
-  )
+  ) {
+    u.suppressionRejection = "Squad movement or care assignment takes priority";
     return null;
-  return (
+  }
+  const candidate =
     contacts(b, u.team)
       .filter((c) => {
         const age = b.time - c.time;
+        if (
+          age < 0.2 ||
+          age >= Math.min(b.contactTTL, u.role === "LMG" ? 5 : 2.5) ||
+          c.confidence <= 0.45 ||
+          c.clearedAt != null
+        )
+          u.suppressionRejection =
+            "Contact too fresh for blind fire, stale or cleared";
+        else if (dist(u, c) > u.range)
+          u.suppressionRejection = "Remembered lane outside weapon range";
+        else if (!sight(u, c))
+          u.suppressionRejection = "Remembered lane blocked by cover";
+        else
+          u.suppressionRejection =
+            "Friendly body may intersect remembered lane";
         return (
           age >= 0.2 &&
           age < Math.min(b.contactTTL, u.role === "LMG" ? 5 : 2.5) &&
@@ -56,13 +80,18 @@ export function suppressionCandidate(b, u) {
       })
       .sort(
         (a, c) => c.confidence - a.confidence || a.enemyId - c.enemyId,
-      )[0] ?? null
-  );
+      )[0] ?? null;
+  if (candidate) u.suppressionRejection = null;
+  else u.suppressionRejection ??= "No eligible remembered contact";
+  return candidate;
 }
 export function suppressiveFire(b, u) {
   const c = suppressionCandidate(b, u);
   if (!c) {
-    if (u.suppressionTask) u.suppressionTask.active = false;
+    if (u.suppressionTask) {
+      u.suppressionTask.active = false;
+      u.suppressionTask.reason = u.suppressionRejection;
+    }
     return false;
   }
   let t = u.suppressionTask;
@@ -122,7 +151,11 @@ export function suppressiveFire(b, u) {
   if (
     hit &&
     b.random() <
-      0.12 * accuracyFactor(u) * mountBonus(u, "accuracy") * (1 - cover(hit, u))
+      0.12 *
+        (0.4 + (0.6 * (u.health["left arm"] + u.health["right arm"])) / 200) *
+        accuracyFactor(u) *
+        mountBonus(u, "accuracy") *
+        (1 - cover(hit, u))
   ) {
     const parts = [
       "head",

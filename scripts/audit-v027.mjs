@@ -15,10 +15,16 @@ const { Battle } = await import(
   pathToFileURL(resolve(root, "src/simulation.js"))
 );
 const world = await import(pathToFileURL(resolve(root, "src/world.js")));
+const heapStart = process.memoryUsage().heapUsed;
 const runs = [],
   begin = performance.now();
 for (let index = 0; index < Number(count); index++) {
   const seed = Number(start) + index;
+  if (
+    process.env.AW_SEEDS &&
+    !process.env.AW_SEEDS.split(",").map(Number).includes(seed)
+  )
+    continue;
   let rng = seed;
   const i = seed - 2001;
   const scenario = [
@@ -114,6 +120,13 @@ for (let index = 0; index < Number(count); index++) {
     friendlyHits: 0,
     crossings: 0,
     flanks: 0,
+    flankCompleted: 0,
+    flankAborted: 0,
+    crossingWaitCalls: 0,
+    mountedShots: 0,
+    aimErrors: 0,
+    coverCycles: 0,
+    peekExposure: 0,
     samples: [],
     failures: [],
   };
@@ -122,6 +135,8 @@ for (let index = 0; index < Number(count); index++) {
     posture: 0,
     treating: false,
     suppression: 0,
+    coverHistory: [],
+    coverKey: null,
   }));
   let nextSample = 0,
     turn = 0;
@@ -160,9 +175,19 @@ for (let index = 0; index < Number(count); index++) {
       p.posture = transitions;
       if (p.mode !== u.posture?.mode && u.posture?.mode === "peek") m.peeks++;
       p.mode = u.posture?.mode;
+      const ck = u.coverTarget ? `${u.coverTarget.x},${u.coverTarget.y}` : null;
+      if (ck && ck !== p.coverKey) {
+        if (p.coverHistory.some((c) => c.key === ck && b.time - c.at < 20))
+          m.coverCycles++;
+        p.coverHistory.push({ key: ck, at: b.time });
+        p.coverHistory = p.coverHistory.slice(-4);
+      }
+      p.coverKey = ck;
+
       if (
         p.treating &&
-        !u.presentation.treating &&
+        !p.completed &&
+        (!u.presentation.treating || p.patient !== u.patientId) &&
         !b.events.some(
           (e) =>
             e.time === b.time &&
@@ -171,6 +196,13 @@ for (let index = 0; index < Number(count); index++) {
         )
       )
         m.treatmentInterruptions++;
+      p.completed = b.events.some(
+        (e) =>
+          e.time === b.time &&
+          e.type === "treatmentComplete" &&
+          e.unitId === u.id,
+      );
+      p.patient = u.patientId;
       p.treating = u.presentation.treating;
       m.suppressionPressure += Math.max(0, u.suppression - p.suppression);
       p.suppression = u.suppression;
@@ -180,6 +212,15 @@ for (let index = 0; index < Number(count); index++) {
       const known = [...u.intel.contacts.values()].filter(
         (c) => b.time - c.time < b.contactTTL,
       );
+      if (u.posture?.mode === "peek")
+        m.peekExposure +=
+          0.1 *
+          Math.max(
+            0,
+            ...known.map((c) =>
+              world.sight(u, c) ? 1 - world.cover(u, c) : 0,
+            ),
+          );
       if (known.some((c) => world.sight(u, c) && world.cover(u, c) < 0.28))
         m.exposed += 0.1;
       if (
@@ -202,6 +243,20 @@ for (let index = 0; index < Number(count); index++) {
       if (e.time === b.time) {
         if (e.type === "shot") {
           m.shots++;
+          if (e.supported) m.mountedShots++;
+          if (
+            Math.abs(
+              Math.atan2(
+                Math.sin(
+                  e.angle - Math.atan2(e.targetY - e.y, e.targetX - e.x),
+                ),
+                Math.cos(
+                  e.angle - Math.atan2(e.targetY - e.y, e.targetX - e.x),
+                ),
+              ),
+            ) > 1e-6
+          )
+            m.aimErrors++;
           if (e.suppressive) m.suppressionShots++;
           if (
             !(world.terrainSight ?? world.sight)(
@@ -236,6 +291,7 @@ for (let index = 0; index < Number(count); index++) {
           u.ammo,
           u.reserve,
           u.state,
+          u.facing,
           u.posture?.mode,
           u.assignment?.type,
           u.mount,
@@ -258,6 +314,17 @@ for (let index = 0; index < Number(count); index++) {
             reason: u.decisionReason,
             ammo: u.ammo,
             suppression: u.suppression,
+            health: { ...u.health },
+            goal: u.assignment?.target,
+            blocker: u.movementBlocker,
+            role: u.tacticalRole,
+            postureReason: u.posture?.reason,
+            suppressionTask: u.suppressionTask
+              ? { ...u.suppressionTask }
+              : null,
+            scan: u.observationHeading,
+            travel: u.movementHeading,
+            crossing: u.crossingReason,
           })),
         phases: b.squads.map((q) => q.search?.phase),
       });
@@ -279,12 +346,32 @@ for (let index = 0; index < Number(count); index++) {
     0,
   );
   m.flanks = b.squads.reduce((n, q) => n + (q.fireMovement?.started ?? 0), 0);
+  m.flankCompleted = b.squads.reduce(
+    (n, q) => n + (q.fireMovement?.completed ?? 0),
+    0,
+  );
+  m.flankAborted = b.squads.reduce(
+    (n, q) => n + (q.fireMovement?.aborted ?? 0),
+    0,
+  );
+  m.crossingWaitCalls = b.squads.reduce(
+    (n, q) => n + (q.crossingStats?.waits ?? 0),
+    0,
+  );
+  if (process.env.AW_CASE_PREFIX)
+    writeFileSync(
+      `${process.env.AW_CASE_PREFIX}-${seed}.json`,
+      JSON.stringify(m),
+    );
   runs.push(m);
   if (index % 25 === 24) console.log("completed", cohort, index + 1);
 }
 const durations = runs.map((r) => r.duration).sort((a, b) => a - b),
   mean = (k) => runs.reduce((n, r) => n + r[k], 0) / runs.length;
 const result = {
+  methodVersion: 2,
+  heapStartBytes: heapStart,
+  heapEndBytes: process.memoryUsage().heapUsed,
   source: root,
   cohort,
   dt: 0.1,
@@ -300,6 +387,14 @@ const result = {
     ...Object.fromEntries(
       [
         "full",
+        "sustained",
+        "flankCompleted",
+        "flankAborted",
+        "crossingWaitCalls",
+        "mountedShots",
+        "aimErrors",
+        "coverCycles",
+        "peekExposure",
         "peek",
         "shots",
         "suppressionShots",

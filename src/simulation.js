@@ -484,8 +484,10 @@ export class Battle {
       this.move(u, this.formationGoal(u, goal), dt);
     }
     for (const u of this.units) {
-      if (u.suppressionTask && u.state !== "Suppressing last-known")
+      if (u.suppressionTask?.active && u.state !== "Suppressing last-known") {
         u.suppressionTask.active = false;
+        u.suppressionTask.reason = `Current action: ${u.state}`;
+      }
       if (u.active) updateProgress(this, u);
       refreshDiagnostics(this, u);
     }

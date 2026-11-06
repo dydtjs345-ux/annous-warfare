@@ -88,8 +88,14 @@ export function coordinateFireMovement(b, team) {
 }
 export function maneuverSupported(b, u, m) {
   if (!b.tacticalEnabled || !m.supportIds) return true;
-  if (b.time - (m.lastSupport ?? -Infinity) < 1.5) return true;
-  if (b.time - (m.supportStarted ?? b.time) > 3) {
+  if (b.time - (m.lastSupport ?? -Infinity) < 1.5) {
+    m.supportLostAt = null;
+    return true;
+  }
+  m.supportLostAt ??=
+    m.lastSupport == null ? (m.supportStarted ?? b.time) : b.time;
+  if (b.time - m.supportLostAt > 3) {
+    m.stopReason = "No supporting shots during bounded recovery interval";
     m.until = b.time;
     u.decisionReason = "Maneuver canceled: supporting pressure unavailable";
     return false;

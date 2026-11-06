@@ -118,3 +118,24 @@ test("search does not complete an observation objective while looking away from 
   coordinateSquad(b, 0);
   assert.ok(q.search.revision > rev);
 });
+test("cone-first observation is equivalent to the original LOS-first rule across deterministic map rays", () => {
+  const b = fixture();
+  let seed = 29;
+  const random = () =>
+    (seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296;
+  for (let i = 0; i < 1000; i++) {
+    const u = {
+        x: 1 + random() * 51,
+        y: 1 + random() * 41,
+        observationHeading: random() * Math.PI * 4,
+        posture: { mode: i % 3 ? "peek" : "full" },
+      },
+      p = { x: 1 + random() * 51, y: 1 + random() * 41 };
+    const expected =
+      sight(u, p) &&
+      (Math.hypot(p.x - u.x, p.y - u.y) <= 2.5 ||
+        Math.cos(Math.atan2(p.y - u.y, p.x - u.x) - u.observationHeading) >=
+          Math.cos(1.4));
+    assert.equal(observes(u, p), expected);
+  }
+});
