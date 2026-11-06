@@ -1,3 +1,4 @@
+import {drawGroundDetail,drawBuildingDetail} from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
@@ -305,12 +306,12 @@ class Battlefield extends Phaser.Scene {
           street = streetAt(x, y);
         g.fillStyle(
           inside(x, y)
-            ? 0x6c6456
+            ? 0x555b5b
             : street
               ? 0x303b45
               : (x + y) % 3
-                ? 0x344b40
-                : 0x3b5143,
+                ? 0x394951
+                : 0x3f4d53,
         );
         g.fillPoints(
           [
@@ -321,6 +322,7 @@ class Battlefield extends Phaser.Scene {
           ],
           true,
         );
+        drawGroundDetail(g,x,y,p);
         if (street && x % 13 === 2 && y % 3 === 0) {
           g.lineStyle(2, 0x9b9b75, 0.5);
           g.lineBetween(p.x - 5, p.y - 2, p.x + 5, p.y + 2);
@@ -353,6 +355,7 @@ class Battlefield extends Phaser.Scene {
     const roof = [a, b, c, d].map((p) => ({ x: p.x, y: p.y - height }));
     g.fillStyle(0x394951);
     g.fillPoints(roof, true);
+    drawBuildingDetail(g,h,this.iso,height);
     g.lineStyle(2, 0x819294);
     g.strokePoints([...roof, roof[0]]);
   }
