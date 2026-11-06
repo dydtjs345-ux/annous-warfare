@@ -403,3 +403,10 @@ Inspector shows actual frag inventory/preparation/evasion; seven exclusive activ
 `npm test` now runs **149 tests**; `npm run build` preserves Pages deployment at https://dydtjs345-ux.github.io/annous-warfare/. Run `node scripts/audit-v025.mjs . /tmp/urban.json 200 trace '' urban` for the exact urban cohort. New modules: `grenades.js` owns authoritative ordnance/decisions and `urban-visuals.js` draws cover/projectiles/blasts; rendering never applies damage or RNG.
 
 Physical iPhone Safari testing remains necessary: both orientations, inspector scrolling, pan/pinch, firing over low lines, routes around high obstacles, LMG mounting, actual grenade release/fuse/evasion, medic care, pause/resume/restart and 1×/2×/4×. Grenades are conditional and may not appear in every ordinary match. Prototype limits include coarse radial fragmentation, no wall lobs/bounces/destruction, conservative friendly safety, casualty congestion and existing unlimited medicine; long fights or ammunition stalemates remain possible outside the recorded cases.
+
+
+### v0.2.5 focused navigation follow-up
+
+[Paired 200-case regression investigation](reports/v025-followup-audit.md) continues the existing v0.2.5 branch. A medic's selected patient no longer blocks the endpoint of every urban congestion replan; actual collision, sight, treatment reach and healing remain unchanged. All 200 legacy hashes are preserved. Broader cover-policy experiments were rejected after adverse full-cohort results, so map geometry, cover scoring/timers and LMG mounting retain their previous behavior.
+
+Navigation failures improve 1.685→0.750/match and both paired urban cohorts have zero timeouts. P95 worsens 103.1→119.9s, exposure share is nearly unchanged but slightly worse (45.042710→45.142391%), and medical/cycle results remain mixed. This is a confirmed routing fix, not complete tactical-stability clearance. Raw data, rejected trials, 31 paired diagnostic cases and remaining adverse seeds are retained. `npm test` now runs 154 tests; build and mobile Chromium checks pass. Physical iPhone Safari verification remains required, especially crowded medical approaches and late survivor fights.

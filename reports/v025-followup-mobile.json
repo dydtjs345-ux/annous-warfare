@@ -1,0 +1,31 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "landscape": [
+    844,
+    390
+  ],
+  "panelHeight": 144,
+  "touchInspection": true,
+  "scrollInspection": true,
+  "pinchChangesCanvas": true,
+  "panChangesCanvas": true,
+  "gesturesPreserveSelection": true,
+  "pauseResume": true,
+  "restart": true,
+  "speeds": [
+    1,
+    2,
+    4
+  ],
+  "frameStats": {
+    "samples": 597,
+    "medianMs": 16.699999999999818,
+    "p95Ms": 16.799999999999272,
+    "maxMs": 33.399999999999636
+  },
+  "errors": [],
+  "physicalSafari": "Not available; desktop Chromium touch emulation only"
+}

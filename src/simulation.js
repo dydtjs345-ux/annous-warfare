@@ -649,6 +649,18 @@ export class Battle {
             .map((a) => key(Math.round(a.x), Math.round(a.y))),
         );
         occupied.delete(key(Math.round(u.x), Math.round(u.y)));
+        // A casualty is an approach endpoint. Including that occupied endpoint
+        // rejects every detour, although care starts at 1.4 tiles with clear LOS.
+        // Keep physical separation and first-step collision checks below intact.
+        if (
+          this.world.kind === "urban" &&
+          u.role === "Medic" &&
+          u.state === "Moving to casualty" &&
+          u.patientId === goal.id &&
+          goal.team === u.team &&
+          !goal.dead
+        )
+          occupied.delete(key(Math.round(goal.x), Math.round(goal.y)));
         u.route = path(u, u.target, occupied, (p) => {
           for (let t = 0.2; t <= 1.001; t += 0.2)
             if (

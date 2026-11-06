@@ -1,0 +1,1856 @@
+{
+  "base": "35cd2ee461aa08c3d6e479add3ce9e95791f9d91",
+  "reference": "reports/v025-after-A.json",
+  "runsVerified": 200,
+  "matchingCoreHashes": 200,
+  "summary": {
+    "seeds": 200,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    },
+    "durationMedian": 64.6000000000006,
+    "durationP90": 98.89999999999866,
+    "durationP95": 113.59999999999782,
+    "durationMax": 170.3999999999946,
+    "navigationFailures": 2.215,
+    "deploys": 4.76,
+    "unmounts": 4.465,
+    "medicShots": 5.19,
+    "treatments": 10.45,
+    "invalidShots": 0,
+    "facingErrors": 0,
+    "aimErrors": 0,
+    "maxWait": 25.875000000000103,
+    "loops": 1.225,
+    "injured": 6.885,
+    "incapacitated": 4.35,
+    "medicTreatmentTime": 13.405499999999995,
+    "duration": 68.1109999999999,
+    "stalled": 0,
+    "firing": 85.38300000000002,
+    "shots": 229.16,
+    "exposed": 197.6454999999942,
+    "knownThreatTime": 407.03850000002495,
+    "exposurePercent": 48.556954686100234,
+    "usefulCover": 81.27049999999933,
+    "relocations": 15.98,
+    "abandoned": 16.97,
+    "passive": 121.76700000000021,
+    "passivePercent": 25.591168023805448,
+    "mountedTime": 8.936999999999989,
+    "mountedShots": 32.645,
+    "casualties": 8.595,
+    "dead": 4.245,
+    "reacquisitionMedian": 2.7999999999998977,
+    "reacquisitionP90": 15.800000000000045,
+    "reacquisitionSamples": 7813
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "scenario": "standard",
+      "digest": "493329575bade72659fcc870a26ffb18274b0ea9e91b5ccbca40aa1d2cb81605",
+      "referenceDigest": "493329575bade72659fcc870a26ffb18274b0ea9e91b5ccbca40aa1d2cb81605",
+      "matches": true,
+      "duration": 40.3000000000003,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 2,
+      "scenario": "short-contact",
+      "digest": "4d115913a86445863991c275ebf8bf0480b02c0188515b2d462cd538fd9f4d74",
+      "referenceDigest": "4d115913a86445863991c275ebf8bf0480b02c0188515b2d462cd538fd9f4d74",
+      "matches": true,
+      "duration": 37.50000000000026,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 3,
+      "scenario": "reduced-reserves",
+      "digest": "8b8a702058933bfb3e358c74021a6ad3e32623a0a61c9ca0e961610e91adbf20",
+      "referenceDigest": "8b8a702058933bfb3e358c74021a6ad3e32623a0a61c9ca0e961610e91adbf20",
+      "matches": true,
+      "duration": 75.79999999999997,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 4,
+      "scenario": "leg-injuries",
+      "digest": "177f97f9cd7cb396f79bb3a483e720b821ff6349d078d4d5dc8b41755ca6d8e0",
+      "referenceDigest": "177f97f9cd7cb396f79bb3a483e720b821ff6349d078d4d5dc8b41755ca6d8e0",
+      "matches": true,
+      "duration": 71.10000000000024,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 5,
+      "scenario": "standard",
+      "digest": "14de03134c2b82bca6c1eaed3cd5c621cfe2a90e1783d8d78b8e0a6480d37535",
+      "referenceDigest": "14de03134c2b82bca6c1eaed3cd5c621cfe2a90e1783d8d78b8e0a6480d37535",
+      "matches": true,
+      "duration": 96.69999999999878,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 6,
+      "scenario": "short-contact",
+      "digest": "f23ddba652e22b93978688f47ac3a8da9e2ccfb031168bf05872ef6a412e377d",
+      "referenceDigest": "f23ddba652e22b93978688f47ac3a8da9e2ccfb031168bf05872ef6a412e377d",
+      "matches": true,
+      "duration": 83.79999999999951,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 7,
+      "scenario": "reduced-reserves",
+      "digest": "6eacaaf8e43ea5bd1d254eebd0efdfc11a90b99ab29901fa750c23260d8ad35b",
+      "referenceDigest": "6eacaaf8e43ea5bd1d254eebd0efdfc11a90b99ab29901fa750c23260d8ad35b",
+      "matches": true,
+      "duration": 75.99999999999996,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 8,
+      "scenario": "leg-injuries",
+      "digest": "d9fb90ac0d916b9fd4ffe646e85dfdf0a0d92a8dc2918eb43af8d375d85e67b8",
+      "referenceDigest": "d9fb90ac0d916b9fd4ffe646e85dfdf0a0d92a8dc2918eb43af8d375d85e67b8",
+      "matches": true,
+      "duration": 56.700000000000536,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 9,
+      "scenario": "standard",
+      "digest": "8cbbf86b4f6fecfc09e24ba4dcf0de966ebb16f590ca501a644cbeca8c703d26",
+      "referenceDigest": "8cbbf86b4f6fecfc09e24ba4dcf0de966ebb16f590ca501a644cbeca8c703d26",
+      "matches": true,
+      "duration": 117.99999999999757,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 10,
+      "scenario": "short-contact",
+      "digest": "55a193d664729dda5d00ad2465d63f4a39f96301be49318b20d7230d0e1da248",
+      "referenceDigest": "55a193d664729dda5d00ad2465d63f4a39f96301be49318b20d7230d0e1da248",
+      "matches": true,
+      "duration": 64.40000000000062,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 11,
+      "scenario": "reduced-reserves",
+      "digest": "2bffb7df10f8000ac3815a728a22b4118bb4160b219b09e3aa18c4cfdf0e7d48",
+      "referenceDigest": "2bffb7df10f8000ac3815a728a22b4118bb4160b219b09e3aa18c4cfdf0e7d48",
+      "matches": true,
+      "duration": 70.60000000000026,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 12,
+      "scenario": "leg-injuries",
+      "digest": "30638e34c896e38a2d7df2b48c60f4d331107ff6aaf40bb52beff0eb789aef40",
+      "referenceDigest": "30638e34c896e38a2d7df2b48c60f4d331107ff6aaf40bb52beff0eb789aef40",
+      "matches": true,
+      "duration": 42.500000000000334,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 13,
+      "scenario": "standard",
+      "digest": "7d8b3cd3f42fa9e5490e9ee3a1b5563c87797ecd70249395badb508ade7da5fc",
+      "referenceDigest": "7d8b3cd3f42fa9e5490e9ee3a1b5563c87797ecd70249395badb508ade7da5fc",
+      "matches": true,
+      "duration": 84.49999999999947,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 14,
+      "scenario": "short-contact",
+      "digest": "765d2ecf09051541d1392174e6b5e03f970451ef7a1107e49ab78b5f7ff05c7d",
+      "referenceDigest": "765d2ecf09051541d1392174e6b5e03f970451ef7a1107e49ab78b5f7ff05c7d",
+      "matches": true,
+      "duration": 56.000000000000526,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 15,
+      "scenario": "reduced-reserves",
+      "digest": "5ebd684b9c6a1fbb36e0adbef34698b85218e02795eff2386c660b7119407962",
+      "referenceDigest": "5ebd684b9c6a1fbb36e0adbef34698b85218e02795eff2386c660b7119407962",
+      "matches": true,
+      "duration": 38.00000000000027,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 16,
+      "scenario": "leg-injuries",
+      "digest": "7e51a180fbb6f89c4dba565bf3d42eb9289e599ff8041afc745f2430054c4d8a",
+      "referenceDigest": "7e51a180fbb6f89c4dba565bf3d42eb9289e599ff8041afc745f2430054c4d8a",
+      "matches": true,
+      "duration": 61.1000000000006,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 17,
+      "scenario": "standard",
+      "digest": "c16102cfeaf4959a48b96acb2a4ad1f52c2ca1ea05e4f6e74b521f1dbcbc03cb",
+      "referenceDigest": "c16102cfeaf4959a48b96acb2a4ad1f52c2ca1ea05e4f6e74b521f1dbcbc03cb",
+      "matches": true,
+      "duration": 72.50000000000016,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 18,
+      "scenario": "short-contact",
+      "digest": "d408a388ca08d6ddac62ede584a1ff51704bd70cb74a066fed5755ca2bb4bb0f",
+      "referenceDigest": "d408a388ca08d6ddac62ede584a1ff51704bd70cb74a066fed5755ca2bb4bb0f",
+      "matches": true,
+      "duration": 52.30000000000047,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 19,
+      "scenario": "reduced-reserves",
+      "digest": "2f7aa23dda80cf06f96a023af65782449b5b43172f752f916909ffd9e71b0e60",
+      "referenceDigest": "2f7aa23dda80cf06f96a023af65782449b5b43172f752f916909ffd9e71b0e60",
+      "matches": true,
+      "duration": 105.49999999999828,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 20,
+      "scenario": "leg-injuries",
+      "digest": "9ba0e9702bb8b136b6ac3d970b847b990ca379ed40bf8be40334f1f7aec33903",
+      "referenceDigest": "9ba0e9702bb8b136b6ac3d970b847b990ca379ed40bf8be40334f1f7aec33903",
+      "matches": true,
+      "duration": 118.89999999999752,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 21,
+      "scenario": "standard",
+      "digest": "227d9ae36f659f344230e57751bc31d623843dfd3ebe9f9b09ae1a883a58ae7d",
+      "referenceDigest": "227d9ae36f659f344230e57751bc31d623843dfd3ebe9f9b09ae1a883a58ae7d",
+      "matches": true,
+      "duration": 47.3000000000004,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 22,
+      "scenario": "short-contact",
+      "digest": "fdf22f792077be401b964b41d276e9b6c3ec95064aa5d03b65f70edb0356a5d1",
+      "referenceDigest": "fdf22f792077be401b964b41d276e9b6c3ec95064aa5d03b65f70edb0356a5d1",
+      "matches": true,
+      "duration": 63.20000000000063,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 23,
+      "scenario": "reduced-reserves",
+      "digest": "b874cbbf37870c79b6699acb65bf6e842428da871f97a954f7b239d53748964d",
+      "referenceDigest": "b874cbbf37870c79b6699acb65bf6e842428da871f97a954f7b239d53748964d",
+      "matches": true,
+      "duration": 47.500000000000405,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 24,
+      "scenario": "leg-injuries",
+      "digest": "9ba5dad1c25caa16e6853c4a85c56e30529ab19d99a109c733100b3c10d5468b",
+      "referenceDigest": "9ba5dad1c25caa16e6853c4a85c56e30529ab19d99a109c733100b3c10d5468b",
+      "matches": true,
+      "duration": 59.30000000000057,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 25,
+      "scenario": "standard",
+      "digest": "20b8d2262f2c5896b872eeb9e41e4cd0d4d9fb8ae251279db7c9cf8df720d9f8",
+      "referenceDigest": "20b8d2262f2c5896b872eeb9e41e4cd0d4d9fb8ae251279db7c9cf8df720d9f8",
+      "matches": true,
+      "duration": 98.89999999999866,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 26,
+      "scenario": "short-contact",
+      "digest": "2ebe0d2ad3c8f8c45bb78b4ddb7df256f77a66e95840ac902d42e5ef6e347015",
+      "referenceDigest": "2ebe0d2ad3c8f8c45bb78b4ddb7df256f77a66e95840ac902d42e5ef6e347015",
+      "matches": true,
+      "duration": 47.70000000000041,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 27,
+      "scenario": "reduced-reserves",
+      "digest": "32814b905c232d3368ac6196b1ea72667ba4271b0bb47e2bfa29df4c23c453b7",
+      "referenceDigest": "32814b905c232d3368ac6196b1ea72667ba4271b0bb47e2bfa29df4c23c453b7",
+      "matches": true,
+      "duration": 77.89999999999985,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 28,
+      "scenario": "leg-injuries",
+      "digest": "653d2725598575c62bf5a9f6a57be884c98d3f34ae4008fc93d39f110350a41e",
+      "referenceDigest": "653d2725598575c62bf5a9f6a57be884c98d3f34ae4008fc93d39f110350a41e",
+      "matches": true,
+      "duration": 104.39999999999834,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 29,
+      "scenario": "standard",
+      "digest": "4914d00352c95908ffbf74beccad14f7136be6b7a41099f3abf861061a70d5d4",
+      "referenceDigest": "4914d00352c95908ffbf74beccad14f7136be6b7a41099f3abf861061a70d5d4",
+      "matches": true,
+      "duration": 42.10000000000033,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 30,
+      "scenario": "short-contact",
+      "digest": "dfcbcc55e04ce9f34ff81bde840b966cddd41b3e94099d0eb0e0778bf8abff6f",
+      "referenceDigest": "dfcbcc55e04ce9f34ff81bde840b966cddd41b3e94099d0eb0e0778bf8abff6f",
+      "matches": true,
+      "duration": 50.60000000000045,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 31,
+      "scenario": "reduced-reserves",
+      "digest": "84a3dd47a4d9117f08f8484093d948550a2bc6c7f655d9ecf27ef83c9172676a",
+      "referenceDigest": "84a3dd47a4d9117f08f8484093d948550a2bc6c7f655d9ecf27ef83c9172676a",
+      "matches": true,
+      "duration": 89.3999999999992,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 32,
+      "scenario": "leg-injuries",
+      "digest": "378c906b9c51b287f0979cd4ae94d1e931095b6b78c595c43a463a877c5f0789",
+      "referenceDigest": "378c906b9c51b287f0979cd4ae94d1e931095b6b78c595c43a463a877c5f0789",
+      "matches": true,
+      "duration": 84.69999999999946,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 33,
+      "scenario": "standard",
+      "digest": "29d065699ca9e960144fc3f178e095372011f605726a93b21d44457639ece7ec",
+      "referenceDigest": "29d065699ca9e960144fc3f178e095372011f605726a93b21d44457639ece7ec",
+      "matches": true,
+      "duration": 69.50000000000033,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 34,
+      "scenario": "short-contact",
+      "digest": "34e168442ba164dce52f167a4d1a77e33f22d40f35064df0d668e7f6d868157c",
+      "referenceDigest": "34e168442ba164dce52f167a4d1a77e33f22d40f35064df0d668e7f6d868157c",
+      "matches": true,
+      "duration": 80.4999999999997,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 35,
+      "scenario": "reduced-reserves",
+      "digest": "97f655418a3e3793cae9a7a07c92ec8b7aafb1665643a2799d36591abbaf1c31",
+      "referenceDigest": "97f655418a3e3793cae9a7a07c92ec8b7aafb1665643a2799d36591abbaf1c31",
+      "matches": true,
+      "duration": 46.100000000000385,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 36,
+      "scenario": "leg-injuries",
+      "digest": "4aa3cc3eb41df0722c51ffdf78efec42e0f87f8eba9a08095925d41b3e734c29",
+      "referenceDigest": "4aa3cc3eb41df0722c51ffdf78efec42e0f87f8eba9a08095925d41b3e734c29",
+      "matches": true,
+      "duration": 114.79999999999775,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 37,
+      "scenario": "standard",
+      "digest": "c57cb37cdfe6d19dd952e86b0296a41b2185395409abe511ac11aa8f2c389434",
+      "referenceDigest": "c57cb37cdfe6d19dd952e86b0296a41b2185395409abe511ac11aa8f2c389434",
+      "matches": true,
+      "duration": 98.59999999999867,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 38,
+      "scenario": "short-contact",
+      "digest": "91c165e151464355a4a767ac589905f7f07cca20f1f38cc21d8dc21538970e98",
+      "referenceDigest": "91c165e151464355a4a767ac589905f7f07cca20f1f38cc21d8dc21538970e98",
+      "matches": true,
+      "duration": 33.0000000000002,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 39,
+      "scenario": "reduced-reserves",
+      "digest": "217f3401b59ca4aa06c58b704823c5eb519f8db2d7cfad505973ca5f3f4f0a5e",
+      "referenceDigest": "217f3401b59ca4aa06c58b704823c5eb519f8db2d7cfad505973ca5f3f4f0a5e",
+      "matches": true,
+      "duration": 70.30000000000028,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 40,
+      "scenario": "leg-injuries",
+      "digest": "2fb3e9bbcc82ddd5f9518408e3e15eb7d6d0c3ad19b65120546c898949f67be9",
+      "referenceDigest": "2fb3e9bbcc82ddd5f9518408e3e15eb7d6d0c3ad19b65120546c898949f67be9",
+      "matches": true,
+      "duration": 99.7999999999986,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 41,
+      "scenario": "standard",
+      "digest": "b8350eb75a8854f51a91498c1dbc684856f09d42c3cd0ee39f1411e8754c1f30",
+      "referenceDigest": "b8350eb75a8854f51a91498c1dbc684856f09d42c3cd0ee39f1411e8754c1f30",
+      "matches": true,
+      "duration": 57.10000000000054,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 42,
+      "scenario": "short-contact",
+      "digest": "4e64de67e1408a05e48e8df24284be515fb199e670a8265a87e11d1055cc9807",
+      "referenceDigest": "4e64de67e1408a05e48e8df24284be515fb199e670a8265a87e11d1055cc9807",
+      "matches": true,
+      "duration": 79.29999999999977,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 43,
+      "scenario": "reduced-reserves",
+      "digest": "bc586a99dbb53302f7779ded147ddd0faf8c6f80446a69e25d7419bb16e3e018",
+      "referenceDigest": "bc586a99dbb53302f7779ded147ddd0faf8c6f80446a69e25d7419bb16e3e018",
+      "matches": true,
+      "duration": 55.00000000000051,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 44,
+      "scenario": "leg-injuries",
+      "digest": "3f66ddd11e9bf47f90e52a365779bdd062b162174dea5ad0a4fda815feda5988",
+      "referenceDigest": "3f66ddd11e9bf47f90e52a365779bdd062b162174dea5ad0a4fda815feda5988",
+      "matches": true,
+      "duration": 78.09999999999984,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 45,
+      "scenario": "standard",
+      "digest": "bb75e5d4021de0b1e05c7bc4477be04b0291c337a3c557b06f52bec501bced29",
+      "referenceDigest": "bb75e5d4021de0b1e05c7bc4477be04b0291c337a3c557b06f52bec501bced29",
+      "matches": true,
+      "duration": 43.70000000000035,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 46,
+      "scenario": "short-contact",
+      "digest": "12b437b9799275a49b93a28897e03ea85cf0220295e1e84d1b54c33d46c86483",
+      "referenceDigest": "12b437b9799275a49b93a28897e03ea85cf0220295e1e84d1b54c33d46c86483",
+      "matches": true,
+      "duration": 155.79999999999544,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 47,
+      "scenario": "reduced-reserves",
+      "digest": "0b711953f463cc1b54941f4c29dae9ac809aedb0d0aa811c1be5cb6cf420958f",
+      "referenceDigest": "0b711953f463cc1b54941f4c29dae9ac809aedb0d0aa811c1be5cb6cf420958f",
+      "matches": true,
+      "duration": 52.80000000000048,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 48,
+      "scenario": "leg-injuries",
+      "digest": "91c5a6c37ea1cf86ab30c76fa0b17180aaa7a55a5df919ef0baf9f4f921df06f",
+      "referenceDigest": "91c5a6c37ea1cf86ab30c76fa0b17180aaa7a55a5df919ef0baf9f4f921df06f",
+      "matches": true,
+      "duration": 70.10000000000029,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 49,
+      "scenario": "standard",
+      "digest": "b974c88b49433568b9de02b752e540cee1be6b46ca1287b58ccab0e45d02e353",
+      "referenceDigest": "b974c88b49433568b9de02b752e540cee1be6b46ca1287b58ccab0e45d02e353",
+      "matches": true,
+      "duration": 35.70000000000024,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 50,
+      "scenario": "short-contact",
+      "digest": "56f7be4da286713f76f94db5108b43730380a2c00e67a4d39af952b4f30135c4",
+      "referenceDigest": "56f7be4da286713f76f94db5108b43730380a2c00e67a4d39af952b4f30135c4",
+      "matches": true,
+      "duration": 69.00000000000036,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 51,
+      "scenario": "reduced-reserves",
+      "digest": "16616f0e6bc20009cd8e8509faa4d3291e88498a92e725dcfbf28545bd05b934",
+      "referenceDigest": "16616f0e6bc20009cd8e8509faa4d3291e88498a92e725dcfbf28545bd05b934",
+      "matches": true,
+      "duration": 80.5999999999997,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 52,
+      "scenario": "leg-injuries",
+      "digest": "19026a3efb4b8f6ee8e06b4ea10b9e031c48961b7ff4b325560108cf43e9a8a2",
+      "referenceDigest": "19026a3efb4b8f6ee8e06b4ea10b9e031c48961b7ff4b325560108cf43e9a8a2",
+      "matches": true,
+      "duration": 29.200000000000145,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 53,
+      "scenario": "standard",
+      "digest": "6f458818f1b7de958e7b4afa409b5cd31946e9a772d8ad0c577cb0c0bbfaec2e",
+      "referenceDigest": "6f458818f1b7de958e7b4afa409b5cd31946e9a772d8ad0c577cb0c0bbfaec2e",
+      "matches": true,
+      "duration": 34.40000000000022,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 54,
+      "scenario": "short-contact",
+      "digest": "aedfd45168cc5599a740a78878db38f874a68e9ad93c31d4ed42e41457d9a331",
+      "referenceDigest": "aedfd45168cc5599a740a78878db38f874a68e9ad93c31d4ed42e41457d9a331",
+      "matches": true,
+      "duration": 98.29999999999869,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 55,
+      "scenario": "reduced-reserves",
+      "digest": "f561e2c6609285d01f6c389893fe9862eef11556fd88203a5e316181fcde9e38",
+      "referenceDigest": "f561e2c6609285d01f6c389893fe9862eef11556fd88203a5e316181fcde9e38",
+      "matches": true,
+      "duration": 74.80000000000003,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 56,
+      "scenario": "leg-injuries",
+      "digest": "f31e8a721e4805b4f7aadf4e283ba13a3919d3de1204ae767fc79c52453bebaa",
+      "referenceDigest": "f31e8a721e4805b4f7aadf4e283ba13a3919d3de1204ae767fc79c52453bebaa",
+      "matches": true,
+      "duration": 115.39999999999772,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 57,
+      "scenario": "standard",
+      "digest": "329b2f9820bc18a1e4823cb45683f66557f69c2ff8810b5197512d21ea439b05",
+      "referenceDigest": "329b2f9820bc18a1e4823cb45683f66557f69c2ff8810b5197512d21ea439b05",
+      "matches": true,
+      "duration": 40.400000000000304,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 58,
+      "scenario": "short-contact",
+      "digest": "a482508dc3f7d5cf04f4592b4dbc9da812ce185860fb7d87b881796ab6e10b0b",
+      "referenceDigest": "a482508dc3f7d5cf04f4592b4dbc9da812ce185860fb7d87b881796ab6e10b0b",
+      "matches": true,
+      "duration": 46.30000000000039,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 59,
+      "scenario": "reduced-reserves",
+      "digest": "7f0bacd857d89c85b40bf25fe7d01f9178ddcf6d68b911e13a0be6bb0f4d197d",
+      "referenceDigest": "7f0bacd857d89c85b40bf25fe7d01f9178ddcf6d68b911e13a0be6bb0f4d197d",
+      "matches": true,
+      "duration": 48.80000000000042,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 60,
+      "scenario": "leg-injuries",
+      "digest": "e8cf36b1fed9ff30bfa121b3430fdaa585368708ebfc18b54fa471f7acda0d25",
+      "referenceDigest": "e8cf36b1fed9ff30bfa121b3430fdaa585368708ebfc18b54fa471f7acda0d25",
+      "matches": true,
+      "duration": 88.09999999999927,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 61,
+      "scenario": "standard",
+      "digest": "1bf3a04d69abaf9ff875b35f1454bc09110bfa5da5afe0ab4fca8e9a23a2ea9a",
+      "referenceDigest": "1bf3a04d69abaf9ff875b35f1454bc09110bfa5da5afe0ab4fca8e9a23a2ea9a",
+      "matches": true,
+      "duration": 67.90000000000042,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 62,
+      "scenario": "short-contact",
+      "digest": "db097d6e3dff0d0bb1ac79fd84f96273df2ab2c1f79a824aee94fec6cc8b1f91",
+      "referenceDigest": "db097d6e3dff0d0bb1ac79fd84f96273df2ab2c1f79a824aee94fec6cc8b1f91",
+      "matches": true,
+      "duration": 83.9999999999995,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 63,
+      "scenario": "reduced-reserves",
+      "digest": "db7627ea6c726c92f81f6690d07d9c5179ca91af841a3f253bcc36405ed2e55d",
+      "referenceDigest": "db7627ea6c726c92f81f6690d07d9c5179ca91af841a3f253bcc36405ed2e55d",
+      "matches": true,
+      "duration": 48.40000000000042,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 64,
+      "scenario": "leg-injuries",
+      "digest": "cad85d01a46fcde7b30adb56e1d2615dc6914e33dc97dc876c0f134ebca42d23",
+      "referenceDigest": "cad85d01a46fcde7b30adb56e1d2615dc6914e33dc97dc876c0f134ebca42d23",
+      "matches": true,
+      "duration": 47.600000000000406,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 65,
+      "scenario": "standard",
+      "digest": "4563a5d160198520d5500705f39aebfa18f0a044f76123f729b1a1116e48ae96",
+      "referenceDigest": "4563a5d160198520d5500705f39aebfa18f0a044f76123f729b1a1116e48ae96",
+      "matches": true,
+      "duration": 63.90000000000064,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 66,
+      "scenario": "short-contact",
+      "digest": "0659cfdc3af3073c356dcaf118a49fec07b0f5443a56386a90c0cb40de98b5ec",
+      "referenceDigest": "0659cfdc3af3073c356dcaf118a49fec07b0f5443a56386a90c0cb40de98b5ec",
+      "matches": true,
+      "duration": 95.29999999999886,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 67,
+      "scenario": "reduced-reserves",
+      "digest": "32392ccfa23d92d7773d3828da76dfee79fd460ced5fc40f71c9a0edc0e8a8b3",
+      "referenceDigest": "32392ccfa23d92d7773d3828da76dfee79fd460ced5fc40f71c9a0edc0e8a8b3",
+      "matches": true,
+      "duration": 49.40000000000043,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 68,
+      "scenario": "leg-injuries",
+      "digest": "3ac2dfe8ebdc8c1bce69c098ef9c4a9e0860c3b482c34e58382dddfc1d1e3f5f",
+      "referenceDigest": "3ac2dfe8ebdc8c1bce69c098ef9c4a9e0860c3b482c34e58382dddfc1d1e3f5f",
+      "matches": true,
+      "duration": 65.10000000000058,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 69,
+      "scenario": "standard",
+      "digest": "7d9bd4c8c9e0dadc52061afb257c4f9e77f2037823915c17ae46373f7ffc0231",
+      "referenceDigest": "7d9bd4c8c9e0dadc52061afb257c4f9e77f2037823915c17ae46373f7ffc0231",
+      "matches": true,
+      "duration": 77.89999999999985,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 70,
+      "scenario": "short-contact",
+      "digest": "4883cf5a4ee4121ed2ac693e036ab4010355646960022cf18406c61310f7baf4",
+      "referenceDigest": "4883cf5a4ee4121ed2ac693e036ab4010355646960022cf18406c61310f7baf4",
+      "matches": true,
+      "duration": 94.4999999999989,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 71,
+      "scenario": "reduced-reserves",
+      "digest": "269c5df3188da945859077eb3026eed1da7200dfb6afa35c70466b0393876c8f",
+      "referenceDigest": "269c5df3188da945859077eb3026eed1da7200dfb6afa35c70466b0393876c8f",
+      "matches": true,
+      "duration": 58.700000000000564,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 72,
+      "scenario": "leg-injuries",
+      "digest": "f54b9b6d90eccc05a54bf50f7ef3b1df1330db019e6249fee218d2435f7619f4",
+      "referenceDigest": "f54b9b6d90eccc05a54bf50f7ef3b1df1330db019e6249fee218d2435f7619f4",
+      "matches": true,
+      "duration": 36.40000000000025,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 73,
+      "scenario": "standard",
+      "digest": "c1fcdfb886b35d181dc9867915bcceb1406ab4e79da65b27881c4a08b95c6008",
+      "referenceDigest": "c1fcdfb886b35d181dc9867915bcceb1406ab4e79da65b27881c4a08b95c6008",
+      "matches": true,
+      "duration": 100.39999999999857,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 74,
+      "scenario": "short-contact",
+      "digest": "e48dcadc540776657c8ed4a62c62658950f79753f67985595e605d36d31c05a2",
+      "referenceDigest": "e48dcadc540776657c8ed4a62c62658950f79753f67985595e605d36d31c05a2",
+      "matches": true,
+      "duration": 42.500000000000334,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 75,
+      "scenario": "reduced-reserves",
+      "digest": "e3bc40a8eec3999702ad68f5cbcd508f36d9ac83117db5e3733515b5878487b6",
+      "referenceDigest": "e3bc40a8eec3999702ad68f5cbcd508f36d9ac83117db5e3733515b5878487b6",
+      "matches": true,
+      "duration": 53.50000000000049,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 76,
+      "scenario": "leg-injuries",
+      "digest": "04d2de9d326e58c5762664514bc63061b8b50a02137569db54f9eadf68005966",
+      "referenceDigest": "04d2de9d326e58c5762664514bc63061b8b50a02137569db54f9eadf68005966",
+      "matches": true,
+      "duration": 51.20000000000046,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 77,
+      "scenario": "standard",
+      "digest": "2c2a34a50dabb7b53b06d9fee7ab8854aff847449c731bf48c5293ebf7110590",
+      "referenceDigest": "2c2a34a50dabb7b53b06d9fee7ab8854aff847449c731bf48c5293ebf7110590",
+      "matches": true,
+      "duration": 68.90000000000036,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 78,
+      "scenario": "short-contact",
+      "digest": "6d908c3442b20cd0c5db9b0c4474f0053fb1161257b1f65df8a0a2d149c91e7a",
+      "referenceDigest": "6d908c3442b20cd0c5db9b0c4474f0053fb1161257b1f65df8a0a2d149c91e7a",
+      "matches": true,
+      "duration": 69.50000000000033,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 79,
+      "scenario": "reduced-reserves",
+      "digest": "d4ac648776224ac6ab338e7ed0e60b10ecea5464c4d1d0cd778b73603430ec13",
+      "referenceDigest": "d4ac648776224ac6ab338e7ed0e60b10ecea5464c4d1d0cd778b73603430ec13",
+      "matches": true,
+      "duration": 84.59999999999947,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 80,
+      "scenario": "leg-injuries",
+      "digest": "b62f1810af0a8fd50763110288bf7cba699403177b5d0e2a5047ded055290e2c",
+      "referenceDigest": "b62f1810af0a8fd50763110288bf7cba699403177b5d0e2a5047ded055290e2c",
+      "matches": true,
+      "duration": 64.00000000000064,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 81,
+      "scenario": "standard",
+      "digest": "e5903300cdc6d9fdedbaf7584737ec5e9cf53552505265d522514fe07fb52659",
+      "referenceDigest": "e5903300cdc6d9fdedbaf7584737ec5e9cf53552505265d522514fe07fb52659",
+      "matches": true,
+      "duration": 58.700000000000564,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 82,
+      "scenario": "short-contact",
+      "digest": "da8894fa35b9bc30321c2cd75f5a7466468577a9baff6246226857cb6de39f76",
+      "referenceDigest": "da8894fa35b9bc30321c2cd75f5a7466468577a9baff6246226857cb6de39f76",
+      "matches": true,
+      "duration": 65.90000000000053,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 83,
+      "scenario": "reduced-reserves",
+      "digest": "c86d8afa817bb3e086c96590c4447c86589352ae31912a40a84eac2d7cf96923",
+      "referenceDigest": "c86d8afa817bb3e086c96590c4447c86589352ae31912a40a84eac2d7cf96923",
+      "matches": true,
+      "duration": 54.90000000000051,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 84,
+      "scenario": "leg-injuries",
+      "digest": "39a654aebf87c80d73f674a8f1bf6d809f8ef0ad9aa316de793fe975527152ba",
+      "referenceDigest": "39a654aebf87c80d73f674a8f1bf6d809f8ef0ad9aa316de793fe975527152ba",
+      "matches": true,
+      "duration": 88.89999999999922,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 85,
+      "scenario": "standard",
+      "digest": "a5702245053eac7e2974e5cb498cf3b4b92d95576b694fc9a4c18846f89c7e61",
+      "referenceDigest": "a5702245053eac7e2974e5cb498cf3b4b92d95576b694fc9a4c18846f89c7e61",
+      "matches": true,
+      "duration": 67.70000000000043,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 86,
+      "scenario": "short-contact",
+      "digest": "82a212495c258873a34394ff9213162e8efaf94273d5029fac761912d06e9470",
+      "referenceDigest": "82a212495c258873a34394ff9213162e8efaf94273d5029fac761912d06e9470",
+      "matches": true,
+      "duration": 57.00000000000054,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 87,
+      "scenario": "reduced-reserves",
+      "digest": "3d3f9b7958e1e9d10b65e275f6327e2e6ab95ab71eb897bd3e7678597089a2af",
+      "referenceDigest": "3d3f9b7958e1e9d10b65e275f6327e2e6ab95ab71eb897bd3e7678597089a2af",
+      "matches": true,
+      "duration": 69.50000000000033,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 88,
+      "scenario": "leg-injuries",
+      "digest": "dc544589ce59a27ad6320ea0c9f4ca3cbb5726ce4bb08fd9e776e46370c8b79b",
+      "referenceDigest": "dc544589ce59a27ad6320ea0c9f4ca3cbb5726ce4bb08fd9e776e46370c8b79b",
+      "matches": true,
+      "duration": 105.69999999999827,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 89,
+      "scenario": "standard",
+      "digest": "ceefd0aae6533594b523072181e0e5a12c340c22a4a471cc954f806578c235c7",
+      "referenceDigest": "ceefd0aae6533594b523072181e0e5a12c340c22a4a471cc954f806578c235c7",
+      "matches": true,
+      "duration": 68.70000000000037,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 90,
+      "scenario": "short-contact",
+      "digest": "a93cd5951e7bcb55b2f2afe5432bcafa4e9ab1671ab7dec0176b2098c5462f29",
+      "referenceDigest": "a93cd5951e7bcb55b2f2afe5432bcafa4e9ab1671ab7dec0176b2098c5462f29",
+      "matches": true,
+      "duration": 63.40000000000063,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 91,
+      "scenario": "reduced-reserves",
+      "digest": "79cc1f9c0496d7e5fbec63dfd86462db112ddb94f947fa34490e98bb79e04b44",
+      "referenceDigest": "79cc1f9c0496d7e5fbec63dfd86462db112ddb94f947fa34490e98bb79e04b44",
+      "matches": true,
+      "duration": 63.600000000000634,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 92,
+      "scenario": "leg-injuries",
+      "digest": "6498129071afe06d36bde1537d5c7dc8a4f209f34d734692f5b23f792c054ab2",
+      "referenceDigest": "6498129071afe06d36bde1537d5c7dc8a4f209f34d734692f5b23f792c054ab2",
+      "matches": true,
+      "duration": 170.3999999999946,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 93,
+      "scenario": "standard",
+      "digest": "1b3cb335e858c338153f294cd03322f44efca8ce098bfd4376ba6147d0682cb8",
+      "referenceDigest": "1b3cb335e858c338153f294cd03322f44efca8ce098bfd4376ba6147d0682cb8",
+      "matches": true,
+      "duration": 71.30000000000022,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 94,
+      "scenario": "short-contact",
+      "digest": "afb9da95032e99cee38628fff73f9b3b8574efdc5b93fcaf67b4543e98ea8bdb",
+      "referenceDigest": "afb9da95032e99cee38628fff73f9b3b8574efdc5b93fcaf67b4543e98ea8bdb",
+      "matches": true,
+      "duration": 37.600000000000264,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 95,
+      "scenario": "reduced-reserves",
+      "digest": "1dada32152124a4c22228705f01277494aeccda6940683ef588fe7ba6b2b4c82",
+      "referenceDigest": "1dada32152124a4c22228705f01277494aeccda6940683ef588fe7ba6b2b4c82",
+      "matches": true,
+      "duration": 75.2,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 96,
+      "scenario": "leg-injuries",
+      "digest": "4c434e6fe8ca2baba36ad875b8b066451717594bd8b163f9f3fb56e26d103ac0",
+      "referenceDigest": "4c434e6fe8ca2baba36ad875b8b066451717594bd8b163f9f3fb56e26d103ac0",
+      "matches": true,
+      "duration": 65.90000000000053,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 97,
+      "scenario": "standard",
+      "digest": "a456047d853e06137a24e21d58219dc7df42335248784e5f4c802b17069b3335",
+      "referenceDigest": "a456047d853e06137a24e21d58219dc7df42335248784e5f4c802b17069b3335",
+      "matches": true,
+      "duration": 141.99999999999622,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 98,
+      "scenario": "short-contact",
+      "digest": "4251494838c07f37e5a963bc64414be1a157e9a3e980894b418cf704c2f8cb4a",
+      "referenceDigest": "4251494838c07f37e5a963bc64414be1a157e9a3e980894b418cf704c2f8cb4a",
+      "matches": true,
+      "duration": 55.70000000000052,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 99,
+      "scenario": "reduced-reserves",
+      "digest": "7b1e96fc175eaf2d8e1329d04b01657c95a767362684d71d05af5ff8cb6aad33",
+      "referenceDigest": "7b1e96fc175eaf2d8e1329d04b01657c95a767362684d71d05af5ff8cb6aad33",
+      "matches": true,
+      "duration": 64.20000000000063,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 100,
+      "scenario": "leg-injuries",
+      "digest": "f7676d8d8a01f9223a175250cbb55ee499513565af5bc21f66087e75185163de",
+      "referenceDigest": "f7676d8d8a01f9223a175250cbb55ee499513565af5bc21f66087e75185163de",
+      "matches": true,
+      "duration": 97.89999999999871,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 101,
+      "scenario": "standard",
+      "digest": "33e48aed4e8b337fc366f8d86c0b7223972d42f4cdc1f3df04a245f768c9cb68",
+      "referenceDigest": "33e48aed4e8b337fc366f8d86c0b7223972d42f4cdc1f3df04a245f768c9cb68",
+      "matches": true,
+      "duration": 50.400000000000446,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 102,
+      "scenario": "short-contact",
+      "digest": "89bc74271b1b275072758e96158d19ebc466d45d7fac001d546849b077d9d458",
+      "referenceDigest": "89bc74271b1b275072758e96158d19ebc466d45d7fac001d546849b077d9d458",
+      "matches": true,
+      "duration": 65.70000000000054,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 103,
+      "scenario": "reduced-reserves",
+      "digest": "a3a5ba47112332def4cd7353babc2f52d5a5440bc3951ab7df7bde0e526bbd48",
+      "referenceDigest": "a3a5ba47112332def4cd7353babc2f52d5a5440bc3951ab7df7bde0e526bbd48",
+      "matches": true,
+      "duration": 76.79999999999991,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 104,
+      "scenario": "leg-injuries",
+      "digest": "10c7b52203cf8a4655871a2fa7a10fb4705933c28a7536addce8dcdb0032cbe9",
+      "referenceDigest": "10c7b52203cf8a4655871a2fa7a10fb4705933c28a7536addce8dcdb0032cbe9",
+      "matches": true,
+      "duration": 68.90000000000036,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 105,
+      "scenario": "standard",
+      "digest": "694b8242446cc2c9c296be111344a2398dd7a0b5a8a1c09fa0779bac318fb632",
+      "referenceDigest": "694b8242446cc2c9c296be111344a2398dd7a0b5a8a1c09fa0779bac318fb632",
+      "matches": true,
+      "duration": 36.200000000000244,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 106,
+      "scenario": "short-contact",
+      "digest": "7471007cd886ec6a2009f6764ade7248f0d4981828b46bb2fe6479c9a5d6af86",
+      "referenceDigest": "7471007cd886ec6a2009f6764ade7248f0d4981828b46bb2fe6479c9a5d6af86",
+      "matches": true,
+      "duration": 41.800000000000324,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 107,
+      "scenario": "reduced-reserves",
+      "digest": "7db05660c36681ae4867c108b3eca385d4cebe370804ccb031504b3f8768dc94",
+      "referenceDigest": "7db05660c36681ae4867c108b3eca385d4cebe370804ccb031504b3f8768dc94",
+      "matches": true,
+      "duration": 49.000000000000426,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 108,
+      "scenario": "leg-injuries",
+      "digest": "3102057fc6fa95a8b8bbac5dda19dd69e8f29e85b7a169524e7327cd3694c5b4",
+      "referenceDigest": "3102057fc6fa95a8b8bbac5dda19dd69e8f29e85b7a169524e7327cd3694c5b4",
+      "matches": true,
+      "duration": 107.19999999999818,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 109,
+      "scenario": "standard",
+      "digest": "525c21e30450ab9b1092bfd2bf8858acf79e349eb595ad8252d8c2b6fd4b87b9",
+      "referenceDigest": "525c21e30450ab9b1092bfd2bf8858acf79e349eb595ad8252d8c2b6fd4b87b9",
+      "matches": true,
+      "duration": 59.90000000000058,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 110,
+      "scenario": "short-contact",
+      "digest": "90c7c9bbf71b057c0257354dca789d06a2d8085472583c77bf4e0edd8856e234",
+      "referenceDigest": "90c7c9bbf71b057c0257354dca789d06a2d8085472583c77bf4e0edd8856e234",
+      "matches": true,
+      "duration": 64.7000000000006,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 111,
+      "scenario": "reduced-reserves",
+      "digest": "ea9d31dfe1bbc22e5efcf2aded7680cd917b7309c0cce59ea162b71734148a83",
+      "referenceDigest": "ea9d31dfe1bbc22e5efcf2aded7680cd917b7309c0cce59ea162b71734148a83",
+      "matches": true,
+      "duration": 64.6000000000006,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 112,
+      "scenario": "leg-injuries",
+      "digest": "003e47c6a7976a270174fb10c717996421ad530481eede8062f86facf5a73504",
+      "referenceDigest": "003e47c6a7976a270174fb10c717996421ad530481eede8062f86facf5a73504",
+      "matches": true,
+      "duration": 63.600000000000634,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 113,
+      "scenario": "standard",
+      "digest": "e9b1736334ccf4f95cd5d96cb1a4bfe2d86be3e4529fe9b24b5d702731f2049e",
+      "referenceDigest": "e9b1736334ccf4f95cd5d96cb1a4bfe2d86be3e4529fe9b24b5d702731f2049e",
+      "matches": true,
+      "duration": 44.600000000000364,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 114,
+      "scenario": "short-contact",
+      "digest": "221e83e470af33445b6907b612e6a8aaafb19c00a03a4dc02c3c84469c26ddcc",
+      "referenceDigest": "221e83e470af33445b6907b612e6a8aaafb19c00a03a4dc02c3c84469c26ddcc",
+      "matches": true,
+      "duration": 83.69999999999952,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 115,
+      "scenario": "reduced-reserves",
+      "digest": "dec96200efd993a72cea82a3b0b4c86913dadd45817e6b2af8d6928718504a5d",
+      "referenceDigest": "dec96200efd993a72cea82a3b0b4c86913dadd45817e6b2af8d6928718504a5d",
+      "matches": true,
+      "duration": 42.70000000000034,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 116,
+      "scenario": "leg-injuries",
+      "digest": "52a26d97ae72f868cd1bc0b1eefae9bf7cfde9c07a5ef89e138a744b9757c153",
+      "referenceDigest": "52a26d97ae72f868cd1bc0b1eefae9bf7cfde9c07a5ef89e138a744b9757c153",
+      "matches": true,
+      "duration": 95.89999999999883,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 117,
+      "scenario": "standard",
+      "digest": "349e9bbfccdfdf2ed5c5efe83fb83c01a1b03fbedf01170589944a304d3b7879",
+      "referenceDigest": "349e9bbfccdfdf2ed5c5efe83fb83c01a1b03fbedf01170589944a304d3b7879",
+      "matches": true,
+      "duration": 78.49999999999982,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 118,
+      "scenario": "short-contact",
+      "digest": "734b0195dbf02bae6b7de6cb00a3564fe70b0d5ad1d5ffc8cf82e3dbfa28d828",
+      "referenceDigest": "734b0195dbf02bae6b7de6cb00a3564fe70b0d5ad1d5ffc8cf82e3dbfa28d828",
+      "matches": true,
+      "duration": 90.69999999999912,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 119,
+      "scenario": "reduced-reserves",
+      "digest": "955d23525a9d63867747f8c034c18b83ec632197c6198d13180341cec67f353e",
+      "referenceDigest": "955d23525a9d63867747f8c034c18b83ec632197c6198d13180341cec67f353e",
+      "matches": true,
+      "duration": 46.9000000000004,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 120,
+      "scenario": "leg-injuries",
+      "digest": "114dfee694f2646b62bb81186717afdbce3072276add9cf608690b760a6cf9fb",
+      "referenceDigest": "114dfee694f2646b62bb81186717afdbce3072276add9cf608690b760a6cf9fb",
+      "matches": true,
+      "duration": 124.69999999999719,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 121,
+      "scenario": "standard",
+      "digest": "1c41d74b6c0552b7fcab8713d8d3d2ce4891ec97ee1f53bb95a9ebe2cfde5f49",
+      "referenceDigest": "1c41d74b6c0552b7fcab8713d8d3d2ce4891ec97ee1f53bb95a9ebe2cfde5f49",
+      "matches": true,
+      "duration": 82.79999999999957,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 122,
+      "scenario": "short-contact",
+      "digest": "e679a345ca93b42e6d88ceaa8dd1974e432782f3b37233f859a305aaab9e48cb",
+      "referenceDigest": "e679a345ca93b42e6d88ceaa8dd1974e432782f3b37233f859a305aaab9e48cb",
+      "matches": true,
+      "duration": 72.10000000000018,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 123,
+      "scenario": "reduced-reserves",
+      "digest": "472ce792360ae59249b6d878a62ca6a6f555cd3b1dd655f5a0e858345f5263ca",
+      "referenceDigest": "472ce792360ae59249b6d878a62ca6a6f555cd3b1dd655f5a0e858345f5263ca",
+      "matches": true,
+      "duration": 54.500000000000504,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 124,
+      "scenario": "leg-injuries",
+      "digest": "2f33ee8dafc310257c259f3a1ff361b2adfd25a8291c89c47cbbe994ec06bf8d",
+      "referenceDigest": "2f33ee8dafc310257c259f3a1ff361b2adfd25a8291c89c47cbbe994ec06bf8d",
+      "matches": true,
+      "duration": 49.20000000000043,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 125,
+      "scenario": "standard",
+      "digest": "049186cc4aaec7306d1f9653f16c7915cbf41c92071a4d4715ec66381aec3740",
+      "referenceDigest": "049186cc4aaec7306d1f9653f16c7915cbf41c92071a4d4715ec66381aec3740",
+      "matches": true,
+      "duration": 70.20000000000029,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 126,
+      "scenario": "short-contact",
+      "digest": "4f6d74796f3a36b8fdb315442725ae1e01b95c7cf0a5be0251f44f8f5b81639d",
+      "referenceDigest": "4f6d74796f3a36b8fdb315442725ae1e01b95c7cf0a5be0251f44f8f5b81639d",
+      "matches": true,
+      "duration": 80.19999999999972,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 127,
+      "scenario": "reduced-reserves",
+      "digest": "53cb6b4e7f864c8ce59d83827a3250e27ba68482d723006980f40172be8809cc",
+      "referenceDigest": "53cb6b4e7f864c8ce59d83827a3250e27ba68482d723006980f40172be8809cc",
+      "matches": true,
+      "duration": 79.89999999999974,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 128,
+      "scenario": "leg-injuries",
+      "digest": "2c1d11e9f99bee6318668e6ee925b4e4185d3baaa3271adee1b51b8d7bfaa59f",
+      "referenceDigest": "2c1d11e9f99bee6318668e6ee925b4e4185d3baaa3271adee1b51b8d7bfaa59f",
+      "matches": true,
+      "duration": 88.79999999999923,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 129,
+      "scenario": "standard",
+      "digest": "028c5f23e1075b7f99836bc64372f0a8edc054086cc8eab0bc832ebde4331274",
+      "referenceDigest": "028c5f23e1075b7f99836bc64372f0a8edc054086cc8eab0bc832ebde4331274",
+      "matches": true,
+      "duration": 61.600000000000605,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 130,
+      "scenario": "short-contact",
+      "digest": "bd4f04cfb50b0d787cccd9b07cdd564300f3efde0384ac85fb02fde88dc985ae",
+      "referenceDigest": "bd4f04cfb50b0d787cccd9b07cdd564300f3efde0384ac85fb02fde88dc985ae",
+      "matches": true,
+      "duration": 48.40000000000042,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 131,
+      "scenario": "reduced-reserves",
+      "digest": "44a278c7229cf910daff27421d859ec4f2fee898daf7b5e569a1a260ffedc614",
+      "referenceDigest": "44a278c7229cf910daff27421d859ec4f2fee898daf7b5e569a1a260ffedc614",
+      "matches": true,
+      "duration": 58.40000000000056,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 132,
+      "scenario": "leg-injuries",
+      "digest": "2b210e0cc77b3ca54cd61dc8107d8b94d0c6b1a67e66c3f10a663ebade39547b",
+      "referenceDigest": "2b210e0cc77b3ca54cd61dc8107d8b94d0c6b1a67e66c3f10a663ebade39547b",
+      "matches": true,
+      "duration": 52.70000000000048,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 133,
+      "scenario": "standard",
+      "digest": "937177aa7703ac105f548e11025071d47bda6d7d501f06013380c92181dd5581",
+      "referenceDigest": "937177aa7703ac105f548e11025071d47bda6d7d501f06013380c92181dd5581",
+      "matches": true,
+      "duration": 87.89999999999928,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 134,
+      "scenario": "short-contact",
+      "digest": "9ffd954f906e491457d7d7ac614d5724ed47a6430d6e4b88f0c87cc88e219fcc",
+      "referenceDigest": "9ffd954f906e491457d7d7ac614d5724ed47a6430d6e4b88f0c87cc88e219fcc",
+      "matches": true,
+      "duration": 68.70000000000037,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 135,
+      "scenario": "reduced-reserves",
+      "digest": "5d49b56e40292e422d5e72688d0282dc0ae971c027b817d50f7e06431371748d",
+      "referenceDigest": "5d49b56e40292e422d5e72688d0282dc0ae971c027b817d50f7e06431371748d",
+      "matches": true,
+      "duration": 37.40000000000026,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 136,
+      "scenario": "leg-injuries",
+      "digest": "6820ec98e0916df9ce0d52edc497116751468df2d1400ee4bf60049e274284c8",
+      "referenceDigest": "6820ec98e0916df9ce0d52edc497116751468df2d1400ee4bf60049e274284c8",
+      "matches": true,
+      "duration": 84.19999999999949,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 137,
+      "scenario": "standard",
+      "digest": "7ee89693b277f7464e607f44f80f2c4556f1e54d71ed2ba466bf0025450076ca",
+      "referenceDigest": "7ee89693b277f7464e607f44f80f2c4556f1e54d71ed2ba466bf0025450076ca",
+      "matches": true,
+      "duration": 69.60000000000032,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 138,
+      "scenario": "short-contact",
+      "digest": "e64296b88a46744197897255d07078df034160384a056340a39fbc9aad1c3815",
+      "referenceDigest": "e64296b88a46744197897255d07078df034160384a056340a39fbc9aad1c3815",
+      "matches": true,
+      "duration": 59.30000000000057,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 139,
+      "scenario": "reduced-reserves",
+      "digest": "9babe28cbc297ff5c0420d4125afdd08614e67c72c525766da5abd418afaca05",
+      "referenceDigest": "9babe28cbc297ff5c0420d4125afdd08614e67c72c525766da5abd418afaca05",
+      "matches": true,
+      "duration": 61.3000000000006,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 140,
+      "scenario": "leg-injuries",
+      "digest": "a10516fc855f3d80a25a2c4a908f5c0a3899462300dc472ad03a24ed8ca95a84",
+      "referenceDigest": "a10516fc855f3d80a25a2c4a908f5c0a3899462300dc472ad03a24ed8ca95a84",
+      "matches": true,
+      "duration": 78.99999999999979,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 141,
+      "scenario": "standard",
+      "digest": "2c195642604d1acd1729b3bb63531efa7d116e6ec6bc8a176fc9ebc154437bd0",
+      "referenceDigest": "2c195642604d1acd1729b3bb63531efa7d116e6ec6bc8a176fc9ebc154437bd0",
+      "matches": true,
+      "duration": 50.00000000000044,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 142,
+      "scenario": "short-contact",
+      "digest": "6691324df0c1fa7ed74a21123df35d9a3279c5cdf6289e02b1d6dd68dcd9cb53",
+      "referenceDigest": "6691324df0c1fa7ed74a21123df35d9a3279c5cdf6289e02b1d6dd68dcd9cb53",
+      "matches": true,
+      "duration": 32.000000000000185,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 143,
+      "scenario": "reduced-reserves",
+      "digest": "d5a24d4c27cd566076e41c5028d3191087845d51c5177479c2cd88b7d139a104",
+      "referenceDigest": "d5a24d4c27cd566076e41c5028d3191087845d51c5177479c2cd88b7d139a104",
+      "matches": true,
+      "duration": 55.70000000000052,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 144,
+      "scenario": "leg-injuries",
+      "digest": "d319c17ae07b17c6ff1329b9f6679052547118ba191b8cc8d1f6f3ab5778ba73",
+      "referenceDigest": "d319c17ae07b17c6ff1329b9f6679052547118ba191b8cc8d1f6f3ab5778ba73",
+      "matches": true,
+      "duration": 56.30000000000053,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 145,
+      "scenario": "standard",
+      "digest": "1b89eac1dfb560e1cc09f2381e7e0b922dc5f3e261bd6aec1ba087fb2a3730b6",
+      "referenceDigest": "1b89eac1dfb560e1cc09f2381e7e0b922dc5f3e261bd6aec1ba087fb2a3730b6",
+      "matches": true,
+      "duration": 113.59999999999782,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 146,
+      "scenario": "short-contact",
+      "digest": "4a5f1ffddb4a435e64fe182b19cd1a66828381720717f725644e4ddcf939d2f5",
+      "referenceDigest": "4a5f1ffddb4a435e64fe182b19cd1a66828381720717f725644e4ddcf939d2f5",
+      "matches": true,
+      "duration": 128.79999999999697,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 147,
+      "scenario": "reduced-reserves",
+      "digest": "439e4b4b946f574311aa0387c089150f9767ecd3c9df5c9261951110c666507a",
+      "referenceDigest": "439e4b4b946f574311aa0387c089150f9767ecd3c9df5c9261951110c666507a",
+      "matches": true,
+      "duration": 37.10000000000026,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 148,
+      "scenario": "leg-injuries",
+      "digest": "c7fb94d7b0968517ccbfc5b9ff4c8ec4548a8bbd0bd938690c78f9d157503b3c",
+      "referenceDigest": "c7fb94d7b0968517ccbfc5b9ff4c8ec4548a8bbd0bd938690c78f9d157503b3c",
+      "matches": true,
+      "duration": 82.3999999999996,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 149,
+      "scenario": "standard",
+      "digest": "2250c1480c1ca59332193177595a1d381cd75c25daa2db83d3cdd68cf67ad84a",
+      "referenceDigest": "2250c1480c1ca59332193177595a1d381cd75c25daa2db83d3cdd68cf67ad84a",
+      "matches": true,
+      "duration": 99.59999999999862,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 150,
+      "scenario": "short-contact",
+      "digest": "d9fcca5794358cd00749625b62643240b6a605448e39b3a7231f45737bb08650",
+      "referenceDigest": "d9fcca5794358cd00749625b62643240b6a605448e39b3a7231f45737bb08650",
+      "matches": true,
+      "duration": 62.70000000000062,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 151,
+      "scenario": "reduced-reserves",
+      "digest": "a83f2a95dba0e5f1941e1f5ea67395ebb302ba255d147f31012e6279c12f1df5",
+      "referenceDigest": "a83f2a95dba0e5f1941e1f5ea67395ebb302ba255d147f31012e6279c12f1df5",
+      "matches": true,
+      "duration": 54.600000000000506,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 152,
+      "scenario": "leg-injuries",
+      "digest": "6d06e07076fd0f759ad6054ae80f92f75a49ae687f36cb3ab4a09382a6cf3196",
+      "referenceDigest": "6d06e07076fd0f759ad6054ae80f92f75a49ae687f36cb3ab4a09382a6cf3196",
+      "matches": true,
+      "duration": 53.200000000000486,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 153,
+      "scenario": "standard",
+      "digest": "9ace283cd98ed9fd4790adf2771ff2c3f8109904cbc5f5f65c9b415c51dfde3c",
+      "referenceDigest": "9ace283cd98ed9fd4790adf2771ff2c3f8109904cbc5f5f65c9b415c51dfde3c",
+      "matches": true,
+      "duration": 83.19999999999955,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 154,
+      "scenario": "short-contact",
+      "digest": "a4cea4fd233831a205d8e3ac694a15f73769844ee4ad5a9ebf69eaa55e6b3569",
+      "referenceDigest": "a4cea4fd233831a205d8e3ac694a15f73769844ee4ad5a9ebf69eaa55e6b3569",
+      "matches": true,
+      "duration": 48.00000000000041,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 155,
+      "scenario": "reduced-reserves",
+      "digest": "4fd7e1ab69acf14307f67325552eb5010d8c53705eeb3507dcce20a316bdb433",
+      "referenceDigest": "4fd7e1ab69acf14307f67325552eb5010d8c53705eeb3507dcce20a316bdb433",
+      "matches": true,
+      "duration": 55.00000000000051,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 156,
+      "scenario": "leg-injuries",
+      "digest": "0f931d6c4d0d21b219e5966c73b15a6edce68eac2d9aa33622ba9928e291deef",
+      "referenceDigest": "0f931d6c4d0d21b219e5966c73b15a6edce68eac2d9aa33622ba9928e291deef",
+      "matches": true,
+      "duration": 39.20000000000029,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 157,
+      "scenario": "standard",
+      "digest": "a4261e2c599f653e43aaf8fcfae7d409e86a5757f6a8f1973a200e28b132651b",
+      "referenceDigest": "a4261e2c599f653e43aaf8fcfae7d409e86a5757f6a8f1973a200e28b132651b",
+      "matches": true,
+      "duration": 40.400000000000304,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 158,
+      "scenario": "short-contact",
+      "digest": "609ed21bea79fbdf108bb642d7b9f7e1eacda18c1232597e7d2966a556f8b118",
+      "referenceDigest": "609ed21bea79fbdf108bb642d7b9f7e1eacda18c1232597e7d2966a556f8b118",
+      "matches": true,
+      "duration": 81.69999999999963,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 159,
+      "scenario": "reduced-reserves",
+      "digest": "96624d2836ce66584211e134ccfc784f0504399d90aa546d6c2a32f4684e13c3",
+      "referenceDigest": "96624d2836ce66584211e134ccfc784f0504399d90aa546d6c2a32f4684e13c3",
+      "matches": true,
+      "duration": 50.70000000000045,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 160,
+      "scenario": "leg-injuries",
+      "digest": "ec17ce6e6ab34e1d1abe9c9b36763eda6ab37f3e99b328fe900690ab6ddff719",
+      "referenceDigest": "ec17ce6e6ab34e1d1abe9c9b36763eda6ab37f3e99b328fe900690ab6ddff719",
+      "matches": true,
+      "duration": 64.30000000000062,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 161,
+      "scenario": "standard",
+      "digest": "5c3e8ee5554c488bd866340ac4cd4287efe2cd3b2d61880f262614423f99e5a1",
+      "referenceDigest": "5c3e8ee5554c488bd866340ac4cd4287efe2cd3b2d61880f262614423f99e5a1",
+      "matches": true,
+      "duration": 78.49999999999982,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 162,
+      "scenario": "short-contact",
+      "digest": "d6df8e527bfb7d9cd5347b46e7a31cc551aabdbc7ade9c7a584652346d7abcf3",
+      "referenceDigest": "d6df8e527bfb7d9cd5347b46e7a31cc551aabdbc7ade9c7a584652346d7abcf3",
+      "matches": true,
+      "duration": 55.10000000000051,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 163,
+      "scenario": "reduced-reserves",
+      "digest": "3a2d7f25755647530db06cbad1af5accbd2e2842fbe1ce5bb54ecac8f02413ac",
+      "referenceDigest": "3a2d7f25755647530db06cbad1af5accbd2e2842fbe1ce5bb54ecac8f02413ac",
+      "matches": true,
+      "duration": 46.9000000000004,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 164,
+      "scenario": "leg-injuries",
+      "digest": "7d830c18fa2bfd58d26f53ab6ef4ae6e42b9fc5f68d284259dc83f37318639a6",
+      "referenceDigest": "7d830c18fa2bfd58d26f53ab6ef4ae6e42b9fc5f68d284259dc83f37318639a6",
+      "matches": true,
+      "duration": 81.59999999999964,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 165,
+      "scenario": "standard",
+      "digest": "c66e54b32137127dfc91eede05d81c956a356c238252dd14c8912ffcc742e856",
+      "referenceDigest": "c66e54b32137127dfc91eede05d81c956a356c238252dd14c8912ffcc742e856",
+      "matches": true,
+      "duration": 101.79999999999849,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 166,
+      "scenario": "short-contact",
+      "digest": "5ccd58723a2bbb8b873a498a2cff834796527cbf9f4fe1677af6dcdd83332756",
+      "referenceDigest": "5ccd58723a2bbb8b873a498a2cff834796527cbf9f4fe1677af6dcdd83332756",
+      "matches": true,
+      "duration": 53.100000000000485,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 167,
+      "scenario": "reduced-reserves",
+      "digest": "46f135229c2d84cc09e019ee035fa74302d434f169b2c760e8a5820191a87de2",
+      "referenceDigest": "46f135229c2d84cc09e019ee035fa74302d434f169b2c760e8a5820191a87de2",
+      "matches": true,
+      "duration": 96.09999999999881,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 168,
+      "scenario": "leg-injuries",
+      "digest": "87e64e4a319eb4efb2a54574f2ac3eb211b63fcd4a27d63c390e603ba851c263",
+      "referenceDigest": "87e64e4a319eb4efb2a54574f2ac3eb211b63fcd4a27d63c390e603ba851c263",
+      "matches": true,
+      "duration": 65.30000000000057,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 169,
+      "scenario": "standard",
+      "digest": "8ac7f3d39dc19e47cea39033cab352857627cb720c8dcaff0e83ac10da2532f4",
+      "referenceDigest": "8ac7f3d39dc19e47cea39033cab352857627cb720c8dcaff0e83ac10da2532f4",
+      "matches": true,
+      "duration": 31.00000000000017,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 170,
+      "scenario": "short-contact",
+      "digest": "deac249606666357bc827a8e9a8b5e8345f3c167e3dbf5e749385b261eb32c15",
+      "referenceDigest": "deac249606666357bc827a8e9a8b5e8345f3c167e3dbf5e749385b261eb32c15",
+      "matches": true,
+      "duration": 49.40000000000043,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 171,
+      "scenario": "reduced-reserves",
+      "digest": "53e7115985074616fa67f2768f72ead502838881a172c675c788486e0788a092",
+      "referenceDigest": "53e7115985074616fa67f2768f72ead502838881a172c675c788486e0788a092",
+      "matches": true,
+      "duration": 86.39999999999937,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 172,
+      "scenario": "leg-injuries",
+      "digest": "b8cd5083ef7013053895afd1b855e5a154015831f68daadef2c92289989eddd9",
+      "referenceDigest": "b8cd5083ef7013053895afd1b855e5a154015831f68daadef2c92289989eddd9",
+      "matches": true,
+      "duration": 32.9000000000002,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 173,
+      "scenario": "standard",
+      "digest": "56aae4aed2698d46241cb6d6bd15f59c9d17db38d4492de67bd3219b97c86cd6",
+      "referenceDigest": "56aae4aed2698d46241cb6d6bd15f59c9d17db38d4492de67bd3219b97c86cd6",
+      "matches": true,
+      "duration": 53.30000000000049,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 174,
+      "scenario": "short-contact",
+      "digest": "282afb7ff63bfad6ef518c262be5b11fa27fb923f57453cfb6954f01dc6192f6",
+      "referenceDigest": "282afb7ff63bfad6ef518c262be5b11fa27fb923f57453cfb6954f01dc6192f6",
+      "matches": true,
+      "duration": 95.19999999999887,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 175,
+      "scenario": "reduced-reserves",
+      "digest": "a026c3d684daffae2d7ef987a4a6b145b30df33900b068fe0242322c62f4419d",
+      "referenceDigest": "a026c3d684daffae2d7ef987a4a6b145b30df33900b068fe0242322c62f4419d",
+      "matches": true,
+      "duration": 100.09999999999859,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 176,
+      "scenario": "leg-injuries",
+      "digest": "b1fb28bdb027088d844898742a87f5e05ec78e637b68e07e07cd78cbd607d028",
+      "referenceDigest": "b1fb28bdb027088d844898742a87f5e05ec78e637b68e07e07cd78cbd607d028",
+      "matches": true,
+      "duration": 53.100000000000485,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 177,
+      "scenario": "standard",
+      "digest": "26dd3ee39e7e49060f83cb29b47e8b2571fdfe6fd241a51f216ec04d6e1bed26",
+      "referenceDigest": "26dd3ee39e7e49060f83cb29b47e8b2571fdfe6fd241a51f216ec04d6e1bed26",
+      "matches": true,
+      "duration": 66.20000000000051,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 178,
+      "scenario": "short-contact",
+      "digest": "160e2a6cc83fd1d3ec27ebe78a0973a17a59ca69f26374a05fdc015566377ea0",
+      "referenceDigest": "160e2a6cc83fd1d3ec27ebe78a0973a17a59ca69f26374a05fdc015566377ea0",
+      "matches": true,
+      "duration": 82.49999999999959,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 179,
+      "scenario": "reduced-reserves",
+      "digest": "6e11c060209a8541b431f9cbb110141bcbab0c195383b54382b2ebd3df3acbda",
+      "referenceDigest": "6e11c060209a8541b431f9cbb110141bcbab0c195383b54382b2ebd3df3acbda",
+      "matches": true,
+      "duration": 84.19999999999949,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 180,
+      "scenario": "leg-injuries",
+      "digest": "501bc11c5758bdd5a1e7c95c758ccc53dbf8d7678e52f6d7bcb96220fa8620cd",
+      "referenceDigest": "501bc11c5758bdd5a1e7c95c758ccc53dbf8d7678e52f6d7bcb96220fa8620cd",
+      "matches": true,
+      "duration": 35.70000000000024,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 181,
+      "scenario": "standard",
+      "digest": "6244b931cc1a5e2d6a2571ede2d1ab231e49ecb735c5be62dc8fca566a13bc7c",
+      "referenceDigest": "6244b931cc1a5e2d6a2571ede2d1ab231e49ecb735c5be62dc8fca566a13bc7c",
+      "matches": true,
+      "duration": 78.89999999999979,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 182,
+      "scenario": "short-contact",
+      "digest": "1f7175e976be6bc042afb7b04fdcef18862ccfb0657ea5990ff8e391fdba9c09",
+      "referenceDigest": "1f7175e976be6bc042afb7b04fdcef18862ccfb0657ea5990ff8e391fdba9c09",
+      "matches": true,
+      "duration": 66.4000000000005,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 183,
+      "scenario": "reduced-reserves",
+      "digest": "af6d36eea93ce0ec6d6b80d9c5df2d72c11eab3f56ed58e319f566933d83824d",
+      "referenceDigest": "af6d36eea93ce0ec6d6b80d9c5df2d72c11eab3f56ed58e319f566933d83824d",
+      "matches": true,
+      "duration": 55.00000000000051,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 184,
+      "scenario": "leg-injuries",
+      "digest": "5ef6c990cdb8d1ac40b984a30f88d4b0be74e2d0fc1bc3e76f790bf32bc1e3de",
+      "referenceDigest": "5ef6c990cdb8d1ac40b984a30f88d4b0be74e2d0fc1bc3e76f790bf32bc1e3de",
+      "matches": true,
+      "duration": 45.00000000000037,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 185,
+      "scenario": "standard",
+      "digest": "57be94971a373cfdde4744beb53e63861486909971fe8b5f892f7d67c6ba2771",
+      "referenceDigest": "57be94971a373cfdde4744beb53e63861486909971fe8b5f892f7d67c6ba2771",
+      "matches": true,
+      "duration": 62.00000000000061,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 186,
+      "scenario": "short-contact",
+      "digest": "f3eb6c8c435ada1d84dc967b38cc6cb0f21f1b0b428fe804573e7d5d92433487",
+      "referenceDigest": "f3eb6c8c435ada1d84dc967b38cc6cb0f21f1b0b428fe804573e7d5d92433487",
+      "matches": true,
+      "duration": 56.40000000000053,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 187,
+      "scenario": "reduced-reserves",
+      "digest": "ff251aacbffee97ef2f210f5f17beaac65e8ba06a8af100c348e3abf2225709e",
+      "referenceDigest": "ff251aacbffee97ef2f210f5f17beaac65e8ba06a8af100c348e3abf2225709e",
+      "matches": true,
+      "duration": 72.30000000000017,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 188,
+      "scenario": "leg-injuries",
+      "digest": "1c544c3ba233893043f0a8f7a00b6d0fe2194bd6f6cee0f19b2c40ec220a1460",
+      "referenceDigest": "1c544c3ba233893043f0a8f7a00b6d0fe2194bd6f6cee0f19b2c40ec220a1460",
+      "matches": true,
+      "duration": 69.00000000000036,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 189,
+      "scenario": "standard",
+      "digest": "6c70d2017dec0921c56cd65fabe62b7fee4b935969366a58017adfbffec0b7ec",
+      "referenceDigest": "6c70d2017dec0921c56cd65fabe62b7fee4b935969366a58017adfbffec0b7ec",
+      "matches": true,
+      "duration": 95.09999999999887,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 190,
+      "scenario": "short-contact",
+      "digest": "ac2231f91ae3d6b8588b6d6fd08d9e9ded02865260691715b014a9016030982e",
+      "referenceDigest": "ac2231f91ae3d6b8588b6d6fd08d9e9ded02865260691715b014a9016030982e",
+      "matches": true,
+      "duration": 35.600000000000236,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 191,
+      "scenario": "reduced-reserves",
+      "digest": "69ee5c78fd7e824c5e69b7d37617f7fa21a6b5023d6e57f3b0fa0baa82cb70ab",
+      "referenceDigest": "69ee5c78fd7e824c5e69b7d37617f7fa21a6b5023d6e57f3b0fa0baa82cb70ab",
+      "matches": true,
+      "duration": 51.30000000000046,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 192,
+      "scenario": "leg-injuries",
+      "digest": "245637034cc446a08286d5ae5f7112b8bc96d90b9d34f6e0d3ec2ee2588b4600",
+      "referenceDigest": "245637034cc446a08286d5ae5f7112b8bc96d90b9d34f6e0d3ec2ee2588b4600",
+      "matches": true,
+      "duration": 90.39999999999914,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 193,
+      "scenario": "standard",
+      "digest": "f8c366dafebe61fbe62f51234eec9482dadf586f5b5f87f8f74e390368bd86eb",
+      "referenceDigest": "f8c366dafebe61fbe62f51234eec9482dadf586f5b5f87f8f74e390368bd86eb",
+      "matches": true,
+      "duration": 88.39999999999925,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 194,
+      "scenario": "short-contact",
+      "digest": "5de82ebbe5b89c48125626f974a4ce9bfa73b88814088f8386b38aa848e679f7",
+      "referenceDigest": "5de82ebbe5b89c48125626f974a4ce9bfa73b88814088f8386b38aa848e679f7",
+      "matches": true,
+      "duration": 52.80000000000048,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 195,
+      "scenario": "reduced-reserves",
+      "digest": "d77c6a7f5179475780f93838e16ce926a7e0a15e8c2691e8b844488a698aa38b",
+      "referenceDigest": "d77c6a7f5179475780f93838e16ce926a7e0a15e8c2691e8b844488a698aa38b",
+      "matches": true,
+      "duration": 49.80000000000044,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 196,
+      "scenario": "leg-injuries",
+      "digest": "4d2ffa0f96357d2339c074cca3cebc5ecffc696befb39dd695e9f494af0fbad9",
+      "referenceDigest": "4d2ffa0f96357d2339c074cca3cebc5ecffc696befb39dd695e9f494af0fbad9",
+      "matches": true,
+      "duration": 61.500000000000604,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 197,
+      "scenario": "standard",
+      "digest": "935265438448b8337afb046cd0f4855e1e9e9f59c6dd39cd255ffad54666f887",
+      "referenceDigest": "935265438448b8337afb046cd0f4855e1e9e9f59c6dd39cd255ffad54666f887",
+      "matches": true,
+      "duration": 45.90000000000038,
+      "result": "Russian infantry victory"
+    },
+    {
+      "seed": 198,
+      "scenario": "short-contact",
+      "digest": "ae3e6875a82bbccf225c612eea89c4c229c462a64038e57a7ef2d552ffba98d1",
+      "referenceDigest": "ae3e6875a82bbccf225c612eea89c4c229c462a64038e57a7ef2d552ffba98d1",
+      "matches": true,
+      "duration": 41.800000000000324,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 199,
+      "scenario": "reduced-reserves",
+      "digest": "93c6d3d3b5e37f114a46060edfef3c2022f529bee35c35b836412cc06f68752f",
+      "referenceDigest": "93c6d3d3b5e37f114a46060edfef3c2022f529bee35c35b836412cc06f68752f",
+      "matches": true,
+      "duration": 40.60000000000031,
+      "result": "USMC victory"
+    },
+    {
+      "seed": 200,
+      "scenario": "leg-injuries",
+      "digest": "eb22c2ab0f3c0166899da6388e909fc27b90ce11b57bb346e1536638089a7fe7",
+      "referenceDigest": "eb22c2ab0f3c0166899da6388e909fc27b90ce11b57bb346e1536638089a7fe7",
+      "matches": true,
+      "duration": 55.80000000000052,
+      "result": "USMC victory"
+    }
+  ]
+}
