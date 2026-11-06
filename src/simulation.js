@@ -1,4 +1,13 @@
 import {
+  initializeIntel,
+  perceive,
+  adoptContact,
+  selectEnemy,
+  squadThreats,
+  uncertainThreats,
+  reportCasualty,
+} from "./intelligence.js";
+import {
   accuracyFactor,
   decaySuppression,
   incomingFire,
@@ -76,10 +85,12 @@ export class Battle {
           nextAssessment: 0,
           coverTarget: null,
         });
+    initializeIntel(this);
   }
   injury(u, p, damage) {
     u.health[p] = Math.max(0, u.health[p] - damage);
     u.hit = 0.3;
+    reportCasualty(this, u);
     if (u.health.head <= 0 || u.health.torso <= 0) {
       u.active = false;
       u.dead = true;
@@ -102,6 +113,8 @@ export class Battle {
     this.time += dt;
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
+    perceive(this);
+    for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
       updateSquadTactics(this, team);
       const squad = this.squads[team],
@@ -109,9 +122,7 @@ export class Battle {
         leader = alive.find((u) => u.role === "Leader") || alive[0];
       squad.timer -= dt;
       if (leader && squad.timer <= 0) {
-        const known = alive
-          .map((u) => u.memory)
-          .filter((m) => m && this.time - m.time < 12);
+        const known = squadThreats(this, team);
         const desired = known.length
           ? { x: Math.round(known[0].x), y: Math.round(known[0].y) }
           : {
@@ -129,23 +140,10 @@ export class Battle {
       u.target = null;
       u.navigation = "Holding";
       u.cooldown -= dt;
-      const enemies = this.units
-        .filter(
-          (e) =>
-            e.team !== u.team &&
-            e.active &&
-            dist(u, e) < (e.hit > 0 ? Math.max(15, u.range) : u.range) &&
-            sight(u, e),
-        )
-        .sort((a, b) => dist(u, a) - dist(u, b));
-      const enemy = enemies[0];
-      if (enemy)
-        u.memory = {
-          x: enemy.x,
-          y: enemy.y,
-          enemyId: enemy.id,
-          time: this.time,
-        };
+      const enemies = u.visibleEnemies.filter((e) => e.active && sight(u, e));
+      const enemy = selectEnemy(this, u, enemies);
+      u.treat =
+        this.time - (u.treatmentAt ?? -Infinity) <= dt + 1e-8 ? u.treat : 0;
       if (u.reload > 0) {
         u.reload -= dt;
         u.state = "Reloading";
@@ -166,15 +164,28 @@ export class Battle {
               a !== u &&
               Math.min(...Object.values(a.health)) < 65,
           )
-          .sort((a, b) => dist(u, a) - dist(u, b))[0];
+          .sort(
+            (a, b) =>
+              Number(a.active) - Number(b.active) || dist(u, a) - dist(u, b),
+          )
+          .find(
+            (a) =>
+              (dist(u, a) < 1.4 && sight(u, a)) || careRouteSafe(this, u, a),
+          );
         if (
           patient &&
+          (!u.alert ||
+            this.time >= u.alert.readyAt ||
+            u.patientId === patient.id) &&
           (dist(u, patient) < 1.4 || careRouteSafe(this, u, patient))
         ) {
           u.state = "Moving to casualty";
           u.order = "Treat casualty";
-          if (dist(u, patient) < 1.4) {
+          if (dist(u, patient) < 1.4 && sight(u, patient)) {
             u.state = "Treating";
+            if (u.patientId !== patient.id) u.treat = 0;
+            u.patientId = patient.id;
+            u.treatmentAt = this.time;
             u.treat += dt;
             if (u.treat >= 1) {
               u.treat = 0;
@@ -205,7 +216,7 @@ export class Battle {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
         u.state = "Engaging";
         u.order = "Engage visible enemy";
-        if (u.cooldown <= 0) {
+        if (u.cooldown <= 0 && this.time >= u.aimAt) {
           u.ammo--;
           u.cooldown = u.role === "LMG" ? 0.2 : 0.65;
           this.shots.push({
@@ -234,6 +245,10 @@ export class Battle {
             this.injury(enemy, p, p === "head" ? 65 : 28 + this.random() * 24);
           }
         }
+        if (this.time < u.aimAt) {
+          u.state = "Aiming";
+          u.order = "Acquire visible target";
+        }
         const maneuver = this.squads[u.team].maneuver;
         if (!followManeuver(this, u, maneuver, dt))
           localCover(this, u, enemies, dt);
@@ -242,8 +257,20 @@ export class Battle {
       const tactical = this.squads[u.team],
         maneuver = tactical.maneuver;
       const recent = u.memory && this.time - u.memory.time < 8;
+      const alertReady =
+        u.alert && this.time >= u.alert.readyAt && this.time < u.alert.until;
+      const uncertain = alertReady ? uncertainThreats(this, u) : [];
       if (followManeuver(this, u, maneuver, dt)) continue;
       if (recent && localCover(this, u, [u.memory], dt)) continue;
+      if (!recent && uncertain.length) {
+        if (localCover(this, u, uncertain, dt)) continue;
+        u.state = "Watching reported sector";
+        u.order =
+          u.role === "LMG"
+            ? "Cover teammates; await visual confirmation"
+            : "Cover nearby teammates";
+        continue;
+      }
       if (
         recent &&
         (u.suppression > 0.55 ||
@@ -252,6 +279,16 @@ export class Battle {
       ) {
         u.state = u.suppression > 0.55 ? "Pinned" : "Holding contact";
         u.order = tactical.intention;
+        continue;
+      }
+      if (
+        !recent &&
+        alertReady &&
+        u.alert.kind === "casualty" &&
+        u.role !== "Medic"
+      ) {
+        u.state = "Covering casualty";
+        u.order = "Cover nearby casualty";
         continue;
       }
       if (!recent && u.suppression > 0.65) {

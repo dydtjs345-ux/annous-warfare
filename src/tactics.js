@@ -1,3 +1,8 @@
+import {
+  reportIncoming,
+  squadThreats,
+  uncertainThreats,
+} from "./intelligence.js";
 import { blocked, cover, sight, path } from "./world.js";
 
 export const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -23,12 +28,14 @@ export function incomingFire(battle, shooter, target) {
         )
       : 0;
     const near = distance(u, { x: shooter.x + t * dx, y: shooter.y + t * dy });
-    if (near <= 0.9 && sight(shooter, u))
+    if (near <= 0.9 && sight(shooter, u)) {
+      reportIncoming(battle, u, shooter);
       u.suppression = Math.min(
         1,
         u.suppression +
           (shooter.role === "LMG" ? 0.2 : 0.12) * (1 - 0.5 * cover(u, shooter)),
       );
+    }
   }
 }
 
@@ -105,10 +112,19 @@ export function chooseCover(battle, u, threats) {
 }
 
 export function planFlank(battle, team, threats) {
+  // Approximate bearings and aging snapshots cannot justify a maneuver.
+  threats = threats.filter((t) => !t.approximate && (t.confidence ?? 1) > 0.6);
+
   const squad = battle.squads[team],
     alive = battle.units.filter((u) => u.team === team && u.active);
   const leader = alive.find((u) => u.role === "Leader");
-  if (!leader || alive.length < 4 || !threats.length) return null;
+  if (
+    !leader ||
+    alive.length < 4 ||
+    !threats.length ||
+    battle.time < (squad.flankCooldown ?? 0)
+  )
+    return null;
   const pinned =
     alive.filter((u) => u.suppression > 0.45).length >= 2 ||
     alive.some((u) => u.suppression >= 0.8);
@@ -185,11 +201,19 @@ export function updateSquadTactics(battle, team) {
   if (battle.time < (squad.nextTactical ?? 0)) return;
   squad.nextTactical = battle.time + 3;
   const alive = battle.units.filter((u) => u.team === team && u.active);
-  const threats = alive
-    .map((u) => u.memory)
-    .filter((m) => m && battle.time - m.time < 8);
+  const threats = squadThreats(battle, team);
   if (!threats.length) {
-    squad.intention = "Advance";
+    if (squad.maneuver)
+      squad.flankCooldown = Math.max(
+        squad.flankCooldown ?? 0,
+        battle.time + 24,
+      );
+    const reports = battle.squads[team].intel;
+    squad.intention = reports?.casualties.size
+      ? "Protect casualty"
+      : reports?.incoming.size
+        ? "Assess reported sector"
+        : "Advance";
     squad.maneuver = null;
     squad.lastProgress = battle.time;
     return;
@@ -214,15 +238,19 @@ export function updateSquadTactics(battle, team) {
     return;
   if (m) {
     squad.maneuver = null;
-    squad.flankCooldown = battle.time + 12;
+    squad.flankCooldown = battle.time + 24;
   }
   squad.intention = "Hold and engage";
   if (battle.time < (squad.flankCooldown ?? 0)) return;
   squad.maneuver = planFlank(battle, team, threats);
-  if (squad.maneuver) squad.intention = "Cover and maneuver";
+  if (squad.maneuver) {
+    squad.intention = "Cover and maneuver";
+    squad.flankCooldown = battle.time + 30;
+  }
 }
 
 export function localCover(battle, u, threats, dt) {
+  if (u.alert && battle.time < u.alert.readyAt) return false;
   if (battle.time >= u.nextAssessment) {
     u.nextAssessment = battle.time + 2 + (u.id % 6) * 0.15;
     const moved =
@@ -244,8 +272,12 @@ export function localCover(battle, u, threats, dt) {
       ).length;
       const maneuvering =
         squad.maneuver && squad.maneuver.until > battle.time ? 1 : 0;
+      const committed =
+        battle.time < (u.positionUntil ?? 0) && !moved && u.suppression < 0.65;
       u.coverTarget =
-        others + maneuvering < 2 ? chooseCover(battle, u, threats) : null;
+        !committed && others + maneuvering < 2
+          ? chooseCover(battle, u, threats)
+          : null;
       u.coverUntil = battle.time + 6;
       u.assessedThreat = { ...threats[0] };
     }
@@ -253,6 +285,7 @@ export function localCover(battle, u, threats, dt) {
   if (!u.coverTarget) return false;
   if (distance(u, u.coverTarget) < 0.2) {
     u.coverTarget = null;
+    u.positionUntil = battle.time + 6;
     return false;
   }
   u.state = "Seeking cover";
@@ -281,15 +314,7 @@ export function followManeuver(battle, u, m, dt) {
   }
   if (battle.time >= (m.checkAt ?? 0)) {
     m.checkAt = battle.time + 0.75;
-    const threats = battle.units
-      .filter(
-        (a) =>
-          a.team === u.team &&
-          a.active &&
-          a.memory &&
-          battle.time - a.memory.time < 8,
-      )
-      .map((a) => a.memory);
+    const threats = squadThreats(battle, u.team);
     const route =
       u.routeGoal === `${m.target.x},${m.target.y}`
         ? u.route
@@ -330,24 +355,23 @@ export function followManeuver(battle, u, m, dt) {
 }
 
 export function careRouteSafe(battle, u, patient) {
-  const threats = battle.units
-    .filter(
-      (a) =>
-        a.team === u.team &&
-        a.active &&
-        a.memory &&
-        battle.time - a.memory.time < 8,
-    )
-    .map((a) => a.memory);
+  const threats = [
+    ...squadThreats(battle, u.team),
+    ...uncertainThreats(battle, u),
+  ];
   if (!threats.length) return true;
   if (
     !u.careCheck ||
     battle.time >= u.careCheck.until ||
+    u.careCheck.patientId !== patient.id ||
+    distance(u.careCheck.origin, u) > 1 ||
     distance(u.careCheck.patient, patient) > 1
   ) {
     const route = path(u, patient),
       risk = routeRisk(route, threats);
     u.careCheck = {
+      patientId: patient.id,
+      origin: { x: u.x, y: u.y },
       patient: { x: patient.x, y: patient.y },
       until: battle.time + 0.75,
       safe: route.length > 0 && risk.average <= 0.6 && risk.longest <= 3,

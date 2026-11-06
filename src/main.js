@@ -1,6 +1,7 @@
+import { inspectSoldier } from "./inspection.js";
 import Phaser from "phaser";
 import "./style.css";
-import { Battle, parts } from "./simulation.js";
+import { Battle } from "./simulation.js";
 import { W, H, houses, obstacles, inside } from "./world.js";
 const iso = (x, y) => ({ x: 700 + (x - y) * 20, y: 55 + (x + y) * 10 });
 class Battlefield extends Phaser.Scene {
@@ -20,9 +21,13 @@ class Battlefield extends Phaser.Scene {
     this.down = null;
     this.input.on("pointerdown", (p) => {
       this.down = { x: p.x, y: p.y };
+      this.gestureMoved =
+        this.input.manager.pointers.filter((p) => p.isDown).length > 1;
     });
     this.input.on("pointermove", (p) => {
       const pointers = this.input.manager.pointers.filter((p) => p.isDown);
+      if (this.down && Math.hypot(p.x - this.down.x, p.y - this.down.y) > 8)
+        this.gestureMoved = true;
       if (pointers.length >= 2) {
         const [a, b] = pointers;
         const d = Phaser.Math.Distance.Between(a.x, a.y, b.x, b.y);
@@ -39,7 +44,11 @@ class Battlefield extends Phaser.Scene {
     });
     this.input.on("pointerup", (p) => {
       this.lastTouches = null;
-      if (this.down && Math.hypot(p.x - this.down.x, p.y - this.down.y) < 8) {
+      if (
+        this.down &&
+        !this.gestureMoved &&
+        Math.hypot(p.x - this.down.x, p.y - this.down.y) < 8
+      ) {
         const w = c.getWorldPoint(p.x, p.y);
         this.selected =
           this.battle.units
@@ -49,8 +58,8 @@ class Battlefield extends Phaser.Scene {
             )
             .sort(
               (a, b) =>
-                Math.hypot(a.p.x - w.x, a.p.y - w.y) -
-                Math.hypot(b.p.x - w.x, b.p.y - w.y),
+                Math.hypot(a.p.x - w.x, a.p.y - 12 - w.y) -
+                Math.hypot(b.p.x - w.x, b.p.y - 12 - w.y),
             )[0]?.u || this.selected;
       }
     });
@@ -238,9 +247,7 @@ class Battlefield extends Phaser.Scene {
     document.querySelector("#counts").textContent =
       `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
     const u = this.selected;
-    if (u)
-      document.querySelector("#inspect").textContent =
-        `${u.name} · ${u.role} · ${u.state} | Order: ${u.order} | Target: ${u.target ? `${u.target.x},${u.target.y}` : "—"} | ${u.navigation} | Ammo ${u.ammo}/${u.reserve}${u.reload > 0 ? " (reloading)" : ""}\n${parts.map((p) => `${p}: ${Math.ceil(u.health[p])}`).join(" · ")}`;
+    if (u) document.querySelector("#inspect").textContent = inspectSoldier(u);
     else
       document.querySelector("#inspect").textContent =
         "Tap a soldier to inspect • Drag to pan • Pinch to zoom";
