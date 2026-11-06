@@ -1,3 +1,4 @@
+import { suppressiveFire } from "./suppressive-fire.js";
 import { updatePosture, holdPosture, releasePosture } from "./postures.js";
 import {
   initializeGrenades,
@@ -412,6 +413,7 @@ export class Battle {
         localCover(this, u, defensive, dt)
       )
         continue;
+      if (!enemy && suppressiveFire(this, u)) continue;
       if (followManeuver(this, u, maneuver, dt)) continue;
       if (followAssignment(this, u, dt)) continue;
       if (recent) {

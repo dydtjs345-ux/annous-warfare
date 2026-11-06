@@ -93,9 +93,18 @@ export function refreshDiagnostics(battle, u) {
         ? "incoming-fire bearing"
         : "none";
   const target = direct ?? memory;
-  const firing = ["Throwing grenade", "Evading grenade"].includes(u.state)
-    ? { permitted: false, reason: u.state }
-    : firingStatus(battle, u, direct);
+  const firing =
+    u.state === "Suppressing last-known"
+      ? {
+          permitted: u.firedAt === battle.time,
+          reason:
+            u.firedAt === battle.time
+              ? "Actual suppressive shot at remembered lane"
+              : "Aim / weapon interval for remembered lane",
+        }
+      : ["Throwing grenade", "Evading grenade"].includes(u.state)
+        ? { permitted: false, reason: u.state }
+        : firingStatus(battle, u, direct);
   const threats = [
     ...squadThreats(battle, u.team),
     ...uncertainThreats(battle, u),

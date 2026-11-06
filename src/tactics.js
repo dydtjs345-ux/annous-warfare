@@ -4,7 +4,7 @@ import {
   uncertainThreats,
 } from "./intelligence.js";
 import { mountBonus } from "./mounting.js";
-import { blocked, cover, sight, path } from "./world.js";
+import { blocked, cover, sight, terrainSight, path } from "./world.js";
 
 export const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export const accuracyFactor = (u) => 1 - 0.65 * u.suppression;
@@ -13,7 +13,7 @@ export function decaySuppression(u, dt) {
 }
 
 // The existing hitscan trace also supplies near-miss pressure. Walls stop pressure.
-export function incomingFire(battle, shooter, target) {
+export function incomingFire(battle, shooter, target, remembered = false) {
   const dx = target.x - shooter.x,
     dy = target.y - shooter.y,
     length2 = dx * dx + dy * dy;
@@ -29,12 +29,16 @@ export function incomingFire(battle, shooter, target) {
         )
       : 0;
     const near = distance(u, { x: shooter.x + t * dx, y: shooter.y + t * dy });
-    if (near <= 0.9 && sight(shooter, u)) {
+    if (
+      near <= 0.9 &&
+      (remembered ? terrainSight(shooter, u) : sight(shooter, u))
+    ) {
       reportIncoming(battle, u, shooter);
       u.suppression = Math.min(
         1,
         u.suppression +
           (shooter.role === "LMG" ? 0.2 : 0.12) *
+            (remembered && !sight(shooter, u) ? 0.35 : 1) *
             mountBonus(shooter, "suppression") *
             (1 - 0.5 * cover(u, shooter)),
       );
