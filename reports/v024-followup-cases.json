@@ -1,0 +1,152 @@
+[
+  {
+    "seed": 260,
+    "scenario": "leg-injuries",
+    "durationBefore": 41.50000000000032,
+    "durationAfter": 200.89999999999287,
+    "durationDelta": 159.39999999999256,
+    "passiveDelta": 182.89999999999972,
+    "casualtyDelta": 4,
+    "coverLoopDelta": 0
+  },
+  {
+    "seed": 122,
+    "scenario": "short-contact",
+    "durationBefore": 78.39999999999982,
+    "durationAfter": 191.5999999999934,
+    "durationDelta": 113.19999999999358,
+    "passiveDelta": 87.60000000000025,
+    "casualtyDelta": 0,
+    "coverLoopDelta": 18
+  },
+  {
+    "seed": 273,
+    "scenario": "standard",
+    "durationBefore": 43.40000000000035,
+    "durationAfter": 138.7999999999964,
+    "durationDelta": 95.39999999999606,
+    "passiveDelta": 185.2000000000005,
+    "casualtyDelta": 1,
+    "coverLoopDelta": 2
+  },
+  {
+    "seed": 161,
+    "scenario": "standard",
+    "durationBefore": 41.40000000000032,
+    "durationAfter": 131.09999999999684,
+    "durationDelta": 89.69999999999652,
+    "passiveDelta": 204.60000000000218,
+    "casualtyDelta": 2,
+    "coverLoopDelta": 4
+  },
+  {
+    "seed": 71,
+    "scenario": "reduced-reserves",
+    "durationBefore": 45.10000000000037,
+    "durationAfter": 130.0999999999969,
+    "durationDelta": 84.99999999999653,
+    "passiveDelta": 108.70000000000084,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 1
+  },
+  {
+    "seed": 28,
+    "scenario": "leg-injuries",
+    "durationBefore": 55.50000000000052,
+    "durationAfter": 135.1999999999966,
+    "durationDelta": 79.6999999999961,
+    "passiveDelta": 183.2000000000009,
+    "casualtyDelta": 2,
+    "coverLoopDelta": 2
+  },
+  {
+    "seed": 264,
+    "scenario": "leg-injuries",
+    "durationBefore": 58.40000000000056,
+    "durationAfter": 137.79999999999646,
+    "durationDelta": 79.3999999999959,
+    "passiveDelta": 252.40000000000094,
+    "casualtyDelta": 0,
+    "coverLoopDelta": 0
+  },
+  {
+    "seed": 222,
+    "scenario": "short-contact",
+    "durationBefore": 70.90000000000025,
+    "durationAfter": 149.99999999999577,
+    "durationDelta": 79.09999999999552,
+    "passiveDelta": 140.49999999999946,
+    "casualtyDelta": 2,
+    "coverLoopDelta": -1
+  },
+  {
+    "seed": 49,
+    "scenario": "standard",
+    "durationBefore": 50.400000000000446,
+    "durationAfter": 118.89999999999752,
+    "durationDelta": 68.49999999999707,
+    "passiveDelta": 125.1000000000011,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 1
+  },
+  {
+    "seed": 40,
+    "scenario": "leg-injuries",
+    "durationBefore": 76.39999999999993,
+    "durationAfter": 144.59999999999607,
+    "durationDelta": 68.19999999999614,
+    "passiveDelta": 93.10000000000119,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 4
+  },
+  {
+    "seed": 133,
+    "scenario": "standard",
+    "durationBefore": 42.20000000000033,
+    "durationAfter": 106.09999999999825,
+    "durationDelta": 63.89999999999792,
+    "passiveDelta": 227.600000000002,
+    "casualtyDelta": -1,
+    "coverLoopDelta": -5
+  },
+  {
+    "seed": 39,
+    "scenario": "reduced-reserves",
+    "durationBefore": 58.50000000000056,
+    "durationAfter": 116.99999999999763,
+    "durationDelta": 58.499999999997065,
+    "passiveDelta": 3.0000000000001137,
+    "casualtyDelta": 1,
+    "coverLoopDelta": 0
+  },
+  {
+    "seed": 299,
+    "scenario": "reduced-reserves",
+    "durationBefore": 76.19999999999995,
+    "durationAfter": 131.39999999999682,
+    "durationDelta": 55.19999999999688,
+    "passiveDelta": 263.0000000000007,
+    "casualtyDelta": 1,
+    "coverLoopDelta": -3
+  },
+  {
+    "seed": 250,
+    "scenario": "short-contact",
+    "durationBefore": 68.80000000000037,
+    "durationAfter": 123.99999999999723,
+    "durationDelta": 55.19999999999686,
+    "passiveDelta": 93.4000000000008,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 0
+  },
+  {
+    "seed": 240,
+    "scenario": "leg-injuries",
+    "durationBefore": 50.20000000000044,
+    "durationAfter": 104.89999999999831,
+    "durationDelta": 54.69999999999787,
+    "passiveDelta": 80.00000000000061,
+    "casualtyDelta": 0,
+    "coverLoopDelta": -1
+  }
+]

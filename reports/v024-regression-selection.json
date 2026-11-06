@@ -1,0 +1,52 @@
+[
+  {
+    "seed": 260,
+    "scenario": "leg-injuries",
+    "durationBefore": 41.50000000000032,
+    "durationAfter": 200.89999999999287,
+    "durationDelta": 159.39999999999256,
+    "passiveDelta": 182.89999999999972,
+    "casualtyDelta": 4,
+    "coverLoopDelta": 0
+  },
+  {
+    "seed": 122,
+    "scenario": "short-contact",
+    "durationBefore": 78.39999999999982,
+    "durationAfter": 191.5999999999934,
+    "durationDelta": 113.19999999999358,
+    "passiveDelta": 87.60000000000025,
+    "casualtyDelta": 0,
+    "coverLoopDelta": 18
+  },
+  {
+    "seed": 273,
+    "scenario": "standard",
+    "durationBefore": 43.40000000000035,
+    "durationAfter": 138.7999999999964,
+    "durationDelta": 95.39999999999606,
+    "passiveDelta": 185.2000000000005,
+    "casualtyDelta": 1,
+    "coverLoopDelta": 2
+  },
+  {
+    "seed": 161,
+    "scenario": "standard",
+    "durationBefore": 41.40000000000032,
+    "durationAfter": 131.09999999999684,
+    "durationDelta": 89.69999999999652,
+    "passiveDelta": 204.60000000000218,
+    "casualtyDelta": 2,
+    "coverLoopDelta": 4
+  },
+  {
+    "seed": 71,
+    "scenario": "reduced-reserves",
+    "durationBefore": 45.10000000000037,
+    "durationAfter": 130.0999999999969,
+    "durationDelta": 84.99999999999653,
+    "passiveDelta": 108.70000000000084,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 1
+  }
+]

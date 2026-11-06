@@ -1,0 +1,3155 @@
+[
+  {
+    "seed": 260,
+    "scenario": "leg-injuries",
+    "durationBefore": 41.50000000000032,
+    "durationAfter": 200.89999999999287,
+    "durationDelta": 159.39999999999256,
+    "passiveDelta": 182.89999999999972,
+    "casualtyDelta": 4,
+    "coverLoopDelta": 0,
+    "duration": 41.50000000000032,
+    "coverSwitches": 1,
+    "protectedWaitSteps": 0,
+    "coverChanges": [
+      {
+        "time": 8.899999999999984,
+        "id": 1,
+        "from": "8,8",
+        "to": "7,8",
+        "position": [
+          6.1476875,
+          10
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -1.2544956747275375,
+          "evaluatedAt": 8.899999999999984,
+          "best": {
+            "x": 7,
+            "y": 8,
+            "score": 2.0655665876405425,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "recon"
+      }
+    ],
+    "protectedWaitExamples": [],
+    "medicalChanges": [
+      {
+        "time": 0.1,
+        "id": 5,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 0.1,
+        "id": 11,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 2.500000000000001,
+        "id": 5,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 2.500000000000001,
+        "id": 11,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 4.699999999999999,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 5.299999999999997,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.299999999999994,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.8999999999999915,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 8.699999999999985,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 9.399999999999983,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 9.99999999999998,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 10.599999999999978,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "patient": 8,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0.2,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 10.899999999999977,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0.30000000000000004,
+        "visible": [
+          2
+        ],
+        "suppression": 0.484,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 14.799999999999963,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5411999999999996,
+        "assignment": "care",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 17.799999999999983,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.18119999999999925,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 19.300000000000004,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.12119999999999924,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 19.80000000000001,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [
+          3
+        ],
+        "suppression": 0.061199999999999255,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 21.400000000000034,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.10919999999999916,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 21.90000000000004,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [
+          3
+        ],
+        "suppression": 0.049199999999999175,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 22.200000000000045,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.013199999999999178,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 22.700000000000053,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 24.300000000000075,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 27.900000000000126,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.048000000000000015,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 29.50000000000015,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 30.600000000000165,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 32.100000000000186,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 32.20000000000019,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 32.30000000000019,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 32.9000000000002,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 34.100000000000215,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 37.10000000000026,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Reacquiring contact",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "recon",
+        "reason": "Reachable observation lane"
+      },
+      {
+        "time": 37.90000000000027,
+        "id": 11,
+        "from": "Reacquiring contact",
+        "to": "Seeking cover",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 0,
+        "assignment": "recon",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 38.400000000000276,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Engaging",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 0.0732,
+        "assignment": "recon",
+        "reason": "Maintaining a visible firing solution"
+      },
+      {
+        "time": 41.50000000000032,
+        "id": 11,
+        "from": "Engaging",
+        "to": "Incapacitated",
+        "previousPatient": 8,
+        "patient": 8,
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 1,
+        "reason": "Incapacitated"
+      }
+    ]
+  },
+  {
+    "seed": 122,
+    "scenario": "short-contact",
+    "durationBefore": 78.39999999999982,
+    "durationAfter": 191.5999999999934,
+    "durationDelta": 113.19999999999358,
+    "passiveDelta": 87.60000000000025,
+    "casualtyDelta": 0,
+    "coverLoopDelta": 18,
+    "duration": 78.39999999999982,
+    "coverSwitches": 1,
+    "protectedWaitSteps": 0,
+    "coverChanges": [
+      {
+        "time": 32.100000000000186,
+        "id": 10,
+        "from": "20,17",
+        "to": "18,15",
+        "position": [
+          18,
+          15.68
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.55973780845922,
+          "evaluatedAt": 32.100000000000186,
+          "best": {
+            "x": 18,
+            "y": 15,
+            "score": 3.4004764092668616,
+            "protection": 0.58
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "defend"
+      }
+    ],
+    "protectedWaitExamples": [],
+    "medicalChanges": [
+      {
+        "time": 0.1,
+        "id": 5,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 0.1,
+        "id": 11,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 2.1000000000000005,
+        "id": 5,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 2.3000000000000007,
+        "id": 11,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 4.5,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 4.6,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.399999999999993,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [
+          9
+        ],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 6.8999999999999915,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.099999999999991,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          1
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 8.599999999999985,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 8.699999999999985,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 8.799999999999985,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 8.899999999999984,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 8.899999999999984,
+        "id": 11,
+        "from": "Treating",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 9.099999999999984,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 9.89999999999998,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [
+          1
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 10.19999999999998,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 10.29999999999998,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 10.29999999999998,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 10.399999999999979,
+        "id": 11,
+        "from": "Treating",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 10.599999999999978,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 10.999999999999977,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 11.999999999999973,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 12.99999999999997,
+        "id": 11,
+        "from": "Treating",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.2,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 13.299999999999969,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 15.499999999999961,
+        "id": 11,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 16.499999999999964,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 18.39999999999999,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 19,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 19.70000000000001,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 21.00000000000003,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 21.20000000000003,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 21.300000000000033,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 25.000000000000085,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 25.40000000000009,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 26.900000000000112,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 27.000000000000114,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 27.600000000000122,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Treating",
+        "patient": 3,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 29.100000000000144,
+        "id": 5,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0.4,
+        "visible": [],
+        "suppression": 0.5639999999999998,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 29.800000000000153,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.552,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 29.900000000000155,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.54,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 30.000000000000156,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.528,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 30.20000000000016,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.504,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 31.800000000000182,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Pinned",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.952,
+        "assignment": "defend",
+        "reason": "Suppression temporarily overrides squad movement"
+      },
+      {
+        "time": 34.00000000000021,
+        "id": 5,
+        "from": "Pinned",
+        "to": "Aiming",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [
+          9
+        ],
+        "suppression": 0.6879999999999997,
+        "assignment": "overwatch",
+        "reason": "Acquiring a directly visible target"
+      },
+      {
+        "time": 34.40000000000022,
+        "id": 5,
+        "from": "Aiming",
+        "to": "Incapacitated",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [
+          9
+        ],
+        "suppression": 0.7599999999999997,
+        "reason": "Incapacitated"
+      },
+      {
+        "time": 45.80000000000038,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Pinned",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5519999999999993,
+        "assignment": "defend",
+        "reason": "Suppression temporarily overrides squad movement"
+      },
+      {
+        "time": 45.90000000000038,
+        "id": 11,
+        "from": "Pinned",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5399999999999993,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 46.50000000000039,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Pinned",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5879999999999992,
+        "assignment": "defend",
+        "reason": "Suppression temporarily overrides squad movement"
+      },
+      {
+        "time": 46.9000000000004,
+        "id": 11,
+        "from": "Pinned",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5399999999999991,
+        "assignment": "defend",
+        "reason": "Recon element has movement priority"
+      },
+      {
+        "time": 47.2000000000004,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Pinned",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.6239999999999991,
+        "assignment": "defend",
+        "reason": "Suppression temporarily overrides squad movement"
+      },
+      {
+        "time": 59.80000000000058,
+        "id": 11,
+        "from": "Pinned",
+        "to": "Eliminated",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.8919999999999995,
+        "reason": "Suppression temporarily overrides squad movement"
+      }
+    ]
+  },
+  {
+    "seed": 273,
+    "scenario": "standard",
+    "durationBefore": 43.40000000000035,
+    "durationAfter": 138.7999999999964,
+    "durationDelta": 95.39999999999606,
+    "passiveDelta": 185.2000000000005,
+    "casualtyDelta": 1,
+    "coverLoopDelta": 2,
+    "duration": 43.40000000000035,
+    "coverSwitches": 3,
+    "protectedWaitSteps": 0,
+    "coverChanges": [
+      {
+        "time": 18.799999999999997,
+        "id": 9,
+        "from": "20,17",
+        "to": "22,17",
+        "position": [
+          21,
+          15.681460556493256
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.5410440799271035,
+          "evaluatedAt": 18.799999999999997,
+          "best": {
+            "x": 22,
+            "y": 17,
+            "score": 3.9106048155938202,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "overwatch"
+      },
+      {
+        "time": 21.20000000000003,
+        "id": 3,
+        "from": "8,17",
+        "to": "9,17",
+        "position": [
+          9.303572922070092,
+          15
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.527547224309612,
+          "evaluatedAt": 21.20000000000003,
+          "best": {
+            "x": 9,
+            "y": 17,
+            "score": 3.5447493785033903,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "overwatch"
+      },
+      {
+        "time": 26.400000000000105,
+        "id": 11,
+        "from": "22,17",
+        "to": "20,13",
+        "position": [
+          20.714723464650575,
+          14.83904863338065
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -1.0218053771279079,
+          "evaluatedAt": 26.400000000000105,
+          "best": {
+            "x": 20,
+            "y": 13,
+            "score": 1.1629011475721207,
+            "protection": 0.58
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "overwatch"
+      }
+    ],
+    "protectedWaitExamples": [],
+    "medicalChanges": [
+      {
+        "time": 0.1,
+        "id": 5,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 0.1,
+        "id": 11,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 2.1000000000000005,
+        "id": 5,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 2.3000000000000007,
+        "id": 11,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 4.5,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 4.6,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.199999999999994,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 7.19999999999999,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.29999999999999,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.499999999999989,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 7.599999999999989,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 8.899999999999984,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 9.599999999999982,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Treating",
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 9.89999999999998,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 10.999999999999977,
+        "id": 11,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.30000000000000004,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 11.299999999999976,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 12.099999999999973,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [
+          1
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 13.199999999999969,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 13.299999999999969,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 13.599999999999968,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 15.399999999999961,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.9999999999999999,
+        "visible": [
+          2
+        ],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 15.69999999999996,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 18.9,
+        "id": 11,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.9999999999999999,
+        "visible": [
+          3
+        ],
+        "suppression": 0.2611999999999999,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 19.300000000000004,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Treating",
+        "patient": 3,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 19.70000000000001,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.1651999999999998,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 20.200000000000017,
+        "id": 5,
+        "from": "Treating",
+        "to": "Moving to casualty",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0.8999999999999999,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 20.40000000000002,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0.08119999999999977,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 21.00000000000003,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 21.20000000000003,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 21.600000000000037,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 21.80000000000004,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Covering search",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [
+          8
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 22.300000000000047,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Treating",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0.1,
+        "visible": [
+          8
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 23.10000000000006,
+        "id": 5,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0.7999999999999999,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 23.700000000000067,
+        "id": 11,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 24.200000000000074,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 24.300000000000075,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.12,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 24.900000000000084,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.24800000000000003,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 26.600000000000108,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.24399999999999994,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 26.70000000000011,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5519999999999999,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 26.80000000000011,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5399999999999999,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 26.900000000000112,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.728,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 28.400000000000134,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Pinned",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [
+          3
+        ],
+        "suppression": 0.988,
+        "assignment": "defend",
+        "reason": "Suppression temporarily overrides squad movement"
+      },
+      {
+        "time": 28.500000000000135,
+        "id": 11,
+        "from": "Pinned",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 1,
+        "assignment": "defend",
+        "reason": "Urgent directional protection gain overrides movement budget"
+      },
+      {
+        "time": 28.90000000000014,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Eliminated",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 1,
+        "reason": "Urgent directional protection gain overrides movement budget"
+      },
+      {
+        "time": 39.30000000000029,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 40.90000000000031,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      }
+    ]
+  },
+  {
+    "seed": 161,
+    "scenario": "standard",
+    "durationBefore": 41.40000000000032,
+    "durationAfter": 131.09999999999684,
+    "durationDelta": 89.69999999999652,
+    "passiveDelta": 204.60000000000218,
+    "casualtyDelta": 2,
+    "coverLoopDelta": 4,
+    "duration": 41.40000000000032,
+    "coverSwitches": 6,
+    "protectedWaitSteps": 0,
+    "coverChanges": [
+      {
+        "time": 32.100000000000186,
+        "id": 9,
+        "from": "20,17",
+        "to": "19,15",
+        "position": [
+          20.14999999999999,
+          15
+        ],
+        "decision": {
+          "protection": 0.58,
+          "exposure": 0.42000000000000004,
+          "score": 1.0861297265722984,
+          "evaluatedAt": 32.100000000000186,
+          "best": {
+            "x": 19,
+            "y": 15,
+            "score": 2.3306718625761436,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "defend"
+      },
+      {
+        "time": 32.20000000000019,
+        "id": 9,
+        "from": "19,15",
+        "to": "20,17",
+        "position": [
+          20.319999999999993,
+          15
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": 0.01600000000000007,
+          "evaluatedAt": 32.20000000000019,
+          "best": {
+            "x": 20,
+            "y": 17,
+            "score": 2.8514720342854654,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "defend"
+      },
+      {
+        "time": 32.30000000000019,
+        "id": 9,
+        "from": "20,17",
+        "to": "19,15",
+        "position": [
+          20.14999999999999,
+          15
+        ],
+        "decision": {
+          "protection": 0.58,
+          "exposure": 0.42000000000000004,
+          "score": 1.2163697265722984,
+          "evaluatedAt": 32.30000000000019,
+          "best": {
+            "x": 19,
+            "y": 15,
+            "score": 2.6298718625761435,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "defend"
+      },
+      {
+        "time": 32.30000000000019,
+        "id": 11,
+        "from": "20,13",
+        "to": "19,13",
+        "position": [
+          19.97999999999999,
+          13
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.7605266807797945,
+          "evaluatedAt": 32.30000000000019,
+          "best": {
+            "x": 19,
+            "y": 13,
+            "score": 1.356771345582791,
+            "protection": 0.58
+          },
+          "blockedBy": null,
+          "reason": "Meaningful directional protection gain; reachable route"
+        },
+        "assignment": "care"
+      },
+      {
+        "time": 34.00000000000021,
+        "id": 9,
+        "from": "21,16",
+        "to": "22,17",
+        "position": [
+          20.737979502782437,
+          15.131257571089362
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.5675482686869381,
+          "evaluatedAt": 34.00000000000021,
+          "best": {
+            "x": 22,
+            "y": 17,
+            "score": 3.920728682457844,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "defend"
+      },
+      {
+        "time": 34.200000000000216,
+        "id": 9,
+        "from": "22,17",
+        "to": "21,16",
+        "position": [
+          20.817156420809866,
+          15.393772713268087
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.5384723862990073,
+          "evaluatedAt": 34.200000000000216,
+          "best": {
+            "x": 21,
+            "y": 16,
+            "score": 4.007048540906971,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "defend"
+      }
+    ],
+    "protectedWaitExamples": [],
+    "medicalChanges": [
+      {
+        "time": 0.1,
+        "id": 5,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 0.1,
+        "id": 11,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 2.1000000000000005,
+        "id": 5,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 2.3000000000000007,
+        "id": 11,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 4.5,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 4.6,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.199999999999994,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 6.799999999999992,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 6.8999999999999915,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.999999999999991,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.19999999999999,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.29999999999999,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 7.499999999999989,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 8.899999999999984,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 9.299999999999983,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 9.89999999999998,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.9999999999999999,
+        "visible": [
+          3
+        ],
+        "suppression": 0.0852,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 9.99999999999998,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 10.09999999999998,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 10.19999999999998,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0.19119999999999998,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 10.599999999999978,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.4,
+        "visible": [
+          3
+        ],
+        "suppression": 0.14319999999999994,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 10.799999999999978,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [
+          3
+        ],
+        "suppression": 0.11919999999999993,
+        "assignment": "care",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 10.899999999999977,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0.10719999999999993,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 11.299999999999976,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 11.899999999999974,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.9999999999999999,
+        "visible": [
+          3
+        ],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 12.199999999999973,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 13.599999999999968,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.30000000000000004,
+        "visible": [
+          1
+        ],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 13.899999999999967,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Treating",
+        "patient": 3,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 13.899999999999967,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 15.499999999999961,
+        "id": 5,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0.5,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 16.399999999999963,
+        "id": 11,
+        "from": "Treating",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.30000000000000004,
+        "visible": [
+          3
+        ],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 16.599999999999966,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 16.699999999999967,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 17.199999999999974,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 17.399999999999977,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 9,
+        "patient": 7,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 24.900000000000084,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Moving to casualty",
+        "previousPatient": 3,
+        "patient": 3,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 27.900000000000126,
+        "id": 11,
+        "from": "Treating",
+        "to": "Moving to casualty",
+        "previousPatient": 7,
+        "patient": 7,
+        "progress": 0.6,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 28.10000000000013,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 3,
+        "patient": 2,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 28.400000000000134,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 7,
+        "patient": 7,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 28.500000000000135,
+        "id": 11,
+        "from": "Treating",
+        "to": "Patrolling",
+        "previousPatient": 7,
+        "patient": 7,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 29.100000000000144,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Moving to casualty",
+        "previousPatient": 7,
+        "patient": 7,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 29.200000000000145,
+        "id": 5,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 29.400000000000148,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 29.50000000000015,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Treating",
+        "previousPatient": 7,
+        "patient": 9,
+        "progress": 0.1,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Uninterrupted treatment within reach and line of sight"
+      },
+      {
+        "time": 31.300000000000175,
+        "id": 11,
+        "from": "Treating",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0.7,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 31.400000000000176,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 32.9000000000002,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 34.900000000000226,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 35.00000000000023,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.7271999999999998,
+        "assignment": "defend",
+        "reason": "Urgent directional protection gain overrides movement budget"
+      },
+      {
+        "time": 35.20000000000023,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Incapacitated",
+        "previousPatient": 9,
+        "patient": 9,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.9331999999999998,
+        "reason": "Urgent directional protection gain overrides movement budget"
+      },
+      {
+        "time": 36.300000000000246,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 38.50000000000028,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 39.000000000000284,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 39.700000000000294,
+        "id": 5,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "previousPatient": 2,
+        "patient": 2,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      }
+    ]
+  },
+  {
+    "seed": 71,
+    "scenario": "reduced-reserves",
+    "durationBefore": 45.10000000000037,
+    "durationAfter": 130.0999999999969,
+    "durationDelta": 84.99999999999653,
+    "passiveDelta": 108.70000000000084,
+    "casualtyDelta": 3,
+    "coverLoopDelta": 1,
+    "duration": 45.10000000000037,
+    "coverSwitches": 1,
+    "protectedWaitSteps": 0,
+    "coverChanges": [
+      {
+        "time": 6.299999999999994,
+        "id": 7,
+        "from": "21,9",
+        "to": "22,8",
+        "position": [
+          21,
+          9.15
+        ],
+        "decision": {
+          "protection": 0,
+          "exposure": 1,
+          "score": -0.5014182440314225,
+          "evaluatedAt": 6.299999999999994,
+          "best": {
+            "x": 22,
+            "y": 8,
+            "score": 3.8969337688747125,
+            "protection": 0.85
+          },
+          "blockedBy": null,
+          "reason": "Urgent directional protection gain overrides movement budget"
+        },
+        "assignment": "defend"
+      }
+    ],
+    "protectedWaitExamples": [],
+    "medicalChanges": [
+      {
+        "time": 0.1,
+        "id": 5,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 0.1,
+        "id": 11,
+        "from": null,
+        "to": "Regrouping",
+        "previousPatient": null,
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Outside squad spacing; returning within regroup hysteresis"
+      },
+      {
+        "time": 2.1000000000000005,
+        "id": 5,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 2.3000000000000007,
+        "id": 11,
+        "from": "Regrouping",
+        "to": "Patrolling",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "reason": "Searching without enemy position knowledge"
+      },
+      {
+        "time": 4.5,
+        "id": 5,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 4.6,
+        "id": 11,
+        "from": "Patrolling",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 6.199999999999994,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 7.099999999999991,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          6
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 7.599999999999989,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Moving to casualty",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Approaching a reachable casualty"
+      },
+      {
+        "time": 8.799999999999985,
+        "id": 11,
+        "from": "Moving to casualty",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "care",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 9.199999999999983,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 9.299999999999983,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 9.399999999999983,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 9.699999999999982,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 9.89999999999998,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 9.89999999999998,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          2
+        ],
+        "suppression": 0.308,
+        "assignment": "overwatch",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 10.399999999999979,
+        "id": 5,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 11.899999999999974,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 12.89999999999997,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.5479999999999996,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 13.399999999999968,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.48799999999999955,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 15.099999999999962,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0.28399999999999936,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 17.799999999999983,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 20.800000000000026,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 22.300000000000047,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 23.400000000000063,
+        "id": 11,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 23.90000000000007,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 25.100000000000087,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 28.20000000000013,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 29.700000000000152,
+        "id": 5,
+        "from": "Awaiting coordination",
+        "to": "Covering search",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "overwatch",
+        "reason": "Cover the assigned recon approach"
+      },
+      {
+        "time": 31.900000000000183,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          0
+        ],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 32.20000000000019,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 32.40000000000019,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 32.60000000000019,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Reaction delay before new assignment"
+      },
+      {
+        "time": 33.1000000000002,
+        "id": 11,
+        "from": "Awaiting coordination",
+        "to": "Reacquiring contact",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "recon",
+        "reason": "Reachable observation lane"
+      },
+      {
+        "time": 34.30000000000022,
+        "id": 11,
+        "from": "Reacquiring contact",
+        "to": "Aiming",
+        "progress": 0,
+        "visible": [
+          0
+        ],
+        "suppression": 0.03720000000000001,
+        "assignment": "recon",
+        "reason": "Acquiring a directly visible target"
+      },
+      {
+        "time": 34.70000000000022,
+        "id": 11,
+        "from": "Aiming",
+        "to": "Engaging",
+        "progress": 0,
+        "visible": [
+          0
+        ],
+        "suppression": 0.07440000000000001,
+        "assignment": "defend",
+        "reason": "Maintaining a visible firing solution"
+      },
+      {
+        "time": 43.10000000000034,
+        "id": 5,
+        "from": "Covering search",
+        "to": "Awaiting coordination",
+        "progress": 0,
+        "visible": [],
+        "suppression": 0,
+        "assignment": "defend",
+        "reason": "Medic reserved for survival and actionable casualty care"
+      },
+      {
+        "time": 44.80000000000037,
+        "id": 11,
+        "from": "Engaging",
+        "to": "Seeking cover",
+        "progress": 0,
+        "visible": [
+          0
+        ],
+        "suppression": 0.988,
+        "assignment": "defend",
+        "reason": "Meaningful directional protection gain; reachable route"
+      },
+      {
+        "time": 45.10000000000037,
+        "id": 11,
+        "from": "Seeking cover",
+        "to": "Eliminated",
+        "progress": 0,
+        "visible": [],
+        "suppression": 1,
+        "reason": "Meaningful directional protection gain; reachable route"
+      }
+    ]
+  }
+]

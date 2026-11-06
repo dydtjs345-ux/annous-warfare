@@ -1,0 +1,11 @@
+{
+  "focusedMatches": 15,
+  "focusedDigestsMatchFull": true,
+  "criticalSeed144": {
+    "duration": 56.30000000000053,
+    "digest": "55b328e74964a8c6c0946171ddb62e27b3fcb30aa0b729b6071719934ec454bf",
+    "matchesFull": true
+  },
+  "completed": 300,
+  "timeouts": 0
+}

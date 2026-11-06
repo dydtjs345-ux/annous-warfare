@@ -367,24 +367,47 @@ export function localCover(battle, u, threats, dt) {
       !urgent;
     // Assess before reporting a coordination/commitment blocker: diagnostics can
     // distinguish an unavailable useful candidate from no improvement at all.
-    const candidate = chooseCover(battle, u, threats);
+    const previous = u.coverTarget;
+    let candidate = chooseCover(battle, u, threats);
+    const hasLane = (p) =>
+      threats.some(
+        (t) => !t.approximate && sight(p, t) && distance(p, t) <= u.range,
+      );
+    const keep =
+      previous &&
+      planningCellFree(battle, u, previous) &&
+      !(
+        u.failedGoal &&
+        u.failedGoal.until > battle.time &&
+        distance(previous, u.failedGoal) < 0.8
+      ) &&
+      protectionAt(previous, threats) >= 0.28 &&
+      positionScore(u, previous, threats) >
+        positionScore(u, u, threats) + 0.35 &&
+      (u.suppression >= 0.7 || !hasLane(u) || hasLane(previous)) &&
+      (!candidate ||
+        positionScore(u, candidate, threats) <
+          positionScore(u, previous, threats) + 0.65);
+    if (keep) candidate = previous;
     const blockedBy =
-      candidate && committed
+      candidate && committed && !keep
         ? "position commitment"
-        : candidate && moving.size >= 2 && !urgent
+        : candidate && moving.size >= 2 && !urgent && !keep
           ? "squad fire-and-movement budget"
           : null;
     d.blockedBy = blockedBy;
     u.coverTarget = blockedBy ? null : candidate;
-    d.reason = blockedBy
-      ? "Preserve firing support; defer relocation"
-      : candidate
-        ? "Meaningful directional protection gain; reachable route"
-        : protection >= 0.28
-          ? "Current protection adequate; no meaningful firing-position improvement"
-          : "No reachable meaningful improvement; retain combat initiative";
+    d.reason = keep
+      ? "Retain useful committed cover destination; alternative gain insufficient"
+      : blockedBy
+        ? "Preserve firing support; defer relocation"
+        : candidate
+          ? "Meaningful directional protection gain; reachable route"
+          : protection >= 0.28
+            ? "Current protection adequate; no meaningful firing-position improvement"
+            : "No reachable meaningful improvement; retain combat initiative";
     u.coverUntil = battle.time + 8;
-    if (candidate && !blockedBy) {
+    if (candidate && !blockedBy && !keep) {
       u.coverRelocationStarted = battle.time;
       u.coverEmergency = urgent;
       if (urgent)
@@ -484,7 +507,19 @@ export function followManeuver(battle, u, m, dt) {
 }
 
 export function careRouteSafe(battle, u, patient) {
+  const careFailure = u.failedCareRoutes?.find(
+    (f) => f.patientId === patient.id && f.until > battle.time,
+  );
   if (
+    careFailure &&
+    distance(u, careFailure.origin) < 1 &&
+    distance(patient, careFailure.patient) < 2
+  )
+    return false;
+  // A contextual care failure supersedes the legacy last-goal exclusion. Once
+  // its origin/target materially changes, reassess instead of shadowing recovery.
+  if (
+    !careFailure &&
     u.failedGoal &&
     u.failedGoal.until > battle.time &&
     distance(patient, u.failedGoal) < 1

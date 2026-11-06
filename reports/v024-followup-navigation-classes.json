@@ -1,0 +1,2949 @@
+{
+  "runs": [
+    {
+      "seed": 1,
+      "scenario": "standard",
+      "duration": 40.3000000000003,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "2a8efa1754ec0327ffd8e41bb77e859985e2ff4cccaf9cdf27dfb158b344803c"
+    },
+    {
+      "seed": 2,
+      "scenario": "short-contact",
+      "duration": 37.50000000000026,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "fca2da6589a5f16bfcd1d7bcb982d221b316c90e5a9536683156643397db3d8a"
+    },
+    {
+      "seed": 3,
+      "scenario": "reduced-reserves",
+      "duration": 75.79999999999997,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "f768bee67d8199a71f62f4015251fbcf2b993ca5fa94a13c486acf91b2c8ba35"
+    },
+    {
+      "seed": 4,
+      "scenario": "leg-injuries",
+      "duration": 71.10000000000024,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "82e67451e22910e47d2190c103d0bd250b3d424cc91ce59232dab5cac53002fe"
+    },
+    {
+      "seed": 5,
+      "scenario": "standard",
+      "duration": 96.69999999999878,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "a2f707fed4e171c01466fcea8f380c6cee113fd7bbff70859e53d976632cdc0a"
+    },
+    {
+      "seed": 6,
+      "scenario": "short-contact",
+      "duration": 83.79999999999951,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "6b6f83b5ab293d5a3e46a45b94aa479871fdeef305b942495c56dca682ec4589"
+    },
+    {
+      "seed": 7,
+      "scenario": "reduced-reserves",
+      "duration": 75.99999999999996,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 3
+      },
+      "digest": "b3598a19599ff356d357d8663c5a964f715d0fc0eafd81d6fb455d6e05afccf4"
+    },
+    {
+      "seed": 8,
+      "scenario": "leg-injuries",
+      "duration": 56.700000000000536,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "9b542da493d7c0f1ccac276cfdb419e528b68d4a9f7788db817264ba3d369f76"
+    },
+    {
+      "seed": 9,
+      "scenario": "standard",
+      "duration": 117.99999999999757,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "d5421d059436262219a67869250138ef224e636093da43860840e0c595b936b0"
+    },
+    {
+      "seed": 10,
+      "scenario": "short-contact",
+      "duration": 64.40000000000062,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "e2b559c34709f7bcdad4a314f17e356a4051c2a0907dca069d71ad9be4754a4a"
+    },
+    {
+      "seed": 11,
+      "scenario": "reduced-reserves",
+      "duration": 70.60000000000026,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "ee22ea26ba459dee2ea7c4a2ea9c3e30109a2bee4688cce4914c75c3c23286c5"
+    },
+    {
+      "seed": 12,
+      "scenario": "leg-injuries",
+      "duration": 42.500000000000334,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "9dcbbf20a513ed5c54761dfd0fd46f5e059f7ce6143165541cfb9b2b5c2e3451"
+    },
+    {
+      "seed": 13,
+      "scenario": "standard",
+      "duration": 84.49999999999947,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "908e99dcdffd61adf33e8e1a55c0724efe3c79f4e29d6ecb76424ed0ddbcb8d1"
+    },
+    {
+      "seed": 14,
+      "scenario": "short-contact",
+      "duration": 56.000000000000526,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "9d300c18a5ba13cdc057da2c1f535bce9ebfacde54b83094381d7f4c32ba8ac7"
+    },
+    {
+      "seed": 15,
+      "scenario": "reduced-reserves",
+      "duration": 38.00000000000027,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "6648316c8e120fa1909b3a4cc4abe1f5c94b3d7863ff26518674ae4ff6a25dea"
+    },
+    {
+      "seed": 16,
+      "scenario": "leg-injuries",
+      "duration": 61.1000000000006,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 1
+      },
+      "digest": "acc75a0c2f3663dceacf2c149a34182b0cb2494aadb2e47ca85958ab80d220a3"
+    },
+    {
+      "seed": 17,
+      "scenario": "standard",
+      "duration": 72.50000000000016,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "13f64d70468cf30a69d555c735e5353fab8f6f8277183698eea747ee7f98eb1e"
+    },
+    {
+      "seed": 18,
+      "scenario": "short-contact",
+      "duration": 52.30000000000047,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "7a5fe5ff2919a2c43e25dca6bc667ca3f52508032d8769b571c959dfb7438e14"
+    },
+    {
+      "seed": 19,
+      "scenario": "reduced-reserves",
+      "duration": 105.49999999999828,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 2,
+        "Soldier congestion": 6
+      },
+      "digest": "9d2317b68de77c5f3c71527387cdc192c571331801d141825ab96ade3833d4d1"
+    },
+    {
+      "seed": 20,
+      "scenario": "leg-injuries",
+      "duration": 118.89999999999752,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 2
+      },
+      "digest": "88a0caa59e19e57accd80e5fa2689f421580ddc5ea001b328730a4f799073595"
+    },
+    {
+      "seed": 21,
+      "scenario": "standard",
+      "duration": 47.3000000000004,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "4ea3e764b95d1240cdd2a8eb2550693373f2c341eddd745e869fa6e750c84908"
+    },
+    {
+      "seed": 22,
+      "scenario": "short-contact",
+      "duration": 63.20000000000063,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 3
+      },
+      "digest": "dc6e6412a7912b1fc497e7d9de50236aa8f543801901f4e3aa30e3c16229aefc"
+    },
+    {
+      "seed": 23,
+      "scenario": "reduced-reserves",
+      "duration": 47.500000000000405,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "23f15ef9500550cb40daa33bc7146f7e68bedeb62536362b1041cb381b23d12d"
+    },
+    {
+      "seed": 24,
+      "scenario": "leg-injuries",
+      "duration": 59.30000000000057,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "68eb4e261f260a90f0a4885dd64529223cd8a95f575bd9443dfabf48e9c3ced0"
+    },
+    {
+      "seed": 25,
+      "scenario": "standard",
+      "duration": 98.89999999999866,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "e93c9b677972558ec134e9d0bb087719c55193e0069c8f84f525345656947b54"
+    },
+    {
+      "seed": 26,
+      "scenario": "short-contact",
+      "duration": 47.70000000000041,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "b00b0ed2c541615499197ecb2157251e9f34ba31948abb6f71c3a0bc167318a8"
+    },
+    {
+      "seed": 27,
+      "scenario": "reduced-reserves",
+      "duration": 77.89999999999985,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "d7fe2e2cea87a7efd2e48adae1f679778fc954be516c1291a25a4f4268cf5b3d"
+    },
+    {
+      "seed": 28,
+      "scenario": "leg-injuries",
+      "duration": 104.39999999999834,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "744c725548c3befa9228ab70707ee9a3148d0d69656d135ac533502db3948572"
+    },
+    {
+      "seed": 29,
+      "scenario": "standard",
+      "duration": 42.10000000000033,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "37f42d216bec968f7a0b1be7a0e911832e9c09f0f933ceac2ee30d0bf06f814b"
+    },
+    {
+      "seed": 30,
+      "scenario": "short-contact",
+      "duration": 50.60000000000045,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "b2ea504363b62da168e268a29d07c5c08539af2c59b0a7161fdfdea2f31d7550"
+    },
+    {
+      "seed": 31,
+      "scenario": "reduced-reserves",
+      "duration": 89.3999999999992,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "131d5f22df989bc976e5053544862dadb74ec1f8eedfab176d3e2103e7b8bd3c"
+    },
+    {
+      "seed": 32,
+      "scenario": "leg-injuries",
+      "duration": 84.69999999999946,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "6967336542fc01207f164a8f768bcf656923501024ba800c7c5fcc16c1360d4d"
+    },
+    {
+      "seed": 33,
+      "scenario": "standard",
+      "duration": 69.50000000000033,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "ab493fa793c958d50a3341f350c6320786e5161e47ee58c60acaac430819f1d1"
+    },
+    {
+      "seed": 34,
+      "scenario": "short-contact",
+      "duration": 80.4999999999997,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "41b543575d77ab4cd60042550b11a94615f2991ea781bcedc799c7d0f9fe34b7"
+    },
+    {
+      "seed": 35,
+      "scenario": "reduced-reserves",
+      "duration": 46.100000000000385,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "97d737a8d031f977e726092ba0f3fa0d94398f5257860820a5bc44fa5e3168cd"
+    },
+    {
+      "seed": 36,
+      "scenario": "leg-injuries",
+      "duration": 114.79999999999775,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 4
+      },
+      "digest": "0bac8e8285c1a0e108ee30aaaa473d767cb0332a3fd2a8ad858b6b30f31ba5cf"
+    },
+    {
+      "seed": 37,
+      "scenario": "standard",
+      "duration": 98.59999999999867,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 3
+      },
+      "digest": "6af2c1ddb63c537891f9438daedc764d6ccb4ca5f5e770c33aa6b4650c927128"
+    },
+    {
+      "seed": 38,
+      "scenario": "short-contact",
+      "duration": 33.0000000000002,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "6479b2621f2251a408ad1b30bb9d9c15b69ae7e68c53f03f8d5804619049813a"
+    },
+    {
+      "seed": 39,
+      "scenario": "reduced-reserves",
+      "duration": 70.30000000000028,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "c5c3bfe69130d9c7ee82bd4b376b47ad767f514e680d5d11c43e1c1c3f1d3ffb"
+    },
+    {
+      "seed": 40,
+      "scenario": "leg-injuries",
+      "duration": 99.7999999999986,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 5,
+        "Soldier congestion": 1
+      },
+      "digest": "55eba3c8821f751ce979954854107759951d96eef198bd4980ffb3e11a27b2c0"
+    },
+    {
+      "seed": 41,
+      "scenario": "standard",
+      "duration": 57.10000000000054,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "52d5be181da43e4165dacd3976d5363627a34d0a172a7ed28410dadc094d90db"
+    },
+    {
+      "seed": 42,
+      "scenario": "short-contact",
+      "duration": 79.29999999999977,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "29d192b3e538360e562f0fa336a2f27511de6348e0668bd5bb523450130a90e2"
+    },
+    {
+      "seed": 43,
+      "scenario": "reduced-reserves",
+      "duration": 55.00000000000051,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "34905e042aa46f08a85ab7846816c28c60f89c75f000ef13fb03e00ae9975bea"
+    },
+    {
+      "seed": 44,
+      "scenario": "leg-injuries",
+      "duration": 78.09999999999984,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "6162c8e838b129328fcca9c79c8b5ee3d93c67f00c9ffee23b2e352b0efa45b7"
+    },
+    {
+      "seed": 45,
+      "scenario": "standard",
+      "duration": 43.70000000000035,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "bebeca409e21eb4170c46482cafb4c00b521a0176fbb147a7dee870647b203b3"
+    },
+    {
+      "seed": 46,
+      "scenario": "short-contact",
+      "duration": 155.79999999999544,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 1
+      },
+      "digest": "f348f6f1720372eb1b94a69f389dc265ba8e4e17d12be9ce368684539242b8b1"
+    },
+    {
+      "seed": 47,
+      "scenario": "reduced-reserves",
+      "duration": 52.80000000000048,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "5197d20889685e8a8fe85ebec023900b1dc1e6236ab089a43d1e089673c53a1f"
+    },
+    {
+      "seed": 48,
+      "scenario": "leg-injuries",
+      "duration": 70.10000000000029,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "d84db71d9390553c9cb322c6172f366be2ee9c6e0f5631781369cf2daeec568d"
+    },
+    {
+      "seed": 49,
+      "scenario": "standard",
+      "duration": 35.70000000000024,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "32d27de5a5d82655bd1a160a6854399d74eb6611f3af80a9f52ad742256eeba5"
+    },
+    {
+      "seed": 50,
+      "scenario": "short-contact",
+      "duration": 69.00000000000036,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 3
+      },
+      "digest": "d1f36c48a7635179ef491df5f79ddb31bb13eac8b842a0e6c9cc63b76af922ac"
+    },
+    {
+      "seed": 51,
+      "scenario": "reduced-reserves",
+      "duration": 80.5999999999997,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 3
+      },
+      "digest": "e605500a1b33b48f728ed59f0314fbf689f5393833fe8e8ad4f55f2f3d3d2ad3"
+    },
+    {
+      "seed": 52,
+      "scenario": "leg-injuries",
+      "duration": 29.200000000000145,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "336c44b3b2083c0deeb0384592c00577125e3adcdb1ec20b18c38b7d30670a59"
+    },
+    {
+      "seed": 53,
+      "scenario": "standard",
+      "duration": 34.40000000000022,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "320262a2df4d5541a35d7d0acf0cc9785f55d8ba61135d45ce28e387cda5e103"
+    },
+    {
+      "seed": 54,
+      "scenario": "short-contact",
+      "duration": 98.29999999999869,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "98ddfcd8f9d56f99e28e1defc0bf668ddecf15b82602a8f9ef56615c8cbfc2d2"
+    },
+    {
+      "seed": 55,
+      "scenario": "reduced-reserves",
+      "duration": 74.80000000000003,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6
+      },
+      "digest": "54b1d4625a1858afa994734c574d0b011b4f8513117d53491888ab9a224f6a40"
+    },
+    {
+      "seed": 56,
+      "scenario": "leg-injuries",
+      "duration": 115.39999999999772,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "62165fe4d72d06ce4a13173fdd38c8e351cb828cbf0ba95217fd4e773bd3b0b2"
+    },
+    {
+      "seed": 57,
+      "scenario": "standard",
+      "duration": 40.400000000000304,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "e07c1aeaf1fa9bfe72d3215d1784ffc2f3111afbfdc26b2d586eb95f5dcbe536"
+    },
+    {
+      "seed": 58,
+      "scenario": "short-contact",
+      "duration": 46.30000000000039,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "c4dab35ddc033a2c7450f3a318f221119bf169b300acafba5794c2f4bedecb44"
+    },
+    {
+      "seed": 59,
+      "scenario": "reduced-reserves",
+      "duration": 48.80000000000042,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "185b8b7072a6aaa5087a97384a6d74732ea7db5e660c93219fb44a5b9d4b61c7"
+    },
+    {
+      "seed": 60,
+      "scenario": "leg-injuries",
+      "duration": 88.09999999999927,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5,
+        "No net movement progress": 2
+      },
+      "digest": "b437d7cc6d08f2ebfbd8326807df4938080c9fa8ac0ec166ae603396c7328e58"
+    },
+    {
+      "seed": 61,
+      "scenario": "standard",
+      "duration": 67.90000000000042,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 3
+      },
+      "digest": "27f3663ffba28ae56b92934b5801228f470fafe1c659e570afdb8668b6b98838"
+    },
+    {
+      "seed": 62,
+      "scenario": "short-contact",
+      "duration": 83.9999999999995,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "4f512c36188ad5b267dbd7cdbd42fd58e12f361ff0e5513555fb871c52b0c05c"
+    },
+    {
+      "seed": 63,
+      "scenario": "reduced-reserves",
+      "duration": 48.40000000000042,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "5f4970de1fd09129fb0c332c9ed6704f310f62be3de12012f09688fbf7efb555"
+    },
+    {
+      "seed": 64,
+      "scenario": "leg-injuries",
+      "duration": 47.600000000000406,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "891c8791180bebd937c188d0884624e0ffa99522425827ff20bd97ba259e52cf"
+    },
+    {
+      "seed": 65,
+      "scenario": "standard",
+      "duration": 63.90000000000064,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "da1883840d9a5d552740cd068f588e9cc560caa5639885e869895f4b7b0548b0"
+    },
+    {
+      "seed": 66,
+      "scenario": "short-contact",
+      "duration": 95.29999999999886,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "5fa0c3860c473132ebc3c32d4cc3ce04a5e4216f1b027303b689d48067149902"
+    },
+    {
+      "seed": 67,
+      "scenario": "reduced-reserves",
+      "duration": 49.40000000000043,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "f568a6d93c3955e0809f6ad2c8e31e298a00bf87f2d08344220ad7154b3b4e7a"
+    },
+    {
+      "seed": 68,
+      "scenario": "leg-injuries",
+      "duration": 65.10000000000058,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "d44eecdae5d6561346ac663901da3f14d0c6b1f614a4c4bcaae1daeb92987409"
+    },
+    {
+      "seed": 69,
+      "scenario": "standard",
+      "duration": 77.89999999999985,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "6f66db0a2c613a2a0ad4e954da420c33312496997d202ae7a3f9f9cce5b225d0"
+    },
+    {
+      "seed": 70,
+      "scenario": "short-contact",
+      "duration": 94.4999999999989,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "10f261fc040232619f3688a15f30e798640258160d4fa25d680f56e1690ae1c9"
+    },
+    {
+      "seed": 71,
+      "scenario": "reduced-reserves",
+      "duration": 58.700000000000564,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "b9ab222fdcb656d53fef58bd887a804f62eff9c8d5a235b0ca516d0e725a1814"
+    },
+    {
+      "seed": 72,
+      "scenario": "leg-injuries",
+      "duration": 36.40000000000025,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "4cee36797352ec3489762f1796c4748cf406f3de7d01ed5b863d0c746a8acad9"
+    },
+    {
+      "seed": 73,
+      "scenario": "standard",
+      "duration": 100.39999999999857,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "76c31d4e0955d2e6e4191546013e74529e235342c18619abda1621ba2b7a6c6c"
+    },
+    {
+      "seed": 74,
+      "scenario": "short-contact",
+      "duration": 42.500000000000334,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6
+      },
+      "digest": "7438f87d7a703570188de741390de23f24d45f4d75e2c2fc6c7d7f9d8c314a36"
+    },
+    {
+      "seed": 75,
+      "scenario": "reduced-reserves",
+      "duration": 53.50000000000049,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "6d806e91430da5bf506a9b5bdd52131dfc5969b2b30551625b173710b4f19985"
+    },
+    {
+      "seed": 76,
+      "scenario": "leg-injuries",
+      "duration": 51.20000000000046,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "f131e6c37730693931ef90e784454f04d1a5e0c28c8372d2f4729abf12562ef6"
+    },
+    {
+      "seed": 77,
+      "scenario": "standard",
+      "duration": 68.90000000000036,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "5039040b9cf9e62c352d3308d54bca4ff8ca74191f9421062b51e1c5ed65a36f"
+    },
+    {
+      "seed": 78,
+      "scenario": "short-contact",
+      "duration": 69.50000000000033,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "58cac62f6958801a02cae2460fc528755aff3e92eb85f0df5e88b70b56314f5e"
+    },
+    {
+      "seed": 79,
+      "scenario": "reduced-reserves",
+      "duration": 84.59999999999947,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "81c83a12338ccad42cc43ea68821380156ac694deb3e30c44d3f2a02dda4baa9"
+    },
+    {
+      "seed": 80,
+      "scenario": "leg-injuries",
+      "duration": 64.00000000000064,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "7d16a144b41887ff871c5e6275e13439adfb81b54a3a986383b85b7f3b1ed72f"
+    },
+    {
+      "seed": 81,
+      "scenario": "standard",
+      "duration": 58.700000000000564,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "2f6e2d89c95ef6fa00f15eb3a3fc96f9f8625b4ac0947f8b3f26254cb1d0af52"
+    },
+    {
+      "seed": 82,
+      "scenario": "short-contact",
+      "duration": 65.90000000000053,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "f35f3c7598bcfb1bbc51bcc8f77486e17aeaae9dce89971ea723309f9b8a97b7"
+    },
+    {
+      "seed": 83,
+      "scenario": "reduced-reserves",
+      "duration": 54.90000000000051,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 1
+      },
+      "digest": "417a7b33996b877daaae73c28369be0df3f388bb4dad4c42dc2bb2f90d990b83"
+    },
+    {
+      "seed": 84,
+      "scenario": "leg-injuries",
+      "duration": 88.89999999999922,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "8ab3fffb923fae493f91f29506b9f2518c9defee00ad8fd5876e821fdd6073f1"
+    },
+    {
+      "seed": 85,
+      "scenario": "standard",
+      "duration": 67.70000000000043,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "1c8c9eedf4cad8cb5f07ce022688dc1c0c1bba56d0d57f25050bcad5a5f130e2"
+    },
+    {
+      "seed": 86,
+      "scenario": "short-contact",
+      "duration": 57.00000000000054,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "1e27da8901b15ff2c084989ad2e8945b8d936030940b5d6e053f7accbc6c0370"
+    },
+    {
+      "seed": 87,
+      "scenario": "reduced-reserves",
+      "duration": 69.50000000000033,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 3
+      },
+      "digest": "5653942dc2258451bca56de6cf6a1312706c263cc1022559ef8da826ce5a4c3f"
+    },
+    {
+      "seed": 88,
+      "scenario": "leg-injuries",
+      "duration": 105.69999999999827,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "61626e0d916393c8ace6d00007dae69b8e284a39b516d65ab00e2a9589ed508e"
+    },
+    {
+      "seed": 89,
+      "scenario": "standard",
+      "duration": 68.70000000000037,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "35caf8026d989861feabffe457a3ffbcc96511646d8fdec167191403ab681d76"
+    },
+    {
+      "seed": 90,
+      "scenario": "short-contact",
+      "duration": 63.40000000000063,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "1450b5b13fd0d969a9f7ab3f9d0471da6974ee6c7d949b39f219b3c49ab62f10"
+    },
+    {
+      "seed": 91,
+      "scenario": "reduced-reserves",
+      "duration": 63.600000000000634,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "68f90370ed81a5554feddeecd775dcb6134a9fc6e79591b56e3a47247ceaf689"
+    },
+    {
+      "seed": 92,
+      "scenario": "leg-injuries",
+      "duration": 170.3999999999946,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "32391bcbcd2bc47faacdf21d26350ceb83f9597cf04a792b282f0e8c3df67247"
+    },
+    {
+      "seed": 93,
+      "scenario": "standard",
+      "duration": 71.30000000000022,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 3
+      },
+      "digest": "380d5984505b3717ebffb0ae14bce17d482a24bdc17feef22ce26861039a9096"
+    },
+    {
+      "seed": 94,
+      "scenario": "short-contact",
+      "duration": 37.600000000000264,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "ca1cfd3ceb055fc8e195c012bce4a04bc3b5912c6eb545ee45f0386b849d5590"
+    },
+    {
+      "seed": 95,
+      "scenario": "reduced-reserves",
+      "duration": 75.2,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "1346191de059b9cd058b13a2e0936f6b24a9cdbdecd17addac275bea4018b328"
+    },
+    {
+      "seed": 96,
+      "scenario": "leg-injuries",
+      "duration": 65.90000000000053,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "83b9f91c8e6a0a6bca363943d1c8ffcd8e638104fc78db9baab18798469c4981"
+    },
+    {
+      "seed": 97,
+      "scenario": "standard",
+      "duration": 141.99999999999622,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 19,
+        "No net movement progress": 4
+      },
+      "digest": "20645a955bcee364b066aee973bcd147ae2ce5a61e7d68dafec878a4a4a61130"
+    },
+    {
+      "seed": 98,
+      "scenario": "short-contact",
+      "duration": 55.70000000000052,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4,
+        "No net movement progress": 2
+      },
+      "digest": "86cc89659dc9768ec631851802d89036930c9b6d9261ecafd9e4ce255aae25ed"
+    },
+    {
+      "seed": 99,
+      "scenario": "reduced-reserves",
+      "duration": 64.20000000000063,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5,
+        "No net movement progress": 2
+      },
+      "digest": "2a59dc865b4e2d5c843aeab69973ef6e36546a867f50bbe3ba1b807f1157ade8"
+    },
+    {
+      "seed": 100,
+      "scenario": "leg-injuries",
+      "duration": 97.89999999999871,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 3
+      },
+      "digest": "1d12990b3a3a000f1eed848860ea4453dd170781d872a9fe4505ac58885fb8b9"
+    },
+    {
+      "seed": 101,
+      "scenario": "standard",
+      "duration": 50.400000000000446,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "a34ee5dcbdae36cf361f38a7f7fe93893225541de296f7524297888ba21b3ccd"
+    },
+    {
+      "seed": 102,
+      "scenario": "short-contact",
+      "duration": 65.70000000000054,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "2303d0c83856b953656194a2fa4276a95df9e6e726b1e8d7897d091a9641b8cf"
+    },
+    {
+      "seed": 103,
+      "scenario": "reduced-reserves",
+      "duration": 76.79999999999991,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "2225f456472a9b876a8bc01630d0e78b9987b53a93dc66dd6fcc631cbc5c55b0"
+    },
+    {
+      "seed": 104,
+      "scenario": "leg-injuries",
+      "duration": 68.90000000000036,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 5,
+        "No net movement progress": 3
+      },
+      "digest": "981058ebd6fd3d6a9de4ad4f627f52b2d34b50ce762c022cb3111d7106c316ab"
+    },
+    {
+      "seed": 105,
+      "scenario": "standard",
+      "duration": 36.200000000000244,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "8cb95470a0e1f961ad2495bba2832bee90ffd7e5d7d10dc84c10eb104dec898d"
+    },
+    {
+      "seed": 106,
+      "scenario": "short-contact",
+      "duration": 41.800000000000324,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "bee82a48cfbeee71c4dde0e694ec750d1b4b1a85c4cb10659d8a958f5ff1eb3b"
+    },
+    {
+      "seed": 107,
+      "scenario": "reduced-reserves",
+      "duration": 49.000000000000426,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "8cbf34d198e70d04767d68ff1d60d06b2ccadb4e6cedf5ef1d3bcbaf54c44b7e"
+    },
+    {
+      "seed": 108,
+      "scenario": "leg-injuries",
+      "duration": 107.19999999999818,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "4459da2514b0d63c3093060782ffbc9c3003bd8278ca21705c0d6f46dca4bb59"
+    },
+    {
+      "seed": 109,
+      "scenario": "standard",
+      "duration": 59.90000000000058,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 3
+      },
+      "digest": "d415d2f2943376526ee1f7b668b9faeff92e05e9c0c696d98c5c462f32c52a81"
+    },
+    {
+      "seed": 110,
+      "scenario": "short-contact",
+      "duration": 64.7000000000006,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "4bbb256d6497aa592fe7884230bf51621243f4d35c9ca06388e2ed8b18f6a176"
+    },
+    {
+      "seed": 111,
+      "scenario": "reduced-reserves",
+      "duration": 64.6000000000006,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "402eca4da2ee15b41c26b3cac61075c0f41aa2a6869ce5995e8e94cfcba89018"
+    },
+    {
+      "seed": 112,
+      "scenario": "leg-injuries",
+      "duration": 63.600000000000634,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "042d3bfbac4063a656312ccaa1fd8fdd36c1b667178b290020967cbabbb3796f"
+    },
+    {
+      "seed": 113,
+      "scenario": "standard",
+      "duration": 44.600000000000364,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "4be58b99947ba123148f9df8892b3c377ce6fb1f0b789e45b551cb0b620b9ebe"
+    },
+    {
+      "seed": 114,
+      "scenario": "short-contact",
+      "duration": 83.69999999999952,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6
+      },
+      "digest": "e3838ba99277e1d07acb2f46b5d7d94d99778d2bfacde0175859063d08576471"
+    },
+    {
+      "seed": 115,
+      "scenario": "reduced-reserves",
+      "duration": 42.70000000000034,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "57144b6db4160f9e442977ce56d1ba78530ab012745d62ac3aadc957c7020e6b"
+    },
+    {
+      "seed": 116,
+      "scenario": "leg-injuries",
+      "duration": 95.89999999999883,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 1
+      },
+      "digest": "72fd9e2af58432a59bea2c1b8dbc691b888ea7f87bfd2508ec70275a282fcc60"
+    },
+    {
+      "seed": 117,
+      "scenario": "standard",
+      "duration": 78.49999999999982,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 3
+      },
+      "digest": "83fba609cd34666fc41bcea9685d88235506e65413f9a9ef259d7de81c7ceb02"
+    },
+    {
+      "seed": 118,
+      "scenario": "short-contact",
+      "duration": 90.69999999999912,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "6624d816aad48116f38c8a96236d40e8fac391419749718b5c2c18d0ad74b64c"
+    },
+    {
+      "seed": 119,
+      "scenario": "reduced-reserves",
+      "duration": 46.9000000000004,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "163efcf27c56a4ba8c857b88d696763100bc5aaa0f166da9d4f38e31d6d9dd60"
+    },
+    {
+      "seed": 120,
+      "scenario": "leg-injuries",
+      "duration": 124.69999999999719,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "c88fcd27f5d82a31985e004c6aeaada329c9c7328379af6385ddbfb67115b8ec"
+    },
+    {
+      "seed": 121,
+      "scenario": "standard",
+      "duration": 82.79999999999957,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "025e71c5f3fdacc34ff59c697ca5ffc4ae9104e43193d1e875446546aad1fc65"
+    },
+    {
+      "seed": 122,
+      "scenario": "short-contact",
+      "duration": 72.10000000000018,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "bec76bdeea50cede73684c9ceb785b1ed75ba08ed5cecf17d83975404e98763c"
+    },
+    {
+      "seed": 123,
+      "scenario": "reduced-reserves",
+      "duration": 54.500000000000504,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "3fc0a4e1ee8c3797a847e3e98495a4fee02df02b061a45bb39a8868f80a05074"
+    },
+    {
+      "seed": 124,
+      "scenario": "leg-injuries",
+      "duration": 49.20000000000043,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "8c95b793b91ae137b31ce9545f050e57e1683187a652d5ee037fd1708ecdef4e"
+    },
+    {
+      "seed": 125,
+      "scenario": "standard",
+      "duration": 70.20000000000029,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "ea10702d1a75b3f5bc98ed68f23f0b290719fbdc23e5600535209efe9e454e9a"
+    },
+    {
+      "seed": 126,
+      "scenario": "short-contact",
+      "duration": 80.19999999999972,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "484470b6acc31196e9b231bff1e64e78b1567bfa45eb12b98f23c95a7f754077"
+    },
+    {
+      "seed": 127,
+      "scenario": "reduced-reserves",
+      "duration": 79.89999999999974,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 2
+      },
+      "digest": "45b66c693c4cc3f3bfb86f9ecc5dbce316fe6758fbceb9d7c46014b0391eda20"
+    },
+    {
+      "seed": 128,
+      "scenario": "leg-injuries",
+      "duration": 88.79999999999923,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 7
+      },
+      "digest": "aa7ce3c617389a8a7ceedc3ef162e8330c7e6ee4afed1321642ccf634e96d7b6"
+    },
+    {
+      "seed": 129,
+      "scenario": "standard",
+      "duration": 61.600000000000605,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "ed32e9a6fa5b9e55fc08c801e7a41a6d7958b9b4e14536cb1028cf44090a2fbb"
+    },
+    {
+      "seed": 130,
+      "scenario": "short-contact",
+      "duration": 48.40000000000042,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "722bb95e6ec1a02ae63f20463f2ac03905d9dd0fdf32a6fbbdcd025b64822125"
+    },
+    {
+      "seed": 131,
+      "scenario": "reduced-reserves",
+      "duration": 58.40000000000056,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 2
+      },
+      "digest": "5b84735ae51b828fd25f50e1140e8b8cc900a3815b255e4e2f74a5549a024467"
+    },
+    {
+      "seed": 132,
+      "scenario": "leg-injuries",
+      "duration": 52.70000000000048,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 2
+      },
+      "digest": "ee765304d805b9a2125c349b2813bdfc7824c02f9981e1fd5757351c1f91c3d3"
+    },
+    {
+      "seed": 133,
+      "scenario": "standard",
+      "duration": 87.89999999999928,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 6,
+        "No net movement progress": 1
+      },
+      "digest": "f876777facee941dfa6163616d974e53d02cea8e7f9cf4eeed00f78f42f0123b"
+    },
+    {
+      "seed": 134,
+      "scenario": "short-contact",
+      "duration": 68.70000000000037,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "cb42d930668b6dd8f397df13aa3eabc4cb9494ad693e606d80b5dd06c85df364"
+    },
+    {
+      "seed": 135,
+      "scenario": "reduced-reserves",
+      "duration": 37.40000000000026,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "602d17be4d15fced162d0ef671b792f2edb9475639e9dd5288b46ebdbfd31b1e"
+    },
+    {
+      "seed": 136,
+      "scenario": "leg-injuries",
+      "duration": 84.19999999999949,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "2636546004a6cdfbaa985990db7521e52b57a223827d8731d5b859232e4d8c28"
+    },
+    {
+      "seed": 137,
+      "scenario": "standard",
+      "duration": 69.60000000000032,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "a0d90b4079f7916138b4125d3073853a7e8ae937d110588f7084b4471f521b0d"
+    },
+    {
+      "seed": 138,
+      "scenario": "short-contact",
+      "duration": 59.30000000000057,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "43e3aac98f0ea95dc5b42b4bb94f936ba394f280eeef2baf6d497c0019b11228"
+    },
+    {
+      "seed": 139,
+      "scenario": "reduced-reserves",
+      "duration": 61.3000000000006,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "f492bb18c0593da8e0a8dfc5bd9cbfe086ba97bb4e28616fd61b0b1648e85ec8"
+    },
+    {
+      "seed": 140,
+      "scenario": "leg-injuries",
+      "duration": 78.99999999999979,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "f69b7e1ff8c7379efa36ae32322f6ae427ef745dcd391df806494612dd82a9e8"
+    },
+    {
+      "seed": 141,
+      "scenario": "standard",
+      "duration": 50.00000000000044,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "24bf0ecebf2c6cfb79a9f3e61772eca7eea095dffff64d23ca14fcb4fe978e65"
+    },
+    {
+      "seed": 142,
+      "scenario": "short-contact",
+      "duration": 32.000000000000185,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "c71041c0094564e223247d9c57e6a29b9bf85e3b87a1d26a5b14f593c22fb241"
+    },
+    {
+      "seed": 143,
+      "scenario": "reduced-reserves",
+      "duration": 55.70000000000052,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "b44504cdc52a19abbe57a40dcf8a490c1a30a787528c79a91b791fd52c5b4bac"
+    },
+    {
+      "seed": 144,
+      "scenario": "leg-injuries",
+      "duration": 56.30000000000053,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "55b328e74964a8c6c0946171ddb62e27b3fcb30aa0b729b6071719934ec454bf"
+    },
+    {
+      "seed": 145,
+      "scenario": "standard",
+      "duration": 113.59999999999782,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "b62e70fb5a06487b586abd37df8b0ede95f3d0c6f90f0c98b3e59d8c0c0c64c5"
+    },
+    {
+      "seed": 146,
+      "scenario": "short-contact",
+      "duration": 128.79999999999697,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "491ecb17f7bf4e91ddffbe06a685eba0da1a0519ec821973a339435b0d969884"
+    },
+    {
+      "seed": 147,
+      "scenario": "reduced-reserves",
+      "duration": 37.10000000000026,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "eec902443b9368a2daa3674b11d8516f33b7f643a24d977931d28aa7e52b577d"
+    },
+    {
+      "seed": 148,
+      "scenario": "leg-injuries",
+      "duration": 82.3999999999996,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "3d776e820347df58b09d7fc1248f5ec84ab5b61ce68e7a04d28f4257996f3624"
+    },
+    {
+      "seed": 149,
+      "scenario": "standard",
+      "duration": 99.59999999999862,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 3
+      },
+      "digest": "15189a7c4e7348f6e2ce3494327c441d946b6893a4f60bcdb39c6952bd95aec9"
+    },
+    {
+      "seed": 150,
+      "scenario": "short-contact",
+      "duration": 62.70000000000062,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "83bfb563c6f9b2663093c19ca06ddbb3e9e885218d983fcdc774a61f64c87737"
+    },
+    {
+      "seed": 151,
+      "scenario": "reduced-reserves",
+      "duration": 54.600000000000506,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "2b300535f36fb811c97281e6d125f00e16fc2022c54ddb365fc46b8b916d2570"
+    },
+    {
+      "seed": 152,
+      "scenario": "leg-injuries",
+      "duration": 53.200000000000486,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "8bfb270e11fd0c30105bd190ddda04aebb7a32487d01deb249dc03f43a9e93a7"
+    },
+    {
+      "seed": 153,
+      "scenario": "standard",
+      "duration": 83.19999999999955,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "28da4b4ccde37b6b03fdd09b42188020265d56156e66639405e83a5664ed96e9"
+    },
+    {
+      "seed": 154,
+      "scenario": "short-contact",
+      "duration": 48.00000000000041,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "44b70abdfc437442a38b1cc1d7714a187634bceaed50201a354f08c2c692c6be"
+    },
+    {
+      "seed": 155,
+      "scenario": "reduced-reserves",
+      "duration": 55.00000000000051,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "714b357c6a87ea8cb1ba0904d99e44e076800da7a63e6ff0e2f878308fbe34f4"
+    },
+    {
+      "seed": 156,
+      "scenario": "leg-injuries",
+      "duration": 39.20000000000029,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "5111eb42c3df599127e4abc908e9c2a8c92a1dc533f1d5bbad123281ce9ba435"
+    },
+    {
+      "seed": 157,
+      "scenario": "standard",
+      "duration": 40.400000000000304,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "489c3d7f56802f4f6d9aa642c1993ed74cf330fbf6faf753d302c610f8174a47"
+    },
+    {
+      "seed": 158,
+      "scenario": "short-contact",
+      "duration": 81.69999999999963,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "035acd71adcb91ac1e3fefd2a8e8cb80703f12cd070120b3867c235e876e64ea"
+    },
+    {
+      "seed": 159,
+      "scenario": "reduced-reserves",
+      "duration": 50.70000000000045,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "473a74faf7a1c923120cc7878f14c7c14445fadd93aa64d79c955f97fc3a1645"
+    },
+    {
+      "seed": 160,
+      "scenario": "leg-injuries",
+      "duration": 64.30000000000062,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 1
+      },
+      "digest": "1b426df7ae2db8ff58f26cb3093100b9bd85a5a47c944ee729c9b42f64c96d00"
+    },
+    {
+      "seed": 161,
+      "scenario": "standard",
+      "duration": 78.49999999999982,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 3
+      },
+      "digest": "98e22141a15d5197f44d56820cd82d20a948bf52b9c9447d3aa672e0330a7417"
+    },
+    {
+      "seed": 162,
+      "scenario": "short-contact",
+      "duration": 55.10000000000051,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "708d9d63d50d9d6f499d1b3998f48aa3f99356b51394bd21277a8e1b2e4c8df0"
+    },
+    {
+      "seed": 163,
+      "scenario": "reduced-reserves",
+      "duration": 46.9000000000004,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "c533eb80dd597d00ed431c085eca4d84f7e9635e5ad1c85c541b66ebba092632"
+    },
+    {
+      "seed": 164,
+      "scenario": "leg-injuries",
+      "duration": 81.59999999999964,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6
+      },
+      "digest": "13d6994b2d0e4d25b1116b4e1635ae2e00a4fcb72dd76e3792b17dbad6e3c000"
+    },
+    {
+      "seed": 165,
+      "scenario": "standard",
+      "duration": 101.79999999999849,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "0c8748289795867667c43b6ebf15ab3a8befca3ed54fef88ad32c84bb427b956"
+    },
+    {
+      "seed": 166,
+      "scenario": "short-contact",
+      "duration": 53.100000000000485,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "86dc0081f1af2538dec1eb8ca48e0b359b8706f6c914ca9a7a41ccff8b5362a5"
+    },
+    {
+      "seed": 167,
+      "scenario": "reduced-reserves",
+      "duration": 96.09999999999881,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "060b2f7bf7dac9701f002b7ee51642e70644d861ec4505768b7552ef9d03aa48"
+    },
+    {
+      "seed": 168,
+      "scenario": "leg-injuries",
+      "duration": 65.30000000000057,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 1
+      },
+      "digest": "5680ebf3222ec8f89c9cd465169b20523b75f6492542d2822cf6b930c7558dce"
+    },
+    {
+      "seed": 169,
+      "scenario": "standard",
+      "duration": 31.00000000000017,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "eb70c31699020779f2cc77e99e066e2c55aacd9de7f621eb18323507ed85f634"
+    },
+    {
+      "seed": 170,
+      "scenario": "short-contact",
+      "duration": 49.40000000000043,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "cab97ff43a748f6a08c33a588c6a6cc92337c7530483c8ac4f5583aa49e7c493"
+    },
+    {
+      "seed": 171,
+      "scenario": "reduced-reserves",
+      "duration": 86.39999999999937,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 3,
+        "Soldier congestion": 1
+      },
+      "digest": "7b080855430d4e927ddb13be40c0e8972d2e1368a9550d1830b39d4da0c020c4"
+    },
+    {
+      "seed": 172,
+      "scenario": "leg-injuries",
+      "duration": 32.9000000000002,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "de49057a437c5b0adc1b8f1aad90fe144520ede6f741d036ee49266d26b5225e"
+    },
+    {
+      "seed": 173,
+      "scenario": "standard",
+      "duration": 53.30000000000049,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "585c4f274d745a82e16742173d24bb40a644bae545e83924613f0331a7b64c95"
+    },
+    {
+      "seed": 174,
+      "scenario": "short-contact",
+      "duration": 95.19999999999887,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "d3bd978f6ce1cd72fdd02cc6503ce275e103d2e4b17bbe83a9427d25961b34cd"
+    },
+    {
+      "seed": 175,
+      "scenario": "reduced-reserves",
+      "duration": 100.09999999999859,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 2
+      },
+      "digest": "06cfdea60221d4a26eaa1de2e784b2d8ab7c00a57ad9db962d60ba8ab0f9196e"
+    },
+    {
+      "seed": 176,
+      "scenario": "leg-injuries",
+      "duration": 53.100000000000485,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "72145b55813159f013760077d5356e005807412efae13413bdd667fdec2b7d7f"
+    },
+    {
+      "seed": 177,
+      "scenario": "standard",
+      "duration": 66.20000000000051,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "9e0497e1452fd0b38d27291332504e40c52856553ddbfc63c5606386271d28d7"
+    },
+    {
+      "seed": 178,
+      "scenario": "short-contact",
+      "duration": 82.49999999999959,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "71dfb6a200624e04efee2e7a1cf41c96c52b1000a6c7de3e0ff99033c0af9e58"
+    },
+    {
+      "seed": 179,
+      "scenario": "reduced-reserves",
+      "duration": 84.19999999999949,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "af1c042e184c67e5852e893ffd8c6285447c4d67292d4f59f7dd1a4f1052cf47"
+    },
+    {
+      "seed": 180,
+      "scenario": "leg-injuries",
+      "duration": 35.70000000000024,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "905de1558329d9497726940110fc72c948b77ee15ca44eb150c91b8091cc2354"
+    },
+    {
+      "seed": 181,
+      "scenario": "standard",
+      "duration": 78.89999999999979,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "52ed2be16e569569daecf962c0ffcedf4a54306181e91597e56508f5d231c405"
+    },
+    {
+      "seed": 182,
+      "scenario": "short-contact",
+      "duration": 66.4000000000005,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 2
+      },
+      "digest": "e1e5952d379505f41c4a4fcf50dc023be552a7174d5af48c2d128ebd3e90fcb6"
+    },
+    {
+      "seed": 183,
+      "scenario": "reduced-reserves",
+      "duration": 55.00000000000051,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "e2e671fdace82461816e1e989638d3f8322e395abfa7a4b5686e816aa9b6fd30"
+    },
+    {
+      "seed": 184,
+      "scenario": "leg-injuries",
+      "duration": 45.00000000000037,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "689ed680ade61cd6cf0cdbd5ccb7d27402808a8b02367987f63ba7e72709bc2c"
+    },
+    {
+      "seed": 185,
+      "scenario": "standard",
+      "duration": 62.00000000000061,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "a0851792f4665f8dac959612ba37ced2bd41ed6ae482d75393279128fe4a9a30"
+    },
+    {
+      "seed": 186,
+      "scenario": "short-contact",
+      "duration": 56.40000000000053,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "ca3173a423a7d9c502e5409823cb5a3c71ecce475b9c33ede7816fc9cca203fe"
+    },
+    {
+      "seed": 187,
+      "scenario": "reduced-reserves",
+      "duration": 72.30000000000017,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 2
+      },
+      "digest": "af33f6bc7463a62e37957158bec6ea0298f50655d59ef73c977bf4198e8cd90c"
+    },
+    {
+      "seed": 188,
+      "scenario": "leg-injuries",
+      "duration": 69.00000000000036,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "eb9296957ed86c35b27565087d5231b8f76d7886df99025569fe54cd77216b6c"
+    },
+    {
+      "seed": 189,
+      "scenario": "standard",
+      "duration": 95.09999999999887,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "79764bfb61c840ab2ae6a9c95a8b944d3f21a37e031ec114d115bd163bc8a97f"
+    },
+    {
+      "seed": 190,
+      "scenario": "short-contact",
+      "duration": 35.600000000000236,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "6f817bdd4f77243c3d708c6b5777f9238319f181c138a95a5932f84b890fb665"
+    },
+    {
+      "seed": 191,
+      "scenario": "reduced-reserves",
+      "duration": 51.30000000000046,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "c37f22197c1fd4bec94982ef6504b6bc9d99a275253655b8a710f4c109d4c393"
+    },
+    {
+      "seed": 192,
+      "scenario": "leg-injuries",
+      "duration": 90.39999999999914,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "4cf45ce89068ca23818931ebd1c9920b74ad5dcda55713f9d982f54cfa4c3a76"
+    },
+    {
+      "seed": 193,
+      "scenario": "standard",
+      "duration": 88.39999999999925,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6,
+        "No net movement progress": 1
+      },
+      "digest": "30c780eaace7b42ef11a8f79c45ea71cec7d2ff2186bb85dc817abba982d42ba"
+    },
+    {
+      "seed": 194,
+      "scenario": "short-contact",
+      "duration": 52.80000000000048,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 1
+      },
+      "digest": "930fb800e59837a560d628f32b2449f15f0fb94ce4e8f31122745a5ad90b2c9f"
+    },
+    {
+      "seed": 195,
+      "scenario": "reduced-reserves",
+      "duration": 49.80000000000044,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "308d5c15af7eb04861802299b6c9ce6e6d22e60c1668381fbb54e65fe693f635"
+    },
+    {
+      "seed": 196,
+      "scenario": "leg-injuries",
+      "duration": 61.500000000000604,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "b16351491e1924cc039497d4cb323adb4b801754d70eb7a3032134ac800c2454"
+    },
+    {
+      "seed": 197,
+      "scenario": "standard",
+      "duration": 45.90000000000038,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "2e20122cf6e9e27e394f4f3fdf3eae20741dfb1197d6528c7ba8768b80ffe032"
+    },
+    {
+      "seed": 198,
+      "scenario": "short-contact",
+      "duration": 41.800000000000324,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "a0b4201a62b2389c97a8bb6904104457004bea0eb7be7065d8c9874fe507019a"
+    },
+    {
+      "seed": 199,
+      "scenario": "reduced-reserves",
+      "duration": 40.60000000000031,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "65100ed2727587298bf992d23bb7a3d3c896de7b698de7420c40f21b1dff0cd9"
+    },
+    {
+      "seed": 200,
+      "scenario": "leg-injuries",
+      "duration": 55.80000000000052,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "e459b99ee43fefeac27b96b39456c45ce3d847ecdf75b90a9ba5d4c331785578"
+    },
+    {
+      "seed": 201,
+      "scenario": "standard",
+      "duration": 53.800000000000495,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "2fef359c67d4c9334996376dacd18f8a1d547816f53d65cd486679fa3ff6aa10"
+    },
+    {
+      "seed": 202,
+      "scenario": "short-contact",
+      "duration": 46.000000000000384,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "1681799a7f550251bcbba90431e72810ff919040f8d1b87527ef8eed07efb9f2"
+    },
+    {
+      "seed": 203,
+      "scenario": "reduced-reserves",
+      "duration": 46.700000000000394,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "81190c00ac92e4abb0b9276936638f6a5cf861cc5fc360ba7349d975fd8ce735"
+    },
+    {
+      "seed": 204,
+      "scenario": "leg-injuries",
+      "duration": 94.39999999999891,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5,
+        "No net movement progress": 1
+      },
+      "digest": "80fbc773ecfc6e99d7887d2f408b596a0d02c25034afa1cf253d8b13b64c872a"
+    },
+    {
+      "seed": 205,
+      "scenario": "standard",
+      "duration": 50.80000000000045,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "e84f6483d64393a97aeb9d220e7b48ba852b31bbcde4462cea7357d139a3994a"
+    },
+    {
+      "seed": 206,
+      "scenario": "short-contact",
+      "duration": 67.30000000000045,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "1597887e05fa2070393a907e0ac45d03f27fc98a1ba82c6ce16f523e72ffa812"
+    },
+    {
+      "seed": 207,
+      "scenario": "reduced-reserves",
+      "duration": 116.49999999999766,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "f24b0a160b98ca0ce5e6b7c6eb96ee7949116e3c656031fcfc1f8aa8920aee84"
+    },
+    {
+      "seed": 208,
+      "scenario": "leg-injuries",
+      "duration": 55.60000000000052,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 2
+      },
+      "digest": "3eef1d5921f13b2c5014a643884c55125bb94ed897986a58ad78527548094cf9"
+    },
+    {
+      "seed": 209,
+      "scenario": "standard",
+      "duration": 68.40000000000039,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "5f0d9421d946fe0f44fcf446600ea3dc2eb434d702640578edab05c9a9f08d2e"
+    },
+    {
+      "seed": 210,
+      "scenario": "short-contact",
+      "duration": 72.50000000000016,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "7ba498e014e37f8653d2ac62577c2c6dbac640ccf1bd168053efbb2abfe1bb1a"
+    },
+    {
+      "seed": 211,
+      "scenario": "reduced-reserves",
+      "duration": 44.40000000000036,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "192d6c7026dbf93b44f5345924d475afd045f78cb0ecef45ad2e3b6e3071b7ca"
+    },
+    {
+      "seed": 212,
+      "scenario": "leg-injuries",
+      "duration": 70.10000000000029,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "4225f0edceb4005467f4167e97068200b4f3776b77dd30cb4719c590852e26c4"
+    },
+    {
+      "seed": 213,
+      "scenario": "standard",
+      "duration": 71.30000000000022,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 2,
+        "Soldier congestion": 1
+      },
+      "digest": "d5d331dcfb913e8b54cfa23c4f4db6e6c508af452bd4865197efd4e57ff2956c"
+    },
+    {
+      "seed": 214,
+      "scenario": "short-contact",
+      "duration": 48.40000000000042,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "601cfee28b204b1af4f7a2fcfdea530aa67459ff27a797d9d8bc2c8aa3bf91b3"
+    },
+    {
+      "seed": 215,
+      "scenario": "reduced-reserves",
+      "duration": 69.30000000000034,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 6
+      },
+      "digest": "283d7ad540b1be8f64eed7953ca88d83bd103f4ecc202a10c5dbdb5ed123882f"
+    },
+    {
+      "seed": 216,
+      "scenario": "leg-injuries",
+      "duration": 52.30000000000047,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "fcbd4fbadc5f5fc08352d92c25eed4e138e16178388fd556b4122a8b29c04442"
+    },
+    {
+      "seed": 217,
+      "scenario": "standard",
+      "duration": 51.700000000000465,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 1
+      },
+      "digest": "28d9bf54f649ff24b72ce95e884e0b7c3b3b690de1597ee762f766ce4c4f1014"
+    },
+    {
+      "seed": 218,
+      "scenario": "short-contact",
+      "duration": 55.50000000000052,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "8044a1d2139ce3db9996e372b9b5a7098a5de3ef0756b4f3c987e4293353c911"
+    },
+    {
+      "seed": 219,
+      "scenario": "reduced-reserves",
+      "duration": 73.5000000000001,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "7f4c8c22683d7ad5553f674ff4eb5141181c51daaecb91ed2c7bcfb62a4b9fbe"
+    },
+    {
+      "seed": 220,
+      "scenario": "leg-injuries",
+      "duration": 65.60000000000055,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 2,
+        "Soldier congestion": 1
+      },
+      "digest": "a75fa867a4aa8bd7137596b7a3e4ea7fc47342d3334f7a3a4cfb28c4ca96ce8e"
+    },
+    {
+      "seed": 221,
+      "scenario": "standard",
+      "duration": 61.500000000000604,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "fdcaa350eb7429103300b16f4f8b5c47b195b3683c65f0f776a31554d807e775"
+    },
+    {
+      "seed": 222,
+      "scenario": "short-contact",
+      "duration": 50.50000000000045,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "8ada87a33f478f45c985d091fb2864df559d07ee96de566d308dbfe8281358f1"
+    },
+    {
+      "seed": 223,
+      "scenario": "reduced-reserves",
+      "duration": 27.000000000000114,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "e92ec7d0d9726c206647fa7f71494bf9a31ddf5323880cb0ff847b44c176c63e"
+    },
+    {
+      "seed": 224,
+      "scenario": "leg-injuries",
+      "duration": 49.000000000000426,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "b3f364010960be330b88d2b9cc7cea633a11836eab0b9f08b9df9811105d3697"
+    },
+    {
+      "seed": 225,
+      "scenario": "standard",
+      "duration": 68.40000000000039,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "679d59cd3aa54e573eec46aefa9cb382429db7ac0a230d1aea4289a809e1f4c9"
+    },
+    {
+      "seed": 226,
+      "scenario": "short-contact",
+      "duration": 49.30000000000043,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "19be727e115df1df01a9689e3d1c4365f8e2cacee9a91d80483163a22a6f1bac"
+    },
+    {
+      "seed": 227,
+      "scenario": "reduced-reserves",
+      "duration": 58.40000000000056,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "00501c25a2da41dd5929b71d8da4285029f2e35f2244d1237ccaa349047fc1da"
+    },
+    {
+      "seed": 228,
+      "scenario": "leg-injuries",
+      "duration": 56.90000000000054,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "3796cf15498a933013c41ee6ab3bf287d4a435502d201aaadc9a6f6b3332ead7"
+    },
+    {
+      "seed": 229,
+      "scenario": "standard",
+      "duration": 54.3000000000005,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "9acd259db2c51fd174051d2a6314f561be3914425bce4969e5479122583a6894"
+    },
+    {
+      "seed": 230,
+      "scenario": "short-contact",
+      "duration": 65.90000000000053,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "ba691160a436c583d75982fc35d747196255a6d1244f1e35ed1705fd8fd1b43d"
+    },
+    {
+      "seed": 231,
+      "scenario": "reduced-reserves",
+      "duration": 83.39999999999954,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "01ef42d7af4d459a13139b9d738e573f66382a4280e401e7a39b0adc44e3255e"
+    },
+    {
+      "seed": 232,
+      "scenario": "leg-injuries",
+      "duration": 51.30000000000046,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "0e4e94153f84b194d6a5a469c8d49b05c8d2d056686199a6df484af4751cd161"
+    },
+    {
+      "seed": 233,
+      "scenario": "standard",
+      "duration": 73.6000000000001,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 5
+      },
+      "digest": "e217699c1b13e13cacf17338fe6707aac268a5063fce2ce76979209d255ee9bf"
+    },
+    {
+      "seed": 234,
+      "scenario": "short-contact",
+      "duration": 68.1000000000004,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "be40b122f460fe7b4c6eb675d420fef62bf70ee97d552d9c07107afae7ed025a"
+    },
+    {
+      "seed": 235,
+      "scenario": "reduced-reserves",
+      "duration": 80.4999999999997,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "130857fdfa05eb8d296c5d0e2cde87dd7e515e6017f870a948b1209be3feb5e1"
+    },
+    {
+      "seed": 236,
+      "scenario": "leg-injuries",
+      "duration": 113.19999999999784,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 9
+      },
+      "digest": "b78304da1f5a5a0d6d6f8b42fdd098b4daf76c32187605f5f248b025d20893ba"
+    },
+    {
+      "seed": 237,
+      "scenario": "standard",
+      "duration": 111.69999999999793,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "a3e52ce28990944b899942151200d2459b25fa68f4187dad7eec43f51bc36aa9"
+    },
+    {
+      "seed": 238,
+      "scenario": "short-contact",
+      "duration": 76.09999999999995,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "3cbea041a4c45d4ec7149eac6e51fff0f67c3d295cf5e6275b8f92d518212d7e"
+    },
+    {
+      "seed": 239,
+      "scenario": "reduced-reserves",
+      "duration": 55.200000000000514,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "4d11d4b27de1a57ea1fbab1c08e7e7d43deb08471266799cd80a3d6e2ab40d14"
+    },
+    {
+      "seed": 240,
+      "scenario": "leg-injuries",
+      "duration": 81.19999999999966,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 5,
+        "No net movement progress": 1
+      },
+      "digest": "f819f18c4986d63c3d9cb4aae919a7f38b23eec6a2696f116cef7f53117b6003"
+    },
+    {
+      "seed": 241,
+      "scenario": "standard",
+      "duration": 72.10000000000018,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "01038bd740fef3439ec3217bed3119e91d3209c937b63f61c40222f95bfe408f"
+    },
+    {
+      "seed": 242,
+      "scenario": "short-contact",
+      "duration": 63.40000000000063,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 3
+      },
+      "digest": "6408223be537924af3350777dbb52af32877ce63543a82b4b9b63114d8d8a258"
+    },
+    {
+      "seed": 243,
+      "scenario": "reduced-reserves",
+      "duration": 72.20000000000017,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 1
+      },
+      "digest": "10f156aff61cbb42aec167f6389f37391866f8f1249c27d5651add36b1bf4599"
+    },
+    {
+      "seed": 244,
+      "scenario": "leg-injuries",
+      "duration": 128.79999999999697,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 12
+      },
+      "digest": "e7f086e49119029c97a27f8558b4e35f3c545d64bc9c296b8d54f398acb7d34f"
+    },
+    {
+      "seed": 245,
+      "scenario": "standard",
+      "duration": 36.60000000000025,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "536c048fcb3290dace55cf10a451af877c606d3f55687e5c46c037ce6760c416"
+    },
+    {
+      "seed": 246,
+      "scenario": "short-contact",
+      "duration": 52.80000000000048,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "06106eeac1f52393af6eee67371d6597f5cb16d632bc7cc761b950fbb7c7657f"
+    },
+    {
+      "seed": 247,
+      "scenario": "reduced-reserves",
+      "duration": 42.70000000000034,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "b84a796a727c7efd6698842e5712322b22f9c526565aa906d952408e8628215c"
+    },
+    {
+      "seed": 248,
+      "scenario": "leg-injuries",
+      "duration": 64.40000000000062,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "1065f6c787c8d6c839be9ab1d480f4982a92d76ad005f14310aea92012a5fba8"
+    },
+    {
+      "seed": 249,
+      "scenario": "standard",
+      "duration": 38.60000000000028,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "bebfb07947a3cfedf09e2439762599353451c17da39872a02026c668317d9f5e"
+    },
+    {
+      "seed": 250,
+      "scenario": "short-contact",
+      "duration": 55.40000000000052,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "78e24034c627f76880f42028641c69488c3db1ad3d564dbe5ea297c1f3799789"
+    },
+    {
+      "seed": 251,
+      "scenario": "reduced-reserves",
+      "duration": 54.90000000000051,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "ce40ce58725e4fab2d48a10cbbf3238c42baac1228359a4224564c4eeb81bddf"
+    },
+    {
+      "seed": 252,
+      "scenario": "leg-injuries",
+      "duration": 46.40000000000039,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "5cf67917a2137fb4adf7de665ba2ef85d97d4cbc06d27402ea60a081545cc83e"
+    },
+    {
+      "seed": 253,
+      "scenario": "standard",
+      "duration": 124.09999999999722,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "313bd175109d43f953444704ee89df9074087d0bb990c4728ff38d09d92e3a39"
+    },
+    {
+      "seed": 254,
+      "scenario": "short-contact",
+      "duration": 68.00000000000041,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "2f9276eb5094994a3e48d801f1fd38cf99f87ba7ea58dc414d0d9e5d52087366"
+    },
+    {
+      "seed": 255,
+      "scenario": "reduced-reserves",
+      "duration": 50.300000000000445,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "23318e8f8726676e9dcd01564a1ef615a8e88fcc98e129dd43a4c7af4c065c85"
+    },
+    {
+      "seed": 256,
+      "scenario": "leg-injuries",
+      "duration": 71.30000000000022,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 2
+      },
+      "digest": "123ef374adea7111d3fa789baf7a472e392c886f17fd4a757cafb836813d7baa"
+    },
+    {
+      "seed": 257,
+      "scenario": "standard",
+      "duration": 71.50000000000021,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 4
+      },
+      "digest": "60e1ea6e6ad415c6112a58378f26c602c1f1b31823d7a6f43b709ee65ce6ef88"
+    },
+    {
+      "seed": 258,
+      "scenario": "short-contact",
+      "duration": 111.19999999999796,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "e30a400decebd78bbb4f0bf794f052d151c08e39b61ea6cf85b48c7355b0a837"
+    },
+    {
+      "seed": 259,
+      "scenario": "reduced-reserves",
+      "duration": 67.00000000000047,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "b1f6e76117d9f4eab52da0b234c0838f16b7354d7cde479b6d130110472cd871"
+    },
+    {
+      "seed": 260,
+      "scenario": "leg-injuries",
+      "duration": 123.69999999999725,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 4,
+        "No net movement progress": 2
+      },
+      "digest": "f083b8a1e62c7f6f518189518b404c81ea59568b6e43972ff90a8341679463b1"
+    },
+    {
+      "seed": 261,
+      "scenario": "standard",
+      "duration": 43.50000000000035,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "23d828cce5469fc6a3c4a9be8f8d7faf68956a32d608422d35f2dec879ba634b"
+    },
+    {
+      "seed": 262,
+      "scenario": "short-contact",
+      "duration": 104.89999999999831,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "No net movement progress": 1,
+        "Soldier congestion": 2
+      },
+      "digest": "2d119b55671ae6084dbfc11c175a92493d85bc1d9b192e394e5e92c1bdcebdc2"
+    },
+    {
+      "seed": 263,
+      "scenario": "reduced-reserves",
+      "duration": 73.10000000000012,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "ff7cb67ca8b2991e73dd650743f070106b5984c76afb0cdcaec7c5077af00406"
+    },
+    {
+      "seed": 264,
+      "scenario": "leg-injuries",
+      "duration": 95.99999999999882,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 6,
+        "No net movement progress": 3
+      },
+      "digest": "cb1f878cad250a66ea65eb5f5684d02e8d35c5915e6986cc2fa9e8ff811ff361"
+    },
+    {
+      "seed": 265,
+      "scenario": "standard",
+      "duration": 53.50000000000049,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "15e31b54e98d5af1bdef03ddc7b369efbc06f6d9a99adf5f711eafd1b1ca951a"
+    },
+    {
+      "seed": 266,
+      "scenario": "short-contact",
+      "duration": 121.0999999999974,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "7a2a2dcdfa9cb0c13b16991afb95ff42c5fdc088c6f9a442f6f6de74d489215f"
+    },
+    {
+      "seed": 267,
+      "scenario": "reduced-reserves",
+      "duration": 61.500000000000604,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "5c831849f97ef7815ce60b0ecb3d982c144468bc60db035209d4d4ec1ee382ed"
+    },
+    {
+      "seed": 268,
+      "scenario": "leg-injuries",
+      "duration": 58.30000000000056,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "67d0c5328a0c69791bc122bac8649d57662dce982df54c429d351269dcbb06df"
+    },
+    {
+      "seed": 269,
+      "scenario": "standard",
+      "duration": 81.69999999999963,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "fbc12b178a17c9d323657b356ec16ef51faec228a5142b7dcd51c248f2b37778"
+    },
+    {
+      "seed": 270,
+      "scenario": "short-contact",
+      "duration": 40.1000000000003,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "bebda993c33b40e9b789778131ce1898d7706da41efb09614581bbd266d3b2e0"
+    },
+    {
+      "seed": 271,
+      "scenario": "reduced-reserves",
+      "duration": 60.70000000000059,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "f34ea78f9d036f6c086ca32da20b9b1e65b7f2835a75dcf3de6524c48aa065f3"
+    },
+    {
+      "seed": 272,
+      "scenario": "leg-injuries",
+      "duration": 68.60000000000038,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 2,
+        "No net movement progress": 1
+      },
+      "digest": "6b95ebe6aa43d1d8c201a22c5aa9cc7a77f5ed456ee142fb50f0658e20e9b9fd"
+    },
+    {
+      "seed": 273,
+      "scenario": "standard",
+      "duration": 65.00000000000058,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1,
+        "No net movement progress": 1
+      },
+      "digest": "d18d02e686aeed5644f070987a265063fd2527f6a45ca60ec08cc9c59ebf18e8"
+    },
+    {
+      "seed": 274,
+      "scenario": "short-contact",
+      "duration": 69.50000000000033,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "f17014a357f24ba3773c257668c5cef7e3f162a7cfc28f24e731ccd97848f458"
+    },
+    {
+      "seed": 275,
+      "scenario": "reduced-reserves",
+      "duration": 68.50000000000038,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "d3bb924888b7dbaa5d87ced1e03a3c5cc6116815cade1ae17e9f91dd7a9b89cb"
+    },
+    {
+      "seed": 276,
+      "scenario": "leg-injuries",
+      "duration": 51.50000000000046,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "a4f96fb102eae617e9faeea7a38823faf30bd62a817f79f20e3b660b3017c06e"
+    },
+    {
+      "seed": 277,
+      "scenario": "standard",
+      "duration": 55.10000000000051,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "fb77343c722fefbef66ecd6b9ddacc5f2007391bfb1715730dceab2899702501"
+    },
+    {
+      "seed": 278,
+      "scenario": "short-contact",
+      "duration": 56.20000000000053,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "1cb7d41d580714294a3959dc6dba0d5cea6fd4ccb5f4f76a4a64b83abb5c4cef"
+    },
+    {
+      "seed": 279,
+      "scenario": "reduced-reserves",
+      "duration": 102.69999999999844,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 6,
+        "No net movement progress": 1
+      },
+      "digest": "9f7f1f3964df1ba8cd902561c84cff812f398831dd4839cf4aba02c73dafccba"
+    },
+    {
+      "seed": 280,
+      "scenario": "leg-injuries",
+      "duration": 134.59999999999664,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 2,
+        "Soldier congestion": 5
+      },
+      "digest": "e61dc66363e18bbb507f4cc6d0393662b8f1c60871f6bef756255d68ba6c0e45"
+    },
+    {
+      "seed": 281,
+      "scenario": "standard",
+      "duration": 105.89999999999826,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 2
+      },
+      "digest": "1caa2f7337c9289a9169f3c9bfcdb115f20b15ef28b97e32ad7c069a8d0ec391"
+    },
+    {
+      "seed": 282,
+      "scenario": "short-contact",
+      "duration": 82.69999999999958,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "3f18b73484339fc57fde14203e80248da7632f0a65264f58c2edf2958c932bf6"
+    },
+    {
+      "seed": 283,
+      "scenario": "reduced-reserves",
+      "duration": 79.59999999999975,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 4
+      },
+      "digest": "85da5f6c1f22ce3e30b5f246609b029488a0b271acc44dea83087cd8b9f34b5f"
+    },
+    {
+      "seed": 284,
+      "scenario": "leg-injuries",
+      "duration": 62.70000000000062,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "a40a819b82fccfed1a0f8747da7018800029ebb1afd5dd21fc18d8e0f1ea242c"
+    },
+    {
+      "seed": 285,
+      "scenario": "standard",
+      "duration": 62.70000000000062,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "78477d6fc349935d432df5e789ffa2df5cbf6f7f117d1a11ef1fc373443a3df6"
+    },
+    {
+      "seed": 286,
+      "scenario": "short-contact",
+      "duration": 61.0000000000006,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "6493d6368f29f0ae8e98e7d93572e875282bd8f2f86ba08c436b83e0ff4ccd4a"
+    },
+    {
+      "seed": 287,
+      "scenario": "reduced-reserves",
+      "duration": 89.49999999999919,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3,
+        "No net movement progress": 2
+      },
+      "digest": "c20de8dfc92dbbafdaca4161b83ae6aa9e397bc5af09b052192c9980d3810148"
+    },
+    {
+      "seed": 288,
+      "scenario": "leg-injuries",
+      "duration": 90.29999999999914,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "3b807c8bbf17b73abb35896fd0556507d440662e6f896ee2e722b9bb0e88f562"
+    },
+    {
+      "seed": 289,
+      "scenario": "standard",
+      "duration": 64.40000000000062,
+      "result": "Russian infantry victory",
+      "reasons": {},
+      "digest": "9a0c0c76f0bebbdf866cf5fb6f65931a13e5200cd284cc9c11a280a8597a6ea5"
+    },
+    {
+      "seed": 290,
+      "scenario": "short-contact",
+      "duration": 55.10000000000051,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "e21d4263523f17e75e54212b759910c7ccde8c73eef59c79982dc10885c23683"
+    },
+    {
+      "seed": 291,
+      "scenario": "reduced-reserves",
+      "duration": 66.30000000000051,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "1ca73d5b7d167681e234e40603f29d1a9b87cf4918e5a70f0e9feea3042a958f"
+    },
+    {
+      "seed": 292,
+      "scenario": "leg-injuries",
+      "duration": 117.79999999999758,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 3
+      },
+      "digest": "60ee7e3308182b64f151a2d0164c7276582600a57de8e0d3b1e7871e692f6eab"
+    },
+    {
+      "seed": 293,
+      "scenario": "standard",
+      "duration": 41.70000000000032,
+      "result": "USMC victory",
+      "reasons": {
+        "No net movement progress": 1
+      },
+      "digest": "d3323e1e0680f4132748485715ecde395074c2e1fd55d17cfeea1c61ba12feb1"
+    },
+    {
+      "seed": 294,
+      "scenario": "short-contact",
+      "duration": 49.30000000000043,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "709a70c269451b25dd054688581cfbac07390f2e100271b012229e01d851a9b9"
+    },
+    {
+      "seed": 295,
+      "scenario": "reduced-reserves",
+      "duration": 49.90000000000044,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "2123eaf8659a7781cf5758f86150ed14032e9ada8d9831aac8f439baef72e31e"
+    },
+    {
+      "seed": 296,
+      "scenario": "leg-injuries",
+      "duration": 30.90000000000017,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "ba8d42d9a5f592ce676c530e2a9de128e0303d41d6bb7b445d575b6ebe981bcc"
+    },
+    {
+      "seed": 297,
+      "scenario": "standard",
+      "duration": 108.39999999999812,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "a6951624f8e009da6c9834cf0f381e9d6a9852e08982ee9630d148cd80e08fe6"
+    },
+    {
+      "seed": 298,
+      "scenario": "short-contact",
+      "duration": 62.80000000000062,
+      "result": "USMC victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "1747e507ee52bee904c4c06e7301e10c5f4f9d52a3f9ef50d05e869e4e3bacf6"
+    },
+    {
+      "seed": 299,
+      "scenario": "reduced-reserves",
+      "duration": 65.60000000000055,
+      "result": "Russian infantry victory",
+      "reasons": {
+        "Soldier congestion": 1
+      },
+      "digest": "eba562a9cd0869250ff7276734f8dabdd3c636874c996dccc79c80726e65efdf"
+    },
+    {
+      "seed": 300,
+      "scenario": "leg-injuries",
+      "duration": 49.80000000000044,
+      "result": "USMC victory",
+      "reasons": {},
+      "digest": "9e797078ca77d736f75c6818b0993205238801599b701de0ddac5bcf3b7d8242"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+--- a/src/simulation.js
++++ b/src/simulation.js
+@@ -254 +254,14 @@
+-          this.move(u, patient, dt);
++          if (this.move(u, patient, dt) === false) {
++            // Keep failures per casualty: another attempted goal must not erase
++            // the first one and create an immediate retry alternation.
++            u.failedCareRoutes = (u.failedCareRoutes ?? []).filter(
++              (f) => f.until > this.time && f.patientId !== patient.id,
++            );
++            u.failedCareRoutes.push({
++              patientId: patient.id,
++              patient: { x: patient.x, y: patient.y },
++              origin: { x: u.x, y: u.y },
++              until: this.time + 8,
++            });
++            this.squads[u.team].nextCoordination = this.time;
++          }
+--- a/src/coordination.js
++++ b/src/coordination.js
+@@ -0,0 +1 @@
++import { receivingTreatment } from "./medical.js";
+@@ -675,0 +677,8 @@
++    // Real treatment is a purposeful pause, not a failed observation route.
++    if (receivingTreatment(battle, u, dt)) {
++      a.lastMovement = battle.time;
++      a.until += dt;
++      u.assignmentPause = "receiving active treatment";
++      battle.move(u, a.target, dt);
++      return true;
++    }
+--- a/src/medical.js
++++ b/src/medical.js
+@@ -52,0 +53 @@
++  if (Math.min(...Object.values(u.health)) >= 65) return false;
+--- a/src/tactics.js
++++ b/src/tactics.js
+@@ -510 +510,13 @@
+-  if (
++  const careFailure = u.failedCareRoutes?.find(
++    (f) => f.patientId === patient.id && f.until > battle.time,
++  );
++  if (
++    careFailure &&
++    distance(u, careFailure.origin) < 1 &&
++    distance(patient, careFailure.patient) < 2
++  )
++    return false;
++  // A contextual care failure supersedes the legacy last-goal exclusion. Once
++  // its origin/target materially changes, reassess instead of shadowing recovery.
++  if (
++    !careFailure &&

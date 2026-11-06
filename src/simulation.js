@@ -1,3 +1,4 @@
+import { choosePatient, receivingTreatment } from "./medical.js";
 import { updateMount, releaseMount, mountBonus } from "./mounting.js";
 import {
   initializePresentation,
@@ -199,23 +200,8 @@ export class Battle {
         }
         continue;
       }
-      if (u.role === "Medic" && !enemy && u.suppression < 0.55) {
-        const patient = this.units
-          .filter(
-            (a) =>
-              a.team === u.team &&
-              !a.dead &&
-              a !== u &&
-              Math.min(...Object.values(a.health)) < 65,
-          )
-          .sort(
-            (a, b) =>
-              Number(a.active) - Number(b.active) || dist(u, a) - dist(u, b),
-          )
-          .find(
-            (a) =>
-              (dist(u, a) < 1.4 && sight(u, a)) || careRouteSafe(this, u, a),
-          );
+      if (u.role === "Medic" && u.suppression < 0.55) {
+        const patient = choosePatient(this, u, enemy);
         if (
           patient &&
           (!u.alert ||
@@ -223,6 +209,8 @@ export class Battle {
             u.patientId === patient.id) &&
           (dist(u, patient) < 1.4 || careRouteSafe(this, u, patient))
         ) {
+          if (u.patientId !== patient.id) u.treat = 0;
+          u.patientId = patient.id;
           u.state = "Moving to casualty";
           u.order = "Treat casualty";
           if (dist(u, patient) < 1.4 && sight(u, patient)) {
@@ -263,7 +251,20 @@ export class Battle {
             }
             continue;
           }
-          this.move(u, patient, dt);
+          if (this.move(u, patient, dt) === false) {
+            // Keep failures per casualty: another attempted goal must not erase
+            // the first one and create an immediate retry alternation.
+            u.failedCareRoutes = (u.failedCareRoutes ?? []).filter(
+              (f) => f.until > this.time && f.patientId !== patient.id,
+            );
+            u.failedCareRoutes.push({
+              patientId: patient.id,
+              patient: { x: patient.x, y: patient.y },
+              origin: { x: u.x, y: u.y },
+              until: this.time + 8,
+            });
+            this.squads[u.team].nextCoordination = this.time;
+          }
           continue;
         }
       }
@@ -357,6 +358,14 @@ export class Battle {
             ),
             ...uncertain,
           ];
+      // A stale personal cover approach must not repeatedly replace an active
+      // leader-planned recon route after direct contact is lost.
+      if (
+        !enemies.length &&
+        u.assignment?.type === "recon" &&
+        u.suppression <= 0.55
+      )
+        u.coverTarget = null;
       if (
         defensive.length &&
         (enemies.length ||
@@ -505,6 +514,9 @@ export class Battle {
     );
   }
   noteMovementFailure(u) {
+    // Give the next recovery attempt a fresh progress window.
+    u.navProgressAt = this.time;
+    u.navPosition = { x: u.x, y: u.y };
     if (!u.progress) updateProgress(this, u);
     if (u.progress && this.time - (u.lastFailureAt ?? -Infinity) > 1) {
       u.progress.failedAttempts++;
@@ -513,6 +525,14 @@ export class Battle {
   }
   move(u, goal, dt) {
     if (!u.active) return false;
+    if (receivingTreatment(this, u, dt)) {
+      u.navigation = "Receiving treatment; retain squad objective";
+      u.decisionReason =
+        "Hold for active nearby medic; immediate survival may interrupt";
+      if (!["Engaging", "Aiming", "Reloading"].includes(u.state))
+        u.state = "Receiving treatment";
+      return true;
+    }
     if (u.mount && u.mount.state !== "unsupported" && dist(u, goal) > 0.2) {
       releaseMount(this, u, "Movement objective requires unmounting");
       u.navigation = "Unmounting before movement";
@@ -522,7 +542,7 @@ export class Battle {
     if (
       this.time - (u.lastMoveCall ?? -Infinity) > 1 ||
       !u.navPosition ||
-      dist(u, u.navPosition) > 0.1
+      dist(u, u.navPosition) >= 0.5
     ) {
       u.navProgressAt = this.time;
       u.navPosition = { x: u.x, y: u.y };
@@ -564,6 +584,15 @@ export class Battle {
       u.movementBlocker = u.routeBlockedByUnits
         ? "Soldier congestion"
         : "No terrain route";
+      u.failedGoal = { ...u.target, until: this.time + 8 };
+      this.noteMovementFailure(u);
+      return false;
+    }
+    // Tiny back-and-forth steps are not net navigation progress, even if each
+    // leg is collision-free. Use the same timeout as blocked-route recovery.
+    if (this.time - u.navProgressAt > 3 && dist(u, u.target) > 0.2) {
+      u.navigation = "No net movement progress";
+      u.movementBlocker = "No net movement progress";
       u.failedGoal = { ...u.target, until: this.time + 8 };
       this.noteMovementFailure(u);
       return false;
