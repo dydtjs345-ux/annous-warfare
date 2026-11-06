@@ -1,3 +1,4 @@
+import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
 import { CombatVisuals } from "./combat-visuals.js";
@@ -392,6 +393,7 @@ class Battlefield extends Phaser.Scene {
           this.selected === d.unit,
         );
       else drawObstacle(g, d, p);
+      if(d.unit) drawReadability(g,d.unit,p,this.iso);
     }
     if (mapMode !== "expanded")
       for (const h of houses)
