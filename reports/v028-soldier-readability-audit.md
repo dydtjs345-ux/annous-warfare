@@ -76,4 +76,8 @@ AW_PLAYWRIGHT_MODULE=file:///path/to/playwright/index.mjs node scripts/mobile-v0
 - M2 `db5265c`: 한국어 검사 모델
 - M3 `167df37`: 이력 상한·중복·지식 누출 검증
 - M4 `7d23f03`: 모바일 패널 연결
-- M5: 최종 번역 보강, 360회 실행 자료, 220개 테스트와 빌드/브라우저 검증을 담은 후속 커밋
+- M5 `355dc05`: 최종 번역 보강, 360회 실행 자료, 220개 테스트와 빌드/브라우저 검증을 담은 후속 커밋
+
+## 전달
+
+검증된 구현 커밋은 `355dc05661133d6b33349de7d790da5c2e1e231f`이며 기능 브랜치에 푸시했다. PR 생성은 GitHub GraphQL `Forbidden` 응답으로 실패했다. 자동 병합하지 않았다. [준비된 PR 설명](v028-pr-description.md)을 사용해 다음 비교에서 리뷰를 열 수 있다: https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v028-soldier-readability?expand=1
