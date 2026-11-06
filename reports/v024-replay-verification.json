@@ -1,0 +1,107 @@
+[
+  {
+    "seed": 18,
+    "scenario": "short-contact",
+    "baselineDigest": "0af3469f974c27a368bc2ac757accf21da5ba79dee98635edc2ce6fb6123f850",
+    "replayDigest": "0af3469f974c27a368bc2ac757accf21da5ba79dee98635edc2ce6fb6123f850",
+    "matches": true
+  },
+  {
+    "seed": 19,
+    "scenario": "reduced-reserves",
+    "baselineDigest": "1bc0496b4eb6d4a47e56a8fe9ca2ffddb33ee2d3117ce0883da83f5ea405ffee",
+    "replayDigest": "1bc0496b4eb6d4a47e56a8fe9ca2ffddb33ee2d3117ce0883da83f5ea405ffee",
+    "matches": true
+  },
+  {
+    "seed": 29,
+    "scenario": "standard",
+    "baselineDigest": "defd473e7f0e617ae8768b4da0e30d7627dc558937b0884dd6f5d1f0b2ee1ee0",
+    "replayDigest": "defd473e7f0e617ae8768b4da0e30d7627dc558937b0884dd6f5d1f0b2ee1ee0",
+    "matches": true
+  },
+  {
+    "seed": 37,
+    "scenario": "standard",
+    "baselineDigest": "7bbd138f4fc1470a1f9ce5bf475598590283e691b51b8fd015014a0e86754e36",
+    "replayDigest": "7bbd138f4fc1470a1f9ce5bf475598590283e691b51b8fd015014a0e86754e36",
+    "matches": true
+  },
+  {
+    "seed": 78,
+    "scenario": "short-contact",
+    "baselineDigest": "1fcefe6979e679fcf25c7e5e06d99cf0368fe87506f213c52fb00afc71f90a7c",
+    "replayDigest": "1fcefe6979e679fcf25c7e5e06d99cf0368fe87506f213c52fb00afc71f90a7c",
+    "matches": true
+  },
+  {
+    "seed": 110,
+    "scenario": "short-contact",
+    "baselineDigest": "c4baf1225b9ef8aae693923e6c7c2586609ff921fee3d821925e52be8af93125",
+    "replayDigest": "c4baf1225b9ef8aae693923e6c7c2586609ff921fee3d821925e52be8af93125",
+    "matches": true
+  },
+  {
+    "seed": 125,
+    "scenario": "standard",
+    "baselineDigest": "61709182b794564aac492efc4ac755d964ce843f773e5e9b1e506fa3a7184204",
+    "replayDigest": "61709182b794564aac492efc4ac755d964ce843f773e5e9b1e506fa3a7184204",
+    "matches": true
+  },
+  {
+    "seed": 130,
+    "scenario": "short-contact",
+    "baselineDigest": "b234b9c0a454e5be2b81cbae7cad5cf0e7de410c306e42f8904684f281dfdaf8",
+    "replayDigest": "b234b9c0a454e5be2b81cbae7cad5cf0e7de410c306e42f8904684f281dfdaf8",
+    "matches": true
+  },
+  {
+    "seed": 136,
+    "scenario": "leg-injuries",
+    "baselineDigest": "4c20e5361657d243b8f16022eb9a7f57888ec30a58f855e243f3a6f9f77482cc",
+    "replayDigest": "4c20e5361657d243b8f16022eb9a7f57888ec30a58f855e243f3a6f9f77482cc",
+    "matches": true
+  },
+  {
+    "seed": 140,
+    "scenario": "leg-injuries",
+    "baselineDigest": "b9b6454c1ad425bbe10f20deff634e40cb1d253ebf0f169a4a18bcb7b0161934",
+    "replayDigest": "b9b6454c1ad425bbe10f20deff634e40cb1d253ebf0f169a4a18bcb7b0161934",
+    "matches": true
+  },
+  {
+    "seed": 147,
+    "scenario": "reduced-reserves",
+    "baselineDigest": "eec902443b9368a2daa3674b11d8516f33b7f643a24d977931d28aa7e52b577d",
+    "replayDigest": "eec902443b9368a2daa3674b11d8516f33b7f643a24d977931d28aa7e52b577d",
+    "matches": true
+  },
+  {
+    "seed": 199,
+    "scenario": "reduced-reserves",
+    "baselineDigest": "e4a5d6fb4f263787bb078e60f68dd194b27bb0a2569533a5b94e20b925120496",
+    "replayDigest": "e4a5d6fb4f263787bb078e60f68dd194b27bb0a2569533a5b94e20b925120496",
+    "matches": true
+  },
+  {
+    "seed": 239,
+    "scenario": "reduced-reserves",
+    "baselineDigest": "b0d95e3d391b3665fe194a3b7adcac2884d18640c59851a36db205dec8a318d0",
+    "replayDigest": "b0d95e3d391b3665fe194a3b7adcac2884d18640c59851a36db205dec8a318d0",
+    "matches": true
+  },
+  {
+    "seed": 293,
+    "scenario": "standard",
+    "baselineDigest": "67b8443a76e8121bf165fa812ced398d40d041f56eb602bf4f6e0281a379061e",
+    "replayDigest": "67b8443a76e8121bf165fa812ced398d40d041f56eb602bf4f6e0281a379061e",
+    "matches": true
+  },
+  {
+    "seed": 298,
+    "scenario": "short-contact",
+    "baselineDigest": "f85fc05437561cec6bd684b6905e2aacdb21d5d47e7b20718c4704910811ae44",
+    "replayDigest": "f85fc05437561cec6bd684b6905e2aacdb21d5d47e7b20718c4704910811ae44",
+    "matches": true
+  }
+]

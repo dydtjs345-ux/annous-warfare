@@ -1,3 +1,4 @@
+import { choosePatient, receivingTreatment } from "./medical.js";
 import { updateMount, releaseMount, mountBonus } from "./mounting.js";
 import {
   initializePresentation,
@@ -199,23 +200,8 @@ export class Battle {
         }
         continue;
       }
-      if (u.role === "Medic" && !enemy && u.suppression < 0.55) {
-        const patient = this.units
-          .filter(
-            (a) =>
-              a.team === u.team &&
-              !a.dead &&
-              a !== u &&
-              Math.min(...Object.values(a.health)) < 65,
-          )
-          .sort(
-            (a, b) =>
-              Number(a.active) - Number(b.active) || dist(u, a) - dist(u, b),
-          )
-          .find(
-            (a) =>
-              (dist(u, a) < 1.4 && sight(u, a)) || careRouteSafe(this, u, a),
-          );
+      if (u.role === "Medic" && u.suppression < 0.55) {
+        const patient = choosePatient(this, u, enemy);
         if (
           patient &&
           (!u.alert ||
@@ -223,6 +209,8 @@ export class Battle {
             u.patientId === patient.id) &&
           (dist(u, patient) < 1.4 || careRouteSafe(this, u, patient))
         ) {
+          if (u.patientId !== patient.id) u.treat = 0;
+          u.patientId = patient.id;
           u.state = "Moving to casualty";
           u.order = "Treat casualty";
           if (dist(u, patient) < 1.4 && sight(u, patient)) {
@@ -513,6 +501,14 @@ export class Battle {
   }
   move(u, goal, dt) {
     if (!u.active) return false;
+    if (receivingTreatment(this, u, dt)) {
+      u.navigation = "Receiving treatment; retain squad objective";
+      u.decisionReason =
+        "Hold for active nearby medic; immediate survival may interrupt";
+      if (!["Engaging", "Aiming", "Reloading"].includes(u.state))
+        u.state = "Receiving treatment";
+      return true;
+    }
     if (u.mount && u.mount.state !== "unsupported" && dist(u, goal) > 0.2) {
       releaseMount(this, u, "Movement objective requires unmounting");
       u.navigation = "Unmounting before movement";

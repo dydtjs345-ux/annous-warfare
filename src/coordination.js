@@ -396,6 +396,14 @@ export function coordinateSquad(battle, team) {
     u.assignment = a;
     a.commanderId = squad.commanderId;
     if (a.type === "recon") {
+      if (u.role === "Medic" && actionableCare(battle, u)) {
+        squad.assignments.delete(id);
+        u.assignment = null;
+        u.coverTarget = null;
+        u.alternativeRejection =
+          "Leader releases medic recon for actionable casualty care";
+        continue;
+      }
       if (
         a.contactId != null &&
         !known.some((c) => c.enemyId === a.contactId)

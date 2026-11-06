@@ -1,0 +1,152 @@
+[
+  {
+    "seed": 125,
+    "scenario": "standard",
+    "selectedFor": "duration",
+    "value": 168.4999999999947,
+    "duration": 168.4999999999947,
+    "loops": 1,
+    "passive": 329.9999999999997,
+    "medicInterruptions": 9
+  },
+  {
+    "seed": 293,
+    "scenario": "standard",
+    "selectedFor": "duration",
+    "value": 165.89999999999486,
+    "duration": 165.89999999999486,
+    "loops": 5,
+    "passive": 312.7000000000006,
+    "medicInterruptions": 15
+  },
+  {
+    "seed": 130,
+    "scenario": "short-contact",
+    "selectedFor": "duration",
+    "value": 165.49999999999488,
+    "duration": 165.49999999999488,
+    "loops": 0,
+    "passive": 250.50000000000162,
+    "medicInterruptions": 11
+  },
+  {
+    "seed": 18,
+    "scenario": "short-contact",
+    "selectedFor": "duration",
+    "value": 159.6999999999952,
+    "duration": 159.6999999999952,
+    "loops": 1,
+    "passive": 306.6000000000017,
+    "medicInterruptions": 27
+  },
+  {
+    "seed": 140,
+    "scenario": "leg-injuries",
+    "selectedFor": "duration",
+    "value": 156.09999999999542,
+    "duration": 156.09999999999542,
+    "loops": 0,
+    "passive": 224.79999999999941,
+    "medicInterruptions": 12
+  },
+  {
+    "seed": 110,
+    "scenario": "short-contact",
+    "selectedFor": "cover-loops",
+    "value": 21,
+    "duration": 121.59999999999737,
+    "loops": 21,
+    "passive": 302.40000000000026,
+    "medicInterruptions": 12
+  },
+  {
+    "seed": 147,
+    "scenario": "reduced-reserves",
+    "selectedFor": "cover-loops",
+    "value": 16,
+    "duration": 37.10000000000026,
+    "loops": 16,
+    "passive": 45.59999999999998,
+    "medicInterruptions": 6
+  },
+  {
+    "seed": 29,
+    "scenario": "standard",
+    "selectedFor": "cover-loops",
+    "value": 15,
+    "duration": 121.49999999999737,
+    "loops": 15,
+    "passive": 181.10000000000085,
+    "medicInterruptions": 23
+  },
+  {
+    "seed": 78,
+    "scenario": "short-contact",
+    "selectedFor": "cover-loops",
+    "value": 15,
+    "duration": 119.59999999999748,
+    "loops": 15,
+    "passive": 266.6000000000005,
+    "medicInterruptions": 12
+  },
+  {
+    "seed": 37,
+    "scenario": "standard",
+    "selectedFor": "cover-loops",
+    "value": 14,
+    "duration": 68.3000000000004,
+    "loops": 14,
+    "passive": 130.10000000000053,
+    "medicInterruptions": 10
+  },
+  {
+    "seed": 136,
+    "scenario": "leg-injuries",
+    "selectedFor": "medical-interruptions",
+    "value": 47,
+    "duration": 110.399999999998,
+    "loops": 2,
+    "passive": 234.0000000000012,
+    "medicInterruptions": 47
+  },
+  {
+    "seed": 19,
+    "scenario": "reduced-reserves",
+    "selectedFor": "medical-interruptions",
+    "value": 33,
+    "duration": 74.80000000000003,
+    "loops": 0,
+    "passive": 115.60000000000011,
+    "medicInterruptions": 33
+  },
+  {
+    "seed": 298,
+    "scenario": "short-contact",
+    "selectedFor": "medical-interruptions",
+    "value": 33,
+    "duration": 59.70000000000058,
+    "loops": 0,
+    "passive": 135.80000000000032,
+    "medicInterruptions": 33
+  },
+  {
+    "seed": 199,
+    "scenario": "reduced-reserves",
+    "selectedFor": "medical-interruptions",
+    "value": 31,
+    "duration": 110.399999999998,
+    "loops": 3,
+    "passive": 226.0000000000007,
+    "medicInterruptions": 31
+  },
+  {
+    "seed": 239,
+    "scenario": "reduced-reserves",
+    "selectedFor": "medical-interruptions",
+    "value": 31,
+    "duration": 46.800000000000395,
+    "loops": 1,
+    "passive": 84.0000000000002,
+    "medicInterruptions": 31
+  }
+]

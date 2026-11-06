@@ -1,4 +1,4 @@
-# Autonomous Warfare v0.2.3.1
+# Autonomous Warfare v0.2.4
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
@@ -343,3 +343,30 @@ v0.2.3.1 header. Physical Safari performance is unverified: test zoomed gun dire
 medical/mount animation synchronization, late injured survivors, touch/scrolling,
 both orientations and all speeds. Detailed steps and reproduction commands are in
 the audit report. Feature branches do not deploy production Pages automatically.
+
+
+## v0.2.4 cover and medic stabilization
+
+Based on merged v0.2.3.1 (`6f152cb`). Completed 300 recorded baseline and 300 final
+paired cases, with 15 independently replayed stress cases and an additional revised
+300-case trial. [Full audit and limitations](reports/v024-audit.md) includes exact
+seeds/configurations, per-soldier/per-role data, before/after tables and adverse cases.
+
+Cover journeys retain useful destinations instead of re-entering the movement budget
+or switching for marginal alternatives. Unsafe destinations can still be replaced.
+A receiving patient can briefly pause travel while actual nearby treatment proceeds,
+retain the squad assignment, and continue valid fire; exposed danger interrupts the
+hold. Medics keep active safe care stable, reassess distant approaches, and request
+leader reassignment from recon. Protected treatment under confirmed contact uses
+existing LOS/reach/route checks; no damage immunity or faster healing exists.
+
+Measured gains are fewer cycle flags, fewer interrupted treatments and more completed
+care. Tail duration, passive share and navigation failures worsen; contact and exposure
+results are mixed. This is not a claim of uniformly improved tactics. Procedural
+humanoid visuals and combat formulas remain unchanged.
+
+`npm test` runs 123 tests; `npm run audit:cover-medic -- . /tmp/audit.json 300` repeats
+the final cases. Detailed replay and comparison commands are in the report. The existing
+Pages URL deploys after review/merge and successful Actions completion. Physical Safari
+checks should cover medical holds/return to assignments, urgent cover moves, unsafe
+rescue refusal, late-game waits, all speeds, gestures and both screen orientations.
