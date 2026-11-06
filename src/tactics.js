@@ -3,6 +3,7 @@ import {
   squadThreats,
   uncertainThreats,
 } from "./intelligence.js";
+import { mountBonus } from "./mounting.js";
 import { blocked, cover, sight, path } from "./world.js";
 
 export const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
@@ -33,7 +34,9 @@ export function incomingFire(battle, shooter, target) {
       u.suppression = Math.min(
         1,
         u.suppression +
-          (shooter.role === "LMG" ? 0.2 : 0.12) * (1 - 0.5 * cover(u, shooter)),
+          (shooter.role === "LMG" ? 0.2 : 0.12) *
+            mountBonus(shooter, "suppression") *
+            (1 - 0.5 * cover(u, shooter)),
       );
     }
   }
@@ -76,7 +79,7 @@ export function positionScore(u, p, threats) {
   );
 }
 
-// Bounded local search; only the best five candidates incur a BFS. Hysteresis
+// Bounded local search; only the best ten candidates incur a BFS. Hysteresis
 // compares a candidate to the current position, so good cover has no movement timer.
 // Tactical destination selection uses friendly locations and reported snapshots,
 // while the physical movement solver still prevents all actual collisions.
@@ -92,8 +95,19 @@ export function planningCellFree(battle, u, p) {
     (c) => c.time === battle.time && distance(c, p) < 0.6,
   );
 }
+export function protectionAt(p, threats) {
+  return threats.length
+    ? Math.min(...threats.map((t) => (sight(p, t) ? cover(p, t) : 0.85)))
+    : 0;
+}
 export function chooseCover(battle, u, threats) {
+  u.coverEvaluation ??= {};
+  u.coverEvaluation.best = null;
   const current = positionScore(u, u, threats),
+    protection = protectionAt(u, threats),
+    firing = threats.some(
+      (t) => !t.approximate && sight(u, t) && distance(u, t) <= u.range,
+    ),
     candidates = [];
   for (let dx = -3; dx <= 3; dx++)
     for (let dy = -3; dy <= 3; dy++) {
@@ -116,17 +130,34 @@ export function chooseCover(battle, u, threats) {
         )
       )
         continue;
+      // Keep an effective firing lane unless pressure genuinely warrants shelter.
+      if (protectionAt(p, threats) < protection + 0.27) continue;
+      if (
+        firing &&
+        u.suppression < 0.7 &&
+        !threats.some(
+          (t) => !t.approximate && sight(p, t) && distance(p, t) <= u.range,
+        )
+      )
+        continue;
       const score = positionScore(u, p, threats);
       if (score > current + 0.65) candidates.push({ ...p, score });
     }
   candidates.sort((a, b) => b.score - a.score);
-  for (const p of candidates.slice(0, 5)) {
+  for (const p of candidates.slice(0, 10)) {
     const route = path(u, p);
     if (!route.length || route.length > 8) continue;
     const risk = routeRisk(route, threats);
     if (u.suppression > 0.55 && risk.longest > 2) continue;
-    if (p.score - risk.average * 0.6 > current + 0.65)
+    if (p.score - risk.average * 0.6 > current + 0.65) {
+      u.coverEvaluation.best = {
+        x: p.x,
+        y: p.y,
+        score: p.score,
+        protection: protectionAt(p, threats),
+      };
       return { x: p.x, y: p.y };
+    }
   }
   return null;
 }
@@ -272,49 +303,113 @@ export function updateSquadTactics(battle, team) {
 }
 
 export function localCover(battle, u, threats, dt) {
-  if (u.alert && battle.time < u.alert.readyAt) return false;
-  if (battle.time >= u.nextAssessment) {
-    u.nextAssessment = battle.time + 2 + (u.id % 6) * 0.15;
-    const moved =
-      u.assessedThreat && distance(u.assessedThreat, threats[0]) > 2;
-    if (
-      !u.coverTarget ||
-      moved ||
-      distance(u, u.coverTarget) < 0.2 ||
-      battle.time > u.coverUntil
-    ) {
-      const squad = battle.squads[u.team];
-      const others = battle.units.filter(
-        (a) =>
-          a !== u &&
-          a.team === u.team &&
-          a.active &&
-          a.coverTarget &&
-          distance(a, a.coverTarget) > 0.2,
-      ).length;
-      const maneuvering =
-        squad.maneuver && squad.maneuver.until > battle.time ? 1 : 0;
-      const committed =
-        battle.time < (u.positionUntil ?? 0) && !moved && u.suppression < 0.65;
-      u.coverTarget =
-        !committed && others + maneuvering < 2
-          ? chooseCover(battle, u, threats)
+  if (!threats.length) return false;
+  const protection = protectionAt(u, threats),
+    risk = exposure(u, threats);
+  const focus = threats.reduce(
+    (a, t) => (exposure(u, [t]) > exposure(u, [a]) ? t : a),
+    threats[0],
+  );
+  const direction = Math.atan2(focus.y - u.y, focus.x - u.x);
+  const changed =
+    u.coverDirection != null &&
+    Math.abs(
+      Math.atan2(
+        Math.sin(direction - u.coverDirection),
+        Math.cos(direction - u.coverDirection),
+      ),
+    ) > 0.6;
+  const first = u.coverDirection == null;
+  const urgent = protection < 0.28 && u.suppression > 0.65;
+  const d = (u.coverEvaluation ??= {});
+  Object.assign(d, {
+    protection,
+    exposure: risk,
+    score: positionScore(u, u, threats),
+  });
+  if (first || changed || (urgent && !u.coverUrgent))
+    u.nextAssessment = battle.time;
+  u.coverUrgent = urgent;
+  if (
+    battle.time >= u.nextAssessment &&
+    (!u.coverTarget || changed || battle.time > u.coverUntil)
+  ) {
+    d.evaluatedAt = battle.time;
+    u.nextAssessment = battle.time + 1.5 + (u.id % 6) * 0.12;
+    u.coverDirection = direction;
+    const squad = battle.squads[u.team];
+    const moving = new Set(
+      battle.units
+        .filter(
+          (a) =>
+            a !== u &&
+            a.team === u.team &&
+            a.active &&
+            a.coverTarget &&
+            distance(a, a.coverTarget) > 0.2,
+        )
+        .map((a) => a.id),
+    );
+    if (squad.maneuver?.until > battle.time && squad.maneuver.unitId !== u.id)
+      moving.add(squad.maneuver.unitId);
+    for (const a of squad.assignments?.values() ?? [])
+      if (
+        a.unitId !== u.id &&
+        a.type === "recon" &&
+        !a.failed &&
+        distance(battle.units[a.unitId], a.target) > 0.5
+      )
+        moving.add(a.unitId);
+    const committed =
+      battle.time < (u.positionUntil ?? 0) &&
+      protection >= 0.28 &&
+      !changed &&
+      !urgent;
+    // Assess before reporting a coordination/commitment blocker: diagnostics can
+    // distinguish an unavailable useful candidate from no improvement at all.
+    const candidate = chooseCover(battle, u, threats);
+    const blockedBy =
+      candidate && committed
+        ? "position commitment"
+        : candidate && moving.size >= 2 && !urgent
+          ? "squad fire-and-movement budget"
           : null;
-      u.coverUntil = battle.time + 6;
-      u.assessedThreat = { ...threats[0] };
+    d.blockedBy = blockedBy;
+    u.coverTarget = blockedBy ? null : candidate;
+    d.reason = blockedBy
+      ? "Preserve firing support; defer relocation"
+      : candidate
+        ? "Meaningful directional protection gain; reachable route"
+        : protection >= 0.28
+          ? "Current protection adequate; no meaningful firing-position improvement"
+          : "No reachable meaningful improvement; retain combat initiative";
+    u.coverUntil = battle.time + 8;
+    if (candidate && !blockedBy) {
+      u.coverRelocationStarted = battle.time;
+      u.coverEmergency = urgent;
+      if (urgent)
+        d.reason =
+          "Urgent directional protection gain overrides movement budget";
     }
   }
   if (!u.coverTarget) return false;
   if (distance(u, u.coverTarget) < 0.2) {
     u.coverTarget = null;
-    u.positionUntil = battle.time + 6;
+    u.positionUntil = battle.time + 5;
+    u.nextAssessment = battle.time + 1;
+    d.reason = "Reached protected firing position";
+    d.blockedBy = null;
+    u.coverRelocations = (u.coverRelocations ?? 0) + 1;
     return false;
   }
   u.state = "Seeking cover";
-  u.order = "Improve position";
+  u.order = "Improve protected firing position";
+  u.decisionReason = d.reason;
   if (battle.move(u, u.coverTarget, dt) === false) {
     u.coverTarget = null;
     u.nextAssessment = battle.time + 1;
+    d.blockedBy = "navigation failure";
+    d.reason = "Cover route failed; reject destination and retain combat";
     return false;
   }
   return true;

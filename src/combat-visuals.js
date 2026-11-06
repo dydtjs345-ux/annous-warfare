@@ -1,9 +1,20 @@
 // Render-only clocks/effects. Movement phase comes from distance actually moved;
 // reload/treatment phases come from real counters, never invented action timers.
 const EFFECT_TIMERS = ["shot", "hit", "heal", "complete", "fall"];
-const NO_COMBAT = new Set(["dead", "incapacitated", "treating", "reloading"]);
+const NO_COMBAT = new Set([
+  "dead",
+  "incapacitated",
+  "treating",
+  "reloading",
+  "deploying",
+  "unmounting",
+]);
 const CROUCHED = new Set([
   "treating",
+  "deploying",
+  "mounted",
+  "mountedFiring",
+  "unmounting",
   "reloading",
   "suppressed",
   "holdingCover",
@@ -29,6 +40,19 @@ export function visualState(battle, u, fx, out = {}) {
       out.injured = true;
       break;
     }
+  out.mountState = u.active ? (u.mount?.state ?? "unsupported") : "unsupported";
+  out.mountProgress = ["deploying", "unmounting"].includes(out.mountState)
+    ? Math.min(
+        1,
+        Math.max(
+          0,
+          (battle.time - u.mount.since) /
+            Math.max(0.001, u.mount.readyAt - u.mount.since),
+        ),
+      )
+    : out.mountState === "mounted"
+      ? 1
+      : 0;
   out.reloadProgress = p.reloadProgress;
   out.treatmentProgress = u.treat ?? 0;
   out.stride = p.traveled * Math.PI * 2;
@@ -38,7 +62,12 @@ export function visualState(battle, u, fx, out = {}) {
   if (u.dead) out.pose = "dead";
   else if (!u.active) out.pose = "incapacitated";
   else if (p.treating) out.pose = "treating";
+  else if (out.mountState === "deploying" || out.mountState === "unmounting")
+    out.pose = out.mountState;
   else if (p.reloading) out.pose = "reloading";
+  else if (out.mountState === "mounted")
+    out.pose =
+      fx.shot > 0 && p.lastShotAt != null ? "mountedFiring" : "mounted";
   else if (out.moving)
     out.pose =
       u.state === "Seeking cover"
@@ -241,7 +270,9 @@ export class CombatVisuals {
       dx /= length;
       dy /= length;
       const handY = p.y + (crouch ? -11 : prone ? -6 : -14) + bob;
-      const recoil = m.flash ? Math.min(2, fx.shot * 24) : 0;
+      const recoil = m.flash
+        ? Math.min(m.mountState === "mounted" ? 1 : 2, fx.shot * 24)
+        : 0;
       const barrel = u.role === "LMG" ? 17 : 13;
       if (m.pose === "treating") {
         const wave = Math.sin(m.treatmentProgress * Math.PI * 4) * 2;
@@ -284,6 +315,31 @@ export class CombatVisuals {
         } else {
           g.fillStyle(0xe1c6a1);
           g.fillRect(p.x + dx * 4 - 2, handY + dy * 4 - 1, 4, 3);
+        }
+        if (m.mountState !== "unsupported") {
+          // Bipod and progress bar consume authoritative mount state only.
+          const spread =
+            m.mountState === "mounted"
+              ? 4
+              : 1 +
+                3 *
+                  (m.pose === "unmounting"
+                    ? 1 - m.mountProgress
+                    : m.mountProgress);
+          const bx = p.x + dx * 12,
+            by = handY + dy * 12;
+          g.lineStyle(1, 0xd8ce94, 0.95);
+          g.lineBetween(bx, by, bx - spread, by + 5);
+          g.lineBetween(bx, by, bx + spread, by + 5);
+          if (m.pose === "deploying" || m.pose === "unmounting") {
+            g.lineStyle(2, m.pose === "deploying" ? 0xd8ce94 : 0x9eb7c7);
+            g.lineBetween(
+              p.x - 6,
+              p.y + top - 4,
+              p.x - 6 + 12 * m.mountProgress,
+              p.y + top - 4,
+            );
+          }
         }
         if (m.flash) {
           const x = p.x + dx * barrel,

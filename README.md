@@ -1,4 +1,4 @@
-# Autonomous Warfare v0.2.2
+# Autonomous Warfare v0.2.3
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
@@ -210,3 +210,108 @@ After review/merge and successful Pages deployment, open https://dydtjs345-ux.gi
 5. Scroll through activity totals. Movement without observation should be preparation rather than automatically useful contribution; all seven primary categories should partition active time. Try background/foreground and long matches for performance and stale effects.
 
 Known limits: these are procedural placeholder poses, not a full anatomical sprite set. Range, damage, healing, suppression and AI remain the same. Some cues are subtle at overview zoom. Desktop Chromium mobile emulation and bounded-memory tests do not prove physical iPhone Safari frame rate, battery use or behavior after OS suspension; those require device testing.
+
+
+## v0.2.3: cover intelligence and supported LMG fire
+
+This version retains the existing squad coordinator, contact snapshots, navigation,
+injuries, treatment and spectator controls. The pre-change source audit is in
+[reports/v023-audit.md](reports/v023-audit.md). Results, limitations and the complete
+changed-file inventory are in [reports/v023-validation.md](reports/v023-validation.md).
+
+Cover assessment now occurs at first direct contact, a significant change in the
+most exposed known threat bearing, and periodically thereafter. Local defense is
+checked before squad maneuvers and coordination waits; reloading soldiers can also
+make a defensive move without changing the reload timer. Positions are evaluated
+against known threat directions and actual static LOS, not proximity to a wall.
+
+A nearby candidate must gain at least 0.27 directional protection and exceed the
+existing score hysteresis by 0.65 after route cost. A currently effective shooter
+normally keeps an in-range firing lane; heavy pressure can justify breaking LOS.
+The search remains bounded (radius three cells, ten candidate paths, at most eight
+path steps). Occupied, reserved and recently failed goals are rejected. Protected
+positions retain a five-second commitment, while an exposed position or changed
+threat bearing can be reassessed. Valid shots still occur before defensive movement;
+soldiers without better cover keep fighting.
+
+Cover moves, recon assignments and a live flank share the existing two-person
+movement budget. This is a limit on new routine relocations, not a fixed formation
+or guarantee of two shooters. Severe exposed pressure can override it, and a final
+arrival leg can release its slot within the same fixed step. Medics retain treatment
+priority. Routine shared-contact cover evaluation does not replace active recon;
+urgent self-preservation can. Current contact confidence and observed-empty positions
+still constrain defensive use of radio intelligence.
+
+Only **explicitly tagged low walls** can support an LMG. Fences and solid house walls
+are excluded because there is no general obstacle-height model. The gunner must
+already occupy a walkable position 0.55–1.35 tiles behind an aligned low wall, with
+a directly observed, in-range enemy and clear LOS. No new obstacle geometry or
+firing-through-walls exception is introduced. Cover movement may naturally bring a
+gunner to such a position; there is no separate mount-hunting behavior.
+
+The constants in `src/mounting.js` control 0.8-second deployment, 0.35-second
+unmounting, a three-second remount cooldown, a maximum ±45° firing arc (geometry
+can constrain it further), ×1.12 accuracy and ×1.15 incoming suppression pressure.
+Deployment/unmounting prevents firing; repositioning waits for unmounting. Reload
+and weapon cadence are unchanged. Lost/blocked lanes, incompatible directions,
+exposed directly observed flank threats and severe suppression release support.
+A gunner with no suitable support continues unsupported combat. Incapacitation or
+death cancels support immediately without a combat or unmount animation.
+
+The existing procedural renderer consumes authoritative mount states and real shot
+events. A gold bipod and crouch distinguish supported firing; deployment/unmounting
+have short progress cues, and mounted recoil is smaller. Existing cover approach
+chevrons and protected-position arcs remain. The scrollable inspector adds current
+known-threat protection, exposure and score; the last evaluated candidate, reason,
+assessment age and movement blocker; and LMG state, own support position/direction,
+bonuses and rejection reason. Candidate/reason snapshots are recorded decisions,
+not explanations inferred by the UI. The seven activity categories remain exclusive;
+deploy/unmount time is preparation, with real shots retaining engagement priority.
+
+### Validate and compare
+
+```sh
+npm install
+npm test
+npm run build
+# Archive the baseline before changing branches. Source imports have no npm needs.
+mkdir -p /tmp/aw-main
+# Use a fresh directory if /tmp/aw-main already contains another revision.
+git archive 17e6e02 | tar -x -C /tmp/aw-main
+node scripts/measure-cover.mjs /tmp/aw-main /tmp/main-cover.json 20
+node scripts/measure-cover.mjs . /tmp/after-cover.json 20
+```
+
+The comparison uses the same seeds 1–20, timestep 0.1 seconds, and 1,800-second
+cap on both versions. Raw results are committed. The historical v0.2.2 exact-core
+animation-parity script is not a v0.2.3 balance requirement: cover and mounted fire
+intentionally change outcomes. Rendering remains read-only, and playback grouping
+is tested independently at 1×, 2× and 4×.
+
+### Physical iPhone Safari checks
+
+After review/merge and successful Pages deployment, open
+https://dydtjs345-ux.github.io/annous-warfare/ in Safari and reload to obtain v0.2.3.
+For pre-merge testing use `npm run dev -- --host 0.0.0.0` with your computer's LAN
+address or your environment's HTTPS port forwarding, as described above. A feature
+branch push does not deploy production Pages.
+
+1. Watch several initial 6v6 encounters at 1×. Some soldiers should seek improved
+   directional cover while others keep firing. Exposed soldiers without useful
+   cover should continue fighting; protected firing positions should remain stable.
+2. Tap an LMG (machine-gunner role marker), scroll the inspector, and compare its
+   real unsupported/deploying/mounted/unmounting state with the bipod and progress
+   cues. Low walls qualify only from the correct side and angle. House walls and
+   fences must not create supported fire.
+3. Observe an LMG changing firing direction or repositioning: support should release
+   briefly before travel. No flashes should appear while deploying/unmounting or
+   after combat incapacity. Reload timing and casualty treatment should remain normal.
+4. Switch through 1×, 2× and 4×, pause/resume, pan, pinch and tap. Check inspector
+   scrolling in portrait and landscape, matching action/cover/mount data, and exclusive
+   activity totals. Tiny effects may coalesce at 4×; visibility does not control shots.
+5. Follow late-game searches and a medic casualty approach, then restart to confirm
+   six soldiers per team and reset activity counters. Report device/iOS version,
+   speed, diagnostics and any prolonged idle or oscillating cover behavior.
+
+Host Chromium checks do not establish physical Safari performance, battery use,
+thermal behavior or touch reliability. Those remain device-verification steps.
