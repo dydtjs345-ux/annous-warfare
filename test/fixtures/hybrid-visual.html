@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>v0.2.9 real-state visual QA</title>
+    <style>
+      body {
+        margin: 0;
+        background: #101b26;
+        color: #dce7e7;
+        font: 12px system-ui;
+      }
+      #game {
+        height: 85dvh;
+      }
+      p {
+        padding: 8px;
+      }
+      canvas {
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <p id="stats">
+      Isolated real-simulation grenade fixture; not a normal-match performance
+      measurement.
+    </p>
+    <script type="module">
+      import Phaser from "phaser";
+      import {CombatAtmosphere} from '/src/combat-atmosphere.js';
+      import {drawGroundDetail} from '/src/urban-detail.js';
+      const mode=new URLSearchParams(location.search).get('mode')||'grenade';
+      import { Battle } from "/src/simulation.js";
+      import { CombatVisuals } from "/src/combat-visuals.js";
+      import { GrenadeVisuals } from "/src/grenade-visuals.js";
+      import { drawGrenades, drawObstacle } from "/src/urban-visuals.js";
+      import { obstacles } from "/src/world.js";
+      const iso = (x, y) => ({ x: 300 + (x - y) * 20, y: 40 + (x + y) * 10 });
+      class Fixture extends Phaser.Scene {
+        create() {
+          this.b = new Battle(() => mode==='fire'?.05:.99, {
+            map: "urban",
+            variant: 0,
+            grenades: true,
+            tactical: true,
+          });
+          for (const u of this.b.units)
+            Object.assign(u, { active: false, dead: true });
+          Object.assign(this.b.units[0], {
+            active: true,
+            dead: false,
+            x: 6,
+            y: 10,
+          });
+          for (const id of [6, 7, 8])
+            Object.assign(this.b.units[id], {
+              active: true,
+              dead: false,
+              x: 6 + (id - 6),
+              y: 15,
+              reload: 100,
+            });
+          if(mode!=='grenade'){
+            for(const u of this.b.units){u.frags=0;Object.assign(u,{active:false,dead:true});}
+            const a=this.b.units[0],e=this.b.units[6];Object.assign(a,{active:true,dead:false,x:3,y:11});Object.assign(e,{active:true,dead:false,x:3,y:15,reload:100});
+            if(mode==='medic'){Object.assign(a,{active:false,dead:true});Object.assign(e,{x:25,y:20});Object.assign(this.b.units[5],{active:true,dead:false,x:3,y:11});Object.assign(this.b.units[1],{active:true,dead:false,x:3.5,y:11});this.b.injury(this.b.units[1],'torso',60);}
+          }
+          this.g = this.add.graphics();
+          this.atmosphere=new CombatAtmosphere();
+          this.v = new CombatVisuals();
+          this.f = new GrenadeVisuals();
+          this.acc = 0;
+          this.speed = Number(
+            new URLSearchParams(location.search).get("speed") || 1,
+          );
+          this.cameras.main.setZoom(1.5).centerOn(iso(mode==='grenade'?6:3,mode==='medic'?11:13).x,iso(mode==='grenade'?6:3,mode==='medic'?11:13).y);
+          window.fixtureSnapshot = () => ({
+            captured:!!window.fixturePaused,
+            time: this.b.time,
+            poses:this.v.models.map((m,i)=>({id:i,pose:m.pose,posture:this.b.units[i].posture?.mode})),
+            events:this.b.events.map(e=>({type:e.type,id:e.id})),
+            stats: { ...this.b.grenadeStats },
+            effects: this.f.effects.map((e) => ({ kind: e.kind })),
+            grenades: this.b.grenades.map((g) => ({
+              x: g.position.x,
+              y: g.position.y,
+              flightAge: this.b.time - g.thrownAt,
+            })),
+            result: this.b.result,
+          });
+        }
+        update(_, delta) {
+          if (!window.fixturePaused)
+            this.acc += Math.min(delta / 1000, 0.1) * this.speed;
+          while (this.acc >= 0.05) {
+            this.b.step(0.05);
+            this.acc -= 0.05;
+          }
+          this.v.update(
+            this.b,
+            delta / 1000,
+            this.speed,
+            !!window.fixturePaused,
+          );
+          this.f.update(
+            this.b,
+            delta / 1000,
+            this.speed,
+            !!window.fixturePaused,
+          );
+          const model=this.v.models[mode==='medic'?5:0];
+          const captured=mode==='full'?model?.tucked:mode==='peek'?model?.pose==='aiming'&&this.b.units[0].posture?.mode==='peek':mode==='fire'?model?.flash&&this.b.events.some(e=>e.type==='damage'):mode==='medic'?model?.pose==='treating':this.b.grenadeStats.detonated>0;
+          if(captured)window.fixturePaused=true;
+          this.atmosphere.update(this.b,delta/1000,this.speed,!!window.fixturePaused);
+          const g = this.g;
+          g.clear();
+          for(let y=7;y<20;y++)for(let x=0;x<13;x++){const p=iso(x,y);g.fillStyle(0x34444e);g.fillPoints([{x:p.x,y:p.y-10},{x:p.x+20,y:p.y},{x:p.x,y:p.y+10},{x:p.x-20,y:p.y}],true);drawGroundDetail(g,x,y,p);}
+          for (const [key, type] of obstacles) {
+            const [x, y] = key.split(",").map(Number);
+            if (x < 12 && y >= 9 && y <= 18)
+              drawObstacle(g, { x, y, type }, iso(x, y));
+          }
+          for (const u of this.b.units.filter((u) =>
+            (mode==='medic'?[1,5]:mode==='grenade'?[0,6,7,8]:[0,6]).includes(u.id),
+          ))
+            this.v.drawUnit(g, this.b, u, iso(u.x, u.y), iso, false);
+          drawGrenades(g, this.b, iso);
+          this.f.draw(g, iso);this.atmosphere.draw(g,iso);
+          document.querySelector("#stats").textContent =
+            `실제 시뮬레이션 QA (${mode}) · ${this.speed}× · throws ${this.b.grenadeStats.thrown} · blasts ${this.b.grenadeStats.detonated}`;
+        }
+      }
+      new Phaser.Game({
+        type: Phaser.AUTO,
+        parent: "game",
+        pixelArt: true,
+        antialias: false,
+        scale: { mode: Phaser.Scale.RESIZE, width: "100%", height: "100%" },
+        scene: Fixture,
+      });
+    </script>
+  </body>
+</html>

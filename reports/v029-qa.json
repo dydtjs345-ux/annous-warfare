@@ -1,0 +1,491 @@
+{
+  "fixture": "real Battle; controlled spawns/injuries/nonfiring opponents; paused only at real authoritative states/events; not natural-match performance evidence",
+  "rows": [
+    {
+      "mode": "full",
+      "captured": true,
+      "time": 1.900000000000001,
+      "poses": [
+        {
+          "id": 0,
+          "pose": "fullCover",
+          "posture": "full"
+        },
+        {
+          "id": 1,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 2,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 3,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 4,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 5,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 6,
+          "pose": "reloading",
+          "posture": "full"
+        },
+        {
+          "id": 7,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 8,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 9,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 10,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 11,
+          "pose": "dead",
+          "posture": "sustained"
+        }
+      ],
+      "events": [],
+      "stats": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      },
+      "effects": [],
+      "grenades": [],
+      "result": null,
+      "errors": []
+    },
+    {
+      "mode": "peek",
+      "captured": true,
+      "time": 7.349999999999982,
+      "poses": [
+        {
+          "id": 0,
+          "pose": "aiming",
+          "posture": "peek"
+        },
+        {
+          "id": 1,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 2,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 3,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 4,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 5,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 6,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 7,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 8,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 9,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 10,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 11,
+          "pose": "dead",
+          "posture": "sustained"
+        }
+      ],
+      "events": [],
+      "stats": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      },
+      "effects": [],
+      "grenades": [],
+      "result": null,
+      "errors": []
+    },
+    {
+      "mode": "fire",
+      "captured": true,
+      "time": 7.7499999999999805,
+      "poses": [
+        {
+          "id": 0,
+          "pose": "firing",
+          "posture": "peek"
+        },
+        {
+          "id": 1,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 2,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 3,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 4,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 5,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 6,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 7,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 8,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 9,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 10,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 11,
+          "pose": "dead",
+          "posture": "sustained"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "id": 1
+        },
+        {
+          "type": "damage",
+          "id": 2
+        }
+      ],
+      "stats": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      },
+      "effects": [],
+      "grenades": [],
+      "result": null,
+      "errors": []
+    },
+    {
+      "mode": "medic",
+      "captured": true,
+      "time": 0.5499999999999999,
+      "poses": [
+        {
+          "id": 0,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 1,
+          "pose": "observing",
+          "posture": "sustained"
+        },
+        {
+          "id": 2,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 3,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 4,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 5,
+          "pose": "treating",
+          "posture": "sustained"
+        },
+        {
+          "id": 6,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 7,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 8,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 9,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 10,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 11,
+          "pose": "dead",
+          "posture": "sustained"
+        }
+      ],
+      "events": [
+        {
+          "type": "damage",
+          "id": 1
+        }
+      ],
+      "stats": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      },
+      "effects": [],
+      "grenades": [],
+      "result": null,
+      "errors": []
+    },
+    {
+      "mode": "grenade",
+      "captured": true,
+      "time": 2.8999999999999977,
+      "poses": [
+        {
+          "id": 0,
+          "pose": "aiming",
+          "posture": "sustained"
+        },
+        {
+          "id": 1,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 2,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 3,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 4,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 5,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 6,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 7,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 8,
+          "pose": "reloading",
+          "posture": "sustained"
+        },
+        {
+          "id": 9,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 10,
+          "pose": "dead",
+          "posture": "sustained"
+        },
+        {
+          "id": 11,
+          "pose": "dead",
+          "posture": "sustained"
+        }
+      ],
+      "events": [
+        {
+          "type": "shot",
+          "id": 3
+        },
+        {
+          "type": "damage",
+          "id": 4
+        },
+        {
+          "type": "damage",
+          "id": 5
+        },
+        {
+          "type": "damage",
+          "id": 6
+        },
+        {
+          "type": "damage",
+          "id": 7
+        },
+        {
+          "type": "damage",
+          "id": 8
+        },
+        {
+          "type": "damage",
+          "id": 9
+        },
+        {
+          "type": "damage",
+          "id": 10
+        },
+        {
+          "type": "damage",
+          "id": 11
+        },
+        {
+          "type": "damage",
+          "id": 12
+        },
+        {
+          "type": "damage",
+          "id": 13
+        },
+        {
+          "type": "damage",
+          "id": 14
+        },
+        {
+          "type": "damage",
+          "id": 15
+        },
+        {
+          "type": "grenadeBlast",
+          "id": 16
+        }
+      ],
+      "stats": {
+        "thrown": 1,
+        "detonated": 1,
+        "effective": 1,
+        "friendlyHits": 0,
+        "detections": 4,
+        "reactions": 3,
+        "safeReactions": 1
+      },
+      "effects": [
+        {
+          "kind": "grenadeBlast"
+        }
+      ],
+      "grenades": [
+        {
+          "x": 7,
+          "y": 15,
+          "flightAge": 2.1499999999999977
+        }
+      ],
+      "result": null,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+
+> autonomous-warfare@0.2.9 build
+> vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 34 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.52 kB │ gzip:   0.78 kB
+dist/assets/index-CRcVCcAs.css      2.27 kB │ gzip:   0.96 kB
+dist/assets/index-CfEDcjXj.js   1,612.66 kB │ gzip: 386.91 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.48s

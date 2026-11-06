@@ -239,7 +239,8 @@ export class CombatVisuals {
     const torsoX = p.x - 5 + lean,
       torsoY = p.y + top + 8 + bob;
     // Equipment sits behind the body; its side follows the authoritative aim axis.
-    const facingSide = Math.cos(m.direction) >= 0 ? -1 : 1;
+    const facingSide =
+      Math.cos(m.direction) - Math.sin(m.direction) >= 0 ? -1 : 1;
     g.fillStyle(0x15212a);
     g.fillRect(p.x + facingSide * 6 - 3, torsoY + 1, 7, prone ? 5 : 10);
     g.fillStyle(u.team ? 0x495749 : 0x384e59);

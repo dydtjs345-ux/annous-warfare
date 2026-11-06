@@ -461,3 +461,9 @@ Final v0.2.7 validation: **216 passing tests**, successful build, **3,000 large-
 전투 AI·난수·의료·탄약·사격·지도는 변경하지 않습니다. 사전에 없는 설명은 `판단 근거 기록 없음`이며 새로운 이유를 만들어내지 않습니다. 최근 기록은 10Hz 관측 기반의 병사별 최대 18개로, 표본 사이의 짧은 전환은 빠질 수 있습니다. 미래/일부 동적 사유의 번역은 제한이 있습니다. 실제 iPhone Safari는 미검증입니다.
 
 검사·시드·결정론 비교·실기기 체크리스트는 [v0.2.8 감사 보고서](reports/v028-soldier-readability-audit.md)를 참고하세요. 로컬 `npm run dev` 또는 리뷰 후 Pages 배포에서 확인할 수 있습니다. 기능 브랜치를 푸시해도 프로덕션 Pages에는 자동 배포되지 않습니다.
+
+## v0.2.9 hybrid pixel-art presentation
+
+Infantry now has layered original helmet/vest/pouch/backpack and fabric detail. Existing terrain has asphalt wear, pavement slabs, roof/facade detail, and clearer material surfaces. Real shots produce restrained bloom, smoke and tiny casing pixels; real damage produces short dust accents. Grenade effects, Korean inspection and all tactical mechanics remain. Static ground is baked once per match; effects are bounded and never use combat RNG.
+
+See [the visual audit and before/after captures](reports/v029-hybrid-visual-audit.md) for architecture, real-state QA fixtures, deterministic comparisons, performance observations and limitations. Physical iPhone Safari remains unverified. Test both zoom levels/orientations, inspector scrolling, pan/pinch, pause/restart and all speeds. This is original procedural art, with no external game assets, new combat systems or automatic main merge.
