@@ -219,48 +219,46 @@ export class CombatVisuals {
         g.lineBetween(p.x, floorY + 8, p.x + 4, floorY + 5);
       }
     }
-    const body = down
-      ? u.dead
-        ? u.team
-          ? 0x806661
-          : 0x526f66
-        : u.team
-          ? 0x9f8077
-          : 0x739e90
-      : u.team
-        ? 0xd69283
-        : 0x83d7c0;
-    g.fillStyle(body);
+    // Original low-resolution humanoid silhouette; presentation only.
+    const cloth = u.team ? 0x9c9fab : 0x83aab6;
+    const vest = u.team ? 0x5f626f : 0x405d69;
+    const helmet = u.team ? 0x68717d : 0x506c7b;
+    const skin = down ? 0x978c85 : 0xc8b8ac;
+    const torsoX = p.x - 5 + lean,
+      torsoY = p.y + top + 8 + bob;
+    g.fillStyle(down ? (u.team ? 0x646570 : 0x506974) : cloth);
+    g.fillRect(torsoX, torsoY, prone ? 17 : 10, prone ? 6 : crouch ? 9 : 12);
+    g.lineStyle(1, 0x17232c, 0.9);
+    g.strokeRect(torsoX, torsoY, prone ? 17 : 10, prone ? 6 : crouch ? 9 : 12);
+    // Neck, head and shallow helmet brim remain separate pixels.
+    g.fillStyle(skin);
+    g.fillRect(p.x - 3 + lean, p.y + top + 3 + bob, 6, 5);
+    g.fillRect(p.x - 1 + lean, p.y + top + 7 + bob, 2, 2);
+    g.fillStyle(down ? 0x515a64 : helmet);
+    g.fillRect(p.x - 4 + lean, p.y + top + bob, 8, 4);
+    g.fillRect(p.x - 5 + lean, p.y + top + 3 + bob, 10, 2);
+    g.fillStyle(vest);
     g.fillRect(
-      p.x - 7 + lean,
-      p.y + top + 7 + bob,
-      prone ? 18 : 13,
-      prone ? 6 : crouch ? 10 : 14,
+      torsoX + 2,
+      torsoY + 1,
+      prone ? 11 : 6,
+      prone ? 4 : crouch ? 6 : 8,
     );
-    g.lineStyle(1, 0x18242a);
-    g.strokeRect(
-      p.x - 7 + lean,
-      p.y + top + 7 + bob,
-      prone ? 18 : 13,
-      prone ? 6 : crouch ? 10 : 14,
-    );
-    g.fillStyle(down ? 0x525c51 : u.team ? 0x5e6550 : 0x667957);
-    g.fillRect(p.x - 5 + lean, p.y + top + bob, 10, 7);
-    g.fillStyle(down ? 0xa3927c : 0xe1c6a1);
-    g.fillRect(p.x - 3 + lean, p.y + top + 6 + bob, 6, 4);
+    g.fillStyle(0x9aa6ad, 0.6);
+    g.fillRect(torsoX + 3, torsoY + 3, 2, 2);
     if (!prone) {
-      g.fillStyle(0x18242a);
-      const leg = crouch ? 4 : 8;
-      g.fillRect(p.x - 6, p.y - 7 + (m.moving ? phase * 2 : 0), 4, leg);
-      g.fillRect(
-        p.x + 2,
-        p.y - 7 - (m.moving ? (m.limp ? phase : phase * 2) : 0),
-        4,
-        leg,
-      );
-    } else if (m.moving) {
-      g.fillStyle(0x18242a);
-      g.fillRect(p.x + 6, p.y - 5 + phase, 7, 2);
+      const legY = p.y - (crouch ? 6 : 8),
+        stride = m.moving ? phase * (m.limp ? 1 : 2) : 0;
+      g.fillStyle(vest);
+      g.fillRect(p.x - 5, legY + stride, 3, crouch ? 4 : 7);
+      g.fillRect(p.x + 2, legY - stride, 3, crouch ? 4 : 7);
+      g.fillStyle(0x17232c);
+      g.fillRect(p.x - 6, legY + (crouch ? 3 : 6) + stride, 5, 2);
+      g.fillRect(p.x + 1, legY + (crouch ? 3 : 6) - stride, 5, 2);
+    } else {
+      g.fillStyle(vest);
+      g.fillRect(p.x + 8, p.y - 6 + (m.moving ? phase : 0), 8, 3);
+      g.fillRect(p.x + 6, p.y - 2 - (m.moving ? phase : 0), 9, 3);
     }
     if (!down) {
       const aim = iso(u.x + Math.cos(m.direction), u.y + Math.sin(m.direction));
@@ -270,6 +268,25 @@ export class CombatVisuals {
       dx /= length;
       dy /= length;
       const handY = p.y + (crouch ? -11 : prone ? -6 : -14) + bob;
+      // Sleeves and two bent forearms meet the weapon's authoritative hand axis.
+      if (m.pose !== "treating") {
+        g.lineStyle(3, cloth);
+        g.lineBetween(p.x - 5 + lean, torsoY + 3, p.x - 5 + dx * 4, handY + 3);
+        g.lineBetween(p.x + 5 + lean, torsoY + 3, p.x + 5 + dx * 4, handY + 3);
+        g.lineStyle(2, skin);
+        g.lineBetween(
+          p.x - 5 + dx * 4,
+          handY + 3,
+          p.x + dx * 4,
+          handY + dy * 4,
+        );
+        g.lineBetween(
+          p.x + 5 + dx * 4,
+          handY + 3,
+          p.x + dx * 8,
+          handY + dy * 8,
+        );
+      }
       const recoil = m.flash
         ? Math.min(m.mountState === "mounted" ? 1 : 2, fx.shot * 24)
         : 0;

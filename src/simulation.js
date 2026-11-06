@@ -627,7 +627,18 @@ export class Battle {
     }
     u.x = next.x;
     u.y = next.y;
-    u.facing = Math.atan2(dy, dx);
+    // Travel direction must not overwrite this interval's authoritative shot aim.
+    const aiming = (u.visibleEnemies ?? []).find(
+      (e) =>
+        e.id === u.engagementId &&
+        e.active &&
+        sight(u, e) &&
+        dist(u, e) <= u.range,
+    );
+    if (u.firedAt !== this.time)
+      u.facing = aiming
+        ? Math.atan2(aiming.y - u.y, aiming.x - u.x)
+        : Math.atan2(dy, dx);
     u.navigation = "Moving";
     if (d <= step) u.route.shift();
     return true;
