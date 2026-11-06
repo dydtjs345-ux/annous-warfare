@@ -451,13 +451,14 @@ test("confirmed sightings are instantly available to every living squad member, 
   assert.equal(sight(recipient, b.units[6]), false);
   perceive(b);
   assert.equal(observer.intel, recipient.intel);
-  assert.deepEqual(recipient.intel.contacts.get(6), {
-    kind: "sighting",
-    enemyId: 6,
-    x: 9,
-    y: 11,
-    time: 0,
-  });
+  const report = recipient.intel.contacts.get(6);
+  assert.equal(report.enemyId, 6);
+  assert.equal(report.x, 9);
+  assert.equal(report.y, 11);
+  assert.equal(report.time, 0);
+  assert.ok(report.observers.includes(0));
+  assert.equal(report.observers.includes(1), false);
+  assert.ok(Number.isInteger(report.observedBy));
   assert.equal(b.units[5].intel.contacts.has(6), true);
   assert.equal(recipient.visibleEnemies.length, 0);
 });
@@ -489,14 +490,15 @@ test("last-known snapshots decay, never follow hidden enemies, and expire", () =
   assert.equal(squadThreats(b, 0).length, 0);
 });
 
-test("a visibly empty last-known location clears the report instead of creating endless pursuit", () => {
+test("a visibly empty last-known location is marked cleared without instantly discarding the snapshot", () => {
   const b = sightingFixture();
   perceive(b);
   b.units[6].x = 27;
   b.units[6].y = 20;
   b.time = 0.5;
   perceive(b);
-  assert.equal(b.squads[0].intel.contacts.has(6), false);
+  assert.equal(b.squads[0].intel.contacts.get(6).clearedAt, 0.5);
+  assert.equal(b.squads[0].intel.contacts.get(6).time, 0);
 });
 
 test("incoming fire shares a coarse direction without an enemy identity or position", () => {
@@ -676,4 +678,341 @@ test("clearing all contacts retains the maneuver cancellation cooldown", () => {
   updateSquadTactics(b, 0);
   assert.equal(b.squads[0].maneuver, null);
   assert.ok(b.squads[0].flankCooldown >= b.time + 24);
+});
+
+import { refreshDiagnostics, firingStatus } from "../src/diagnostics.js";
+import { markObservedFire } from "../src/intelligence.js";
+import { obstacles, key } from "../src/world.js";
+function isolatedBattle(seed = 1) {
+  const b = new Battle(seeded(seed));
+  for (const u of b.units) {
+    u.active = false;
+    u.dead = true;
+  }
+  for (const id of [0, 1, 6]) {
+    b.units[id].active = true;
+    b.units[id].dead = false;
+  }
+  Object.assign(b.units[0], { x: 3, y: 11, reload: 1000 });
+  Object.assign(b.units[1], { x: 6, y: 6 });
+  Object.assign(b.units[6], { x: 9, y: 11, reload: 1000 });
+  return b;
+}
+
+test("continuous radio refresh cannot indefinitely hold a healthy rifleman without a firing opportunity", () => {
+  const b = isolatedBattle();
+  b.random = () => 0.99;
+  b.squads[0].flankCooldown = 1000;
+  let reacquired = false,
+    held = 0,
+    longestHold = 0;
+  for (let i = 0; i < 400; i++) {
+    b.step(0.05);
+    reacquired ||= b.units[1].state === "Reacquiring contact";
+    held = b.units[1].state === "Holding contact" ? held + 0.05 : 0;
+    longestHold = Math.max(longestHold, held);
+  }
+  assert.ok(reacquired);
+  assert.ok(b.units[1].ammo < 30);
+  assert.ok(longestHold < 3.2, `held ${longestHold}s continuously`);
+  assert.equal(b.units[1].suppression, 0);
+  assert.equal(b.units[1].health.torso, 100);
+});
+
+test("a protected direct firing lane remains stationary and effective without forced movement", () => {
+  const b = isolatedBattle();
+  b.random = () => 0.99;
+  b.units[1].active = false;
+  b.units[1].dead = true;
+  Object.assign(b.units[0], { x: 3, y: 11, reload: 0 });
+  Object.assign(b.units[6], { x: 3, y: 15 });
+  for (let i = 0; i < 200; i++) b.step(0.05);
+  assert.equal(b.units[0].x, 3);
+  assert.equal(b.units[0].y, 11);
+  assert.ok(b.units[0].ammo < 30);
+  assert.match(b.units[0].diagnostics.decision, /visible firing solution/);
+});
+
+test("observed firing survives LOS loss as a frozen, attributed last-known snapshot", () => {
+  const b = sightingFixture();
+  perceive(b);
+  markObservedFire(b, b.units[6]);
+  const before = { ...b.squads[0].intel.contacts.get(6) };
+  b.units[6].x = 27;
+  b.units[6].y = 20;
+  b.time = 0.7;
+  perceive(b);
+  adoptContact(b, b.units[1]);
+  const last = b.squads[0].intel.contacts.get(6);
+  assert.equal(last.x, before.x);
+  assert.equal(last.y, before.y);
+  assert.equal(last.firedAt, 0);
+  assert.equal(last.observedBy, before.observedBy);
+  assert.equal(last.time, 0);
+  assert.equal(contacts(b, 0)[0].confirmed, false);
+  assert.equal(b.units[1].memory.enemyId, 6);
+});
+
+test("contact expiry is configurable and independent of radio consumption", () => {
+  const b = new Battle(seeded(1), { contactTTL: 2 });
+  Object.assign(b.units[0], { x: 3, y: 11 });
+  Object.assign(b.units[6], { x: 9, y: 11 });
+  perceive(b);
+  for (const u of b.units.filter((u) => !u.team)) {
+    u.x = 2;
+    u.y = 5;
+  }
+  Object.assign(b.units[6], { x: 27, y: 20 });
+  b.time = 1;
+  perceive(b);
+  adoptContact(b, b.units[1]);
+  assert.equal(contacts(b, 0)[0].confidence, 0.5);
+  assert.equal(b.units[1].memory.time, 0);
+  b.time = 2;
+  perceive(b);
+  adoptContact(b, b.units[1]);
+  assert.equal(b.units[1].memory, null);
+});
+
+test("independent reacquisition updates coordinates, observer and timestamp only on direct observation", () => {
+  const b = sightingFixture();
+  perceive(b);
+  Object.assign(b.units[6], { x: 8, y: 6 });
+  b.time = 1;
+  perceive(b);
+  // The indoor rifleman independently sees the enemy; the outdoor original observer cannot.
+  assert.ok(b.units[1].visibleEnemies.some((e) => e.id === 6));
+  assert.ok(!b.units[0].visibleEnemies.some((e) => e.id === 6));
+  const c = b.squads[0].intel.contacts.get(6);
+  assert.equal(c.x, 8);
+  assert.equal(c.y, 6);
+  assert.equal(c.time, 1);
+  assert.ok(c.observers.includes(1));
+  adoptContact(b, b.units[0]);
+  refreshDiagnostics(b, b.units[0]);
+  adoptContact(b, b.units[1]);
+  b.units[1].engagementId = 6;
+  refreshDiagnostics(b, b.units[1]);
+  assert.equal(b.units[0].diagnostics.source, "shared sighting");
+  assert.equal(b.units[1].diagnostics.source, "direct sighting");
+});
+
+test("out-of-range sticky targets do not exclude a valid in-range enemy", () => {
+  const b = new Battle(seeded(1)),
+    u = b.units[0],
+    far = b.units[6],
+    near = b.units[7];
+  u.x = 3;
+  u.y = 11;
+  far.x = 16;
+  far.y = 11;
+  near.x = 8;
+  near.y = 11;
+  u.engagementId = far.id;
+  assert.equal(selectEnemy(b, u, [far, near]), near);
+  u.aimAt = 0;
+  u.cooldown = 0;
+  assert.equal(firingStatus(b, u, far).reason, "Outside weapon range");
+  assert.equal(firingStatus(b, u, near).permitted, true);
+});
+
+test("brief LOS flicker preserves acquisition progress, but prolonged loss requires reaiming", () => {
+  const b = sightingFixture(),
+    u = b.units[0],
+    e = b.units[6];
+  selectEnemy(b, u, [e]);
+  const aim = u.aimAt;
+  b.time = 0.1;
+  selectEnemy(b, u, []);
+  b.time = 0.2;
+  selectEnemy(b, u, [e]);
+  assert.equal(u.aimAt, aim);
+  b.time = 1;
+  selectEnemy(b, u, []);
+  b.time = 1.1;
+  selectEnemy(b, u, [e]);
+  assert.ok(u.aimAt > 1.1);
+});
+
+test("LOS is symmetric at wall corners across 2000 seeded ray pairs", () => {
+  const rng = seeded(19);
+  for (let i = 0; i < 2000; i++) {
+    const a = { x: 1 + Math.floor(rng() * 28), y: 1 + Math.floor(rng() * 24) },
+      b = { x: 1 + Math.floor(rng() * 28), y: 1 + Math.floor(rng() * 24) };
+    if (!blocked(a.x, a.y) && !blocked(b.x, b.y))
+      assert.equal(sight(a, b), sight(b, a), JSON.stringify({ a, b }));
+  }
+  assert.equal(
+    sight({ x: 6, y: 15 }, { x: 14, y: 5 }),
+    sight({ x: 14, y: 5 }, { x: 6, y: 15 }),
+  );
+});
+
+test("blocked cover assignments release their slot and reject the ineffective goal", () => {
+  const b = new Battle(seeded(1)),
+    u = b.units[0],
+    body = b.units[1];
+  u.x = 12;
+  u.y = 10;
+  body.x = 14;
+  body.y = 10;
+  u.coverTarget = { x: 14, y: 10 };
+  u.nextAssessment = 100;
+  let released = false;
+  for (let i = 0; i < 200; i++) {
+    b.time += 0.05;
+    if (!localCover(b, u, [{ x: 17, y: 10 }], 0.05)) {
+      released = true;
+      break;
+    }
+  }
+  assert.ok(released);
+  assert.equal(u.coverTarget, null);
+  assert.ok(u.failedGoal);
+  assert.equal(u.movementBlocker, "Soldier congestion");
+});
+
+test("unreachable terrain objectives fail explicitly instead of silently returning empty paths", () => {
+  const b = new Battle(seeded(1)),
+    u = b.units[0];
+  u.x = 2;
+  u.y = 6;
+  const doors = [key(7, 4), key(7, 9)];
+  try {
+    for (const door of doors) obstacles.set(door, "wall");
+    assert.equal(b.move(u, { x: 7, y: 6 }, 0.05), false);
+    assert.equal(u.movementBlocker, "No terrain route");
+    assert.equal(u.navigation, "No route");
+    u.failedGoal = null;
+    assert.equal(careRouteSafe(b, u, { id: 99, x: 7, y: 6 }), false);
+  } finally {
+    for (const door of doors) obstacles.delete(door);
+  }
+  assert.ok(path(u, { x: 7, y: 6 }).length);
+});
+
+test("regrouping has entry/exit hysteresis instead of switching objectives at one distance", () => {
+  const b = isolatedBattle();
+  Object.assign(b.units[0], { x: 2, y: 8 });
+  Object.assign(b.units[1], { x: 2, y: 15.2 });
+  Object.assign(b.units[6], { x: 27, y: 24 });
+  b.step(0.05);
+  assert.equal(b.units[1].state, "Regrouping");
+  Object.assign(b.units[1], { x: 2, y: 13.5 });
+  b.step(0.05);
+  assert.equal(b.units[1].state, "Regrouping");
+  Object.assign(b.units[1], { x: 2, y: 11.8 });
+  b.step(0.05);
+  assert.notEqual(b.units[1].state, "Regrouping");
+});
+
+test("five seeded last-enemy searches reacquire a wall-hidden survivor without knowing its position", () => {
+  for (let seed = 1; seed <= 5; seed++) {
+    const b = isolatedBattle(seed);
+    b.units[1].active = false;
+    b.units[1].dead = true;
+    Object.assign(b.units[0], { x: 4, y: 6, reload: 0 });
+    Object.assign(b.units[6], { x: 8, y: 6, reload: 10000 });
+    assert.equal(sight(b.units[0], b.units[6]), false);
+    assert.equal(contacts(b, 0).length, 0);
+    for (let i = 0; i < 12000 && !b.result; i++) b.step(0.1);
+    assert.equal(b.result, "USMC victory", `seed ${seed}`);
+  }
+});
+
+test("genuine ammunition stalemates remain possible and expose their reason", () => {
+  const b = isolatedBattle();
+  b.units[1].active = false;
+  b.units[1].dead = true;
+  for (const u of b.units.filter((u) => u.active)) {
+    u.reload = 0;
+    u.ammo = 0;
+    u.reserve = 0;
+  }
+  for (let i = 0; i < 200; i++) b.step(0.05);
+  assert.equal(b.result, null);
+  assert.equal(b.units[0].diagnostics.stalemate, "No ammunition");
+  assert.match(inspectSoldier(b.units[0]), /Ammunition exhausted/);
+});
+
+test("unsafe/unreachable reacquisition is diagnosed rather than forcing a charge", () => {
+  const b = isolatedBattle();
+  const doors = [key(7, 4), key(7, 9)];
+  try {
+    for (const door of doors) obstacles.set(door, "wall");
+    for (let i = 0; i < 300; i++) b.step(0.05);
+    assert.equal(b.units[1].state, "Observing contact");
+    assert.match(b.units[1].diagnostics.decision, /No safe reachable/);
+    assert.equal(
+      b.units[1].diagnostics.stalemate,
+      "No safe reacquisition route",
+    );
+  } finally {
+    for (const door of doors) obstacles.delete(door);
+  }
+});
+
+test("inspection never substitutes a hidden enemy location for the known snapshot", () => {
+  const b = sightingFixture();
+  perceive(b);
+  for (const u of b.units.filter((u) => !u.team)) {
+    u.x = 2;
+    u.y = 5;
+  }
+  Object.assign(b.units[6], { x: 27, y: 20 });
+  b.time = 1;
+  perceive(b);
+  adoptContact(b, b.units[1]);
+  refreshDiagnostics(b, b.units[1]);
+  const u = b.units[1],
+    expected = Math.hypot(u.x - 9, u.y - 11);
+  assert.equal(u.diagnostics.targetDistance, expected);
+  assert.equal(u.diagnostics.distanceEstimated, true);
+  assert.equal(u.diagnostics.directLOS, false);
+  const before = inspectSoldier(u);
+  Object.assign(b.units[6], { x: 23, y: 21 });
+  refreshDiagnostics(b, u);
+  assert.equal(inspectSoldier(u), before);
+  assert.match(before, /last-known position/);
+  assert.match(before, /Direct LOS: no/);
+  assert.match(before, /Last confirmed: 1.0s/);
+  assert.match(before, /No injuries/);
+  assert.ok(!before.includes("(* injured)"));
+});
+
+import { planningCellFree } from "../src/tactics.js";
+test("tactical destinations use reported snapshots instead of hidden physical enemy positions", () => {
+  const b = new Battle(seeded(1)),
+    u = b.units[0],
+    enemy = b.units[6];
+  u.x = 4;
+  u.y = 6;
+  enemy.x = 8;
+  enemy.y = 6;
+  assert.equal(sight(u, enemy), false);
+  assert.equal(b.spaceFree(u, { x: 8, y: 6 }), false);
+  assert.equal(planningCellFree(b, u, { x: 8, y: 6 }), true);
+  u.intel.contacts.set(enemy.id, {
+    enemyId: enemy.id,
+    x: 8,
+    y: 6,
+    time: b.time,
+  });
+  enemy.x = 9;
+  assert.equal(planningCellFree(b, u, { x: 8, y: 6 }), false);
+  assert.equal(planningCellFree(b, u, { x: 9, y: 6 }), true);
+});
+
+test("both sides in strong directional cover can finish without forced relocation", () => {
+  for (let seed = 1; seed <= 3; seed++) {
+    const b = isolatedBattle(seed);
+    b.units[1].active = false;
+    b.units[1].dead = true;
+    Object.assign(b.units[0], { x: 3, y: 11, reload: 0 });
+    Object.assign(b.units[6], { x: 3, y: 15, reload: 0 });
+    assert.equal(cover(b.units[0], b.units[6]), 0.58);
+    assert.equal(cover(b.units[6], b.units[0]), 0.58);
+    for (let i = 0; i < 18000 && !b.result; i++) b.step(0.1);
+    assert.ok(b.result, `seed ${seed}`);
+  }
 });

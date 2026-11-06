@@ -1,3 +1,4 @@
+import { refreshDiagnostics, firingStatus } from "./diagnostics.js";
 import {
   initializeIntel,
   perceive,
@@ -6,6 +7,7 @@ import {
   squadThreats,
   uncertainThreats,
   reportCasualty,
+  markObservedFire,
 } from "./intelligence.js";
 import {
   accuracyFactor,
@@ -15,6 +17,7 @@ import {
   localCover,
   followManeuver,
   careRouteSafe,
+  reacquireContact,
 } from "./tactics.js";
 import {
   W,
@@ -36,7 +39,8 @@ export const parts = [
 ];
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export class Battle {
-  constructor(random = Math.random) {
+  constructor(random = Math.random, options = {}) {
+    this.contactTTL = options.contactTTL ?? 8;
     this.random = random;
     this.time = 0;
     this.result = null;
@@ -136,6 +140,8 @@ export class Battle {
     for (const u of this.units) {
       u.hit = Math.max(0, u.hit - dt);
       if (!u.active) continue;
+      u.decisionReason = null;
+      u.movementBlocker = null;
       u.order = "Hold";
       u.target = null;
       u.navigation = "Holding";
@@ -216,7 +222,8 @@ export class Battle {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
         u.state = "Engaging";
         u.order = "Engage visible enemy";
-        if (u.cooldown <= 0 && this.time >= u.aimAt) {
+        if (firingStatus(this, u, enemy).permitted) {
+          u.firedAt = this.time;
           u.ammo--;
           u.cooldown = u.role === "LMG" ? 0.2 : 0.65;
           this.shots.push({
@@ -225,6 +232,7 @@ export class Battle {
             life: 0.09,
           });
           incomingFire(this, u, enemy);
+          markObservedFire(this, u);
           const arms = (u.health["left arm"] + u.health["right arm"]) / 200;
           const chance = Math.max(
             0.06,
@@ -249,6 +257,8 @@ export class Battle {
           u.state = "Aiming";
           u.order = "Acquire visible target";
         }
+        this.squads[u.team].searches?.delete(u.id);
+        u.contactWait = null;
         const maneuver = this.squads[u.team].maneuver;
         if (!followManeuver(this, u, maneuver, dt))
           localCover(this, u, enemies, dt);
@@ -256,12 +266,26 @@ export class Battle {
       }
       const tactical = this.squads[u.team],
         maneuver = tactical.maneuver;
-      const recent = u.memory && this.time - u.memory.time < 8;
+      const recent = u.memory && this.time - u.memory.time < this.contactTTL;
       const alertReady =
         u.alert && this.time >= u.alert.readyAt && this.time < u.alert.until;
       const uncertain = alertReady ? uncertainThreats(this, u) : [];
       if (followManeuver(this, u, maneuver, dt)) continue;
-      if (recent && localCover(this, u, [u.memory], dt)) continue;
+      if (recent) {
+        const searching = tactical.searches?.has(u.id);
+        if (!u.contactWait || u.contactWait.id !== u.memory.enemyId)
+          u.contactWait = { id: u.memory.enemyId, since: this.time };
+        if (
+          !searching &&
+          this.time - u.contactWait.since < 3 &&
+          localCover(this, u, [u.memory], dt)
+        )
+          continue;
+        if (reacquireContact(this, u, dt)) continue;
+      } else {
+        u.contactWait = null;
+        tactical.searches?.delete(u.id);
+      }
       if (!recent && uncertain.length) {
         if (localCover(this, u, uncertain, dt)) continue;
         u.state = "Watching reported sector";
@@ -269,16 +293,6 @@ export class Battle {
           u.role === "LMG"
             ? "Cover teammates; await visual confirmation"
             : "Cover nearby teammates";
-        continue;
-      }
-      if (
-        recent &&
-        (u.suppression > 0.55 ||
-          (maneuver && maneuver.until > this.time) ||
-          this.time - u.memory.time < 3)
-      ) {
-        u.state = u.suppression > 0.55 ? "Pinned" : "Holding contact";
-        u.order = tactical.intention;
         continue;
       }
       if (
@@ -303,7 +317,11 @@ export class Battle {
         );
       let goal =
         u.memory && this.time - u.memory.time < 10 ? u.memory : squad.goal;
-      if (leader && leader !== u && dist(u, leader) > 5) {
+      if (leader && leader !== u) {
+        if (dist(u, leader) > 7) u.regrouping = true;
+        if (dist(u, leader) < 4) u.regrouping = false;
+      } else u.regrouping = false;
+      if (leader && leader !== u && u.regrouping) {
         goal = leader;
         u.state = "Regrouping";
       } else
@@ -314,6 +332,7 @@ export class Battle {
       u.order = u.state;
       this.move(u, this.formationGoal(u, goal), dt);
     }
+    for (const u of this.units) refreshDiagnostics(this, u);
     const counts = [0, 1].map(
       (t) => this.units.filter((u) => u.team === t && u.active).length,
     );
@@ -337,12 +356,25 @@ export class Battle {
     ];
     const [dx, dy] = offsets[u.id % 6];
     const desired = { x: Math.round(goal.x) + dx, y: Math.round(goal.y) + dy };
-    if (u.formationKey === key(desired.x, desired.y)) return u.formationTarget;
+    if (
+      u.formationKey === key(desired.x, desired.y) &&
+      !(
+        u.failedGoal &&
+        u.failedGoal.until > this.time &&
+        dist(u.formationTarget, u.failedGoal) < 0.8
+      )
+    )
+      return u.formationTarget;
     const candidates = [];
     for (let x = desired.x - 2; x <= desired.x + 2; x++)
       for (let y = desired.y - 2; y <= desired.y + 2; y++) {
         if (
           !blocked(x, y) &&
+          !(
+            u.failedGoal &&
+            u.failedGoal.until > this.time &&
+            dist({ x, y }, u.failedGoal) < 0.8
+          ) &&
           !this.units.some(
             (a) =>
               a !== u &&
@@ -373,6 +405,15 @@ export class Battle {
     );
   }
   move(u, goal, dt) {
+    if (
+      this.time - (u.lastMoveCall ?? -Infinity) > 1 ||
+      !u.navPosition ||
+      dist(u, u.navPosition) > 0.1
+    ) {
+      u.navProgressAt = this.time;
+      u.navPosition = { x: u.x, y: u.y };
+    }
+    u.lastMoveCall = this.time;
     u.target = { x: Math.round(goal.x), y: Math.round(goal.y) };
     if (blocked(u.target.x, u.target.y)) u.target = reachableGoal(u, u.target);
     const goalKey = key(u.target.x, u.target.y);
@@ -402,7 +443,15 @@ export class Battle {
           : u.routeBlockedByUnits
             ? "Waiting for spacing"
             : "No route";
-      return;
+      if (u.navigation === "Arrived") {
+        u.navProgressAt = this.time;
+        return true;
+      }
+      u.movementBlocker = u.routeBlockedByUnits
+        ? "Soldier congestion"
+        : "No terrain route";
+      u.failedGoal = { ...u.target, until: this.time + 8 };
+      return false;
     }
     const dx = n[0] - u.x,
       dy = n[1] - u.y,
@@ -424,10 +473,19 @@ export class Battle {
         clear = false;
     if (!clear) {
       u.navigation = "Waiting for spacing";
+      u.movementBlocker = "Soldier congestion";
       if (this.time >= u.replanAt) {
         const occupied = new Set(
           this.units
-            .filter((a) => a !== u && !a.dead)
+            .filter(
+              (a) =>
+                a !== u &&
+                !a.dead &&
+                (a.team === u.team ||
+                  dist(u, a) < 0.8 ||
+                  (u.visibleEnemies?.some((e) => e.id === a.id) &&
+                    sight(u, a))),
+            )
             .map((a) => key(Math.round(a.x), Math.round(a.y))),
         );
         occupied.delete(key(Math.round(u.x), Math.round(u.y)));
@@ -435,12 +493,17 @@ export class Battle {
         u.routeBlockedByUnits = true;
         u.replanAt = this.time + 0.6;
       }
-      return;
+      if (this.time - u.navProgressAt > 3) {
+        u.failedGoal = { ...u.target, until: this.time + 8 };
+        return false;
+      }
+      return true;
     }
     u.x = next.x;
     u.y = next.y;
     u.facing = Math.atan2(dy, dx);
     u.navigation = "Moving";
     if (d <= step) u.route.shift();
+    return true;
   }
 }

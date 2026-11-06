@@ -15,11 +15,13 @@ export function contacts(battle, team) {
   const intel = battle.squads[team].intel;
   return intel
     ? [...intel.contacts.values()]
-        .filter((c) => battle.time - c.time < 8)
+        .filter((c) => battle.time - c.time < battle.contactTTL)
         .map((c) => ({
           ...c,
           confirmed: c.time === battle.time,
-          confidence: Math.max(0, 1 - (battle.time - c.time) / 8),
+          confidence:
+            Math.max(0, 1 - (battle.time - c.time) / battle.contactTTL) *
+            (c.clearedAt != null ? 0.5 : 1),
         }))
     : [];
 }
@@ -33,7 +35,7 @@ export function squadThreats(battle, team) {
         u.team === team &&
         !u.dead &&
         u.memory &&
-        battle.time - u.memory.time < 8,
+        battle.time - u.memory.time < battle.contactTTL,
     )
     .map((u) => u.memory);
   return [
@@ -123,6 +125,13 @@ export function perceive(battle) {
           x: e.x,
           y: e.y,
           time: battle.time,
+          observedBy: u.id,
+          observers:
+            prior?.time === battle.time
+              ? [...new Set([...prior.observers, u.id])]
+              : [u.id],
+          firedAt: prior?.firedAt ?? null,
+          clearedAt: null,
         });
         if (!prior) notifySquad(battle, u, "sighting", { enemyId: e.id });
       }
@@ -139,7 +148,8 @@ export function perceive(battle) {
             distance(u, c) < u.range &&
             sight(u, c),
         );
-      if (battle.time - c.time >= 8 || cleared) intel.contacts.delete(id);
+      if (cleared && c.clearedAt == null) c.clearedAt = battle.time;
+      if (battle.time - c.time >= battle.contactTTL) intel.contacts.delete(id);
     }
     for (const [id, r] of intel.incoming)
       if (battle.time - r.time >= 3) intel.incoming.delete(id);
@@ -152,22 +162,35 @@ export function perceive(battle) {
 }
 export function adoptContact(battle, u) {
   const known = contacts(battle, u.team);
+  const remember = (c) => {
+    u.memory = { ...c };
+    if (c.time >= (u.lastConfirmedAt ?? -Infinity)) {
+      u.lastConfirmedAt = c.time;
+      u.lastConfirmedObserverId = c.observedBy ?? null;
+    }
+  };
   // Preserve an existing assignment/contact; new information is not a focus-fire order.
   const current = known.find((c) => c.enemyId === u.memory?.enemyId);
   if (current) {
-    u.memory = { ...current };
+    remember(current);
     return;
   }
-  if (u.memory && battle.time - u.memory.time < 8 && u.memory.enemyId == null)
+  if (
+    u.memory &&
+    battle.time - u.memory.time < battle.contactTTL &&
+    u.memory.enemyId == null
+  )
     return;
   u.memory = null;
   if (u.alert && battle.time < u.alert.readyAt) return;
   const chosen = known.sort((a, b) => distance(u, a) - distance(u, b))[0];
-  if (chosen) u.memory = { ...chosen };
+  if (chosen) remember(chosen);
 }
 export function selectEnemy(battle, u, enemies) {
-  const existing = enemies.find((e) => e.id === u.engagementId);
-  const ranked = [...enemies].sort((a, b) => {
+  const inRange = enemies.filter((e) => distance(u, e) <= u.range);
+  const candidates = inRange.length ? inRange : enemies;
+  const existing = candidates.find((e) => e.id === u.engagementId);
+  const ranked = [...candidates].sort((a, b) => {
     const priority = (e) => {
       let score = distance(u, e);
       if (
@@ -189,10 +212,13 @@ export function selectEnemy(battle, u, enemies) {
   });
   const enemy = existing || ranked[0];
   if (!enemy) {
-    u.engagementId = null;
-    u.aimAt = 0;
+    if (battle.time - (u.lastTargetSeenAt ?? -Infinity) > 0.3) {
+      u.engagementId = null;
+      u.aimAt = 0;
+    }
     return null;
   }
+  u.lastTargetSeenAt = battle.time;
   if (u.engagementId !== enemy.id) {
     u.engagementId = enemy.id;
     u.aimAt = Math.max(
@@ -201,4 +227,17 @@ export function selectEnemy(battle, u, enemies) {
     );
   }
   return enemy;
+}
+
+export function markObservedFire(battle, shooter) {
+  for (const observer of battle.units) {
+    if (!observer.active || observer.team === shooter.team) continue;
+    if (
+      !observer.visibleEnemies.some((e) => e.id === shooter.id) ||
+      !sight(observer, shooter)
+    )
+      continue;
+    const c = observer.intel.contacts.get(shooter.id);
+    if (c) c.firedAt = battle.time;
+  }
 }

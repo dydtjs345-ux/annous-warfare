@@ -30,21 +30,40 @@ export const inside = (x, y) =>
   );
 export const blocked = (x, y) =>
   x < 1 || y < 1 || x >= W - 1 || y >= H - 1 || obstacles.has(key(x, y));
+// Symmetric grid traversal: quarter-tile sampling previously disagreed by
+// direction near wall corners. Corner-touching wall cells block both ways.
 export function sight(a, b) {
-  const d = Math.hypot(b.x - a.x, b.y - a.y);
-  for (let i = 1; i < d * 4; i++) {
-    const t = i / (d * 4);
-    if (
-      obstacles.get(
-        key(
-          Math.round(a.x + (b.x - a.x) * t),
-          Math.round(a.y + (b.y - a.y) * t),
-        ),
-      ) === "wall"
-    )
-      return false;
+  let x = Math.floor(a.x + 0.5),
+    y = Math.floor(a.y + 0.5);
+  const endX = Math.floor(b.x + 0.5),
+    endY = Math.floor(b.y + 0.5);
+  const dx = b.x - a.x,
+    dy = b.y - a.y,
+    sx = Math.sign(dx),
+    sy = Math.sign(dy);
+  const stepX = dx ? Math.abs(1 / dx) : Infinity,
+    stepY = dy ? Math.abs(1 / dy) : Infinity;
+  let tx = dx ? (x + (sx > 0 ? 0.5 : -0.5) - a.x) / dx : Infinity;
+  let ty = dy ? (y + (sy > 0 ? 0.5 : -0.5) - a.y) / dy : Infinity;
+  const wall = (xx, yy) => obstacles.get(key(xx, yy)) === "wall";
+  for (let i = 0; i < 256; i++) {
+    if (wall(x, y)) return false;
+    if (x === endX && y === endY) return true;
+    if (Math.abs(tx - ty) < 1e-10) {
+      if (wall(x + sx, y) || wall(x, y + sy)) return false;
+      x += sx;
+      y += sy;
+      tx += stepX;
+      ty += stepY;
+    } else if (tx < ty) {
+      x += sx;
+      tx += stepX;
+    } else {
+      y += sy;
+      ty += stepY;
+    }
   }
-  return true;
+  return false;
 }
 export function cover(target, attacker) {
   const dx = attacker.x - target.x,

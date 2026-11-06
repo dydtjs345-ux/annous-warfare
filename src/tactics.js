@@ -78,13 +78,33 @@ export function positionScore(u, p, threats) {
 
 // Bounded local search; only the best five candidates incur a BFS. Hysteresis
 // compares a candidate to the current position, so good cover has no movement timer.
+// Tactical destination selection uses friendly locations and reported snapshots,
+// while the physical movement solver still prevents all actual collisions.
+export function planningCellFree(battle, u, p) {
+  if (blocked(Math.round(p.x), Math.round(p.y))) return false;
+  if (
+    battle.units.some(
+      (a) => a !== u && a.team === u.team && !a.dead && distance(a, p) < 0.6,
+    )
+  )
+    return false;
+  return ![...u.intel.contacts.values()].some(
+    (c) => c.time === battle.time && distance(c, p) < 0.6,
+  );
+}
 export function chooseCover(battle, u, threats) {
   const current = positionScore(u, u, threats),
     candidates = [];
   for (let dx = -3; dx <= 3; dx++)
     for (let dy = -3; dy <= 3; dy++) {
       const p = { x: Math.round(u.x) + dx, y: Math.round(u.y) + dy };
-      if (distance(u, p) < 0.5 || !battle.spaceFree(u, p)) continue;
+      if (distance(u, p) < 0.5 || !planningCellFree(battle, u, p)) continue;
+      if (
+        u.failedGoal &&
+        u.failedGoal.until > battle.time &&
+        distance(p, u.failedGoal) < 0.8
+      )
+        continue;
       if (
         battle.units.some(
           (a) =>
@@ -160,7 +180,7 @@ export function planFlank(battle, team, threats) {
             y: Math.round(u.y + dy * forward + dx * lateral * side),
           };
           if (
-            !battle.spaceFree(u, p) ||
+            !planningCellFree(battle, u, p) ||
             distance(p, threat) < 3 ||
             distance(p, threat) > u.range ||
             !sight(p, threat)
@@ -290,7 +310,11 @@ export function localCover(battle, u, threats, dt) {
   }
   u.state = "Seeking cover";
   u.order = "Improve position";
-  battle.move(u, u.coverTarget, dt);
+  if (battle.move(u, u.coverTarget, dt) === false) {
+    u.coverTarget = null;
+    u.nextAssessment = battle.time + 1;
+    return false;
+  }
   return true;
 }
 
@@ -350,18 +374,34 @@ export function followManeuver(battle, u, m, dt) {
   }
   u.state = "Flanking";
   u.order = squad.intention;
-  battle.move(u, m.target, dt);
+  if (battle.move(u, m.target, dt) === false) {
+    m.until = battle.time;
+    return false;
+  }
   return true;
 }
 
 export function careRouteSafe(battle, u, patient) {
+  if (
+    u.failedGoal &&
+    u.failedGoal.until > battle.time &&
+    distance(patient, u.failedGoal) < 1
+  )
+    return false;
   const threats = [
     ...squadThreats(battle, u.team),
     ...uncertainThreats(battle, u),
   ];
-  if (!threats.length) return true;
+  const threatKey = threats
+    .map(
+      (t) =>
+        `${t.enemyId ?? "bearing"}:${Math.round(t.x * 2)},${Math.round(t.y * 2)}`,
+    )
+    .sort()
+    .join(";");
   if (
     !u.careCheck ||
+    u.careCheck.threatKey !== threatKey ||
     battle.time >= u.careCheck.until ||
     u.careCheck.patientId !== patient.id ||
     distance(u.careCheck.origin, u) > 1 ||
@@ -370,6 +410,7 @@ export function careRouteSafe(battle, u, patient) {
     const route = path(u, patient),
       risk = routeRisk(route, threats);
     u.careCheck = {
+      threatKey,
       patientId: patient.id,
       origin: { x: u.x, y: u.y },
       patient: { x: patient.x, y: patient.y },
@@ -378,4 +419,123 @@ export function careRouteSafe(battle, u, patient) {
     };
   }
   return u.careCheck.safe;
+}
+
+// Reacquisition is a limited, risk-checked investigation of a KNOWN snapshot,
+// not a new source of enemy coordinates. Radio refreshes cannot reset this wait.
+export function reacquireContact(battle, u, dt) {
+  const c = u.memory,
+    squad = battle.squads[u.team];
+  squad.searches ??= new Map();
+  for (const [id, s] of squad.searches) {
+    const unit = battle.units.find((a) => a.id === id);
+    if (
+      s.until <= battle.time ||
+      !unit?.active ||
+      !unit.memory ||
+      unit.memory.enemyId !== s.enemyId
+    )
+      squad.searches.delete(id);
+  }
+  if (!u.contactWait || u.contactWait.id !== c.enemyId)
+    u.contactWait = { id: c.enemyId, since: battle.time };
+  const useful =
+    sight(u, c) &&
+    distance(u, c) <= u.range &&
+    cover(u, c) >= 0.28 &&
+    c.clearedAt == null;
+  if (
+    u.suppression > 0.55 ||
+    (squad.maneuver && squad.maneuver.until > battle.time) ||
+    useful ||
+    battle.time - u.contactWait.since < 3
+  ) {
+    u.state = u.suppression > 0.55 ? "Pinned" : "Holding contact";
+    u.order = useful ? "Observe protected firing lane" : squad.intention;
+    u.decisionReason = useful
+      ? "Useful protected firing lane toward last confirmed location"
+      : u.suppression > 0.55
+        ? "Suppressed; exposure unsafe"
+        : squad.maneuver?.until > battle.time
+          ? "Covering an active squad maneuver"
+          : "Brief observation before risk-checked reacquisition";
+    return true;
+  }
+  let search = squad.searches.get(u.id);
+  if (search && distance(search.contact, c) > 2) {
+    squad.searches.delete(u.id);
+    search = null;
+    u.nextProbe = battle.time;
+  }
+  if (!search && battle.time >= (u.nextProbe ?? 0)) {
+    u.nextProbe = battle.time + 3;
+    const occupied =
+      squad.searches.size +
+      battle.units.filter(
+        (a) => a !== u && a.team === u.team && a.active && a.coverTarget,
+      ).length;
+    if (occupied < 2) {
+      const choices = [];
+      for (let dx = -4; dx <= 4; dx++)
+        for (let dy = -4; dy <= 4; dy++) {
+          const p = { x: Math.round(c.x) + dx, y: Math.round(c.y) + dy };
+          if (
+            distance(u, p) < 0.5 ||
+            distance(p, c) < 3 ||
+            distance(p, c) > u.range ||
+            !sight(p, c) ||
+            !planningCellFree(battle, u, p)
+          )
+            continue;
+          if (
+            u.failedGoal &&
+            u.failedGoal.until > battle.time &&
+            distance(p, u.failedGoal) < 0.8
+          )
+            continue;
+          choices.push({ p, score: positionScore(u, p, [c]) });
+        }
+      choices.sort((a, b) => b.score - a.score);
+      for (const { p } of choices.slice(0, 8)) {
+        const route = path(u, p),
+          risk = routeRisk(route, [c]);
+        if (
+          !route.length ||
+          route.length > 18 ||
+          risk.longest > 3 ||
+          risk.average > 0.6
+        )
+          continue;
+        search = {
+          target: p,
+          enemyId: c.enemyId,
+          contact: { x: c.x, y: c.y },
+          until: battle.time + 12,
+        };
+        squad.searches.set(u.id, search);
+        u.coverTarget = null;
+        break;
+      }
+    }
+  }
+  if (search) {
+    u.state = "Reacquiring contact";
+    u.order = "Investigate known firing lane";
+    u.decisionReason =
+      "Radio contact gives no personal firing opportunity; moving along a risk-checked route";
+    if (
+      battle.move(u, search.target, dt) === false ||
+      distance(u, search.target) < 0.2
+    ) {
+      squad.searches.delete(u.id);
+      u.nextProbe = battle.time + 4;
+    }
+    return true;
+  }
+  u.state = squad.searches.size ? "Covering search" : "Observing contact";
+  u.order = "Maintain cover; reassess known contact";
+  u.decisionReason = squad.searches.size
+    ? "Limited search element already moving"
+    : "No safe reachable reacquisition position; reassess periodically";
+  return true;
 }
