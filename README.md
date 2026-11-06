@@ -24,7 +24,7 @@ Each side has four riflemen (one leader), one light machine gunner and one medic
 - Implemented: grid pathfinding, limited AI sight with solid-wall occlusion, short-lived individual contact memory, leader coordination, directional cover (solid wall, low wall, fence), probabilistic weapon hits, six injury locations, arm accuracy penalties, leg speed penalties, incapacitation, fatal head/torso damage, and medic recovery.
 - Original procedural placeholder art: four single-story houses, grass yards, streets, perimeter barriers, door openings, simple soldiers, shadows, muzzle flashes and tracers. Roofs disappear when a living active soldier is inside. Interiors are single-floor and unfurnished. Doorways are permanently open; interactive door mechanics are unfinished.
 - Injury visuals are basic: hit flash, asymmetric walking/limping and a horizontal crawling/incapacitated pose. Lighting is a dark palette with local muzzle glows, not dynamic shadow casting. Sprites are geometric placeholders, not polished character animation.
-- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic projectiles, suppression, sound, enemy fog-of-war rendering, collision avoidance between soldiers, or advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
+- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic projectiles, suppression, sound, enemy fog-of-war rendering, advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
 - Random battles may last a long time or stall after ammunition is exhausted; there is no time-limit victory. Medics currently have unlimited treatment supplies. Balance and performance on physical iPhones need further playtesting.
 
 ## Validate
@@ -67,3 +67,11 @@ Physical iPhone Safari validation and the actual hosted deployment must be check
 ## Structure
 
 `src/world.js` owns geometry, cover, visibility and pathfinding; `src/simulation.js` owns time-stepped battle rules independent of Phaser; `src/main.js` owns rendering, camera gestures and UI; `src/style.css` owns the mobile layout. Tests live in `test/`.
+
+## AI navigation diagnostics
+
+Tap a soldier to see its AI state, current order, resolved movement target (grid coordinates), and navigation result. `Moving`, `Arrived`, `Waiting for spacing`, `No route`, and `Holding` distinguish movement failures from legitimate reloading, treatment and combat holds. These values use simulation time, so the same navigation rules apply at 1×, 2× and 4×.
+
+Navigation fixes preserve the initial advance orders until the normal eight-second order refresh. Later random or last-contact orders resolve to reachable terrain. Previously, the first update discarded initial orders and could select a wall or fence; empty paths silently left soldiers at spawn. Squads now use nearby distinct formation destinations, and physical movement checks soldiers of either team (including living incapacitated casualties), with periodic local route retries around congestion. This prevents new overlap; it does not add advanced formations or guarantee passage through an occupied choke point. Shooting, treatment, reloading and holding useful cover remain legitimate reasons to stand still.
+
+`npm test` includes 200 seeded startup/order checks, 100 seeded 40-second battle checks for terrain collisions and soldier separation, shared-destination and congestion-replan regressions, and the original combat/medic tests. Physical iPhone Safari retesting remains necessary; these deterministic simulation tests do not emulate device performance.

@@ -240,7 +240,7 @@ class Battlefield extends Phaser.Scene {
     const u = this.selected;
     if (u)
       document.querySelector("#inspect").textContent =
-        `${u.name} · ${u.role} · ${u.state} | Ammo ${u.ammo}/${u.reserve}${u.reload > 0 ? " (reloading)" : ""}\n${parts.map((p) => `${p}: ${Math.ceil(u.health[p])}`).join(" · ")}`;
+        `${u.name} · ${u.role} · ${u.state} | Order: ${u.order} | Target: ${u.target ? `${u.target.x},${u.target.y}` : "—"} | ${u.navigation} | Ammo ${u.ammo}/${u.reserve}${u.reload > 0 ? " (reloading)" : ""}\n${parts.map((p) => `${p}: ${Math.ceil(u.health[p])}`).join(" · ")}`;
     else
       document.querySelector("#inspect").textContent =
         "Tap a soldier to inspect • Drag to pan • Pinch to zoom";
