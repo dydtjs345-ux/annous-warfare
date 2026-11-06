@@ -1,3 +1,4 @@
+import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
 import { CombatVisuals } from "./combat-visuals.js";
 import { inspectSoldier } from "./inspection.js";
@@ -29,6 +30,7 @@ class Battlefield extends Phaser.Scene {
     this.ground = this.add.graphics();
     this.g = this.add.graphics();
     this.visuals = new CombatVisuals();
+    this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);
     this.newMatch();
     this.input.on("pointerdown", (p) => {
@@ -354,6 +356,12 @@ class Battlefield extends Phaser.Scene {
     if (this.viewMode !== "Free" && this.viewMode !== "Map")
       this.frameCamera(false);
     this.visuals.update(this.battle, delta / 1000, this.speed, this.paused);
+    this.grenadeVisuals.update(
+      this.battle,
+      delta / 1000,
+      this.speed,
+      this.paused,
+    );
     const g = this.g,
       v = this.cameras.main.worldView;
     g.clear();
@@ -385,6 +393,7 @@ class Battlefield extends Phaser.Scene {
           this.drawBuilding(g, h);
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
+    this.grenadeVisuals.draw(g, this.iso, v);
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =
@@ -397,7 +406,7 @@ class Battlefield extends Phaser.Scene {
         .filter(Boolean)
         .join(" / ");
       document.querySelector("footer").textContent =
-        `${phases || "ELIMINATION"} · ${W}×${H} · seed ${this.seed}`;
+        `${phases || "ELIMINATION"} · ${W}×${H} · seed ${this.seed} · G ${this.battle.grenadeStats.thrown}/${this.battle.grenadeStats.detonated}`;
     }
     if (this.battle.result) {
       const o = document.querySelector("#outcome");

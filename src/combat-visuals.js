@@ -170,7 +170,7 @@ export class CombatVisuals {
       phase = Math.sin(m.stride),
       floorY = p.y;
     const down = m.pose === "dead" || m.pose === "incapacitated",
-      prone = down || m.crawl;
+      prone = down || m.crawl || m.pose === "fullCover";
     const crouch = CROUCHED.has(m.pose) || (m.covered && !m.moving);
     const bob = m.moving
       ? m.limp
@@ -278,7 +278,10 @@ export class CombatVisuals {
         length = Math.hypot(dx, dy) || 1;
       dx /= length;
       dy /= length;
-      const handY = p.y + (crouch ? -11 : prone ? -6 : -14) + bob;
+      const handY =
+        p.y +
+        (m.pose === "fullCover" ? -4 : crouch ? -11 : prone ? -6 : -14) +
+        bob;
       // Sleeves and two bent forearms meet the weapon's authoritative hand axis.
       if (!["treating", "grenadePrep", "grenadeThrow"].includes(m.pose)) {
         g.lineStyle(3, cloth);

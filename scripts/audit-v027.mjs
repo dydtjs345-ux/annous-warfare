@@ -1,3 +1,4 @@
+import { GrenadeVisuals } from "../src/grenade-visuals.js";
 // Deterministic read-only audit, shared inputs for milestone comparisons.
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -79,6 +80,8 @@ for (let index = 0; index < Number(count); index++) {
     if (scenario === "reduced-reserves") u.reserve = Math.floor(u.reserve / 2);
     if (scenario === "leg-injuries") u.health["left leg"] = 65;
   }
+  const visual = process.env.AW_V027_RENDER ? new GrenadeVisuals() : null;
+  const sink = new Proxy({}, { get: () => () => {} });
   const initial = b.units.map((u) => [u.x, u.y]),
     hash = createHash("sha256");
   const m = {
@@ -137,6 +140,11 @@ for (let index = 0; index < Number(count); index++) {
   };
   for (; turn < 18000 && !b.result; turn++) {
     b.step(0.1);
+    if (visual) {
+      const speed = 1 << ((seed - 1) % 3);
+      visual.update(b, 0.1 / speed, speed);
+      visual.draw(sink, (x, y) => ({ x: x * 20, y: y * 10 }));
+    }
     if (
       m.firstContact === null &&
       b.units.some((u) => u.active && u.visibleEnemies.length)

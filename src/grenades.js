@@ -299,7 +299,12 @@ export function grenadeAction(b, u, dt) {
         thrownAt: b.time,
         detonateAt: b.time + FRAG.fuse,
       });
-      emitVisualEvent(b, "grenadeThrow", u, { x: p.x, y: p.y });
+      emitVisualEvent(b, "grenadeThrow", u, {
+        x: p.x,
+        y: p.y,
+        startX: u.x,
+        startY: u.y,
+      });
       u.grenadePrep = null;
       u.state = "Throwing grenade";
     }
