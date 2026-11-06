@@ -1,4 +1,13 @@
 import {
+  accuracyFactor,
+  decaySuppression,
+  incomingFire,
+  updateSquadTactics,
+  localCover,
+  followManeuver,
+  careRouteSafe,
+} from "./tactics.js";
+import {
   W,
   H,
   blocked,
@@ -63,6 +72,9 @@ export class Battle {
           target: null,
           navigation: "Awaiting update",
           replanAt: 0,
+          suppression: 0,
+          nextAssessment: 0,
+          coverTarget: null,
         });
   }
   injury(u, p, damage) {
@@ -89,7 +101,9 @@ export class Battle {
     if (this.result) return;
     this.time += dt;
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
+    for (const u of this.units) decaySuppression(u, dt);
     for (let team = 0; team < 2; team++) {
+      updateSquadTactics(this, team);
       const squad = this.squads[team],
         alive = this.units.filter((u) => u.team === team && u.active),
         leader = alive.find((u) => u.role === "Leader") || alive[0];
@@ -125,7 +139,13 @@ export class Battle {
         )
         .sort((a, b) => dist(u, a) - dist(u, b));
       const enemy = enemies[0];
-      if (enemy) u.memory = { x: enemy.x, y: enemy.y, time: this.time };
+      if (enemy)
+        u.memory = {
+          x: enemy.x,
+          y: enemy.y,
+          enemyId: enemy.id,
+          time: this.time,
+        };
       if (u.reload > 0) {
         u.reload -= dt;
         u.state = "Reloading";
@@ -137,7 +157,7 @@ export class Battle {
         }
         continue;
       }
-      if (u.role === "Medic" && !enemy) {
+      if (u.role === "Medic" && !enemy && u.suppression < 0.55) {
         const patient = this.units
           .filter(
             (a) =>
@@ -147,7 +167,10 @@ export class Battle {
               Math.min(...Object.values(a.health)) < 65,
           )
           .sort((a, b) => dist(u, a) - dist(u, b))[0];
-        if (patient) {
+        if (
+          patient &&
+          (dist(u, patient) < 1.4 || careRouteSafe(this, u, patient))
+        ) {
           u.state = "Moving to casualty";
           u.order = "Treat casualty";
           if (dist(u, patient) < 1.4) {
@@ -190,11 +213,13 @@ export class Battle {
             b: { x: enemy.x, y: enemy.y },
             life: 0.09,
           });
+          incomingFire(this, u, enemy);
           const arms = (u.health["left arm"] + u.health["right arm"]) / 200;
           const chance = Math.max(
             0.06,
             (0.72 - dist(u, enemy) * 0.033) *
               (0.4 + 0.6 * arms) *
+              accuracyFactor(u) *
               (1 - cover(enemy, u)),
           );
           if (this.random() < chance) {
@@ -205,33 +230,36 @@ export class Battle {
                 : roll < 0.55
                   ? "torso"
                   : parts[2 + Math.floor(this.random() * 4)];
+            this.squads[u.team].lastProgress = this.time;
             this.injury(enemy, p, p === "head" ? 65 : 28 + this.random() * 24);
           }
         }
-        if (cover(u, enemy) < 0.25 && u.cooldown > 0.15) {
-          const options = [];
-          for (let dx = -2; dx <= 2; dx++)
-            for (let dy = -2; dy <= 2; dy++) {
-              const a = { x: Math.round(u.x) + dx, y: Math.round(u.y) + dy };
-              if (
-                !blocked(a.x, a.y) &&
-                sight(a, enemy) &&
-                cover(a, enemy) > 0.25
-              )
-                options.push(a);
-            }
-          if (options.length) {
-            u.state = "Seeking cover";
-            u.order = "Seek cover";
-            this.move(
-              u,
-              options.find((a) => this.spaceFree(u, a)) || options[0],
-              dt,
-            );
-          }
-        }
+        const maneuver = this.squads[u.team].maneuver;
+        if (!followManeuver(this, u, maneuver, dt))
+          localCover(this, u, enemies, dt);
         continue;
       }
+      const tactical = this.squads[u.team],
+        maneuver = tactical.maneuver;
+      const recent = u.memory && this.time - u.memory.time < 8;
+      if (followManeuver(this, u, maneuver, dt)) continue;
+      if (recent && localCover(this, u, [u.memory], dt)) continue;
+      if (
+        recent &&
+        (u.suppression > 0.55 ||
+          (maneuver && maneuver.until > this.time) ||
+          this.time - u.memory.time < 3)
+      ) {
+        u.state = u.suppression > 0.55 ? "Pinned" : "Holding contact";
+        u.order = tactical.intention;
+        continue;
+      }
+      if (!recent && u.suppression > 0.65) {
+        u.state = "Pinned";
+        u.order = "Hold under incoming fire";
+        continue;
+      }
+      if (!recent) u.coverTarget = null;
       const squad = this.squads[u.team],
         leader = this.units.find(
           (a) => a.team === u.team && a.role === "Leader" && a.active,
