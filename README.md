@@ -1,4 +1,4 @@
-# Autonomous Warfare v0.2.1
+# Autonomous Warfare v0.2.2
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
@@ -163,3 +163,50 @@ The full suite contains 56 existing simulation regressions plus 17 coordination 
 After merging and successful Pages deployment, run repeated battles in portrait and landscape at 1×, 2× and 4×. Tap and scroll the inspector to watch a radio-only, out-of-range contact produce a recon assignment and actual movement; confirm other soldiers cover rather than sharing one destination. Watch the objective survive ordinary fresh radio updates. Check blocked approaches, body-adjacent movement, a nearby casualty and leader loss (acting commander/task ownership should update), and late one-/few-survivor searches. Verify strong firing positions may remain stationary while contributing. Test pinch/pan, pause/resume, restart, and background/foreground timing. Chromium viewport checks are not physical Safari performance validation.
 
 Known limits: bounded heuristic search can miss a distant safe route; overwatch is basic, not full fire-and-maneuver doctrine. Frame-level target interruptions increased in the measured sample even though committed abandonment fell. Infinite medical supplies, ammunition exhaustion, genuinely blocked choke points, and conservative danger estimates can still delay or stalemate a match. No casualties are dragged or evacuated.
+
+## v0.2.2 combat animations and activity visualization
+
+This release observes the existing simulation; it does not alter tactical decisions, navigation, weapon statistics, injuries or treatment speed. The parity script compares ten complete fixed-seed matches against main `5008af3d90a6305011e38efe52fdd6a5ce4cb410`, including five-second/final combat-state fingerprints, RNG calls/state, duration and outcome. See [v0.2.2 validation](reports/v022-validation.md).
+
+### Visual key
+
+- Idle/observation uses a stable upright posture; protected observation uses a lower posture, a muted green foot arc, and a short blue observation mark. A small open-ground dot means no evaluated protection against a known lane, not a guarantee about every unseen threat.
+- Movement follows **actual displacement**, not a queued path or AI label. Brisk/slow gait, limping and crawling reflect measured travel and existing leg injuries. Gait hysteresis avoids flickering at short grid-end steps. There is no new sprint mechanic. Amber chevrons mark actual movement toward cover, blue chevrons mark recon/repositioning, and green chevrons mark casualty approaches.
+- Aiming visibly braces the weapon along its simulation direction. Every muzzle flash, short tracer and recoil begins with a real shot event; an Engaging label alone cannot fire the animation. LMGs retain their real faster cadence and have a longer weapon/ammo pack. Riflemen, original leaders and medics keep their existing faction/role markers.
+- Reloading lowers the posture and handles the magazine; the small blue progress line follows the actual reload countdown. Suppression adds a restrained amber pressure ring/ducked posture. Damage creates a brief reaction mark; existing wounds have a muted pip, with leg wounds changing the gait.
+- Medics approach casualties, kneel and work while the real treatment timer advances. A small patient pulse marks an actual healing tick; a plus marks completion of the existing basic-care threshold (all parts at least 65), **not** full recovery. Healing remains eight points per treatment tick under the unchanged medical rules.
+- Incapacitation/death play a short settling motion and remain prone with gold/red markers. Dead units never aim, recoil, reload or walk. Their faction tint and role markers remain legible. Living incapacitated units may receive actual treatment feedback.
+
+Pinch to zoom in for detailed posture/hand motion; overview zoom prioritizes the original battlefield layout. The procedural art remains simple pixel-style geometry, not high-resolution character art or 3D.
+
+### Cumulative activity in the inspector
+
+Scroll to the bottom of a tapped soldier's existing panel. Seven categories partition active simulation time: **engaging, searching/recon, moving/repositioning, holding cover, treating, reloading, observing/waiting**. Priority is treatment → reload → real engagement/aim → recon movement → other movement → stationary known cover → observing/waiting. Each active fixed-step interval enters exactly one category, even when a soldier fires while moving. Incapacitated/dead time is excluded, counters stop at battle completion, and Restart resets them. Accounting uses the end-of-step authoritative state (normally 0.05-second resolution); displayed tenths may not sum perfectly due to rounding.
+
+A separate non-overlapping split shows **contribution, preparation and passive waiting**. Contribution requires engagement, direct observation, actual treatment, verified overwatch of a progressing investigator or a fresh protected observation lane. Mere travel is preparation until it produces such a contribution; reloading is preparation too. A soldier does not receive contribution credit merely for moving or having an assignment label. Passive waiting is a measured lack of those activities, not a declaration that every tactical hold is defective. These per-soldier counters are not directly interchangeable with the earlier Hotfix 2 aggregate benchmark.
+
+### Separation and performance
+
+`src/presentation-state.js` observes real movement/reload transitions and receives shot, damage and healing events from the existing simulation. `src/combat-visuals.js` owns render-only effect clocks and reusable per-soldier pose models. No animation reads or writes combat outcomes. Events are bounded (96 entries, short simulation-time history), traces are capped, and static obstacle/drawable records and effect models are reused.
+
+Gait and treatment/reload progress use simulation distance/counters. Transient effects scale for 1×/2×/4×, with a short render-only visibility floor so real shots are not lost between fast simulation updates. Pause freezes presentation clocks; result/death effects settle without advancing the simulation. Low frame rates may coalesce multiple real muzzle flashes into one visible flash; they never generate additional shots.
+
+### Validate and test on iPhone
+
+```sh
+npm test
+npm run build
+npm run check:animation-parity -- . reports/v022-after.json reports/v022-baseline.json
+```
+
+The full suite has 73 existing AI/navigation/medic regressions and 17 presentation/activity regressions (90 total). The ten-match parity comparison is separate. No new dependencies or backend are required. GitHub Pages build/base configuration is unchanged.
+
+After review/merge and successful Pages deployment, open https://dydtjs345-ux.github.io/annous-warfare/ in iPhone Safari:
+
+1. Test portrait/landscape, drag/pinch, tap selection, inspector scrolling, Pause/Resume and Restart. Pause should freeze poses/effects and counters; Restart should clear old effects and activity totals.
+2. Zoom into a fight at 1×, then repeat at 2×/4×. Compare actual ammo decreases to brief flashes/recoil, aiming between shots, rifle/LMG cadence and actual reload countdowns.
+3. Watch cover-seeking movement, covered observation and exposed stationary units. A blocked or queued route must not play walking in place. Check injured limping/crawling and restrained suppression/hit feedback.
+4. Watch a medic actually treat a casualty: kneeling and work motion should stop on interruption, health pulses should accompany healing, and the completion plus should mean basic care finished. Incapacitated/dead units should not play combat animations.
+5. Scroll through activity totals. Movement without observation should be preparation rather than automatically useful contribution; all seven primary categories should partition active time. Try background/foreground and long matches for performance and stale effects.
+
+Known limits: these are procedural placeholder poses, not a full anatomical sprite set. Range, damage, healing, suppression and AI remain the same. Some cues are subtle at overview zoom. Desktop Chromium mobile emulation and bounded-memory tests do not prove physical iPhone Safari frame rate, battery use or behavior after OS suspension; those require device testing.
