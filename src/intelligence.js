@@ -1,3 +1,4 @@
+import { observes } from "./security.js";
 import { sight, cover } from "./world.js";
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export function initializeIntel(battle) {
@@ -147,7 +148,7 @@ export function perceive(battle) {
         e.team !== u.team &&
         e.active &&
         distance(u, e) < (e.hit > 0 ? Math.max(15, u.range) : u.range) &&
-        sight(u, e)
+        (battle.tacticalEnabled ? observes(u, e) : sight(u, e))
       ) {
         u.visibleEnemies.push(e);
         visible.set(`${u.team}:${e.id}`, true);
@@ -179,7 +180,7 @@ export function perceive(battle) {
             u.team === team &&
             u.active &&
             distance(u, c) < u.range &&
-            sight(u, c) &&
+            (battle.tacticalEnabled ? observes(u, c) : sight(u, c)) &&
             (!battle.tacticalEnabled || cover(c, u) < 0.58),
         );
       if (cleared && c.clearedAt == null) c.clearedAt = battle.time;

@@ -229,11 +229,19 @@ test("arrived escorts refresh obsolete support points without replacing a useful
   assert.notDeepEqual(escort.assignment.target, old.target);
   assert.equal(escort.assignment.leadId, lead.id);
   assert.ok(escort.route.length);
-  const y = escort.y;
+  const beforeMove = { x: escort.x, y: escort.y };
+  const goalDistance = Math.hypot(
+    escort.x - escort.assignment.target.x,
+    escort.y - escort.assignment.target.y,
+  );
   assert.equal(followAssignment(b, escort, 0.2), true);
   assert.equal(escort.state, "Following search element");
   assert.ok(
-    escort.y > y,
+    Math.hypot(escort.x - beforeMove.x, escort.y - beforeMove.y) > 0 &&
+      Math.hypot(
+        escort.x - escort.assignment.target.x,
+        escort.y - escort.assignment.target.y,
+      ) < goalDistance,
     "escort actually advances toward refreshed support point",
   );
 });

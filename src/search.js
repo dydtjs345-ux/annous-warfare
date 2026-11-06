@@ -1,3 +1,4 @@
+import { observes, formationDesired } from "./security.js";
 import { W, H, blocked, sight, key } from "./world.js";
 import { searchRoutes } from "./search-path.js";
 import { receivingTreatment } from "./medical.js";
@@ -53,7 +54,9 @@ export function updateSearchState(b, team) {
     for (const node of b.searchNodes)
       if (
         own.some(
-          (u) => distance(u, node) <= Math.min(10, u.range) && sight(u, node),
+          (u) =>
+            distance(u, node) <= Math.min(10, u.range) &&
+            (b.tacticalEnabled ? observes(u, node) : sight(u, node)),
         )
       ) {
         if (!Number.isFinite(s.seen[node.id])) s.lastProgress = b.time;
@@ -229,7 +232,7 @@ export function coordinateSearch(
         u.assignment?.searchRevision === s.revision &&
         distance(u, u.assignment.target) < 0.5 &&
         distance(u, s.goal) < 4 &&
-        sight(u, s.goal),
+        (b.tacticalEnabled ? observes(u, s.goal) : sight(u, s.goal)),
     );
   const failed = s.goal && moving.some((u) => u.assignment?.failed);
   const expired = s.goal && b.time > s.goal.until;
@@ -289,7 +292,8 @@ export function coordinateSearch(
       a?.type === "escort" &&
       (a.leadId !== lead.id ||
         distance(a.leadAnchor, lead) > 3 ||
-        (distance(u, a.target) < 0.5 && distance(u, lead) > 4.5));
+        (distance(u, a.target) < 0.5 &&
+          distance(u, lead) > (a.supportDistance ?? 4) + 0.5));
     if (
       !a ||
       a.type !== type ||
@@ -299,10 +303,17 @@ export function coordinateSearch(
     ) {
       const desired = primary
         ? { x: s.goal.x + (moving.indexOf(u) ? 1 : 0), y: s.goal.y }
-        : {
-            x: lead.x - Math.cos(lead.facing) * 3,
-            y: lead.y - Math.sin(lead.facing) * 3,
-          };
+        : b.tacticalEnabled
+          ? formationDesired(
+              b,
+              u,
+              lead,
+              alive.filter((a) => !moving.includes(a)).indexOf(u),
+            )
+          : {
+              x: lead.x - Math.cos(lead.facing) * 3,
+              y: lead.y - Math.sin(lead.facing) * 3,
+            };
       const p = destination(b, u, desired, reserved);
       if (!p) {
         assign(u, "defend", "No available distinct search position", {});
@@ -318,6 +329,9 @@ export function coordinateSearch(
           searchRevision: s.revision,
           leadId: lead.id,
           leadAnchor: { x: lead.x, y: lead.y },
+          supportDistance: b.tacticalEnabled
+            ? Math.max(4, distance(p, lead) + 0.5)
+            : 4,
           lastMovement: b.time,
           anchor: { x: u.x, y: u.y },
           until: s.goal.until,
@@ -357,7 +371,10 @@ export function followSearch(b, u, dt) {
     b.move(u, a.target, dt);
     return true;
   }
-  if (a.type === "escort" && distance(u, b.units[a.leadId]) <= 4) {
+  if (
+    a.type === "escort" &&
+    distance(u, b.units[a.leadId]) <= (a.supportDistance ?? 4)
+  ) {
     u.state = "Covering search";
     u.order = "Observe and support the moving search element";
     u.holdReason = "Within supporting distance of assigned search element";

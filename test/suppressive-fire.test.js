@@ -8,7 +8,8 @@ import {
 import { terrainSight } from "../src/world.js";
 function fixture() {
   const b = new Battle(() => 0.99, { tactical: true });
-  for (const u of b.units) Object.assign(u, { active: false, dead: true, visibleEnemies: [] });
+  for (const u of b.units)
+    Object.assign(u, { active: false, dead: true, visibleEnemies: [] });
   const u = b.units[4],
     e = b.units[6];
   Object.assign(u, { active: true, dead: false, x: 3, y: 11 });
@@ -98,4 +99,12 @@ test("search, recon, medic care, full cover and weapon handling take priority ov
   u.reload = 0;
   u.role = "Medic";
   assert.equal(suppressiveFire(b, u), false);
+});
+test("a casualty cannot retain an active suppression-task diagnostic", () => {
+  const { b, u } = fixture();
+  suppressiveFire(b, u);
+  assert.equal(u.suppressionTask.active, true);
+  b.injury(u, "head", 200);
+  b.step(0.1);
+  assert.equal(u.suppressionTask.active, false);
 });

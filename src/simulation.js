@@ -1,3 +1,4 @@
+import { updateSecurity } from "./security.js";
 import { coordinateFireMovement } from "./fire-movement.js";
 import { suppressiveFire } from "./suppressive-fire.js";
 import { updatePosture, holdPosture, releasePosture } from "./postures.js";
@@ -180,7 +181,10 @@ export class Battle {
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
     updateGrenades(this);
-    for (const u of this.units) updatePosture(this, u);
+    for (const u of this.units) {
+      updatePosture(this, u);
+      updateSecurity(this, u);
+    }
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
@@ -479,6 +483,8 @@ export class Battle {
       this.move(u, this.formationGoal(u, goal), dt);
     }
     for (const u of this.units) {
+      if (u.suppressionTask && u.state !== "Suppressing last-known")
+        u.suppressionTask.active = false;
       if (u.active) updateProgress(this, u);
       refreshDiagnostics(this, u);
     }
@@ -718,10 +724,13 @@ export class Battle {
         sight(u, e) &&
         dist(u, e) <= u.range,
     );
+    if (this.tacticalEnabled) u.movementHeading = Math.atan2(dy, dx);
     if (u.firedAt !== this.time)
       u.facing = aiming
         ? Math.atan2(aiming.y - u.y, aiming.x - u.x)
-        : Math.atan2(dy, dx);
+        : this.tacticalEnabled
+          ? (u.observationHeading ?? Math.atan2(dy, dx))
+          : Math.atan2(dy, dx);
     u.navigation = "Moving";
     if (d <= step) u.route.shift();
     return true;
