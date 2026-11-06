@@ -1,0 +1,878 @@
+[
+  {
+    "at": 4.4,
+    "id": 3,
+    "position": [
+      8.83,
+      13
+    ],
+    "goal": "10,15",
+    "direction": -0.25539495305783394,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 4.5,
+    "id": 6,
+    "position": [
+      21.659999999999997,
+      10
+    ],
+    "goal": "21,13",
+    "direction": 3.141592653589793,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 4.6,
+    "id": 0,
+    "position": [
+      7,
+      9.83
+    ],
+    "goal": "7,9",
+    "direction": 0,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 4.999999999999998,
+    "id": 7,
+    "position": [
+      20.489999999999995,
+      10
+    ],
+    "goal": "21,9",
+    "direction": 3.141592653589793,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 5.799999999999995,
+    "id": 1,
+    "position": [
+      8.68,
+      10
+    ],
+    "goal": "11,11",
+    "direction": 0.3855342677050022,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 6.999999999999991,
+    "id": 11,
+    "position": [
+      22.97999999999999,
+      13
+    ],
+    "goal": "21,16",
+    "direction": -2.905950412535658,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 7.19999999999999,
+    "id": 8,
+    "position": [
+      20.858491233968756,
+      13.167595493933868
+    ],
+    "goal": "21,14",
+    "direction": -2.84690701831453,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 7.999999999999988,
+    "id": 4,
+    "position": [
+      7,
+      12.66
+    ],
+    "goal": "7,14",
+    "direction": 0.048854979931087054,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 8.899999999999984,
+    "id": 10,
+    "position": [
+      24.14999999999999,
+      15
+    ],
+    "goal": "21,14",
+    "direction": -2.8410781857257783,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 10.699999999999978,
+    "id": 3,
+    "position": [
+      8.83,
+      13
+    ],
+    "goal": "7,16",
+    "direction": 0.16747807851794763,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 11.199999999999976,
+    "id": 9,
+    "position": [
+      20.853823272088338,
+      15.1401368946373
+    ],
+    "goal": "22,17",
+    "direction": 3.141592653589793,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 16.19999999999996,
+    "id": 9,
+    "position": [
+      21,
+      15.431410200139602
+    ],
+    "goal": "19,15",
+    "direction": -2.7892803752070936,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 17.999999999999986,
+    "id": 5,
+    "position": [
+      6.17,
+      13
+    ],
+    "goal": "7,16",
+    "direction": -0.21428654975684558,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 18.39999999999999,
+    "id": 2,
+    "position": [
+      9.048006986137107,
+      11
+    ],
+    "goal": "7,12",
+    "direction": 0.11297998945778918,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 18.699999999999996,
+    "id": 9,
+    "position": [
+      19.289262750174494,
+      15
+    ],
+    "goal": "20,17",
+    "direction": -2.778406888852156,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 18.9,
+    "id": 6,
+    "position": [
+      21,
+      12.17
+    ],
+    "goal": "21,9",
+    "direction": 2.8094027862963924,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 23.800000000000068,
+    "id": 10,
+    "position": [
+      21,
+      13.98
+    ],
+    "goal": "22,13",
+    "direction": -1.6147142572579423,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 25.100000000000087,
+    "id": 0,
+    "position": [
+      20.368259381041074,
+      3
+    ],
+    "goal": "20,3",
+    "direction": 1.4375898299599676,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 26.600000000000108,
+    "id": 5,
+    "position": [
+      5.32,
+      13
+    ],
+    "goal": "7,16",
+    "direction": 0.23951266462924073,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 26.600000000000108,
+    "id": 10,
+    "position": [
+      21.340000000000003,
+      13
+    ],
+    "goal": "21,16",
+    "direction": 2.9979751270469057,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 26.70000000000011,
+    "id": 4,
+    "position": [
+      7.528250505799078,
+      15
+    ],
+    "goal": "9,17",
+    "direction": -0.14537993337096553,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.20000000000013,
+    "id": 10,
+    "position": [
+      20.83,
+      15
+    ],
+    "goal": "20,15",
+    "direction": -1.6116069881679724,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.500000000000135,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.600000000000136,
+    "id": 10,
+    "position": [
+      20.489999999999995,
+      15
+    ],
+    "goal": "20,15",
+    "direction": -1.5832956758142578,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.700000000000138,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.80000000000014,
+    "id": 10,
+    "position": [
+      20.489999999999995,
+      15
+    ],
+    "goal": "20,15",
+    "direction": -1.5832956758142578,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 28.90000000000014,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 29.800000000000153,
+    "id": 10,
+    "position": [
+      21,
+      15.68
+    ],
+    "goal": "22,15",
+    "direction": -1.6089101562552877,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 29.900000000000155,
+    "id": 10,
+    "position": [
+      21,
+      15.85
+    ],
+    "goal": "22,17",
+    "direction": -2.721514185220596,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 30.000000000000156,
+    "id": 10,
+    "position": [
+      21,
+      15.68
+    ],
+    "goal": "22,15",
+    "direction": -1.6089101562552877,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 32.60000000000019,
+    "id": 0,
+    "position": [
+      21.140337906633796,
+      3.1218490372092544
+    ],
+    "goal": "22,3",
+    "direction": 1.4992387169212822,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 34.60000000000022,
+    "id": 10,
+    "position": [
+      21,
+      14.49
+    ],
+    "goal": "21,14",
+    "direction": 3.117045747246276,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 35.90000000000024,
+    "id": 5,
+    "position": [
+      2.66,
+      13
+    ],
+    "goal": "4,16",
+    "direction": 0.19139382233241253,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 36.00000000000024,
+    "id": 4,
+    "position": [
+      7.128982234393261,
+      15.15003186618544
+    ],
+    "goal": "7,16",
+    "direction": -0.06130268661930375,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 36.300000000000246,
+    "id": 10,
+    "position": [
+      21,
+      13.98
+    ],
+    "goal": "20,13",
+    "direction": -1.5707963267948966,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 37.10000000000026,
+    "id": 10,
+    "position": [
+      20.858491233968756,
+      13.167595493933868
+    ],
+    "goal": "21,16",
+    "direction": -3.0587715558833284,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 37.40000000000026,
+    "id": 10,
+    "position": [
+      20.943657862027578,
+      13.335139074669087
+    ],
+    "goal": "20,13",
+    "direction": -1.5626384222657925,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 37.600000000000264,
+    "id": 10,
+    "position": [
+      20.977588655924357,
+      13.337394510950826
+    ],
+    "goal": "21,16",
+    "direction": 2.978529944362344,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 38.10000000000027,
+    "id": 10,
+    "position": [
+      21,
+      14.17
+    ],
+    "goal": "20,15",
+    "direction": -1.5328711973514553,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 39.60000000000029,
+    "id": 0,
+    "position": [
+      20.859662093366204,
+      3.1218490372092544
+    ],
+    "goal": "20,3",
+    "direction": 1.6280775929225306,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 40.3000000000003,
+    "id": 10,
+    "position": [
+      20.489999999999995,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.909511690774211,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 40.3000000000003,
+    "id": 11,
+    "position": [
+      27,
+      13.83
+    ],
+    "goal": "27,16",
+    "direction": 3.03630520585142,
+    "exposure": 0.42000000000000004,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 40.90000000000031,
+    "id": 4,
+    "position": [
+      7.005440302155646,
+      15.596742825252731
+    ],
+    "goal": "7,16",
+    "direction": -0.019651348145435878,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 41.200000000000315,
+    "id": 5,
+    "position": [
+      2.1681191799876105,
+      14.875217876998141
+    ],
+    "goal": "3,16",
+    "direction": 0.05400220894184051,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 41.30000000000032,
+    "id": 10,
+    "position": [
+      21,
+      15.68
+    ],
+    "goal": "20,15",
+    "direction": -1.5928099396614985,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 41.50000000000032,
+    "id": 10,
+    "position": [
+      21,
+      15.68
+    ],
+    "goal": "22,17",
+    "direction": -3.0849865246508257,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 41.900000000000325,
+    "id": 10,
+    "position": [
+      21,
+      16.02
+    ],
+    "goal": "20,15",
+    "direction": -1.5922382495927012,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 42.90000000000034,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 43.00000000000034,
+    "id": 10,
+    "position": [
+      20.489999999999995,
+      15
+    ],
+    "goal": "20,15",
+    "direction": -1.56581032217229,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 43.10000000000034,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 43.200000000000344,
+    "id": 10,
+    "position": [
+      20.489999999999995,
+      15
+    ],
+    "goal": "20,15",
+    "direction": -1.56581032217229,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 43.300000000000345,
+    "id": 10,
+    "position": [
+      20.659999999999997,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.91233433984118,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 43.40000000000035,
+    "id": 10,
+    "position": [
+      20.83,
+      15
+    ],
+    "goal": "22,15",
+    "direction": -1.56581032217229,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 45.00000000000037,
+    "id": 10,
+    "position": [
+      21.680000000000007,
+      15
+    ],
+    "goal": "21,14",
+    "direction": 3.141592653589793,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 46.30000000000039,
+    "id": 11,
+    "position": [
+      26.83188082001239,
+      15.875217876998141
+    ],
+    "goal": "26,16",
+    "direction": -3.000862459599568,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 63.000000000000625,
+    "id": 10,
+    "position": [
+      20.858491233968756,
+      11.167595493933868
+    ],
+    "goal": "21,14",
+    "direction": 3.141592653589793,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 65.40000000000056,
+    "id": 5,
+    "position": [
+      8,
+      13
+    ],
+    "goal": "7,16",
+    "direction": -0.2787799739826621,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 71.10000000000024,
+    "id": 10,
+    "position": [
+      26.714723464650575,
+      12.83904863338065
+    ],
+    "goal": "27,12",
+    "direction": -3.0888748284151033,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 75.00000000000001,
+    "id": 10,
+    "position": [
+      22.83,
+      13
+    ],
+    "goal": "21,14",
+    "direction": -2.9981051586120624,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 76.19999999999995,
+    "id": 5,
+    "position": [
+      7,
+      13.51
+    ],
+    "goal": "7,16",
+    "direction": -0.2793584617717892,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 76.29999999999994,
+    "id": 2,
+    "position": [
+      9,
+      11
+    ],
+    "goal": "7,12",
+    "direction": 0.11639435985915852,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 81.39999999999965,
+    "id": 10,
+    "position": [
+      20.714723464650575,
+      14.83904863338065
+    ],
+    "goal": "21,14",
+    "direction": -2.8437588312395716,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 82.89999999999957,
+    "id": 2,
+    "position": [
+      9.027321678390889,
+      11
+    ],
+    "goal": "7,12",
+    "direction": 0.11639435985915852,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 82.99999999999956,
+    "id": 5,
+    "position": [
+      7,
+      15.85
+    ],
+    "goal": "8,17",
+    "direction": -0.5208715956638612,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 91.0999999999991,
+    "id": 5,
+    "position": [
+      7,
+      15.17
+    ],
+    "goal": "7,16",
+    "direction": -0.4756019039798853,
+    "exposure": 0.42000000000000004,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 97.59999999999873,
+    "id": 5,
+    "position": [
+      7,
+      13.47
+    ],
+    "goal": "7,16",
+    "direction": 0,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 102.29999999999846,
+    "id": 10,
+    "position": [
+      19.27728642340097,
+      14.988620952576435
+    ],
+    "goal": "21,14",
+    "direction": -2.810377465420896,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 104.29999999999835,
+    "id": 2,
+    "position": [
+      8.8784703858966,
+      11
+    ],
+    "goal": "7,14",
+    "direction": 0.14888994760949759,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 105.69999999999827,
+    "id": 5,
+    "position": [
+      7,
+      11.430000000000001
+    ],
+    "goal": "7,9",
+    "direction": 0,
+    "exposure": 0.42000000000000004,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 110.09999999999802,
+    "id": 5,
+    "position": [
+      7.68,
+      10
+    ],
+    "goal": "7,9",
+    "direction": 0,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  },
+  {
+    "at": 110.79999999999798,
+    "id": 10,
+    "position": [
+      20.17,
+      15
+    ],
+    "goal": "21,16",
+    "direction": -2.7557927086251492,
+    "exposure": 0.42000000000000004,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 115.5999999999977,
+    "id": 5,
+    "position": [
+      7.699992846372539,
+      10
+    ],
+    "goal": "8,8",
+    "direction": 0.7853981633974481,
+    "exposure": 1,
+    "reason": "Meaningful directional protection gain; reachable route"
+  },
+  {
+    "at": 115.7999999999977,
+    "id": 5,
+    "position": [
+      7.4199957078235235,
+      10
+    ],
+    "goal": "7,9",
+    "direction": 0,
+    "exposure": 1,
+    "reason": "Urgent directional protection gain overrides movement budget"
+  }
+]

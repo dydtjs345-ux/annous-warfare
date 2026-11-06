@@ -1,0 +1,1297 @@
+[
+  {
+    "seed": 125,
+    "scenario": "standard",
+    "duration": 168.4999999999947,
+    "stalled": false,
+    "maxWait": 43.300000000000345,
+    "loops": 1,
+    "facingErrors": 0,
+    "navigationFailures": 14,
+    "reasons": {
+      "Injuries require a defensive role": 7
+    },
+    "samples": [
+      {
+        "time": 105.0999999999983,
+        "id": 4,
+        "x": 6.473972166132625,
+        "y": 13,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 30.384050527587533,
+          "left arm": 100,
+          "right arm": 65.96196476556361,
+          "left leg": 81.16191693209112,
+          "right leg": 100
+        },
+        "ammo": 21,
+        "mount": "unsupported",
+        "progress": 18.99999999999892,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 110.09999999999802,
+        "id": 4,
+        "x": 6.473972166132625,
+        "y": 13,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 30.384050527587533,
+          "left arm": 100,
+          "right arm": 65.96196476556361,
+          "left leg": 81.16191693209112,
+          "right leg": 100
+        },
+        "ammo": 21,
+        "mount": "unsupported",
+        "progress": 23.999999999998636,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 110.09999999999802,
+        "id": 10,
+        "x": 21,
+        "y": 12.409924893451482,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 22.99407777749002,
+          "left arm": 29.478586906567216,
+          "right arm": 100,
+          "left leg": 64.73533590137959,
+          "right leg": 100
+        },
+        "ammo": 50,
+        "mount": "unsupported",
+        "progress": 19.599999999998886,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 115.09999999999773,
+        "id": 10,
+        "x": 21,
+        "y": 12.409924893451482,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 22.99407777749002,
+          "left arm": 29.478586906567216,
+          "right arm": 100,
+          "left leg": 64.73533590137959,
+          "right leg": 100
+        },
+        "ammo": 50,
+        "mount": "unsupported",
+        "progress": 24.5999999999986,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 140.09999999999633,
+        "id": 10,
+        "x": 21,
+        "y": 13.887571603234674,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 22.99407777749002,
+          "left arm": 29.478586906567216,
+          "right arm": 70.42327024228871,
+          "left leg": 64.73533590137959,
+          "right leg": 67.49359479546547
+        },
+        "ammo": 39,
+        "mount": "unsupported",
+        "progress": 18.89999999999894,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 145.09999999999604,
+        "id": 10,
+        "x": 21,
+        "y": 13.887571603234674,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 22.99407777749002,
+          "left arm": 29.478586906567216,
+          "right arm": 70.42327024228871,
+          "left leg": 64.73533590137959,
+          "right leg": 67.49359479546547
+        },
+        "ammo": 39,
+        "mount": "unsupported",
+        "progress": 23.899999999998656,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 150.09999999999576,
+        "id": 10,
+        "x": 21,
+        "y": 13.507183773276957,
+        "state": "Patrolling",
+        "reason": "Searching without enemy position knowledge",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 22.99407777749002,
+          "left arm": 29.478586906567216,
+          "right arm": 70.42327024228871,
+          "left leg": 64.73533590137959,
+          "right leg": 67.49359479546547
+        },
+        "ammo": 39,
+        "mount": "unsupported",
+        "progress": 28.89999999999837,
+        "goal": {
+          "x": 15,
+          "y": 2
+        },
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 130,
+    "scenario": "short-contact",
+    "duration": 165.49999999999488,
+    "stalled": false,
+    "maxWait": 64.50000000000061,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 1,
+    "reasons": {
+      "Recon element has movement priority": 1,
+      "Reachable observation lane": 1,
+      "Injuries require a defensive role": 3
+    },
+    "samples": [
+      {
+        "time": 35.10000000000023,
+        "id": 0,
+        "x": 9,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Recon element has movement priority",
+        "alternative": null,
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 15.700000000000223,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 40.1000000000003,
+        "id": 0,
+        "x": 9,
+        "y": 7.83,
+        "state": "Reacquiring contact",
+        "reason": "Reachable observation lane",
+        "alternative": null,
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 20.700000000000294,
+        "goal": {
+          "x": 14,
+          "y": 3
+        },
+        "blocker": null
+      },
+      {
+        "time": 55.10000000000051,
+        "id": 9,
+        "x": 21,
+        "y": 15,
+        "state": "Awaiting coordination",
+        "reason": "Recon element has movement priority",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 32.7567918933928,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 80.85996718890965,
+          "right leg": 66.85463595576584
+        },
+        "ammo": 16,
+        "progress": 37.40000000000053,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 135.0999999999966,
+        "id": 3,
+        "x": 7,
+        "y": 15.156888535648118,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 27.292917707934976,
+          "left arm": 31.087632121518254,
+          "right arm": 78.5606387052685,
+          "left leg": 56.38316521421075,
+          "right leg": 0
+        },
+        "ammo": 16,
+        "progress": 18.89999999999894,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 140.09999999999633,
+        "id": 3,
+        "x": 7,
+        "y": 15.156888535648118,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 27.292917707934976,
+          "left arm": 31.087632121518254,
+          "right arm": 78.5606387052685,
+          "left leg": 56.38316521421075,
+          "right leg": 0
+        },
+        "ammo": 16,
+        "progress": 23.899999999998656,
+        "goal": null,
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 18,
+    "scenario": "short-contact",
+    "duration": 159.6999999999952,
+    "stalled": false,
+    "maxWait": 42.30000000000033,
+    "loops": 1,
+    "facingErrors": 0,
+    "navigationFailures": 5,
+    "reasons": {
+      "Injuries require a defensive role": 8,
+      "Reaction delay before new assignment": 1,
+      "Medic reserved for survival and actionable casualty care": 1
+    },
+    "samples": [
+      {
+        "time": 25.100000000000087,
+        "id": 7,
+        "x": 21.82442433840218,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 25.05729770474136,
+          "left arm": 63.98012438043952,
+          "right arm": 57.9532608166337,
+          "left leg": 48.86910807900131,
+          "right leg": 100
+        },
+        "ammo": 28,
+        "progress": 17.0000000000001,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 30.100000000000158,
+        "id": 7,
+        "x": 21.82442433840218,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 25.05729770474136,
+          "left arm": 63.98012438043952,
+          "right arm": 57.9532608166337,
+          "left leg": 48.86910807900131,
+          "right leg": 100
+        },
+        "ammo": 28,
+        "progress": 22.00000000000017,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 40.1000000000003,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 16.700000000000237,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 45.10000000000037,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 21.70000000000031,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 50.10000000000044,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 26.70000000000038,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 55.10000000000051,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 31.70000000000045,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 60.100000000000584,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 36.70000000000052,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 65.10000000000058,
+        "id": 1,
+        "x": 8.68,
+        "y": 8,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 29.120608545839787,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 19,
+        "progress": 41.700000000000514,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 95.09999999999887,
+        "id": 5,
+        "x": 7,
+        "y": 8.85,
+        "state": "Awaiting coordination",
+        "reason": "Reaction delay before new assignment",
+        "alternative": "Reaction delay before new assignment",
+        "health": {
+          "head": 100,
+          "torso": 36.557435784488916,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 19.299999999998903,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 120.09999999999745,
+        "id": 5,
+        "x": 7,
+        "y": 7.51,
+        "state": "Awaiting coordination",
+        "reason": "Medic reserved for survival and actionable casualty care",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 36.557435784488916,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 16.099999999999085,
+        "goal": null,
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 140,
+    "scenario": "leg-injuries",
+    "duration": 156.09999999999542,
+    "stalled": false,
+    "maxWait": 37.30000000000026,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 4,
+    "reasons": {
+      "Brief retry cooldown after completed/failed task": 1,
+      "Reaction delay before new assignment": 1,
+      "Medic reserved for survival and actionable casualty care": 3
+    },
+    "samples": [
+      {
+        "time": 50.10000000000044,
+        "id": 7,
+        "x": 20.137004656804095,
+        "y": 9.943026668739135,
+        "state": "Covering search",
+        "reason": "Cover the assigned recon approach",
+        "alternative": "Brief retry cooldown after completed/failed task",
+        "health": {
+          "head": 100,
+          "torso": 36.7641817163676,
+          "left arm": 100,
+          "right arm": 84.65000304952264,
+          "left leg": 32.59620499610901,
+          "right leg": 100
+        },
+        "ammo": 27,
+        "progress": 33.90000000000048,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 60.100000000000584,
+        "id": 10,
+        "x": 21.006501678430787,
+        "y": 13.599578357474808,
+        "state": "Covering search",
+        "reason": "Cover the assigned recon approach",
+        "alternative": "Reaction delay before new assignment",
+        "health": {
+          "head": 100,
+          "torso": 31.78090224415064,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 97,
+          "right leg": 100
+        },
+        "ammo": 22,
+        "mount": "unsupported",
+        "progress": 15.400000000000219,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 100.09999999999859,
+        "id": 5,
+        "x": 3.8804348609165285,
+        "y": 15.98638451978687,
+        "state": "Awaiting coordination",
+        "reason": "Medic reserved for survival and actionable casualty care",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 18.599999999998943,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 105.0999999999983,
+        "id": 5,
+        "x": 3.8804348609165285,
+        "y": 15.98638451978687,
+        "state": "Awaiting coordination",
+        "reason": "Medic reserved for survival and actionable casualty care",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 23.59999999999866,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 110.09999999999802,
+        "id": 5,
+        "x": 3.8804348609165285,
+        "y": 15.98638451978687,
+        "state": "Awaiting coordination",
+        "reason": "Medic reserved for survival and actionable casualty care",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 30,
+        "progress": 28.599999999998374,
+        "goal": null,
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 114,
+    "scenario": "short-contact",
+    "duration": 150.09999999999576,
+    "stalled": false,
+    "maxWait": 40.90000000000031,
+    "loops": 2,
+    "facingErrors": 0,
+    "navigationFailures": 0,
+    "reasons": {
+      "Injuries require a defensive role": 15
+    },
+    "samples": [
+      {
+        "time": 75.10000000000001,
+        "id": 3,
+        "x": 20.150653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 16.69999999999945,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 80.09999999999972,
+        "id": 3,
+        "x": 20.150653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 21.699999999999164,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 85.09999999999944,
+        "id": 3,
+        "x": 20.150653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 26.69999999999888,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 90.09999999999916,
+        "id": 3,
+        "x": 20.150653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 31.699999999998596,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 90.09999999999916,
+        "id": 4,
+        "x": 4.965708199716107,
+        "y": 15.011659212096523,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 43,
+          "torso": 31.515443431213498,
+          "left arm": 74.47176556289196,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 60,
+        "mount": "unsupported",
+        "progress": 15.199999999999136,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 95.09999999999887,
+        "id": 3,
+        "x": 20.150653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 36.69999999999831,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 95.09999999999887,
+        "id": 4,
+        "x": 4.965708199716107,
+        "y": 15.011659212096523,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 43,
+          "torso": 31.515443431213498,
+          "left arm": 74.47176556289196,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 60,
+        "mount": "unsupported",
+        "progress": 20.19999999999885,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 100.09999999999859,
+        "id": 3,
+        "x": 19.397387359530384,
+        "y": 3,
+        "state": "Patrolling",
+        "reason": "Searching without enemy position knowledge",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 41.69999999999803,
+        "goal": {
+          "x": 4,
+          "y": 3
+        },
+        "blocker": null
+      },
+      {
+        "time": 100.09999999999859,
+        "id": 4,
+        "x": 4.965708199716107,
+        "y": 15.011659212096523,
+        "state": "Watching reported sector",
+        "reason": "Short defensive reaction to approximate incoming fire",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 43,
+          "torso": 31.515443431213498,
+          "left arm": 74.47176556289196,
+          "right arm": 100,
+          "left leg": 100,
+          "right leg": 100
+        },
+        "ammo": 60,
+        "mount": "unsupported",
+        "progress": 25.199999999998568,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 130.0999999999969,
+        "id": 3,
+        "x": 15.50653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 19.299999999998917,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 135.0999999999966,
+        "id": 3,
+        "x": 15.50653160117404,
+        "y": 3,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 100,
+          "torso": 23.704797357320786,
+          "left arm": 100,
+          "right arm": 0,
+          "left leg": 69.65201587043703,
+          "right leg": 100
+        },
+        "ammo": 3,
+        "progress": 24.299999999998633,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 135.0999999999966,
+        "id": 10,
+        "x": 21,
+        "y": 14.194407344047159,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 24.285582680255175,
+          "left arm": 16.752674205228686,
+          "right arm": 100,
+          "left leg": 0,
+          "right leg": 30.539083674550056
+        },
+        "ammo": 25,
+        "mount": "unsupported",
+        "progress": 19.899999999998883,
+        "goal": null,
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 145,
+    "scenario": "standard",
+    "duration": 142.79999999999617,
+    "stalled": false,
+    "maxWait": 32.9000000000002,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 5,
+    "reasons": {},
+    "samples": []
+  },
+  {
+    "seed": 73,
+    "scenario": "standard",
+    "duration": 130.29999999999688,
+    "stalled": false,
+    "maxWait": 61.70000000000061,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 0,
+    "reasons": {
+      "Injuries require a defensive role": 10
+    },
+    "samples": [
+      {
+        "time": 75.10000000000001,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Pinned",
+        "reason": "Suppression temporarily overrides squad movement",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 17.999999999999467,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 80.09999999999972,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 22.999999999999183,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 85.09999999999944,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 27.9999999999989,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 90.09999999999916,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 32.999999999998614,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 95.09999999999887,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 37.99999999999833,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 100.09999999999859,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 42.999999999998046,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 105.0999999999983,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 47.99999999999776,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 110.09999999999802,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 52.99999999999748,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 115.09999999999773,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 57.99999999999719,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 120.09999999999745,
+        "id": 0,
+        "x": 21.864341346183284,
+        "y": 1,
+        "state": "Awaiting coordination",
+        "reason": "Injuries require a defensive role",
+        "alternative": "Injuries require a defensive role",
+        "health": {
+          "head": 35,
+          "torso": 25.61152116768062,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 52.61577109247446,
+          "right leg": 0
+        },
+        "ammo": 26,
+        "progress": 62.99999999999691,
+        "goal": null,
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 16,
+    "scenario": "leg-injuries",
+    "duration": 125.09999999999717,
+    "stalled": false,
+    "maxWait": 37.000000000000256,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 17,
+    "reasons": {
+      "Reachable observation lane": 1,
+      "Medic reserved for survival and actionable casualty care": 1
+    },
+    "samples": [
+      {
+        "time": 45.10000000000037,
+        "id": 7,
+        "x": 21,
+        "y": 3.2252950302049985,
+        "state": "Reacquiring contact",
+        "reason": "Reachable observation lane",
+        "alternative": null,
+        "health": {
+          "head": 100,
+          "torso": 38.07985529117286,
+          "left arm": 24,
+          "right arm": 100,
+          "left leg": 56.34101118333638,
+          "right leg": 89.75690994411707
+        },
+        "ammo": 21,
+        "progress": 20.30000000000029,
+        "goal": {
+          "x": 21,
+          "y": 1
+        },
+        "blocker": null
+      },
+      {
+        "time": 80.09999999999972,
+        "id": 11,
+        "x": 19.537494952987743,
+        "y": 2.9889207305475236,
+        "state": "Moving to casualty",
+        "reason": "Approaching a reachable casualty",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 100,
+          "right arm": 100,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 27,
+        "progress": 15.599999999999113,
+        "goal": {
+          "x": 13,
+          "y": 16
+        },
+        "blocker": "Soldier congestion"
+      }
+    ]
+  },
+  {
+    "seed": 104,
+    "scenario": "leg-injuries",
+    "duration": 123.89999999999723,
+    "stalled": false,
+    "maxWait": 24.70000000000008,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 7,
+    "reasons": {
+      "Medic reserved for survival and actionable casualty care": 1,
+      "Approaching a reachable casualty": 1
+    },
+    "samples": [
+      {
+        "time": 100.09999999999859,
+        "id": 11,
+        "x": 21,
+        "y": 14.7384375,
+        "state": "Awaiting coordination",
+        "reason": "Medic reserved for survival and actionable casualty care",
+        "alternative": "Medic reserved for survival and actionable casualty care",
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 56.463614232838154,
+          "right arm": 0,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 26,
+        "progress": 17.999999999998977,
+        "goal": null,
+        "blocker": null
+      },
+      {
+        "time": 105.0999999999983,
+        "id": 11,
+        "x": 21,
+        "y": 13.2615625,
+        "state": "Moving to casualty",
+        "reason": "Approaching a reachable casualty",
+        "alternative": null,
+        "health": {
+          "head": 100,
+          "torso": 100,
+          "left arm": 56.463614232838154,
+          "right arm": 0,
+          "left leg": 65,
+          "right leg": 100
+        },
+        "ammo": 26,
+        "progress": 22.999999999998693,
+        "goal": {
+          "x": 21,
+          "y": 12
+        },
+        "blocker": null
+      }
+    ]
+  },
+  {
+    "seed": 123,
+    "scenario": "reduced-reserves",
+    "duration": 123.39999999999726,
+    "stalled": false,
+    "maxWait": 20.40000000000002,
+    "loops": 0,
+    "facingErrors": 0,
+    "navigationFailures": 3,
+    "reasons": {},
+    "samples": []
+  }
+]

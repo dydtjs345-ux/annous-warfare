@@ -465,6 +465,17 @@ export function coordinateSquad(battle, team) {
       battle.time - (u.navProgressAt ?? 0) < 2 &&
       distance(u, u.coverTarget) > 0.2,
   ).length;
+  const fit = (a) =>
+    a.active &&
+    a.ammo > 0 &&
+    a.reload <= 0 &&
+    a.suppression < 0.55 &&
+    a.health.torso > 35 &&
+    a.health["left leg"] + a.health["right leg"] > 60;
+  const stalled =
+    alive.length > 0 &&
+    alive.every((a) => battle.time - (a.progress?.lastUseful ?? 0) > 12);
+  const noFitFighter = !alive.some((a) => a.role !== "Medic" && fit(a));
   if (recon.length + movingCover < budget && !squad.maneuver) {
     const eligible = alive.filter((u) => {
       let reason = null;
@@ -476,7 +487,13 @@ export function coordinateSquad(battle, team) {
         reason = "Reloading; investigator must be combat-ready";
       else if (u.ammo <= 0) reason = "No loaded ammunition for recon";
       else if (
-        u.health.torso <= 35 ||
+        (u.health.torso <= 35 &&
+          !(
+            stalled &&
+            noFitFighter &&
+            u.health.torso >= 25 &&
+            u.suppression < 0.35
+          )) ||
         u.health["left leg"] + u.health["right leg"] <= 60
       )
         reason = "Injuries require a defensive role";
@@ -495,7 +512,11 @@ export function coordinateSquad(battle, team) {
       else if (
         u.role === "Medic" &&
         (alive.some(
-          (a) => a !== u && a.role !== "Medic" && (a.ammo > 0 || a.reserve > 0),
+          (a) =>
+            a !== u &&
+            a.role !== "Medic" &&
+            (a.ammo > 0 || a.reserve > 0) &&
+            !(stalled && noFitFighter),
         ) ||
           actionableCare(battle, u))
       )
@@ -533,26 +554,35 @@ export function coordinateSquad(battle, team) {
     const chosen = options[0];
     if (chosen) {
       const { u, plan } = chosen;
-      const a = setAssignment(battle, squad, u, "recon", chosen.reason, {
-        target: plan.target,
-        area: { x: area.x, y: area.y },
-        contactId: sector ? null : area.enemyId,
-        sector: !!sector,
-        route: plan.route,
-        lastMovement: battle.time,
-        anchor: { x: u.x, y: u.y },
-        until:
-          battle.time +
-          Math.min(
-            45,
-            8 +
-              plan.travel /
-                (1.7 *
-                  (0.25 +
-                    (0.75 * (u.health["left leg"] + u.health["right leg"])) /
-                      200)),
-          ),
-      });
+      const a = setAssignment(
+        battle,
+        squad,
+        u,
+        "recon",
+        stalled && noFitFighter
+          ? `Cautious survivor reassessment: ${chosen.reason}`
+          : chosen.reason,
+        {
+          target: plan.target,
+          area: { x: area.x, y: area.y },
+          contactId: sector ? null : area.enemyId,
+          sector: !!sector,
+          route: plan.route,
+          lastMovement: battle.time,
+          anchor: { x: u.x, y: u.y },
+          until:
+            battle.time +
+            Math.min(
+              45,
+              8 +
+                plan.travel /
+                  (1.7 *
+                    (0.25 +
+                      (0.75 * (u.health["left leg"] + u.health["right leg"])) /
+                        200)),
+            ),
+        },
+      );
       u.coverTarget = null;
       u.route = a.route.map((n) => [...n]);
       u.routeGoal = key(a.target.x, a.target.y);

@@ -1,0 +1,16 @@
+{
+  "runningAt4x": true,
+  "frameStats": {
+    "samples": 600,
+    "medianMs": 16.69999999999891,
+    "p95Ms": 16.700000000000728,
+    "maxMs": 33.29999999999927
+  },
+  "counts": "USMC 4 \u00b7 RU 1",
+  "inspection": "USMC 5 \u00b7 LMG \u00b7 Suppression 0% \u00b7 Ammo 60/300\nAction: Patrolling (0.3s)\nObjective: Patrolling \u2192 13,7 \u00b7 Moving\nContact: none\nLast confirmed: \u2014 \u00b7 Direct LOS: no\nFire: not permitted \u00b7 No identified visible target\nDecision: Searching without enemy position knowledge\nAssignment: none \u00b7 personal decision\nHolding: \u2014\nAlternatives: \u2014\nProgress: 0.3s \u00b7 move never \u00b7 sight never \u00b7 engage never\nObjective age: 0.3s \u00b7 failures 0 \u00b7 coordination wait no\nBlocker: none\nHead 100 \u00b7 Torso 100 \u00b7 LA 100 \u00b7 RA 100 \u00b7 LL 100 \u00b7 RL 100\nNo injuries\nCover: no current known threat\nCover assessment: Not yet evaluated\nCandidate: none \u00b7 cover blocker: none\nLMG: unsupported \u00b7 No direct in-range firing lane\nSupport bonuses: accuracy \u00d71 \u00b7 suppression \u00d71\nActivity (exclusive active time 0.3s): engage 0.0s \u00b7 recon 0.0s \u00b7 move 0.3s \u00b7 cover 0.0s \u00b7 treat 0.0s \u00b7 reload 0.0s \u00b7 observe/wait 0.0s\nContribution 0.0s \u00b7 preparation 0.3s \u00b7 passive waiting 0.0s",
+  "panelHeight": 144,
+  "pinchPreservesSelection": true,
+  "orientations": 2,
+  "errors": [],
+  "browser": "Host Chromium; DPR2; touch; 390x844 and 844x390"
+}

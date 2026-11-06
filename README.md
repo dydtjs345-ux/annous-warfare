@@ -1,4 +1,4 @@
-# Autonomous Warfare v0.2.3
+# Autonomous Warfare v0.2.3.1
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
@@ -315,3 +315,31 @@ branch push does not deploy production Pages.
 
 Host Chromium checks do not establish physical Safari performance, battery use,
 thermal behavior or touch reliability. Those remain device-verification steps.
+
+
+## v0.2.3.1 stability audit and rough humanoids
+
+Based on merged v0.2.3 (`27166d9`). Completed 200 recorded baseline cases, 200 paired
+post-fix cases, ten independent worst-case replays, and 200 rendering-enabled parity
+cases. See [the full audit](reports/v0231-audit.md) for inputs, raw datasets, paired
+regressions, limitations and the physical Safari checklist.
+
+Movement now preserves actual firing/aiming direction. If every living squad member
+has lacked useful progress for more than 12 seconds and no fit investigator remains,
+a mobile injured survivor or fit medic may receive an existing safe observation task.
+Medical care, severe injury, suppression, ammo and reaction restrictions remain.
+This is a bounded fallback, not a squad-wide charge. The 200-case comparison shows
+modest duration/passive improvements, zero observed shot-facing inconsistencies, and
+small regressions in some contribution/casualty measures; cover churn remains possible.
+
+Soldiers now have original procedural head/helmet, vest, arm/hand, leg and boot shapes
+with cool faction colors. Existing animation/mount states remain authoritative.
+No map, collision, combat calculation or RNG changes occur in the visual pass; all
+200 post-fix simulation digests match with rendering exercised at 1×/2×/4×.
+
+Run `npm test` (113 tests), `npm run build`, or `npm run audit:stability -- . /tmp/audit.json 200`.
+Open the existing Pages URL after review/merge and successful deployment; confirm the
+v0.2.3.1 header. Physical Safari performance is unverified: test zoomed gun direction,
+medical/mount animation synchronization, late injured survivors, touch/scrolling,
+both orientations and all speeds. Detailed steps and reproduction commands are in
+the audit report. Feature branches do not deploy production Pages automatically.
