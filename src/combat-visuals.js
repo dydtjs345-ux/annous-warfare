@@ -413,6 +413,8 @@ export class CombatVisuals {
         if (m.flash) {
           const x = p.x + dx * barrel,
             y = handY + dy * barrel;
+          g.fillStyle(0xffb85d, .045);g.fillCircle(x,y,21);
+          g.fillStyle(0xffd18a,.08);g.fillCircle(x,y,16);
           g.fillStyle(0xffca65, 0.14);
           g.fillCircle(x, y, 13);
           g.fillStyle(0xfff0b4);

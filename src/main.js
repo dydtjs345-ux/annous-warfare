@@ -344,18 +344,21 @@ class Battlefield extends Phaser.Scene {
       c = this.iso(h.x + h.w - 0.5, h.y + h.h - 0.5),
       d = this.iso(h.x - 0.5, h.y + h.h - 0.5),
       height = 32;
-    g.fillStyle(0x545f61);
+    // Restrained ambient shadow cast by the existing solid building only.
+    g.fillStyle(0x0b1722,.28);
+    g.fillPoints([{x:d.x+8,y:d.y+4},{x:c.x+8,y:c.y+4},{x:c.x+8,y:c.y+12},{x:d.x+8,y:d.y+12}],true);
+    g.fillStyle(0x4c606a);
     g.fillPoints(
       [{ x: d.x, y: d.y - height }, { x: c.x, y: c.y - height }, c, d],
       true,
     );
-    g.fillStyle(0x697576);
+    g.fillStyle(0x677b80);
     g.fillPoints(
       [{ x: b.x, y: b.y - height }, { x: c.x, y: c.y - height }, c, b],
       true,
     );
     const roof = [a, b, c, d].map((p) => ({ x: p.x, y: p.y - height }));
-    g.fillStyle(0x394951);
+    g.fillStyle(0x344852);
     g.fillPoints(roof, true);
     drawBuildingDetail(g,h,this.iso,height);
     g.lineStyle(2, 0x819294);
