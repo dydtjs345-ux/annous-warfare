@@ -394,6 +394,7 @@ export function followSearch(b, u, dt) {
     a.lastMovement = b.time;
     s.lastProgress = b.time;
   }
+  if ((u.crossingWaitUntil ?? 0) >= b.time) a.lastMovement = b.time;
   if (b.time - a.lastMovement > 5) {
     a.failed = true;
     a.failure = "No net search movement progress";

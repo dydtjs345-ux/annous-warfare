@@ -1,3 +1,4 @@
+import { crossingPermit } from "./crossings.js";
 import { updateSecurity } from "./security.js";
 import { coordinateFireMovement } from "./fire-movement.js";
 import { suppressiveFire } from "./suppressive-fire.js";
@@ -636,6 +637,7 @@ export class Battle {
       this.noteMovementFailure(u);
       return false;
     }
+    if (!crossingPermit(this, u, u.route)) return true;
     // Tiny back-and-forth steps are not net navigation progress, even if each
     // leg is collision-free. Use the same timeout as blocked-route recovery.
     if (this.time - u.navProgressAt > 3 && dist(u, u.target) > 0.2) {
