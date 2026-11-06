@@ -1,5 +1,5 @@
 // Authoritative low-cover height changes. Rendering only reads these decisions.
-import { cover, terrainSight } from "./world.js";
+import { cover, terrainSight, shelteredAt } from "./world.js";
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 const MOVEMENT = new Set([
   "Seeking cover",
@@ -24,7 +24,7 @@ export function updatePosture(b, u) {
     (c) => b.time - c.time < b.contactTTL && c.clearedAt == null,
   );
   const threat = known.find(
-    (c) => dist(u, c) <= u.range && terrainSight(u, c) && cover(u, c) >= 0.58,
+    (c) => dist(u, c) <= u.range && terrainSight(u, c) && shelteredAt(u, c),
   );
   const flanked = known.some(
     (c) => dist(u, c) <= u.range && terrainSight(u, c) && cover(u, c) < 0.28,

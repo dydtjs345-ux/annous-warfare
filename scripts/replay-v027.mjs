@@ -115,7 +115,10 @@ for (const { cohort, record: c } of JSON.parse(readFileSync(cases))) {
     digest,
     duration: b.time,
     result: b.result,
-    plans: [...plans.values()],
+    plans: [...plans].map(([m, p]) => ({
+      ...p,
+      stopReason: m.stopReason ?? p.stopReason,
+    })),
     failures,
     samples,
   });

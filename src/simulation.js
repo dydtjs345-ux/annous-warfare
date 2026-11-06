@@ -133,6 +133,8 @@ export class Battle {
           y: this.units[team * 6].y,
         };
     }
+    if (this.tacticalEnabled)
+      for (const u of this.units) u.tacticalGeometry = true;
     initializeIntel(this);
     initializePresentation(this);
     initializeGrenades(this, options.grenades ?? false);

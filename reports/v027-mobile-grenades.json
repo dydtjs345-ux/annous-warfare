@@ -1,0 +1,173 @@
+{
+  "fixture": "isolated real Battle/AI/grenade systems, protected target cluster and nonfiring opponents; not normal-match tactical measurement",
+  "runs": [
+    {
+      "speed": 1,
+      "flight": {
+        "time": 0.9500000000000003,
+        "stats": {
+          "thrown": 1,
+          "detonated": 0,
+          "effective": 0,
+          "friendlyHits": 0,
+          "detections": 0,
+          "reactions": 0,
+          "safeReactions": 0
+        },
+        "effects": [
+          {
+            "kind": "grenadeThrow"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 6.307692307692308,
+            "y": 11.53846153846154,
+            "flightAge": 0.20000000000000018
+          }
+        ],
+        "result": null
+      },
+      "blast": {
+        "time": 2.8999999999999977,
+        "stats": {
+          "thrown": 1,
+          "detonated": 1,
+          "effective": 1,
+          "friendlyHits": 0,
+          "detections": 4,
+          "reactions": 3,
+          "safeReactions": 1
+        },
+        "effects": [
+          {
+            "kind": "grenadeBlast"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 7,
+            "y": 15,
+            "flightAge": 2.1499999999999977
+          }
+        ],
+        "result": null
+      },
+      "errors": []
+    },
+    {
+      "speed": 2,
+      "flight": {
+        "time": 0.9500000000000003,
+        "stats": {
+          "thrown": 1,
+          "detonated": 0,
+          "effective": 0,
+          "friendlyHits": 0,
+          "detections": 0,
+          "reactions": 0,
+          "safeReactions": 0
+        },
+        "effects": [
+          {
+            "kind": "grenadeThrow"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 6.307692307692308,
+            "y": 11.53846153846154,
+            "flightAge": 0.20000000000000018
+          }
+        ],
+        "result": null
+      },
+      "blast": {
+        "time": 2.8999999999999977,
+        "stats": {
+          "thrown": 1,
+          "detonated": 1,
+          "effective": 1,
+          "friendlyHits": 0,
+          "detections": 4,
+          "reactions": 3,
+          "safeReactions": 1
+        },
+        "effects": [
+          {
+            "kind": "grenadeThrow"
+          },
+          {
+            "kind": "grenadeBlast"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 7,
+            "y": 15,
+            "flightAge": 2.1499999999999977
+          }
+        ],
+        "result": null
+      },
+      "errors": []
+    },
+    {
+      "speed": 4,
+      "flight": {
+        "time": 0.9500000000000003,
+        "stats": {
+          "thrown": 1,
+          "detonated": 0,
+          "effective": 0,
+          "friendlyHits": 0,
+          "detections": 0,
+          "reactions": 0,
+          "safeReactions": 0
+        },
+        "effects": [
+          {
+            "kind": "grenadeThrow"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 6.307692307692308,
+            "y": 11.53846153846154,
+            "flightAge": 0.20000000000000018
+          }
+        ],
+        "result": null
+      },
+      "blast": {
+        "time": 2.8999999999999977,
+        "stats": {
+          "thrown": 1,
+          "detonated": 1,
+          "effective": 1,
+          "friendlyHits": 0,
+          "detections": 4,
+          "reactions": 3,
+          "safeReactions": 1
+        },
+        "effects": [
+          {
+            "kind": "grenadeThrow"
+          },
+          {
+            "kind": "grenadeBlast"
+          }
+        ],
+        "grenades": [
+          {
+            "x": 7,
+            "y": 15,
+            "flightAge": 2.1499999999999977
+          }
+        ],
+        "result": null
+      },
+      "errors": []
+    }
+  ]
+}

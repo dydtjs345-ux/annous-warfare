@@ -49,7 +49,7 @@ export function inspectSoldier(u) {
       ? `\nSecurity: ${u.formationMode ?? "local"} · ${u.scanReason} · observe ${Math.round((u.observationHeading * 180) / Math.PI)}° · travel ${u.movementHeading == null ? "stationary" : `${Math.round((u.movementHeading * 180) / Math.PI)}°`}`
       : "";
   const roleText = u.tacticalRole
-    ? `\nTactical role: ${u.tacticalRole} · ${u.fireMovementReason ?? "Squad role retained"}`
+    ? `\nTactical role: ${u.tacticalRole} · ${u.fireMovementReason ?? "Squad role retained"}${u.fireMovementTarget ? ` · destination ${u.fireMovementTarget.x},${u.fireMovementTarget.y}` : ""}`
     : "";
   const postureText = u.posture
     ? `\nPosture: ${u.posture.mode} · ${u.posture.reason}`

@@ -27,6 +27,9 @@ try {
   await page.getByRole("button", { name: "Pause", exact: true }).tap();
   const snap = () => page.evaluate(() => window.awSnapshot());
   let s = await snap();
+  const initialHeap = await page.evaluate(
+    () => performance.memory?.usedJSHeapSize ?? null,
+  );
   const initialZoom = s.view.zoom;
   assert.equal(s.width, 54);
   assert.equal(s.height, 44);
@@ -78,10 +81,36 @@ try {
   ])
     assert.ok(inspect.includes(word), word);
   assert.ok(!/undefined|NaN/.test(inspect));
-  await page
-    .locator("#inspect")
-    .evaluate((e) => (e.scrollTop = e.scrollHeight));
-  assert.ok(await page.locator("#inspect").evaluate((e) => e.scrollTop > 0));
+  const touch = await page.context().newCDPSession(page);
+  const panelBox = await page.locator("#inspect").boundingBox();
+  const tx = panelBox.x + panelBox.width * 0.6,
+    bottom = panelBox.y + panelBox.height - 12;
+  await touch.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [{ x: tx, y: bottom, id: 41 }],
+  });
+  for (let i = 1; i <= 5; i++) {
+    await touch.send("Input.dispatchTouchEvent", {
+      type: "touchMove",
+      touchPoints: [
+        { x: tx, y: bottom - (i * (panelBox.height - 24)) / 5, id: 41 },
+      ],
+    });
+    await page.waitForTimeout(25);
+  }
+  await touch.send("Input.dispatchTouchEvent", {
+    type: "touchEnd",
+    touchPoints: [],
+  });
+  assert.ok(
+    await page.locator("#inspect").evaluate((e) => e.scrollTop > 0),
+    "native touch scroll reaches actual diagnostic content",
+  );
+  assert.ok(
+    (await page.locator("footer").textContent()).includes(
+      `G ${s.grenadeStats.thrown}/${s.grenadeStats.detonated}`,
+    ),
+  );
   await page.locator("#focus").tap();
   await page.waitForTimeout(180);
   assert.equal((await snap()).viewMode, "RU");
@@ -204,6 +233,9 @@ try {
   assert.equal(s.viewMode, "USMC");
   assert.equal(s.units.filter((u) => u.active).length, 12);
   const t = s.time;
+  const sampleHeapStartBytes = await page.evaluate(
+    () => performance.memory?.usedJSHeapSize ?? null,
+  );
   const frames = await page.evaluate(
     () =>
       new Promise((resolve) => {
@@ -229,6 +261,9 @@ try {
   );
   s = await snap();
   assert.ok(s.time - t > 25, "4× simulation makes progress");
+  const sampleHeapEndBytes = await page.evaluate(
+    () => performance.memory?.usedJSHeapSize ?? null,
+  );
   await page.screenshot({ path: "/tmp/aw-v027-mobile.png" });
   await page.getByRole("button", { name: "Pause", exact: true }).tap();
   await page.locator("#focus").tap();
@@ -259,11 +294,17 @@ try {
     overviewCentered: true,
     inspectorResizeSynchronized: true,
     inspectorScroll: true,
+    nativeInspectorTouchScroll: true,
+    grenadeCounterAccurate: true,
     orientations: 2,
     pauseResume: true,
     restart: true,
     speeds: [1, 2, 4],
     frameStats: frames,
+    loadHeapBytes: initialHeap,
+    sampleHeapStartBytes,
+    sampleHeapEndBytes,
+
     simulationAdvancedAt4x: s.time - t,
     errors,
     failedRequests,

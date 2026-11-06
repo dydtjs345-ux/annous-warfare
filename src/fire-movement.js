@@ -28,6 +28,7 @@ export function coordinateFireMovement(b, team) {
     for (const u of b.units.filter((u) => u.team === team)) {
       u.tacticalRole = null;
       u.fireMovementReason = null;
+      u.fireMovementTarget = null;
     }
     if (m) {
       f.started++;
@@ -76,6 +77,7 @@ export function coordinateFireMovement(b, team) {
           : u.role === "Medic"
             ? "care / local security"
             : null;
+    u.fireMovementTarget = u === mover ? m.target : null;
     u.fireMovementReason =
       u === mover
         ? "Reach improved protected angle under squad support"

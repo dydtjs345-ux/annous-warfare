@@ -110,3 +110,53 @@ test("a newly known flank breaks full shelter; a full posture cannot display a l
   updatePosture(b, u);
   assert.notEqual(u.posture.mode, "full");
 });
+test("full cover cannot hide from a nearby observer on the same side of a barricade", () => {
+  const { b, u } = fixture();
+  Object.assign(u, { x: 3, y: 10.6, posture: { mode: "full" } });
+  const friend = { x: 3, y: 11.4 };
+  assert.equal(terrainSight(u, friend), true);
+  assert.equal(sight(u, friend), true);
+  assert.equal(sight(friend, u), true);
+});
+test("a medic can treat a nearby casualty on the same protected side while both are low", () => {
+  const { b, u, e } = fixture(),
+    m = b.units[5];
+  Object.assign(u, { x: 3, y: 11.4, reload: 1000, posture: { mode: "full" } });
+  u.health["left arm"] = 20;
+  Object.assign(m, {
+    active: true,
+    dead: false,
+    x: 3,
+    y: 10.6,
+    posture: { mode: "full" },
+  });
+  e.reload = 1000;
+  for (let i = 0; i < 25; i++) b.step(0.05);
+  assert.ok(u.health["left arm"] > 20);
+  assert.equal(m.state, "Treating");
+});
+test("protection in the new tactical model never samples past a close attacker; legacy compatibility stays explicit", () => {
+  const { b, u } = fixture();
+  Object.assign(u, { x: 3, y: 10.6 });
+  const observer = { x: 3, y: 11.4 };
+  assert.equal(cover(u, observer), 0);
+  assert.equal(cover({ x: u.x, y: u.y }, observer), 0.58);
+});
+test("full-cover reloading and supported postures remain visually tucked and cannot flash", () => {
+  const { b, u } = fixture();
+  u.posture = { mode: "full" };
+  u.reload = 1;
+  u.presentation.reloading = true;
+  u.presentation.lastShotAt = b.time;
+  const v = new CombatVisuals();
+  v.update(b, 0.05, 1, false);
+  v.effects[u.id].shot = 1;
+  let m = visualState(b, u, v.effects[u.id]);
+  assert.equal(m.tucked, true);
+  assert.equal(m.flash, false);
+  u.presentation.reloading = false;
+  u.mount = { state: "mounted" };
+  m = visualState(b, u, v.effects[u.id]);
+  assert.equal(m.tucked, true);
+  assert.equal(m.flash, false);
+});

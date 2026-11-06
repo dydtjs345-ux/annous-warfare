@@ -267,6 +267,9 @@ export function updateSquadTactics(battle, team) {
   const threats = squadThreats(battle, team);
   if (!threats.length) {
     if (squad.maneuver)
+      squad.maneuver.stopReason =
+        "Contact information expired; return to search";
+    if (squad.maneuver)
       squad.flankCooldown = Math.max(
         squad.flankCooldown ?? 0,
         battle.time + 24,
