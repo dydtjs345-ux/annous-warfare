@@ -1,5 +1,5 @@
-import {CombatAtmosphere} from "./combat-atmosphere.js";
-import {drawGroundDetail,drawBuildingDetail} from "./urban-detail.js";
+import { CombatAtmosphere } from "./combat-atmosphere.js";
+import { drawGroundDetail, drawBuildingDetail } from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
@@ -221,6 +221,22 @@ class Battlefield extends Phaser.Scene {
           y: building.y + (building.h - 1) / 2,
         });
     this.drawGround();
+    // Bake static ground once per match, never once per animation frame.
+    this.groundCache?.destroy();
+    const bounds = this.geometry.bounds;
+    this.groundCache = this.add
+      .renderTexture(
+        bounds.x,
+        bounds.y,
+        Math.ceil(bounds.width),
+        Math.ceil(bounds.height),
+      )
+      .setOrigin(0, 0)
+      .setDepth(-1);
+    this.ground.setVisible(true);
+    this.groundCache.draw(this.ground, -bounds.x, -bounds.y);
+    this.ground.setVisible(false);
+    this.ground.clear();
     this.frameCamera(true);
     this.nextUI = 0;
   }
@@ -324,7 +340,7 @@ class Battlefield extends Phaser.Scene {
           ],
           true,
         );
-        drawGroundDetail(g,x,y,p);
+        drawGroundDetail(g, x, y, p);
         if (street && x % 13 === 2 && y % 3 === 0) {
           g.lineStyle(2, 0x9b9b75, 0.5);
           g.lineBetween(p.x - 5, p.y - 2, p.x + 5, p.y + 2);
@@ -345,8 +361,16 @@ class Battlefield extends Phaser.Scene {
       d = this.iso(h.x - 0.5, h.y + h.h - 0.5),
       height = 32;
     // Restrained ambient shadow cast by the existing solid building only.
-    g.fillStyle(0x0b1722,.28);
-    g.fillPoints([{x:d.x+8,y:d.y+4},{x:c.x+8,y:c.y+4},{x:c.x+8,y:c.y+12},{x:d.x+8,y:d.y+12}],true);
+    g.fillStyle(0x0b1722, 0.28);
+    g.fillPoints(
+      [
+        { x: d.x + 8, y: d.y + 4 },
+        { x: c.x + 8, y: c.y + 4 },
+        { x: c.x + 8, y: c.y + 12 },
+        { x: d.x + 8, y: d.y + 12 },
+      ],
+      true,
+    );
     g.fillStyle(0x4c606a);
     g.fillPoints(
       [{ x: d.x, y: d.y - height }, { x: c.x, y: c.y - height }, c, d],
@@ -360,7 +384,7 @@ class Battlefield extends Phaser.Scene {
     const roof = [a, b, c, d].map((p) => ({ x: p.x, y: p.y - height }));
     g.fillStyle(0x344852);
     g.fillPoints(roof, true);
-    drawBuildingDetail(g,h,this.iso,height);
+    drawBuildingDetail(g, h, this.iso, height);
     g.lineStyle(2, 0x819294);
     g.strokePoints([...roof, roof[0]]);
   }
@@ -382,7 +406,7 @@ class Battlefield extends Phaser.Scene {
       this.speed,
       this.paused,
     );
-    this.atmosphere.update(this.battle,delta/1000,this.speed,this.paused);
+    this.atmosphere.update(this.battle, delta / 1000, this.speed, this.paused);
     const g = this.g,
       v = this.cameras.main.worldView;
     g.clear();
@@ -416,7 +440,7 @@ class Battlefield extends Phaser.Scene {
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
-    this.atmosphere.draw(g,this.iso,v);
+    this.atmosphere.draw(g, this.iso, v);
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =

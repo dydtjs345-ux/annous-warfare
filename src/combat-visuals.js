@@ -265,21 +265,26 @@ export class CombatVisuals {
       prone ? 4 : crouch ? 6 : 8,
     );
     // Original pixel clusters: vest webbing, magazine pouches, straps and fabric.
-    g.fillStyle(0x23373c, .9);
+    g.fillStyle(0x23373c, 0.9);
     g.fillRect(torsoX + 2, torsoY + 2, 1, 7);
     g.fillRect(torsoX + 7, torsoY + 1, 1, 8);
-    for(let pocket=0;pocket<3;pocket++) {
-      g.fillStyle(pocket%2 ? 0x77867a : 0x637976);
-      g.fillRect(torsoX+2+pocket*2,torsoY+5,2,3);
-      g.fillStyle(0xb1b9a1,.55);g.fillRect(torsoX+2+pocket*2,torsoY+5,2,1);
+    for (let pocket = 0; pocket < 3; pocket++) {
+      g.fillStyle(pocket % 2 ? 0x77867a : 0x637976);
+      g.fillRect(torsoX + 2 + pocket * 2, torsoY + 5, 2, 3);
+      g.fillStyle(0xb1b9a1, 0.55);
+      g.fillRect(torsoX + 2 + pocket * 2, torsoY + 5, 2, 1);
     }
-    g.fillStyle(u.team ? 0x414f43 : 0x3f5967,.8);
-    g.fillRect(torsoX,torsoY+2,2,2);g.fillRect(torsoX+8,torsoY+7,2,3);
+    g.fillStyle(u.team ? 0x414f43 : 0x3f5967, 0.8);
+    g.fillRect(torsoX, torsoY + 2, 2, 2);
+    g.fillRect(torsoX + 8, torsoY + 7, 2, 3);
     // Helmet rim, crown highlight, chin strap and a dark eye-line.
-    g.fillStyle(0x9aa99c,.8);g.fillRect(p.x-2+lean,p.y+top+1+bob,5,1);
-    g.fillStyle(0x26363c);g.fillRect(p.x-4+lean,p.y+top+4+bob,8,1);
-    g.fillRect(p.x+2+lean,p.y+top+5+bob,1,3);
-    g.fillStyle(0xddd0b5,.7);g.fillRect(p.x-1+lean,p.y+top+6+bob,2,1);
+    g.fillStyle(0x9aa99c, 0.8);
+    g.fillRect(p.x - 2 + lean, p.y + top + 1 + bob, 5, 1);
+    g.fillStyle(0x26363c);
+    g.fillRect(p.x - 4 + lean, p.y + top + 4 + bob, 8, 1);
+    g.fillRect(p.x + 2 + lean, p.y + top + 5 + bob, 1, 3);
+    g.fillStyle(0xddd0b5, 0.7);
+    g.fillRect(p.x - 1 + lean, p.y + top + 6 + bob, 2, 1);
     g.fillStyle(0x9aa6ad, 0.6);
     g.fillRect(torsoX + 3, torsoY + 3, 2, 2);
     if (!prone) {
@@ -288,10 +293,12 @@ export class CombatVisuals {
       g.fillStyle(vest);
       g.fillRect(p.x - 5, legY + stride, 3, crouch ? 4 : 7);
       g.fillRect(p.x + 2, legY - stride, 3, crouch ? 4 : 7);
-      g.fillStyle(0x93a397,.6);
-      g.fillRect(p.x-4,legY+stride,1,crouch?3:5);
-      g.fillRect(p.x+3,legY-stride,1,crouch?3:5);
-      g.fillStyle(0x35484a);g.fillRect(p.x-5,legY+2+stride,3,2);g.fillRect(p.x+2,legY+2-stride,3,2);
+      g.fillStyle(0x93a397, 0.6);
+      g.fillRect(p.x - 4, legY + stride, 1, crouch ? 3 : 5);
+      g.fillRect(p.x + 3, legY - stride, 1, crouch ? 3 : 5);
+      g.fillStyle(0x35484a);
+      g.fillRect(p.x - 5, legY + 2 + stride, 3, 2);
+      g.fillRect(p.x + 2, legY + 2 - stride, 3, 2);
       g.fillStyle(0x17232c);
       g.fillRect(p.x - 6, legY + (crouch ? 3 : 6) + stride, 5, 2);
       g.fillRect(p.x + 1, legY + (crouch ? 3 : 6) - stride, 5, 2);
@@ -413,8 +420,10 @@ export class CombatVisuals {
         if (m.flash) {
           const x = p.x + dx * barrel,
             y = handY + dy * barrel;
-          g.fillStyle(0xffb85d, .045);g.fillCircle(x,y,21);
-          g.fillStyle(0xffd18a,.08);g.fillCircle(x,y,16);
+          g.fillStyle(0xffb85d, 0.045);
+          g.fillCircle(x, y, 21);
+          g.fillStyle(0xffd18a, 0.08);
+          g.fillCircle(x, y, 16);
           g.fillStyle(0xffca65, 0.14);
           g.fillCircle(x, y, 13);
           g.fillStyle(0xfff0b4);

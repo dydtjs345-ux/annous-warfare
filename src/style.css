@@ -125,3 +125,5 @@ footer {
 #inspect-text { white-space:pre-line; }
 @media (orientation:landscape) and (max-height:500px){#inspect{max-height:100px}#inspect.expanded{max-height:48dvh}header{padding:3px 10px}h1{font-size:14px}}
 #inspect-text { word-break: keep-all; }
+/* Keep Korean spectator controls on one line at iPhone portrait widths. */
+nav button { font-size: 12px; padding-inline: 4px; white-space: nowrap; }

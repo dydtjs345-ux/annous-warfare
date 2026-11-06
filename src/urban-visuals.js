@@ -38,8 +38,12 @@ export function drawObstacle(g, d, p) {
   g.lineStyle(1, 0xb4bab0, 0.8);
   g.lineBetween(p.x - 19, p.y - 9 - h, p.x + 19, p.y + 9 - h);
   // Contact-edge occlusion and material wear stay inside existing footprints.
-  g.lineStyle(1,0x23343c,.85);g.lineBetween(p.x-18,p.y-8,p.x+18,p.y+9);
-  for(let chip=0;chip<4;chip++){g.fillStyle(chip%2?0xadb5aa:0x283d46,.35);g.fillRect(p.x-13+chip*8,p.y-h+chip*3,3,1);}
+  g.lineStyle(1, 0x23343c, 0.85);
+  g.lineBetween(p.x - 18, p.y - 8, p.x + 18, p.y + 9);
+  for (let chip = 0; chip < 4; chip++) {
+    g.fillStyle(chip % 2 ? 0xadb5aa : 0x283d46, 0.35);
+    g.fillRect(p.x - 13 + chip * 8, p.y - h + chip * 3, 3, 1);
+  }
   if (d.type === "sandbag") {
     for (let i = 0; i < 3; i++) {
       g.fillStyle(i % 2 ? 0xa49b76 : 0x787653);
@@ -56,10 +60,16 @@ export function drawObstacle(g, d, p) {
   }
   if (d.type === "vehicle") {
     // Wheel arches, hood ribs, dark cabin glazing and rust panels.
-    g.fillStyle(0x111d26);g.fillEllipse(p.x-11,p.y+1,9,8);g.fillEllipse(p.x+12,p.y+11,9,8);
-    g.fillStyle(0x6c7e83);g.fillRect(p.x-12,p.y,3,2);g.fillRect(p.x+11,p.y+9,3,2);
-    g.lineStyle(1,0x9ba6a2,.7);g.lineBetween(p.x-15,p.y-h-1,p.x+14,p.y-h+13);
-    g.fillStyle(0x705e50,.7);g.fillRect(p.x+5,p.y-h+9,5,2);
+    g.fillStyle(0x111d26);
+    g.fillEllipse(p.x - 11, p.y + 1, 9, 8);
+    g.fillEllipse(p.x + 12, p.y + 11, 9, 8);
+    g.fillStyle(0x6c7e83);
+    g.fillRect(p.x - 12, p.y, 3, 2);
+    g.fillRect(p.x + 11, p.y + 9, 3, 2);
+    g.lineStyle(1, 0x9ba6a2, 0.7);
+    g.lineBetween(p.x - 15, p.y - h - 1, p.x + 14, p.y - h + 13);
+    g.fillStyle(0x705e50, 0.7);
+    g.fillRect(p.x + 5, p.y - h + 9, 5, 2);
 
     g.fillStyle(0x172730);
     g.fillRect(p.x - 16, p.y - 3, 8, 6);
@@ -82,7 +92,15 @@ export function drawObstacle(g, d, p) {
     g.strokeRect(p.x - 12, p.y - h + 2, 20, 10);
     g.lineBetween(p.x - 12, p.y - h + 2, p.x + 8, p.y - h + 12);
     g.lineBetween(p.x + 8, p.y - h + 2, p.x - 12, p.y - h + 12);
-    for(let plank=0;plank<4;plank++){g.lineStyle(1,0x342f2b,.6);g.lineBetween(p.x-11,p.y-h+3+plank*2,p.x+7,p.y-h+3+plank*2);}
+    for (let plank = 0; plank < 4; plank++) {
+      g.lineStyle(1, 0x342f2b, 0.6);
+      g.lineBetween(
+        p.x - 11,
+        p.y - h + 3 + plank * 2,
+        p.x + 7,
+        p.y - h + 3 + plank * 2,
+      );
+    }
     g.fillStyle(0xa48d68);
     g.fillRect(p.x - 5, p.y - h - 8, 12, 7);
   }
