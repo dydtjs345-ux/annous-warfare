@@ -1,3 +1,4 @@
+import { updatePosture, holdPosture, releasePosture } from "./postures.js";
 import {
   initializeGrenades,
   updateGrenades,
@@ -68,6 +69,7 @@ export class Battle {
     };
     configureWorld(this.world.kind, this.world.variant);
     this.dimensions = { width: W, height: H };
+    this.tacticalEnabled = options.tactical ?? this.world.kind === "expanded";
     this.contactTTL = options.contactTTL ?? 8;
     this.random = random;
     this.time = 0;
@@ -176,6 +178,7 @@ export class Battle {
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
     updateGrenades(this);
+    for (const u of this.units) updatePosture(this, u);
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
@@ -306,6 +309,7 @@ export class Battle {
         u.order = "Reload";
         continue;
       }
+      if (holdPosture(this, u)) continue;
       if (enemy && dist(u, enemy) <= u.range && u.ammo > 0) {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
         u.decisionSource = "immediate threat";
@@ -557,6 +561,7 @@ export class Battle {
     }
   }
   move(u, goal, dt) {
+    releasePosture(u);
     if (!u.active) return false;
     if (u.state !== "Evading grenade" && receivingTreatment(this, u, dt)) {
       u.navigation = "Receiving treatment; retain squad objective";

@@ -1,4 +1,4 @@
-import { sight } from "./world.js";
+import { sight, cover } from "./world.js";
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export function initializeIntel(battle) {
   for (const squad of battle.squads) {
@@ -179,7 +179,8 @@ export function perceive(battle) {
             u.team === team &&
             u.active &&
             distance(u, c) < u.range &&
-            sight(u, c),
+            sight(u, c) &&
+            (!battle.tacticalEnabled || cover(c, u) < 0.58),
         );
       if (cleared && c.clearedAt == null) c.clearedAt = battle.time;
       if (battle.time - c.time >= battle.contactTTL) intel.contacts.delete(id);

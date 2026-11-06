@@ -3,6 +3,7 @@
 import { FRAG } from "./grenades.js";
 const EFFECT_TIMERS = ["shot", "hit", "heal", "complete", "fall"];
 const NO_COMBAT = new Set([
+  "fullCover",
   "dead",
   "incapacitated",
   "treating",
@@ -13,6 +14,7 @@ const NO_COMBAT = new Set([
   "unmounting",
 ]);
 const CROUCHED = new Set([
+  "fullCover",
   "treating",
   "deploying",
   "mounted",
@@ -76,6 +78,7 @@ export function visualState(battle, u, fx, out = {}) {
   else if (out.mountState === "mounted")
     out.pose =
       fx.shot > 0 && p.lastShotAt != null ? "mountedFiring" : "mounted";
+  else if (u.posture?.mode === "full") out.pose = "fullCover";
   else if (out.moving)
     out.pose =
       u.state === "Seeking cover"

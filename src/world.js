@@ -172,7 +172,14 @@ const visibleCell = (x, y) => {
   const type = obstacles.get(key(x, y));
   return !type || !material(type).solid;
 };
-export const sight = (a, b) => traceRay(a, b, visibleCell);
+export const terrainSight = (a, b) => traceRay(a, b, visibleCell);
+// Full-cover bodies/eyes are below suitable low obstacles; flanks remain visible.
+// Plain map points and remembered snapshots have no posture, so terrain planning
+// never gains access to a hidden soldier's live state.
+export const sight = (a, b) =>
+  terrainSight(a, b) &&
+  !(a.posture?.mode === "full" && cover(a, b) >= 0.58) &&
+  !(b.posture?.mode === "full" && cover(b, a) >= 0.58);
 export function cover(target, attacker) {
   const dx = attacker.x - target.x,
     dy = attacker.y - target.y,

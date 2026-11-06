@@ -1,0 +1,5703 @@
+{
+  "source": "/tmp/aw-v027-main",
+  "cohort": "cover",
+  "dt": 0.1,
+  "cap": 1800,
+  "runtimeMs": 10464.933185,
+  "summary": {
+    "runs": 12,
+    "timeouts": 0,
+    "p50": 41.50000000000032,
+    "p90": 81.09999999999967,
+    "p95": 97.49999999999874,
+    "max": 97.49999999999874,
+    "full": 0,
+    "peek": 0,
+    "shots": 241.83333333333334,
+    "suppressionShots": 0,
+    "suppressionPressure": 17.60849324042974,
+    "exposed": 141.7416666666629,
+    "usefulCover": 152.26666666666242,
+    "nav": 0.5833333333333334,
+    "peeks": 0,
+    "postureChanges": 0,
+    "treatments": 0.5833333333333334,
+    "treatmentInterruptions": 1.9166666666666667,
+    "medicCasualties": 1.1666666666666667,
+    "invalidFire": 0,
+    "passive": 47.24166666666674,
+    "active": 275.8333333333375,
+    "maxSeparation": 24.98541437460221,
+    "stuck": 9.541666666666714,
+    "casualties": 8.75,
+    "grenades": 2,
+    "friendlyHits": 0,
+    "crossings": 0,
+    "flanks": 0
+  },
+  "runs": [
+    {
+      "seed": 2001,
+      "scenario": "standard",
+      "options": {
+        "map": "urban",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 274,
+      "suppressionShots": 0,
+      "suppressionPressure": 21.20984777609901,
+      "exposed": 151.1999999999957,
+      "usefulCover": 189.8999999999935,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 1,
+      "treatmentInterruptions": 2,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 80.70000000000022,
+      "active": 390.70000000002034,
+      "maxSeparation": 25.72835758060035,
+      "stuck": 9.89999999999998,
+      "casualties": 10,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2.1745780609458443,
+              "y": 11.560352445109274,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 8.85,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 1
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.83,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.046799999999999994
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.811952784568096,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 4.920214840057561,
+              "y": 15.036391502220244,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 1
+            },
+            {
+              "id": 8,
+              "x": 6.513602947221752,
+              "y": 13,
+              "action": "Seeking cover",
+              "assignment": "overwatch",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 16,
+              "suppression": 0.17844508593356395
+            },
+            {
+              "id": 9,
+              "x": 17.14999999999999,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.879999999999999
+            },
+            {
+              "id": 10,
+              "x": 25.83,
+              "y": 3,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Safe intermediate approach to observation area",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 1,
+              "y": 14.274441617081196,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 8,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 8.85,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.6207999999999991
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.83,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 1,
+              "suppression": 0.022799999999999997
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.811952784568096,
+              "action": "Treating",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 17.14999999999999,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.988
+            },
+            {
+              "id": 10,
+              "x": 16,
+              "y": 5.85,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Recon element has movement priority",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 0,
+              "x": 1,
+              "y": 15.49,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 8,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 14.759231033230874,
+              "action": "Awaiting coordination",
+              "assignment": "care",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 4.51,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 45,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 25.14999999999999,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 0,
+              "x": 7,
+              "y": 12,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 5,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.864674535905317,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 11,
+              "y": 5,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "No eligible safe investigator; reassess available roles",
+              "ammo": 45,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 18.489999999999995,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 50.20000000000044,
+          "units": [
+            {
+              "id": 0,
+              "x": 7,
+              "y": 12.81,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.864674535905317,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 4,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "No eligible safe investigator; reassess available roles",
+              "ammo": 45,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 19,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 60.200000000000585,
+          "units": [
+            {
+              "id": 0,
+              "x": 7.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0.988
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.864674535905317,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13.02754383015621,
+              "y": 4.8379774696693465,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 21,
+              "suppression": 0.07079999999999999
+            },
+            {
+              "id": 11,
+              "x": 21,
+              "y": 15.85,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 70.30000000000028,
+          "units": [
+            {
+              "id": 5,
+              "x": 5.54130185637873,
+              "y": 13,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 7,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 6.41521514619696,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 9,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 21,
+              "y": 15.85,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 72.20000000000017,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "12a110152117696455993db07df01907cecc6af9b46aa531724b7d6a5b970fdf"
+    },
+    {
+      "seed": 2002,
+      "scenario": "standard",
+      "options": {
+        "map": "urban",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 157,
+      "suppressionShots": 0,
+      "suppressionPressure": 12.996666508234826,
+      "exposed": 86.69999999999935,
+      "usefulCover": 97.19999999999875,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 19.19999999999998,
+      "active": 136.39999999999654,
+      "maxSeparation": 24.36053365589515,
+      "stuck": 0,
+      "casualties": 6,
+      "grenades": 3,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 2,
+              "x": 11,
+              "y": 10.85,
+              "action": "Preparing grenade",
+              "assignment": "defend",
+              "reason": "Confirmed defended position; ineffective rifle fire",
+              "ammo": 23,
+              "suppression": 0.010799999999999997
+            },
+            {
+              "id": 3,
+              "x": 11.85,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9183999999999992
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Aiming",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.15,
+              "y": 15,
+              "action": "Aiming",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.006000000000000009
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Aiming",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 17.850282782874807,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.8931999999999988
+            },
+            {
+              "id": 10,
+              "x": 27.340000000000003,
+              "y": 14,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 14.699999999999964,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "febd122677e48605acf63270061b01c20980bcbcc5459ed258f3a9de4968fb58"
+    },
+    {
+      "seed": 2003,
+      "scenario": "standard",
+      "options": {
+        "map": "urban",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 171,
+      "suppressionShots": 0,
+      "suppressionPressure": 18.694363677859673,
+      "exposed": 181.49999999999397,
+      "usefulCover": 108.7999999999981,
+      "nav": 1,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 58.39999999999993,
+      "active": 244.2999999999904,
+      "maxSeparation": 24.40758974749521,
+      "stuck": 0,
+      "casualties": 10,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2.6255944489795926,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.2977959183673463
+            },
+            {
+              "id": 1,
+              "x": 6.627228190702107,
+              "y": 11.092424849492843,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 21,
+              "suppression": 0.19799999999999884
+            },
+            {
+              "id": 2,
+              "x": 8,
+              "y": 11,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 16,
+              "y": 6.6812499999999995,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 38,
+              "suppression": 0.29199999999999937
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 12.857265952653066,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.2177404081632645
+            },
+            {
+              "id": 6,
+              "x": 4,
+              "y": 20.12172393829656,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 17,
+              "suppression": 0.988
+            },
+            {
+              "id": 10,
+              "x": 24.32752328004956,
+              "y": 15.049128492007435,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Suppression makes recon exposure unsafe",
+              "ammo": 35,
+              "suppression": 0.3819999999999994
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 7,
+              "y": 15.781993061224489,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 12.857265952653066,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 20.97648460831491,
+              "y": 13.992070267375778,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 26,
+              "y": 15.85,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 0,
+              "x": 9.195212642510777,
+              "y": 22,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 14,
+              "suppression": 0.6199999999999997
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 13.143021270204088,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 16.83,
+              "y": 13,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 21.12999999999998,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 0,
+              "x": 10,
+              "y": 22,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 13,
+              "suppression": 0.33999999999999864
+            },
+            {
+              "id": 10,
+              "x": 15.469999999999992,
+              "y": 13,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 11,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 17.85000000000001,
+              "y": 16,
+              "action": "Treating",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 29,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "at": 5.699999999999996,
+          "id": 7,
+          "state": "Evading grenade",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 4,
+            "y": 16
+          }
+        },
+        {
+          "at": 5.799999999999995,
+          "id": 7,
+          "state": "Evading grenade",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 4,
+            "y": 16
+          }
+        }
+      ],
+      "duration": 41.60000000000032,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "c2f24c2fb9e34aa582cc8a680c2d9e4184099022bbbc23583ea3ad7f7c2d1b0f"
+    },
+    {
+      "seed": 2004,
+      "scenario": "standard",
+      "options": {
+        "map": "urban",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 226,
+      "suppressionShots": 0,
+      "suppressionPressure": 14.648211163285092,
+      "exposed": 127.69999999999702,
+      "usefulCover": 138.7999999999964,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 22.59999999999996,
+      "active": 176.09999999999428,
+      "maxSeparation": 25.002311893103002,
+      "stuck": 0,
+      "casualties": 8,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 2,
+              "x": 11.85,
+              "y": 4,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 1
+            },
+            {
+              "id": 5,
+              "x": 2.845140651573992,
+              "y": 11.026326089232422,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.7685404081632643
+            },
+            {
+              "id": 7,
+              "x": 6.51,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.054000000000000006
+            },
+            {
+              "id": 8,
+              "x": 10.17,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.006000000000000009
+            },
+            {
+              "id": 9,
+              "x": 17.14999999999999,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Reaction delay before new assignment",
+              "ammo": 23,
+              "suppression": 0.32199999999999906
+            },
+            {
+              "id": 10,
+              "x": 21.319999999999993,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 35,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 2,
+              "x": 11.85,
+              "y": 4,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 1,
+              "suppression": 0.9363999999999997
+            },
+            {
+              "id": 5,
+              "x": 2.845140651573992,
+              "y": 11.026326089232422,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0.9855999999999998
+            },
+            {
+              "id": 8,
+              "x": 10.17,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 1,
+              "suppression": 0.20999999999999996
+            },
+            {
+              "id": 9,
+              "x": 16.639999999999986,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 11,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 21.319999999999993,
+              "y": 13,
+              "action": "Reloading",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 0,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 23.600000000000065,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "cb8af717659f97ead390acc1869796d350c5e1025dc56200b2b2f6687c830cc4"
+    },
+    {
+      "seed": 2005,
+      "scenario": "short-contact",
+      "options": {
+        "map": "urban",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 6
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 181,
+      "suppressionShots": 0,
+      "suppressionPressure": 14.302043656872108,
+      "exposed": 103.69999999999838,
+      "usefulCover": 110.499999999998,
+      "nav": 2,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 15.200000000000001,
+      "active": 155.09999999999548,
+      "maxSeparation": 24.232674223040256,
+      "stuck": 0,
+      "casualties": 7,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.030000000000000023
+            },
+            {
+              "id": 3,
+              "x": 11,
+              "y": 9,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Urgent directional protection gain overrides movement budget",
+              "ammo": 16,
+              "suppression": 0.964
+            },
+            {
+              "id": 6,
+              "x": 2,
+              "y": 15.15,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Urgent directional protection gain overrides movement budget",
+              "ammo": 18,
+              "suppression": 0.7379999999999994
+            },
+            {
+              "id": 7,
+              "x": 4,
+              "y": 15.34,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 18,
+              "suppression": 0.6277073303414813
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 14.097099269272737,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 10,
+              "x": 23.14999999999999,
+              "y": 15,
+              "action": "Aiming",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 26.14999999999999,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "at": 5.799999999999995,
+          "id": 7,
+          "state": "Evading grenade",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 4,
+            "y": 16
+          }
+        },
+        {
+          "at": 6.799999999999992,
+          "id": 3,
+          "state": "Seeking cover",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 11,
+            "y": 7
+          }
+        }
+      ],
+      "duration": 18.39999999999999,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "bf111cf14724eee06f2409cd6d207e0c4f4e5f505308a96d06ee2b73a9fde532"
+    },
+    {
+      "seed": 2006,
+      "scenario": "short-contact",
+      "options": {
+        "map": "urban",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 6
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 218,
+      "suppressionShots": 0,
+      "suppressionPressure": 16.32938936104582,
+      "exposed": 125.79999999999713,
+      "usefulCover": 122.49999999999731,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 6.900000000000002,
+      "active": 203.09999999999275,
+      "maxSeparation": 27.719536040994946,
+      "stuck": 0,
+      "casualties": 7,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 2,
+              "x": 11,
+              "y": 8.17,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.85,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.010799999999999997
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 11.918650489730508,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 17,
+              "suppression": 0.7517404081632644
+            },
+            {
+              "id": 6,
+              "x": 2,
+              "y": 14.767254116476419,
+              "action": "Seeking cover",
+              "assignment": "overwatch",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 17,
+              "suppression": 0.8939999999999992
+            },
+            {
+              "id": 7,
+              "x": 4,
+              "y": 15.282251728243242,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.3202530345151712
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.2999999999999999
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 4,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Safe intermediate approach to observation area",
+              "ammo": 47,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 2,
+              "x": 13,
+              "y": 7.15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.5615999999999994
+            },
+            {
+              "id": 6,
+              "x": 1.6982376505707388,
+              "y": 12,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 12,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 4.5501627877787385,
+              "y": 15.126967330577573,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 5,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 1,
+              "suppression": 0.7379999999999982
+            },
+            {
+              "id": 10,
+              "x": 21,
+              "y": 10.34,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 47,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 22.489999999999995,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 25.900000000000098,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "78b7eda96f2d741fc588dcf3b0b39953d931723e7ef5d72ade6b7e32175ef532"
+    },
+    {
+      "seed": 2007,
+      "scenario": "short-contact",
+      "options": {
+        "map": "urban",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 6
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 392,
+      "suppressionShots": 0,
+      "suppressionPressure": 25.013386803283623,
+      "exposed": 159.6999999999952,
+      "usefulCover": 261.89999999999105,
+      "nav": 2,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 1,
+      "treatmentInterruptions": 7,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 115.70000000000029,
+      "active": 480.10000000004067,
+      "maxSeparation": 24.772387854221886,
+      "stuck": 47.0000000000004,
+      "casualties": 10,
+      "grenades": 2,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 17,
+              "suppression": 0.3097959183673462
+            },
+            {
+              "id": 1,
+              "x": 6.999802654247545,
+              "y": 10.999970398137132,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9267999999999998
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 10.68,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 23,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.838224099624533,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.673199999999999
+            },
+            {
+              "id": 5,
+              "x": 3.7143882938775503,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.15,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.31199999999999994
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Preparing grenade",
+              "assignment": "defend",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 17,
+              "suppression": 0.03000000000000001
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 17.85000000000001,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.8739999999999989
+            },
+            {
+              "id": 10,
+              "x": 27,
+              "y": 7.66,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 9.543798798083467,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 9,
+              "suppression": 0.26785047675297213
+            },
+            {
+              "id": 3,
+              "x": 11.838224099624533,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 1,
+              "suppression": 0.8541366927805759
+            },
+            {
+              "id": 5,
+              "x": 5.428920199183671,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 4,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 7,
+              "y": 14.346012063583851,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 1
+            },
+            {
+              "id": 10,
+              "x": 20.659999999999997,
+              "y": 1,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 43,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Injuries require a defensive role",
+              "ammo": 24,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 10.396049033086912,
+              "y": 11,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Reloading; investigator must be combat-ready",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.838224099624533,
+              "y": 11,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 23,
+              "suppression": 0.8319999999999999
+            },
+            {
+              "id": 5,
+              "x": 5.428920199183671,
+              "y": 13,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 25,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 20.659999999999997,
+              "y": 1,
+              "action": "Reloading",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 0,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Injuries require a defensive role",
+              "ammo": 24,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6.999985738522727,
+              "y": 11.92773140915685,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Injuries require a defensive role",
+              "ammo": 15,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 11,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 9.428632976326533,
+              "y": 13,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 25,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 18,
+              "y": 4,
+              "action": "Aiming",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 58,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 26.319999999999993,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 50.20000000000044,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 24,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 8.319453676361544,
+              "y": 11,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 15,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 7.42863297632653,
+              "y": 11,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 25,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 6.59271180205047,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 53,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 26.319999999999993,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 60.200000000000585,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.828225024149098,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Injuries require a defensive role",
+              "ammo": 24,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 9.571510635102044,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 24,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 12,
+              "y": 4,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 48,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 16.659999999999997,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0.01800000000000001
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 70.30000000000028,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.911047526564008,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 24,
+              "suppression": 0.224
+            },
+            {
+              "id": 5,
+              "x": 7,
+              "y": 12.142877658775511,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 16,
+              "suppression": 0.30199999999999994
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 8.296355901025237,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 46,
+              "suppression": 0.108
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 80.39999999999971,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 14.822095053128017,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 24,
+              "suppression": 0.8799999999999999
+            },
+            {
+              "id": 5,
+              "x": 8.714388293877555,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 13,
+              "y": 8.88906770307571,
+              "action": "Reloading",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 0,
+              "suppression": 0.08279999999999998
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "at": 63.30000000000063,
+          "id": 11,
+          "state": "Seeking cover",
+          "reason": "No net movement progress",
+          "goal": {
+            "x": 21,
+            "y": 16
+          }
+        },
+        {
+          "at": 75.2,
+          "id": 5,
+          "state": "Seeking cover",
+          "reason": "No net movement progress",
+          "goal": {
+            "x": 10,
+            "y": 13
+          }
+        }
+      ],
+      "duration": 81.09999999999967,
+      "result": "USMC victory",
+      "timeout": false,
+      "digest": "f2d1444a9753a6e1f637257e976fe00a751efbe17af763a90840ab4780230ccc"
+    },
+    {
+      "seed": 2008,
+      "scenario": "short-contact",
+      "options": {
+        "map": "urban",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 6
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 343,
+      "suppressionShots": 0,
+      "suppressionPressure": 23.068736326530658,
+      "exposed": 119.2999999999975,
+      "usefulCover": 190.39999999999347,
+      "nav": 1,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 3,
+      "treatmentInterruptions": 8,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 119.30000000000058,
+      "active": 521.30000000005,
+      "maxSeparation": 26.58158949348214,
+      "stuck": 28.500000000000135,
+      "casualties": 8,
+      "grenades": 1,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 1,
+              "x": 7,
+              "y": 11.17,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 2,
+              "x": 13.85,
+              "y": 9,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 20,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.86614762082733,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.25599999999999934
+            },
+            {
+              "id": 5,
+              "x": 3.6995177064542144,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.4745404081632643
+            },
+            {
+              "id": 6,
+              "x": 3.17,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.23999999999999938
+            },
+            {
+              "id": 7,
+              "x": 5.15,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.006000000000000009
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.22799999999999992
+            },
+            {
+              "id": 10,
+              "x": 28,
+              "y": 15.02,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 26.489999999999995,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 1,
+              "x": 7,
+              "y": 11.17,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 12,
+              "suppression": 0.06159999999999907
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 10.68,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.86614762082733,
+              "y": 11,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 11,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 5,
+              "y": 13,
+              "action": "Moving to casualty",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 21,
+              "y": 19.319999999999993,
+              "action": "Searching sector",
+              "assignment": "recon",
+              "reason": "Contact expired; continue committed observation approach as sector search",
+              "ammo": 50,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 24.489999999999995,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 1,
+              "x": 8.34,
+              "y": 11,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 12,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 14,
+              "y": 10.51,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 14,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 11.86614762082733,
+              "y": 11,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 8,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 7.2331725688180715,
+              "y": 13,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 16.14999999999999,
+              "y": 24,
+              "action": "Searching sector",
+              "assignment": "recon",
+              "reason": "Contact expired; continue committed observation approach as sector search",
+              "ammo": 50,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 1,
+              "x": 11,
+              "y": 11,
+              "action": "Recovering",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 12,
+              "suppression": 1
+            },
+            {
+              "id": 2,
+              "x": 15.85,
+              "y": 13,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 14,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 9.69951770645422,
+              "y": 11,
+              "action": "Treating",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 15.83,
+              "y": 24,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 6,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 50.20000000000044,
+          "units": [
+            {
+              "id": 1,
+              "x": 11,
+              "y": 11,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 12,
+              "suppression": 0.988
+            },
+            {
+              "id": 2,
+              "x": 16.85000000000001,
+              "y": 13,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Reaction delay before new assignment",
+              "ammo": 14,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 9.645616490984917,
+              "y": 10.852197773844443,
+              "action": "Treating",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 15.83,
+              "y": 24,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 39,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 60.200000000000585,
+          "units": [
+            {
+              "id": 1,
+              "x": 11,
+              "y": 11,
+              "action": "Pinned",
+              "reason": null,
+              "ammo": 12,
+              "suppression": 0.7239999999999998
+            },
+            {
+              "id": 2,
+              "x": 14,
+              "y": 11,
+              "action": "Patrolling",
+              "reason": null,
+              "ammo": 14,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 10.01015439662921,
+              "y": 10.025447357053345,
+              "action": "Patrolling",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 15.83,
+              "y": 24,
+              "action": "Reloading",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 0,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 70.30000000000028,
+          "units": [
+            {
+              "id": 1,
+              "x": 11,
+              "y": 10,
+              "action": "Patrolling",
+              "reason": null,
+              "ammo": 12,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 14,
+              "y": 9.68,
+              "action": "Patrolling",
+              "reason": null,
+              "ammo": 14,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Receiving treatment",
+              "reason": "Hold for active nearby medic; immediate survival may interrupt",
+              "ammo": 57,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 16.116586284409035,
+              "y": 9,
+              "action": "Treating",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 11.51,
+              "y": 24,
+              "action": "Searching sector",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 60,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 80.39999999999971,
+          "units": [
+            {
+              "id": 1,
+              "x": 7,
+              "y": 12.85,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 12,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 13.15,
+              "y": 13,
+              "action": "Pinned",
+              "assignment": "overwatch",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 5,
+              "suppression": 0.7239999999999998
+            },
+            {
+              "id": 4,
+              "x": 15,
+              "y": 12.34,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 53,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 17,
+              "y": 10.816103990863256,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 9.096287294177902,
+              "y": 24,
+              "action": "Pinned",
+              "assignment": "defend",
+              "reason": "Suppression temporarily overrides squad movement",
+              "ammo": 25,
+              "suppression": 0.6567999999999995
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 90.49999999999913,
+          "units": [
+            {
+              "id": 1,
+              "x": 14,
+              "y": 16,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 12,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 16.510000000000005,
+              "y": 15,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 5,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 20.85000000000001,
+              "y": 13,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 41,
+              "suppression": 0.19599999999999929
+            },
+            {
+              "id": 5,
+              "x": 15,
+              "y": 14,
+              "action": "Moving to casualty",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 13,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 7.174092337012328,
+              "y": 21.78294542994371,
+              "action": "Searching sector",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 14,
+              "suppression": 0.2079999999999993
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "at": 61.70000000000061,
+          "id": 1,
+          "state": "Patrolling",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 11,
+            "y": 5
+          }
+        }
+      ],
+      "duration": 97.49999999999874,
+      "result": "USMC victory",
+      "timeout": false,
+      "digest": "eed1cdd3404c985bf7559401122f3abb2af7a23cf850b3c838a408fdfa4d62fb"
+    },
+    {
+      "seed": 2009,
+      "scenario": "reduced-reserves",
+      "options": {
+        "map": "urban",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 296,
+      "suppressionShots": 0,
+      "suppressionPressure": 19.465205094127814,
+      "exposed": 203.39999999999273,
+      "usefulCover": 194.19999999999325,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 27.99999999999995,
+      "active": 282.49999999999574,
+      "maxSeparation": 25.01999200639361,
+      "stuck": 4.799999999999999,
+      "casualties": 10,
+      "grenades": 3,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.896466411990634,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 7,
+              "y": 11.17,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.83,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 5,
+              "x": 2.8572659526530604,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 4.998016017253767,
+              "y": 15,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Urgent directional protection gain overrides movement budget",
+              "ammo": 16,
+              "suppression": 0.7739999999999995
+            },
+            {
+              "id": 8,
+              "x": 8.85,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 17.12331926392001,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 10,
+              "x": 27,
+              "y": 20.680000000000007,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Safe intermediate approach to observation area",
+              "ammo": 37,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.896466411990634,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0.04200000000000001
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 8.51,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 2,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 16.880584593023332,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.809199999999999
+            },
+            {
+              "id": 5,
+              "x": 2.8572659526530604,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 7,
+              "y": 14.099759627496706,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 1
+            },
+            {
+              "id": 10,
+              "x": 20,
+              "y": 17,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 37,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 0,
+              "x": 3.76839978170626,
+              "y": 13,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 27,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2.8572659526530604,
+              "y": 11,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 26,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 18,
+              "y": 15.17,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 16,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 38.20000000000027,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "a2b397b89eba82e5f6f4d285ebae19aefdc60197a2d9cb2ee8029221b9ce288a"
+    },
+    {
+      "seed": 2010,
+      "scenario": "reduced-reserves",
+      "options": {
+        "map": "urban",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 133,
+      "suppressionShots": 0,
+      "suppressionPressure": 11.034336326530614,
+      "exposed": 133.09999999999673,
+      "usefulCover": 101.89999999999849,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 1,
+      "treatmentInterruptions": 3,
+      "medicCasualties": 2,
+      "invalidFire": 0,
+      "passive": 28.199999999999996,
+      "active": 210.19999999999234,
+      "maxSeparation": 24,
+      "stuck": 0,
+      "casualties": 9,
+      "grenades": 1,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.938391673469386,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 20,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 7,
+              "y": 13,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 19,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 10.389366594927289,
+              "y": 10.80921036848563,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 12.49,
+              "y": 9,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 20,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 11.17,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 27,
+              "y": 8.15,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Safe intermediate approach to observation area",
+              "ammo": 42,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 12,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 20,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 13,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 19,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 5,
+              "y": 11,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 13,
+              "y": 8.34,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 18,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 5.14287765877551,
+              "y": 13,
+              "action": "Treating",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 21,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 18,
+              "y": 3.8499999999999996,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Brief retry cooldown after completed/failed task",
+              "ammo": 42,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 19.659999999999997,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0.04200000000000004
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 30.000000000000156,
+      "result": "USMC victory",
+      "timeout": false,
+      "digest": "7d39549975c766bb0a3b5d8ddcbb993cb8bd36268b53a547705df7a11fdf54d1"
+    },
+    {
+      "seed": 2011,
+      "scenario": "reduced-reserves",
+      "options": {
+        "map": "urban",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 179,
+      "suppressionShots": 0,
+      "suppressionPressure": 13.66087162730267,
+      "exposed": 132.69999999999675,
+      "usefulCover": 120.39999999999743,
+      "nav": 0,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 1,
+      "treatmentInterruptions": 3,
+      "medicCasualties": 2,
+      "invalidFire": 0,
+      "passive": 40.899999999999906,
+      "active": 248.0999999999902,
+      "maxSeparation": 24,
+      "stuck": 1.8000000000000005,
+      "casualties": 10,
+      "grenades": 1,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.85879847479727,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Preserve current direct firing opportunity",
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.83,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.006000000000000009
+            },
+            {
+              "id": 5,
+              "x": 3,
+              "y": 13,
+              "action": "Treating",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0.11999999999999995
+            },
+            {
+              "id": 9,
+              "x": 17.14999999999999,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0.9099999999999996
+            },
+            {
+              "id": 10,
+              "x": 25.489999999999995,
+              "y": 3,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 47,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 0,
+              "x": 4,
+              "y": 16.592741985598437,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2.458698143621268,
+              "y": 13,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 18,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 17.14999999999999,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.8799999999999979
+            },
+            {
+              "id": 10,
+              "x": 20,
+              "y": 1,
+              "action": "Seeking cover",
+              "assignment": "defend",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 38,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 23,
+              "y": 15,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 0,
+              "x": 7,
+              "y": 16.85181450360039,
+              "action": "Awaiting coordination",
+              "assignment": "recon",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 5,
+              "y": 13,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 19,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Recon element has movement priority",
+              "ammo": 2,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 18.17,
+              "y": 1,
+              "action": "Searching sector",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 38,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 14.83,
+              "y": 16,
+              "action": "Moving to casualty",
+              "assignment": "care",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 0,
+              "x": 6.110887021602345,
+              "y": 15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 10,
+              "suppression": 0.07800000000000004
+            },
+            {
+              "id": 9,
+              "x": 18.171061673120924,
+              "y": 15,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 2,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 20,
+              "y": 1,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Recon element has movement priority",
+              "ammo": 38,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 7.138440157679888,
+              "y": 13,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 22,
+              "suppression": 0.0959999999999998
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [],
+      "duration": 41.50000000000032,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "db69e27835cd9192ba3935c9c90d7a68cb4db93f91383ea2f61ba937ad0f7943"
+    },
+    {
+      "seed": 2012,
+      "scenario": "reduced-reserves",
+      "options": {
+        "map": "urban",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true,
+        "tactical": true,
+        "contactTTL": 8
+      },
+      "initial": [
+        [
+          3,
+          11
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ],
+      "firstContact": 0.1,
+      "full": 0,
+      "peek": 0,
+      "sustained": 0,
+      "shots": 332,
+      "suppressionShots": 0,
+      "suppressionPressure": 20.878860563984976,
+      "exposed": 176.09999999999428,
+      "usefulCover": 190.69999999999345,
+      "nav": 1,
+      "peeks": 0,
+      "postureChanges": 0,
+      "treatments": 0,
+      "treatmentInterruptions": 0,
+      "medicCasualties": 1,
+      "invalidFire": 0,
+      "passive": 31.800000000000114,
+      "active": 262.0999999999911,
+      "maxSeparation": 24,
+      "stuck": 22.50000000000005,
+      "casualties": 10,
+      "grenades": 3,
+      "friendlyHits": 0,
+      "crossings": 0,
+      "flanks": 0,
+      "samples": [
+        {
+          "at": 0.1,
+          "units": [
+            {
+              "id": 0,
+              "x": 3,
+              "y": 11,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 1,
+              "x": 6,
+              "y": 10.17,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 2,
+              "x": 11.83,
+              "y": 9,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 3,
+              "x": 15,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 4,
+              "x": 17,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 6,
+              "x": 3,
+              "y": 15,
+              "action": "Preparing grenade",
+              "reason": "Confirmed cluster; friend-safe throw",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 7,
+              "x": 5.83,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 8.17,
+              "y": 15,
+              "action": "Seeking cover",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 9,
+              "x": 18,
+              "y": 15,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 30,
+              "suppression": 0
+            },
+            {
+              "id": 10,
+              "x": 25,
+              "y": 13,
+              "action": "Aiming",
+              "reason": null,
+              "ammo": 60,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 27,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "reason": "Waiting for bounded squad reassessment",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 10.19999999999998,
+          "units": [
+            {
+              "id": 0,
+              "x": 2,
+              "y": 13.80566602924278,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 18,
+              "suppression": 0.09859591836734642
+            },
+            {
+              "id": 2,
+              "x": 11,
+              "y": 7.15,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 16,
+              "suppression": 0.04680000000000002
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 11.17,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 17,
+              "suppression": 0
+            },
+            {
+              "id": 8,
+              "x": 7,
+              "y": 14.697004371951287,
+              "action": "Seeking cover",
+              "assignment": "overwatch",
+              "reason": "Meaningful directional protection gain; reachable route",
+              "ammo": 16,
+              "suppression": 0.3479999999999999
+            },
+            {
+              "id": 9,
+              "x": 14,
+              "y": 12.83,
+              "action": "Seeking cover",
+              "assignment": "overwatch",
+              "reason": "Retain useful committed cover destination; alternative gain insufficient",
+              "ammo": 17,
+              "suppression": 0.9279999999999999
+            },
+            {
+              "id": 10,
+              "x": 27,
+              "y": 19.85000000000001,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Safe intermediate approach to observation area",
+              "ammo": 49,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 25.489999999999995,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 20.200000000000017,
+          "units": [
+            {
+              "id": 2,
+              "x": 12.85,
+              "y": 9,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10.884244682448978,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 3,
+              "suppression": 0.046799999999999994
+            },
+            {
+              "id": 8,
+              "x": 7,
+              "y": 14.848502185975644,
+              "action": "Engaging",
+              "assignment": "overwatch",
+              "reason": null,
+              "ammo": 2,
+              "suppression": 0.976
+            },
+            {
+              "id": 10,
+              "x": 21,
+              "y": 18,
+              "action": "Reacquiring contact",
+              "assignment": "recon",
+              "reason": "Reachable observation lane",
+              "ammo": 49,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 25.489999999999995,
+              "y": 15,
+              "action": "Covering search",
+              "assignment": "overwatch",
+              "reason": "Cover the assigned recon approach",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 30.20000000000016,
+          "units": [
+            {
+              "id": 2,
+              "x": 11,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 22,
+              "suppression": 1
+            },
+            {
+              "id": 5,
+              "x": 2,
+              "y": 10.884244682448978,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 22,
+              "suppression": 0.022799999999999997
+            },
+            {
+              "id": 8,
+              "x": 7,
+              "y": 14.848502185975644,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 21,
+              "suppression": 0.952
+            },
+            {
+              "id": 10,
+              "x": 20.159404100061952,
+              "y": 15.023910615009294,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 8,
+              "suppression": 0
+            },
+            {
+              "id": 11,
+              "x": 25.489999999999995,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        },
+        {
+          "at": 40.2000000000003,
+          "units": [
+            {
+              "id": 2,
+              "x": 11,
+              "y": 11,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 7,
+              "suppression": 0.988
+            },
+            {
+              "id": 10,
+              "x": 20.159404100061952,
+              "y": 15.023910615009294,
+              "action": "Engaging",
+              "assignment": "defend",
+              "reason": null,
+              "ammo": 41,
+              "suppression": 0.066
+            },
+            {
+              "id": 11,
+              "x": 25.489999999999995,
+              "y": 15,
+              "action": "Awaiting coordination",
+              "assignment": "defend",
+              "reason": "Medic reserved for survival and actionable casualty care",
+              "ammo": 30,
+              "suppression": 0
+            }
+          ],
+          "phases": [
+            null,
+            null
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "at": 5.799999999999995,
+          "id": 7,
+          "state": "Evading grenade",
+          "reason": "Soldier congestion",
+          "goal": {
+            "x": 4,
+            "y": 16
+          }
+        }
+      ],
+      "duration": 45.90000000000038,
+      "result": "Russian infantry victory",
+      "timeout": false,
+      "digest": "80157e45b1cac757be011922ebfc2410b40486cb5ab19ed8784536016dba716b"
+    }
+  ]
+}

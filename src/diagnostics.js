@@ -9,6 +9,8 @@ export function firingStatus(battle, u, enemy) {
       permitted: false,
       reason: u.dead ? "Eliminated" : "Incapacitated",
     };
+  if (u.posture?.mode === "full")
+    return { permitted: false, reason: "Full cover: weapon below cover line" };
   if (u.grenadePrep) return { permitted: false, reason: "Preparing grenade" };
   if (["deploying", "unmounting"].includes(u.mount?.state))
     return { permitted: false, reason: `LMG ${u.mount.state}` };
