@@ -1,0 +1,25 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readability, drawReadability } from "../src/readability.js";
+test("cues read authoritative states without mutation", () => {
+  const u = {
+    active: true,
+    health: { head: 90 },
+    posture: { mode: "full" },
+    presentation: { moving: false },
+    x: 1,
+    y: 1,
+  };
+  const before = JSON.stringify(u);
+  assert.equal(readability(u).state, "full");
+  drawReadability(
+    new Proxy({}, { get: () => () => {} }),
+    u,
+    { x: 0, y: 0 },
+    (x, y) => ({ x, y }),
+  );
+  assert.equal(JSON.stringify(u), before);
+  u.active = false;
+  u.dead = true;
+  assert.equal(readability(u).state, "dead");
+});

@@ -1,0 +1,16 @@
+{
+  "selection": true,
+  "expandCollapse": true,
+  "nativeScroll": true,
+  "closeAndReselect": true,
+  "orientations": 2,
+  "speeds": [
+    1,
+    2,
+    4
+  ],
+  "restart": true,
+  "errors": [],
+  "physicalSafari": "unverified",
+  "panPinch": true
+}
