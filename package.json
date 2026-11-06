@@ -1,14 +1,15 @@
 {
   "name": "autonomous-warfare",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node test/simulation.test.js && node test/coordination.test.js",
-    "measure:ai": "node scripts/measure-ai.mjs"
+    "test": "node test/simulation.test.js && node test/coordination.test.js && node test/presentation.test.js",
+    "measure:ai": "node scripts/measure-ai.mjs",
+    "check:animation-parity": "node scripts/check-animation-parity.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"

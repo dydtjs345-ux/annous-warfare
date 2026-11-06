@@ -1,0 +1,102 @@
+[
+  {
+    "seed": 1,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 117.79999999999545,
+    "steps": 2356,
+    "rng": 1884109464,
+    "calls": 605,
+    "fingerprint": "6cdeba3c2084acc9e751db342475bbc22310a5cb5a2e3d6fba025dc5f24e64dd"
+  },
+  {
+    "seed": 2,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 87.99999999999714,
+    "steps": 1760,
+    "rng": 4051374492,
+    "calls": 314,
+    "fingerprint": "de5ce341f90f7e4d0f0a5eafad56fe622eb72356e48f6fe439821d9d07a93333"
+  },
+  {
+    "seed": 3,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 71.64999999999807,
+    "steps": 1433,
+    "rng": 70452962,
+    "calls": 365,
+    "fingerprint": "ca3312e9b27303025ede32ec817691068754488906f4e02724c027268b0484b3"
+  },
+  {
+    "seed": 4,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 132.79999999999595,
+    "steps": 2656,
+    "rng": 2134738266,
+    "calls": 438,
+    "fingerprint": "e1941c28c2a90135113422fa9be9c77c29bd3c48d3b682ab937cbdf9c9820c64"
+  },
+  {
+    "seed": 5,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 73.09999999999799,
+    "steps": 1462,
+    "rng": 2938707866,
+    "calls": 363,
+    "fingerprint": "ae278da53f79553c061c583bd0700a73e853f5f0d0f5666bad50af834967b4d8"
+  },
+  {
+    "seed": 6,
+    "finished": true,
+    "result": "Russian infantry victory",
+    "time": 57.79999999999885,
+    "steps": 1156,
+    "rng": 1762982292,
+    "calls": 350,
+    "fingerprint": "e6f8a6871c9c78d494b0e1d82ab205f4acbcad601248635415e7b09faab2d8f2"
+  },
+  {
+    "seed": 7,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 60.34999999999871,
+    "steps": 1207,
+    "rng": 4002621029,
+    "calls": 342,
+    "fingerprint": "d8658dbe948cbc9173808076fe3929f00c505bf49d30695b71c4d60b361413c1"
+  },
+  {
+    "seed": 8,
+    "finished": true,
+    "result": "Russian infantry victory",
+    "time": 122.04999999999521,
+    "steps": 2441,
+    "rng": 59492069,
+    "calls": 535,
+    "fingerprint": "96fdc333db799cfdebaadecdb0c99d6f61ab13f10e5e6d6e9cc4c9c257e5e4c6"
+  },
+  {
+    "seed": 9,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 205.25000000001242,
+    "steps": 4105,
+    "rng": 949050971,
+    "calls": 570,
+    "fingerprint": "5152288765d31d4f7df51eb80af9d86462a478a3fa7d4ac2d135f207de25122c"
+  },
+  {
+    "seed": 10,
+    "finished": true,
+    "result": "USMC victory",
+    "time": 88.7999999999971,
+    "steps": 1776,
+    "rng": 2332600010,
+    "calls": 448,
+    "fingerprint": "266eec7ddd2a642d2b2346059870ebe95365d8827b4eaf606c6664eccde4627d"
+  }
+]

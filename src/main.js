@@ -1,3 +1,4 @@
+import { CombatVisuals } from "./combat-visuals.js";
 import { inspectSoldier } from "./inspection.js";
 import Phaser from "phaser";
 import "./style.css";
@@ -12,6 +13,15 @@ class Battlefield extends Phaser.Scene {
     this.acc = 0;
     this.selected = null;
     this.g = this.add.graphics();
+    this.visuals = new CombatVisuals();
+    this.obstacles = [...obstacles].map(([k, type]) => {
+      const [x, y] = k.split(",").map(Number);
+      return { x, y, type };
+    });
+    this.drawables = [
+      ...this.obstacles,
+      ...this.battle.units.map((unit) => ({ unit })),
+    ];
     this.input.addPointer(2);
     const c = this.cameras.main;
     c.setBackgroundColor("#101b26");
@@ -83,6 +93,10 @@ class Battlefield extends Phaser.Scene {
     );
     document.querySelector("#restart").onclick = () => {
       this.battle = new Battle();
+      this.drawables = [
+        ...this.obstacles,
+        ...this.battle.units.map((unit) => ({ unit })),
+      ];
       this.acc = 0;
       this.paused = false;
       document.querySelector("#pause").textContent = "Pause";
@@ -111,6 +125,7 @@ class Battlefield extends Phaser.Scene {
         this.acc -= 0.05;
       }
     }
+    this.visuals.update(this.battle, delta / 1000, this.speed, this.paused);
     const g = this.g;
     g.clear();
     for (let y = 0; y < H; y++)
@@ -140,15 +155,16 @@ class Battlefield extends Phaser.Scene {
         g.lineStyle(4, 0xb59b70);
         g.lineBetween(p.x - 9, p.y - 7, p.x - 9, p.y - 22);
       }
-    const drawables = [...obstacles]
-      .map(([k, type]) => {
-        const [x, y] = k.split(",").map(Number);
-        return { x, y, type };
-      })
-      .concat(this.battle.units.map((u) => ({ ...u, unit: u })))
-      .sort((a, b) => a.x + a.y - (b.x + b.y));
+    const drawables = this.drawables;
+    drawables.sort(
+      (a, b) =>
+        (a.unit?.x ?? a.x) +
+        (a.unit?.y ?? a.y) -
+        (b.unit?.x ?? b.x) -
+        (b.unit?.y ?? b.y),
+    );
     for (const d of drawables) {
-      const p = iso(d.x, d.y);
+      const p = iso(d.unit?.x ?? d.x, d.unit?.y ?? d.y);
       if (!d.unit) {
         const height = d.type === "wall" ? 23 : d.type === "fence" ? 12 : 9;
         g.fillStyle(0x000000, 0.22);
@@ -167,57 +183,14 @@ class Battlefield extends Phaser.Scene {
         g.lineBetween(p.x - 18, p.y - 9 - height, p.x + 18, p.y + 9 - height);
         continue;
       }
-      const u = d.unit,
-        legs = (u.health["left leg"] + u.health["right leg"]) / 2,
-        crawl = legs < 35 || !u.active;
-      const bob =
-        u.route.length && u.active
-          ? Math.sin(this.battle.time * (legs < 70 ? 7 : 12) + u.id) * 1.6
-          : 0;
-      g.fillStyle(0x000000, 0.4);
-      g.fillEllipse(p.x + 3, p.y + 1, 20, 8);
-      if (this.selected === u) {
-        g.lineStyle(2, 0xf7df8c);
-        g.strokeEllipse(p.x, p.y, 26, 13);
-      }
-      g.fillStyle(u.team ? 0xd69283 : 0x83d7c0);
-      g.fillRect(
-        p.x - 7,
-        p.y - (crawl ? 8 : 22) + bob,
-        crawl ? 17 : 13,
-        crawl ? 6 : 14,
+      this.visuals.drawUnit(
+        g,
+        this.battle,
+        d.unit,
+        p,
+        iso,
+        this.selected === d.unit,
       );
-      g.fillStyle(u.team ? 0x5e6550 : 0x667957);
-      g.fillRect(p.x - 5, p.y - (crawl ? 10 : 28) + bob, 10, 7);
-      g.fillStyle(0xe1c6a1);
-      g.fillRect(p.x - 3, p.y - (crawl ? 7 : 22) + bob, 6, 4);
-      g.lineStyle(3, u.hit > 0 ? 0xffffff : 0x15212c);
-      const aim = iso(u.x + Math.cos(u.facing), u.y + Math.sin(u.facing));
-      g.lineBetween(
-        p.x,
-        p.y - 13,
-        p.x + (aim.x - p.x) * 0.55,
-        p.y - 13 + (aim.y - p.y) * 0.55,
-      );
-      if (!crawl) {
-        g.fillStyle(0x18242a);
-        g.fillRect(p.x - 6, p.y - 7, 4, 7 + bob);
-        g.fillRect(p.x + 2, p.y - 7, 4, 7 - bob);
-      }
-      if (u.role === "Medic") {
-        g.fillStyle(0xffffff);
-        g.fillRect(p.x - 2, p.y - 17, 5, 2);
-        g.fillRect(p.x, p.y - 19, 1, 6);
-      }
-      if (u.role === "Leader") {
-        g.fillStyle(0xf4d783);
-        g.fillTriangle(p.x - 3, p.y - 34, p.x + 3, p.y - 34, p.x, p.y - 39);
-      }
-      if (!u.active) {
-        g.lineStyle(2, u.dead ? 0x9a4646 : 0xf2c46a);
-        g.lineBetween(p.x - 4, p.y - 5, p.x + 4, p.y + 3);
-        g.lineBetween(p.x + 4, p.y - 5, p.x - 4, p.y + 3);
-      }
     }
     // Roofs are removed for houses containing any soldier, so interior fighting stays legible.
     for (const h of houses)
@@ -234,16 +207,7 @@ class Battlefield extends Phaser.Scene {
         g.lineStyle(2, 0x819294);
         g.strokePoints([a, b, c, d, a].map((p) => ({ x: p.x, y: p.y - 32 })));
       }
-    for (const s of this.battle.shots) {
-      const a = iso(s.a.x, s.a.y),
-        b = iso(s.b.x, s.b.y);
-      g.lineStyle(1, 0xffe9ac, 0.65);
-      g.lineBetween(a.x, a.y - 14, b.x, b.y - 14);
-      g.fillStyle(0xffca65, 0.13);
-      g.fillCircle(a.x, a.y - 14, 24);
-      g.fillStyle(0xffeeae);
-      g.fillCircle(a.x, a.y - 14, 4);
-    }
+    this.visuals.drawTraces(g, iso);
     document.querySelector("#counts").textContent =
       `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
     const u = this.selected;

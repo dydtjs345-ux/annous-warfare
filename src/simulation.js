@@ -1,4 +1,10 @@
 import {
+  initializePresentation,
+  beginPresentationStep,
+  finishPresentationStep,
+  emitVisualEvent,
+} from "./presentation-state.js";
+import {
   coordinateSquad,
   followAssignment,
   recordCombatLoss,
@@ -95,9 +101,12 @@ export class Battle {
           coverTarget: null,
         });
     initializeIntel(this);
+    initializePresentation(this);
   }
   injury(u, p, damage) {
-    const wasActive = u.active;
+    const wasActive = u.active,
+      wasDead = u.dead,
+      oldHealth = u.health[p];
     u.health[p] = Math.max(0, u.health[p] - damage);
     u.hit = 0.3;
     reportCasualty(this, u);
@@ -118,9 +127,17 @@ export class Battle {
       u.target = null;
     }
     if (wasActive && !u.active) recordCombatLoss(this, u);
+    if (u.health[p] < oldHealth)
+      emitVisualEvent(this, "damage", u, {
+        part: p,
+        amount: oldHealth - u.health[p],
+      });
+    if (!wasDead && u.dead) emitVisualEvent(this, "death", u);
+    else if (wasActive && !u.active) emitVisualEvent(this, "incapacitated", u);
   }
   step(dt) {
     if (this.result) return;
+    beginPresentationStep(this);
     this.time += dt;
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
@@ -207,8 +224,25 @@ export class Battle {
             u.treat += dt;
             if (u.treat >= 1) {
               u.treat = 0;
+              const healthBefore = Object.values(patient.health).reduce(
+                (a, b) => a + b,
+                0,
+              );
               for (const p of parts)
                 patient.health[p] = Math.min(100, patient.health[p] + 8);
+              const restored =
+                Object.values(patient.health).reduce((a, b) => a + b, 0) -
+                healthBefore;
+              if (restored > 0) {
+                emitVisualEvent(this, "treatmentTick", u, {
+                  patientId: patient.id,
+                  restored,
+                });
+                if (Math.min(...Object.values(patient.health)) >= 65)
+                  emitVisualEvent(this, "treatmentComplete", u, {
+                    patientId: patient.id,
+                  });
+              }
               if (
                 patient.health.torso >= 30 &&
                 patient.health.head >= 30 &&
@@ -244,6 +278,14 @@ export class Battle {
             a: { x: u.x, y: u.y },
             b: { x: enemy.x, y: enemy.y },
             life: 0.09,
+          });
+          emitVisualEvent(this, "shot", u, {
+            x: u.x,
+            y: u.y,
+            targetX: enemy.x,
+            targetY: enemy.y,
+            angle: u.facing,
+            weapon: u.role === "LMG" ? "LMG" : "rifle",
           });
           incomingFire(this, u, enemy);
           markObservedFire(this, u);
@@ -350,6 +392,7 @@ export class Battle {
       if (u.active) updateProgress(this, u);
       refreshDiagnostics(this, u);
     }
+    finishPresentationStep(this, dt);
     const counts = [0, 1].map(
       (t) => this.units.filter((u) => u.team === t && u.active).length,
     );
