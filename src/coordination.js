@@ -1,3 +1,4 @@
+import { receivingTreatment } from "./medical.js";
 import { blocked, key, sight, cover } from "./world.js";
 import { contacts, squadThreats, uncertainThreats } from "./intelligence.js";
 import {
@@ -673,6 +674,14 @@ export function followAssignment(battle, u, dt) {
       ? "Search last reported sector"
       : "Recon assigned observation lane";
     u.decisionReason = a.reason;
+    // Real treatment is a purposeful pause, not a failed observation route.
+    if (receivingTreatment(battle, u, dt)) {
+      a.lastMovement = battle.time;
+      a.until += dt;
+      u.assignmentPause = "receiving active treatment";
+      battle.move(u, a.target, dt);
+      return true;
+    }
     if (distance(u, a.anchor) >= 0.5) {
       a.anchor = { x: u.x, y: u.y };
       a.lastMovement = battle.time;

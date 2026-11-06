@@ -370,3 +370,21 @@ the final cases. Detailed replay and comparison commands are in the report. The 
 Pages URL deploys after review/merge and successful Actions completion. Physical Safari
 checks should cover medical holds/return to assignments, urgent cover moves, unsafe
 rescue refusal, late-game waits, all speeds, gestures and both screen orientations.
+
+
+### v0.2.4 navigation and duration follow-up
+
+Continues the existing v0.2.4 branch; [three-way audit](reports/v024-followup-audit.md)
+compares original v0.2.3.1, previous v0.2.4 and the corrected implementation on the
+same 300 cases. All final cases finish; seven new regressions bring `npm test` to
+130 tests. Treatment pauses no longer fail a valid recon route, failed casualty
+approaches retain contextual retry history, and sub-tile oscillation triggers normal
+route recovery. Stale non-urgent personal cover cannot replace an active recon order
+after visual contact is lost. Completed patients resume useful activity immediately.
+
+P95 duration improves 129.5→115.4s and raw navigation failures 2.43→2.23/match; cover
+cycle and medic survival gains remain. Care completions fall .86→.77 per medic, still
+above original .58: medical improvement is only partly preserved. New adverse seeds
+and a rejected intermediate timeout are documented. No forced aggression, artificial
+match cap, new balance rule or graphical change was added. Build and mobile Chromium
+checks pass; physical Safari checks remain necessary.

@@ -50,6 +50,7 @@ export function choosePatient(b, u, enemy) {
   return patient;
 }
 export function receivingTreatment(b, u, dt) {
+  if (Math.min(...Object.values(u.health)) >= 65) return false;
   if (u.suppression > 0.55) return false;
   const threats = [...squadThreats(b, u.team), ...uncertainThreats(b, u)];
   if (exposure(u, threats) > 0.75) return false;

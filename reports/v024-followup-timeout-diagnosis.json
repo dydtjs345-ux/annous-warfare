@@ -1,0 +1,1221 @@
+{
+  "seed": 144,
+  "scenario": "leg-injuries",
+  "digest": "719fa33267321756af7e83db26fc95e1b917b40419c16c0e13f760f9a5fb886e",
+  "reproducesRejectedDataset": true,
+  "samples": [
+    {
+      "time": 80.99999999999967,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 80.99999999999967
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.09999999999967,
+      "medic": {
+        "position": [
+          7,
+          7.5569375
+        ],
+        "patient": 1,
+        "target": {
+          "x": 9,
+          "y": 10
+        },
+        "route": [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.09999999999967
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.5569375
+          ],
+          "goal": {
+            "x": 9,
+            "y": 10
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.19999999999966,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.19999999999966
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.29999999999966,
+      "medic": {
+        "position": [
+          7,
+          7.5569375
+        ],
+        "patient": 1,
+        "target": {
+          "x": 9,
+          "y": 10
+        },
+        "route": [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.29999999999966
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.5569375
+          ],
+          "goal": {
+            "x": 9,
+            "y": 10
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.39999999999965,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.39999999999965
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.49999999999964,
+      "medic": {
+        "position": [
+          7,
+          7.5569375
+        ],
+        "patient": 1,
+        "target": {
+          "x": 9,
+          "y": 10
+        },
+        "route": [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.49999999999964
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.5569375
+          ],
+          "goal": {
+            "x": 9,
+            "y": 10
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.59999999999964,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.59999999999964
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.69999999999963,
+      "medic": {
+        "position": [
+          7,
+          7.5569375
+        ],
+        "patient": 1,
+        "target": {
+          "x": 9,
+          "y": 10
+        },
+        "route": [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.69999999999963
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.5569375
+          ],
+          "goal": {
+            "x": 9,
+            "y": 10
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.79999999999963,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.79999999999963
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 81.89999999999962,
+      "medic": {
+        "position": [
+          7,
+          7.5569375
+        ],
+        "patient": 1,
+        "target": {
+          "x": 9,
+          "y": 10
+        },
+        "route": [
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 81.89999999999962
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.5569375
+          ],
+          "goal": {
+            "x": 9,
+            "y": 10
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    },
+    {
+      "time": 99.9999999999986,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 99.9999999999986
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Covering search",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "overwatch",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Seeking cover",
+          "position": [
+            20.150172066518245,
+            14.955642925852173
+          ],
+          "goal": {
+            "x": 18,
+            "y": 13
+          },
+          "assignment": "recon",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "time": 199.99999999999292,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 199.99999999999292
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Covering search",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "overwatch",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Reacquiring contact",
+          "position": [
+            19,
+            15
+          ],
+          "goal": {
+            "x": 19,
+            "y": 15
+          },
+          "assignment": "recon",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "time": 500.0000000000452,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 500.0000000000452
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Covering search",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "overwatch",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Seeking cover",
+          "position": [
+            19.4430625,
+            15
+          ],
+          "goal": {
+            "x": 18,
+            "y": 13
+          },
+          "assignment": "recon",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "time": 1799.9999999994584,
+      "medic": {
+        "position": [
+          7,
+          7.40925
+        ],
+        "patient": 0,
+        "target": {
+          "x": 10,
+          "y": 3
+        },
+        "route": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "navigation": "Moving",
+        "navProgressAt": 1799.9999999994584
+      },
+      "units": [
+        {
+          "id": 0,
+          "state": "Awaiting coordination",
+          "position": [
+            9.517717996841576,
+            3
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        },
+        {
+          "id": 4,
+          "state": "Awaiting coordination",
+          "position": [
+            11.59075,
+            22
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": null
+        },
+        {
+          "id": 5,
+          "state": "Moving to casualty",
+          "position": [
+            7,
+            7.40925
+          ],
+          "goal": {
+            "x": 10,
+            "y": 3
+          },
+          "assignment": "care",
+          "reason": "Medic reserved for survival and actionable casualty care"
+        },
+        {
+          "id": 9,
+          "state": "Awaiting coordination",
+          "position": [
+            21,
+            14.052675000000004
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Injuries require a defensive role"
+        },
+        {
+          "id": 10,
+          "state": "Awaiting coordination",
+          "position": [
+            19.1476875,
+            15
+          ],
+          "goal": null,
+          "assignment": "defend",
+          "reason": "Brief retry cooldown after completed/failed task"
+        }
+      ]
+    }
+  ]
+}

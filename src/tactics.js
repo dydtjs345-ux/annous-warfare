@@ -507,7 +507,19 @@ export function followManeuver(battle, u, m, dt) {
 }
 
 export function careRouteSafe(battle, u, patient) {
+  const careFailure = u.failedCareRoutes?.find(
+    (f) => f.patientId === patient.id && f.until > battle.time,
+  );
   if (
+    careFailure &&
+    distance(u, careFailure.origin) < 1 &&
+    distance(patient, careFailure.patient) < 2
+  )
+    return false;
+  // A contextual care failure supersedes the legacy last-goal exclusion. Once
+  // its origin/target materially changes, reassess instead of shadowing recovery.
+  if (
+    !careFailure &&
     u.failedGoal &&
     u.failedGoal.until > battle.time &&
     distance(patient, u.failedGoal) < 1

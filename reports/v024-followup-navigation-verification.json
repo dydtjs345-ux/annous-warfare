@@ -1,0 +1,12 @@
+{
+  "matchedDigests": 300,
+  "matchedFailureTotals": 300,
+  "totals": {
+    "Soldier congestion": 503,
+    "No net movement progress": 166
+  },
+  "perMatch": {
+    "Soldier congestion": 1.6766666666666667,
+    "No net movement progress": 0.5533333333333333
+  }
+}
