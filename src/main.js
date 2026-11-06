@@ -1,3 +1,4 @@
+import {CombatAtmosphere} from "./combat-atmosphere.js";
 import {drawGroundDetail,drawBuildingDetail} from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
@@ -32,6 +33,7 @@ class Battlefield extends Phaser.Scene {
     this.ground = this.add.graphics();
     this.g = this.add.graphics();
     this.visuals = new CombatVisuals();
+    this.atmosphere = new CombatAtmosphere();
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);
     this.newMatch();
@@ -377,6 +379,7 @@ class Battlefield extends Phaser.Scene {
       this.speed,
       this.paused,
     );
+    this.atmosphere.update(this.battle,delta/1000,this.speed,this.paused);
     const g = this.g,
       v = this.cameras.main.worldView;
     g.clear();
@@ -410,6 +413,7 @@ class Battlefield extends Phaser.Scene {
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
+    this.atmosphere.draw(g,this.iso,v);
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =
