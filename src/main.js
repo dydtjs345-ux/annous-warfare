@@ -1,3 +1,4 @@
+import { drawObstacle, drawGrenades } from "./urban-visuals.js";
 import { CombatVisuals } from "./combat-visuals.js";
 import { inspectSoldier } from "./inspection.js";
 import Phaser from "phaser";
@@ -7,7 +8,7 @@ import { W, H, houses, obstacles, inside } from "./world.js";
 const iso = (x, y) => ({ x: 700 + (x - y) * 20, y: 55 + (x + y) * 10 });
 class Battlefield extends Phaser.Scene {
   create() {
-    this.battle = new Battle();
+    this.battle = new Battle(Math.random, { map: "urban", grenades: true });
     this.speed = 1;
     this.paused = false;
     this.acc = 0;
@@ -92,7 +93,7 @@ class Battlefield extends Phaser.Scene {
         }),
     );
     document.querySelector("#restart").onclick = () => {
-      this.battle = new Battle();
+      this.battle = new Battle(Math.random, { map: "urban", grenades: true });
       this.drawables = [
         ...this.obstacles,
         ...this.battle.units.map((unit) => ({ unit })),
@@ -166,21 +167,7 @@ class Battlefield extends Phaser.Scene {
     for (const d of drawables) {
       const p = iso(d.unit?.x ?? d.x, d.unit?.y ?? d.y);
       if (!d.unit) {
-        const height = d.type === "wall" ? 23 : d.type === "fence" ? 12 : 9;
-        g.fillStyle(0x000000, 0.22);
-        g.fillRect(p.x, p.y, 25, 8);
-        g.fillStyle(d.type === "fence" ? 0x786e51 : 0x727a79);
-        g.fillPoints(
-          [
-            { x: p.x - 18, y: p.y - 9 - height },
-            { x: p.x + 18, y: p.y + 9 - height },
-            { x: p.x + 18, y: p.y + 9 },
-            { x: p.x - 18, y: p.y - 9 },
-          ],
-          true,
-        );
-        g.lineStyle(2, 0xa5aaa0);
-        g.lineBetween(p.x - 18, p.y - 9 - height, p.x + 18, p.y + 9 - height);
+        drawObstacle(g, d, p);
         continue;
       }
       this.visuals.drawUnit(
@@ -208,6 +195,7 @@ class Battlefield extends Phaser.Scene {
         g.strokePoints([a, b, c, d, a].map((p) => ({ x: p.x, y: p.y - 32 })));
       }
     this.visuals.drawTraces(g, iso);
+    drawGrenades(g, this.battle, iso);
     document.querySelector("#counts").textContent =
       `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
     const u = this.selected;

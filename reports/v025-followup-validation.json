@@ -1,0 +1,76 @@
+{
+  "base": "35cd2ee461aa08c3d6e479add3ce9e95791f9d91",
+  "branch": "feat/v025-urban-cover-and-grenades",
+  "baselineUrban": {
+    "runs": 200,
+    "matchesShippedCoreHashes": 200,
+    "timeouts": 0
+  },
+  "updatedUrban": {
+    "runs": 200,
+    "timeouts": 0
+  },
+  "identicalScenarioConfigurations": true,
+  "legacyCoreHashesPreserved": 200,
+  "traces": {
+    "before": {
+      "replays": 31,
+      "allCoreHashesMatch": true,
+      "terrainViolations": 0
+    },
+    "after": {
+      "replays": 31,
+      "allCoreHashesMatch": true,
+      "terrainViolations": 0
+    }
+  },
+  "tests": {
+    "pass": 154,
+    "fail": 0,
+    "groups": [
+      56,
+      17,
+      17,
+      19,
+      4,
+      10,
+      7,
+      19,
+      5
+    ],
+    "baselineNewTestsPass": 4,
+    "baselineNewTestsFail": 1,
+    "confirmedFailBefore": "medic congestion replan around vehicle toward occupied patient endpoint"
+  },
+  "productionBuild": "passed; existing large Phaser chunk advisory",
+  "mobileReport": "reports/v025-followup-mobile.json",
+  "physicalSafari": "Not available; checklist in report",
+  "runtimeFilesChanged": [
+    "src/simulation.js"
+  ],
+  "sourceHashes": {
+    "src/combat-visuals.js": "968ead734269636bc2f682a9c4e6f8e8d3078d67291d700f0bdd505c87665320",
+    "src/coordination.js": "ad80e119c0f63c4dee75085966bef18aa47fe782b248fececfc4ee5abfcfe2af",
+    "src/diagnostics.js": "f39d875b9a75043d068ed516f9af74de16ebcdc5133f1029363ec5d8df96112a",
+    "src/grenades.js": "9bf813407cdc850fa6780777f8f9d03a2544b08c423c6b39088b9fccf3a03aca",
+    "src/inspection.js": "a2d7dd46c12401925429d91af149f32a88e706c7e783d1d40a64f398af06990c",
+    "src/intelligence.js": "e2527a6707d92cd97f23abaf2f8c73fa911817a316cf6f90f57f1fb8d886dbb0",
+    "src/main.js": "6da741de4fcd4db6644de02238348d7038ccf644f797d1d4dd786ac7a4063372",
+    "src/medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "src/mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "src/presentation-state.js": "3492dd2c00cf667af91459c197eb2dd795ad772457fb158f9602be202958074c",
+    "src/simulation.js": "b6ce11984e58f209817880bff5f660474b504170924baa1246898de8a7fa9ddd",
+    "src/style.css": "27083c7211a4bf45877597f10ac232deae4503b2a1c93b745497068c4dcc7d19",
+    "src/tactics.js": "78b936b953a05435d27d2153343c8b4b09f4cdcdd32feeb795d50473f71094c2",
+    "src/urban-visuals.js": "db8cd1d336dcb49c391f8062446275b40fe436c1c3ff52c3e4ef9aebfffbe3f0",
+    "src/world.js": "8443eb84203ad21d7890b42f09ba80ab4f5eafef75d3457006496b221dcbf8d9"
+  },
+  "datasetHashes": {
+    "reports/v025-followup-before-B.json": "b7f463e1c671dc7d6b59fd4ec5a8ffe2d849465caba580d9ea95372e6f3764b8",
+    "reports/v025-followup-after-B.json": "538d91bcfe5b50b1de2e22e3d0da861d18a730fc1a5b4088da5e87b63a05fba8",
+    "reports/v025-followup-comparison.json": "2fb1ade8608c6ee9827999bc464eded5979b07c3b5fcbd6015f4bed2281af603",
+    "reports/v025-followup-legacy.json": "e87ec776d722eb7630e31dccc66e1fd6899590891da22e723a41e646c5500401",
+    "reports/v025-followup-traces-before.json": "5459e25d5ac9f34f47584062f8b45164b9912c4ef8b98e8dead28d4724e14b59",
+    "reports/v025-followup-traces-after.json": "a6b232d19a7b1849d99d7f463093e4f1d50e6a8589033d0d8804ecf5ecd98b45"
+  }
+}

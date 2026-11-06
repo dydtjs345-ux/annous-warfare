@@ -1,0 +1,72 @@
+{
+  "A": {
+    "baselineRuns": 200,
+    "finalRuns": 200,
+    "baselineFinished": 200,
+    "finalFinished": 200,
+    "matchingCoreHashes": 200
+  },
+  "B": {
+    "baselineRuns": 200,
+    "finalRuns": 200,
+    "baselineFinished": 199,
+    "finalFinished": 200,
+    "matchingCoreHashes": 111
+  },
+  "replays": {
+    "sets": 4,
+    "casesPerSet": 15,
+    "allHashesMatch": true
+  },
+  "base": "e6f28846c81b069d71adbdc20a5dbc113c8dda87",
+  "branch": "feat/v025-urban-cover-and-grenades",
+  "tests": {
+    "passing": 149,
+    "groups": [
+      56,
+      17,
+      17,
+      19,
+      4,
+      10,
+      7,
+      19
+    ],
+    "failures": 0
+  },
+  "productionBuild": "passed; existing large Phaser chunk advisory",
+  "productionAssets": [
+    "/annous-warfare/assets/index-CG_n1Xpp.js",
+    "/annous-warfare/assets/index-BplxnfUi.css"
+  ],
+  "legacyMatchesParentOutcomesAndPerSoldierMetrics": 200,
+  "plannedAuditRuns": 800,
+  "additionalFinalCohortVerificationRuns": 400,
+  "additionalIndependentBeforeBObserverReplays": 200,
+  "seedRecording": "all four raw dataset configs; see audit method",
+  "sourceHashes": {
+    "src/combat-visuals.js": "968ead734269636bc2f682a9c4e6f8e8d3078d67291d700f0bdd505c87665320",
+    "src/coordination.js": "ad80e119c0f63c4dee75085966bef18aa47fe782b248fececfc4ee5abfcfe2af",
+    "src/diagnostics.js": "f39d875b9a75043d068ed516f9af74de16ebcdc5133f1029363ec5d8df96112a",
+    "src/grenades.js": "9bf813407cdc850fa6780777f8f9d03a2544b08c423c6b39088b9fccf3a03aca",
+    "src/inspection.js": "a2d7dd46c12401925429d91af149f32a88e706c7e783d1d40a64f398af06990c",
+    "src/intelligence.js": "e2527a6707d92cd97f23abaf2f8c73fa911817a316cf6f90f57f1fb8d886dbb0",
+    "src/main.js": "6da741de4fcd4db6644de02238348d7038ccf644f797d1d4dd786ac7a4063372",
+    "src/medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "src/mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "src/presentation-state.js": "3492dd2c00cf667af91459c197eb2dd795ad772457fb158f9602be202958074c",
+    "src/simulation.js": "983d273a896bef35a22148d8150ad1195c218ad79cc53b7ca4fbd3375ce84439",
+    "src/style.css": "27083c7211a4bf45877597f10ac232deae4503b2a1c93b745497068c4dcc7d19",
+    "src/tactics.js": "78b936b953a05435d27d2153343c8b4b09f4cdcdd32feeb795d50473f71094c2",
+    "src/urban-visuals.js": "db8cd1d336dcb49c391f8062446275b40fe436c1c3ff52c3e4ef9aebfffbe3f0",
+    "src/world.js": "8443eb84203ad21d7890b42f09ba80ab4f5eafef75d3457006496b221dcbf8d9"
+  },
+  "datasetHashes": {
+    "reports/v025-before-A.json": "9c8d9930173517cbfbe4069157ee2b299c1c2b9e7c07c79c323190fb3deb773b",
+    "reports/v025-before-B.json": "d2984d82a27ea5d71031c72ec6618d7564b6488d45082a6f1061dcd73626c2b9",
+    "reports/v025-after-A.json": "acfb31e9bc3ef1e7f1316fd3937be8d16a30fadf21383c43249336cb973b9b4d",
+    "reports/v025-after-B.json": "b7f463e1c671dc7d6b59fd4ec5a8ffe2d849465caba580d9ea95372e6f3764b8"
+  },
+  "mobileReport": "reports/v025-mobile.json",
+  "physicalSafari": "Unavailable; user device checklist in audit report"
+}

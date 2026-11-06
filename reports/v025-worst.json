@@ -1,0 +1,1127 @@
+[
+  {
+    "seed": 1155,
+    "cohort": "urban",
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 1799.9999999994584,
+    "stalled": true,
+    "loops": 1,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 92,
+    "cohort": "legacy",
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 170.3999999999946,
+    "stalled": false,
+    "loops": 2,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 46,
+    "cohort": "legacy",
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 155.79999999999544,
+    "stalled": false,
+    "loops": 1,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 97,
+    "cohort": "legacy",
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 141.99999999999622,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 1097,
+    "cohort": "urban",
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 140.29999999999632,
+    "stalled": false,
+    "loops": 4,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 146,
+    "cohort": "legacy",
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 128.79999999999697,
+    "stalled": false,
+    "loops": 5,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 120,
+    "cohort": "legacy",
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 124.69999999999719,
+    "stalled": false,
+    "loops": 3,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 1179,
+    "cohort": "urban",
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 122.99999999999729,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 1,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 1031,
+    "cohort": "urban",
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 122.59999999999731,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 1151,
+    "cohort": "urban",
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 119.09999999999751,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 20,
+    "cohort": "legacy",
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 118.89999999999752,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 9,
+    "cohort": "legacy",
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 117.99999999999757,
+    "stalled": false,
+    "loops": 3,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 1194,
+    "cohort": "urban",
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 116.99999999999763,
+    "stalled": false,
+    "loops": 1,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 56,
+    "cohort": "legacy",
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 115.39999999999772,
+    "stalled": false,
+    "loops": 0,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  },
+  {
+    "seed": 36,
+    "cohort": "legacy",
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "legacy",
+        "variant": 0
+      },
+      "grenades": false,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "duration": 114.79999999999775,
+    "stalled": false,
+    "loops": 4,
+    "grenades": {
+      "thrown": 0,
+      "detonated": 0,
+      "effective": 0,
+      "friendlyHits": 0,
+      "detections": 0,
+      "reactions": 0,
+      "safeReactions": 0
+    }
+  }
+]

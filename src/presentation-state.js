@@ -64,6 +64,7 @@ export function activityKind(u) {
   if (!u.active) return null;
   if (p.treating) return "treating";
   if (p.reloading) return "reloading";
+  if (p.grenadeThrownThisStep) return "engaging";
   if (p.shotThisStep) return "engaging";
   if (["deploying", "unmounting"].includes(u.mount?.state)) return "cover";
   if (p.shotThisStep || (["Engaging", "Aiming"].includes(u.state) && p.direct))
@@ -138,6 +139,7 @@ export function finishPresentationStep(battle, dt) {
       "Watching reported sector",
       "Covering casualty",
     ].includes(u.state);
+    p.grenadeThrownThisStep = u.grenadeThrownAt === battle.time;
     p.shotThisStep = p.lastShotAt === battle.time;
     p.overwatch = actualOverwatch(battle, u);
     const lane = !!(
@@ -158,6 +160,7 @@ export function finishPresentationStep(battle, dt) {
         p.overwatch ||
         lane;
       const bucket =
+        u.grenadePrep ||
         kind === "reloading" ||
         (["deploying", "unmounting"].includes(u.mount?.state) &&
           !p.shotThisStep) ||

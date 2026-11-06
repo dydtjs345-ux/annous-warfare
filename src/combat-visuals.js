@@ -1,5 +1,6 @@
 // Render-only clocks/effects. Movement phase comes from distance actually moved;
 // reload/treatment phases come from real counters, never invented action timers.
+import { FRAG } from "./grenades.js";
 const EFFECT_TIMERS = ["shot", "hit", "heal", "complete", "fall"];
 const NO_COMBAT = new Set([
   "dead",
@@ -7,6 +8,8 @@ const NO_COMBAT = new Set([
   "treating",
   "reloading",
   "deploying",
+  "grenadePrep",
+  "grenadeThrow",
   "unmounting",
 ]);
 const CROUCHED = new Set([
@@ -53,6 +56,9 @@ export function visualState(battle, u, fx, out = {}) {
     : out.mountState === "mounted"
       ? 1
       : 0;
+  out.grenadeProgress = u.grenadePrep
+    ? Math.min(1, (battle.time - u.grenadePrep.startedAt) / FRAG.prepare)
+    : 0;
   out.reloadProgress = p.reloadProgress;
   out.treatmentProgress = u.treat ?? 0;
   out.stride = p.traveled * Math.PI * 2;
@@ -61,6 +67,8 @@ export function visualState(battle, u, fx, out = {}) {
   out.limp = legs < 70;
   if (u.dead) out.pose = "dead";
   else if (!u.active) out.pose = "incapacitated";
+  else if (u.grenadeThrownAt === battle.time) out.pose = "grenadeThrow";
+  else if (u.grenadePrep) out.pose = "grenadePrep";
   else if (p.treating) out.pose = "treating";
   else if (out.mountState === "deploying" || out.mountState === "unmounting")
     out.pose = out.mountState;
@@ -269,7 +277,7 @@ export class CombatVisuals {
       dy /= length;
       const handY = p.y + (crouch ? -11 : prone ? -6 : -14) + bob;
       // Sleeves and two bent forearms meet the weapon's authoritative hand axis.
-      if (m.pose !== "treating") {
+      if (!["treating", "grenadePrep", "grenadeThrow"].includes(m.pose)) {
         g.lineStyle(3, cloth);
         g.lineBetween(p.x - 5 + lean, torsoY + 3, p.x - 5 + dx * 4, handY + 3);
         g.lineBetween(p.x + 5 + lean, torsoY + 3, p.x + 5 + dx * 4, handY + 3);
@@ -291,7 +299,18 @@ export class CombatVisuals {
         ? Math.min(m.mountState === "mounted" ? 1 : 2, fx.shot * 24)
         : 0;
       const barrel = u.role === "LMG" ? 17 : 13;
-      if (m.pose === "treating") {
+      if (["grenadePrep", "grenadeThrow"].includes(m.pose)) {
+        g.lineStyle(3, skin);
+        g.lineBetween(
+          p.x + 4,
+          torsoY + 3,
+          p.x + 8,
+          p.y + top + 5 - 4 * m.grenadeProgress,
+        );
+        g.fillStyle(0xb4b781);
+        if (m.pose === "grenadePrep")
+          g.fillRect(p.x + 6, p.y + top + 1 - 4 * m.grenadeProgress, 4, 5);
+      } else if (m.pose === "treating") {
         const wave = Math.sin(m.treatmentProgress * Math.PI * 4) * 2;
         g.lineStyle(3, 0xe1c6a1);
         g.lineBetween(p.x - 4, handY, p.x + 3, handY + 6 + wave);

@@ -1,0 +1,471 @@
+{
+  "note": "Exploratory candidates excluded from delivery. The retained code changes only the urban medic patient endpoint in the existing replan. No metric definitions, seeds or scenarios were changed. A 17-case pilot and single-seed isolation checks were also used; their subset means are not compared with full-cohort means.",
+  "trials": [
+    {
+      "candidate": "Broad proactive cover-route filtering",
+      "shipped": false,
+      "cases": 200,
+      "summary": {
+        "seeds": 200,
+        "grenades": {
+          "thrown": 0.59,
+          "detonated": 0.59,
+          "effective": 0.58,
+          "friendlyHits": 0,
+          "detections": 2.5,
+          "reactions": 1.08,
+          "safeReactions": 0.655
+        },
+        "durationMedian": 51.50000000000046,
+        "durationP90": 94.39999999999891,
+        "durationP95": 110.59999999999799,
+        "durationMax": 154.19999999999553,
+        "navigationFailures": 0.285,
+        "deploys": 3.95,
+        "unmounts": 3.52,
+        "medicShots": 11.965,
+        "treatments": 4.175,
+        "invalidShots": 0,
+        "facingErrors": 0,
+        "aimErrors": 0,
+        "maxWait": 23.986500000000056,
+        "loops": 0.63,
+        "injured": 6.855,
+        "incapacitated": 4.41,
+        "medicTreatmentTime": 5.3749999999999964,
+        "duration": 54.49100000000001,
+        "stalled": 0,
+        "firing": 136.51950000000014,
+        "shots": 317.425,
+        "exposed": 158.88049999999538,
+        "knownThreatTime": 331.95050000001277,
+        "exposurePercent": 47.86270844598495,
+        "usefulCover": 129.4649999999971,
+        "relocations": 14.185,
+        "abandoned": 10.06,
+        "passive": 72.9935000000001,
+        "passivePercent": 19.22680296961913,
+        "mountedTime": 11.17750000000001,
+        "mountedShots": 40.345,
+        "casualties": 8.48,
+        "dead": 4.07,
+        "reacquisitionMedian": 2.7000000000000384,
+        "reacquisitionP90": 12.799999999999393,
+        "reacquisitionSamples": 4823
+      },
+      "worstDurationChanges": [
+        {
+          "seed": 1198,
+          "before": 39.9000000000003,
+          "candidate": 154.19999999999553,
+          "delta": 114.29999999999524
+        },
+        {
+          "seed": 1028,
+          "before": 26.200000000000102,
+          "candidate": 120.19999999999744,
+          "delta": 93.99999999999734
+        },
+        {
+          "seed": 1024,
+          "before": 31.400000000000176,
+          "candidate": 123.59999999999725,
+          "delta": 92.19999999999708
+        },
+        {
+          "seed": 1020,
+          "before": 23.10000000000006,
+          "candidate": 115.19999999999773,
+          "delta": 92.09999999999766
+        },
+        {
+          "seed": 1033,
+          "before": 35.70000000000024,
+          "candidate": 123.89999999999723,
+          "delta": 88.199999999997
+        },
+        {
+          "seed": 1062,
+          "before": 63.000000000000625,
+          "candidate": 142.89999999999617,
+          "delta": 79.89999999999554
+        },
+        {
+          "seed": 1153,
+          "before": 55.200000000000514,
+          "candidate": 122.39999999999732,
+          "delta": 67.1999999999968
+        },
+        {
+          "seed": 1092,
+          "before": 23.500000000000064,
+          "candidate": 88.19999999999926,
+          "delta": 64.69999999999919
+        },
+        {
+          "seed": 1099,
+          "before": 51.700000000000465,
+          "candidate": 110.59999999999799,
+          "delta": 58.899999999997526
+        },
+        {
+          "seed": 1055,
+          "before": 59.500000000000576,
+          "candidate": 117.89999999999758,
+          "delta": 58.399999999997
+        }
+      ]
+    },
+    {
+      "candidate": "Early collision-triggered cover reassessment",
+      "shipped": false,
+      "cases": 200,
+      "summary": {
+        "seeds": 200,
+        "grenades": {
+          "thrown": 0.59,
+          "detonated": 0.59,
+          "effective": 0.57,
+          "friendlyHits": 0,
+          "detections": 2.335,
+          "reactions": 1.08,
+          "safeReactions": 0.385
+        },
+        "durationMedian": 59.400000000000574,
+        "durationP90": 100.09999999999859,
+        "durationP95": 124.5999999999972,
+        "durationMax": 1799.9999999994584,
+        "navigationFailures": 0.645,
+        "deploys": 4.555,
+        "unmounts": 4.125,
+        "medicShots": 11.615,
+        "treatments": 5.35,
+        "invalidShots": 0,
+        "facingErrors": 0,
+        "aimErrors": 0,
+        "maxWait": 28.244500000000116,
+        "loops": 1.125,
+        "injured": 6.92,
+        "incapacitated": 4.595,
+        "medicTreatmentTime": 6.919999999999996,
+        "duration": 70.32649999999731,
+        "stalled": 1,
+        "firing": 131.40450000000004,
+        "shots": 331.415,
+        "exposed": 165.93049999999502,
+        "knownThreatTime": 380.6370000000045,
+        "exposurePercent": 43.59284567711312,
+        "usefulCover": 153.1084999999857,
+        "relocations": 13.665,
+        "abandoned": 13.34,
+        "passive": 87.23850000000019,
+        "passivePercent": 20.267472980883824,
+        "mountedTime": 13.252500000000015,
+        "mountedShots": 46.53,
+        "casualties": 8.725,
+        "dead": 4.13,
+        "reacquisitionMedian": 3.0000000000000426,
+        "reacquisitionP90": 14.499999999999176,
+        "reacquisitionSamples": 5143
+      },
+      "worstDurationChanges": [
+        {
+          "seed": 1059,
+          "before": 93.29999999999897,
+          "candidate": 1799.9999999994584,
+          "delta": 1706.6999999994594
+        },
+        {
+          "seed": 1169,
+          "before": 38.90000000000028,
+          "candidate": 141.99999999999622,
+          "delta": 103.09999999999593
+        },
+        {
+          "seed": 1191,
+          "before": 87.5999999999993,
+          "candidate": 166.29999999999484,
+          "delta": 78.69999999999554
+        },
+        {
+          "seed": 1199,
+          "before": 68.60000000000038,
+          "candidate": 141.59999999999624,
+          "delta": 72.99999999999586
+        },
+        {
+          "seed": 1035,
+          "before": 64.00000000000064,
+          "candidate": 129.19999999999695,
+          "delta": 65.19999999999631
+        },
+        {
+          "seed": 1141,
+          "before": 57.50000000000055,
+          "candidate": 115.49999999999771,
+          "delta": 57.999999999997165
+        },
+        {
+          "seed": 1164,
+          "before": 49.40000000000043,
+          "candidate": 105.89999999999826,
+          "delta": 56.499999999997826
+        },
+        {
+          "seed": 1009,
+          "before": 38.90000000000028,
+          "candidate": 94.99999999999888,
+          "delta": 56.099999999998595
+        },
+        {
+          "seed": 1034,
+          "before": 103.09999999999842,
+          "candidate": 145.49999999999602,
+          "delta": 42.399999999997604
+        },
+        {
+          "seed": 1067,
+          "before": 61.80000000000061,
+          "candidate": 103.3999999999984,
+          "delta": 41.59999999999779
+        }
+      ]
+    },
+    {
+      "candidate": "Immediate reassessment after an empty congestion route",
+      "shipped": false,
+      "cases": 200,
+      "summary": {
+        "seeds": 200,
+        "grenades": {
+          "thrown": 0.6,
+          "detonated": 0.6,
+          "effective": 0.57,
+          "friendlyHits": 0,
+          "detections": 2.355,
+          "reactions": 1.095,
+          "safeReactions": 0.39
+        },
+        "durationMedian": 59.60000000000058,
+        "durationP90": 90.79999999999912,
+        "durationP95": 119.2999999999975,
+        "durationMax": 1799.9999999994584,
+        "navigationFailures": 0.305,
+        "deploys": 4.52,
+        "unmounts": 4.075,
+        "medicShots": 11.62,
+        "treatments": 5.48,
+        "invalidShots": 0,
+        "facingErrors": 0,
+        "aimErrors": 0,
+        "maxWait": 27.74150000000013,
+        "loops": 0.97,
+        "injured": 6.99,
+        "incapacitated": 4.62,
+        "medicTreatmentTime": 6.9719999999999995,
+        "duration": 69.56499999999733,
+        "stalled": 1,
+        "firing": 130.621,
+        "shots": 327.57,
+        "exposed": 163.69649999999504,
+        "knownThreatTime": 378.68650000000457,
+        "exposurePercent": 43.22744539348328,
+        "usefulCover": 152.39499999998569,
+        "relocations": 13.205,
+        "abandoned": 13.13,
+        "passive": 86.1040000000002,
+        "passivePercent": 20.037769790450287,
+        "mountedTime": 13.37700000000002,
+        "mountedShots": 47.245,
+        "casualties": 8.7,
+        "dead": 4.08,
+        "reacquisitionMedian": 3.100000000000005,
+        "reacquisitionP90": 14.70000000000018,
+        "reacquisitionSamples": 5079
+      },
+      "worstDurationChanges": [
+        {
+          "seed": 1059,
+          "before": 93.29999999999897,
+          "candidate": 1799.9999999994584,
+          "delta": 1706.6999999994594
+        },
+        {
+          "seed": 1169,
+          "before": 38.90000000000028,
+          "candidate": 119.2999999999975,
+          "delta": 80.39999999999722
+        },
+        {
+          "seed": 1191,
+          "before": 87.5999999999993,
+          "candidate": 166.29999999999484,
+          "delta": 78.69999999999554
+        },
+        {
+          "seed": 1035,
+          "before": 64.00000000000064,
+          "candidate": 129.19999999999695,
+          "delta": 65.19999999999631
+        },
+        {
+          "seed": 1028,
+          "before": 26.200000000000102,
+          "candidate": 88.89999999999922,
+          "delta": 62.69999999999912
+        },
+        {
+          "seed": 1141,
+          "before": 57.50000000000055,
+          "candidate": 115.49999999999771,
+          "delta": 57.999999999997165
+        },
+        {
+          "seed": 1009,
+          "before": 38.90000000000028,
+          "candidate": 94.99999999999888,
+          "delta": 56.099999999998595
+        },
+        {
+          "seed": 1180,
+          "before": 45.400000000000375,
+          "candidate": 97.9999999999987,
+          "delta": 52.59999999999833
+        },
+        {
+          "seed": 1199,
+          "before": 68.60000000000038,
+          "candidate": 119.89999999999746,
+          "delta": 51.299999999997084
+        },
+        {
+          "seed": 1034,
+          "before": 103.09999999999842,
+          "candidate": 145.49999999999602,
+          "delta": 42.399999999997604
+        }
+      ]
+    },
+    {
+      "candidate": "Movement footprints + patient endpoint, without cover-policy changes",
+      "shipped": false,
+      "cases": 200,
+      "summary": {
+        "seeds": 200,
+        "grenades": {
+          "thrown": 0.605,
+          "detonated": 0.605,
+          "effective": 0.58,
+          "friendlyHits": 0,
+          "detections": 2.35,
+          "reactions": 1.09,
+          "safeReactions": 0.395
+        },
+        "durationMedian": 59.10000000000057,
+        "durationP90": 93.99999999999893,
+        "durationP95": 119.89999999999746,
+        "durationMax": 166.29999999999484,
+        "navigationFailures": 0.79,
+        "deploys": 4.425,
+        "unmounts": 4.03,
+        "medicShots": 11.995,
+        "treatments": 5.565,
+        "invalidShots": 0,
+        "facingErrors": 0,
+        "aimErrors": 0,
+        "maxWait": 28.222500000000117,
+        "loops": 0.99,
+        "injured": 6.87,
+        "incapacitated": 4.535,
+        "medicTreatmentTime": 7.124999999999999,
+        "duration": 61.3875,
+        "stalled": 0,
+        "firing": 132.08200000000005,
+        "shots": 331.56,
+        "exposed": 164.7954999999951,
+        "knownThreatTime": 363.7480000000176,
+        "exposurePercent": 45.30485390984613,
+        "usefulCover": 137.4689999999967,
+        "relocations": 13.23,
+        "abandoned": 12.925,
+        "passive": 85.01600000000016,
+        "passivePercent": 20.558754325592844,
+        "mountedTime": 13.214500000000026,
+        "mountedShots": 46.77,
+        "casualties": 8.74,
+        "dead": 4.205,
+        "reacquisitionMedian": 3.0000000000000426,
+        "reacquisitionP90": 14.500000000000206,
+        "reacquisitionSamples": 5105
+      },
+      "worstDurationChanges": [
+        {
+          "seed": 1169,
+          "before": 38.90000000000028,
+          "candidate": 141.99999999999622,
+          "delta": 103.09999999999593
+        },
+        {
+          "seed": 1191,
+          "before": 87.5999999999993,
+          "candidate": 166.29999999999484,
+          "delta": 78.69999999999554
+        },
+        {
+          "seed": 1035,
+          "before": 64.00000000000064,
+          "candidate": 129.19999999999695,
+          "delta": 65.19999999999631
+        },
+        {
+          "seed": 1009,
+          "before": 38.90000000000028,
+          "candidate": 94.99999999999888,
+          "delta": 56.099999999998595
+        },
+        {
+          "seed": 1199,
+          "before": 68.60000000000038,
+          "candidate": 119.89999999999746,
+          "delta": 51.299999999997084
+        },
+        {
+          "seed": 1034,
+          "before": 103.09999999999842,
+          "candidate": 145.49999999999602,
+          "delta": 42.399999999997604
+        },
+        {
+          "seed": 1067,
+          "before": 61.80000000000061,
+          "candidate": 103.3999999999984,
+          "delta": 41.59999999999779
+        },
+        {
+          "seed": 1170,
+          "before": 86.39999999999937,
+          "candidate": 124.79999999999718,
+          "delta": 38.39999999999782
+        },
+        {
+          "seed": 1042,
+          "before": 93.59999999999896,
+          "candidate": 127.999999999997,
+          "delta": 34.399999999998045
+        },
+        {
+          "seed": 1129,
+          "before": 66.80000000000048,
+          "candidate": 100.09999999999859,
+          "delta": 33.29999999999811
+        }
+      ]
+    }
+  ],
+  "seed1059Isolation": {
+    "existing": 93.29999999999897,
+    "endpointOnly": 106.49999999999822,
+    "endpointPlusCoverFilter": 1800,
+    "reasonRejected": "Cover filters produce a genuine ammunition-exhaustion stall; no forced end or ammunition/balance change was added."
+  }
+}

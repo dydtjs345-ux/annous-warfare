@@ -1,0 +1,1955 @@
+[
+  {
+    "seed": 1004,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1009,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1012,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1034,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1035,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1036,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1042,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1050,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1052,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1059,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1064,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1067,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1072,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1077,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1098,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1104,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1121,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1129,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1136,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1155,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1156,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1162,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1165,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 1
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1169,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1170,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1172,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1185,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1188,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  },
+  {
+    "seed": 1191,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1199,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 2
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9.5
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12.5
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15.5
+        ],
+        [
+          27,
+          8
+        ],
+        [
+          27,
+          9.5
+        ],
+        [
+          27,
+          11
+        ],
+        [
+          27,
+          12.5
+        ],
+        [
+          27,
+          14
+        ],
+        [
+          27,
+          15.5
+        ]
+      ]
+    },
+    "purpose": "adverse final case or rejected-trial control"
+  },
+  {
+    "seed": 1200,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "urban",
+        "variant": 0
+      },
+      "grenades": true,
+      "opportunity": true,
+      "initialPositions": [
+        [
+          6,
+          10
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          18,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    "purpose": "initial navigation/exposure regression"
+  }
+]
