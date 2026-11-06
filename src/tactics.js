@@ -1,3 +1,4 @@
+import { maneuverSupported } from "./fire-movement.js";
 import {
   reportIncoming,
   squadThreats,
@@ -177,7 +178,7 @@ export function planFlank(battle, team, threats) {
     alive.find((u) => u.role === "Leader");
   if (
     !leader ||
-    alive.length < 4 ||
+    alive.length < (battle.tacticalEnabled ? 2 : 4) ||
     !threats.length ||
     battle.time < (squad.flankCooldown ?? 0)
   )
@@ -187,14 +188,19 @@ export function planFlank(battle, team, threats) {
     alive.some((u) => u.suppression >= 0.8);
   if (!pinned && battle.time - (squad.lastProgress ?? battle.time) < 12)
     return null;
+  const required = battle.tacticalEnabled && alive.length < 4 ? 1 : 2;
   const covering = alive.filter(
     (u) =>
       u.ammo > 0 &&
       u.reload <= 0 &&
       u.suppression < 0.85 &&
-      threats.some((t) => distance(u, t) <= u.range && sight(u, t)),
+      threats.some(
+        (t) =>
+          distance(u, t) <= u.range &&
+          (battle.tacticalEnabled ? terrainSight(u, t) : sight(u, t)),
+      ),
   );
-  if (covering.length < 2) return null;
+  if (covering.length < required) return null;
   const threat = threats[0],
     d = distance(leader, threat) || 1,
     dx = (threat.x - leader.x) / d,
@@ -238,7 +244,7 @@ export function planFlank(battle, team, threats) {
       const risk = routeRisk(route, threats);
       if (risk.average > 0.6 || risk.longest > 3) continue;
       // Leave at least two capable shooters behind, including the machine gunner.
-      if (covering.filter((a) => a !== u).length < 2) continue;
+      if (covering.filter((a) => a !== u).length < required) continue;
       viable.push({ target: choice.target, risk: risk.average, route });
     }
     viable.sort((a, b) => a.risk - b.risk || a.route.length - b.route.length);
@@ -493,13 +499,24 @@ export function followManeuver(battle, u, m, dt) {
         a.ammo > 0 &&
         a.reload <= 0 &&
         a.suppression < 0.85 &&
-        threats.some((t) => distance(a, t) <= a.range && sight(a, t)),
+        threats.some(
+          (t) =>
+            distance(a, t) <= a.range &&
+            (battle.tacticalEnabled ? terrainSight(a, t) : sight(a, t)),
+        ),
     );
-    if (support.length < 2) {
+    if (
+      support.length <
+      (battle.tacticalEnabled &&
+      battle.units.filter((a) => a.team === u.team && a.active).length < 4
+        ? 1
+        : 2)
+    ) {
       m.until = battle.time;
       return false;
     }
   }
+  if (!maneuverSupported(battle, u, m)) return m.until > battle.time;
   u.decisionSource = "squad leader";
   u.state = "Flanking";
   u.order = squad.intention;

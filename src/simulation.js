@@ -1,3 +1,4 @@
+import { coordinateFireMovement } from "./fire-movement.js";
 import { suppressiveFire } from "./suppressive-fire.js";
 import { updatePosture, holdPosture, releasePosture } from "./postures.js";
 import {
@@ -186,6 +187,7 @@ export class Battle {
       updateSearchState(this, team);
       coordinateSquad(this, team);
       updateSquadTactics(this, team);
+      coordinateFireMovement(this, team);
       const squad = this.squads[team],
         alive = this.units.filter((u) => u.team === team && u.active),
         leader = alive.find((u) => u.role === "Leader") || alive[0];

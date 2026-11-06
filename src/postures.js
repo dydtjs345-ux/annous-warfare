@@ -29,7 +29,10 @@ export function updatePosture(b, u) {
   const flanked = known.some(
     (c) => dist(u, c) <= u.range && terrainSight(u, c) && cover(u, c) < 0.28,
   );
-  const transit = u.presentation.moving || MOVEMENT.has(u.state);
+  const transit =
+    u.presentation.moving ||
+    MOVEMENT.has(u.state) ||
+    u.tacticalRole === "maneuver";
   const next = (mode, duration, reason) => {
     if (p.mode !== mode) {
       p.transitions++;
