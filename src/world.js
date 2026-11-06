@@ -1,11 +1,13 @@
-export const W = 30,
+import { expandedWorld, expandedStreet } from "./expanded-world.js";
+export let W = 30,
   H = 26;
-export const houses = [
+const legacyHouses = [
   { x: 5, y: 4, w: 6, h: 6 },
   { x: 19, y: 4, w: 6, h: 6 },
   { x: 5, y: 16, w: 6, h: 6 },
   { x: 19, y: 16, w: 6, h: 6 },
 ];
+export let houses = legacyHouses;
 export const key = (x, y) => `${x},${y}`;
 export const obstacles = new Map();
 export const materials = Object.freeze({
@@ -56,10 +58,21 @@ export const materials = Object.freeze({
 export const material = (type) => materials[type] ?? materials.wall;
 let activeWorld = null;
 export function configureWorld(kind = "legacy", variant = 0) {
-  const id = `${kind}:${variant % 3}`;
+  const id = `${kind}:${variant % (kind === "expanded" ? 4 : 3)}`;
   if (activeWorld === id) return;
   activeWorld = id;
   obstacles.clear();
+  if (kind === "expanded") {
+    const map = expandedWorld(variant);
+    W = map.width;
+    H = map.height;
+    houses = map.houses;
+    for (const [k, type] of map.obstacles) obstacles.set(k, type);
+    return;
+  }
+  W = 30;
+  H = 26;
+  houses = legacyHouses;
   for (const h of houses)
     for (let x = h.x; x < h.x + h.w; x++)
       for (let y = h.y; y < h.y + h.h; y++)
@@ -113,6 +126,8 @@ export function configureWorld(kind = "legacy", variant = 0) {
   }
 }
 configureWorld();
+export const streetAt = (x, y) =>
+  W === 54 ? expandedStreet(x, y) : (x >= 12 && x <= 17) || y === 13;
 export const inside = (x, y) =>
   houses.find(
     (h) => x > h.x && x < h.x + h.w - 1 && y > h.y && y < h.y + h.h - 1,

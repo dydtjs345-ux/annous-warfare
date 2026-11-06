@@ -1,0 +1,53 @@
+{
+  "status": "implementation milestone; final paired audit pending",
+  "mainBase": "86f8498",
+  "prerequisites": [
+    "35cd2ee",
+    "0a110db"
+  ],
+  "tests": {
+    "pass": 173,
+    "fail": 0,
+    "groups": [
+      56,
+      17,
+      17,
+      19,
+      4,
+      10,
+      7,
+      19,
+      5,
+      5,
+      10,
+      4
+    ]
+  },
+  "initialExpandedMatches": 200,
+  "initialExpandedTimeouts": 0,
+  "verifiedInitialReplayCases": 15,
+  "build": "passed; existing Phaser chunk-size advisory",
+  "mobile": "reports/v026-mobile-initial.json",
+  "physicalSafari": "not tested",
+  "sourceHashes": {
+    "src/combat-visuals.js": "968ead734269636bc2f682a9c4e6f8e8d3078d67291d700f0bdd505c87665320",
+    "src/coordination.js": "3fe896c68c2e3509ac55e4acdefd80295a24cdfa33e1fbf17f7b21ba1b27464b",
+    "src/diagnostics.js": "c120e8d65e90db7da03d4d40a91150cf513a13cf8e947a901e1f17f8c404c509",
+    "src/expanded-world.js": "97ef2c4805943f21484d386fe6058a7bfb35c9e94ee113779dad1062071076f1",
+    "src/grenades.js": "9bf813407cdc850fa6780777f8f9d03a2544b08c423c6b39088b9fccf3a03aca",
+    "src/inspection.js": "4adfcf6f28332aa0de42d586832dc307dbf63b89ea338718bb82c2820bb14fe3",
+    "src/intelligence.js": "f0f8d40cb9380237ef2e4634b7bb0252a4821c2d603425a4fcb2529cd09747a2",
+    "src/main.js": "c3b319fe93086571674987a9524899eb23051964da15a7101abc9ec4c196a9bc",
+    "src/medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "src/mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "src/presentation-state.js": "ade69eda2447e8895c6c4b92337c6f678ce017ddf9711b97e9658f02e16f8860",
+    "src/search-path.js": "245c9b7bdab116342f8b44146be96aded3a5cf9fadde444676944e0ddf5bb7d8",
+    "src/search.js": "80b057be92021e284f4623a506674fd75061846d7a3d484ca7b62d86f19febd5",
+    "src/simulation.js": "71852852c55c37cb5d5b20ea26089d734e02e95ad51cbeac645b6f85fcdb38bf",
+    "src/style.css": "8c670b02e2dec2eaffe7814b5f5f1fbaaca64c607e8408daad79f7bccb7d448d",
+    "src/tactics.js": "74f46a131fbfe8f409cd1e283120858a1d16943aaddecc25c3c80ac69433e25f",
+    "src/urban-visuals.js": "600292f1e91c3d6057c9fea4c5a756183feea1901b20eaa2719aaa271a7a6361",
+    "src/view.js": "19ffcb4138dd3a79ec01e4f1c5ed6f7058f8d79517f4b2dc91888c3c08c8a932",
+    "src/world.js": "848d9dfe93359bf53250405b17286ba568b3c1bf75a0decd6eda29e6cdce4c36"
+  }
+}

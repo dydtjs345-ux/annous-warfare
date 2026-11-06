@@ -74,6 +74,8 @@ export function activityKind(u) {
       "Reacquiring contact",
       "Searching sector",
       "Searching last contact",
+      "Searching district",
+      "Following search element",
     ].includes(u.state)
       ? "searching"
       : "moving";
@@ -84,7 +86,7 @@ function actualOverwatch(battle, u) {
   if (u.state !== "Covering search") return false;
   return [...(battle.squads[u.team].assignments?.values() ?? [])].some(
     (a) =>
-      a.type === "recon" &&
+      (a.type === "recon" || (battle.searchEnabled && a.type === "search")) &&
       a.lastMovement > a.at &&
       battle.time - a.lastMovement < 2 &&
       battle.units[a.unitId]?.active &&

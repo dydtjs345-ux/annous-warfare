@@ -1,5 +1,6 @@
 import { material } from "./world.js";
 import { FRAG } from "./grenades.js";
+import { inView } from "./view.js";
 const colors = {
   wall: 0x727a79,
   "low wall": 0x727a79,
@@ -76,9 +77,10 @@ export function drawObstacle(g, d, p) {
     g.fillRect(p.x - 5, p.y - h - 8, 12, 7);
   }
 }
-export function drawGrenades(g, b, iso) {
+export function drawGrenades(g, b, iso, view = null) {
   for (const frag of b.grenades ?? []) {
     const p = iso(frag.position.x, frag.position.y);
+    if (view && !inView(p, view, 80)) continue;
     if (frag.detonatedAt) {
       const age = b.time - frag.detonatedAt,
         f = Math.max(0, 1 - age / 0.6);

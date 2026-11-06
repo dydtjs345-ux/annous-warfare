@@ -1,4 +1,10 @@
 import { receivingTreatment } from "./medical.js";
+import {
+  coordinateSearch,
+  followSearch,
+  suspendSearch,
+  isSearchAssignment,
+} from "./search.js";
 import { blocked, key, sight, cover } from "./world.js";
 import { contacts, squadThreats, uncertainThreats } from "./intelligence.js";
 import {
@@ -319,7 +325,12 @@ function progressFor(u, time) {
 }
 function setAssignment(battle, squad, u, type, reason, extra = {}) {
   const old = squad.assignments.get(u.id);
-  if (old?.type === type && type !== "recon") {
+  if (
+    old?.type === type &&
+    type !== "recon" &&
+    type !== "search" &&
+    type !== "escort"
+  ) {
     old.reason = reason;
     old.commanderId = squad.commanderId;
     u.assignment = old;
@@ -387,6 +398,7 @@ export function coordinateSquad(battle, team) {
       ? squad.lastSector
       : null;
   const area = known[0] ?? sector;
+  if (battle.searchEnabled && area) suspendSearch(squad, battle);
   const threats = squadThreats(battle, team);
   for (const [id, a] of squad.assignments) {
     const u = battle.units[id];
@@ -460,6 +472,16 @@ export function coordinateSquad(battle, team) {
     (a) => a.type === "recon",
   );
   if (!area) {
+    if (battle.searchEnabled) {
+      coordinateSearch(battle, team, {
+        alive,
+        commander,
+        assign: (u, type, reason, extra) =>
+          setAssignment(battle, squad, u, type, reason, extra),
+        careAvailable: (u) => actionableCare(battle, u),
+      });
+      return;
+    }
     for (const u of alive)
       if (squad.assignments.has(u.id)) {
         squad.assignments.delete(u.id);
@@ -657,6 +679,8 @@ export function followAssignment(battle, u, dt) {
     u.assignmentPause = "casualty care";
     return false;
   }
+  if (battle.searchEnabled && isSearchAssignment(a))
+    return followSearch(battle, u, dt);
   if (a.type === "recon") {
     u.decisionSource = "squad leader";
     if (a.failed || battle.time > a.until) {
@@ -775,7 +799,7 @@ export function updateProgress(battle, u) {
     u.state === "Covering search" &&
     [...(battle.squads[u.team].assignments?.values() ?? [])].some(
       (a) =>
-        a.type === "recon" &&
+        (a.type === "recon" || (battle.searchEnabled && a.type === "search")) &&
         battle.time - a.lastMovement < 2 &&
         sight(u, battle.units[a.unitId]),
     )

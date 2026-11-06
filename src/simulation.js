@@ -18,6 +18,8 @@ import {
   updateProgress,
 } from "./coordination.js";
 import { refreshDiagnostics, firingStatus } from "./diagnostics.js";
+import { initializeSearch, updateSearchState } from "./search.js";
+import { expandedSpawns } from "./expanded-world.js";
 import {
   initializeIntel,
   perceive,
@@ -27,6 +29,7 @@ import {
   uncertainThreats,
   reportCasualty,
   markObservedFire,
+  reportGunfire,
 } from "./intelligence.js";
 import {
   accuracyFactor,
@@ -64,6 +67,7 @@ export class Battle {
       variant: options.variant ?? 0,
     };
     configureWorld(this.world.kind, this.world.variant);
+    this.dimensions = { width: W, height: H };
     this.contactTTL = options.contactTTL ?? 8;
     this.random = random;
     this.time = 0;
@@ -113,9 +117,20 @@ export class Battle {
           nextAssessment: 0,
           coverTarget: null,
         });
+    if (this.world.kind === "expanded") {
+      this.spawn = options.spawn ?? 0;
+      const positions = expandedSpawns(this.spawn);
+      for (const u of this.units) Object.assign(u, positions[u.team][u.id % 6]);
+      for (let team = 0; team < 2; team++)
+        this.squads[team].goal = {
+          x: this.units[team * 6].x,
+          y: this.units[team * 6].y,
+        };
+    }
     initializeIntel(this);
     initializePresentation(this);
     initializeGrenades(this, options.grenades ?? false);
+    initializeSearch(this);
   }
   injury(u, p, damage) {
     const wasActive = u.active,
@@ -164,13 +179,14 @@ export class Battle {
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
+      updateSearchState(this, team);
       coordinateSquad(this, team);
       updateSquadTactics(this, team);
       const squad = this.squads[team],
         alive = this.units.filter((u) => u.team === team && u.active),
         leader = alive.find((u) => u.role === "Leader") || alive[0];
       squad.timer -= dt;
-      if (leader && squad.timer <= 0) {
+      if (!this.searchEnabled && leader && squad.timer <= 0) {
         const known = squadThreats(this, team);
         const desired = known.length
           ? { x: Math.round(known[0].x), y: Math.round(known[0].y) }
@@ -316,6 +332,7 @@ export class Battle {
           });
           incomingFire(this, u, enemy);
           markObservedFire(this, u);
+          if (this.searchEnabled) reportGunfire(this, u);
           const arms = (u.health["left arm"] + u.health["right arm"]) / 200;
           const chance = Math.max(
             0.06,
@@ -653,7 +670,7 @@ export class Battle {
         // rejects every detour, although care starts at 1.4 tiles with clear LOS.
         // Keep physical separation and first-step collision checks below intact.
         if (
-          this.world.kind === "urban" &&
+          (this.world.kind === "urban" || this.world.kind === "expanded") &&
           u.role === "Medic" &&
           u.state === "Moving to casualty" &&
           u.patientId === goal.id &&

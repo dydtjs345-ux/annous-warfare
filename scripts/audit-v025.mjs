@@ -10,6 +10,7 @@ const { sight, cover } = await import(
   pathToFileURL(resolve(root, "src/world.js"))
 );
 import { createHash } from "node:crypto";
+import { searchObserver } from "./search-observer.mjs";
 const renderEnabled = process.env.AW_RENDER === "1";
 const { CombatVisuals } = renderEnabled
   ? await import(pathToFileURL(resolve(root, "src/combat-visuals.js")))
@@ -19,7 +20,12 @@ const iso = (x, y) => ({ x: 700 + (x - y) * 20, y: 55 + (x + y) * 10 });
 const runs = [];
 const cohort = process.argv[7] ?? "legacy";
 for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
-  const seed = cohort === "urban" ? 1000 + index : index;
+  const expanded = cohort === "expanded";
+  const seed = expanded
+    ? 2000 + index
+    : cohort === "urban"
+      ? 1000 + index
+      : index;
   if (process.argv[6] && !process.argv[6].split(",").map(Number).includes(seed))
     continue;
   let r = seed;
@@ -28,14 +34,15 @@ for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
     "short-contact",
     "reduced-reserves",
     "leg-injuries",
-  ][(seed - 1) % 4];
+  ][expanded ? Math.floor((index - 1) / 4) % 4 : (seed - 1) % 4];
   const b = new Battle(
     () => (r = (r * 1664525 + 1013904223) >>> 0) / 4294967296,
     {
       contactTTL: scenario === "short-contact" ? 6 : 8,
-      map: cohort === "urban" ? "urban" : "legacy",
-      variant: cohort === "urban" ? seed % 3 : 0,
-      grenades: cohort === "urban",
+      map: expanded ? "expanded" : cohort === "urban" ? "urban" : "legacy",
+      variant: expanded ? (index - 1) % 4 : cohort === "urban" ? seed % 3 : 0,
+      spawn: expanded ? Math.floor((index - 1) / 16) % 3 : undefined,
+      grenades: expanded || cohort === "urban",
     },
   );
   for (const u of b.units) {
@@ -60,6 +67,7 @@ for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
     ];
     for (const [i, u] of b.units.entries()) [u.x, u.y] = positions[i];
   }
+  const search = expanded ? searchObserver(b) : null;
   const visuals = renderEnabled ? new CombatVisuals() : null;
   const hash = createHash("sha256");
   const trace = [];
@@ -113,6 +121,7 @@ for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
     cohort,
     config: {
       map: b.world,
+      ...(expanded ? { spawn: b.spawn, dimensions: b.dimensions } : {}),
       grenades: b.grenadesEnabled,
       opportunity,
       initialPositions: b.units.map((u) => [u.x, u.y]),
@@ -156,6 +165,7 @@ for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
   for (let step = 0; step < 18000 && !b.result; step++) {
     const beforePositions = b.units.map((u) => ({ x: u.x, y: u.y }));
     b.step(0.1);
+    search?.step(0.1);
     for (const u of b.units) {
       const threat = u.grenadeThreat;
       if (!threat) continue;
@@ -542,6 +552,7 @@ for (let index = 1; index <= Number(process.argv[4] || 200); index++) {
     incapacitated: !b.units[i].active && !b.units[i].dead,
     unresolvedInjuries: detail[i].injuryAt == null ? 0 : 1,
   }));
+  if (search) m.search = search.finish();
   m.grenades = { ...b.grenadeStats };
   m.observedGrenades = observed;
   m.digest = hash.digest("hex");
@@ -568,6 +579,51 @@ const result = {
     "recorded seeds/scenarios/configurations per run; dt 0.1s; 1800s cap; soldier-seconds; firing=exclusive engaging activity (actual shots or direct Engaging/Aiming); passive=authoritative exclusive passive counter; exposure=any unprotected known firing lane; useful cover=protected known in-range lane; reacquisition=personal sight loss of at least 0.5s to any personal sight return (survivor episodes only; unresolved episodes excluded)",
   summary: {
     seeds: runs.length,
+    ...(cohort === "expanded"
+      ? {
+          search: {
+            firstContactMedian: percentile(
+              runs.map((r) => r.search.firstContact).filter((t) => t != null),
+              0.5,
+            ),
+            firstContactP90: percentile(
+              runs.map((r) => r.search.firstContact).filter((t) => t != null),
+              0.9,
+            ),
+            noContact: runs.filter((r) => r.search.firstContact == null).length,
+            meanCoverage:
+              runs.reduce((n, r) => n + r.search.coverage, 0) / runs.length,
+            searchSquadSeconds:
+              runs.reduce((n, r) => n + r.search.searchSquadSeconds, 0) /
+              runs.length,
+            contactLosses: runs.reduce((n, r) => n + r.search.contactLosses, 0),
+            reacquired: runs.reduce((n, r) => n + r.search.reacquired, 0),
+            repeats: runs.reduce((n, r) => n + r.search.repeats, 0),
+            failedObjectives: runs.reduce(
+              (n, r) => n + r.search.failedObjectives,
+              0,
+            ),
+            goalChangesWithoutProgress: runs.reduce(
+              (n, r) => n + r.search.goalChangesWithoutProgress,
+              0,
+            ),
+            recentRepeatedGoals: runs.reduce(
+              (n, r) => n + r.search.recentRepeatedGoals,
+              0,
+            ),
+            timeoutReasons: Object.fromEntries(
+              [
+                ...new Set(
+                  runs.map((r) => r.search.timeoutReason).filter(Boolean),
+                ),
+              ].map((k) => [
+                k,
+                runs.filter((r) => r.search.timeoutReason === k).length,
+              ]),
+            ),
+          },
+        }
+      : {}),
     grenades: Object.fromEntries(
       Object.keys(runs[0].grenades).map((k) => [
         k,
