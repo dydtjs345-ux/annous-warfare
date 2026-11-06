@@ -52,7 +52,7 @@ The complete suite includes the existing 220 tests plus three new event-gating/n
 - M3 `3021e4c`: bounded real-event atmosphere; three targeted tests.
 - M4 `17c246e`: restrained local bloom and architectural shadows.
 - M5 `1ca83af`: static ground cache, mobile control checks and portrait text cleanup.
-- M6: final screenshot review, projected-equipment correction, paired replay validation and delivery report in subsequent commit.
+- M6 `4787c8a`: final screenshot review, projected-equipment correction, paired replay validation and delivery report in subsequent commit.
 
 ## Reproduce
 
@@ -94,3 +94,7 @@ Recommended next art work: original authored eight-direction infantry atlases, c
 These are equivalence checks, not tactical-quality improvements. Percentiles use the repository convention `floor(n*p)` capped at the final sample.
 
 Final cached-ground mobile sample: **299 frames over five seconds at 4×**, median/P95/max **16.7/16.7/33.3ms**. All recorded mobile checks pass with zero page errors. This is a short desktop-emulation sample, not a physical-device guarantee.
+
+## Delivery
+
+Tested implementation commit `4787c8a10a492443342c4ca40fd79936a8279bb5` is pushed. PR creation returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created by that command and no merge occurred. The [prepared PR description](v029-pr-description.md) is included. Review comparison: https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v029-hybrid-pixel-art?expand=1
