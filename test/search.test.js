@@ -5,6 +5,7 @@ import { configureWorld, sight } from "../src/world.js";
 import { reportGunfire } from "../src/intelligence.js";
 import { CombatVisuals } from "../src/combat-visuals.js";
 import { inspectSoldier } from "../src/inspection.js";
+import { coordinateSquad, followAssignment } from "../src/coordination.js";
 function battle(seed = 2001, options = {}) {
   let r = seed;
   return new Battle(() => (r = (r * 1664525 + 1013904223) >>> 0) / 4294967296, {
@@ -203,4 +204,120 @@ test("expanded simulation and presentation are deterministic at 1×, 2× and 4×
   }
   assert.equal(results[0], results[1]);
   assert.equal(results[0], results[2]);
+});
+
+test("arrived escorts refresh obsolete support points without replacing a useful search objective", () => {
+  const b = battle();
+  b.step(0.1);
+  const q = b.squads[0],
+    lead = b.units[0],
+    escort = b.units[4];
+  const revision = q.search.revision;
+  Object.assign(q.search.goal, { x: 14, y: 38, at: 0, until: 200 });
+  Object.assign(lead, { x: 14, y: 13, facing: Math.PI / 2 });
+  Object.assign(escort, { x: 14, y: 8 });
+  const old = q.assignments.get(escort.id);
+  Object.assign(old, {
+    target: { x: 14, y: 8 },
+    leadId: lead.id,
+    leadAnchor: { x: 14, y: 10.5 },
+  });
+  b.time = 1;
+  q.nextCoordination = 0;
+  coordinateSquad(b, 0);
+  assert.equal(q.search.revision, revision);
+  assert.notDeepEqual(escort.assignment.target, old.target);
+  assert.equal(escort.assignment.leadId, lead.id);
+  assert.ok(escort.route.length);
+  const y = escort.y;
+  assert.equal(followAssignment(b, escort, 0.2), true);
+  assert.equal(escort.state, "Following search element");
+  assert.ok(
+    escort.y > y,
+    "escort actually advances toward refreshed support point",
+  );
+});
+test("search escorts adopt the new search lead even when succession occurs nearby", () => {
+  const b = battle();
+  b.step(0.1);
+  const q = b.squads[0],
+    successor = b.units[1],
+    escort = b.units[4];
+  const memory = q.search.seen,
+    revision = q.search.revision;
+  Object.assign(q.search.goal, { x: 14, y: 38, at: 0, until: 200 });
+  q.lastSector = { x: 14, y: 14, at: -100 };
+  Object.assign(b.units[0], { x: 14, y: 13 });
+  Object.assign(successor, { x: 14.5, y: 13 });
+  Object.assign(escort, { x: 12, y: 13 });
+  Object.assign(q.assignments.get(escort.id), {
+    target: { x: 12, y: 13 },
+    leadId: 0,
+    leadAnchor: { x: 14, y: 13 },
+  });
+  b.injury(b.units[0], "head", 200);
+  b.time = 2;
+  q.nextCoordination = 0;
+  coordinateSquad(b, 0);
+  assert.equal(q.commanderId, successor.id);
+  assert.equal(q.search.seen, memory);
+  assert.equal(q.search.revision, revision);
+  assert.equal(escort.assignment.leadId, successor.id);
+});
+test("failed search movement defers unreachable landmarks and selects a reachable alternative", () => {
+  const b = battle();
+  b.step(0.1);
+  const q = b.squads[0],
+    u = b.units[0],
+    old = q.search.goal.id;
+  b.move = (soldier) => {
+    soldier.movementBlocker = "No route to observation point";
+    return false;
+  };
+  followAssignment(b, u, 0.1);
+  assert.equal(u.assignment.failed, true);
+  b.time = 4;
+  q.nextCoordination = 0;
+  coordinateSquad(b, 0);
+  assert.notEqual(q.search.goal.id, old);
+  assert.ok(q.search.blockedUntil[old] > b.time);
+  assert.equal(u.assignment.failed, undefined);
+  assert.ok(u.route.length > 0);
+  assert.equal(q.intel.contacts.size, 0);
+});
+test("independent reacquisition refreshes the shared snapshot only at the newly visible position", () => {
+  const b = battle();
+  for (const u of b.units) Object.assign(u, { active: false, dead: true });
+  for (const id of [0, 1, 6])
+    Object.assign(b.units[id], { active: true, dead: false });
+  Object.assign(b.units[0], { x: 13, y: 13, reload: 10000 });
+  Object.assign(b.units[1], { x: 2, y: 8 });
+  Object.assign(b.units[6], { x: 19, y: 13, reload: 10000 });
+  b.move = () => true;
+  b.step(0.1);
+  const oldTime = b.squads[0].intel.contacts.get(6).time;
+  Object.assign(b.units[6], { x: 51, y: 28 });
+  for (let i = 0; i < 14; i++) b.step(0.1);
+  assert.equal(b.squads[0].search.phase, "REACQUIRE");
+  assert.equal(b.squads[0].intel.contacts.get(6).x, 19);
+  Object.assign(b.units[6], { x: 18, y: 13 });
+  b.step(0.1);
+  const c = b.squads[0].intel.contacts.get(6);
+  assert.equal(c.x, 18);
+  assert.ok(c.time > oldTime);
+  assert.equal(c.observedBy, 0);
+  assert.equal(b.units[1].memory.x, 18);
+  assert.equal(b.units[1].visibleEnemies.length, 0);
+  assert.equal(b.squads[0].search.phase, "CONTACT");
+});
+test("a one-versus-one search can discover an initially unknown opponent", () => {
+  const b = battle(2005, { variant: 2, spawn: 1 });
+  for (const u of b.units)
+    if (![0, 6].includes(u.id)) Object.assign(u, { active: false, dead: true });
+  b.step(0.1);
+  assert.equal(b.squads[0].intel.contacts.size, 0);
+  assert.equal(b.units[0].assignment.type, "search");
+  for (let i = 0; i < 1800 && !b.squads[0].search.everContact; i++) b.step(0.1);
+  assert.equal(b.squads[0].search.everContact, true);
+  assert.ok(b.squads[0].search.seen.filter(Number.isFinite).length > 10);
 });

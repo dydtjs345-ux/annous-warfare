@@ -39,6 +39,10 @@ try {
       u = s.units.find((u) => u.id === id),
       box = await page.locator("canvas").boundingBox();
     assert.ok(
+      Math.abs(s.view.height * s.view.zoom - box.height) < 2,
+      "camera/input viewport matches resized inspector layout",
+    );
+    assert.ok(
       u.screenX >= 0 &&
         u.screenX <= box.width &&
         u.screenY >= 0 &&
@@ -47,7 +51,15 @@ try {
     );
     await page.touchscreen.tap(box.x + u.screenX, box.y + u.screenY);
     await page.waitForTimeout(140);
-    assert.equal((await snap()).selected, id);
+    const selected = await snap();
+    if (selected.selected !== id) {
+      await page.screenshot({ path: "/tmp/aw-v026-selection-failure.png" });
+      writeFileSync(
+        "/tmp/aw-v026-selection-failure.json",
+        JSON.stringify({ id, before: s, after: selected, box }, null, 2),
+      );
+    }
+    assert.equal(selected.selected, id);
   };
   await tapUnit(4);
   const inspect = await page.locator("#inspect").textContent();
@@ -75,6 +87,15 @@ try {
   await page.waitForTimeout(180);
   s = await snap();
   assert.equal(s.viewMode, "Map");
+  for (const axis of ["x", "y"]) {
+    const size = axis === "x" ? "width" : "height";
+    assert.ok(
+      Math.abs(
+        s.view[axis] + s.view[size] / 2 - (s.bounds[axis] + s.bounds[size] / 2),
+      ) < 2,
+      `overview centered on ${axis} even when viewport exceeds map bounds`,
+    );
+  }
   for (const u of s.units) await tapUnit(u.id);
   const selected = (await snap()).selected,
     pausedTime = (await snap()).time;
@@ -232,6 +253,8 @@ try {
     touchPan: true,
     pinchZoom: true,
     cameraBounds: true,
+    overviewCentered: true,
+    inspectorResizeSynchronized: true,
     inspectorScroll: true,
     orientations: 2,
     pauseResume: true,

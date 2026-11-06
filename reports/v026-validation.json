@@ -1,0 +1,79 @@
+{
+  "baseMain": "86f8498",
+  "prerequisites": [
+    "35cd2ee",
+    "0a110db"
+  ],
+  "expandedInitialSourceCommit": "1c438e3",
+  "method": "200 legacy + 200 initial expanded + same 200 corrected expanded; independent traces compare both per-step combat and sampled search-memory hashes",
+  "plannedMatchesCompleted": 600,
+  "plannedTimeouts": 0,
+  "legacyCoreHashesPreserved": 200,
+  "identicalExpandedConfigurations": 200,
+  "verifiedReplayGroups": {
+    "worst-before": 15,
+    "worst-after": 15,
+    "regressed-before": 15,
+    "regressed-after": 15
+  },
+  "renderedCompleteMatchesWithExactParity": 5,
+  "tests": {
+    "pass": 178,
+    "fail": 0,
+    "groups": [
+      56,
+      17,
+      17,
+      19,
+      4,
+      10,
+      7,
+      19,
+      5,
+      5,
+      15,
+      4
+    ]
+  },
+  "productionBuild": "passed; existing large Phaser chunk advisory",
+  "mobile": "reports/v026-mobile.json",
+  "mobileRepeat": "reports/v026-mobile-repeat.json",
+  "physicalSafari": "not tested",
+  "datasetHashes": {
+    "reports/v026-comparison.json": "0fec775113c9259d2bf908635927e1c3c37c14f9ded074f7b0186c41271c30a1",
+    "reports/v026-expanded-after.json": "046808329d7d7f218b672c09b09c8dcbc41a85609b6f66149776d057f0cf5b85",
+    "reports/v026-expanded-before.json": "aacc863c364d1fba8ada2960124c6782ebe87177b8c7cfa180c9614dd673c721",
+    "reports/v026-legacy.json": "acfb31e9bc3ef1e7f1316fd3937be8d16a30fadf21383c43249336cb973b9b4d",
+    "reports/v026-mobile-initial.json": "573eb9491542a41e9f75bab18a00a0305f806f3cb3423eba44caf79340ead455",
+    "reports/v026-mobile-repeat.json": "e8760496eceed07edc741efb6513031f3658b8f64b55d445c1578180498c6d8e",
+    "reports/v026-mobile.json": "a520bc68ab1374963434deb60fe2ab0eadd82454562837a3c9b532b34efe1fa1",
+    "reports/v026-regressed-after.json": "43a458e1a39cab5d694068550b81a266aabf0749022560cdfc263e92ce9b36cc",
+    "reports/v026-regressed-before.json": "871e66d78f6875908843b81fde4aff8617f77696559ad9d7156ec299e21bfa25",
+    "reports/v026-regressed-cases.json": "ebcc6c2c82116f9c1e466a33a91a0aaaab92557cc9e2bce243ec68827ad2e0e0",
+    "reports/v026-render-parity.json": "add11461e17a2201f2969ac7547f6eb399a4fef57ec38f574962edfe5a18eda1",
+    "reports/v026-worst-after.json": "bb084986aad306237b98080ad3c72e9fec3d861cd00cad19751d24278c55ee6a",
+    "reports/v026-worst-before.json": "58cb4a824ffa9d43ccb8cb72ed801ed6d41035048ae8fde631419ad2162b9937",
+    "reports/v026-worst-cases.json": "a4224eb5499fbfa750e0a695e05716c3764c55d1a2d134310bbd1469b189d02c"
+  },
+  "sourceHashes": {
+    "src/combat-visuals.js": "968ead734269636bc2f682a9c4e6f8e8d3078d67291d700f0bdd505c87665320",
+    "src/coordination.js": "3fe896c68c2e3509ac55e4acdefd80295a24cdfa33e1fbf17f7b21ba1b27464b",
+    "src/diagnostics.js": "c120e8d65e90db7da03d4d40a91150cf513a13cf8e947a901e1f17f8c404c509",
+    "src/expanded-world.js": "97ef2c4805943f21484d386fe6058a7bfb35c9e94ee113779dad1062071076f1",
+    "src/grenades.js": "9bf813407cdc850fa6780777f8f9d03a2544b08c423c6b39088b9fccf3a03aca",
+    "src/inspection.js": "4adfcf6f28332aa0de42d586832dc307dbf63b89ea338718bb82c2820bb14fe3",
+    "src/intelligence.js": "f0f8d40cb9380237ef2e4634b7bb0252a4821c2d603425a4fcb2529cd09747a2",
+    "src/main.js": "945091b5c1937d2557cbea0b2acfebae2e5aa55695f63c61b29e3e4e2f26c912",
+    "src/medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "src/mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "src/presentation-state.js": "ade69eda2447e8895c6c4b92337c6f678ce017ddf9711b97e9658f02e16f8860",
+    "src/search-path.js": "245c9b7bdab116342f8b44146be96aded3a5cf9fadde444676944e0ddf5bb7d8",
+    "src/search.js": "dcc6423231ea17e0a92c07bca0062d7e613bb342374806b1b64a3c63a6507fd8",
+    "src/simulation.js": "71852852c55c37cb5d5b20ea26089d734e02e95ad51cbeac645b6f85fcdb38bf",
+    "src/style.css": "8c670b02e2dec2eaffe7814b5f5f1fbaaca64c607e8408daad79f7bccb7d448d",
+    "src/tactics.js": "74f46a131fbfe8f409cd1e283120858a1d16943aaddecc25c3c80ac69433e25f",
+    "src/urban-visuals.js": "600292f1e91c3d6057c9fea4c5a756183feea1901b20eaa2719aaa271a7a6361",
+    "src/view.js": "19ffcb4138dd3a79ec01e4f1c5ed6f7058f8d79517f4b2dc91888c3c08c8a932",
+    "src/world.js": "848d9dfe93359bf53250405b17286ba568b3c1bf75a0decd6eda29e6cdce4c36"
+  }
+}

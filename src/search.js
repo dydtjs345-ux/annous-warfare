@@ -282,8 +282,14 @@ export function coordinateSearch(
     const primary = moving.includes(u),
       type = primary ? "search" : "escort";
     let a = squad.assignments.get(u.id);
+    // Preserve an in-progress route. An arrived escort must nevertheless renew
+    // its support point once the lead leaves supporting distance; displacement
+    // from the old planning anchor alone can leave it observing behind the squad.
     const escortMoved =
-      a?.type === "escort" && distance(a.leadAnchor, lead) > 3;
+      a?.type === "escort" &&
+      (a.leadId !== lead.id ||
+        distance(a.leadAnchor, lead) > 3 ||
+        (distance(u, a.target) < 0.5 && distance(u, lead) > 4.5));
     if (
       !a ||
       a.type !== type ||

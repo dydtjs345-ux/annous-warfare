@@ -87,6 +87,24 @@ class Battlefield extends Phaser.Scene {
       );
     });
     this.scale.on("resize", () => this.frameCamera(false));
+    // Inspector/orientation layout changes must update input and camera bounds
+    // immediately, rather than waiting for Phaser's 500ms parent-size poll.
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(([entry]) => {
+        const width = Math.floor(entry.contentRect.width),
+          height = Math.floor(entry.contentRect.height);
+        if (
+          width > 0 &&
+          height > 0 &&
+          (this.scale.width !== width || this.scale.height !== height)
+        )
+          this.scale.setParentSize(width, height);
+      });
+      observer.observe(document.querySelector("#game"));
+      this.events.once(Phaser.Scenes.Events.SHUTDOWN, () =>
+        observer.disconnect(),
+      );
+    }
     document.querySelector("#pause").onclick = () => {
       this.paused = !this.paused;
       document.querySelector("#pause").textContent = this.paused
@@ -217,7 +235,6 @@ class Battlefield extends Phaser.Scene {
   frameCamera(resetZoom) {
     const c = this.cameras.main,
       b = this.geometry.bounds;
-    c.setBounds(b.x, b.y, b.width, b.height);
     if (this.viewMode === "Map")
       c.setZoom(fitZoom(b, this.scale.width, this.scale.height));
     else if (resetZoom)
@@ -225,6 +242,7 @@ class Battlefield extends Phaser.Scene {
         Math.max(this.minimumZoom(), Math.min(1, this.scale.width / 450)),
       );
     else c.setZoom(Phaser.Math.Clamp(c.zoom, this.minimumZoom(), 2.5));
+    this.boundCamera();
     if (this.viewMode !== "Free") {
       const v = framedView(
         b,
@@ -242,6 +260,20 @@ class Battlefield extends Phaser.Scene {
         "aria-label",
         `Camera focus: ${this.viewMode}; switch spectator view`,
       );
+  }
+  boundCamera() {
+    const c = this.cameras.main,
+      b = this.geometry.bounds;
+    const stamp = `${c.zoom}:${c.width}:${c.height}`;
+    if (this.boundStamp === stamp && this.boundGeometry === this.geometry)
+      return;
+    this.boundStamp = stamp;
+    this.boundGeometry = this.geometry;
+    // Phaser clamps an oversized viewport to the bounds' top/left. Pad only
+    // those axes so a fit-to-map overview remains centered in either orientation.
+    const px = Math.max(0, (c.width / c.zoom - b.width) / 2),
+      py = Math.max(0, (c.height / c.zoom - b.height) / 2);
+    c.setBounds(b.x - px, b.y - py, b.width + px * 2, b.height + py * 2);
   }
   freeCamera() {
     this.viewMode = "Free";
@@ -318,6 +350,7 @@ class Battlefield extends Phaser.Scene {
         this.acc -= 0.05;
       }
     }
+    this.boundCamera();
     if (this.viewMode !== "Free" && this.viewMode !== "Map")
       this.frameCamera(false);
     this.visuals.update(this.battle, delta / 1000, this.speed, this.paused);

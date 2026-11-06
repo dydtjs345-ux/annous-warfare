@@ -2,7 +2,7 @@
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
-The v0.2.6 implementation now opens a 54×44 urban battlefield with sealed building blocks, separated squads, squad-directed search, and spectator camera focus. [Current validation milestone and remaining audit work](reports/v026-progress.md). Tap the camera button to cycle RU, Map and USMC views; dragging or pinching switches to Free camera. `?map=legacy` retains the original 30×26 battle, and `?map=urban` selects v0.2.5. A URL such as `?seed=2049&layout=0&spawn=0` reproduces an expanded match. These controls change only the spectator view. Expanded buildings are solid obstacles; there is no CQB or enterable-building behavior in that mode.
+The v0.2.6 implementation now opens a 54×44 urban battlefield with sealed building blocks, separated squads, squad-directed search, and spectator camera focus. [600-match audit, results and limitations](reports/v026-audit.md). Tap the camera button to cycle RU, Map and USMC views; dragging or pinching switches to Free camera. `?map=legacy` retains the original 30×26 battle, and `?map=urban` selects v0.2.5. A URL such as `?seed=2049&layout=0&spawn=0` reproduces an expanded match. These controls change only the spectator view. Expanded buildings are solid obstacles; there is no CQB or enterable-building behavior in that mode.
 
 ## Run
 
@@ -26,7 +26,7 @@ Each side has four riflemen (one leader), one light machine gunner and one medic
 - Implemented: grid pathfinding, limited AI sight with solid-wall occlusion, short-lived individual contact memory, leader coordination, directional cover (solid wall, low wall, fence), probabilistic weapon hits, six injury locations, arm accuracy penalties, leg speed penalties, incapacitation, fatal head/torso damage, and medic recovery.
 - Original procedural placeholder art: the legacy battlefield has four single-story houses, grass yards, streets, perimeter barriers, door openings, simple soldiers, shadows, muzzle flashes and tracers. Roofs disappear when a living active soldier is inside. Interiors are single-floor and unfurnished. Doorways are permanently open; interactive door mechanics are unfinished.
 - Injury visuals are basic: hit flash, asymmetric walking/limping and a horizontal crawling/incapacitated pose. Lighting is a dark palette with local muzzle glows, not dynamic shadow casting. Sprites are geometric placeholders, not polished character animation.
-- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic bullet travel or sound, enemy fog-of-war rendering, or advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
+- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic bullet travel, audio playback, enemy fog-of-war rendering, or advanced formation tactics. Expanded AI can hear a coarse modeled gunfire bearing; this does not play audio or reveal a shooter position. AI has limited knowledge even though the spectator can see both teams.
 - Random battles may last a long time or stall after ammunition is exhausted; there is no time-limit victory. Medics currently have unlimited treatment supplies. Balance and performance on physical iPhones need further playtesting.
 
 ## Validate
@@ -412,3 +412,24 @@ Physical iPhone Safari testing remains necessary: both orientations, inspector s
 [Paired 200-case regression investigation](reports/v025-followup-audit.md) continues the existing v0.2.5 branch. A medic's selected patient no longer blocks the endpoint of every urban congestion replan; actual collision, sight, treatment reach and healing remain unchanged. All 200 legacy hashes are preserved. Broader cover-policy experiments were rejected after adverse full-cohort results, so map geometry, cover scoring/timers and LMG mounting retain their previous behavior.
 
 Navigation failures improve 1.685→0.750/match and both paired urban cohorts have zero timeouts. P95 worsens 103.1→119.9s, exposure share is nearly unchanged but slightly worse (45.042710→45.142391%), and medical/cycle results remain mixed. This is a confirmed routing fix, not complete tactical-stability clearance. Raw data, rejected trials, 31 paired diagnostic cases and remaining adverse seeds are retained. `npm test` now runs 154 tests; build and mobile Chromium checks pass. Physical iPhone Safari verification remains required, especially crowded medical approaches and late survivor fights.
+
+
+## v0.2.6 expanded urban search and destroy
+
+The default battlefield is **54×44 tiles**, versus 30×26 in the preserved legacy mode. Four deterministic layouts contain twelve sealed building blocks, intersections, alleys, open lanes and the existing sandbag/concrete, vehicle and crate obstacles. Three separated spawn configurations keep enemy locations unknown at the start. These are solid buildings without interiors or window/CQB behavior.
+
+The acting commander assigns up to two search soldiers and distinct supporting follower positions. A lightweight memory records only landmarks actually visible to living squad members. Search goals prefer unseen or stale areas, retain progressing routes, and temporarily exclude failed objectives. Supporting soldiers refresh obsolete observation points and follow the replacement search leader after succession. The existing combat coordinator takes over on legitimate contact; medics, suppression, immediate survival and direct fire retain priority.
+
+The inspector and footer show **SEARCH → CONTACT / ENGAGE → LOST_CONTACT → REACQUIRE → SEARCH_AGAIN** as appropriate. Direct observations update shared enemy snapshots; unseen positions freeze and expire. A bounded historical sector and coarse gunfire bearings can guide investigation, then systematic search resumes. Hearing reports contain the listener's position and approximate direction, never shooter coordinates, identity or exact range. Exploration memory is a sample of visible landmarks, not a guarantee that whole districts are cleared.
+
+Camera controls are spectator-only: **USMC / RU** follow the acting commander or survivor; **Map** fits the entire field; dragging or pinching selects **Free** view. Initial squad zoom keeps soldiers readable. Tap and scroll the inspector for search phase, observed landmarks, current/last search area, actual assignments, blockers and activity counters. `?debug=1` optionally exposes a read-only spectator snapshot for browser automation; the AI never consumes it.
+
+Useful URLs (append to the Pages URL or local development address):
+
+- `?seed=2049&layout=0&spawn=0`: reproducible expanded match; layouts 0–3, spawns 0–2.
+- `?map=legacy&seed=22`: original map, no grenades, preserved legacy simulation.
+- `?map=urban&seed=1104`: the v0.2.5 map with its existing cover/grenade systems.
+
+**Validation:** 178 tests, successful production build, 200 legacy + 200 initial expanded + 200 paired corrected expanded matches, zero audit timeouts, and all 200 legacy hashes preserved. Complete-match render parity and mobile Chromium checks also pass. Results are mixed: useful cover and mounted LMG fire increase, but expanded P95 duration rises **177.3→193.8s**, maximum **273.9→349.1s**, passive share and some medic metrics worsen. This is not a claim of universal tactical improvement. Exact configurations, paired data, extreme-case diagnoses and reproduction commands are in [the audit](reports/v026-audit.md).
+
+Physical iPhone Safari remains unverified. Test both orientations at 1×/2×/4×; cycle USMC/RU/Map, select soldiers at distant edges, drag/pinch then return to focus, and scroll the inspector. Observe a full separated start, contact, expired contact and renewed search, including injured survivors and medic care. Check pause/resume, restart, background/foreground, frame responsiveness and battery/thermal behavior. Long legitimate searches and ammunition-exhaustion stalemates remain possible; no timer reveals enemies or awards a forced victory.
