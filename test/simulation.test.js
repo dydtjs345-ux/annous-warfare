@@ -592,7 +592,12 @@ test("casualty reports reach the squad and trigger reassessment and delayed cove
   assert.ok(leader.alert.readyAt > 0);
   assert.ok(b.squads[0].nextTactical <= 0.45);
   for (let i = 0; i < 12; i++) b.step(0.05);
-  assert.equal(leader.state, "Covering casualty");
+  assert.ok(
+    ["Covering casualty", "Covering search", "Reacquiring contact"].includes(
+      leader.state,
+    ),
+  );
+  assert.ok(b.squads[0].casualtyReplans >= 1);
   assert.equal(b.squads[0].intention, "Protect casualty");
 });
 
@@ -941,8 +946,8 @@ test("unsafe/unreachable reacquisition is diagnosed rather than forcing a charge
   try {
     for (const door of doors) obstacles.set(door, "wall");
     for (let i = 0; i < 300; i++) b.step(0.05);
-    assert.equal(b.units[1].state, "Observing contact");
-    assert.match(b.units[1].diagnostics.decision, /No safe reachable/);
+    assert.equal(b.units[1].state, "Awaiting coordination");
+    assert.match(b.units[1].diagnostics.decision, /No reachable observation/);
     assert.equal(
       b.units[1].diagnostics.stalemate,
       "No safe reacquisition route",

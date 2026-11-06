@@ -6,6 +6,7 @@ const labels = {
   "left leg": "LL",
   "right leg": "RL",
 };
+const elapsed = (value) => (value == null ? "never" : `${value.toFixed(1)}s`);
 export function inspectSoldier(u) {
   const wounds = Object.entries(u.health).filter(([, h]) => h < 100);
   const health = Object.entries(u.health)
@@ -19,5 +20,5 @@ export function inspectSoldier(u) {
     d?.contactAge != null
       ? `${d.contactAge.toFixed(1)}s${d.observerId != null ? ` · observer #${d.observerId}` : ""}`
       : "—";
-  return `${u.name} · ${u.role} · Suppression ${Math.round(u.suppression * 100)}% · Ammo ${u.ammo}/${u.reserve}\nAction: ${u.state} (${(d?.stateTime ?? 0).toFixed(1)}s)\nObjective: ${u.order}${u.target ? ` → ${u.target.x},${u.target.y}` : ""} · ${u.navigation}\nContact: ${contact}\nLast confirmed: ${age} · Direct LOS: ${d?.directLOS ? "yes" : "no"}\nFire: ${d?.firingPermitted ? "permitted" : "not permitted"} · ${d?.notFiring ?? "No identified visible target"}\nDecision: ${d?.decision ?? "Awaiting decision"}\nBlocker: ${d?.blocker ?? "none"}${d?.stalemate ? ` · Limitation: ${d.stalemate}` : ""}\n${health}\n${wounds.length ? "* marks actual injuries" : "No injuries"}`;
+  return `${u.name} · ${u.role} · Suppression ${Math.round(u.suppression * 100)}% · Ammo ${u.ammo}/${u.reserve}\nAction: ${u.state} (${(d?.stateTime ?? 0).toFixed(1)}s)\nObjective: ${u.order}${u.target ? ` → ${u.target.x},${u.target.y}` : ""} · ${u.navigation}\nContact: ${contact}\nLast confirmed: ${age} · Direct LOS: ${d?.directLOS ? "yes" : "no"}\nFire: ${d?.firingPermitted ? "permitted" : "not permitted"} · ${d?.notFiring ?? "No identified visible target"}\nDecision: ${d?.decision ?? "Awaiting decision"}\nAssignment: ${d?.assignment ?? "none"} · ${d?.assignmentSource ?? "personal decision"}${d?.assignmentCommander != null ? ` (#${d.assignmentCommander})` : ""}${d?.assignmentDestination ? ` → ${d.assignmentDestination.x},${d.assignmentDestination.y}` : ""}${d?.assignmentPause ? ` · paused: ${d.assignmentPause}` : ""}\nHolding: ${d?.maintainingReason ?? "—"}\nAlternatives: ${d?.alternatives ?? "—"}\nProgress: ${(d?.progressAge ?? 0).toFixed(1)}s · move ${elapsed(d?.movementAge)} · sight ${elapsed(d?.sightAge)} · engage ${elapsed(d?.engagementAge)}\nObjective age: ${(d?.objectiveAge ?? 0).toFixed(1)}s · failures ${d?.failedAttempts ?? 0} · coordination wait ${d?.waitingCoordination ? "yes" : "no"}${d?.casualtyResponse ? `\nCasualty response: ${d.casualtyResponse}` : ""}\nBlocker: ${d?.blocker ?? "none"}${d?.stalemate ? ` · Limitation: ${d.stalemate}` : ""}\n${health}\n${wounds.length ? "* marks actual injuries" : "No injuries"}`;
 }

@@ -1,0 +1,3097 @@
+{
+  "versionRoot": "/tmp/aw-hotfix2-main",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "summary": {
+    "finished": 20,
+    "matches": 20,
+    "meanDuration": 112.0999999999979,
+    "medianDuration": 113.59999999999782,
+    "meanEndgame": 49.869999999997795,
+    "idleObservationPercent": 37.092482284365836,
+    "meanIdleObservationSoldierSeconds": 318.5150000000055,
+    "meanContributionPercent": 23.898024431507427,
+    "meanEverContributing": 11.95,
+    "meanRepositions": 65.65,
+    "meanFrameGoalPreemptions": 84,
+    "meanAbandoned": 63.55,
+    "meanCompletedByObservation": 3.75,
+    "meanFailures": 8.65,
+    "meanSurvivors": 3.35,
+    "meanFinalDead": 4.45,
+    "meanLivingIncapacitated": 4.2,
+    "meanShots": 246.2,
+    "casualties": 217,
+    "observableCasualtyResponses": 149,
+    "completedAcquisitions": 747,
+    "medianAcquisitionSeconds": 8.49999999999997,
+    "p90AcquisitionSeconds": 32.799999999998136,
+    "censoredAcquisitions": 439,
+    "coordinatorCasualtyReplans": 0
+  },
+  "results": [
+    {
+      "seed": 1,
+      "finished": true,
+      "outcome": "Russian infantry victory",
+      "duration": 143.8999999999961,
+      "endgameSeconds": 43.599999999997536,
+      "activeSoldierSeconds": 1128.8000000000688,
+      "idleObservationSoldierSeconds": 384.4000000000189,
+      "contributionPercent": 29.22572643515117,
+      "soldiersEverContributing": 12,
+      "repositions": 89,
+      "abandoned": 106,
+      "committedAbandoned": 77,
+      "completedByObservation": 10,
+      "failures": 18,
+      "shots": 414,
+      "casualties": 12,
+      "observableCasualtyResponses": 6,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        12.099999999999968,
+        1.8000000000000096,
+        1.8000000000000096,
+        1.200000000000017,
+        0.5000000000000071,
+        0.5000000000000071,
+        1.200000000000017,
+        0.5000000000000071,
+        0.5000000000000071,
+        0.5000000000000071,
+        0.5000000000000071,
+        6.000000000000085,
+        7.300000000000104,
+        23.300000000000118,
+        1.900000000000027,
+        11.800000000000168,
+        8.700000000000124,
+        15.600000000000222,
+        2.2000000000000313,
+        0.6000000000000085,
+        3.300000000000047,
+        13.099999999999952,
+        14.999999999999844,
+        1.6999999999999034,
+        3.8999999999997783,
+        61.69999999999868,
+        1.6999999999999034,
+        1.6999999999999034,
+        1.599999999999909,
+        1.599999999999909,
+        39.499999999997755,
+        26.699999999998482,
+        42.299999999997596,
+        4.799999999999727,
+        74.49999999999578,
+        138.89999999999614,
+        55.79999999999684
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 33.40000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 18.100000000000257,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 25.100000000000296,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.9000000000000554,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.9000000000000554,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.599999999999724,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 20.999999999999716,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.19999999999998863,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.899999999999892,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.899999999999892,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 75.3999999999979,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.2999999999998124,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 32.49999999999815,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 22.799999999998704,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 6.999999999999602,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 139.4999999999961,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 46.69999999999736,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 118.89999999999603,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 122.09999999999607,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 122.09999999999607,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 95.39999999999569,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 122.79999999999609,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 56.099999999996825,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 63.5999999999964,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 37.999999999997854,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 3,
+      "finalDead": 7,
+      "livingIncapacitated": 2,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 2,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 141.29999999999626,
+      "endgameSeconds": 83.0999999999957,
+      "activeSoldierSeconds": 1059.300000000132,
+      "idleObservationSoldierSeconds": 465.4000000000373,
+      "contributionPercent": 25.365807608794405,
+      "soldiersEverContributing": 11,
+      "repositions": 63,
+      "abandoned": 88,
+      "committedAbandoned": 53,
+      "completedByObservation": 1,
+      "failures": 3,
+      "shots": 316,
+      "casualties": 10,
+      "observableCasualtyResponses": 6,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.39999999999996,
+        11.19999999999996,
+        4.400000000000022,
+        4.400000000000022,
+        8.40000000000012,
+        25.100000000000144,
+        4.800000000000068,
+        1.0000000000000142,
+        5.500000000000078,
+        26.600000000000318,
+        0.9000000000000128,
+        13.700000000000195,
+        0.9000000000000128,
+        0.70000000000001,
+        33.50000000000039,
+        6.399999999999636,
+        6.399999999999636,
+        2.599999999999852,
+        22.099999999998744,
+        40.9999999999978,
+        4.8999999999997215,
+        8.7999999999995,
+        8.599999999999525,
+        6.999999999999616,
+        32.59999999999816,
+        10.19999999999942,
+        26.79999999999849,
+        2.199999999999875,
+        10.19999999999942,
+        2.0999999999998806,
+        33.09999999999813,
+        33.09999999999813
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 12.999999999999975,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.200000000000017,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 35.900000000000304,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.500000000000178,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.80000000000031,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 18.800000000000267,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 18.800000000000267,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.9000000000000128,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 29.000000000000362,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 24.29999999999862,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 33.29999999999811,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 33.29999999999811,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 26.699999999998482,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 122.79999999999626,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 79.39999999999566,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 5,
+      "livingIncapacitated": 3,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 3,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 113.59999999999782,
+      "endgameSeconds": 23.999999999998636,
+      "activeSoldierSeconds": 943.600000000146,
+      "idleObservationSoldierSeconds": 436.90000000003084,
+      "contributionPercent": 19.71174226366733,
+      "soldiersEverContributing": 12,
+      "repositions": 61,
+      "abandoned": 85,
+      "committedAbandoned": 66,
+      "completedByObservation": 3,
+      "failures": 0,
+      "shots": 215,
+      "casualties": 11,
+      "observableCasualtyResponses": 9,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        16.10000000000017,
+        0.5000000000000071,
+        28.40000000000019,
+        3.4000000000000483,
+        9.300000000000132,
+        0.6000000000000085,
+        1.40000000000002,
+        1.5000000000000213,
+        0.8000000000000114,
+        21.600000000000307,
+        22.000000000000313,
+        17.50000000000025,
+        1.5000000000000213,
+        8.699999999999669,
+        46.70000000000015,
+        43.60000000000011,
+        46.70000000000015,
+        8.7999999999995,
+        8.7999999999995,
+        56.49999999999922,
+        6.599999999999625,
+        15.799999999999102,
+        58.59999999999919,
+        62.59999999999925,
+        75.29999999999853,
+        59.899999999998286,
+        12.799999999999272,
+        12.799999999999272,
+        8.7999999999995,
+        10.19999999999942
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 12.199999999999964,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 32.400000000000254,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.600000000000293,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.600000000000293,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.40000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.40000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.40000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 26.80000000000038,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.0000000000000284,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 60.89999999999905,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 60.799999999999045,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 63.49999999999826,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 63.49999999999826,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 89.09999999999775,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 28.099999999998403,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 85.9999999999977,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 83.79999999999767,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 69.79999999999747,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 85.9999999999977,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 83.79999999999767,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 73.19999999999752,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 42.499999999997584,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 26.3999999999985,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 13.499999999999233,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 5,
+      "livingIncapacitated": 3,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 4,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 120.79999999999741,
+      "endgameSeconds": 44.99999999999744,
+      "activeSoldierSeconds": 877.2000000001309,
+      "idleObservationSoldierSeconds": 288.5999999999971,
+      "contributionPercent": 26.516187870492065,
+      "soldiersEverContributing": 12,
+      "repositions": 64,
+      "abandoned": 95,
+      "committedAbandoned": 62,
+      "completedByObservation": 7,
+      "failures": 1,
+      "shots": 298,
+      "casualties": 14,
+      "observableCasualtyResponses": 11,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        1.7999999999999936,
+        1.7999999999999936,
+        11.59999999999996,
+        0.70000000000001,
+        1.40000000000002,
+        5.60000000000008,
+        2.80000000000004,
+        46.300000000000445,
+        27.600000000000392,
+        0.70000000000001,
+        28.300000000000402,
+        0.6000000000000085,
+        5.800000000000082,
+        11.100000000000158,
+        15.500000000000163,
+        1.7999999999998977,
+        11.799999999999855,
+        4.39999999999975,
+        3.8999999999997783,
+        52.299999999999756,
+        3.8999999999997783,
+        0.8999999999999488,
+        27.699999999998425
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 11.79999999999996,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.3000000000000007,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.4999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.3000000000000007,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.799999999999986,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.699999999999987,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.6000000000000085,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.10000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.3000000000000327,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.3000000000000327,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.3000000000000327,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 29.700000000000422,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 33.00000000000047,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.599999999999454,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 10.999999999999375,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 20.89999999999946,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.59999999999947,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 25.099999999998573,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.599999999999113,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 71.49999999999699,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 71.49999999999699,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 65.89999999999691,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 89.59999999999724,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 46.79999999999734,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 96.59999999999734,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 95.19999999999732,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 94.99999999999731,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 3,
+      "finalDead": 7,
+      "livingIncapacitated": 2,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 5,
+      "finished": true,
+      "outcome": "Russian infantry victory",
+      "duration": 77.29999999999988,
+      "endgameSeconds": 41.09999999999964,
+      "activeSoldierSeconds": 598.3000000000675,
+      "idleObservationSoldierSeconds": 216.199999999992,
+      "contributionPercent": 20.808958716360213,
+      "soldiersEverContributing": 12,
+      "repositions": 54,
+      "abandoned": 54,
+      "committedAbandoned": 38,
+      "completedByObservation": 0,
+      "failures": 1,
+      "shots": 166,
+      "casualties": 10,
+      "observableCasualtyResponses": 9,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        1.099999999999996,
+        1.099999999999996,
+        11.599999999999959,
+        11.39999999999996,
+        0.5000000000000071,
+        1.5000000000000213,
+        1.1000000000000156,
+        11.500000000000163,
+        1.3000000000000185,
+        1.3000000000000185,
+        1.3000000000000185,
+        33.200000000000266,
+        25.500000000000302,
+        10.50000000000015,
+        35.20000000000029,
+        1.1000000000000156,
+        8.000000000000114,
+        8.200000000000117,
+        2.3000000000000327,
+        11.600000000000165,
+        11.600000000000165
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 15.600000000000012,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.7000000000000526,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.40000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.40000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.100000000000037,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0999999999999375,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 33.099999999999525,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 33.099999999999525,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 33.099999999999525,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 13.299999999999244,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 60.69999999999992,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 49.39999999999976,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 6,
+      "livingIncapacitated": 4,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 6,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 99.39999999999863,
+      "endgameSeconds": 54.39999999999826,
+      "activeSoldierSeconds": 803.8000000001142,
+      "idleObservationSoldierSeconds": 287.6999999999969,
+      "contributionPercent": 25.702911171928736,
+      "soldiersEverContributing": 12,
+      "repositions": 56,
+      "abandoned": 81,
+      "committedAbandoned": 56,
+      "completedByObservation": 8,
+      "failures": 4,
+      "shots": 232,
+      "casualties": 10,
+      "observableCasualtyResponses": 7,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        2.4999999999999947,
+        2.4999999999999947,
+        12.799999999999978,
+        1.0000000000000142,
+        1.8000000000000256,
+        5.60000000000008,
+        9.000000000000128,
+        2.400000000000034,
+        10.900000000000155,
+        48.10000000000047,
+        10.50000000000015,
+        0.5000000000000071,
+        2.7000000000000384,
+        0.6000000000000085,
+        0.6000000000000085,
+        0.8000000000000114,
+        7.3999999999999915,
+        36.799999999999834,
+        18.799999999999166,
+        24.49999999999919,
+        2.6999999999998465,
+        25.199999999999143,
+        5.899999999999665,
+        5.899999999999665,
+        6.399999999999636,
+        31.499999999998657,
+        6.199999999999648,
+        61.19999999999845
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 13.19999999999998,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.900000000000009,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 24.60000000000014,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 24.500000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.900000000000126,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.5000000000000497,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.5000000000000497,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.5000000000000497,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5999999999999659,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 35.79999999999931,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 39.399999999998045,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 70.8999999999985,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 62.19999999999837,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 70.8999999999985,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 62.49999999999837,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 7,
+      "livingIncapacitated": 1,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 7,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 146.49999999999596,
+      "endgameSeconds": 97.79999999999555,
+      "activeSoldierSeconds": 954.4000000001485,
+      "idleObservationSoldierSeconds": 346.40000000001027,
+      "contributionPercent": 24.350377200330566,
+      "soldiersEverContributing": 12,
+      "repositions": 65,
+      "abandoned": 171,
+      "committedAbandoned": 156,
+      "completedByObservation": 1,
+      "failures": 89,
+      "shots": 362,
+      "casualties": 12,
+      "observableCasualtyResponses": 7,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        0.5000000000000071,
+        12.800000000000141,
+        12.800000000000141,
+        1.3000000000000185,
+        1.3000000000000185,
+        1.1000000000000156,
+        1.1000000000000156,
+        1.200000000000017,
+        1.0000000000000142,
+        1.40000000000002,
+        0.70000000000001,
+        0.5000000000000071,
+        2.400000000000034,
+        3.2000000000000455,
+        17.300000000000246,
+        3.300000000000047,
+        3.300000000000047,
+        33.200000000000415,
+        41.90000000000039,
+        8.600000000000122,
+        12.599999999999284,
+        14.59999999999917,
+        18.29999999999896,
+        43.599999999997806,
+        12.2999999999993,
+        36.09999999999795,
+        44.59999999999777,
+        44.299999999997766,
+        0.5999999999999659,
+        0.5999999999999659,
+        8.399999999999523,
+        5.399999999999693,
+        14.399999999999181,
+        9.899999999999437,
+        11.199999999999363,
+        3.499999999999801,
+        5.09999999999971,
+        9.999999999999446
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 14.199999999999992,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.400000000000034,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 29.90000000000021,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.900000000000112,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.900000000000112,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.800000000000068,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.800000000000068,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 5.700000000000081,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 5.60000000000008,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.300000000000175,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.3999999999999204,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.09999999999999432,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 41.699999999999164,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 20.799999999998832,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 86.49999999999538,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 77.29999999999562,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 98.29999999999555,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 118.09999999999583,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 78.99999999999552,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 66.9999999999962,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 13.599999999999227,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 118.19999999999584,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 4,
+      "livingIncapacitated": 6,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 8,
+      "finished": true,
+      "outcome": "Russian infantry victory",
+      "duration": 79.99999999999973,
+      "endgameSeconds": 15.699999999999108,
+      "activeSoldierSeconds": 613.5000000000709,
+      "idleObservationSoldierSeconds": 233.09999999999104,
+      "contributionPercent": 19.885900570494414,
+      "soldiersEverContributing": 12,
+      "repositions": 54,
+      "abandoned": 67,
+      "committedAbandoned": 50,
+      "completedByObservation": 1,
+      "failures": 2,
+      "shots": 204,
+      "casualties": 9,
+      "observableCasualtyResponses": 6,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        12.099999999999968,
+        4.90000000000007,
+        24.600000000000136,
+        7.0000000000000995,
+        0.5000000000000071,
+        6.400000000000091,
+        3.100000000000044,
+        8.50000000000012,
+        2.3000000000000327,
+        25.100000000000357,
+        3.0000000000000426,
+        25.900000000000368,
+        0.70000000000001,
+        41.599999999999824,
+        0.8999999999999488,
+        1.9999999999998863,
+        36.0999999999994
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 10.399999999999963,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.0999999999999925,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.999999999999975,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.899999999999975,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 14.400000000000205,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.400000000000134,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.700000000000102,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 5.199999999999704,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 36.29999999999938,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 46.79999999999953,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 46.69999999999953,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 32.69999999999933,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 57.199999999999676,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 3,
+      "finalDead": 5,
+      "livingIncapacitated": 4,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 9,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 100.99999999999854,
+      "endgameSeconds": 56.29999999999817,
+      "activeSoldierSeconds": 753.7000000001028,
+      "idleObservationSoldierSeconds": 307.0000000000013,
+      "contributionPercent": 20.445800716462053,
+      "soldiersEverContributing": 12,
+      "repositions": 65,
+      "abandoned": 103,
+      "committedAbandoned": 52,
+      "completedByObservation": 1,
+      "failures": 8,
+      "shots": 178,
+      "casualties": 10,
+      "observableCasualtyResponses": 5,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        1.099999999999996,
+        1.099999999999996,
+        10.499999999999963,
+        10.499999999999963,
+        12.099999999999968,
+        0.5000000000000071,
+        2.80000000000004,
+        4.000000000000057,
+        27.200000000000173,
+        4.500000000000064,
+        18.500000000000263,
+        41.00000000000019,
+        6.199999999999697,
+        6.299999999999692,
+        23.599999999999937,
+        26.999999999999076,
+        10.299999999999415,
+        2.499999999999858,
+        5.599999999999682,
+        46.899999999998045
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 13.19999999999998,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.900000000000009,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 16.20000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 16.100000000000023,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.0000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.9000000000000128,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 6.100000000000087,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.4000000000000625,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.4000000000000625,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.4000000000000625,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.399999999999515,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 47.399999999998045,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 47.29999999999804,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 39.19999999999793,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 17.299999999999017,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 73.69999999999843,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 59.69999999999822,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 54.99999999999815,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 31.099999999998232,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 5,
+      "finalDead": 2,
+      "livingIncapacitated": 5,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 10,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 99.29999999999863,
+      "endgameSeconds": 27.299999999998448,
+      "activeSoldierSeconds": 855.800000000126,
+      "idleObservationSoldierSeconds": 327.90000000000606,
+      "contributionPercent": 21.278336059823218,
+      "soldiersEverContributing": 12,
+      "repositions": 91,
+      "abandoned": 56,
+      "committedAbandoned": 43,
+      "completedByObservation": 2,
+      "failures": 3,
+      "shots": 204,
+      "casualties": 10,
+      "observableCasualtyResponses": 8,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        10.599999999999962,
+        11.19999999999996,
+        3.7000000000000117,
+        3.7000000000000117,
+        1.200000000000017,
+        1.7000000000000242,
+        23.300000000000118,
+        2.2000000000000313,
+        10.200000000000145,
+        9.500000000000135,
+        9.500000000000135,
+        47.200000000000614,
+        18.600000000000264,
+        11.100000000000158,
+        11.30000000000016,
+        11.700000000000166,
+        1.3000000000000185,
+        25.30000000000036,
+        43.40000000000062,
+        25.700000000000365,
+        26.10000000000037,
+        2.199999999999875,
+        2.199999999999875,
+        2.899999999999835,
+        7.299999999999585,
+        14.799999999999358,
+        6.299999999999642,
+        8.499999999999517,
+        27.79999999999945,
+        39.199999999998845,
+        9.299999999999471,
+        10.099999999999426,
+        10.299999999999415,
+        10.399999999999409,
+        10.399999999999409
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 11.999999999999961,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.40000000000000213,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.40000000000019,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.40000000000019,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.40000000000019,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.40000000000019,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.9000000000000128,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5000000000000071,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.09999999999999432,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 36.099999999999945,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.09999999999999432,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 73.39999999999985,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 29.499999999999353,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.39999999999997726,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 39.699999999998056,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 37.599999999998026,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 73.59999999999854,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 81.49999999999865,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 49.9999999999982,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 39.29999999999805,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 2,
+      "livingIncapacitated": 6,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 11,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 122.7999999999973,
+      "endgameSeconds": 76.0999999999969,
+      "activeSoldierSeconds": 937.7000000001447,
+      "idleObservationSoldierSeconds": 279.99999999999517,
+      "contributionPercent": 23.20571611389126,
+      "soldiersEverContributing": 12,
+      "repositions": 74,
+      "abandoned": 89,
+      "committedAbandoned": 72,
+      "completedByObservation": 11,
+      "failures": 4,
+      "shots": 134,
+      "casualties": 10,
+      "observableCasualtyResponses": 8,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        5.800000000000082,
+        17.900000000000254,
+        40.50000000000036,
+        2.3000000000000327,
+        4.600000000000065,
+        15.200000000000216,
+        3.600000000000051,
+        17.60000000000025,
+        2.3000000000000327,
+        5.800000000000082,
+        2.80000000000004,
+        4.199999999999882,
+        4.199999999999882,
+        11.599999999999895,
+        16.599999999999966,
+        11.899999999999878,
+        44.60000000000034,
+        35.99999999999938,
+        3.499999999999801,
+        53.199999999998404,
+        15.599999999999113,
+        15.599999999999113,
+        4.499999999999744,
+        4.39999999999975,
+        4.5999999999997385,
+        42.79999999999757,
+        70.99999999999709,
+        12.899999999999267,
+        15.499999999999119,
+        56.699999999996884,
+        70.99999999999709,
+        12.899999999999267,
+        1.0999999999999375,
+        1.0999999999999375,
+        2.499999999999858
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 11.09999999999996,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.79999999999999,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.299999999999965,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5000000000000071,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.900000000000041,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.099999999999866,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 12.099999999999866,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 78.89999999999694,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.199999999999818,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.9999999999998295,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 98.89999999999722,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 99.29999999999723,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 3,
+      "livingIncapacitated": 5,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 12,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 97.69999999999872,
+      "endgameSeconds": 42.099999999998204,
+      "activeSoldierSeconds": 761.8000000001047,
+      "idleObservationSoldierSeconds": 267.8999999999924,
+      "contributionPercent": 27.146232606978753,
+      "soldiersEverContributing": 12,
+      "repositions": 49,
+      "abandoned": 60,
+      "committedAbandoned": 52,
+      "completedByObservation": 10,
+      "failures": 0,
+      "shots": 184,
+      "casualties": 9,
+      "observableCasualtyResponses": 4,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        10.499999999999963,
+        11.09999999999996,
+        0.7000000000000011,
+        3.500000000000009,
+        3.500000000000009,
+        0.70000000000001,
+        8.000000000000114,
+        23.100000000000122,
+        1.6000000000000227,
+        1.6000000000000227,
+        1.6000000000000227,
+        0.5000000000000071,
+        36.0000000000003,
+        13.700000000000195,
+        2.2000000000000313,
+        1.5000000000000213,
+        5.200000000000074,
+        0.6000000000000085,
+        1.200000000000017,
+        0.6000000000000085,
+        0.8000000000000114,
+        4.700000000000067,
+        0.8000000000000114,
+        0.6000000000000085,
+        32.40000000000046,
+        8.700000000000124,
+        33.00000000000047,
+        9.20000000000013,
+        1.1999999999999318,
+        0.5999999999999659,
+        4.799999999999727,
+        4.799999999999727,
+        3.9999999999997726,
+        3.9999999999997726,
+        17.299999999999017,
+        23.19999999999868,
+        8.09999999999954,
+        5.499999999999687,
+        6.899999999999608,
+        36.99999999999817,
+        14.099999999999199,
+        26.89999999999847,
+        14.099999999999199
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 13.199999999999978,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.9000000000000181,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 17.400000000000187,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 11.800000000000168,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 17.200000000000244,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 17.100000000000243,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 35.70000000000051,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 35.90000000000051,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 36.599999999998126,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 46.59999999999827,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 5,
+      "finalDead": 4,
+      "livingIncapacitated": 3,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 13,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 152.9999999999956,
+      "endgameSeconds": 74.29999999999579,
+      "activeSoldierSeconds": 988.1000000001561,
+      "idleObservationSoldierSeconds": 380.20000000001795,
+      "contributionPercent": 17.639914988358147,
+      "soldiersEverContributing": 12,
+      "repositions": 83,
+      "abandoned": 139,
+      "committedAbandoned": 121,
+      "completedByObservation": 0,
+      "failures": 18,
+      "shots": 206,
+      "casualties": 15,
+      "observableCasualtyResponses": 11,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        1.0000000000000142,
+        5.000000000000071,
+        6.500000000000092,
+        7.700000000000109,
+        7.500000000000107,
+        4.800000000000068,
+        5.800000000000082,
+        5.800000000000082,
+        48.90000000000048,
+        23.000000000000327,
+        27.40000000000039,
+        32.000000000000455,
+        24.300000000000345,
+        32.100000000000456,
+        0.7999999999999545,
+        8.599999999999511,
+        4.699999999999733,
+        6.199999999999648,
+        10.099999999999426,
+        10.099999999999426,
+        29.799999999998306,
+        8.199999999999534,
+        8.399999999999523,
+        8.199999999999534,
+        8.199999999999534,
+        46.29999999999737,
+        8.09999999999954,
+        68.39999999999613,
+        55.29999999999687,
+        2.2999999999998693
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 9.699999999999966,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.399999999999995,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.29999999999999893,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.799999999999986,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5000000000000071,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.1000000000000156,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.1000000000000156,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.1000000000000156,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 14.500000000000206,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 33.60000000000048,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 10.000000000000043,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 34.50000000000039,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.099999999999767,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.799999999999784,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.09999999999999432,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.7999999999999545,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 79.4999999999955,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 76.99999999999564,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 139.89999999999563,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 122.09999999999542,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 12.2999999999993,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 130.89999999999554,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 11.699999999999335,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 5,
+      "livingIncapacitated": 5,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 14,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 119.59999999999748,
+      "endgameSeconds": 56.09999999999685,
+      "activeSoldierSeconds": 919.8000000001406,
+      "idleObservationSoldierSeconds": 308.00000000000153,
+      "contributionPercent": 26.092628832349856,
+      "soldiersEverContributing": 12,
+      "repositions": 81,
+      "abandoned": 61,
+      "committedAbandoned": 49,
+      "completedByObservation": 4,
+      "failures": 1,
+      "shots": 187,
+      "casualties": 10,
+      "observableCasualtyResponses": 7,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        12.799999999999978,
+        1.5000000000000213,
+        4.000000000000057,
+        2.3000000000000327,
+        44.40000000000042,
+        10.800000000000153,
+        0.6000000000000085,
+        8.800000000000125,
+        1.1000000000000156,
+        3.499999999999801,
+        25.599999999999575,
+        8.09999999999954,
+        42.6999999999986,
+        8.899999999999494,
+        8.899999999999494,
+        17.799999999998988,
+        26.699999999998482,
+        8.399999999999523,
+        8.399999999999523
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 14.6,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.5000000000000355,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 6.300000000000029,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.5000000000000355,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.100000000000005,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.000000000000005,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.10000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5000000000000071,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 25.600000000000364,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 25.600000000000364,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 14.600000000000207,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 25.600000000000364,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.799999999999727,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 11.699999999999335,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 11.699999999999335,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 17.499999999999005,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 26.89999999999847,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 70.09999999999704,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 17.499999999999005,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 70.09999999999704,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 4,
+      "finalDead": 5,
+      "livingIncapacitated": 3,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 15,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 81.39999999999965,
+      "endgameSeconds": 35.299999999999265,
+      "activeSoldierSeconds": 661.0000000000817,
+      "idleObservationSoldierSeconds": 223.3999999999916,
+      "contributionPercent": 25.370650529496828,
+      "soldiersEverContributing": 12,
+      "repositions": 57,
+      "abandoned": 45,
+      "committedAbandoned": 33,
+      "completedByObservation": 6,
+      "failures": 1,
+      "shots": 185,
+      "casualties": 11,
+      "observableCasualtyResponses": 8,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        1.200000000000017,
+        0.8000000000000114,
+        27.800000000000182,
+        1.0000000000000142,
+        0.5000000000000071,
+        0.9000000000000128,
+        1.1000000000000156,
+        0.8000000000000114,
+        2.400000000000034,
+        3.2000000000000455,
+        9.300000000000132,
+        0.8000000000000114,
+        0.8000000000000114,
+        8.100000000000115,
+        4.100000000000058,
+        10.500000000000107,
+        15.599999999999817,
+        16.799999999999834,
+        15.899999999999821,
+        21.799999999999862,
+        8.799999999999677,
+        26.49999999999922,
+        25.99999999999916
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 13.999999999999991,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 5.700000000000021,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 14.8,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.0000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.10000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 10.800000000000153,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 10.800000000000153,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.50000000000022,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 10.100000000000144,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 45.59999999999941,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 3,
+      "finalDead": 5,
+      "livingIncapacitated": 4,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 16,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 103.2999999999984,
+      "endgameSeconds": 24.499999999998607,
+      "activeSoldierSeconds": 805.5000000001146,
+      "idleObservationSoldierSeconds": 294.2999999999984,
+      "contributionPercent": 27.299813780255803,
+      "soldiersEverContributing": 12,
+      "repositions": 54,
+      "abandoned": 50,
+      "committedAbandoned": 37,
+      "completedByObservation": 0,
+      "failures": 0,
+      "shots": 269,
+      "casualties": 14,
+      "observableCasualtyResponses": 10,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.19999999999996,
+        10.999999999999961,
+        9.500000000000119,
+        2.10000000000003,
+        2.10000000000003,
+        0.6000000000000085,
+        2.5000000000000355,
+        2.5000000000000355,
+        32.80000000000025,
+        6.3000000000000895,
+        5.60000000000008,
+        6.400000000000091,
+        6.600000000000094,
+        9.600000000000136,
+        10.300000000000146,
+        10.300000000000146,
+        13.499999999999957,
+        11.79999999999933,
+        0.6999999999999602,
+        23.99999999999936,
+        23.99999999999936,
+        13.099999999999255,
+        13.099999999999255,
+        0.5999999999999659,
+        10.89999999999938,
+        26.89999999999847,
+        27.699999999998425
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 11.39999999999996,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.000000000000057,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 26.700000000000173,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.90000000000021,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 18.4000000000002,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.300000000000047,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.100000000000044,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.100000000000044,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.100000000000044,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.100000000000044,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.20000000000013,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.20000000000013,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.10000000000003,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.600000000000108,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.399999999999466,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.6999999999999602,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 34.09999999999806,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 53.199999999997964,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 49.49999999999791,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 35.099999999998005,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 4,
+      "livingIncapacitated": 6,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 17,
+      "finished": true,
+      "outcome": "Russian infantry victory",
+      "duration": 115.6999999999977,
+      "endgameSeconds": 72.99999999999736,
+      "activeSoldierSeconds": 860.5000000001271,
+      "idleObservationSoldierSeconds": 351.70000000001147,
+      "contributionPercent": 20.511330621727854,
+      "soldiersEverContributing": 12,
+      "repositions": 64,
+      "abandoned": 72,
+      "committedAbandoned": 60,
+      "completedByObservation": 1,
+      "failures": 2,
+      "shots": 244,
+      "casualties": 11,
+      "observableCasualtyResponses": 7,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        1.099999999999996,
+        1.099999999999996,
+        12.799999999999978,
+        2.5000000000000355,
+        2.5000000000000355,
+        0.6000000000000085,
+        0.5000000000000071,
+        33.20000000000026,
+        0.8000000000000114,
+        0.8000000000000114,
+        1.3000000000000185,
+        0.5000000000000071,
+        0.6000000000000085,
+        6.800000000000097,
+        10.200000000000145,
+        4.100000000000058,
+        10.79999999999982,
+        2.0999999999998806,
+        79.29999999999907,
+        10.89999999999938
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 15.200000000000006,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.100000000000007,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.0000000000000284,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.20000000000000284,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.70000000000001,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.8000000000000256,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.6000000000000227,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.20000000000000284,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.4999999999999147,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 34.8999999999992,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 15.599999999999113,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 111.2999999999977,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 64.99999999999724,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 60.69999999999719,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 64.99999999999724,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 61.2999999999972,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 64.99999999999724,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 56.39999999999713,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 55.29999999999711,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 64.99999999999724,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 59.89999999999718,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 96.2999999999977,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 87.79999999999757,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 96.2999999999977,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 78.39999999999745,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 96.2999999999977,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 3,
+      "livingIncapacitated": 7,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 18,
+      "finished": true,
+      "outcome": "Russian infantry victory",
+      "duration": 106.8999999999982,
+      "endgameSeconds": 57.09999999999776,
+      "activeSoldierSeconds": 783.8000000001097,
+      "idleObservationSoldierSeconds": 322.8000000000049,
+      "contributionPercent": 26.677723909155798,
+      "soldiersEverContributing": 12,
+      "repositions": 46,
+      "abandoned": 65,
+      "committedAbandoned": 43,
+      "completedByObservation": 3,
+      "failures": 1,
+      "shots": 328,
+      "casualties": 12,
+      "observableCasualtyResponses": 8,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        1.7999999999999972,
+        1.7999999999999972,
+        11.799999999999963,
+        0.6000000000000085,
+        0.8000000000000114,
+        5.300000000000075,
+        0.5000000000000071,
+        16.20000000000023,
+        25.700000000000365,
+        10.700000000000152,
+        26.500000000000377,
+        1.40000000000002,
+        5.000000000000071,
+        10.799999999999386,
+        1.299999999999926,
+        26.199999999998887,
+        25.59999999999866,
+        39.19999999999814,
+        93.8999999999987
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 13.599999999999984,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.499999999999984,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.30000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.5000000000000071,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 13.89999999999999,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 5.600000000000019,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.7000000000000242,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.40000000000012,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.40000000000012,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.900000000000027,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.40000000000012,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.10000000000003,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.0000000000000284,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.8000000000000114,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.19999999999998863,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.39999999999997726,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 4.5999999999997385,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 58.99999999999779,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 58.79999999999779,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 74.29999999999801,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 69.19999999999794,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 2,
+      "finalDead": 6,
+      "livingIncapacitated": 4,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 19,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 79.79999999999974,
+      "endgameSeconds": 25.59999999999924,
+      "activeSoldierSeconds": 739.1000000000995,
+      "idleObservationSoldierSeconds": 241.69999999999055,
+      "contributionPercent": 24.191584359351925,
+      "soldiersEverContributing": 12,
+      "repositions": 60,
+      "abandoned": 79,
+      "committedAbandoned": 63,
+      "completedByObservation": 5,
+      "failures": 3,
+      "shots": 143,
+      "casualties": 8,
+      "observableCasualtyResponses": 6,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        10.499999999999963,
+        10.499999999999963,
+        11.599999999999959,
+        11.39999999999996,
+        1.0999999999999996,
+        1.0999999999999996,
+        3.600000000000051,
+        3.600000000000051,
+        11.000000000000156,
+        27.20000000000018,
+        2.900000000000041,
+        6.500000000000092,
+        7.300000000000104,
+        37.80000000000048,
+        0.70000000000001,
+        1.40000000000002,
+        34.90000000000032,
+        5.399999999999899,
+        4.099999999999767,
+        5.09999999999971,
+        5.09999999999971
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 12.799999999999972,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.0000000000000142,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.200000000000117,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 8.200000000000117,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.2000000000003,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 21.1000000000003,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.100000000000044,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.0000000000000426,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 2.80000000000004,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.8000000000000043,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.8000000000000043,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 1.1999999999999957,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.399999999999579,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.399999999999579,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.399999999999579,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 6.199999999999648,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.399999999999579,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 75.69999999999973,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 59.29999999999972,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 6,
+      "finalDead": 2,
+      "livingIncapacitated": 4,
+      "coordinatorCasualtyReplans": 0
+    },
+    {
+      "seed": 20,
+      "finished": true,
+      "outcome": "USMC victory",
+      "duration": 138.6999999999964,
+      "endgameSeconds": 44.999999999997456,
+      "activeSoldierSeconds": 1128.4000000000692,
+      "idleObservationSoldierSeconds": 406.700000000024,
+      "contributionPercent": 26.533144275078094,
+      "soldiersEverContributing": 12,
+      "repositions": 83,
+      "abandoned": 114,
+      "committedAbandoned": 88,
+      "completedByObservation": 1,
+      "failures": 14,
+      "shots": 455,
+      "casualties": 9,
+      "observableCasualtyResponses": 6,
+      "reacquisitionDelays": [
+        7.999999999999972,
+        8.19999999999997,
+        8.49999999999997,
+        8.999999999999968,
+        8.799999999999969,
+        0.7999999999999972,
+        0.9999999999999964,
+        1.099999999999996,
+        1.099999999999996,
+        10.499999999999963,
+        10.499999999999963,
+        1.0999999999999996,
+        1.0999999999999996,
+        12.799999999999978,
+        1.8000000000000256,
+        11.800000000000168,
+        0.6000000000000085,
+        0.6000000000000085,
+        0.6000000000000085,
+        35.100000000000286,
+        28.10000000000034,
+        11.500000000000163,
+        1.6000000000000227,
+        11.600000000000165,
+        12.400000000000176,
+        12.300000000000175,
+        12.800000000000182,
+        3.7000000000000526,
+        2.400000000000034,
+        1.7000000000000242,
+        1.5000000000000213,
+        2.2000000000000313,
+        2.2000000000000313,
+        8.700000000000124,
+        0.5000000000000071,
+        47.50000000000067,
+        49.90000000000026,
+        57.500000000000036,
+        35.79999999999973,
+        39.89999999999907,
+        1.4999999999999147,
+        2.3999999999998636,
+        34.59999999999863,
+        34.59999999999863,
+        34.49999999999863,
+        1.1999999999999318,
+        1.3999999999999204,
+        0.7999999999999545,
+        15.799999999999102,
+        34.49999999999804,
+        32.799999999998136,
+        92.19999999999652,
+        61.29999999999653
+      ],
+      "censoredAcquisitions": [
+        {
+          "seconds": 14.600000000000207,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 14.600000000000207,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 9.80000000000014,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 60.400000000000595,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 45.50000000000059,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 72.49999999999991,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 72.3999999999999,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 3.2999999999998124,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 0.4999999999999716,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 58.49999999999671,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 58.49999999999671,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 7.399999999999579,
+          "reason": "target became ineffective"
+        },
+        {
+          "seconds": 75.19999999999578,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 118.6999999999964,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 78.69999999999582,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 118.6999999999964,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 78.69999999999582,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 53.59999999999697,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 65.79999999999627,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 34.799999999998036,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 94.89999999999606,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 65.79999999999627,
+          "reason": "match ended or cap reached"
+        },
+        {
+          "seconds": 49.89999999999718,
+          "reason": "match ended or cap reached"
+        }
+      ],
+      "survivors": 3,
+      "finalDead": 2,
+      "livingIncapacitated": 7,
+      "coordinatorCasualtyReplans": 0
+    }
+  ]
+}

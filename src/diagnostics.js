@@ -99,13 +99,42 @@ export function refreshDiagnostics(battle, u) {
     notFiring: firing.reason,
     decision: u.decisionReason ?? reasons[u.state] ?? u.navigation,
     stateTime: battle.time - (u.stateSince ?? battle.time),
+    assignment: u.assignment?.type ?? "none",
+    assignmentSource: u.decisionSource ?? "personal decision",
+    assignmentCommander: u.assignment?.commanderId ?? null,
+    assignmentDestination: u.assignment?.target ?? null,
+    assignmentPause:
+      u.assignmentPause ??
+      (u.assignment?.failed ? "awaiting reassignment" : null),
+    maintainingReason: u.holdReason ?? null,
+    alternatives: u.alternativeRejection ?? null,
+    progressAge: battle.time - (u.progress?.lastUseful ?? 0),
+    movementAge:
+      u.progress?.lastMovement == null
+        ? null
+        : battle.time - u.progress.lastMovement,
+    sightAge:
+      u.progress?.lastSight == null ? null : battle.time - u.progress.lastSight,
+    engagementAge:
+      u.progress?.lastEngagement == null
+        ? null
+        : battle.time - u.progress.lastEngagement,
+    objectiveAge: battle.time - (u.progress?.lastObjective ?? 0),
+    failedAttempts: u.progress?.failedAttempts ?? 0,
+    waitingCoordination: !!u.waitingCoordination,
+    casualtyResponse:
+      u.casualtyResponse && battle.time - u.casualtyResponse.at < 12
+        ? u.casualtyResponse.text
+        : null,
     blocker: u.movementBlocker ?? null,
     stalemate: !u.active
       ? null
       : u.ammo === 0 && u.reserve === 0
         ? "No ammunition"
         : (u.movementBlocker ??
-          (u.state === "Observing contact"
+          (u.state === "Observing contact" ||
+          (u.waitingCoordination &&
+            u.alternativeRejection?.startsWith("No reachable"))
             ? "No safe reacquisition route"
             : null)),
   };
