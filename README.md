@@ -39,7 +39,30 @@ Tests cover squad composition, wall sight occlusion, directional cover, navigabl
 
 ## Deploy
 
-Deploy the generated `dist/` directory to any static HTTPS host. Build command: `npm ci && npm run build`; output directory: `dist`. For GitHub Pages under `/annous-warfare/`, build with `npm run build -- --base=/annous-warfare/`, then publish `dist` using Pages/Actions. No environment variables or secrets are required by the application. Publishing is a separate action from opening the review PR.
+Deployment URL: **https://dydtjs345-ux.github.io/annous-warfare/** (available after the first successful deployment).
+
+GitHub Pages source must be **GitHub Actions** in Settings → Pages (already configured for this repository). Every push to `main` runs `.github/workflows/deploy.yml`: install locked dependencies with `npm ci`, build with `npm run build`, upload `dist/` with the official Pages artifact action, and deploy with the official Pages deployment action. You can also start the workflow manually from Actions. No personal access token or application secrets are needed; the workflow uses `contents: read`, `pages: write`, and `id-token: write` permissions.
+
+Merge the deployment PR into `main`, then watch **Actions → Deploy game to GitHub Pages**. If the `github-pages` environment requires approval, approve that deployment. The workflow's deployment environment links to the published site. Opening a PR does not deploy it.
+
+`vite.config.js` sets `base: '/annous-warfare/'`, so generated JavaScript and CSS URLs include the repository subpath. No extra build flags are needed. To check the production build locally:
+
+```sh
+npm install
+npm run build
+npm run preview
+```
+
+Open `http://localhost:4173/annous-warfare/`. For local iPhone testing on the same Wi-Fi, replace `localhost` with your computer's LAN IP and allow port 4173 through its firewall.
+
+### Test the deployed game in iPhone Safari
+
+1. After the Actions run succeeds, open https://dydtjs345-ux.github.io/annous-warfare/ in Safari, including the trailing slash.
+2. Confirm the battlefield renders and team counts appear; reload the page to confirm JavaScript and CSS still load from the subpath. If you see an older version, reload in a new private tab.
+3. Test portrait and landscape, drag to pan, pinch to zoom, and tap a soldier to inspect it.
+4. Exercise Pause/Resume, 1×/2×/4× and Restart, then let a battle run to its outcome.
+
+Physical iPhone Safari validation and the actual hosted deployment must be checked after merging. A local build does not establish that GitHub Actions has deployed successfully. For other static hosts, publish `dist/` and change the Vite base to match the host's URL path.
 
 ## Structure
 
