@@ -81,24 +81,26 @@ export function drawGrenades(g, b, iso, view = null) {
   for (const frag of b.grenades ?? []) {
     const p = iso(frag.position.x, frag.position.y);
     if (view && !inView(p, view, 80)) continue;
-    if (frag.detonatedAt) {
-      const age = b.time - frag.detonatedAt,
-        f = Math.max(0, 1 - age / 0.6);
-      g.fillStyle(0xffd28a, f * 0.35);
-      g.fillEllipse(p.x, p.y, 60 * (1 - f) + 15, 30 * (1 - f) + 8);
-      for (let i = 0; i < 8; i++) {
-        const a = (i * Math.PI) / 4,
-          x = p.x + Math.cos(a) * (15 + 25 * (1 - f)),
-          y = p.y + Math.sin(a) * (8 + 12 * (1 - f));
-        g.fillStyle(i % 2 ? 0xc6b295 : 0xf5d39a, f);
-        g.fillRect(x, y, 3, 3);
-      }
-      continue;
-    }
+    if (frag.detonatedAt) continue; // Event-driven persistent blast layer draws this.
     const t = Math.min(1, (b.time - frag.thrownAt) / FRAG.flight),
       height = Math.sin(t * Math.PI) * 25;
-    g.fillStyle(0x000000, 0.3);
-    g.fillEllipse(p.x, p.y, 7, 3);
+    if (t < 1) {
+      const a = Math.max(0, t - 0.16),
+        tail = iso(
+          frag.start.x + (frag.target.x - frag.start.x) * a,
+          frag.start.y + (frag.target.y - frag.start.y) * a,
+        );
+      g.lineStyle(2, 0xc7bd8e, 0.65);
+      g.lineBetween(
+        tail.x,
+        tail.y - Math.sin(a * Math.PI) * 25 - 5,
+        p.x,
+        p.y - height - 5,
+      );
+    }
+    g.fillStyle(0x000000, 0.5);
+    g.fillEllipse(p.x, p.y, 9, 4);
+    g.fillRect(p.x - 3, p.y - height - 5, 6, 7);
     g.fillStyle(0xb4b781);
     g.fillRect(p.x - 2, p.y - height - 4, 4, 5);
     g.fillStyle(0xf8d189);

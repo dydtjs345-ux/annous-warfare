@@ -710,6 +710,7 @@ export function followAssignment(battle, u, dt) {
       a.anchor = { x: u.x, y: u.y };
       a.lastMovement = battle.time;
     }
+    if ((u.crossingWaitUntil ?? 0) >= battle.time) a.lastMovement = battle.time;
     if (battle.time - a.lastMovement > 4) {
       a.failed = true;
       u.alternativeRejection = "Assigned approach made no movement progress";

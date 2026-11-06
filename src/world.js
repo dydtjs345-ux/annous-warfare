@@ -172,14 +172,45 @@ const visibleCell = (x, y) => {
   const type = obstacles.get(key(x, y));
   return !type || !material(type).solid;
 };
-export const sight = (a, b) => traceRay(a, b, visibleCell);
+export const terrainSight = (a, b) => traceRay(a, b, visibleCell);
+// Full-cover bodies/eyes are below suitable low obstacles; flanks remain visible.
+// Plain map points and remembered snapshots have no posture, so terrain planning
+// never gains access to a hidden soldier's live state.
+export const sight = (a, b) =>
+  terrainSight(a, b) &&
+  !(a.posture?.mode === "full" && shelteredAt(a, b)) &&
+  !(b.posture?.mode === "full" && shelteredAt(b, a));
+// Concealment requires an actual low obstacle before the observer, not merely
+// a protection sample further along the same bearing (important for nearby care).
+export function shelteredAt(unit, observer) {
+  const dx = observer.x - unit.x,
+    dy = observer.y - unit.y,
+    d = Math.hypot(dx, dy);
+  if (d < 1e-8) return false;
+  const scale = Math.min(1, 1.5 / d),
+    end = { x: unit.x + dx * scale, y: unit.y + dy * scale };
+  let found = false;
+  traceRay(unit, end, (x, y) => {
+    const type = obstacles.get(key(x, y));
+    if (type) {
+      const m = material(type);
+      if (!m.solid && m.protection >= 0.58) found = true;
+    }
+    return !found;
+  });
+  return found;
+}
 export function cover(target, attacker) {
   const dx = attacker.x - target.x,
     dy = attacker.y - target.y,
     d = Math.hypot(dx, dy);
   if (!d) return 0;
   let result = 0;
-  for (let t = 0.4; t <= 1.5; t += 0.2) {
+  const limit =
+    target.tacticalGeometry || attacker.tacticalGeometry
+      ? Math.min(1.5, d)
+      : 1.5;
+  for (let t = 0.4; t <= limit; t += 0.2) {
     const o = obstacles.get(
       key(
         Math.round(target.x + (dx / d) * t),

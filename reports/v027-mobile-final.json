@@ -1,0 +1,40 @@
+{
+  "expandedDimensions": [
+    54,
+    44
+  ],
+  "legacyDimensions": [
+    30,
+    26
+  ],
+  "initialReadableZoom": 0.8666666666666667,
+  "overviewZoom": 0.189,
+  "selectedAll12OnOverview": true,
+  "selectedRemoteSquad": true,
+  "touchPan": true,
+  "pinchZoom": true,
+  "cameraBounds": true,
+  "overviewCentered": true,
+  "inspectorResizeSynchronized": true,
+  "inspectorScroll": true,
+  "orientations": 2,
+  "pauseResume": true,
+  "restart": true,
+  "speeds": [
+    1,
+    2,
+    4
+  ],
+  "frameStats": {
+    "samples": 223,
+    "medianMs": 49.900000000001455,
+    "p95Ms": 83.20000000000437,
+    "maxMs": 133.3000000000029
+  },
+  "heapStartBytes": 17246151,
+  "heapEndBytes": 44914333,
+  "simulationAdvancedAt4x": 40.449999999999804,
+  "errors": [],
+  "failedRequests": [],
+  "physicalSafari": "Not tested; desktop Chromium touch emulation"
+}

@@ -3,6 +3,7 @@
 import { FRAG } from "./grenades.js";
 const EFFECT_TIMERS = ["shot", "hit", "heal", "complete", "fall"];
 const NO_COMBAT = new Set([
+  "fullCover",
   "dead",
   "incapacitated",
   "treating",
@@ -13,6 +14,7 @@ const NO_COMBAT = new Set([
   "unmounting",
 ]);
 const CROUCHED = new Set([
+  "fullCover",
   "treating",
   "deploying",
   "mounted",
@@ -76,6 +78,7 @@ export function visualState(battle, u, fx, out = {}) {
   else if (out.mountState === "mounted")
     out.pose =
       fx.shot > 0 && p.lastShotAt != null ? "mountedFiring" : "mounted";
+  else if (u.posture?.mode === "full") out.pose = "fullCover";
   else if (out.moving)
     out.pose =
       u.state === "Seeking cover"
@@ -93,7 +96,8 @@ export function visualState(battle, u, fx, out = {}) {
   else if (p.covered)
     out.pose = p.observing ? "observingCover" : "holdingCover";
   else out.pose = p.observing ? "observing" : "idle";
-  out.combat = u.active && !NO_COMBAT.has(out.pose);
+  out.tucked = u.active && u.posture?.mode === "full";
+  out.combat = u.active && !out.tucked && !NO_COMBAT.has(out.pose);
   out.flash = out.combat && fx.shot > 0;
   if (out.flash) out.direction = fx.angle;
   return out;
@@ -167,7 +171,7 @@ export class CombatVisuals {
       phase = Math.sin(m.stride),
       floorY = p.y;
     const down = m.pose === "dead" || m.pose === "incapacitated",
-      prone = down || m.crawl;
+      prone = down || m.crawl || m.tucked;
     const crouch = CROUCHED.has(m.pose) || (m.covered && !m.moving);
     const bob = m.moving
       ? m.limp
@@ -275,7 +279,8 @@ export class CombatVisuals {
         length = Math.hypot(dx, dy) || 1;
       dx /= length;
       dy /= length;
-      const handY = p.y + (crouch ? -11 : prone ? -6 : -14) + bob;
+      const handY =
+        p.y + (m.tucked ? -4 : crouch ? -11 : prone ? -6 : -14) + bob;
       // Sleeves and two bent forearms meet the weapon's authoritative hand axis.
       if (!["treating", "grenadePrep", "grenadeThrow"].includes(m.pose)) {
         g.lineStyle(3, cloth);

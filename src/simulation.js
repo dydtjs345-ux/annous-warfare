@@ -1,3 +1,8 @@
+import { crossingPermit } from "./crossings.js";
+import { updateSecurity } from "./security.js";
+import { coordinateFireMovement } from "./fire-movement.js";
+import { suppressiveFire } from "./suppressive-fire.js";
+import { updatePosture, holdPosture, releasePosture } from "./postures.js";
 import {
   initializeGrenades,
   updateGrenades,
@@ -68,6 +73,7 @@ export class Battle {
     };
     configureWorld(this.world.kind, this.world.variant);
     this.dimensions = { width: W, height: H };
+    this.tacticalEnabled = options.tactical ?? this.world.kind === "expanded";
     this.contactTTL = options.contactTTL ?? 8;
     this.random = random;
     this.time = 0;
@@ -127,6 +133,8 @@ export class Battle {
           y: this.units[team * 6].y,
         };
     }
+    if (this.tacticalEnabled)
+      for (const u of this.units) u.tacticalGeometry = true;
     initializeIntel(this);
     initializePresentation(this);
     initializeGrenades(this, options.grenades ?? false);
@@ -176,12 +184,17 @@ export class Battle {
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
     updateGrenades(this);
+    for (const u of this.units) {
+      updatePosture(this, u);
+      updateSecurity(this, u);
+    }
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
       updateSearchState(this, team);
       coordinateSquad(this, team);
       updateSquadTactics(this, team);
+      coordinateFireMovement(this, team);
       const squad = this.squads[team],
         alive = this.units.filter((u) => u.team === team && u.active),
         leader = alive.find((u) => u.role === "Leader") || alive[0];
@@ -306,6 +319,7 @@ export class Battle {
         u.order = "Reload";
         continue;
       }
+      if (holdPosture(this, u)) continue;
       if (enemy && dist(u, enemy) <= u.range && u.ammo > 0) {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
         u.decisionSource = "immediate threat";
@@ -408,6 +422,7 @@ export class Battle {
         localCover(this, u, defensive, dt)
       )
         continue;
+      if (!enemy && suppressiveFire(this, u)) continue;
       if (followManeuver(this, u, maneuver, dt)) continue;
       if (followAssignment(this, u, dt)) continue;
       if (recent) {
@@ -471,6 +486,10 @@ export class Battle {
       this.move(u, this.formationGoal(u, goal), dt);
     }
     for (const u of this.units) {
+      if (u.suppressionTask?.active && u.state !== "Suppressing last-known") {
+        u.suppressionTask.active = false;
+        u.suppressionTask.reason = `Current action: ${u.state}`;
+      }
       if (u.active) updateProgress(this, u);
       refreshDiagnostics(this, u);
     }
@@ -557,6 +576,7 @@ export class Battle {
     }
   }
   move(u, goal, dt) {
+    releasePosture(u);
     if (!u.active) return false;
     if (u.state !== "Evading grenade" && receivingTreatment(this, u, dt)) {
       u.navigation = "Receiving treatment; retain squad objective";
@@ -621,6 +641,7 @@ export class Battle {
       this.noteMovementFailure(u);
       return false;
     }
+    if (!crossingPermit(this, u, u.route)) return true;
     // Tiny back-and-forth steps are not net navigation progress, even if each
     // leg is collision-free. Use the same timeout as blocked-route recovery.
     if (this.time - u.navProgressAt > 3 && dist(u, u.target) > 0.2) {
@@ -709,10 +730,13 @@ export class Battle {
         sight(u, e) &&
         dist(u, e) <= u.range,
     );
+    if (this.tacticalEnabled) u.movementHeading = Math.atan2(dy, dx);
     if (u.firedAt !== this.time)
       u.facing = aiming
         ? Math.atan2(aiming.y - u.y, aiming.x - u.x)
-        : Math.atan2(dy, dx);
+        : this.tacticalEnabled
+          ? (u.observationHeading ?? Math.atan2(dy, dx))
+          : Math.atan2(dy, dx);
     u.navigation = "Moving";
     if (d <= step) u.route.shift();
     return true;

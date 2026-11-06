@@ -1,10 +1,11 @@
+import { maneuverSupported } from "./fire-movement.js";
 import {
   reportIncoming,
   squadThreats,
   uncertainThreats,
 } from "./intelligence.js";
 import { mountBonus } from "./mounting.js";
-import { blocked, cover, sight, path } from "./world.js";
+import { blocked, cover, sight, terrainSight, path } from "./world.js";
 
 export const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export const accuracyFactor = (u) => 1 - 0.65 * u.suppression;
@@ -13,7 +14,7 @@ export function decaySuppression(u, dt) {
 }
 
 // The existing hitscan trace also supplies near-miss pressure. Walls stop pressure.
-export function incomingFire(battle, shooter, target) {
+export function incomingFire(battle, shooter, target, remembered = false) {
   const dx = target.x - shooter.x,
     dy = target.y - shooter.y,
     length2 = dx * dx + dy * dy;
@@ -29,12 +30,16 @@ export function incomingFire(battle, shooter, target) {
         )
       : 0;
     const near = distance(u, { x: shooter.x + t * dx, y: shooter.y + t * dy });
-    if (near <= 0.9 && sight(shooter, u)) {
+    if (
+      near <= 0.9 &&
+      (remembered ? terrainSight(shooter, u) : sight(shooter, u))
+    ) {
       reportIncoming(battle, u, shooter);
       u.suppression = Math.min(
         1,
         u.suppression +
           (shooter.role === "LMG" ? 0.2 : 0.12) *
+            (remembered && !sight(shooter, u) ? 0.35 : 1) *
             mountBonus(shooter, "suppression") *
             (1 - 0.5 * cover(u, shooter)),
       );
@@ -173,7 +178,7 @@ export function planFlank(battle, team, threats) {
     alive.find((u) => u.role === "Leader");
   if (
     !leader ||
-    alive.length < 4 ||
+    alive.length < (battle.tacticalEnabled ? 2 : 4) ||
     !threats.length ||
     battle.time < (squad.flankCooldown ?? 0)
   )
@@ -183,14 +188,19 @@ export function planFlank(battle, team, threats) {
     alive.some((u) => u.suppression >= 0.8);
   if (!pinned && battle.time - (squad.lastProgress ?? battle.time) < 12)
     return null;
+  const required = battle.tacticalEnabled && alive.length < 4 ? 1 : 2;
   const covering = alive.filter(
     (u) =>
       u.ammo > 0 &&
       u.reload <= 0 &&
       u.suppression < 0.85 &&
-      threats.some((t) => distance(u, t) <= u.range && sight(u, t)),
+      threats.some(
+        (t) =>
+          distance(u, t) <= u.range &&
+          (battle.tacticalEnabled ? terrainSight(u, t) : sight(u, t)),
+      ),
   );
-  if (covering.length < 2) return null;
+  if (covering.length < required) return null;
   const threat = threats[0],
     d = distance(leader, threat) || 1,
     dx = (threat.x - leader.x) / d,
@@ -234,7 +244,7 @@ export function planFlank(battle, team, threats) {
       const risk = routeRisk(route, threats);
       if (risk.average > 0.6 || risk.longest > 3) continue;
       // Leave at least two capable shooters behind, including the machine gunner.
-      if (covering.filter((a) => a !== u).length < 2) continue;
+      if (covering.filter((a) => a !== u).length < required) continue;
       viable.push({ target: choice.target, risk: risk.average, route });
     }
     viable.sort((a, b) => a.risk - b.risk || a.route.length - b.route.length);
@@ -256,6 +266,9 @@ export function updateSquadTactics(battle, team) {
   const alive = battle.units.filter((u) => u.team === team && u.active);
   const threats = squadThreats(battle, team);
   if (!threats.length) {
+    if (squad.maneuver)
+      squad.maneuver.stopReason =
+        "Contact information expired; return to search";
     if (squad.maneuver)
       squad.flankCooldown = Math.max(
         squad.flankCooldown ?? 0,
@@ -290,6 +303,13 @@ export function updateSquadTactics(battle, team) {
   )
     return;
   if (m) {
+    m.stopReason ??= !u?.active
+      ? "Maneuver soldier combat ineffective"
+      : distance(u, m.target) < 0.5
+        ? "Reached maneuver objective"
+        : m.until <= battle.time
+          ? "Maneuver interval expired"
+          : "Changed contact, pressure or physical capability";
     squad.maneuver = null;
     squad.flankCooldown = battle.time + 24;
   }
@@ -457,6 +477,7 @@ export function followManeuver(battle, u, m, dt) {
     u.health["left leg"] + u.health["right leg"] <= 120 ||
     !leader
   ) {
+    m.stopReason = "Immediate suppression, injury or command loss";
     m.until = battle.time;
     return false;
   }
@@ -478,6 +499,11 @@ export function followManeuver(battle, u, m, dt) {
           distance(t, m.threat) <= 3,
       )
     ) {
+      m.stopReason = !threats.length
+        ? "Contact expired"
+        : risk.average > 0.6 || risk.longest > 3
+          ? "Route exposure changed"
+          : "Threat moved away from evaluated angle";
       m.until = battle.time;
       return false;
     }
@@ -489,17 +515,30 @@ export function followManeuver(battle, u, m, dt) {
         a.ammo > 0 &&
         a.reload <= 0 &&
         a.suppression < 0.85 &&
-        threats.some((t) => distance(a, t) <= a.range && sight(a, t)),
+        threats.some(
+          (t) =>
+            distance(a, t) <= a.range &&
+            (battle.tacticalEnabled ? terrainSight(a, t) : sight(a, t)),
+        ),
     );
-    if (support.length < 2) {
+    if (
+      support.length <
+      (battle.tacticalEnabled &&
+      battle.units.filter((a) => a.team === u.team && a.active).length < 4
+        ? 1
+        : 2)
+    ) {
+      m.stopReason = "Insufficient capable covering element";
       m.until = battle.time;
       return false;
     }
   }
+  if (!maneuverSupported(battle, u, m)) return m.until > battle.time;
   u.decisionSource = "squad leader";
   u.state = "Flanking";
   u.order = squad.intention;
   if (battle.move(u, m.target, dt) === false) {
+    m.stopReason = `Navigation: ${u.movementBlocker}`;
     m.until = battle.time;
     return false;
   }

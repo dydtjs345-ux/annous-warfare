@@ -9,6 +9,8 @@ export function firingStatus(battle, u, enemy) {
       permitted: false,
       reason: u.dead ? "Eliminated" : "Incapacitated",
     };
+  if (u.posture?.mode === "full")
+    return { permitted: false, reason: "Full cover: weapon below cover line" };
   if (u.grenadePrep) return { permitted: false, reason: "Preparing grenade" };
   if (["deploying", "unmounting"].includes(u.mount?.state))
     return { permitted: false, reason: `LMG ${u.mount.state}` };
@@ -91,9 +93,18 @@ export function refreshDiagnostics(battle, u) {
         ? "incoming-fire bearing"
         : "none";
   const target = direct ?? memory;
-  const firing = ["Throwing grenade", "Evading grenade"].includes(u.state)
-    ? { permitted: false, reason: u.state }
-    : firingStatus(battle, u, direct);
+  const firing =
+    u.state === "Suppressing last-known"
+      ? {
+          permitted: u.firedAt === battle.time,
+          reason:
+            u.firedAt === battle.time
+              ? "Actual suppressive shot at remembered lane"
+              : "Aim / weapon interval for remembered lane",
+        }
+      : ["Throwing grenade", "Evading grenade"].includes(u.state)
+        ? { permitted: false, reason: u.state }
+        : firingStatus(battle, u, direct);
   const threats = [
     ...squadThreats(battle, u.team),
     ...uncertainThreats(battle, u),

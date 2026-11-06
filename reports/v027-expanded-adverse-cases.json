@@ -1,0 +1,879 @@
+[
+  {
+    "seed": 2078,
+    "scenario": "leg-injuries",
+    "config": {
+      "map": {
+        "kind": "expanded",
+        "variant": 1
+      },
+      "spawn": 1,
+      "dimensions": {
+        "width": 54,
+        "height": 44
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          8,
+          2
+        ],
+        [
+          9.5,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12.5,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15.5,
+          2
+        ],
+        [
+          35,
+          41
+        ],
+        [
+          36.5,
+          41
+        ],
+        [
+          38,
+          41
+        ],
+        [
+          39.5,
+          41
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          42.5,
+          41
+        ]
+      ]
+    },
+    "baselineDuration": 74.80000000000003,
+    "baselineNavigationFailures": 1,
+    "baselineSearch": {
+      "firstContact": 17.199999999999974,
+      "firstSound": 17.59999999999998,
+      "searchSquadSeconds": 34.200000000000216,
+      "phaseSeconds": {
+        "SEARCH": 34.200000000000216,
+        "CONTACT": 13.599999999999968,
+        "ENGAGE": 56.600000000000534,
+        "LOST_CONTACT": 14.199999999999966,
+        "REACQUIRE": 31.00000000000017
+      },
+      "contactLosses": 49,
+      "reacquired": 39,
+      "reacquisitionDelays": [
+        4.300000000000061,
+        2.2000000000000313,
+        0.9000000000000128,
+        5.400000000000077,
+        0.8000000000000114,
+        2.10000000000003,
+        2.10000000000003,
+        1.8000000000000256,
+        1.8000000000000256,
+        1.8000000000000256,
+        2.400000000000034,
+        20.50000000000029,
+        2.400000000000034,
+        3.100000000000044,
+        8.100000000000115,
+        11.700000000000166,
+        4.700000000000067,
+        0.10000000000000142,
+        2.5000000000000355,
+        4.300000000000061,
+        2.80000000000004,
+        9.500000000000135,
+        0.10000000000000142,
+        1.3000000000000185,
+        1.200000000000017,
+        0.4000000000000057,
+        1.7000000000000242,
+        2.10000000000003,
+        2.900000000000041,
+        1.5000000000000213,
+        2.80000000000004,
+        2.900000000000041,
+        3.599999999999852,
+        0.29999999999998295,
+        9.49999999999963,
+        45.800000000000146,
+        10.699999999999648,
+        13.599999999999689,
+        9.49999999999963
+      ],
+      "goalChanges": 3,
+      "repeats": 0,
+      "failedObjectives": 0,
+      "goalChangesWithoutProgress": 0,
+      "recentRepeatedGoals": 0,
+      "coverage": 0.3349514563106796,
+      "unresolvedContacts": 10,
+      "timeoutReason": null,
+      "squads": [
+        {
+          "phase": "LOST_CONTACT",
+          "observed": 25,
+          "landmarks": 103,
+          "coverage": 0.24271844660194175,
+          "completed": 0,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 20,
+            "x": 26,
+            "y": 10,
+            "score": 28.28,
+            "travel": 26,
+            "source": "unobserved / stale landmark",
+            "at": 0.1,
+            "until": 52.1
+          },
+          "history": [
+            20
+          ]
+        },
+        {
+          "phase": "ENGAGE",
+          "observed": 44,
+          "landmarks": 103,
+          "coverage": 0.42718446601941745,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 39,
+            "x": 30,
+            "y": 18,
+            "score": 31.36,
+            "travel": 12,
+            "source": "unobserved / stale landmark",
+            "at": 11.099999999999977,
+            "until": 41.56153846153843
+          },
+          "history": [
+            70,
+            39
+          ]
+        }
+      ],
+      "digest": "f6d521fa5db06d8ea70740d8ba1518c941e983b8917700b37d732dc0ca3a9365"
+    }
+  },
+  {
+    "seed": 2123,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "expanded",
+        "variant": 2
+      },
+      "spawn": 1,
+      "dimensions": {
+        "width": 54,
+        "height": 44
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          8,
+          2
+        ],
+        [
+          9.5,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12.5,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15.5,
+          2
+        ],
+        [
+          35,
+          41
+        ],
+        [
+          36.5,
+          41
+        ],
+        [
+          38,
+          41
+        ],
+        [
+          39.5,
+          41
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          42.5,
+          41
+        ]
+      ]
+    },
+    "baselineDuration": 70.90000000000025,
+    "baselineNavigationFailures": 3,
+    "baselineSearch": {
+      "firstContact": 15.99999999999996,
+      "firstSound": 16.399999999999963,
+      "searchSquadSeconds": 31.800000000000182,
+      "phaseSeconds": {
+        "SEARCH": 31.800000000000182,
+        "CONTACT": 12.89999999999997,
+        "ENGAGE": 67.30000000000045,
+        "LOST_CONTACT": 8.499999999999986,
+        "REACQUIRE": 21.300000000000033
+      },
+      "contactLosses": 34,
+      "reacquired": 25,
+      "reacquisitionDelays": [
+        4.500000000000064,
+        2.0000000000000284,
+        0.10000000000000142,
+        0.4000000000000057,
+        2.600000000000037,
+        10.300000000000146,
+        4.4000000000000625,
+        6.100000000000087,
+        0.4000000000000057,
+        0.4000000000000057,
+        0.10000000000000142,
+        4.90000000000007,
+        5.1000000000000725,
+        0.4000000000000057,
+        12.800000000000182,
+        3.5000000000000497,
+        0.8000000000000114,
+        15.300000000000217,
+        6.900000000000098,
+        2.2000000000000313,
+        4.300000000000061,
+        2.2000000000000313,
+        5.800000000000082,
+        6.500000000000057,
+        4.5999999999997385
+      ],
+      "goalChanges": 4,
+      "repeats": 0,
+      "failedObjectives": 0,
+      "goalChangesWithoutProgress": 0,
+      "recentRepeatedGoals": 0,
+      "coverage": 0.3632075471698113,
+      "unresolvedContacts": 9,
+      "timeoutReason": null,
+      "squads": [
+        {
+          "phase": "ENGAGE",
+          "observed": 37,
+          "landmarks": 106,
+          "coverage": 0.3490566037735849,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 24,
+            "x": 38,
+            "y": 10,
+            "score": 30.7,
+            "travel": 15,
+            "source": "unobserved / stale landmark",
+            "at": 15.89999999999996,
+            "until": 50.97692307692304
+          },
+          "history": [
+            22,
+            24
+          ]
+        },
+        {
+          "phase": "ENGAGE",
+          "observed": 40,
+          "landmarks": 106,
+          "coverage": 0.37735849056603776,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 32,
+            "x": 30,
+            "y": 14,
+            "score": 30.48,
+            "travel": 16,
+            "source": "unobserved / stale landmark",
+            "at": 10.799999999999978,
+            "until": 47.41538461538459
+          },
+          "history": [
+            71,
+            32
+          ]
+        }
+      ],
+      "digest": "2607e5ea19fd1874803e66bf0ed6df78e529007189c690496fec2c2086e2b047"
+    }
+  },
+  {
+    "seed": 2187,
+    "scenario": "reduced-reserves",
+    "config": {
+      "map": {
+        "kind": "expanded",
+        "variant": 2
+      },
+      "spawn": 2,
+      "dimensions": {
+        "width": 54,
+        "height": 44
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          28
+        ],
+        [
+          2,
+          29.5
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          2,
+          32.5
+        ],
+        [
+          2,
+          34
+        ],
+        [
+          2,
+          35.5
+        ],
+        [
+          51,
+          6
+        ],
+        [
+          51,
+          7.5
+        ],
+        [
+          51,
+          9
+        ],
+        [
+          51,
+          10.5
+        ],
+        [
+          51,
+          12
+        ],
+        [
+          51,
+          13.5
+        ]
+      ]
+    },
+    "baselineDuration": 85.6999999999994,
+    "baselineNavigationFailures": 4,
+    "baselineSearch": {
+      "firstContact": 18.799999999999997,
+      "firstSound": 19.200000000000003,
+      "searchSquadSeconds": 37.40000000000026,
+      "phaseSeconds": {
+        "SEARCH": 37.40000000000026,
+        "CONTACT": 14.199999999999966,
+        "ENGAGE": 72.20000000000017,
+        "LOST_CONTACT": 10.699999999999978,
+        "REACQUIRE": 36.900000000000254
+      },
+      "contactLosses": 41,
+      "reacquired": 32,
+      "reacquisitionDelays": [
+        0.20000000000000284,
+        0.6000000000000085,
+        0.10000000000000142,
+        1.6000000000000227,
+        5.900000000000084,
+        1.6000000000000227,
+        5.60000000000008,
+        3.300000000000047,
+        0.30000000000000426,
+        5.300000000000075,
+        10.50000000000015,
+        4.20000000000006,
+        0.20000000000000284,
+        4.500000000000064,
+        4.500000000000064,
+        5.300000000000075,
+        0.70000000000001,
+        15.800000000000225,
+        0.30000000000000426,
+        2.400000000000034,
+        0.30000000000000426,
+        1.6000000000000227,
+        0.6000000000000085,
+        7.600000000000108,
+        7.400000000000105,
+        2.600000000000037,
+        2.600000000000037,
+        12.399999999999892,
+        44.900000000000354,
+        4.199999999999761,
+        47.49999999999977,
+        54.99999999999957
+      ],
+      "goalChanges": 5,
+      "repeats": 0,
+      "failedObjectives": 0,
+      "goalChangesWithoutProgress": 0,
+      "recentRepeatedGoals": 0,
+      "coverage": 0.3584905660377359,
+      "unresolvedContacts": 9,
+      "timeoutReason": null,
+      "squads": [
+        {
+          "phase": "ENGAGE",
+          "observed": 40,
+          "landmarks": 106,
+          "coverage": 0.37735849056603776,
+          "completed": 2,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 32,
+            "x": 30,
+            "y": 14,
+            "score": 30.7,
+            "travel": 15,
+            "source": "unobserved / stale landmark",
+            "at": 17.59999999999998,
+            "until": 52.67692307692306
+          },
+          "history": [
+            68,
+            71,
+            32
+          ]
+        },
+        {
+          "phase": "ENGAGE",
+          "observed": 36,
+          "landmarks": 106,
+          "coverage": 0.33962264150943394,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 31,
+            "x": 26,
+            "y": 14,
+            "score": 30.7,
+            "travel": 15,
+            "source": "unobserved / stale landmark",
+            "at": 11.099999999999977,
+            "until": 46.17692307692306
+          },
+          "history": [
+            34,
+            31
+          ]
+        }
+      ],
+      "digest": "05521f7df3fe50c1e7361daf9487c16020e3c62709ff6debb0704adea454a0dc"
+    }
+  },
+  {
+    "seed": 2114,
+    "scenario": "standard",
+    "config": {
+      "map": {
+        "kind": "expanded",
+        "variant": 1
+      },
+      "spawn": 1,
+      "dimensions": {
+        "width": 54,
+        "height": 44
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          8,
+          2
+        ],
+        [
+          9.5,
+          2
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          12.5,
+          2
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          15.5,
+          2
+        ],
+        [
+          35,
+          41
+        ],
+        [
+          36.5,
+          41
+        ],
+        [
+          38,
+          41
+        ],
+        [
+          39.5,
+          41
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          42.5,
+          41
+        ]
+      ]
+    },
+    "baselineDuration": 82.99999999999956,
+    "baselineNavigationFailures": 2,
+    "baselineSearch": {
+      "firstContact": 16.09999999999996,
+      "firstSound": 16.499999999999964,
+      "searchSquadSeconds": 32.000000000000185,
+      "phaseSeconds": {
+        "SEARCH": 32.000000000000185,
+        "CONTACT": 8.499999999999986,
+        "ENGAGE": 87.79999999999929,
+        "LOST_CONTACT": 7.999999999999988,
+        "REACQUIRE": 29.700000000000152
+      },
+      "contactLosses": 33,
+      "reacquired": 24,
+      "reacquisitionDelays": [
+        3.800000000000054,
+        0.6000000000000085,
+        0.10000000000000142,
+        2.7000000000000384,
+        3.5000000000000497,
+        3.100000000000044,
+        7.900000000000112,
+        0.20000000000000284,
+        4.500000000000064,
+        4.500000000000064,
+        2.3000000000000327,
+        2.5000000000000355,
+        11.000000000000156,
+        6.400000000000091,
+        6.200000000000088,
+        6.200000000000088,
+        37.700000000000145,
+        14.899999999999821,
+        8.199999999999534,
+        8.199999999999534,
+        3.5999999999997954,
+        3.9999999999997726,
+        3.199999999999818,
+        7.599999999999568
+      ],
+      "goalChanges": 4,
+      "repeats": 0,
+      "failedObjectives": 0,
+      "goalChangesWithoutProgress": 0,
+      "recentRepeatedGoals": 0,
+      "coverage": 0.40291262135922334,
+      "unresolvedContacts": 9,
+      "timeoutReason": null,
+      "squads": [
+        {
+          "phase": "ENGAGE",
+          "observed": 34,
+          "landmarks": 103,
+          "coverage": 0.3300970873786408,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 30,
+            "x": 38,
+            "y": 14,
+            "score": 30.259999999999998,
+            "travel": 17,
+            "source": "unobserved / stale landmark",
+            "at": 15.99999999999996,
+            "until": 54.15384615384611
+          },
+          "history": [
+            20,
+            30
+          ]
+        },
+        {
+          "phase": "ENGAGE",
+          "observed": 49,
+          "landmarks": 103,
+          "coverage": 0.47572815533980584,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 39,
+            "x": 30,
+            "y": 18,
+            "score": 31.36,
+            "travel": 12,
+            "source": "unobserved / stale landmark",
+            "at": 10.799999999999978,
+            "until": 41.261538461538436
+          },
+          "history": [
+            70,
+            39
+          ]
+        }
+      ],
+      "digest": "ee3f3dfbe45dc55789ae51e3eb0bd8269eddaa8b3377d631119ad3aa2a2c2796"
+    }
+  },
+  {
+    "seed": 2085,
+    "scenario": "short-contact",
+    "config": {
+      "map": {
+        "kind": "expanded",
+        "variant": 0
+      },
+      "spawn": 2,
+      "dimensions": {
+        "width": 54,
+        "height": 44
+      },
+      "grenades": true,
+      "opportunity": false,
+      "initialPositions": [
+        [
+          2,
+          28
+        ],
+        [
+          2,
+          29.5
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          2,
+          32.5
+        ],
+        [
+          2,
+          34
+        ],
+        [
+          2,
+          35.5
+        ],
+        [
+          51,
+          6
+        ],
+        [
+          51,
+          7.5
+        ],
+        [
+          51,
+          9
+        ],
+        [
+          51,
+          10.5
+        ],
+        [
+          51,
+          12
+        ],
+        [
+          51,
+          13.5
+        ]
+      ]
+    },
+    "baselineDuration": 77.49999999999987,
+    "baselineNavigationFailures": 5,
+    "baselineSearch": {
+      "firstContact": 18.099999999999987,
+      "firstSound": 18.499999999999993,
+      "searchSquadSeconds": 36.00000000000024,
+      "phaseSeconds": {
+        "SEARCH": 36.00000000000024,
+        "CONTACT": 17.099999999999973,
+        "ENGAGE": 63.90000000000064,
+        "LOST_CONTACT": 15.099999999999962,
+        "REACQUIRE": 22.900000000000055
+      },
+      "contactLosses": 46,
+      "reacquired": 36,
+      "reacquisitionDelays": [
+        2.10000000000003,
+        2.7000000000000384,
+        0.4000000000000057,
+        8.40000000000012,
+        3.100000000000044,
+        1.3000000000000185,
+        1.7000000000000242,
+        3.5000000000000497,
+        0.20000000000000284,
+        0.30000000000000426,
+        3.2000000000000455,
+        0.8000000000000114,
+        4.90000000000007,
+        1.7000000000000242,
+        0.8000000000000114,
+        4.300000000000061,
+        2.400000000000034,
+        2.3000000000000327,
+        5.400000000000077,
+        3.800000000000054,
+        3.800000000000054,
+        1.5000000000000213,
+        1.5000000000000213,
+        1.8000000000000256,
+        3.800000000000054,
+        2.900000000000041,
+        0.9000000000000128,
+        1.1000000000000156,
+        4.300000000000061,
+        4.100000000000058,
+        6.800000000000097,
+        9.20000000000013,
+        2.899999999999835,
+        1.299999999999926,
+        0.7999999999999545,
+        0.5999999999999659
+      ],
+      "goalChanges": 5,
+      "repeats": 0,
+      "failedObjectives": 0,
+      "goalChangesWithoutProgress": 0,
+      "recentRepeatedGoals": 0,
+      "coverage": 0.38990825688073394,
+      "unresolvedContacts": 10,
+      "timeoutReason": null,
+      "squads": [
+        {
+          "phase": "REACQUIRE",
+          "observed": 51,
+          "landmarks": 109,
+          "coverage": 0.46788990825688076,
+          "completed": 2,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 31,
+            "x": 26,
+            "y": 14,
+            "score": 31.36,
+            "travel": 12,
+            "source": "unobserved / stale landmark",
+            "at": 16.599999999999966,
+            "until": 47.061538461538426
+          },
+          "history": [
+            57,
+            60,
+            31
+          ]
+        },
+        {
+          "phase": "ENGAGE",
+          "observed": 34,
+          "landmarks": 109,
+          "coverage": 0.3119266055045872,
+          "completed": 1,
+          "repeats": 0,
+          "failedObjectives": 0,
+          "blocker": null,
+          "goal": {
+            "id": 32,
+            "x": 30,
+            "y": 14,
+            "score": 30.48,
+            "travel": 16,
+            "source": "unobserved / stale landmark",
+            "at": 9.399999999999983,
+            "until": 46.0153846153846
+          },
+          "history": [
+            26,
+            32
+          ]
+        }
+      ],
+      "digest": "de224079847368ab29bbf68ce78c3021892a8deee99a3a618c26d04a1ebacb48"
+    }
+  }
+]
