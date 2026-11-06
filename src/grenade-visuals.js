@@ -47,12 +47,6 @@ export class GrenadeVisuals {
         g.strokeEllipse(p.x, p.y - 12, 18 + age * 25, 9 + age * 12);
         continue;
       }
-      if (age < 0.22) {
-        g.fillStyle(0xffefc7, Math.max(0, 1 - age / 0.22));
-        g.fillEllipse(p.x, p.y - 5, 30 + age * 100, 17 + age * 45);
-        g.fillStyle(0xffc67a, 0.9 * (1 - age / 0.22));
-        g.fillRect(p.x - 6, p.y - 12, 12, 10);
-      }
       const fade = Math.max(0, 1 - age / 2),
         radius = 12 + Math.min(age, 1.4) * 28;
       g.fillStyle(0x181d20, 0.5 * fade);
@@ -67,6 +61,12 @@ export class GrenadeVisuals {
           g.fillStyle(0xb8ad91, 1 - age * 2);
           g.fillRect(x, y, 2, 2);
         }
+      }
+      if (age < 0.22) {
+        g.fillStyle(0xffefc7, Math.max(0, 1 - age / 0.22));
+        g.fillEllipse(p.x, p.y - 5, 30 + age * 100, 17 + age * 45);
+        g.fillStyle(0xffc67a, 0.9 * (1 - age / 0.22));
+        g.fillRect(p.x - 6, p.y - 12, 12, 10);
       }
     }
   }

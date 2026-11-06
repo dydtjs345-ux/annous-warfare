@@ -1,0 +1,557 @@
+{
+  "method": "default browser-health/ammo fixtures; full-match 0.05s step; headless vs render-model grouping at 1/2/4x; not a GPU benchmark",
+  "runs": [
+    {
+      "seed": 2001,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 100.59999999999643,
+      "result": "USMC victory",
+      "digest": "aa0f7f3ec103f6602b625452868a944019a39d79021050acf5c0b2a7a78405b1",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2001,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 100.59999999999643,
+      "result": "USMC victory",
+      "digest": "aa0f7f3ec103f6602b625452868a944019a39d79021050acf5c0b2a7a78405b1",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2001,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 100.59999999999643,
+      "result": "USMC victory",
+      "digest": "aa0f7f3ec103f6602b625452868a944019a39d79021050acf5c0b2a7a78405b1",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2001,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 100.59999999999643,
+      "result": "USMC victory",
+      "digest": "aa0f7f3ec103f6602b625452868a944019a39d79021050acf5c0b2a7a78405b1",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2002,
+      "options": {
+        "map": "expanded",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 159.95000000000212,
+      "result": "USMC victory",
+      "digest": "5c9a56f0ae350cde18571463ae48b2989bb85421339b119f486e8e42be40b546",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2002,
+      "options": {
+        "map": "expanded",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 159.95000000000212,
+      "result": "USMC victory",
+      "digest": "5c9a56f0ae350cde18571463ae48b2989bb85421339b119f486e8e42be40b546",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2002,
+      "options": {
+        "map": "expanded",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 159.95000000000212,
+      "result": "USMC victory",
+      "digest": "5c9a56f0ae350cde18571463ae48b2989bb85421339b119f486e8e42be40b546",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2002,
+      "options": {
+        "map": "expanded",
+        "variant": 1,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 159.95000000000212,
+      "result": "USMC victory",
+      "digest": "5c9a56f0ae350cde18571463ae48b2989bb85421339b119f486e8e42be40b546",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2011,
+      "options": {
+        "map": "expanded",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 90.29999999999701,
+      "result": "Russian infantry victory",
+      "digest": "2f59209d2025b2ae15e772372d0b8cc671109d3ba2c1244d31ab50cb63554c34",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2011,
+      "options": {
+        "map": "expanded",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 90.29999999999701,
+      "result": "Russian infantry victory",
+      "digest": "2f59209d2025b2ae15e772372d0b8cc671109d3ba2c1244d31ab50cb63554c34",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2011,
+      "options": {
+        "map": "expanded",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 90.29999999999701,
+      "result": "Russian infantry victory",
+      "digest": "2f59209d2025b2ae15e772372d0b8cc671109d3ba2c1244d31ab50cb63554c34",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2011,
+      "options": {
+        "map": "expanded",
+        "variant": 2,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 90.29999999999701,
+      "result": "Russian infantry victory",
+      "digest": "2f59209d2025b2ae15e772372d0b8cc671109d3ba2c1244d31ab50cb63554c34",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2012,
+      "options": {
+        "map": "expanded",
+        "variant": 3,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 92.59999999999688,
+      "result": "USMC victory",
+      "digest": "90045c46ea4e7d5ffc18ee2ea9dffb4985c4a0f1e9ba48f1359ade276edeae8e",
+      "grenades": {
+        "thrown": 1,
+        "detonated": 1,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 2,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2012,
+      "options": {
+        "map": "expanded",
+        "variant": 3,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 92.59999999999688,
+      "result": "USMC victory",
+      "digest": "90045c46ea4e7d5ffc18ee2ea9dffb4985c4a0f1e9ba48f1359ade276edeae8e",
+      "grenades": {
+        "thrown": 1,
+        "detonated": 1,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 2,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2012,
+      "options": {
+        "map": "expanded",
+        "variant": 3,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 92.59999999999688,
+      "result": "USMC victory",
+      "digest": "90045c46ea4e7d5ffc18ee2ea9dffb4985c4a0f1e9ba48f1359ade276edeae8e",
+      "grenades": {
+        "thrown": 1,
+        "detonated": 1,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 2,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2012,
+      "options": {
+        "map": "expanded",
+        "variant": 3,
+        "spawn": 0,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 92.59999999999688,
+      "result": "USMC victory",
+      "digest": "90045c46ea4e7d5ffc18ee2ea9dffb4985c4a0f1e9ba48f1359ade276edeae8e",
+      "grenades": {
+        "thrown": 1,
+        "detonated": 1,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 2,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2017,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 1,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 79.39999999999763,
+      "result": "USMC victory",
+      "digest": "68db6fb7cf2c9f416a8946bdfd57791fdf67c3074e00902d2cc10de0dc305340",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2017,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 1,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 79.39999999999763,
+      "result": "USMC victory",
+      "digest": "68db6fb7cf2c9f416a8946bdfd57791fdf67c3074e00902d2cc10de0dc305340",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2017,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 1,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 79.39999999999763,
+      "result": "USMC victory",
+      "digest": "68db6fb7cf2c9f416a8946bdfd57791fdf67c3074e00902d2cc10de0dc305340",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2017,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 1,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 79.39999999999763,
+      "result": "USMC victory",
+      "digest": "68db6fb7cf2c9f416a8946bdfd57791fdf67c3074e00902d2cc10de0dc305340",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2037,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 2,
+        "grenades": true
+      },
+      "speed": "headless",
+      "dt": 0.05,
+      "duration": 81.19999999999753,
+      "result": "Russian infantry victory",
+      "digest": "74fbfe96b00f71e0012fe658cef67f51f0b4ee5cf98dd16c741a920bdbf86f56",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2037,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 2,
+        "grenades": true
+      },
+      "speed": 1,
+      "dt": 0.05,
+      "duration": 81.19999999999753,
+      "result": "Russian infantry victory",
+      "digest": "74fbfe96b00f71e0012fe658cef67f51f0b4ee5cf98dd16c741a920bdbf86f56",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2037,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 2,
+        "grenades": true
+      },
+      "speed": 2,
+      "dt": 0.05,
+      "duration": 81.19999999999753,
+      "result": "Russian infantry victory",
+      "digest": "74fbfe96b00f71e0012fe658cef67f51f0b4ee5cf98dd16c741a920bdbf86f56",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    },
+    {
+      "seed": 2037,
+      "options": {
+        "map": "expanded",
+        "variant": 0,
+        "spawn": 2,
+        "grenades": true
+      },
+      "speed": 4,
+      "dt": 0.05,
+      "duration": 81.19999999999753,
+      "result": "Russian infantry victory",
+      "digest": "74fbfe96b00f71e0012fe658cef67f51f0b4ee5cf98dd16c741a920bdbf86f56",
+      "grenades": {
+        "thrown": 0,
+        "detonated": 0,
+        "effective": 0,
+        "friendlyHits": 0,
+        "detections": 0,
+        "reactions": 0,
+        "safeReactions": 0
+      }
+    }
+  ]
+}

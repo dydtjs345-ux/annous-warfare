@@ -114,6 +114,10 @@ test("stopped suppressive fire records an actual friendly-lane rejection rather 
   Object.assign(b.units[1], { active: true, dead: false, x: 3, y: 11.8 });
   assert.equal(suppressiveFire(b, u), false);
   assert.match(u.suppressionTask.reason, /Friendly body/);
+  b.units[1].dead = true;
+  b.units[1].active = false;
+  assert.equal(suppressiveFire(b, u), true);
+  assert.match(u.suppressionTask.reason, /Bounded pressure/);
 });
 test("arm injuries reduce remembered-lane hit probability while ammunition and near-miss pressure remain real", () => {
   const results = [];

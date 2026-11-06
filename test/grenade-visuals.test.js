@@ -11,6 +11,23 @@ test("grenade effects require real events, are consumed once, and linger indepen
   assert.equal(v.effects.length, 0);
   b.events.push({ id: 1, type: "grenadeBlast", x: 5, y: 8 });
   v.update(b, 0.1);
+  const fills = [];
+  const frame = new Proxy(
+    {},
+    {
+      get:
+        (_, name) =>
+        (...args) => {
+          if (name === "fillStyle") fills.push(args[0]);
+        },
+    },
+  );
+  v.draw(frame, iso);
+  assert.equal(
+    fills.at(-1),
+    0xffc67a,
+    "instantaneous flash stays above its dust/residue layer",
+  );
   v.update(b, 0.1);
   assert.equal(v.effects.length, 1);
   b.events = [];

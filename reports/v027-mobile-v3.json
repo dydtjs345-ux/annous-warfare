@@ -28,15 +28,15 @@
     4
   ],
   "frameStats": {
-    "samples": 577,
+    "samples": 533,
     "medianMs": 16.69999999999891,
-    "p95Ms": 16.799999999999272,
-    "maxMs": 50.100000000000364
+    "p95Ms": 33.30000000000109,
+    "maxMs": 233.3000000000029
   },
-  "loadHeapBytes": 18969451,
-  "sampleHeapStartBytes": 18947933,
-  "sampleHeapEndBytes": 28794092,
-  "simulationAdvancedAt4x": 40.09999999999981,
+  "loadHeapBytes": 18412196,
+  "sampleHeapStartBytes": 34238054,
+  "sampleHeapEndBytes": 20738901,
+  "simulationAdvancedAt4x": 39.39999999999986,
   "errors": [],
   "failedRequests": [],
   "physicalSafari": "Not tested; desktop Chromium touch emulation"

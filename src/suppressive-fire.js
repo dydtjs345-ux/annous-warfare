@@ -113,6 +113,7 @@ export function suppressiveFire(b, u) {
     t.reason = "Remembered-lane shot budget exhausted";
     return false;
   }
+  t.reason = "Bounded pressure on credible last-observed firing lane";
   // A brief aim is preparation, never a fake shot, and never renews the snapshot.
   u.state = "Suppressing last-known";
   u.order = "Cover remembered lane; conserve ammunition";
