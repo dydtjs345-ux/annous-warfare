@@ -124,3 +124,4 @@ footer {
 .inspect-controls button { flex:0 0 auto; padding:4px 12px; }
 #inspect-text { white-space:pre-line; }
 @media (orientation:landscape) and (max-height:500px){#inspect{max-height:100px}#inspect.expanded{max-height:48dvh}header{padding:3px 10px}h1{font-size:14px}}
+#inspect-text { word-break: keep-all; }

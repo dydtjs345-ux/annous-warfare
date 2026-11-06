@@ -1,4 +1,39 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {Battle} from '../src/simulation.js';import {inspectKorean,observeDecision,ko,NO_REASON} from '../src/korean-inspector.js';
-test('Korean state labels and fallback are explicit',()=>{assert.equal(ko('Reloading'),'재장전 중');assert.equal(ko('unrecorded reason'),NO_REASON);const b=new Battle(()=>.99);const u=b.units[0];u.state='Reloading';assert.match(inspectKorean(u),/재장전 중/);});
-test('history is bounded, deduplicated, and never writes soldier state',()=>{const u=new Battle(()=>.99).units[0];const before=JSON.stringify({...u,visibleEnemies:[]});for(let i=0;i<100;i++)observeDecision(u,i);assert.ok(observeDecision(u,101).length<10);assert.equal(JSON.stringify({...u,visibleEnemies:[]}),before);for(let i=0;i<100;i++){u.state=i%2?'Aiming':'Reloading';observeDecision(u,i);}assert.ok(observeDecision(u,102).length<=18);});
-test('unknown enemies cannot leak from battlefield or raw memory into panel',()=>{const b=new Battle(()=>.99);const u=b.units[0];u.memory={x:999,y:888,enemyId:99};const text=inspectKorean(u);assert.ok(!text.includes('999'));assert.ok(!text.includes('888'));assert.ok(!text.includes('#99'));assert.match(text,/신원 확인 없음/);});
+import test from "node:test";
+import assert from "node:assert/strict";
+import { Battle } from "../src/simulation.js";
+import {
+  inspectKorean,
+  observeDecision,
+  ko,
+  NO_REASON,
+} from "../src/korean-inspector.js";
+test("Korean state labels and fallback are explicit", () => {
+  assert.equal(ko("Reloading"), "재장전 중");
+  assert.equal(ko("unrecorded reason"), NO_REASON);
+  const b = new Battle(() => 0.99);
+  const u = b.units[0];
+  u.state = "Reloading";
+  assert.match(inspectKorean(u), /재장전 중/);
+});
+test("history is bounded, deduplicated, and never writes soldier state", () => {
+  const u = new Battle(() => 0.99).units[0];
+  const before = JSON.stringify({ ...u, visibleEnemies: [] });
+  for (let i = 0; i < 100; i++) observeDecision(u, i);
+  assert.ok(observeDecision(u, 101).length < 10);
+  assert.equal(JSON.stringify({ ...u, visibleEnemies: [] }), before);
+  for (let i = 0; i < 100; i++) {
+    u.state = i % 2 ? "Aiming" : "Reloading";
+    observeDecision(u, i);
+  }
+  assert.ok(observeDecision(u, 102).length <= 18);
+});
+test("unknown enemies cannot leak from battlefield or raw memory into panel", () => {
+  const b = new Battle(() => 0.99);
+  const u = b.units[0];
+  u.memory = { x: 999, y: 888, enemyId: 99 };
+  const text = inspectKorean(u);
+  assert.ok(!text.includes("999"));
+  assert.ok(!text.includes("888"));
+  assert.ok(!text.includes("#99"));
+  assert.match(text, /신원 확인 없음/);
+});

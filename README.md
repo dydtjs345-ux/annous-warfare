@@ -453,3 +453,11 @@ The audit preserves all iterations and their negative results. Navigation and lo
 Physical iPhone Safari is **not verified**. On this branch locally or after a reviewed merge/Pages deploy: test both orientations, distant taps, scroll, pan/pinch/focus, pause/restart, background/resume and 1×/2×/4×. Watch full cover release to actual firing, a flank attack on a sheltered unit, snapshot expiry, medic approaches and late survivor search. Check grenade visibility while zoomed to squad view, including at 4×. The optional local-only `/annous-warfare/test/fixtures/grenade-visual.html` under `npm run dev -- --port 4210` isolates real grenade rendering with a protected target cluster and nonfiring opponents; it is not a natural 6v6 battle or part of the deployed build.
 
 Final v0.2.7 validation: **216 passing tests**, successful build, **3,000 large-cohort complete runs** plus recorded milestone/replay checks, zero recorded timeouts, and 200 final legacy hashes preserved. [The verifier manifest](reports/v027-validation.json) inventories 3,343 recorded complete executions. Native mobile Chromium controls and real grenade-render fixtures pass; physical iPhone Safari remains unverified.
+
+## v0.2.8 병사 가독성 / 한국어 전술 검사
+
+병사를 터치하면 한국어 요약이 열립니다. `자세히`로 실제 상태·판단 근거·배정 임무·부위별 부상·접촉 정보·치료 및 최근 판단 기록을 펼치고 내부를 세로로 스크롤하세요. `간단히`로 접거나 `닫기`로 전장을 넓힐 수 있습니다. 이동선과 관측선은 서로 다른 실제 방향이며, 상태 고리는 엄폐/피킹/거치/재장전/치료/제압을 보조합니다. 군복과 기존 권위 이벤트 애니메이션은 유지합니다.
+
+전투 AI·난수·의료·탄약·사격·지도는 변경하지 않습니다. 사전에 없는 설명은 `판단 근거 기록 없음`이며 새로운 이유를 만들어내지 않습니다. 최근 기록은 10Hz 관측 기반의 병사별 최대 18개로, 표본 사이의 짧은 전환은 빠질 수 있습니다. 미래/일부 동적 사유의 번역은 제한이 있습니다. 실제 iPhone Safari는 미검증입니다.
+
+검사·시드·결정론 비교·실기기 체크리스트는 [v0.2.8 감사 보고서](reports/v028-soldier-readability-audit.md)를 참고하세요. 로컬 `npm run dev` 또는 리뷰 후 Pages 배포에서 확인할 수 있습니다. 기능 브랜치를 푸시해도 프로덕션 Pages에는 자동 배포되지 않습니다.

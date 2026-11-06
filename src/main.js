@@ -262,12 +262,17 @@ class Battlefield extends Phaser.Scene {
       );
       c.centerOn(v.centerX, v.centerY);
     }
-    document.querySelector("#focus").textContent = this.viewMode;
+    document.querySelector("#focus").textContent = {
+      USMC: "미군",
+      RU: "러시아",
+      Map: "전체",
+      Free: "자유",
+    }[this.viewMode];
     document
       .querySelector("#focus")
       .setAttribute(
         "aria-label",
-        `Camera focus: ${this.viewMode}; switch spectator view`,
+        `카메라 초점: ${this.viewMode}; switch spectator view`,
       );
   }
   boundCamera() {
@@ -286,10 +291,10 @@ class Battlefield extends Phaser.Scene {
   }
   freeCamera() {
     this.viewMode = "Free";
-    document.querySelector("#focus").textContent = "Free";
+    document.querySelector("#focus").textContent = "자유";
     document
       .querySelector("#focus")
-      .setAttribute("aria-label", "Camera focus: Free; switch spectator view");
+      .setAttribute("aria-label", "카메라 초점: Free; switch spectator view");
   }
   drawGround() {
     const g = this.ground;
@@ -393,7 +398,7 @@ class Battlefield extends Phaser.Scene {
           this.selected === d.unit,
         );
       else drawObstacle(g, d, p);
-      if(d.unit) drawReadability(g,d.unit,p,this.iso);
+      if (d.unit) drawReadability(g, d.unit, p, this.iso);
     }
     if (mapMode !== "expanded")
       for (const h of houses)
@@ -406,9 +411,13 @@ class Battlefield extends Phaser.Scene {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =
         `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
-      for(const u of this.battle.units) observeDecision(u,this.battle.time);
+      for (const u of this.battle.units) observeDecision(u, this.battle.time);
       document.querySelector("#inspect-text").textContent = this.selected
-        ? inspectKorean(this.selected,this.battle.time,document.querySelector("#inspect").classList.contains("expanded"))
+        ? inspectKorean(
+            this.selected,
+            this.battle.time,
+            document.querySelector("#inspect").classList.contains("expanded"),
+          )
         : "병사를 터치하면 상태와 판단 기록을 볼 수 있습니다.";
       document.querySelector("#inspect").hidden = !this.selected;
       const phases = this.battle.squads
@@ -416,17 +425,31 @@ class Battlefield extends Phaser.Scene {
         .filter(Boolean)
         .join(" / ");
       document.querySelector("footer").textContent =
-        `${phases || "ELIMINATION"} · ${W}×${H} · seed ${this.seed} · G ${this.battle.grenadeStats.thrown}/${this.battle.grenadeStats.detonated}`;
+        `${phases || "섬멸전"} · ${W}×${H} · 시드 ${this.seed} · 수류탄 ${this.battle.grenadeStats.thrown}/${this.battle.grenadeStats.detonated}`;
     }
     if (this.battle.result) {
       const o = document.querySelector("#outcome");
       o.hidden = false;
-      o.textContent = (this.battle.result.includes("USMC") ? "미 해병대 승리" : "러시아 보병 승리");
+      o.textContent = this.battle.result.includes("USMC")
+        ? "미 해병대 승리"
+        : "러시아 보병 승리";
     }
   }
 }
-document.querySelector('#detail').onclick=()=>{const p=document.querySelector('#inspect');p.classList.toggle('expanded');document.querySelector('#detail').textContent=p.classList.contains('expanded')?'간단히':'자세히';};
-document.querySelector('#close-inspect').onclick=()=>{const scene=game.scene.scenes[0];if(scene)scene.selected=null;document.querySelector('#inspect').hidden=true;};
+document.querySelector("#detail").onclick = () => {
+  const p = document.querySelector("#inspect");
+  p.classList.toggle("expanded");
+  document.querySelector("#detail").textContent = p.classList.contains(
+    "expanded",
+  )
+    ? "간단히"
+    : "자세히";
+};
+document.querySelector("#close-inspect").onclick = () => {
+  const scene = game.scene.scenes[0];
+  if (scene) scene.selected = null;
+  document.querySelector("#inspect").hidden = true;
+};
 const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: "game",
