@@ -2,7 +2,7 @@ import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
 import { CombatVisuals } from "./combat-visuals.js";
-import { inspectSoldier } from "./inspection.js";
+import { inspectKorean, observeDecision, ko } from "./korean-inspector.js";
 import {
   projection,
   fitZoom,
@@ -111,8 +111,8 @@ class Battlefield extends Phaser.Scene {
     document.querySelector("#pause").onclick = () => {
       this.paused = !this.paused;
       document.querySelector("#pause").textContent = this.paused
-        ? "Resume"
-        : "Pause";
+        ? "계속"
+        : "일시정지";
     };
     document.querySelectorAll("[data-speed]").forEach(
       (button) =>
@@ -202,7 +202,7 @@ class Battlefield extends Phaser.Scene {
     this.paused = false;
     this.selected = null;
     this.viewMode = "USMC";
-    document.querySelector("#pause").textContent = "Pause";
+    document.querySelector("#pause").textContent = "일시정지";
     document.querySelector("#outcome").hidden = true;
     this.drawables = [...this.battle.units.map((unit) => ({ unit }))];
     for (const [k, type] of obstacles) {
@@ -406,11 +406,13 @@ class Battlefield extends Phaser.Scene {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =
         `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
-      document.querySelector("#inspect").textContent = this.selected
-        ? inspectSoldier(this.selected)
-        : "Tap a soldier to inspect • Drag to pan • Pinch to zoom • Camera button changes spectator focus";
+      for(const u of this.battle.units) observeDecision(u,this.battle.time);
+      document.querySelector("#inspect-text").textContent = this.selected
+        ? inspectKorean(this.selected,this.battle.time,document.querySelector("#inspect").classList.contains("expanded"))
+        : "병사를 터치하면 상태와 판단 기록을 볼 수 있습니다.";
+      document.querySelector("#inspect").hidden = !this.selected;
       const phases = this.battle.squads
-        .map((q) => q.search?.phase)
+        .map((q) => ko(q.search?.phase))
         .filter(Boolean)
         .join(" / ");
       document.querySelector("footer").textContent =
@@ -419,11 +421,13 @@ class Battlefield extends Phaser.Scene {
     if (this.battle.result) {
       const o = document.querySelector("#outcome");
       o.hidden = false;
-      o.textContent = this.battle.result + " · Elimination";
+      o.textContent = (this.battle.result.includes("USMC") ? "미 해병대 승리" : "러시아 보병 승리");
     }
   }
 }
-new Phaser.Game({
+document.querySelector('#detail').onclick=()=>{const p=document.querySelector('#inspect');p.classList.toggle('expanded');document.querySelector('#detail').textContent=p.classList.contains('expanded')?'간단히':'자세히';};
+document.querySelector('#close-inspect').onclick=()=>{const scene=game.scene.scenes[0];if(scene)scene.selected=null;document.querySelector('#inspect').hidden=true;};
+const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: "game",
   pixelArt: true,

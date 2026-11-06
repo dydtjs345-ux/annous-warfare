@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -7,26 +7,24 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#0d1720" />
-    <title>Autonomous Warfare v0.2.7</title>
+    <title>Autonomous Warfare v0.2.8</title>
   </head>
   <body>
     <main id="app">
       <header>
         <div>
-          <small>TACTICAL SIMULATION</small>
-          <h1>Autonomous Warfare <em>v0.2.7</em></h1>
+          <small>자율 전술 시뮬레이션</small>
+          <h1>Autonomous Warfare <em>v0.2.8</em></h1>
         </div>
         <span id="counts"></span>
       </header>
       <div id="game"></div>
-      <aside id="inspect">
-        Tap a soldier to inspect • Drag to pan • Pinch to zoom
-      </aside>
+      <aside id="inspect" hidden aria-label="병사 전술 정보"><div class="inspect-controls"><button id="detail">자세히</button><button id="close-inspect" aria-label="병사 정보 닫기">닫기</button></div><div id="inspect-text" aria-live="off"></div></aside>
       <nav>
-        <button id="pause">Pause</button
+        <button id="pause">일시정지</button
         ><button data-speed="1" class="active">1×</button
         ><button data-speed="2">2×</button><button data-speed="4">4×</button
-        ><button id="restart">Restart</button><button id="focus" aria-label="Camera focus: USMC">USMC</button>
+        ><button id="restart">재시작</button><button id="focus" aria-label="카메라 초점: 미 해병대">USMC</button>
       </nav>
       <div id="outcome" hidden></div>
       <footer>
