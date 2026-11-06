@@ -1,6 +1,7 @@
 import { squadThreats, uncertainThreats } from "./intelligence.js";
 import { protectionAt, exposure, positionScore } from "./tactics.js";
 import { sight } from "./world.js";
+import { searchDiagnostic } from "./search.js";
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export function firingStatus(battle, u, enemy) {
   if (!u.active)
@@ -98,6 +99,7 @@ export function refreshDiagnostics(battle, u) {
     ...uncertainThreats(battle, u),
   ];
   u.diagnostics = {
+    ...(battle.searchEnabled ? { search: searchDiagnostic(battle, u) } : {}),
     now: battle.time,
     cover: threats.length
       ? {

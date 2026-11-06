@@ -543,7 +543,9 @@ export function careRouteSafe(battle, u, patient) {
       )
       .sort()
       .join(";") +
-    (battle.world?.kind === "urban" ? `:quietDanger=${quietDanger}` : "");
+    (["urban", "expanded"].includes(battle.world?.kind)
+      ? `:quietDanger=${quietDanger}`
+      : "");
   if (
     !u.careCheck ||
     u.careCheck.threatKey !== threatKey ||
@@ -555,7 +557,7 @@ export function careRouteSafe(battle, u, patient) {
     const route = path(u, patient),
       risk = routeRisk(route, threats);
     const quietNearby =
-      battle.world?.kind === "urban" &&
+      ["urban", "expanded"].includes(battle.world?.kind) &&
       route.length <= 3 &&
       !quietDanger &&
       exposure(patient, threats) <= 0.45 &&

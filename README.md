@@ -1,6 +1,8 @@
-# Autonomous Warfare v0.2.5
+# Autonomous Warfare v0.2.6
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
+
+The v0.2.6 implementation now opens a 54×44 urban battlefield with sealed building blocks, separated squads, squad-directed search, and spectator camera focus. [Current validation milestone and remaining audit work](reports/v026-progress.md). Tap the camera button to cycle RU, Map and USMC views; dragging or pinching switches to Free camera. `?map=legacy` retains the original 30×26 battle, and `?map=urban` selects v0.2.5. A URL such as `?seed=2049&layout=0&spawn=0` reproduces an expanded match. These controls change only the spectator view. Expanded buildings are solid obstacles; there is no CQB or enterable-building behavior in that mode.
 
 ## Run
 
@@ -17,12 +19,12 @@ For repeat installations use `npm ci`. Open the address Vite prints. For an iPho
 
 The battle starts automatically. Portrait and landscape are supported. Drag the battlefield to pan; pinch with two fingers to zoom. Tap a soldier to inspect role, AI state, individual ammunition, and all six body-part health values. Blue-gray uniforms mark USMC; cooler slate uniforms distinguish Russian infantry. Gold chevrons mark leaders and white crosses mark medics. Crossed markers indicate eliminated (red) or incapacitated (gold) soldiers. Pause/Resume and 1×, 2×, 4× change simulation time; Restart generates a fresh battle. Desktop supports dragging and mouse-wheel zoom.
 
-Each side has four riflemen (one leader), one light machine gunner and one medic. Leaders choose patrol or last-contact goals; separated soldiers regroup. Soldiers path around obstacles, detect enemies within a limited radius and unobstructed sight, remember recent sightings, seek nearby directional cover, shoot and reload. Medics evaluate protected approaches and treat nonfatal casualties, including protected care during enemy contact. Elimination ends when a team has no combat-capable soldiers and all live grenades have resolved, even if incapacitated soldiers are still alive.
+Each side has four riflemen (one leader), one light machine gunner and one medic. In expanded mode, leaders choose observation areas from squad exploration memory and assign scouts with supporting followers; confirmed contacts hand off to the existing combat coordinator. Legacy mode retains patrol and last-contact goals. Soldiers path around obstacles, detect enemies within a limited radius and unobstructed sight, remember recent sightings, seek nearby directional cover, shoot and reload. Medics evaluate protected approaches and treat nonfatal casualties, including protected care during enemy contact. Elimination ends when a team has no combat-capable soldiers and all live grenades have resolved, even if incapacitated soldiers are still alive.
 
 ## Implemented versus prototype
 
 - Implemented: grid pathfinding, limited AI sight with solid-wall occlusion, short-lived individual contact memory, leader coordination, directional cover (solid wall, low wall, fence), probabilistic weapon hits, six injury locations, arm accuracy penalties, leg speed penalties, incapacitation, fatal head/torso damage, and medic recovery.
-- Original procedural placeholder art: four single-story houses, grass yards, streets, perimeter barriers, door openings, simple soldiers, shadows, muzzle flashes and tracers. Roofs disappear when a living active soldier is inside. Interiors are single-floor and unfurnished. Doorways are permanently open; interactive door mechanics are unfinished.
+- Original procedural placeholder art: the legacy battlefield has four single-story houses, grass yards, streets, perimeter barriers, door openings, simple soldiers, shadows, muzzle flashes and tracers. Roofs disappear when a living active soldier is inside. Interiors are single-floor and unfurnished. Doorways are permanently open; interactive door mechanics are unfinished.
 - Injury visuals are basic: hit flash, asymmetric walking/limping and a horizontal crawling/incapacitated pose. Lighting is a dark palette with local muzzle glows, not dynamic shadow casting. Sprites are geometric placeholders, not polished character animation.
 - Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic bullet travel or sound, enemy fog-of-war rendering, or advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
 - Random battles may last a long time or stall after ammunition is exhausted; there is no time-limit victory. Medics currently have unlimited treatment supplies. Balance and performance on physical iPhones need further playtesting.

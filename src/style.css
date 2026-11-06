@@ -67,8 +67,8 @@ aside {
 }
 nav {
   display: flex;
-  gap: 7px;
-  padding: 9px 12px;
+  gap: 4px;
+  padding: 9px 8px;
   background: #101b26;
 }
 button {
@@ -103,4 +103,17 @@ footer {
   text-align: center;
   font-size: 22px;
   pointer-events: none;
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  header {
+    padding: 6px 12px;
+  }
+  aside {
+    max-height: 88px;
+    min-height: 44px;
+    padding: 6px 12px;
+  }
+  nav {
+    padding: 6px 8px;
+  }
 }

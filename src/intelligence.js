@@ -86,6 +86,34 @@ export function reportIncoming(battle, receiver, shooter) {
     receiver.nextFireReport = battle.time + 1;
   }
 }
+// Hearing yields a coarse bearing from the listener, never a shooter identity,
+// exact coordinates, distance, firing permission or a synthetic visual contact.
+export function reportGunfire(battle, shooter) {
+  for (const u of battle.units) {
+    if (!u.active || u.team === shooter.team || distance(u, shooter) > 20)
+      continue;
+    if (battle.time < (u.nextSoundReport ?? 0)) continue;
+    const report = {
+      kind: "gunfire",
+      origin: { x: u.x, y: u.y },
+      bearing:
+        Math.round(
+          Math.atan2(shooter.y - u.y, shooter.x - u.x) / (Math.PI / 4),
+        ) *
+        (Math.PI / 4),
+      reporterId: u.id,
+      time: battle.time,
+    };
+    u.intel.sounds.set(u.id, report);
+    u.nextSoundReport = battle.time + 2;
+    notifySquad(battle, u, "audible gunfire", report);
+    const squad = battle.squads[u.team];
+    squad.nextCoordination = Math.min(
+      squad.nextCoordination ?? Infinity,
+      battle.time + 0.45,
+    );
+  }
+}
 export function reportCasualty(battle, u) {
   if (!u.intel) return;
   const report = {
