@@ -86,7 +86,7 @@ export function cover(target, attacker) {
   }
   return result;
 }
-export function path(a, b, occupied = new Set()) {
+export function path(a, b, occupied = new Set(), firstStepAllowed = null) {
   const start = key(Math.round(a.x), Math.round(a.y)),
     goal = key(Math.round(b.x), Math.round(b.y));
   const queue = [start],
@@ -102,6 +102,12 @@ export function path(a, b, occupied = new Set()) {
       [0, -1],
     ]) {
       const n = key(x + dx, y + dy);
+      if (
+        k === start &&
+        firstStepAllowed &&
+        !firstStepAllowed({ x: x + dx, y: y + dy })
+      )
+        continue;
       if (!blocked(x + dx, y + dy) && !occupied.has(n) && !prev.has(n)) {
         prev.set(n, k);
         queue.push(n);

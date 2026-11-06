@@ -137,7 +137,9 @@ export function planFlank(battle, team, threats) {
 
   const squad = battle.squads[team],
     alive = battle.units.filter((u) => u.team === team && u.active);
-  const leader = alive.find((u) => u.role === "Leader");
+  const leader =
+    alive.find((u) => u.id === squad.commanderId) ??
+    alive.find((u) => u.role === "Leader");
   if (
     !leader ||
     alive.length < 4 ||
@@ -325,7 +327,11 @@ export function followManeuver(battle, u, m, dt) {
     return false;
   const squad = battle.squads[u.team];
   const leader = battle.units.find(
-    (a) => a.team === u.team && a.role === "Leader" && a.active,
+    (a) =>
+      a.team === u.team &&
+      a.active &&
+      (a.id === squad.commanderId ||
+        (squad.commanderId == null && a.role === "Leader")),
   );
   if (
     u.suppression >= 0.65 ||
@@ -372,6 +378,7 @@ export function followManeuver(battle, u, m, dt) {
       return false;
     }
   }
+  u.decisionSource = "squad leader";
   u.state = "Flanking";
   u.order = squad.intention;
   if (battle.move(u, m.target, dt) === false) {
@@ -419,123 +426,4 @@ export function careRouteSafe(battle, u, patient) {
     };
   }
   return u.careCheck.safe;
-}
-
-// Reacquisition is a limited, risk-checked investigation of a KNOWN snapshot,
-// not a new source of enemy coordinates. Radio refreshes cannot reset this wait.
-export function reacquireContact(battle, u, dt) {
-  const c = u.memory,
-    squad = battle.squads[u.team];
-  squad.searches ??= new Map();
-  for (const [id, s] of squad.searches) {
-    const unit = battle.units.find((a) => a.id === id);
-    if (
-      s.until <= battle.time ||
-      !unit?.active ||
-      !unit.memory ||
-      unit.memory.enemyId !== s.enemyId
-    )
-      squad.searches.delete(id);
-  }
-  if (!u.contactWait || u.contactWait.id !== c.enemyId)
-    u.contactWait = { id: c.enemyId, since: battle.time };
-  const useful =
-    sight(u, c) &&
-    distance(u, c) <= u.range &&
-    cover(u, c) >= 0.28 &&
-    c.clearedAt == null;
-  if (
-    u.suppression > 0.55 ||
-    (squad.maneuver && squad.maneuver.until > battle.time) ||
-    useful ||
-    battle.time - u.contactWait.since < 3
-  ) {
-    u.state = u.suppression > 0.55 ? "Pinned" : "Holding contact";
-    u.order = useful ? "Observe protected firing lane" : squad.intention;
-    u.decisionReason = useful
-      ? "Useful protected firing lane toward last confirmed location"
-      : u.suppression > 0.55
-        ? "Suppressed; exposure unsafe"
-        : squad.maneuver?.until > battle.time
-          ? "Covering an active squad maneuver"
-          : "Brief observation before risk-checked reacquisition";
-    return true;
-  }
-  let search = squad.searches.get(u.id);
-  if (search && distance(search.contact, c) > 2) {
-    squad.searches.delete(u.id);
-    search = null;
-    u.nextProbe = battle.time;
-  }
-  if (!search && battle.time >= (u.nextProbe ?? 0)) {
-    u.nextProbe = battle.time + 3;
-    const occupied =
-      squad.searches.size +
-      battle.units.filter(
-        (a) => a !== u && a.team === u.team && a.active && a.coverTarget,
-      ).length;
-    if (occupied < 2) {
-      const choices = [];
-      for (let dx = -4; dx <= 4; dx++)
-        for (let dy = -4; dy <= 4; dy++) {
-          const p = { x: Math.round(c.x) + dx, y: Math.round(c.y) + dy };
-          if (
-            distance(u, p) < 0.5 ||
-            distance(p, c) < 3 ||
-            distance(p, c) > u.range ||
-            !sight(p, c) ||
-            !planningCellFree(battle, u, p)
-          )
-            continue;
-          if (
-            u.failedGoal &&
-            u.failedGoal.until > battle.time &&
-            distance(p, u.failedGoal) < 0.8
-          )
-            continue;
-          choices.push({ p, score: positionScore(u, p, [c]) });
-        }
-      choices.sort((a, b) => b.score - a.score);
-      for (const { p } of choices.slice(0, 8)) {
-        const route = path(u, p),
-          risk = routeRisk(route, [c]);
-        if (
-          !route.length ||
-          route.length > 18 ||
-          risk.longest > 3 ||
-          risk.average > 0.6
-        )
-          continue;
-        search = {
-          target: p,
-          enemyId: c.enemyId,
-          contact: { x: c.x, y: c.y },
-          until: battle.time + 12,
-        };
-        squad.searches.set(u.id, search);
-        u.coverTarget = null;
-        break;
-      }
-    }
-  }
-  if (search) {
-    u.state = "Reacquiring contact";
-    u.order = "Investigate known firing lane";
-    u.decisionReason =
-      "Radio contact gives no personal firing opportunity; moving along a risk-checked route";
-    if (
-      battle.move(u, search.target, dt) === false ||
-      distance(u, search.target) < 0.2
-    ) {
-      squad.searches.delete(u.id);
-      u.nextProbe = battle.time + 4;
-    }
-    return true;
-  }
-  u.state = squad.searches.size ? "Covering search" : "Observing contact";
-  u.order = "Maintain cover; reassess known contact";
-  u.decisionReason = squad.searches.size
-    ? "Limited search element already moving"
-    : "No safe reachable reacquisition position; reassess periodically";
-  return true;
 }

@@ -133,3 +133,33 @@ The old `(* injured)` text was an unconditional **legend**, not a separate injur
 `npm test` includes the existing medic, suppression, flank, collision and complete-battle suites plus radio-only prolonged holds, valid stationary firing lanes, firing/contact-loss provenance, configurable expiry, independent reacquisition, range eligibility, LOS symmetry, failed cover assignments, unreachable terrain, regroup hysteresis, five seeded wall-hidden last-enemy searches, explicit ammunition stalemates and inspection data privacy. Existing seeded checks cover 200 startups, 100 collision/navigation battles, and 30 complete tactical matches.
 
 `npm run build` must pass. Mobile browser checks cover tap selection, scrollable diagnostics, portrait/landscape controls and pinch selection behavior. Physical iPhone Safari still needs repeated full matches at 1×/2×/4×, especially wall-corner contact loss, last-survivor search, scrolling the inspector, and background/resume timing. Conservative searches can miss a longer safe route; the inspector exposes that limitation instead of guaranteeing that every possible battle finishes.
+
+## v0.2.1 Hotfix 2: active coordination
+
+The original passive-loop audit is in [reports/hotfix2-audit.md](reports/hotfix2-audit.md). The paired main/hotfix measurement, definitions, tradeoffs and reproducible commands are in [reports/hotfix2-comparison.md](reports/hotfix2-comparison.md), with complete per-seed JSON. This change does not add graphics, animation, personalities or campaign mechanics.
+
+A lightweight coordinator now assigns actual **recon, overwatch, defensive and care tasks**. It reassesses at 1.5-second intervals and within 0.45 seconds of combat loss. At most one investigator is selected per pass, with a maximum of two for squads of four or more, otherwise one. Direct firing, suppression and treatment may override a command temporarily. Existing flanking remains conditional; its command checks accept the acting commander. Strong, useful firing lanes are preserved.
+
+Recon evaluates reachable cells with bounded, risk-weighted navigation (at most 900 expanded states per candidate, at most three candidate soldiers). It prefers observation lanes and can use useful intermediate approaches when a later observation point is terrain-accessible. Exposure uses existing cover/LOS, snapshot confidence, and a conservative 14–18 tile threat-range falloff; the planner does not read an unseen enemy's role or current position. It checks actual accessibility before ranking destinations, keeps committed orders while movement progresses, gives travel-time-aware deadlines, and records actual candidate rejection reasons. Failed positions are temporarily excluded and other soldiers/positions can be selected. Rejected candidate windows rotate after a short cooldown so three unsuitable riflemen cannot permanently exclude another available investigator. A collision-blocked grid start checks a safe first step rather than repeatedly steering into an incapacitated teammate.
+
+After contact expiry, exact intelligence remains expired. A **coarse four-tile historical sector**, never a hidden live enemy position, may guide observation for up to 20 additional seconds, then ordinary patrol behavior resumes. A wall-centered sector uses a neighboring walkable map anchor. No safe/eligible investigator remains a legitimate hold with an explanation; no guaranteed finish or forced charge is added.
+
+Combat loss is retained as a bounded squad event (last twelve events, including role, own position and previous assignment; no attacker position). Lost tasks are redistributed and survivors receive a real reassessment record. Command succession is temporary: active original leader, otherwise lowest-ID active rifleman, then LMG, then medic. There is no persistent rank system; a recovered original leader resumes command. Medics retain casualty priority and may recon only when other fighters have no ammunition and no care is actionable.
+
+The existing scrolling inspector now adds assignment/commander, decision source, destination, pause/hold/rejection reasons, progress/movement/sighting/engagement ages, objective age, failed movement attempts, coordination wait and recent casualty response. These come from assignments and executed decisions, not decorative statuses. Camera controls, speed buttons and the Pages base/workflow are unchanged.
+
+Validation commands:
+
+```sh
+npm test
+npm run build
+npm run measure:ai -- . reports/hotfix2-after.json 20
+```
+
+The full suite contains 56 existing simulation regressions plus 17 coordination regressions (73 total), including actual movement, sustained assignment progress, recon/overwatch, casualty redistribution, command succession, one-versus-one/four-versus-one, expired intelligence, body separation, and an armed medic as the last combat-ready option.
+
+### Physical iPhone Safari retest
+
+After merging and successful Pages deployment, run repeated battles in portrait and landscape at 1×, 2× and 4×. Tap and scroll the inspector to watch a radio-only, out-of-range contact produce a recon assignment and actual movement; confirm other soldiers cover rather than sharing one destination. Watch the objective survive ordinary fresh radio updates. Check blocked approaches, body-adjacent movement, a nearby casualty and leader loss (acting commander/task ownership should update), and late one-/few-survivor searches. Verify strong firing positions may remain stationary while contributing. Test pinch/pan, pause/resume, restart, and background/foreground timing. Chromium viewport checks are not physical Safari performance validation.
+
+Known limits: bounded heuristic search can miss a distant safe route; overwatch is basic, not full fire-and-maneuver doctrine. Frame-level target interruptions increased in the measured sample even though committed abandonment fell. Infinite medical supplies, ammunition exhaustion, genuinely blocked choke points, and conservative danger estimates can still delay or stalemate a match. No casualties are dragged or evacuated.

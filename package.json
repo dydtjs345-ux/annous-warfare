@@ -7,7 +7,8 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "node test/simulation.test.js"
+    "test": "node test/simulation.test.js && node test/coordination.test.js",
+    "measure:ai": "node scripts/measure-ai.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"

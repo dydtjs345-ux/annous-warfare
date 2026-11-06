@@ -50,6 +50,11 @@ export function notifySquad(battle, reporter, kind, report) {
     squad.nextTactical ?? Infinity,
     battle.time + 0.45,
   );
+  if (kind === "sighting")
+    squad.nextCoordination = Math.min(
+      squad.nextCoordination ?? Infinity,
+      battle.time + 0.45,
+    );
   for (const u of battle.units)
     if (u.team === reporter.team && !u.dead && distance(u, reporter) <= 7) {
       // Repeated bursts refresh the board, not the reaction countdown.

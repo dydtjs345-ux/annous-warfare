@@ -1,3 +1,9 @@
+import {
+  coordinateSquad,
+  followAssignment,
+  recordCombatLoss,
+  updateProgress,
+} from "./coordination.js";
 import { refreshDiagnostics, firingStatus } from "./diagnostics.js";
 import {
   initializeIntel,
@@ -17,7 +23,6 @@ import {
   localCover,
   followManeuver,
   careRouteSafe,
-  reacquireContact,
 } from "./tactics.js";
 import {
   W,
@@ -92,6 +97,7 @@ export class Battle {
     initializeIntel(this);
   }
   injury(u, p, damage) {
+    const wasActive = u.active;
     u.health[p] = Math.max(0, u.health[p] - damage);
     u.hit = 0.3;
     reportCasualty(this, u);
@@ -111,6 +117,7 @@ export class Battle {
       u.order = u.navigation = "Incapacitated";
       u.target = null;
     }
+    if (wasActive && !u.active) recordCombatLoss(this, u);
   }
   step(dt) {
     if (this.result) return;
@@ -120,6 +127,7 @@ export class Battle {
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
+      coordinateSquad(this, team);
       updateSquadTactics(this, team);
       const squad = this.squads[team],
         alive = this.units.filter((u) => u.team === team && u.active),
@@ -141,6 +149,10 @@ export class Battle {
       u.hit = Math.max(0, u.hit - dt);
       if (!u.active) continue;
       u.decisionReason = null;
+      u.decisionSource = "personal decision";
+      u.assignmentPause = u.assignment ? "personal priority" : null;
+      u.waitingCoordination = false;
+      u.holdReason = null;
       u.movementBlocker = null;
       u.order = "Hold";
       u.target = null;
@@ -220,6 +232,8 @@ export class Battle {
       }
       if (enemy && dist(u, enemy) <= u.range && u.ammo > 0) {
         u.facing = Math.atan2(enemy.y - u.y, enemy.x - u.x);
+        u.decisionSource = "immediate threat";
+        u.assignmentPause = "direct enemy contact";
         u.state = "Engaging";
         u.order = "Engage visible enemy";
         if (firingStatus(this, u, enemy).permitted) {
@@ -271,20 +285,20 @@ export class Battle {
         u.alert && this.time >= u.alert.readyAt && this.time < u.alert.until;
       const uncertain = alertReady ? uncertainThreats(this, u) : [];
       if (followManeuver(this, u, maneuver, dt)) continue;
+      if (followAssignment(this, u, dt)) continue;
       if (recent) {
-        const searching = tactical.searches?.has(u.id);
-        if (!u.contactWait || u.contactWait.id !== u.memory.enemyId)
-          u.contactWait = { id: u.memory.enemyId, since: this.time };
-        if (
-          !searching &&
-          this.time - u.contactWait.since < 3 &&
-          localCover(this, u, [u.memory], dt)
-        )
-          continue;
-        if (reacquireContact(this, u, dt)) continue;
-      } else {
-        u.contactWait = null;
-        tactical.searches?.delete(u.id);
+        if (u.suppression > 0.55) {
+          u.state = "Pinned";
+          u.order = "Maintain protection under fire";
+          u.decisionSource = "immediate threat";
+        } else {
+          u.state = "Awaiting coordination";
+          u.order = "Await observation assignment";
+          u.waitingCoordination = true;
+        }
+        u.decisionReason =
+          u.alternativeRejection ?? "Waiting for bounded squad reassessment";
+        continue;
       }
       if (!recent && uncertain.length) {
         if (localCover(this, u, uncertain, dt)) continue;
@@ -332,7 +346,10 @@ export class Battle {
       u.order = u.state;
       this.move(u, this.formationGoal(u, goal), dt);
     }
-    for (const u of this.units) refreshDiagnostics(this, u);
+    for (const u of this.units) {
+      if (u.active) updateProgress(this, u);
+      refreshDiagnostics(this, u);
+    }
     const counts = [0, 1].map(
       (t) => this.units.filter((u) => u.team === t && u.active).length,
     );
@@ -404,6 +421,13 @@ export class Battle {
       )
     );
   }
+  noteMovementFailure(u) {
+    if (!u.progress) updateProgress(this, u);
+    if (u.progress && this.time - (u.lastFailureAt ?? -Infinity) > 1) {
+      u.progress.failedAttempts++;
+      u.lastFailureAt = this.time;
+    }
+  }
   move(u, goal, dt) {
     if (
       this.time - (u.lastMoveCall ?? -Infinity) > 1 ||
@@ -451,6 +475,7 @@ export class Battle {
         ? "Soldier congestion"
         : "No terrain route";
       u.failedGoal = { ...u.target, until: this.time + 8 };
+      this.noteMovementFailure(u);
       return false;
     }
     const dx = n[0] - u.x,
@@ -489,12 +514,23 @@ export class Battle {
             .map((a) => key(Math.round(a.x), Math.round(a.y))),
         );
         occupied.delete(key(Math.round(u.x), Math.round(u.y)));
-        u.route = path(u, u.target, occupied);
+        u.route = path(u, u.target, occupied, (p) => {
+          for (let t = 0.2; t <= 1.001; t += 0.2)
+            if (
+              !this.spaceFree(u, {
+                x: u.x + (p.x - u.x) * t,
+                y: u.y + (p.y - u.y) * t,
+              })
+            )
+              return false;
+          return true;
+        });
         u.routeBlockedByUnits = true;
         u.replanAt = this.time + 0.6;
       }
       if (this.time - u.navProgressAt > 3) {
         u.failedGoal = { ...u.target, until: this.time + 8 };
+        this.noteMovementFailure(u);
         return false;
       }
       return true;

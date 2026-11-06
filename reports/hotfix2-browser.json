@@ -1,0 +1,37 @@
+{
+  "browser": "Headless Chromium, touch-enabled mobile viewport; not physical iPhone Safari",
+  "viewportChecks": [
+    "390x844 portrait",
+    "844x390 landscape"
+  ],
+  "checks": [
+    "tap actual soldier inspection",
+    "scroll diagnostics within 144px panel",
+    "pinch preserves selection",
+    "pause/resume",
+    "1x/2x/4x controls",
+    "restart",
+    "10-second sustained 4x battle"
+  ],
+  "result": "passed",
+  "observations": [
+    {
+      "runningAt4x": true,
+      "frameStats": {
+        "samples": 599,
+        "medianMs": 16.69999999999891,
+        "p95Ms": 16.700000000000728,
+        "maxMs": 33.29999999999927
+      },
+      "counts": "USMC 3 \u00b7 RU 4"
+    },
+    {
+      "inspection": "USMC 1 \u00b7 Leader \u00b7 Suppression 0% \u00b7 Ammo 30/180\nAction: Patrolling (0.2s)\nObjective: Patrolling \u2192 13,8 \u00b7 Moving\nContact: none\nLast confirmed: \u2014 \u00b7 Direct LOS: no\nFire: not permitted \u00b7 No identified visible target\nDecision: Searching without enemy position knowledge\nAssignment: none \u00b7 personal decision\nHolding: \u2014\nAlternatives: \u2014\nProgress: 0.2s \u00b7 move never \u00b7 sight never \u00b7 engage never\nObjective age: 0.2s \u00b7 failures 0 \u00b7 coordination wait no\nBlocker: none\nHead 100 \u00b7 Torso 100 \u00b7 LA 100 \u00b7 RA 100 \u00b7 LL 100 \u00b7 RL 100\nNo injuries",
+      "panelHeight": 144,
+      "pinchPreservesSelection": true,
+      "orientations": 2,
+      "errors": []
+    }
+  ],
+  "limitations": "Frame timings are descriptive on this host and do not establish physical iPhone performance."
+}
