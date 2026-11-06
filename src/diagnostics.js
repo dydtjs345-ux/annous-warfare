@@ -8,6 +8,7 @@ export function firingStatus(battle, u, enemy) {
       permitted: false,
       reason: u.dead ? "Eliminated" : "Incapacitated",
     };
+  if (u.grenadePrep) return { permitted: false, reason: "Preparing grenade" };
   if (["deploying", "unmounting"].includes(u.mount?.state))
     return { permitted: false, reason: `LMG ${u.mount.state}` };
   if (u.reload > 0) return { permitted: false, reason: "Reloading" };
@@ -89,7 +90,9 @@ export function refreshDiagnostics(battle, u) {
         ? "incoming-fire bearing"
         : "none";
   const target = direct ?? memory;
-  const firing = firingStatus(battle, u, direct);
+  const firing = ["Throwing grenade", "Evading grenade"].includes(u.state)
+    ? { permitted: false, reason: u.state }
+    : firingStatus(battle, u, direct);
   const threats = [
     ...squadThreats(battle, u.team),
     ...uncertainThreats(battle, u),

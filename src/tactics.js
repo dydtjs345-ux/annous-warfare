@@ -529,13 +529,21 @@ export function careRouteSafe(battle, u, patient) {
     ...squadThreats(battle, u.team),
     ...uncertainThreats(battle, u),
   ];
-  const threatKey = threats
-    .map(
-      (t) =>
-        `${t.enemyId ?? "bearing"}:${Math.round(t.x * 2)},${Math.round(t.y * 2)}`,
-    )
-    .sort()
-    .join(";");
+  const quietDanger =
+    u.suppression >= 0.25 ||
+    [...u.intel.incoming.values()].some(
+      (r) => battle.time - r.time < 3 && distance(u, r.origin) < 7,
+    ) ||
+    threats.some((t) => t.firedAt != null && battle.time - t.firedAt < 4);
+  const threatKey =
+    threats
+      .map(
+        (t) =>
+          `${t.enemyId ?? "bearing"}:${Math.round(t.x * 2)},${Math.round(t.y * 2)}`,
+      )
+      .sort()
+      .join(";") +
+    (battle.world?.kind === "urban" ? `:quietDanger=${quietDanger}` : "");
   if (
     !u.careCheck ||
     u.careCheck.threatKey !== threatKey ||
@@ -546,13 +554,22 @@ export function careRouteSafe(battle, u, patient) {
   ) {
     const route = path(u, patient),
       risk = routeRisk(route, threats);
+    const quietNearby =
+      battle.world?.kind === "urban" &&
+      route.length <= 3 &&
+      !quietDanger &&
+      exposure(patient, threats) <= 0.45 &&
+      risk.longest <= 1;
     u.careCheck = {
       threatKey,
       patientId: patient.id,
       origin: { x: u.x, y: u.y },
       patient: { x: patient.x, y: patient.y },
       until: battle.time + 0.75,
-      safe: route.length > 0 && risk.average <= 0.6 && risk.longest <= 3,
+      safe:
+        route.length > 0 &&
+        risk.average <= (quietNearby ? 0.7 : 0.6) &&
+        risk.longest <= 3,
     };
   }
   return u.careCheck.safe;

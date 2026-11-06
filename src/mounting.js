@@ -1,6 +1,6 @@
-// Conservative map contract: only explicitly tagged low walls are rigid, low
-// supports. Fences and height-unknown solid house walls never qualify.
-import { obstacles, key, blocked, sight, cover } from "./world.js";
+// Conservative map contract: only explicitly mountable low barricade materials
+// are supports. Fences, vehicles, crates and solid house walls never qualify.
+import { obstacles, key, blocked, sight, cover, material } from "./world.js";
 import { emitVisualEvent } from "./presentation-state.js";
 export const MOUNT = Object.freeze({
   deploy: 0.8,
@@ -29,7 +29,7 @@ export function mountSite(u, enemy) {
     for (let dy = -1; dy <= 1; dy++) {
       const p = { x: Math.round(u.x) + dx, y: Math.round(u.y) + dy };
       const d = distance(u, p);
-      if (obstacles.get(key(p.x, p.y)) !== "low wall" || d < 0.55 || d > 1.35)
+      if (!material(obstacles.get(key(p.x, p.y))).mount || d < 0.55 || d > 1.35)
         continue;
       if (delta(direction, angle(u, p)) > Math.PI / 5 || cover(u, enemy) < 0.58)
         continue;
@@ -37,7 +37,7 @@ export function mountSite(u, enemy) {
         position: { x: u.x, y: u.y },
         obstacle: p,
         direction,
-        reason: "Low wall in firing direction; clear lane",
+        reason: "Low barricade in firing direction; clear lane",
       };
     }
   return { reason: "No aligned low-wall support" };
@@ -146,7 +146,7 @@ export function updateMount(b, u, enemy) {
     return;
   }
   Object.assign(m, site);
-  transition(b, u, "deploying", "Deploying on aligned low wall");
+  transition(b, u, "deploying", "Deploying on aligned low barricade");
   m.readyAt = b.time + MOUNT.deploy;
 }
 export function mountBonus(u, kind) {

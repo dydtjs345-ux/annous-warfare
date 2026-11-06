@@ -1,0 +1,796 @@
+--- a/src/combat-visuals.js
++++ b/src/combat-visuals.js
+@@ -7,6 +7,7 @@
+   "treating",
+   "reloading",
+   "deploying",
++  "grenadePrep",
+   "unmounting",
+ ]);
+ const CROUCHED = new Set([
+@@ -53,6 +54,9 @@
+     : out.mountState === "mounted"
+       ? 1
+       : 0;
++  out.grenadeProgress = u.grenadePrep
++    ? Math.min(1, (battle.time - u.grenadePrep.startedAt) / 0.7)
++    : 0;
+   out.reloadProgress = p.reloadProgress;
+   out.treatmentProgress = u.treat ?? 0;
+   out.stride = p.traveled * Math.PI * 2;
+@@ -61,6 +65,7 @@
+   out.limp = legs < 70;
+   if (u.dead) out.pose = "dead";
+   else if (!u.active) out.pose = "incapacitated";
++  else if (u.grenadePrep) out.pose = "grenadePrep";
+   else if (p.treating) out.pose = "treating";
+   else if (out.mountState === "deploying" || out.mountState === "unmounting")
+     out.pose = out.mountState;
+@@ -291,7 +296,17 @@
+         ? Math.min(m.mountState === "mounted" ? 1 : 2, fx.shot * 24)
+         : 0;
+       const barrel = u.role === "LMG" ? 17 : 13;
+-      if (m.pose === "treating") {
++      if (m.pose === "grenadePrep") {
++        g.lineStyle(3, skin);
++        g.lineBetween(
++          p.x + 4,
++          torsoY + 3,
++          p.x + 8,
++          p.y + top + 5 - 4 * m.grenadeProgress,
++        );
++        g.fillStyle(0xb4b781);
++        g.fillRect(p.x + 6, p.y + top + 1 - 4 * m.grenadeProgress, 4, 5);
++      } else if (m.pose === "treating") {
+         const wave = Math.sin(m.treatmentProgress * Math.PI * 4) * 2;
+         g.lineStyle(3, 0xe1c6a1);
+         g.lineBetween(p.x - 4, handY, p.x + 3, handY + 6 + wave);
+--- a/src/diagnostics.js
++++ b/src/diagnostics.js
+@@ -8,6 +8,7 @@
+       permitted: false,
+       reason: u.dead ? "Eliminated" : "Incapacitated",
+     };
++  if (u.grenadePrep) return { permitted: false, reason: "Preparing grenade" };
+   if (["deploying", "unmounting"].includes(u.mount?.state))
+     return { permitted: false, reason: `LMG ${u.mount.state}` };
+   if (u.reload > 0) return { permitted: false, reason: "Reloading" };
+--- /dev/null
++++ b/src/grenades.js
+@@ -0,0 +1,252 @@
++import { blocked, sight, cover, path, blastTransmission } from "./world.js";
++import { emitVisualEvent } from "./presentation-state.js";
++export const FRAG = Object.freeze({
++  range: 7,
++  minRange: 4.2,
++  prepare: 0.7,
++  flight: 0.65,
++  fuse: 2.1,
++  radius: 3.5,
++  damage: 120,
++  squadCooldown: 8,
++});
++const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
++export function initializeGrenades(b, enabled = false) {
++  b.grenadesEnabled = enabled;
++  b.grenades = [];
++  b.grenadeSerial = 0;
++  b.grenadeStats = {
++    thrown: 0,
++    detonated: 0,
++    effective: 0,
++    friendlyHits: 0,
++    detections: 0,
++    reactions: 0,
++    safeReactions: 0,
++  };
++  for (const u of b.units) {
++    u.frags = enabled && ["Leader", "Rifleman"].includes(u.role) ? 1 : 0;
++    u.grenadePrep = null;
++  }
++}
++export function friendlyRisk(b, u, target) {
++  return b.units.some((a) => {
++    if (a.team !== u.team || a.dead) return false;
++    const next = a.route?.[0],
++      d = next ? Math.hypot(next[0] - a.x, next[1] - a.y) : 0;
++    const p =
++      next && d
++        ? {
++            x: a.x + ((next[0] - a.x) / d) * Math.min(d, 1.7 * FRAG.fuse),
++            y: a.y + ((next[1] - a.y) / d) * Math.min(d, 1.7 * FRAG.fuse),
++          }
++        : a;
++    return (
++      distance(a, target) < FRAG.radius + 0.6 ||
++      distance(p, target) < FRAG.radius + 0.6
++    );
++  });
++}
++export function grenadeOpportunity(b, u) {
++  if (
++    !b.grenadesEnabled ||
++    !u.active ||
++    !u.frags ||
++    u.reload > 0 ||
++    u.suppression > 0.45 ||
++    u.assignment?.type === "recon" ||
++    u.coverTarget ||
++    u.presentation.moving ||
++    b.time < (b.squads[u.team].grenadeAfter ?? 0) ||
++    b.grenades.some((g) => g.team === u.team && !g.detonatedAt)
++  )
++    return null;
++  const seen = (u.visibleEnemies ?? []).filter((e) => e.active && sight(u, e));
++  for (const e of seen) {
++    const d = distance(u, e);
++    if (d < FRAG.minRange || d > FRAG.range || friendlyRisk(b, u, e)) continue;
++    const cluster = seen.filter((a) => distance(a, e) < 1.8).length;
++    if (
++      cluster < 2 &&
++      !(
++        cover(e, u) >= 0.58 &&
++        b.time - (b.squads[u.team].lastProgress ?? b.time) > 3
++      )
++    )
++      continue;
++    return {
++      x: e.x,
++      y: e.y,
++      enemyId: e.id,
++      reason:
++        cluster >= 2
++          ? "Confirmed cluster; friend-safe throw"
++          : "Confirmed defended position; ineffective rifle fire",
++    };
++  }
++  return null;
++}
++export function detonate(b, g) {
++  g.detonatedAt = b.time;
++  b.grenadeStats.detonated++;
++  let effective = false;
++  for (const u of b.units) {
++    if (u.dead) continue;
++    const d = distance(u, g.target);
++    if (d >= FRAG.radius) continue;
++    const pressure =
++      (1 - d / FRAG.radius) ** 2 * blastTransmission(g.target, u);
++    if (pressure <= 0.001) continue;
++    u.suppression = Math.min(1, u.suppression + 0.8 * pressure);
++    const amount = FRAG.damage * pressure;
++    // Deterministic radial fragment envelope; existing body-part injury thresholds
++    // decide casualties. No random-number draw and no team immunity.
++    for (const [part, scale] of [
++      ["head", 0.35],
++      ["torso", 0.65],
++      ["left leg", 0.8],
++      ["right arm", 0.5],
++    ])
++      b.injury(u, part, amount * scale);
++    if (amount > 1 && u.team === g.team) b.grenadeStats.friendlyHits++;
++    if (amount > 10 && u.team !== g.team) effective = true;
++  }
++  if (effective) b.grenadeStats.effective++;
++  emitVisualEvent(b, "grenadeBlast", b.units[g.throwerId], {
++    x: g.target.x,
++    y: g.target.y,
++  });
++  for (const u of b.units)
++    if (u.grenadeThreat?.id === g.id) {
++      if (u.active && distance(u, g.target) >= FRAG.radius)
++        b.grenadeStats.safeReactions++;
++      u.grenadeThreat = null;
++    }
++}
++export function updateGrenades(b) {
++  if (!b.grenadesEnabled) return;
++  for (const g of b.grenades) {
++    if (g.detonatedAt) continue;
++    const t = Math.min(1, (b.time - g.thrownAt) / FRAG.flight);
++    g.position = {
++      x: g.start.x + (g.target.x - g.start.x) * t,
++      y: g.start.y + (g.target.y - g.start.y) * t,
++    };
++    if (b.time >= g.detonateAt) {
++      detonate(b, g);
++      continue;
++    }
++    // Grounded grenades must be seen at close range. No perfect mid-flight landing
++    // prediction or squad-wide omniscient awareness is granted.
++    if (t >= 1)
++      for (const u of b.units) {
++        if (
++          !u.active ||
++          distance(u, g.position) > 6 ||
++          !sight(u, g.position) ||
++          u.grenadeThreat?.id === g.id
++        )
++          continue;
++        u.grenadeThreat = {
++          id: g.id,
++          x: g.position.x,
++          y: g.position.y,
++          readyAt: b.time + 0.25 + 0.07 * (u.id % 3) + u.suppression * 0.2,
++        };
++        b.grenadeStats.detections++;
++      }
++  }
++  b.grenades = b.grenades.filter(
++    (g) => !g.detonatedAt || b.time - g.detonatedAt < 0.6,
++  );
++}
++function evade(b, u, dt) {
++  const t = u.grenadeThreat;
++  if (!t || b.time < t.readyAt) return false;
++  const g = b.grenades.find((g) => g.id === t.id && !g.detonatedAt);
++  if (!g) return false;
++  const risk = (p) =>
++    Math.max(0, 1 - distance(p, t) / FRAG.radius) ** 2 *
++    blastTransmission(t, p);
++  if (risk(u) < 0.04) return false;
++  if (!t.destination) {
++    const choices = [];
++    for (let dx = -3; dx <= 3; dx++)
++      for (let dy = -3; dy <= 3; dy++) {
++        const p = { x: Math.round(u.x) + dx, y: Math.round(u.y) + dy };
++        if (
++          blocked(p.x, p.y) ||
++          b.units.some(
++            (a) =>
++              a !== u && a.team === u.team && !a.dead && distance(a, p) < 0.65,
++          )
++        )
++          continue;
++        const r = risk(p);
++        if (r >= risk(u) * 0.6) continue;
++        choices.push({ ...p, score: r + distance(u, p) * 0.025 });
++      }
++    choices.sort((a, c) => a.score - c.score);
++    for (const p of choices.slice(0, 8)) {
++      const route = path(u, p);
++      if (route.length && route.length <= 5) {
++        t.destination = { x: p.x, y: p.y };
++        b.grenadeStats.reactions++;
++        break;
++      }
++    }
++  }
++  if (!t.destination) return false;
++  u.grenadePrep = null;
++  u.state = "Evading grenade";
++  u.order = "Immediate grenade survival; retain squad task";
++  u.decisionSource = "immediate threat";
++  u.decisionReason = "Observed grounded grenade; delayed emergency response";
++  b.move(u, t.destination, dt);
++  return true;
++}
++export function grenadeAction(b, u, dt) {
++  if (!b.grenadesEnabled) return false;
++  if (evade(b, u, dt)) return true;
++  if (u.grenadePrep) {
++    const p = u.grenadePrep;
++    if (
++      u.suppression > 0.6 ||
++      !u.active ||
++      friendlyRisk(b, u, p) ||
++      !sight(u, p)
++    ) {
++      u.grenadePrep = null;
++      return false;
++    }
++    u.state = "Preparing grenade";
++    u.order = p.reason;
++    u.facing = Math.atan2(p.y - u.y, p.x - u.x);
++    if (b.time - p.startedAt >= FRAG.prepare) {
++      u.frags--;
++      u.grenadeThrownAt = b.time;
++      b.grenadeStats.thrown++;
++      b.squads[u.team].grenadeAfter = b.time + FRAG.squadCooldown;
++      b.grenades.push({
++        id: ++b.grenadeSerial,
++        team: u.team,
++        throwerId: u.id,
++        start: { x: u.x, y: u.y },
++        target: { x: p.x, y: p.y },
++        position: { x: u.x, y: u.y },
++        thrownAt: b.time,
++        detonateAt: b.time + FRAG.fuse,
++      });
++      emitVisualEvent(b, "grenadeThrow", u, { x: p.x, y: p.y });
++      u.grenadePrep = null;
++      u.state = "Throwing grenade";
++    }
++    return true;
++  }
++  const p = grenadeOpportunity(b, u);
++  if (!p) return false;
++  u.grenadePrep = { ...p, startedAt: b.time };
++  u.state = "Preparing grenade";
++  u.order = p.reason;
++  return true;
++}
+--- a/src/inspection.js
++++ b/src/inspection.js
+@@ -38,5 +38,5 @@
+     d?.contactAge != null
+       ? `${d.contactAge.toFixed(1)}s${d.observerId != null ? ` · observer #${d.observerId}` : ""}`
+       : "—";
+-  return `${u.name} · ${u.role} · Suppression ${Math.round(u.suppression * 100)}% · Ammo ${u.ammo}/${u.reserve}\nAction: ${u.state} (${(d?.stateTime ?? 0).toFixed(1)}s)\nObjective: ${u.order}${u.target ? ` → ${u.target.x},${u.target.y}` : ""} · ${u.navigation}\nContact: ${contact}\nLast confirmed: ${age} · Direct LOS: ${d?.directLOS ? "yes" : "no"}\nFire: ${d?.firingPermitted ? "permitted" : "not permitted"} · ${d?.notFiring ?? "No identified visible target"}\nDecision: ${d?.decision ?? "Awaiting decision"}\nAssignment: ${d?.assignment ?? "none"} · ${d?.assignmentSource ?? "personal decision"}${d?.assignmentCommander != null ? ` (#${d.assignmentCommander})` : ""}${d?.assignmentDestination ? ` → ${d.assignmentDestination.x},${d.assignmentDestination.y}` : ""}${d?.assignmentPause ? ` · paused: ${d.assignmentPause}` : ""}\nHolding: ${d?.maintainingReason ?? "—"}\nAlternatives: ${d?.alternatives ?? "—"}\nProgress: ${(d?.progressAge ?? 0).toFixed(1)}s · move ${elapsed(d?.movementAge)} · sight ${elapsed(d?.sightAge)} · engage ${elapsed(d?.engagementAge)}\nObjective age: ${(d?.objectiveAge ?? 0).toFixed(1)}s · failures ${d?.failedAttempts ?? 0} · coordination wait ${d?.waitingCoordination ? "yes" : "no"}${d?.casualtyResponse ? `\nCasualty response: ${d.casualtyResponse}` : ""}\nBlocker: ${d?.blocker ?? "none"}${d?.stalemate ? ` · Limitation: ${d.stalemate}` : ""}\n${health}\n${wounds.length ? "* marks actual injuries" : "No injuries"}${coverText}${mountText}${activity}`;
++  return `${u.name} · ${u.role} · Suppression ${Math.round(u.suppression * 100)}% · Ammo ${u.ammo}/${u.reserve}\nAction: ${u.state} (${(d?.stateTime ?? 0).toFixed(1)}s)\nObjective: ${u.order}${u.target ? ` → ${u.target.x},${u.target.y}` : ""} · ${u.navigation}\nContact: ${contact}\nLast confirmed: ${age} · Direct LOS: ${d?.directLOS ? "yes" : "no"}\nFire: ${d?.firingPermitted ? "permitted" : "not permitted"} · ${d?.notFiring ?? "No identified visible target"}\nDecision: ${d?.decision ?? "Awaiting decision"}\nAssignment: ${d?.assignment ?? "none"} · ${d?.assignmentSource ?? "personal decision"}${d?.assignmentCommander != null ? ` (#${d.assignmentCommander})` : ""}${d?.assignmentDestination ? ` → ${d.assignmentDestination.x},${d.assignmentDestination.y}` : ""}${d?.assignmentPause ? ` · paused: ${d.assignmentPause}` : ""}\nHolding: ${d?.maintainingReason ?? "—"}\nAlternatives: ${d?.alternatives ?? "—"}\nProgress: ${(d?.progressAge ?? 0).toFixed(1)}s · move ${elapsed(d?.movementAge)} · sight ${elapsed(d?.sightAge)} · engage ${elapsed(d?.engagementAge)}\nObjective age: ${(d?.objectiveAge ?? 0).toFixed(1)}s · failures ${d?.failedAttempts ?? 0} · coordination wait ${d?.waitingCoordination ? "yes" : "no"}${d?.casualtyResponse ? `\nCasualty response: ${d.casualtyResponse}` : ""}\nBlocker: ${d?.blocker ?? "none"}${d?.stalemate ? ` · Limitation: ${d.stalemate}` : ""}\n${health}\n${wounds.length ? "* marks actual injuries" : "No injuries"}${coverText}${mountText}${u.frags != null ? `\nFrag: ${u.frags} · ${u.grenadePrep ? "preparing" : u.state === "Evading grenade" ? "emergency evasion" : "ready / unavailable"} · ${u.grenadePrep?.reason ?? "Confirmed targets and friendly clearance required"}` : ""}${activity}`;
+ }
+--- a/src/main.js
++++ b/src/main.js
+@@ -1,3 +1,4 @@
++import { drawObstacle, drawGrenades } from "./urban-visuals.js";
+ import { CombatVisuals } from "./combat-visuals.js";
+ import { inspectSoldier } from "./inspection.js";
+ import Phaser from "phaser";
+@@ -7,7 +8,7 @@
+ const iso = (x, y) => ({ x: 700 + (x - y) * 20, y: 55 + (x + y) * 10 });
+ class Battlefield extends Phaser.Scene {
+   create() {
+-    this.battle = new Battle();
++    this.battle = new Battle(Math.random, { map: "urban", grenades: true });
+     this.speed = 1;
+     this.paused = false;
+     this.acc = 0;
+@@ -92,7 +93,7 @@
+         }),
+     );
+     document.querySelector("#restart").onclick = () => {
+-      this.battle = new Battle();
++      this.battle = new Battle(Math.random, { map: "urban", grenades: true });
+       this.drawables = [
+         ...this.obstacles,
+         ...this.battle.units.map((unit) => ({ unit })),
+@@ -166,21 +167,7 @@
+     for (const d of drawables) {
+       const p = iso(d.unit?.x ?? d.x, d.unit?.y ?? d.y);
+       if (!d.unit) {
+-        const height = d.type === "wall" ? 23 : d.type === "fence" ? 12 : 9;
+-        g.fillStyle(0x000000, 0.22);
+-        g.fillRect(p.x, p.y, 25, 8);
+-        g.fillStyle(d.type === "fence" ? 0x786e51 : 0x727a79);
+-        g.fillPoints(
+-          [
+-            { x: p.x - 18, y: p.y - 9 - height },
+-            { x: p.x + 18, y: p.y + 9 - height },
+-            { x: p.x + 18, y: p.y + 9 },
+-            { x: p.x - 18, y: p.y - 9 },
+-          ],
+-          true,
+-        );
+-        g.lineStyle(2, 0xa5aaa0);
+-        g.lineBetween(p.x - 18, p.y - 9 - height, p.x + 18, p.y + 9 - height);
++        drawObstacle(g, d, p);
+         continue;
+       }
+       this.visuals.drawUnit(
+@@ -208,6 +195,7 @@
+         g.strokePoints([a, b, c, d, a].map((p) => ({ x: p.x, y: p.y - 32 })));
+       }
+     this.visuals.drawTraces(g, iso);
++    drawGrenades(g, this.battle, iso);
+     document.querySelector("#counts").textContent =
+       `USMC ${this.battle.units.filter((u) => u.team === 0 && u.active).length} · RU ${this.battle.units.filter((u) => u.team === 1 && u.active).length}`;
+     const u = this.selected;
+--- a/src/mounting.js
++++ b/src/mounting.js
+@@ -1,6 +1,6 @@
+ // Conservative map contract: only explicitly tagged low walls are rigid, low
+ // supports. Fences and height-unknown solid house walls never qualify.
+-import { obstacles, key, blocked, sight, cover } from "./world.js";
++import { obstacles, key, blocked, sight, cover, material } from "./world.js";
+ import { emitVisualEvent } from "./presentation-state.js";
+ export const MOUNT = Object.freeze({
+   deploy: 0.8,
+@@ -29,7 +29,7 @@
+     for (let dy = -1; dy <= 1; dy++) {
+       const p = { x: Math.round(u.x) + dx, y: Math.round(u.y) + dy };
+       const d = distance(u, p);
+-      if (obstacles.get(key(p.x, p.y)) !== "low wall" || d < 0.55 || d > 1.35)
++      if (!material(obstacles.get(key(p.x, p.y))).mount || d < 0.55 || d > 1.35)
+         continue;
+       if (delta(direction, angle(u, p)) > Math.PI / 5 || cover(u, enemy) < 0.58)
+         continue;
+@@ -37,7 +37,7 @@
+         position: { x: u.x, y: u.y },
+         obstacle: p,
+         direction,
+-        reason: "Low wall in firing direction; clear lane",
++        reason: "Low barricade in firing direction; clear lane",
+       };
+     }
+   return { reason: "No aligned low-wall support" };
+@@ -146,7 +146,7 @@
+     return;
+   }
+   Object.assign(m, site);
+-  transition(b, u, "deploying", "Deploying on aligned low wall");
++  transition(b, u, "deploying", "Deploying on aligned low barricade");
+   m.readyAt = b.time + MOUNT.deploy;
+ }
+ export function mountBonus(u, kind) {
+--- a/src/presentation-state.js
++++ b/src/presentation-state.js
+@@ -64,6 +64,7 @@
+   if (!u.active) return null;
+   if (p.treating) return "treating";
+   if (p.reloading) return "reloading";
++  if (p.grenadeThrownThisStep) return "engaging";
+   if (p.shotThisStep) return "engaging";
+   if (["deploying", "unmounting"].includes(u.mount?.state)) return "cover";
+   if (p.shotThisStep || (["Engaging", "Aiming"].includes(u.state) && p.direct))
+@@ -138,6 +139,7 @@
+       "Watching reported sector",
+       "Covering casualty",
+     ].includes(u.state);
++    p.grenadeThrownThisStep = u.grenadeThrownAt === battle.time;
+     p.shotThisStep = p.lastShotAt === battle.time;
+     p.overwatch = actualOverwatch(battle, u);
+     const lane = !!(
+@@ -158,6 +160,7 @@
+         p.overwatch ||
+         lane;
+       const bucket =
++        u.grenadePrep ||
+         kind === "reloading" ||
+         (["deploying", "unmounting"].includes(u.mount?.state) &&
+           !p.shotThisStep) ||
+--- a/src/simulation.js
++++ b/src/simulation.js
+@@ -1,3 +1,8 @@
++import {
++  initializeGrenades,
++  updateGrenades,
++  grenadeAction,
++} from "./grenades.js";
+ import { choosePatient, receivingTreatment } from "./medical.js";
+ import { updateMount, releaseMount, mountBonus } from "./mounting.js";
+ import {
+@@ -33,6 +38,7 @@
+   careRouteSafe,
+ } from "./tactics.js";
+ import {
++  configureWorld,
+   W,
+   H,
+   blocked,
+@@ -53,6 +59,11 @@
+ const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+ export class Battle {
+   constructor(random = Math.random, options = {}) {
++    this.world = {
++      kind: options.map ?? "legacy",
++      variant: options.variant ?? 0,
++    };
++    configureWorld(this.world.kind, this.world.variant);
+     this.contactTTL = options.contactTTL ?? 8;
+     this.random = random;
+     this.time = 0;
+@@ -104,6 +115,7 @@
+         });
+     initializeIntel(this);
+     initializePresentation(this);
++    initializeGrenades(this, options.grenades ?? false);
+   }
+   injury(u, p, damage) {
+     const wasActive = u.active,
+@@ -142,10 +154,12 @@
+   }
+   step(dt) {
+     if (this.result) return;
++    configureWorld(this.world.kind, this.world.variant);
+     beginPresentationStep(this);
+     this.time += dt;
+     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
+     for (const u of this.units) decaySuppression(u, dt);
++    updateGrenades(this);
+     perceive(this);
+     for (const u of this.units) if (!u.dead) adoptContact(this, u);
+     for (let team = 0; team < 2; team++) {
+@@ -183,6 +197,7 @@
+       const enemies = u.visibleEnemies.filter((e) => e.active && sight(u, e));
+       const enemy = selectEnemy(this, u, enemies);
+       updateMount(this, u, enemy);
++      if (grenadeAction(this, u, dt)) continue;
+       u.treat =
+         this.time - (u.treatmentAt ?? -Infinity) <= dt + 1e-8 ? u.treat : 0;
+       if (u.reload > 0) {
+@@ -525,7 +540,7 @@
+   }
+   move(u, goal, dt) {
+     if (!u.active) return false;
+-    if (receivingTreatment(this, u, dt)) {
++    if (u.state !== "Evading grenade" && receivingTreatment(this, u, dt)) {
+       u.navigation = "Receiving treatment; retain squad objective";
+       u.decisionReason =
+         "Hold for active nearby medic; immediate survival may interrupt";
+--- /dev/null
++++ b/src/urban-visuals.js
+@@ -0,0 +1,108 @@
++import { material } from "./world.js";
++const colors = {
++  wall: 0x727a79,
++  "low wall": 0x727a79,
++  fence: 0x786e51,
++  sandbag: 0x8e8965,
++  concrete: 0x879294,
++  vehicle: 0x506875,
++  crates: 0x877156,
++};
++export function drawObstacle(g, d, p) {
++  const h = material(d.type).height,
++    c = colors[d.type] ?? 0x727a79;
++  g.fillStyle(0x000000, 0.25);
++  g.fillEllipse(p.x + 5, p.y + 3, 42, 16);
++  g.fillStyle(c);
++  g.fillPoints(
++    [
++      { x: p.x - 19, y: p.y - 9 - h },
++      { x: p.x + 19, y: p.y + 9 - h },
++      { x: p.x + 19, y: p.y + 9 },
++      { x: p.x - 19, y: p.y - 9 },
++    ],
++    true,
++  );
++  g.fillStyle(c, 0.8);
++  g.fillPoints(
++    [
++      { x: p.x, y: p.y - 10 - h },
++      { x: p.x + 19, y: p.y - h },
++      { x: p.x, y: p.y + 10 - h },
++      { x: p.x - 19, y: p.y - h },
++    ],
++    true,
++  );
++  g.lineStyle(1, 0xb4bab0, 0.8);
++  g.lineBetween(p.x - 19, p.y - 9 - h, p.x + 19, p.y + 9 - h);
++  if (d.type === "sandbag") {
++    for (let i = 0; i < 3; i++) {
++      g.fillStyle(i % 2 ? 0xa49b76 : 0x787653);
++      g.fillRect(p.x - 15 + i * 11, p.y - h - 5 + i * 5, 10, 5);
++      g.fillStyle(0xb1a881);
++      g.fillRect(p.x - 11 + i * 11, p.y - h - 9 + i * 5, 9, 4);
++    }
++  }
++  if (d.type === "concrete") {
++    g.lineStyle(2, 0x505e62);
++    g.lineBetween(p.x - 4, p.y - h - 2, p.x - 4, p.y + 1);
++    g.fillStyle(0xb4b9ab);
++    g.fillRect(p.x + 5, p.y - h + 2, 5, 3);
++  }
++  if (d.type === "vehicle") {
++    g.fillStyle(0x172730);
++    g.fillRect(p.x - 16, p.y - 3, 8, 6);
++    g.fillRect(p.x + 9, p.y + 5, 8, 5);
++    g.fillStyle(0x9aaeb8);
++    g.fillPoints(
++      [
++        { x: p.x - 10, y: p.y - h - 2 },
++        { x: p.x, y: p.y - h - 6 },
++        { x: p.x + 9, y: p.y - h },
++        { x: p.x, y: p.y - h + 4 },
++      ],
++      true,
++    );
++    g.lineStyle(2, 0x34434b);
++    g.lineBetween(p.x - 14, p.y - h + 3, p.x + 10, p.y - h + 14);
++  }
++  if (d.type === "crates") {
++    g.lineStyle(2, 0x4e4438);
++    g.strokeRect(p.x - 12, p.y - h + 2, 20, 10);
++    g.lineBetween(p.x - 12, p.y - h + 2, p.x + 8, p.y - h + 12);
++    g.lineBetween(p.x + 8, p.y - h + 2, p.x - 12, p.y - h + 12);
++    g.fillStyle(0xa48d68);
++    g.fillRect(p.x - 5, p.y - h - 8, 12, 7);
++  }
++}
++export function drawGrenades(g, b, iso) {
++  for (const frag of b.grenades ?? []) {
++    const p = iso(frag.position.x, frag.position.y);
++    if (frag.detonatedAt) {
++      const age = b.time - frag.detonatedAt,
++        f = Math.max(0, 1 - age / 0.6);
++      g.fillStyle(0xffd28a, f * 0.35);
++      g.fillEllipse(p.x, p.y, 60 * (1 - f) + 15, 30 * (1 - f) + 8);
++      for (let i = 0; i < 8; i++) {
++        const a = (i * Math.PI) / 4,
++          x = p.x + Math.cos(a) * (15 + 25 * (1 - f)),
++          y = p.y + Math.sin(a) * (8 + 12 * (1 - f));
++        g.fillStyle(i % 2 ? 0xc6b295 : 0xf5d39a, f);
++        g.fillRect(x, y, 3, 3);
++      }
++      continue;
++    }
++    const t = Math.min(1, (b.time - frag.thrownAt) / 0.65),
++      height = Math.sin(t * Math.PI) * 25;
++    g.fillStyle(0x000000, 0.3);
++    g.fillEllipse(p.x, p.y, 7, 3);
++    g.fillStyle(0xb4b781);
++    g.fillRect(p.x - 2, p.y - height - 4, 4, 5);
++    g.fillStyle(0xf8d189);
++    g.fillRect(p.x - 1, p.y - height - 6, 2, 2);
++    if (t >= 1) {
++      g.lineStyle(1, 0xe8bd74, 0.55);
++      g.strokeEllipse(p.x, p.y, 14, 7);
++    }
++  }
++}
+--- a/src/world.js
++++ b/src/world.js
+@@ -8,22 +8,111 @@
+ ];
+ export const key = (x, y) => `${x},${y}`;
+ export const obstacles = new Map();
+-for (const h of houses)
+-  for (let x = h.x; x < h.x + h.w; x++)
+-    for (let y = h.y; y < h.y + h.h; y++)
+-      if (
+-        x === h.x ||
+-        x === h.x + h.w - 1 ||
+-        y === h.y ||
+-        y === h.y + h.h - 1
+-      ) {
+-        if (x === h.x + 2 && (y === h.y || y === h.y + h.h - 1)) continue;
+-        obstacles.set(key(x, y), "wall");
+-      }
+-for (const y of [2, 12, 14, 23])
+-  for (let x = 3; x < 27; x++)
+-    if (x % 7 !== 0 && x !== 14 && x !== 15)
+-      obstacles.set(key(x, y), y === 12 || y === 14 ? "low wall" : "fence");
++export const materials = Object.freeze({
++  wall: { height: 23, solid: true, protection: 0.8, mount: false, blast: 0 },
++  "low wall": {
++    height: 9,
++    solid: false,
++    protection: 0.58,
++    mount: true,
++    blast: 0.45,
++  },
++  fence: {
++    height: 12,
++    solid: false,
++    protection: 0.28,
++    mount: false,
++    blast: 0.9,
++  },
++  sandbag: {
++    height: 10,
++    solid: false,
++    protection: 0.62,
++    mount: true,
++    blast: 0.4,
++  },
++  concrete: {
++    height: 11,
++    solid: false,
++    protection: 0.7,
++    mount: true,
++    blast: 0.28,
++  },
++  vehicle: {
++    height: 18,
++    solid: true,
++    protection: 0.76,
++    mount: false,
++    blast: 0.12,
++  },
++  crates: {
++    height: 19,
++    solid: true,
++    protection: 0.5,
++    mount: false,
++    blast: 0.3,
++  },
++});
++export const material = (type) => materials[type] ?? materials.wall;
++let activeWorld = null;
++export function configureWorld(kind = "legacy", variant = 0) {
++  const id = `${kind}:${variant % 3}`;
++  if (activeWorld === id) return;
++  activeWorld = id;
++  obstacles.clear();
++  for (const h of houses)
++    for (let x = h.x; x < h.x + h.w; x++)
++      for (let y = h.y; y < h.y + h.h; y++)
++        if (
++          x === h.x ||
++          x === h.x + h.w - 1 ||
++          y === h.y ||
++          y === h.y + h.h - 1
++        ) {
++          if (x === h.x + 2 && (y === h.y || y === h.y + h.h - 1)) continue;
++          obstacles.set(key(x, y), "wall");
++        }
++  for (const y of [2, 12, 14, 23])
++    for (let x = 3; x < 27; x++)
++      if (x % 7 !== 0 && x !== 14 && x !== 15)
++        obstacles.set(key(x, y), y === 12 || y === 14 ? "low wall" : "fence");
++
++  if (kind === "urban") {
++    for (const [k, type] of obstacles)
++      if (type === "low wall")
++        obstacles.set(
++          k,
++          Number(k.split(",")[1]) === 12 ? "sandbag" : "concrete",
++        );
++    const add = (x, y, type) => {
++      if (!obstacles.has(key(x, y))) obstacles.set(key(x, y), type);
++    };
++    for (const y of [5, 6, 7, 8])
++      add(12, y, variant % 2 ? "concrete" : "sandbag");
++    for (const y of [17, 18, 19, 20])
++      add(17, y, variant % 2 ? "sandbag" : "concrete");
++    for (const [x, y] of [
++      [12, 10],
++      [13, 11],
++    ])
++      add(x, y, "sandbag");
++    for (const [x, y] of [
++      [15, 5 + (variant % 3)],
++      [15, 6 + (variant % 3)],
++      [15, 19],
++      [16, 19],
++    ])
++      add(x, y, "vehicle");
++    for (const [x, y] of [
++      [3, 6],
++      [26, 19],
++      [11, 3 + (variant % 2)],
++      [18, 22],
++    ])
++      add(x, y, "crates");
++  }
++}
++configureWorld();
+ export const inside = (x, y) =>
+   houses.find(
+     (h) => x > h.x && x < h.x + h.w - 1 && y > h.y && y < h.y + h.h - 1,
+@@ -45,7 +134,8 @@
+     stepY = dy ? Math.abs(1 / dy) : Infinity;
+   let tx = dx ? (x + (sx > 0 ? 0.5 : -0.5) - a.x) / dx : Infinity;
+   let ty = dy ? (y + (sy > 0 ? 0.5 : -0.5) - a.y) / dy : Infinity;
+-  const wall = (xx, yy) => obstacles.get(key(xx, yy)) === "wall";
++  const wall = (xx, yy) =>
++    !!obstacles.get(key(xx, yy)) && material(obstacles.get(key(xx, yy))).solid;
+   for (let i = 0; i < 256; i++) {
+     if (wall(x, y)) return false;
+     if (x === endX && y === endY) return true;
+@@ -78,11 +168,7 @@
+         Math.round(target.y + (dy / d) * t),
+       ),
+     );
+-    if (o)
+-      result = Math.max(
+-        result,
+-        o === "wall" ? 0.8 : o === "low wall" ? 0.58 : 0.28,
+-      );
++    if (o) result = Math.max(result, material(o).protection);
+   }
+   return result;
+ }
+@@ -155,3 +241,22 @@
+   }
+   return { x: best[0], y: best[1] };
+ }
++
++// Fragment protection samples the same grid, including low obstacles. Each cell
++// attenuates once; direct fragments do not pass through solid house walls.
++export function blastTransmission(a, b) {
++  const n = Math.max(1, Math.ceil(Math.hypot(b.x - a.x, b.y - a.y) * 8)),
++    seen = new Set();
++  let factor = 1;
++  for (let i = 1; i < n; i++) {
++    const k = key(
++      Math.round(a.x + ((b.x - a.x) * i) / n),
++      Math.round(a.y + ((b.y - a.y) * i) / n),
++    );
++    if (seen.has(k)) continue;
++    seen.add(k);
++    const t = obstacles.get(k);
++    if (t) factor *= material(t).blast;
++  }
++  return factor;
++}

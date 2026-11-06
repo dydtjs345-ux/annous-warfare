@@ -1,4 +1,4 @@
-# Autonomous Warfare v0.2.4
+# Autonomous Warfare v0.2.5
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 
@@ -15,16 +15,16 @@ For repeat installations use `npm ci`. Open the address Vite prints. For an iPho
 
 ## Play on iPhone
 
-The battle starts automatically. Portrait and landscape are supported. Drag the battlefield to pan; pinch with two fingers to zoom. Tap a soldier to inspect role, AI state, individual ammunition, and all six body-part health values. Mint soldiers are USMC; salmon soldiers are Russian infantry. Gold chevrons mark leaders and white crosses mark medics. Crossed markers indicate eliminated (red) or incapacitated (gold) soldiers. Pause/Resume and 1×, 2×, 4× change simulation time; Restart generates a fresh battle. Desktop supports dragging and mouse-wheel zoom.
+The battle starts automatically. Portrait and landscape are supported. Drag the battlefield to pan; pinch with two fingers to zoom. Tap a soldier to inspect role, AI state, individual ammunition, and all six body-part health values. Blue-gray uniforms mark USMC; cooler slate uniforms distinguish Russian infantry. Gold chevrons mark leaders and white crosses mark medics. Crossed markers indicate eliminated (red) or incapacitated (gold) soldiers. Pause/Resume and 1×, 2×, 4× change simulation time; Restart generates a fresh battle. Desktop supports dragging and mouse-wheel zoom.
 
-Each side has four riflemen (one leader), one light machine gunner and one medic. Leaders choose patrol or last-contact goals; separated soldiers regroup. Soldiers path around obstacles, detect enemies within a limited radius and unobstructed sight, remember recent sightings, seek nearby directional cover, shoot and reload. Medics approach and heal nonfatal casualties when no enemy is visible to them. Elimination ends when a team has no combat-capable soldiers, even if incapacitated soldiers are still alive.
+Each side has four riflemen (one leader), one light machine gunner and one medic. Leaders choose patrol or last-contact goals; separated soldiers regroup. Soldiers path around obstacles, detect enemies within a limited radius and unobstructed sight, remember recent sightings, seek nearby directional cover, shoot and reload. Medics evaluate protected approaches and treat nonfatal casualties, including protected care during enemy contact. Elimination ends when a team has no combat-capable soldiers and all live grenades have resolved, even if incapacitated soldiers are still alive.
 
 ## Implemented versus prototype
 
 - Implemented: grid pathfinding, limited AI sight with solid-wall occlusion, short-lived individual contact memory, leader coordination, directional cover (solid wall, low wall, fence), probabilistic weapon hits, six injury locations, arm accuracy penalties, leg speed penalties, incapacitation, fatal head/torso damage, and medic recovery.
 - Original procedural placeholder art: four single-story houses, grass yards, streets, perimeter barriers, door openings, simple soldiers, shadows, muzzle flashes and tracers. Roofs disappear when a living active soldier is inside. Interiors are single-floor and unfurnished. Doorways are permanently open; interactive door mechanics are unfinished.
 - Injury visuals are basic: hit flash, asymmetric walking/limping and a horizontal crawling/incapacitated pose. Lighting is a dark palette with local muzzle glows, not dynamic shadow casting. Sprites are geometric placeholders, not polished character animation.
-- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic projectiles or sound, enemy fog-of-war rendering, advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
+- Weapon tuning is deliberately simple: the LMG has a larger magazine and faster fire; rifles, LMGs and medics have ranges of 12, 14 and 10 tiles respectively. No ballistic bullet travel or sound, enemy fog-of-war rendering, or advanced formation tactics. AI has limited knowledge even though the spectator can see both teams.
 - Random battles may last a long time or stall after ammunition is exhausted; there is no time-limit victory. Medics currently have unlimited treatment supplies. Balance and performance on physical iPhones need further playtesting.
 
 ## Validate
@@ -388,3 +388,18 @@ above original .58: medical improvement is only partly preserved. New adverse se
 and a rejected intermediate timeout are documented. No forced aggression, artificial
 match cap, new balance rule or graphical change was added. Build and mobile Chromium
 checks pass; physical Safari checks remain necessary.
+
+
+## v0.2.5 urban cover and fragmentation grenades
+
+The live battlefield now has long horizontal sandbag and concrete lines, short vertical/stepped lines, abandoned vehicles and crate stacks. All are functional terrain. Low barricades block movement, protect directionally and support LMG mounting while permitting firing over them; vehicles/crates block sight and bullets. Existing cover reservations, collision spacing, leadership and treatment remain.
+
+Leaders/riflemen carry one frag each. A stationary soldier may prepare a throw only against its own confirmed visible cluster or an ineffective attack on defended cover, within 4.2–7 tiles, after conservative friendly-route checks. Recon and existing cover moves are preserved. One preparation per squad plus an eight-second cooldown prevents spam. The 0.7s preparation and 0.65s flight are visible; the 2.1s fuse runs from release. Damage falls with distance and obstruction, affects both teams, and uses existing body injuries. Grounded grenades must be seen before delayed emergency evasion; survival is not guaranteed. Squad assignments survive the emergency.
+
+Inspector shows actual frag inventory/preparation/evasion; seven exclusive activity counters are preserved. Original humanoids and mounted-weapon animations remain. There are no external art dependencies, new controls or changes to rifle/LMG balance.
+
+[Full audit, exact seeds, adverse cases and limitations](reports/v025-audit.md): 200 legacy + 200 urban baseline runs and the same 400 after corrections. One initial timeout was resolved; all updated battles finished. A final medical cache transition correction was verified with an additional 400 paired reruns. Legacy simulation hashes match in all 200 pairs. Urban grenade spam and reaction defects were fixed, but exposure, navigation failures and several late fights worsen; this is not a claim of uniform AI improvement. See the report for paired metrics and replayable source patch.
+
+`npm test` now runs **149 tests**; `npm run build` preserves Pages deployment at https://dydtjs345-ux.github.io/annous-warfare/. Run `node scripts/audit-v025.mjs . /tmp/urban.json 200 trace '' urban` for the exact urban cohort. New modules: `grenades.js` owns authoritative ordnance/decisions and `urban-visuals.js` draws cover/projectiles/blasts; rendering never applies damage or RNG.
+
+Physical iPhone Safari testing remains necessary: both orientations, inspector scrolling, pan/pinch, firing over low lines, routes around high obstacles, LMG mounting, actual grenade release/fuse/evasion, medic care, pause/resume/restart and 1×/2×/4×. Grenades are conditional and may not appear in every ordinary match. Prototype limits include coarse radial fragmentation, no wall lobs/bounces/destruction, conservative friendly safety, casualty congestion and existing unlimited medicine; long fights or ammunition stalemates remain possible outside the recorded cases.

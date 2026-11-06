@@ -1,3 +1,8 @@
+import {
+  initializeGrenades,
+  updateGrenades,
+  grenadeAction,
+} from "./grenades.js";
 import { choosePatient, receivingTreatment } from "./medical.js";
 import { updateMount, releaseMount, mountBonus } from "./mounting.js";
 import {
@@ -33,6 +38,7 @@ import {
   careRouteSafe,
 } from "./tactics.js";
 import {
+  configureWorld,
   W,
   H,
   blocked,
@@ -53,6 +59,11 @@ export const parts = [
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export class Battle {
   constructor(random = Math.random, options = {}) {
+    this.world = {
+      kind: options.map ?? "legacy",
+      variant: options.variant ?? 0,
+    };
+    configureWorld(this.world.kind, this.world.variant);
     this.contactTTL = options.contactTTL ?? 8;
     this.random = random;
     this.time = 0;
@@ -104,6 +115,7 @@ export class Battle {
         });
     initializeIntel(this);
     initializePresentation(this);
+    initializeGrenades(this, options.grenades ?? false);
   }
   injury(u, p, damage) {
     const wasActive = u.active,
@@ -130,6 +142,7 @@ export class Battle {
     }
     if (wasActive && !u.active) {
       recordCombatLoss(this, u);
+      u.grenadePrep = null;
       releaseMount(this, u, "Combat ineffective");
     }
     if (u.health[p] < oldHealth)
@@ -142,10 +155,12 @@ export class Battle {
   }
   step(dt) {
     if (this.result) return;
+    configureWorld(this.world.kind, this.world.variant);
     beginPresentationStep(this);
     this.time += dt;
     this.shots = this.shots.filter((s) => (s.life -= dt) > 0);
     for (const u of this.units) decaySuppression(u, dt);
+    updateGrenades(this);
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
@@ -183,6 +198,7 @@ export class Battle {
       const enemies = u.visibleEnemies.filter((e) => e.active && sight(u, e));
       const enemy = selectEnemy(this, u, enemies);
       updateMount(this, u, enemy);
+      if (grenadeAction(this, u, dt)) continue;
       u.treat =
         this.time - (u.treatmentAt ?? -Infinity) <= dt + 1e-8 ? u.treat : 0;
       if (u.reload > 0) {
@@ -445,7 +461,7 @@ export class Battle {
     const counts = [0, 1].map(
       (t) => this.units.filter((u) => u.team === t && u.active).length,
     );
-    if (counts.includes(0))
+    if (counts.includes(0) && !this.grenades.some((g) => !g.detonatedAt))
       this.result =
         counts[0] === counts[1]
           ? "Draw"
@@ -525,7 +541,7 @@ export class Battle {
   }
   move(u, goal, dt) {
     if (!u.active) return false;
-    if (receivingTreatment(this, u, dt)) {
+    if (u.state !== "Evading grenade" && receivingTreatment(this, u, dt)) {
       u.navigation = "Receiving treatment; retain squad objective";
       u.decisionReason =
         "Hold for active nearby medic; immediate survival may interrupt";

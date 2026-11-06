@@ -1,0 +1,141 @@
+{
+  "reason": "Final transition test reproduced stale quiet-route permission after fresh fire; invalidate urban care safety cache when recent-fire/suppression danger changes. Additional 400 final verification runs, including unchanged legacy cohort.",
+  "previousUpdatedB": {
+    "seeds": 200,
+    "grenades": {
+      "thrown": 0.6,
+      "detonated": 0.6,
+      "effective": 0.59,
+      "friendlyHits": 0,
+      "detections": 2.355,
+      "reactions": 1.1,
+      "safeReactions": 0.41
+    },
+    "durationMedian": 59.500000000000576,
+    "durationP90": 90.79999999999912,
+    "durationP95": 101.99999999999848,
+    "durationMax": 206.19999999999257,
+    "navigationFailures": 1.695,
+    "deploys": 4.28,
+    "unmounts": 3.93,
+    "medicShots": 9.885,
+    "treatments": 6.205,
+    "invalidShots": 0,
+    "facingErrors": 0,
+    "aimErrors": 0,
+    "maxWait": 28.108500000000134,
+    "loops": 0.8,
+    "injured": 6.87,
+    "incapacitated": 4.545,
+    "medicTreatmentTime": 7.801999999999998,
+    "duration": 60.9405,
+    "stalled": 0,
+    "firing": 131.69700000000003,
+    "shots": 331.165,
+    "exposed": 165.20549999999494,
+    "knownThreatTime": 366.2730000000172,
+    "exposurePercent": 45.10447125504396,
+    "usefulCover": 135.941499999997,
+    "relocations": 13.115,
+    "abandoned": 13.185,
+    "passive": 86.0320000000001,
+    "passivePercent": 20.792730085072122,
+    "mountedTime": 12.943500000000018,
+    "mountedShots": 46.585,
+    "casualties": 8.71,
+    "dead": 4.165,
+    "reacquisitionMedian": 3.100000000000044,
+    "reacquisitionP90": 14.49999999999998,
+    "reacquisitionSamples": 5100
+  },
+  "finalUpdatedB": {
+    "seeds": 200,
+    "grenades": {
+      "thrown": 0.6,
+      "detonated": 0.6,
+      "effective": 0.59,
+      "friendlyHits": 0,
+      "detections": 2.355,
+      "reactions": 1.1,
+      "safeReactions": 0.41
+    },
+    "durationMedian": 59.70000000000058,
+    "durationP90": 91.39999999999908,
+    "durationP95": 103.09999999999842,
+    "durationMax": 206.19999999999257,
+    "navigationFailures": 1.685,
+    "deploys": 4.295,
+    "unmounts": 3.945,
+    "medicShots": 9.995,
+    "treatments": 6.315,
+    "invalidShots": 0,
+    "facingErrors": 0,
+    "aimErrors": 0,
+    "maxWait": 28.099500000000134,
+    "loops": 0.79,
+    "injured": 6.88,
+    "incapacitated": 4.56,
+    "medicTreatmentTime": 7.9205000000000005,
+    "duration": 61.21450000000001,
+    "stalled": 0,
+    "firing": 131.9085000000001,
+    "shots": 331.85,
+    "exposed": 165.23399999999495,
+    "knownThreatTime": 366.83850000001735,
+    "exposurePercent": 45.0427095302121,
+    "usefulCover": 136.32599999999698,
+    "relocations": 13.115,
+    "abandoned": 13.115,
+    "passive": 86.15100000000008,
+    "passivePercent": 20.780483216003407,
+    "mountedTime": 12.968000000000018,
+    "mountedShots": 46.705,
+    "casualties": 8.72,
+    "dead": 4.16,
+    "reacquisitionMedian": 3.100000000000044,
+    "reacquisitionP90": 14.500000000000107,
+    "reacquisitionSamples": 5101
+  },
+  "changedCases": [
+    {
+      "seed": 1017,
+      "previousDuration": 69.00000000000036,
+      "finalDuration": 69.00000000000036
+    },
+    {
+      "seed": 1078,
+      "previousDuration": 66.20000000000051,
+      "finalDuration": 66.20000000000051
+    },
+    {
+      "seed": 1103,
+      "previousDuration": 100.59999999999856,
+      "finalDuration": 133.3999999999967
+    },
+    {
+      "seed": 1104,
+      "previousDuration": 89.89999999999917,
+      "finalDuration": 92.59999999999901
+    },
+    {
+      "seed": 1121,
+      "previousDuration": 44.80000000000037,
+      "finalDuration": 66.70000000000049
+    },
+    {
+      "seed": 1143,
+      "previousDuration": 59.70000000000058,
+      "finalDuration": 59.70000000000058
+    },
+    {
+      "seed": 1179,
+      "previousDuration": 125.09999999999717,
+      "finalDuration": 125.09999999999717
+    },
+    {
+      "seed": 1195,
+      "previousDuration": 101.99999999999848,
+      "finalDuration": 99.39999999999863
+    }
+  ]
+}
