@@ -30,10 +30,10 @@ test("eight-direction inventory distinguishes prototypes from missing art withou
   const statuses = completionMatrix().flatMap((r) =>
     Object.values(r.directions),
   );
-  assert.equal(statuses.filter((s) => s === "verified").length, 0);
-  assert.equal(statuses.filter((s) => s === "prototype").length, 10);
-  assert.equal(statuses.filter((s) => s === "missing").length, 45);
-  assert.equal(statuses.filter((s) => s === "rejected").length, 1);
+  assert.equal(statuses.filter((s) => s === "verified").length, 7);
+  assert.equal(statuses.filter((s) => s === "prototype").length, 8);
+  assert.equal(statuses.filter((s) => s === "missing").length, 49);
+  assert.equal(statuses.filter((s) => s === "rejected").length, 0);
   assert.ok(!clipAvailability("SE", "highReady").supported);
   assert.ok(!clipAvailability("N", "aim").supported);
   assert.throws(() => {
@@ -80,23 +80,27 @@ test("SE frame stepping visits every gait cel and nonlooping raises hold their e
   assert.equal(c.time, t);
   assert.equal(c.playing, false);
 });
-test("a missing E sequence never cuts four static poses together to impersonate movement", () => {
+test("new E clips use authored motion banks while walking remains an explicit prototype", () => {
   const c = new FoundationClock();
   c.setDirection("E");
   for (let i = 0; i < 100; i++) {
     const p = c.advance(0.1);
-    assert.equal(p.supported, false);
-    assert.equal(p.frame, null);
+    assert.equal(p.supported, true);
+    assert.notEqual(p.frame, null);
   }
   c.select("walk");
-  assert.equal(c.pose().supported, false);
+  assert.equal(c.pose().status, "prototype");
+  assert.equal(c.pose().bank, "eWalk2");
+  assert.equal(c.pose().count, 8);
+  assert.notEqual(clipAvailability("E", "walk").clip.liveApproved, true);
   c.select("idle");
-  assert.equal(c.pose().count, 1);
+  assert.equal(c.pose().count, 4);
   c.advance(0.1);
   assert.equal(c.pose().frame, 0);
-  assert.match(c.pose().reason, /호흡 움직임 없음/);
+  assert.equal(c.pose().status, "verified");
   c.select("highReady");
-  assert.equal(c.pose().frame, 2);
+  assert.equal(c.pose().bank, "eQuiet");
+  assert.equal(c.pose().frame, 4);
 });
 test("reference sampling does not change chosen direction and no missing view falls back to SE", () => {
   const c = new FoundationClock();
@@ -175,12 +179,12 @@ test("component clocks survive weapon requests while unpainted moving-aim combin
   assert.equal(p.flipX, false);
   assert.equal(p.weaponIntegrated, true);
 });
-test("static E aiming does not imply an authored raise/turn or high-ready transition", () => {
+test("authored E raise/lower now work but unpainted turns and high-ready transitions remain blocked", () => {
   const a = new RiflemanIntent(CATALOG, "E");
   assert.equal(a.plan().supported, true);
   a.request({ weapon: "aim" });
-  assert.equal(a.plan().supported, false);
-  assert.match(a.plan().reason, /연결 셀 없음/);
+  assert.equal(a.plan().supported, true);
+  assert.equal(a.plan().bank, "eHandling");
   a.request({ weapon: "lowReady" });
   assert.equal(a.plan().supported, true);
   a.request({ weapon: "highReady" });
@@ -362,8 +366,8 @@ test("explicit candidate review can inspect rejected keys without admitting or r
   assert.equal(c.pose("NW").renderable, false);
   assert.equal(c.pose("NW").bank, null);
   assert.equal(c.select("raise"), false);
-  assert.equal(clipAvailability("E", "walk").supported, false);
-  assert.equal(clipAvailability("E", "walk").status, "rejected");
+  assert.equal(clipAvailability("E", "walk").status, "prototype");
+  assert.notEqual(clipAvailability("E", "walk").bank, c.review.bank);
 });
 test("authored turn contracts play only verified whole-body edges and interruption requires a real fallback resync", () => {
   // Technical fixtures prove state/registration behavior; they are NOT artwork.
@@ -395,7 +399,7 @@ test("authored turn contracts play only verified whole-body edges and interrupti
   assert.equal(a.turn.elapsed, 0.1);
   a.advance(0.1);
   assert.equal(a.facing, "E");
-  assert.equal(a.plan().bank, "e035");
+  assert.equal(a.plan().bank, "eQuiet");
   const b = new RiflemanIntent(c);
   b.request({ aimDirection: "E", movementDirection: "E" });
   b.advance(0.05);

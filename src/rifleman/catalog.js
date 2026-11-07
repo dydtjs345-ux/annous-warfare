@@ -1,5 +1,5 @@
-// Artwork inventory, not a list of promised capabilities. Live combat does not
-// import this module; admission requires real authored frames and visual review.
+// Artwork inventory, not a list of promised capabilities. Live admission needs
+// explicit per-clip and per-sheet approval; lab prototypes cannot grant it.
 import { CLIPS } from "../usmc-se-animation.js";
 export const DIRECTIONS = Object.freeze([
   "N",
@@ -19,13 +19,13 @@ export const ACTIONS = Object.freeze({
   aim: "견착 조준",
   lower: "총기 내림",
   walk: "기본 보행",
+  fire: "사격 / 반동",
 });
 export const FUTURE_ACTIONS = Object.freeze({
   run: "달리기",
   tactical: "경계 이동",
   strafe: "옆걸음",
   backpedal: "뒷걸음",
-  fire: "사격 / 반동",
   reload: "재장전",
   crouch: "웅크리기",
   lean: "기울여 보기",
@@ -34,10 +34,10 @@ export const FUTURE_ACTIONS = Object.freeze({
   death: "사망",
 });
 export const STATUS_KO = Object.freeze({
-  prototype: "시제품",
-  missing: "아트 없음",
-  verified: "검증 완료",
-  rejected: "품질 기준 미달",
+  prototype: "PROTOTYPE · 시제품",
+  missing: "MISSING · 미작화",
+  verified: "COMPLETE · 완료",
+  rejected: "REJECTED · 미채택",
 });
 const freeze = (obj) => {
   for (const v of Object.values(obj)) if (v && typeof v === "object") freeze(v);
@@ -55,6 +55,16 @@ export const CATALOG = freeze({
   character: "usmc-rifleman-master",
   autoAdmitToCombat: false,
   banks: {
+    eWalk2: {
+      direction: "E",
+      image: "assets/rifleman-foundation-v035/production/e-walk-v2.png",
+      metadata: "assets/rifleman-foundation-v035/production/e-walk-v2.json",
+      grid: [4, 2],
+      frameSize: [384, 512],
+      nativeStandingHeight: 459,
+      kind: "whole-body",
+      weaponIntegrated: true,
+    },
     e035: {
       direction: "E",
       image: "assets/rifleman-foundation-v035/e-static-prototype.png",
@@ -62,6 +72,26 @@ export const CATALOG = freeze({
       grid: [2, 2],
       frameSize: [627, 627],
       nativeStandingHeight: 581,
+      kind: "whole-body",
+      weaponIntegrated: true,
+    },
+    eHandling: {
+      direction: "E",
+      image: "assets/rifleman-foundation-v035/production/e-handling.png",
+      metadata: "assets/rifleman-foundation-v035/production/e-handling.json",
+      grid: [4, 2],
+      frameSize: [384, 512],
+      nativeStandingHeight: 459,
+      kind: "whole-body",
+      weaponIntegrated: true,
+    },
+    eQuiet: {
+      direction: "E",
+      image: "assets/rifleman-foundation-v035/production/e-quiet.png",
+      metadata: "assets/rifleman-foundation-v035/production/e-quiet.json",
+      grid: [4, 2],
+      frameSize: [384, 512],
+      nativeStandingHeight: 459,
       kind: "whole-body",
       weaponIntegrated: true,
     },
@@ -116,32 +146,88 @@ export const CATALOG = freeze({
                 "walk",
                 "기존 8셀. 정확한 접지·체중 이동은 시제품 수준.",
               ),
+              fire: prototype(
+                "fire",
+                "기존 SE 실제 반동 셀. 새 방향 작화와 구분.",
+              ),
             },
           }
         : d === "E"
           ? {
               status: "prototype",
-              bank: "e035",
-              note: "새 E 정지 자세 시제품. 동작 연속성·호흡·보행은 미작화. 전투 사용 안 함.",
+              bank: "eHandling",
+              note: "E 정지·총기 조작 7동작 완료. 보행은 접지·좌우 다리 연속성 미검증 시제품; E 전체 세트는 미완성.",
               clips: {
-                ...Object.fromEntries(
-                  ["idle", "lowReady", "highReady", "aim"].map((action, i) => [
-                    action,
-                    {
-                      frames: [i],
-                      durations: [1],
-                      loop: true,
-                      status: "prototype",
-                      note:
-                        action === "idle"
-                          ? "E 정지 그림 1셀. 호흡 움직임 없음."
-                          : "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
-                    },
-                  ]),
-                ),
+                idle: {
+                  bank: "eQuiet",
+                  frames: [0, 1, 2, 3],
+                  durations: [0.8, 0.8, 0.8, 0.8],
+                  loop: true,
+                  status: "verified",
+                  liveApproved: true,
+                  note: "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+                },
+                lowReady: {
+                  bank: "eQuiet",
+                  frames: [0],
+                  durations: [1],
+                  loop: true,
+                  status: "verified",
+                  liveApproved: true,
+                  note: "호흡 세트의 낮은 준비 0번 셀. 양손이 총기를 함께 지지.",
+                },
+                highReady: {
+                  bank: "eQuiet",
+                  frames: [4, 5, 6, 7],
+                  durations: [0.8, 0.8, 0.8, 0.8],
+                  loop: true,
+                  status: "verified",
+                  liveApproved: true,
+                  note: "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+                },
+                raise: {
+                  bank: "eHandling",
+                  frames: [0, 1, 2, 3],
+                  durations: [0.15, 0.17, 0.17, 0.2],
+                  status: "verified",
+                  liveApproved: true,
+                  note: "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+                },
+                aim: {
+                  bank: "eHandling",
+                  frames: [4],
+                  durations: [0.8],
+                  loop: true,
+                  status: "verified",
+                  liveApproved: true,
+                  note: "발을 고정한 견착. 총구 방향 E 전용; 다른 방향으로 그림을 돌리지 않음.",
+                },
+                lower: {
+                  bank: "eHandling",
+                  frames: [3, 2, 1, 0],
+                  durations: [0.18, 0.18, 0.17, 0.17],
+                  status: "verified",
+                  liveApproved: true,
+                  note: "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+                },
+                fire: {
+                  bank: "eHandling",
+                  frames: [5, 6, 7, 4],
+                  durations: [0.055, 0.065, 0.1, 0.48],
+                  loop: true,
+                  status: "verified",
+                  liveApproved: true,
+                  note: "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+                },
                 walk: {
-                  status: "rejected",
-                  note: "4개 보행 키 후보는 접지·연결·장비 일관성 검증 미달. 기본 재생에서 제외.",
+                  bank: "eWalk2",
+                  frames: [0, 1, 2, 3, 4, 5, 6, 7],
+                  durations: [
+                    0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125,
+                  ],
+                  loop: true,
+                  status: "prototype",
+                  note: "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
                 },
               },
             }
@@ -166,21 +252,22 @@ export function clipAvailability(direction, action, catalog = CATALOG) {
     return { supported: false, status: "missing", reason: "방향 식별자 오류" };
   const d = catalog.directions[direction],
     c = d?.clips[action];
-  if (!d?.bank)
+  const bank = c?.bank ?? d?.bank;
+  if (!bank)
     return {
       supported: false,
       status: "missing",
       reason: d?.note ?? "방향 그림 없음",
     };
-  if (catalog.banks[d.bank]?.direction !== direction)
+  if (catalog.banks[bank]?.direction !== direction)
     return {
       supported: false,
       status: "missing",
       reason: "등록 방향과 그림 방향이 다름. 회전·반전 대체 불가",
     };
   if (
-    catalog.banks[d.bank].kind !== "whole-body" ||
-    catalog.banks[d.bank].weaponIntegrated !== true
+    catalog.banks[bank].kind !== "whole-body" ||
+    catalog.banks[bank].weaponIntegrated !== true
   )
     return {
       supported: false,
@@ -199,7 +286,7 @@ export function clipAvailability(direction, action, catalog = CATALOG) {
     supported: true,
     status: c.status,
     reason: c.note,
-    bank: d.bank,
+    bank,
     clip: c,
   };
 }

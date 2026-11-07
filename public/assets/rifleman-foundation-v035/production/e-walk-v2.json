@@ -1,0 +1,146 @@
+{
+  "version": "0.3.5-production",
+  "direction": "E",
+  "status": "prototype",
+  "image": "e-walk-v2.png",
+  "grid": [
+    4,
+    2
+  ],
+  "frameSize": [
+    384,
+    512
+  ],
+  "nativeStandingHeight": 459,
+  "weaponIntegrated": true,
+  "combatApproved": false,
+  "frames": [
+    {
+      "index": 0,
+      "footAnchor": [
+        190,
+        463
+      ],
+      "bounds": [
+        66,
+        16,
+        326,
+        463
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 1,
+      "footAnchor": [
+        190,
+        463
+      ],
+      "bounds": [
+        77,
+        16,
+        321,
+        463
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 2,
+      "footAnchor": [
+        190,
+        463
+      ],
+      "bounds": [
+        90,
+        17,
+        319,
+        463
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 3,
+      "footAnchor": [
+        190,
+        456
+      ],
+      "bounds": [
+        73,
+        17,
+        318,
+        456
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 4,
+      "footAnchor": [
+        190,
+        465
+      ],
+      "bounds": [
+        67,
+        18,
+        319,
+        465
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 5,
+      "footAnchor": [
+        190,
+        466
+      ],
+      "bounds": [
+        89,
+        19,
+        322,
+        466
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 6,
+      "footAnchor": [
+        190,
+        464
+      ],
+      "bounds": [
+        92,
+        19,
+        324,
+        464
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    },
+    {
+      "index": 7,
+      "footAnchor": [
+        190,
+        465
+      ],
+      "bounds": [
+        71,
+        19,
+        324,
+        465
+      ],
+      "registration": "measured sole lower edge; common pelvis X",
+      "groundContacts": "visual review pending"
+    }
+  ],
+  "sourceSha256": "cbbfba077d48cdc1ff8b0c0d57542cc25ff40d9e64e7c5f52be72ebffb33f992",
+  "notes": [
+    "Eight newly authored gait cels, not interpolated copies of the rejected four keys.",
+    "Uniform master scale; per-frame vertical registration does not resize anatomy.",
+    "Foot travel, idle transitions and kit continuity require visual approval before live use.",
+    "Uses same 459px standing master scale as new quiet/handling bank; gait height is not stretched."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "checkpoint": "819867f063914302c483446cbcab23dc0356c513",
+  "direction": "E",
+  "reviewDate": "2026-11-07",
+  "approvedUniqueCels": 16,
+  "approved": {
+    "eQuiet": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "actions": [
+        "idle",
+        "lowReady",
+        "highReady"
+      ]
+    },
+    "eHandling": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "actions": [
+        "raise",
+        "aim",
+        "lower",
+        "fire"
+      ]
+    }
+  },
+  "prototype": {
+    "eWalk2": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "defects": [
+        "lead-leg identity repeats rather than an unambiguous alternating cycle",
+        "passing knee too high; marching rather than relaxed tactical walk",
+        "no verified stance-foot travel curve or authored idle/walk transitions"
+      ]
+    }
+  },
+  "retainedRejected": "review/e-walk-keys.png (4 keys, separately watermarked laboratory review)",
+  "notCounted": [
+    "existing SE frames",
+    "existing 4 static E stances",
+    "reversed raise cels reused for lowering",
+    "duplicate asset copies",
+    "failed transparent/background and transition authoring attempts"
+  ],
+  "reviewMethod": [
+    "actual Phaser 39px and 4x playback",
+    "all 24 displayed cels individually",
+    "continuous stance, raise, aim, recoil and lower recording",
+    "same SE reference and common ground anchors"
+  ],
+  "fixes": [
+    "32px whole-figure horizontal packing offset in handling frames 2,3,6,7 corrected by individual measured boot anchors; weapon was not deformed",
+    "walk sole offsets registered without stretching limbs; this does not make its gait acceptable"
+  ],
+  "remaining": [
+    "E locomotion is not complete; next directions are held at missing",
+    "low/high-ready transition is not authored",
+    "fine equipment/receiver silhouette and texture consistency can still benefit from artist cleanup",
+    "no authored E/SE direction-turn frames"
+  ]
+}

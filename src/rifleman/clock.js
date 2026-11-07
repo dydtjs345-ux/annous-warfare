@@ -11,6 +11,19 @@ export const SEQUENCE = Object.freeze([
   { action: "idle", duration: 1.4 },
 ]);
 export const sequenceSeconds = SEQUENCE.reduce((n, s) => n + s.duration, 0);
+// A lab demonstration is explicitly separate from actual shot-event playback.
+// E includes recoil; the preserved SE sequence is unchanged. High-ready stays
+// a separate clip because its transition from low-ready is not authored yet.
+export const E_SEQUENCE = Object.freeze([
+  { action: "idle", duration: 1.6 },
+  { action: "walk", duration: 2.4 },
+  { action: "lowReady", duration: 0.5 },
+  { action: "raise", duration: 0.69 },
+  { action: "aim", duration: 1 },
+  { action: "fire", duration: 1.4 },
+  { action: "lower", duration: 0.7 },
+  { action: "idle", duration: 1.6 },
+]);
 export function playbackPhase(clock) {
   const total = clock.total();
   if (!total) return 0;
@@ -58,10 +71,13 @@ export class FoundationClock {
   total() {
     const a = clipAvailability(this.direction, this.action, this.catalog);
     return this.action === "sequence"
-      ? sequenceSeconds
+      ? this.sequence().reduce((n, s) => n + s.duration, 0)
       : a.supported
         ? clipSeconds(a.clip)
         : 0;
+  }
+  sequence() {
+    return this.direction === "E" ? E_SEQUENCE : SEQUENCE;
   }
   seek(t) {
     this.time = Number.isFinite(Number(t)) ? Math.max(0, Number(t)) : 0;
@@ -80,33 +96,15 @@ export class FoundationClock {
       local = this.time,
       stage = -1;
     if (action === "sequence") {
-      if (
-        SEQUENCE.some(
-          (s) => !clipAvailability(direction, s.action, this.catalog).supported,
-        )
-      )
-        return {
-          direction,
-          action: "sequence",
-          local: this.time,
-          stage: -1,
-          status: "missing",
-          reason:
-            "연결 순서의 보행·올림·내림 아트 미완성. 정지 그림을 이어붙여 동작으로 표시하지 않음.",
-          supported: false,
-          bank: null,
-          frame: null,
-          index: null,
-          count: 0,
-        };
-      local %= sequenceSeconds;
+      const sequence = this.sequence();
+      local %= this.total();
       stage = 0;
       while (
-        stage < SEQUENCE.length - 1 &&
-        local >= SEQUENCE[stage].duration - 1e-9
+        stage < sequence.length - 1 &&
+        local >= sequence[stage].duration - 1e-9
       )
-        local -= SEQUENCE[stage++].duration;
-      action = SEQUENCE[stage].action;
+        local -= sequence[stage++].duration;
+      action = sequence[stage].action;
     }
     const a = clipAvailability(direction, action, this.catalog);
     return {
@@ -131,7 +129,7 @@ export class FoundationClock {
     let start = 0;
     const stages =
       this.action === "sequence"
-        ? SEQUENCE
+        ? this.sequence()
         : [{ action: this.action, duration: this.total() }];
     for (const s of stages) {
       const a = clipAvailability(this.direction, s.action, this.catalog);

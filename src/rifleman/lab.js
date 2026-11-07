@@ -18,20 +18,32 @@ const $ = (s) => document.querySelector(s),
   clock = review ? new QualityReviewClock() : new FoundationClock(),
   banks = review
     ? { se033: CATALOG.banks.se033, [WALK_REVIEW.bank]: WALK_REVIEW.asset }
-    : CATALOG.banks;
+    : Object.fromEntries(
+        [
+          ...new Set(
+            Object.values(CATALOG.directions).flatMap((d) =>
+              Object.values(d.clips)
+                .filter((c) => c.frames)
+                .map((c) => c.bank ?? d.bank),
+            ),
+          ),
+        ].map((id) => [id, CATALOG.banks[id]]),
+      );
 const addOption = (select, value, text) => {
   const o = document.createElement("option");
   o.value = value;
   o.textContent = text;
   select.append(o);
 };
+const pArtApproved = (p) =>
+  clipAvailability(p.direction, p.action).clip?.liveApproved === true;
 for (const d of DIRECTIONS) {
   for (const selector of ["#lab-direction", "#rig-move", "#rig-aim"])
     addOption($(selector), d, d);
 }
 for (const selector of ["#lab-direction", "#rig-move", "#rig-aim"])
   $(selector).value = "SE";
-addOption($("#lab-action"), "sequence", "연결 순서 · SE 시제품");
+addOption($("#lab-action"), "sequence", "연결 순서 · 보행은 시제품");
 for (const [action, label] of Object.entries(ACTIONS))
   addOption($("#lab-action"), action, label);
 if (review) {
@@ -70,7 +82,7 @@ for (const row of matrix) {
 }
 const statuses = matrix.flatMap((r) => Object.values(r.directions));
 $("#lab-matrix-summary").textContent =
-  `완성 ${statuses.filter((s) => s === "verified").length} / 시제품 ${statuses.filter((s) => s === "prototype").length} / 아트 없음 ${statuses.filter((s) => s === "missing").length} / 기준 미달 ${statuses.filter((s) => s === "rejected").length}. E의 시제품 4칸은 정지 자세뿐입니다. 독립 상하체 조합 0; 방향 전환 연결 0.`;
+  `COMPLETE ${statuses.filter((s) => s === "verified").length} / PROTOTYPE ${statuses.filter((s) => s === "prototype").length} / MISSING ${statuses.filter((s) => s === "missing").length} / REJECTED ${statuses.filter((s) => s === "rejected").length}. E 정지·총기 조작 7동작 완료 / 신규 승인 16셀. E 보행은 PROTOTYPE, 이전 4키 보행은 REJECTED로 보존. 새 완성 방향 세트는 아직 0입니다.`;
 const stage = $("#lab-stage");
 class RiflemanLab extends Phaser.Scene {
   preload() {
@@ -179,6 +191,7 @@ class RiflemanLab extends Phaser.Scene {
       probe: this.probePlan,
       independentWeaponObjects: 0,
       liveCombatAdmission: false,
+      liveApprovedClip: !review && pArtApproved(clock.pose()),
       stacked: this.stacked,
       canvas: { width: this.scale.width, height: this.scale.height },
       views: this.views.map((v) => ({
@@ -279,7 +292,7 @@ class RiflemanLab extends Phaser.Scene {
         name = v.selected
           ? `${clock.direction} 선택`
           : `SE 기준${q.action !== p.action ? " · 낮은 준비 참고" : ""}`;
-      const text = `${name} · ${v.actual ? `${this.size}px` : "4×"}${v.selected && clock.direction === "E" ? (review ? " · 미채택 후보" : " · 정지 시제품") : ""}`;
+      const text = `${name} · ${v.actual ? `${this.size}px` : "4×"}${v.selected && clock.direction === "E" ? ` · ${q.status === "verified" ? "COMPLETE" : review ? "REJECTED" : "PROTOTYPE"}` : ""}`;
       if (v.label.text !== text) v.label.setText(text);
       const missing =
         q.supported || q.renderable

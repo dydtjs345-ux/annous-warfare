@@ -1,0 +1,291 @@
+{
+  "version": "0.3.5-production",
+  "direction": "E",
+  "status": "complete-reviewed",
+  "image": "e-handling.png",
+  "grid": [
+    4,
+    2
+  ],
+  "frameSize": [
+    384,
+    512
+  ],
+  "nativeStandingHeight": 459,
+  "weaponIntegrated": true,
+  "combatApproved": true,
+  "frames": [
+    {
+      "index": 0,
+      "footAnchor": [
+        183.0,
+        474
+      ],
+      "bounds": [
+        85,
+        15,
+        324,
+        474
+      ],
+      "muzzle": [
+        323,
+        313.5
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        138,
+        410,
+        228,
+        474
+      ],
+      "grip": [
+        241,
+        216
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 1,
+      "footAnchor": [
+        182.5,
+        474
+      ],
+      "bounds": [
+        82,
+        15,
+        351,
+        474
+      ],
+      "muzzle": [
+        350,
+        250.0
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        138,
+        410,
+        227,
+        474
+      ],
+      "grip": [
+        252,
+        190
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 2,
+      "footAnchor": [
+        151.0,
+        474
+      ],
+      "bounds": [
+        42,
+        22,
+        332,
+        474
+      ],
+      "muzzle": [
+        331,
+        152.0
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        106,
+        410,
+        196,
+        474
+      ],
+      "grip": [
+        238,
+        162
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 3,
+      "footAnchor": [
+        151.5,
+        474
+      ],
+      "bounds": [
+        41,
+        28,
+        333,
+        474
+      ],
+      "muzzle": [
+        332,
+        107.5
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        107,
+        410,
+        196,
+        474
+      ],
+      "grip": [
+        237,
+        135
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 4,
+      "footAnchor": [
+        183.0,
+        474
+      ],
+      "bounds": [
+        73,
+        28,
+        365,
+        474
+      ],
+      "muzzle": [
+        364,
+        107.5
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        138,
+        410,
+        228,
+        474
+      ],
+      "grip": [
+        269,
+        135
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 5,
+      "footAnchor": [
+        182.5,
+        474
+      ],
+      "bounds": [
+        75,
+        29,
+        364,
+        474
+      ],
+      "muzzle": [
+        363,
+        98.0
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        138,
+        410,
+        227,
+        474
+      ],
+      "grip": [
+        268,
+        126
+      ],
+      "barrelAngle": -0.035
+    },
+    {
+      "index": 6,
+      "footAnchor": [
+        151.0,
+        474
+      ],
+      "bounds": [
+        41,
+        28,
+        333,
+        474
+      ],
+      "muzzle": [
+        332,
+        107.5
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        106,
+        410,
+        196,
+        474
+      ],
+      "grip": [
+        237,
+        135
+      ],
+      "barrelAngle": 0
+    },
+    {
+      "index": 7,
+      "footAnchor": [
+        151.0,
+        474
+      ],
+      "bounds": [
+        41,
+        28,
+        334,
+        474
+      ],
+      "muzzle": [
+        333,
+        107.5
+      ],
+      "groundContacts": [
+        "both"
+      ],
+      "registration": "measured common planted-boot midpoint and sole edge",
+      "bootBounds": [
+        106,
+        410,
+        196,
+        474
+      ],
+      "grip": [
+        237,
+        135
+      ],
+      "barrelAngle": 0
+    }
+  ],
+  "sourceSha256": "dbac223a28179aff6e7074056860a64802011155ea14916e4b7c1f76872d7f1e",
+  "notes": [
+    "Original full-body PNG cels; no mirroring, image warping or independent rifle.",
+    "Per-cell boot registration removes atlas packing shifts without changing anatomy.",
+    "Reviewed in actual Phaser 39px/4x playback, all cels and continuous transitions.",
+    "First usable E standing/handling pass; not a claim of pixel-perfect equipment or completed walking."
+  ],
+  "review": {
+    "date": "2026-11-07",
+    "evidence": "reports/v035-production",
+    "scale": [
+      39,
+      156
+    ],
+    "scope": "standing full-body clips only; not a completed E locomotion set"
+  }
+}
