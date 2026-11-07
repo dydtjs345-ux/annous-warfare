@@ -1,3 +1,4 @@
+import { MotionPresentation } from "./motion-presentation.js";
 import { CombatAtmosphere } from "./combat-atmosphere.js";
 import { drawGroundDetail, drawBuildingDetail } from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
@@ -33,6 +34,7 @@ class Battlefield extends Phaser.Scene {
     this.ground = this.add.graphics();
     this.g = this.add.graphics();
     this.visuals = new CombatVisuals();
+    this.motion = new MotionPresentation();
     this.atmosphere = new CombatAtmosphere();
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);
@@ -77,8 +79,15 @@ class Battlefield extends Phaser.Scene {
       ) {
         const c = this.cameras.main,
           w = c.getWorldPoint(p.x, p.y);
-        this.selected =
-          pickSoldier(this.battle.units, w, c.zoom, this.iso) || this.selected;
+        const picked = pickSoldier(
+          this.motion.battle === this.battle
+            ? this.motion.views
+            : this.battle.units,
+          w,
+          c.zoom,
+          this.iso,
+        );
+        if (picked) this.selected = this.battle.units[picked.id];
       }
     });
     this.input.on("wheel", (_, __, ___, dy) => {
@@ -171,7 +180,10 @@ class Battlefield extends Phaser.Scene {
             commander: q.commanderId,
           })),
           units: this.battle.units.map((u) => {
-            const p = this.iso(u.x, u.y);
+            const rendered =
+              this.motion.battle === this.battle ? this.motion.position(u) : u;
+            const p = this.iso(rendered.x, rendered.y);
+            const model = this.visuals.models[u.id];
             return {
               id: u.id,
               team: u.team,
@@ -180,6 +192,17 @@ class Battlefield extends Phaser.Scene {
               x: u.x,
               y: u.y,
               state: u.state,
+              renderX: rendered.x,
+              renderY: rendered.y,
+              renderDirection: model?.renderDirection,
+              renderObservation: rendered.observationHeading,
+              authoritativeDirection: u.facing,
+              authoritativeObservation: u.observationHeading,
+              renderStride: model?.renderStride,
+              pose: model?.pose,
+              flash: model?.flash,
+              shotDirection: this.visuals.effects[u.id]?.angle,
+              renderTop: model?.renderTop,
               screenX: (p.x - v.x) * c.zoom,
               screenY: (p.y - 12 - v.y) * c.zoom,
             };
@@ -258,7 +281,9 @@ class Battlefield extends Phaser.Scene {
       this.battle.units.find((u) => u.id === q.commanderId && u.active) ||
       this.battle.units.find((u) => u.team === team && u.active) ||
       this.battle.units[team * 6];
-    return this.iso(u.x, u.y);
+    const rendered =
+      this.motion.battle === this.battle ? this.motion.position(u) : u;
+    return this.iso(rendered.x, rendered.y);
   }
   frameCamera(resetZoom) {
     const c = this.cameras.main,
@@ -392,14 +417,23 @@ class Battlefield extends Phaser.Scene {
     if (!this.paused) {
       this.acc += Math.min(delta / 1000, 0.1) * this.speed;
       while (this.acc >= 0.05) {
+        this.motion.beforeStep(this.battle);
         this.battle.step(0.05);
         this.acc -= 0.05;
       }
     }
+    this.visuals.update(this.battle, delta / 1000, this.speed, this.paused);
+    this.motion.update(
+      this.battle,
+      this.visuals.models,
+      this.acc / 0.05,
+      delta / 1000,
+      this.speed,
+      this.paused,
+    );
     this.boundCamera();
     if (this.viewMode !== "Free" && this.viewMode !== "Map")
       this.frameCamera(false);
-    this.visuals.update(this.battle, delta / 1000, this.speed, this.paused);
     this.grenadeVisuals.update(
       this.battle,
       delta / 1000,
@@ -412,13 +446,16 @@ class Battlefield extends Phaser.Scene {
     g.clear();
     this.drawables.sort(
       (a, b) =>
-        (a.unit?.x ?? a.x) +
-        (a.unit?.y ?? a.y) -
-        (b.unit?.x ?? b.x) -
-        (b.unit?.y ?? b.y),
+        (a.unit
+          ? this.motion.position(a.unit).x + this.motion.position(a.unit).y
+          : a.x + a.y) -
+        (b.unit
+          ? this.motion.position(b.unit).x + this.motion.position(b.unit).y
+          : b.x + b.y),
     );
     for (const d of this.drawables) {
-      const p = this.iso(d.unit?.x ?? d.x, d.unit?.y ?? d.y);
+      const rendered = d.unit ? this.motion.position(d.unit) : d;
+      const p = this.iso(rendered.x, rendered.y);
       if (!inView(p, v, d.building ? 220 : 65)) continue;
       if (d.building) this.drawBuilding(g, d.building);
       else if (d.unit)
@@ -431,7 +468,7 @@ class Battlefield extends Phaser.Scene {
           this.selected === d.unit,
         );
       else drawObstacle(g, d, p);
-      if (d.unit) drawReadability(g, d.unit, p, this.iso);
+      if (d.unit) drawReadability(g, rendered, p, this.iso);
     }
     if (mapMode !== "expanded")
       for (const h of houses)

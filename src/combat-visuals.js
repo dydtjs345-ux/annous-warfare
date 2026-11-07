@@ -168,8 +168,9 @@ export class CombatVisuals {
   drawUnit(g, battle, u, p, iso, selected) {
     const m = this.models[u.id],
       fx = this.effects[u.id],
-      phase = Math.sin(m.stride),
+      phase = Math.sin(m.renderStride ?? m.stride),
       floorY = p.y;
+    const direction = m.renderDirection ?? m.direction;
     const down = m.pose === "dead" || m.pose === "incapacitated",
       prone = down || m.crawl || m.tucked;
     const crouch = CROUCHED.has(m.pose) || (m.covered && !m.moving);
@@ -184,6 +185,7 @@ export class CombatVisuals {
     if (m.suppressed && !down) top += 2;
     if (m.pose === "incapacitated" && fx.fall === 0)
       top += Math.sin(this.clock * 2 + u.id) * 0.35;
+    if (Number.isFinite(m.renderTop)) top = m.renderTop;
     g.fillStyle(0x000000, 0.4);
     g.fillEllipse(p.x + 3, floorY + 1, prone ? 24 : 20, 8);
     if (selected) {
@@ -239,8 +241,7 @@ export class CombatVisuals {
     const torsoX = p.x - 5 + lean,
       torsoY = p.y + top + 8 + bob;
     // Equipment sits behind the body; its side follows the authoritative aim axis.
-    const facingSide =
-      Math.cos(m.direction) - Math.sin(m.direction) >= 0 ? -1 : 1;
+    const facingSide = Math.cos(direction) - Math.sin(direction) >= 0 ? -1 : 1;
     g.fillStyle(0x15212a);
     g.fillRect(p.x + facingSide * 6 - 3, torsoY + 1, 7, prone ? 5 : 10);
     g.fillStyle(u.team ? 0x495749 : 0x384e59);
@@ -289,7 +290,7 @@ export class CombatVisuals {
     g.fillStyle(0x9aa6ad, 0.6);
     g.fillRect(torsoX + 3, torsoY + 3, 2, 2);
     if (!prone) {
-      const legY = p.y - (crouch ? 6 : 8),
+      const legY = p.y + (m.renderLegOffset ?? -(crouch ? 6 : 8)),
         stride = m.moving ? phase * (m.limp ? 1 : 2) : 0;
       g.fillStyle(vest);
       g.fillRect(p.x - 5, legY + stride, 3, crouch ? 4 : 7);
@@ -309,14 +310,18 @@ export class CombatVisuals {
       g.fillRect(p.x + 6, p.y - 2 - (m.moving ? phase : 0), 9, 3);
     }
     if (!down) {
-      const aim = iso(u.x + Math.cos(m.direction), u.y + Math.sin(m.direction));
-      let dx = aim.x - p.x,
-        dy = aim.y - p.y,
+      const aim = iso(u.x + Math.cos(direction), u.y + Math.sin(direction));
+      const origin = iso(u.x, u.y);
+      let dx = aim.x - origin.x,
+        dy = aim.y - origin.y,
         length = Math.hypot(dx, dy) || 1;
       dx /= length;
       dy /= length;
       const handY =
-        p.y + (m.tucked ? -4 : crouch ? -11 : prone ? -6 : -14) + bob;
+        p.y +
+        (m.renderHandHeight ??
+          (m.tucked ? -4 : crouch ? -11 : prone ? -6 : -14)) +
+        bob;
       // Sleeves and two bent forearms meet the weapon's authoritative hand axis.
       if (!["treating", "grenadePrep", "grenadeThrow"].includes(m.pose)) {
         g.lineStyle(3, cloth);
@@ -346,13 +351,21 @@ export class CombatVisuals {
           p.x + 4,
           torsoY + 3,
           p.x + 8,
-          p.y + top + 5 - 4 * m.grenadeProgress,
+          p.y + top + 5 - 4 * (m.renderGrenadeProgress ?? m.grenadeProgress),
         );
         g.fillStyle(0xb4b781);
         if (m.pose === "grenadePrep")
-          g.fillRect(p.x + 6, p.y + top + 1 - 4 * m.grenadeProgress, 4, 5);
+          g.fillRect(
+            p.x + 6,
+            p.y + top + 1 - 4 * (m.renderGrenadeProgress ?? m.grenadeProgress),
+            4,
+            5,
+          );
       } else if (m.pose === "treating") {
-        const wave = Math.sin(m.treatmentProgress * Math.PI * 4) * 2;
+        const wave =
+          Math.sin(
+            (m.renderTreatmentProgress ?? m.treatmentProgress) * Math.PI * 4,
+          ) * 2;
         g.lineStyle(3, 0xe1c6a1);
         g.lineBetween(p.x - 4, handY, p.x + 3, handY + 6 + wave);
         g.lineBetween(p.x + 4, handY, p.x + 7, handY + 5 - wave);
@@ -376,7 +389,7 @@ export class CombatVisuals {
           handY + dy * (barrel - 2),
         );
         if (m.pose === "reloading") {
-          const progress = m.reloadProgress,
+          const progress = m.renderReloadProgress ?? m.reloadProgress,
             hand = Math.sin(progress * Math.PI * 2) * 4;
           g.fillStyle(0xe1c6a1);
           g.fillRect(p.x - 3 + hand, handY + 4, 4, 3);
@@ -401,8 +414,8 @@ export class CombatVisuals {
               : 1 +
                 3 *
                   (m.pose === "unmounting"
-                    ? 1 - m.mountProgress
-                    : m.mountProgress);
+                    ? 1 - (m.renderMountProgress ?? m.mountProgress)
+                    : (m.renderMountProgress ?? m.mountProgress));
           const bx = p.x + dx * 12,
             by = handY + dy * 12;
           g.lineStyle(1, 0xd8ce94, 0.95);
@@ -413,7 +426,7 @@ export class CombatVisuals {
             g.lineBetween(
               p.x - 6,
               p.y + top - 4,
-              p.x - 6 + 12 * m.mountProgress,
+              p.x - 6 + 12 * (m.renderMountProgress ?? m.mountProgress),
               p.y + top - 4,
             );
           }

@@ -1,3 +1,4 @@
+import { MotionPresentation } from "../src/motion-presentation.js";
 import { CombatVisuals } from "../src/combat-visuals.js";
 import { CombatAtmosphere } from "../src/combat-atmosphere.js";
 import { GrenadeVisuals } from "../src/grenade-visuals.js";
@@ -33,16 +34,26 @@ for (const map of ["legacy", "expanded"])
       const hash = createHash("sha256"),
         visuals = new CombatVisuals(),
         atmosphere = new CombatAtmosphere(),
-        grenades = new GrenadeVisuals();
+        grenades = new GrenadeVisuals(),
+        motion = new MotionPresentation();
       for (let tick = 0; tick < 36000 && !b.result; tick++) {
+        if (index) motion.beforeStep(b);
         b.step(0.05);
         if (index && tick % 4 === 0) {
           const iso = (x, y) => ({ x: 20 * (x - y), y: 10 * (x + y) });
           visuals.update(b, 0.05, 4, false);
+          motion.update(b, visuals.models, 0.5, 1 / 60, 4, false);
           atmosphere.update(b, 0.05, 4, false);
           grenades.update(b, 0.05, 4, false);
           for (const u of b.units)
-            visuals.drawUnit(sink, b, u, iso(u.x, u.y), iso, false);
+            visuals.drawUnit(
+              sink,
+              b,
+              u,
+              iso(motion.position(u).x, motion.position(u).y),
+              iso,
+              false,
+            );
           visuals.drawTraces(sink, iso);
           atmosphere.draw(sink, iso);
           grenades.draw(sink, iso);
