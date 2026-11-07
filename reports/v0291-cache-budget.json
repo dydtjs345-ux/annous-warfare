@@ -1,0 +1,8 @@
+{
+  "layout": 0,
+  "staticTextureCount": 82,
+  "staticPixels": 1097200,
+  "staticRGBABytes": 4388800,
+  "groundPixels": 2120000,
+  "note": "raw RGBA storage estimate only; excludes canvas/GPU duplicates, buffers and driver overhead"
+}
