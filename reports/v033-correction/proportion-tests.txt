@@ -1,0 +1,11 @@
+✔ refined SE atlas retains 24 complete registered cells and the exact v032 comparison source (26.008438ms)
+✔ 39px/4x comparisons fit side by side on iPhone and large magnifications stack safely (8.137903ms)
+✔ both versions share a ground origin, frame and nominal height without anisotropic body scaling (0.25072ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 42.495596

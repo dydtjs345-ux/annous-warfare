@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { writeFileSync } from "node:fs";
+const reportDir = process.env.AW_REPORT_DIR || "reports";
 const { chromium } = await import(
   process.env.AW_PLAYWRIGHT_MODULE || "playwright"
 );
@@ -33,7 +34,7 @@ for (let i = 0; i < 16; i++) {
   assert.equal(bad.length, 0, JSON.stringify({ i, snapshot: s, bad }));
 }
 writeFileSync(
-  "reports/v033-layout-check.json",
+  `${reportDir}/v033-layout-check.json`,
   JSON.stringify(
     {
       cases: records.length,

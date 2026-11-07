@@ -4,6 +4,11 @@ import { createHash } from "node:crypto";
 const read = (p) => JSON.parse(readFileSync(p)),
   sha = (p) => createHash("sha256").update(readFileSync(p)).digest("hex"),
   base = process.argv[2] || "/tmp/aw-v033-base";
+// Keep the first-pass evidence historical after the resumed correction.
+if (read("public/assets/usmc-se-v033/metadata.json").revisionBaseCommit) {
+  await import("./verify-v033-correction.mjs");
+  process.exit(0);
+}
 const unchanged = {};
 for (const f of readdirSync(base + "/src").filter(
   (f) => f.endsWith(".js") && f !== "usmc-se-preview.js",

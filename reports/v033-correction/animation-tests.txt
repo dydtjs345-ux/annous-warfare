@@ -1,0 +1,16 @@
+✔ SE original atlas has complete bodies, transparent RGBA and a consistent source/foot pivot (3.902856ms)
+✔ complete demo reaches all ordered phases and only two preview shot cues (5.129153ms)
+✔ pause freezes the complete pose and 1x/2x/4x render grouping stays frame-equivalent (0.687853ms)
+✔ raise/lower keep the entire terminal pose and never snap back when held (2.711233ms)
+✔ frame stepping preserves short recoil cels and does not invent motion in held aim (0.454249ms)
+✔ low-ready and raising/lowering frames cannot show firing flashes (1.414563ms)
+✔ camera-tracked travel is derived from the pose clock without seek or pause drift (0.17001ms)
+✔ short shot cues survive 1x/2x/4x rendering without changing the body clip (4.675124ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.169527

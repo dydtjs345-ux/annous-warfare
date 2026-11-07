@@ -3,6 +3,7 @@ const { chromium } = await import(
 );
 import assert from "node:assert/strict";
 import { writeFileSync } from "node:fs";
+const reportDir = process.env.AW_REPORT_DIR || "reports";
 const b = await chromium.launch({
   executablePath: "/usr/bin/chromium",
   headless: true,
@@ -52,7 +53,7 @@ try {
         v.bounds.right <= initial.canvas.width,
     ),
   );
-  await p.screenshot({ path: "reports/v033-mobile-preview.png" });
+  await p.screenshot({ path: `${reportDir}/v033-mobile-preview.png` });
   const before = await f.evaluate(() => scrollY),
     cdp = await p.context().newCDPSession(p),
     frameBox = await p.locator("#animation-dialog iframe").boundingBox();
@@ -176,9 +177,9 @@ try {
   }
   assert.deepEqual(errors, []);
   assert.deepEqual(failed, []);
-  await p.screenshot({ path: "reports/v033-game-after-preview.png" });
+  await p.screenshot({ path: `${reportDir}/v033-game-after-preview.png` });
   writeFileSync(
-    "reports/v033-mobile-preview.json",
+    `${reportDir}/v033-mobile-preview.json`,
     JSON.stringify(
       {
         viewport: [390, 844],

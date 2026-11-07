@@ -1,0 +1,414 @@
+{
+  "width": 1024,
+  "height": 1536,
+  "frames": [
+    {
+      "frame": 0,
+      "bounds": [
+        75,
+        42,
+        200,
+        247
+      ],
+      "solid": 13108,
+      "regions": {
+        "headHelmet": "33ec377e",
+        "upperBody": "336c27eb",
+        "lowerBody": "37b8a046"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 186
+    },
+    {
+      "frame": 1,
+      "bounds": [
+        75,
+        42,
+        200,
+        247
+      ],
+      "solid": 12993,
+      "regions": {
+        "headHelmet": "30a5e47d",
+        "upperBody": "b869c766",
+        "lowerBody": "d65c7a74"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 213
+    },
+    {
+      "frame": 2,
+      "bounds": [
+        75,
+        42,
+        200,
+        247
+      ],
+      "solid": 13072,
+      "regions": {
+        "headHelmet": "a3d025ee",
+        "upperBody": "88d724a7",
+        "lowerBody": "25f75f9e"
+      },
+      "edgeAlpha": 0,
+      "muzzleAlpha": 169
+    },
+    {
+      "frame": 3,
+      "bounds": [
+        76,
+        42,
+        200,
+        247
+      ],
+      "solid": 13027,
+      "regions": {
+        "headHelmet": "1413f93e",
+        "upperBody": "46fbbe05",
+        "lowerBody": "f0b22de5"
+      },
+      "edgeAlpha": 0,
+      "muzzleAlpha": 205
+    },
+    {
+      "frame": 4,
+      "bounds": [
+        74,
+        43,
+        200,
+        247
+      ],
+      "solid": 13296,
+      "regions": {
+        "headHelmet": "49e5372a",
+        "upperBody": "36fbec9e",
+        "lowerBody": "14db3538"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 234
+    },
+    {
+      "frame": 5,
+      "bounds": [
+        75,
+        43,
+        199,
+        247
+      ],
+      "solid": 12936,
+      "regions": {
+        "headHelmet": "7790ad64",
+        "upperBody": "9e108f6d",
+        "lowerBody": "1baf302a"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 192
+    },
+    {
+      "frame": 6,
+      "bounds": [
+        75,
+        42,
+        199,
+        248
+      ],
+      "solid": 12908,
+      "regions": {
+        "headHelmet": "ad420c7e",
+        "upperBody": "71e9c1d6",
+        "lowerBody": "e818399c"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 234
+    },
+    {
+      "frame": 7,
+      "bounds": [
+        75,
+        42,
+        201,
+        250
+      ],
+      "solid": 12421,
+      "regions": {
+        "headHelmet": "ce3d2e6e",
+        "upperBody": "7dae77b",
+        "lowerBody": "e36e7688"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 179
+    },
+    {
+      "frame": 8,
+      "bounds": [
+        75,
+        42,
+        201,
+        249
+      ],
+      "solid": 12818,
+      "regions": {
+        "headHelmet": "3540ec0",
+        "upperBody": "a056fda1",
+        "lowerBody": "54893afe"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 148
+    },
+    {
+      "frame": 9,
+      "bounds": [
+        75,
+        42,
+        201,
+        249
+      ],
+      "solid": 11795,
+      "regions": {
+        "headHelmet": "3fa7ed61",
+        "upperBody": "ab3db646",
+        "lowerBody": "be0c2a3d"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 139
+    },
+    {
+      "frame": 10,
+      "bounds": [
+        76,
+        42,
+        201,
+        249
+      ],
+      "solid": 12108,
+      "regions": {
+        "headHelmet": "ca4a25b",
+        "upperBody": "31d69f1",
+        "lowerBody": "eb8e5c78"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 240
+    },
+    {
+      "frame": 11,
+      "bounds": [
+        76,
+        42,
+        202,
+        249
+      ],
+      "solid": 12399,
+      "regions": {
+        "headHelmet": "72871bd7",
+        "upperBody": "43f0bb74",
+        "lowerBody": "c92e2d73"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 138
+    },
+    {
+      "frame": 12,
+      "bounds": [
+        75,
+        43,
+        200,
+        247
+      ],
+      "solid": 13091,
+      "regions": {
+        "headHelmet": "a5191aaf",
+        "upperBody": "5f074a35",
+        "lowerBody": "5e96c41c"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 195
+    },
+    {
+      "frame": 13,
+      "bounds": [
+        75,
+        43,
+        209,
+        247
+      ],
+      "solid": 13029,
+      "regions": {
+        "headHelmet": "174720eb",
+        "upperBody": "51f708f5",
+        "lowerBody": "13ec7fc"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 240
+    },
+    {
+      "frame": 14,
+      "bounds": [
+        74,
+        43,
+        222,
+        247
+      ],
+      "solid": 13161,
+      "regions": {
+        "headHelmet": "cdfbbd2f",
+        "upperBody": "cb1b8f3d",
+        "lowerBody": "c6e8176a"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 182
+    },
+    {
+      "frame": 15,
+      "bounds": [
+        74,
+        43,
+        226,
+        247
+      ],
+      "solid": 13029,
+      "regions": {
+        "headHelmet": "dc79685",
+        "upperBody": "f4361197",
+        "lowerBody": "12424ae0"
+      },
+      "edgeAlpha": 0,
+      "muzzleAlpha": 176
+    },
+    {
+      "frame": 16,
+      "bounds": [
+        71,
+        44,
+        228,
+        247
+      ],
+      "solid": 13308,
+      "regions": {
+        "headHelmet": "945f00a4",
+        "upperBody": "6227cec9",
+        "lowerBody": "82afb4e1"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 198
+    },
+    {
+      "frame": 17,
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "solid": 13266,
+      "regions": {
+        "headHelmet": "b3f14cbc",
+        "upperBody": "44d014a9",
+        "lowerBody": "430e5e98"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 212
+    },
+    {
+      "frame": 18,
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "solid": 13303,
+      "regions": {
+        "headHelmet": "2f0858ae",
+        "upperBody": "17f6d27e",
+        "lowerBody": "2d8768ae"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 202
+    },
+    {
+      "frame": 19,
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "solid": 13266,
+      "regions": {
+        "headHelmet": "641f6bf5",
+        "upperBody": "e8f00eac",
+        "lowerBody": "e614bea"
+      },
+      "edgeAlpha": 0,
+      "muzzleAlpha": 197
+    },
+    {
+      "frame": 20,
+      "bounds": [
+        72,
+        43,
+        228,
+        246
+      ],
+      "solid": 13247,
+      "regions": {
+        "headHelmet": "2d6b5e5a",
+        "upperBody": "84d08e2f",
+        "lowerBody": "ce234617"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 155
+    },
+    {
+      "frame": 21,
+      "bounds": [
+        73,
+        43,
+        225,
+        246
+      ],
+      "solid": 13164,
+      "regions": {
+        "headHelmet": "eb253041",
+        "upperBody": "d323d3d5",
+        "lowerBody": "84ce6f2f"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 159
+    },
+    {
+      "frame": 22,
+      "bounds": [
+        74,
+        43,
+        213,
+        246
+      ],
+      "solid": 13287,
+      "regions": {
+        "headHelmet": "69c7c815",
+        "upperBody": "e80bb227",
+        "lowerBody": "dff5f8ba"
+      },
+      "edgeAlpha": 1,
+      "muzzleAlpha": 138
+    },
+    {
+      "frame": 23,
+      "bounds": [
+        76,
+        43,
+        201,
+        246
+      ],
+      "solid": 13054,
+      "regions": {
+        "headHelmet": "51bb87b6",
+        "upperBody": "b67f16d9",
+        "lowerBody": "7bbfa56f"
+      },
+      "edgeAlpha": 2,
+      "muzzleAlpha": 174
+    }
+  ]
+}

@@ -29,7 +29,7 @@ test("refined SE atlas retains 24 complete registered cells and the exact v032 c
     const f = d.frames[i];
     assert.equal(f.index, i);
     assert.deepEqual(f.cell, [i % 4, Math.floor(i / 4)]);
-    assert.deepEqual(f.footAnchor, [132, 246]);
+    assert.deepEqual(f.footAnchor, [132, 247]);
     assert.ok(
       f.bounds[0] > 0 &&
         f.bounds[1] > 0 &&

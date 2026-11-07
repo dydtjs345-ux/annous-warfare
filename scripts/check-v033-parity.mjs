@@ -179,7 +179,7 @@ for (const map of ["legacy", "expanded"])
     console.log(map, seed, results[1].duration);
   }
 writeFileSync(
-  "reports/v033-parity.json",
+  `${process.env.AW_REPORT_DIR || "reports"}/v033-parity.json`,
   JSON.stringify(
     { base: "384e6e9", dt: 0.05, matched: 40, completeExecutions: 80, runs },
     null,

@@ -3,6 +3,7 @@ const { chromium } = await import(
 );
 import assert from "node:assert/strict";
 import { mkdirSync, writeFileSync } from "node:fs";
+const reportDir = process.env.AW_REPORT_DIR || "reports";
 mkdirSync("/tmp/aw-v033-video", { recursive: true });
 const b = await chromium.launch({
   executablePath: "/usr/bin/chromium",
@@ -92,7 +93,7 @@ try {
   assert.deepEqual(await p.evaluate(() => window.sePreviewSnapshot()), frozen);
   assert.deepEqual(errors, []);
   writeFileSync(
-    "reports/v033-animation.json",
+    `${reportDir}/v033-animation.json`,
     JSON.stringify(
       {
         method:

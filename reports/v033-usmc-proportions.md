@@ -1,5 +1,9 @@
 # v0.3.3 — USMC SE proportion refinement
 
+> Historical first-pass report through `a920240`. Its screenshots, measurements,
+> videos and validation files are preserved. The resumed head/helmet/torso/lower-body
+> correction and current evidence are in [v033-correction/README.md](v033-correction/README.md).
+
 Branch: **feat/v033-usmc-proportions**. Started from latest main **384e6e9**, the merged v0.3.2 release (PR #19). The v0.3.2 atlas is retained byte-for-byte. **Only SE** is refined; no gameplay systems or other directions change.
 
 ## What changed visually

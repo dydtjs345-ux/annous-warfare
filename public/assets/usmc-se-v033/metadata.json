@@ -10,7 +10,7 @@
     256,
     256
   ],
-  "nativeStandingHeight": 205,
+  "nativeStandingHeight": 201,
   "baseDisplayHeight": 30,
   "comparisonSizes": [
     1,
@@ -26,17 +26,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        75,
-        42,
-        200,
         247
       ],
+      "bounds": [
+        80,
+        47,
+        192,
+        248
+      ],
       "muzzle": [
-        199,
-        194.0
+        191,
+        186.0
       ]
     },
     {
@@ -47,17 +47,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        76,
-        42,
-        200,
         247
       ],
+      "bounds": [
+        80,
+        47,
+        193,
+        248
+      ],
       "muzzle": [
-        199,
-        194.0
+        192,
+        186.0
       ]
     },
     {
@@ -68,17 +68,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        75,
-        42,
-        200,
         247
       ],
+      "bounds": [
+        81,
+        47,
+        193,
+        248
+      ],
       "muzzle": [
-        199,
-        194.0
+        192,
+        186.0
       ]
     },
     {
@@ -89,17 +89,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        76,
-        42,
-        200,
         247
       ],
+      "bounds": [
+        81,
+        47,
+        193,
+        248
+      ],
       "muzzle": [
-        199,
-        193.5
+        192,
+        186.0
       ]
     },
     {
@@ -110,17 +110,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        74,
-        43,
-        200,
+        80,
+        48,
+        192,
         247
       ],
       "muzzle": [
-        199,
-        190.0
+        191,
+        185.5
       ]
     },
     {
@@ -131,17 +131,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        75,
-        43,
-        199,
         247
       ],
+      "bounds": [
+        80,
+        47,
+        192,
+        246
+      ],
       "muzzle": [
-        198,
-        191.5
+        191,
+        185.5
       ]
     },
     {
@@ -152,17 +152,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        75,
-        42,
-        199,
-        248
+        80,
+        47,
+        193,
+        247
       ],
       "muzzle": [
-        198,
-        191.5
+        192,
+        185.5
       ]
     },
     {
@@ -173,17 +173,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        75,
-        42,
-        201,
-        250
+        81,
+        47,
+        193,
+        249
       ],
       "muzzle": [
-        200,
-        189.5
+        192,
+        185.0
       ]
     },
     {
@@ -194,17 +194,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        75,
-        42,
-        201,
-        249
+        81,
+        47,
+        192,
+        246
       ],
       "muzzle": [
-        200,
-        188.0
+        191,
+        185.5
       ]
     },
     {
@@ -215,17 +215,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        75,
-        42,
-        201,
-        249
+        81,
+        47,
+        193,
+        248
       ],
       "muzzle": [
-        200,
-        187.5
+        192,
+        185.0
       ]
     },
     {
@@ -236,17 +236,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        76,
-        42,
-        201,
+        81,
+        47,
+        193,
         249
       ],
       "muzzle": [
-        200,
-        187.5
+        192,
+        185.0
       ]
     },
     {
@@ -257,17 +257,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        76,
-        42,
-        202,
-        249
+        80,
+        47,
+        193,
+        248
       ],
       "muzzle": [
-        201,
-        186.0
+        192,
+        185.0
       ]
     },
     {
@@ -278,17 +278,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        75,
-        43,
-        200,
         247
       ],
+      "bounds": [
+        80,
+        48,
+        192,
+        248
+      ],
       "muzzle": [
-        199,
-        194.0
+        191,
+        186.0
       ]
     },
     {
@@ -299,17 +299,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        75,
-        43,
-        209,
         247
       ],
+      "bounds": [
+        80,
+        48,
+        203,
+        248
+      ],
       "muzzle": [
-        208,
-        168.5
+        202,
+        167.0
       ]
     },
     {
@@ -320,17 +320,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        74,
-        43,
-        222,
         247
       ],
+      "bounds": [
+        81,
+        48,
+        215,
+        248
+      ],
       "muzzle": [
-        221,
-        138.0
+        214,
+        133.0
       ]
     },
     {
@@ -341,17 +341,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        74,
-        43,
+        81,
+        48,
         226,
-        247
+        248
       ],
       "muzzle": [
         225,
-        111.5
+        109.5
       ]
     },
     {
@@ -362,17 +362,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        71,
-        44,
-        228,
         247
       ],
+      "bounds": [
+        80,
+        48,
+        226,
+        248
+      ],
       "muzzle": [
-        227,
-        105.5
+        225,
+        100.0
       ]
     },
     {
@@ -383,17 +383,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        72,
-        44,
-        228,
         247
       ],
+      "bounds": [
+        80,
+        49,
+        226,
+        248
+      ],
       "muzzle": [
-        227,
-        105.0
+        225,
+        100.5
       ]
     },
     {
@@ -404,17 +404,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        72,
-        44,
-        228,
         247
       ],
+      "bounds": [
+        80,
+        49,
+        226,
+        248
+      ],
       "muzzle": [
-        227,
-        105.0
+        225,
+        100.5
       ]
     },
     {
@@ -425,17 +425,17 @@
       ],
       "footAnchor": [
         132,
-        246
-      ],
-      "bounds": [
-        72,
-        44,
-        228,
         247
       ],
+      "bounds": [
+        80,
+        49,
+        226,
+        248
+      ],
       "muzzle": [
-        227,
-        105.5
+        225,
+        100.5
       ]
     },
     {
@@ -446,16 +446,16 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        72,
-        43,
-        228,
-        246
+        80,
+        48,
+        226,
+        248
       ],
       "muzzle": [
-        227,
+        225,
         105.0
       ]
     },
@@ -467,17 +467,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        73,
-        43,
-        225,
-        246
+        80,
+        48,
+        220,
+        248
       ],
       "muzzle": [
-        224,
-        124.0
+        219,
+        124.5
       ]
     },
     {
@@ -488,17 +488,17 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        74,
-        43,
-        213,
-        246
+        80,
+        48,
+        208,
+        248
       ],
       "muzzle": [
-        212,
-        168.0
+        207,
+        166.5
       ]
     },
     {
@@ -509,21 +509,23 @@
       ],
       "footAnchor": [
         132,
-        246
+        247
       ],
       "bounds": [
-        76,
-        43,
-        201,
-        246
+        81,
+        48,
+        193,
+        248
       ],
       "muzzle": [
-        200,
-        194.0
+        192,
+        186.0
       ]
     }
   ],
   "sourceBaseSha256": "4765c95309e0dba11273e677500aef3471a41782978dc593e6a2a201f2881f04",
-  "provenance": "Original v0.3.2 full-body atlas anatomically redrawn with image editing; not a vertical scale. Targets: longer hip-to-ankle segments, smaller helmet, narrower equipped torso across all 24 cels. Percentages are design guides, not certified pixel measurements.",
-  "runtime": "Complete human and rifle in each cel. Uniform display-size normalization only; no independent weapon or per-limb stretching."
+  "provenance": "Second image-editing pass from the a920240 v0.3.3 atlas. All 24 SE cels refine head and helmet together, narrow the equipped upper body and raise the waist for longer apparent legs. Percentages remain visual direction, not certified anatomical measurements. Model output PNG preserved unchanged; bounds and muzzle tips are measured from alpha >=128.",
+  "runtime": "Complete human and rifle in each cel. Uniform display-size normalization only; no independent weapon or per-limb stretching.",
+  "revisionBaseCommit": "a920240",
+  "revisionBaseSha256": "1a7bfb3551fefa6f387c6e450a12a08870d1943d53567fc03387d345caa8dcaa"
 }
