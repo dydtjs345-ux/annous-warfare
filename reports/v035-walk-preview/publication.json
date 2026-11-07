@@ -1,0 +1,18 @@
+{
+  "verifiedUTC": "2026-11-07T21:51:51.127707+00:00",
+  "url": "https://cdn.jsdelivr.net/gh/dydtjs345-ux/annous-warfare@1c1b8c62b6dad9617f6a3a6fee2dc488c36c4a14/previews/v035-e-walk.svg",
+  "status": 200,
+  "contentType": "image/svg+xml",
+  "publishedCommit": "1c1b8c62b6dad9617f6a3a6fee2dc488c36c4a14",
+  "sha256": "fd775dbf191b90832c3132b9db00e5a647d7c280300abbb0e53569151b9d5e7f",
+  "downloadMatchesCheckedInFile": true,
+  "externalMobileBrowserControlsPassed": true,
+  "sourceType": "standalone interactive SVG mirror, shared laboratory clock and exact original PNGs",
+  "pagesDeployment": false,
+  "productionSiteChanged": false,
+  "hosting": "jsDelivr static GitHub commit CDN",
+  "newWalkStatus": "PROTOTYPE",
+  "oldWalkStatus": "REJECTED",
+  "physicalSafari": "unverified",
+  "branch": "feat/v035-rifleman-animation-foundation"
+}

@@ -521,3 +521,9 @@ Open **8방향 연구실** and select **E**. The new full-body PNGs contain **16
 For actual battle comparison, choose **그림 → v0.3.5 E + SE Animated**. Only rifleman #1 uses approved E standing/weapon-handling clips in the narrow authored E sector. SE animation remains available, and moving, injured, cover, medical, grenade and other unsupported states retain stable fallback. The default **v0.3.3 Animated** option is preserved. Size controls remain 30/39/45px without changing collision or gameplay.
 
 [Production continuation audit, complete status matrix, before/after walking, real battle footage and validation](reports/v035-production-audit.md). Physical iPhone Safari is unverified. Feature-branch pushes do not deploy production Pages or merge into main.
+
+### Interactive E-walk review on iPhone
+
+Open **8방향 연구실 → E 보행 비교** for the new eight-frame PROTOTYPE beside the old four-frame REJECTED walk, at 39px and 4×. Play, pause, 0.25× slow motion, frame stepping, speed and visible counters work without a video attachment.
+
+[Open the public interactive preview directly in Safari](https://cdn.jsdelivr.net/gh/dydtjs345-ux/annous-warfare@1c1b8c62b6dad9617f6a3a6fee2dc488c36c4a14/previews/v035-e-walk.svg). This standalone mirror uses the same clock and original PNGs; open it as a browser page rather than an embedded/static image. The exact public URL and controls were verified. Production Pages is unchanged; [deployment limitations, checks and remaining artwork issues](reports/v035-walk-preview.md). Physical iPhone Safari remains unverified, and neither E gait is complete.

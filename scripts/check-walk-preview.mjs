@@ -126,11 +126,25 @@ try {
   const st = s.time;
   await p.waitForTimeout(150);
   assert.equal((await p.evaluate(() => walkPreviewSnapshot())).time, st);
+  for (const rate of [0.25, 0.5, 1, 2, 4]) {
+    await p.locator(`[id="speed-${rate}"]`).tap();
+    const before = (await p.evaluate(() => walkPreviewSnapshot())).time;
+    await p.locator("#play").tap();
+    await p.waitForTimeout(140);
+    await p.locator("#pause").tap();
+    const after = await p.evaluate(() => walkPreviewSnapshot());
+    assert.equal(after.speed, rate);
+    assert.equal(after.playing, false);
+    assert.ok(after.time > before);
+  }
+  s = await p.evaluate(() => walkPreviewSnapshot());
   records.push({
     type: "svg",
     url: p.url(),
     httpStatus: response.status(),
     contentType: response.headers()["content-type"],
+    checkedRates: [0.25, 0.5, 1, 2, 4],
+    orientations: [],
     snapshot: s,
     browser: await p.evaluate(() => ({
       innerWidth,
@@ -153,6 +167,11 @@ try {
       scale: visualViewport.scale,
     }));
     assert.ok(Math.abs(dimensions.snapshot.width - viewport.width) <= 1);
+    records[1].orientations.push({
+      viewport,
+      displayWidth: dimensions.snapshot.width,
+      scale: dimensions.scale,
+    });
     for (const v of dimensions.snapshot.views) {
       const expected =
         (v.selected ? (512 * 39) / 459 : (627 * 39) / 581) * (v.actual ? 1 : 4);
