@@ -9,6 +9,10 @@ const b = await chromium.launch({
   executablePath: "/usr/bin/chromium",
   headless: true,
   args: ["--no-sandbox"],
+  proxy:
+    process.env.AW_USE_PROXY === "1" && process.env.HTTPS_PROXY
+      ? { server: process.env.HTTPS_PROXY, bypass: process.env.NO_PROXY }
+      : undefined,
 });
 const records = [],
   errors = [];
@@ -17,6 +21,7 @@ try {
     viewport: { width: 390, height: 844 },
     isMobile: true,
     hasTouch: true,
+    screen: { width: 390, height: 844 },
   });
   p.on("pageerror", (e) => errors.push(e.message));
   await p.goto(
@@ -136,6 +141,31 @@ try {
       scrollWidth: document.documentElement.scrollWidth,
     })),
   });
+  for (const viewport of [
+    { width: 844, height: 390 },
+    { width: 320, height: 740 },
+    { width: 390, height: 844 },
+  ]) {
+    await p.setViewportSize(viewport);
+    await p.waitForTimeout(200);
+    const dimensions = await p.evaluate(() => ({
+      snapshot: walkPreviewSnapshot(),
+      scale: visualViewport.scale,
+    }));
+    assert.ok(Math.abs(dimensions.snapshot.width - viewport.width) <= 1);
+    for (const v of dimensions.snapshot.views) {
+      const expected =
+        (v.selected ? (512 * 39) / 459 : (627 * 39) / 581) * (v.actual ? 1 : 4);
+      // getBoundingClientRect includes the unclipped whole atlas for nested SVG.
+      // Measure the displayed frame viewport through the real root transform.
+      assert.ok(
+        Math.abs(
+          v.viewport.height * v.viewport.rootScale * dimensions.scale -
+            expected,
+        ) < 1,
+      );
+    }
+  }
   await p.screenshot({ path: out + "/mobile-public-svg.png" });
   assert.deepEqual(errors, []);
   writeFileSync(

@@ -98,9 +98,14 @@ let width,
 function resize() {
   // Standalone SVG documents may use a 980px mobile layout viewport. Keep the
   // viewBox in device CSS pixels so the displayed soldier is still 39px tall.
-  width = Math.max(280, Math.min(innerWidth, screen.width || innerWidth));
   const cssWidth =
     document.documentElement.getBoundingClientRect().width || innerWidth;
+  // iOS can keep screen.width in portrait coordinates after rotation. Use the
+  // visual viewport scale to preserve displayed size in either orientation.
+  width = Math.max(
+    280,
+    Math.round(cssWidth * (window.visualViewport?.scale ?? 1)),
+  );
   root.setAttribute("viewBox", `0 0 ${width} 780`);
   root.style.height = (780 * cssWidth) / width + "px";
   const gap = 6,
@@ -209,6 +214,11 @@ window.walkPreviewSnapshot = () => ({
     y: v.foot.y,
     viewBox: v.image.getAttribute("viewBox"),
     bounds: v.image.getBoundingClientRect().toJSON(),
+    viewport: {
+      width: Number(v.image.getAttribute("width")),
+      height: Number(v.image.getAttribute("height")),
+      rootScale: root.getScreenCTM().d,
+    },
   })),
 });
 addEventListener("resize", resize);
