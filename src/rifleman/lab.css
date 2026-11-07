@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+[hidden] {
+  display: none !important;
+}
 html,
 body {
   margin: 0;
@@ -80,6 +83,23 @@ input[type="checkbox"] {
   white-space: pre-line;
   color: #e6d2aa;
   margin: 8px 0;
+}
+#walk-counters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 4px 0 8px;
+  font-size: 12px;
+}
+#walk-new-counter {
+  color: #e2c58e;
+}
+#walk-old-counter {
+  color: #e6b4a3;
+}
+button[aria-pressed="true"] {
+  background: #355d58;
+  border-color: #92bcae;
 }
 .lab-scrub {
   display: flex;

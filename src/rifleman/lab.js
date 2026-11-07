@@ -9,13 +9,13 @@ import {
 } from "./catalog.js";
 import { FoundationClock, playbackPhase } from "./clock.js";
 import { resolveRequest } from "./rig.js";
-import { laboratoryLayout } from "./lab-layout.js";
+import { laboratoryLayout, walkComparisonLayout } from "./lab-layout.js";
 import { QualityReviewClock, WALK_REVIEW } from "./review.js";
+import { WalkComparisonClock } from "./walk-comparison.js";
 import "./lab.css";
 const $ = (s) => document.querySelector(s),
   review =
     new URLSearchParams(location.search).get("review") === WALK_REVIEW.id,
-  clock = review ? new QualityReviewClock() : new FoundationClock(),
   banks = review
     ? { se033: CATALOG.banks.se033, [WALK_REVIEW.bank]: WALK_REVIEW.asset }
     : Object.fromEntries(
@@ -27,8 +27,18 @@ const $ = (s) => document.querySelector(s),
                 .map((c) => c.bank ?? d.bank),
             ),
           ),
-        ].map((id) => [id, CATALOG.banks[id]]),
+        ]
+          .map((id) => [id, CATALOG.banks[id]])
+          .concat([[WALK_REVIEW.bank, WALK_REVIEW.asset]]),
       );
+let comparing =
+    !review && new URLSearchParams(location.search).get("compare") === "e-walk",
+  clock = review
+    ? new QualityReviewClock()
+    : comparing
+      ? new WalkComparisonClock()
+      : new FoundationClock(),
+  standardClock = new FoundationClock();
 const addOption = (select, value, text) => {
   const o = document.createElement("option");
   o.value = value;
@@ -56,6 +66,7 @@ if (review) {
   $("#lab-view-note").textContent =
     "미채택 E 보행 4키 후보를 실제 크기와 4×로 검토합니다. 기본 재생·완료 세트·실제 전투에는 포함하지 않습니다. 오른쪽은 기존 SE 8셀을 같은 순환 위상으로 대조한 것입니다. 연결·접지·장비 변화가 남아 있어 완성 동작이 아닙니다.";
 }
+const originalNote = $("#lab-view-note").textContent;
 $("#lab-e-sheet").src = import.meta.env.BASE_URL + CATALOG.banks.e035.image;
 const matrix = completionMatrix();
 const heading = document.createElement("tr");
@@ -140,6 +151,49 @@ class RiflemanLab extends Phaser.Scene {
       this.lastUI = -1;
       this.syncUI();
     };
+    this.comparisonUI = () => {
+      $("#lab-compare").setAttribute("aria-pressed", String(comparing));
+      $("#lab-compare").disabled = review;
+      $("#lab-direction").disabled = review || comparing;
+      $("#lab-action").disabled = review || comparing;
+      $("#lab-direction").value = clock.direction;
+      $("#lab-action").value = clock.action;
+      for (const id of ["#lab-direction", "#lab-action", "#lab-size"])
+        $(id).closest("label").hidden = comparing;
+      if (comparing) {
+        this.size = 39;
+        $("#lab-size").value = "39";
+      }
+      $("#lab-size").disabled = comparing;
+      $("#walk-counters").hidden = !comparing;
+      $("#lab-view-note").textContent = comparing
+        ? "왼쪽: 새 8프레임 PROTOTYPE · 오른쪽: 이전 4프레임 REJECTED. 같은 1초 주기를 실제 PNG로 반복합니다. 윗줄 39px, 아랫줄 4×. 다음 프레임은 새 그림 1/8주기씩 진행하며 이전 그림은 두 번마다 바뀝니다. 어느 보행도 완료/전투용으로 승인되지 않았습니다."
+        : originalNote;
+      this.layout();
+      changed();
+    };
+    $("#lab-compare").onclick = () => {
+      comparing = !comparing;
+      if (comparing) {
+        standardClock = clock;
+        clock = new WalkComparisonClock();
+      } else clock = standardClock;
+      const url = new URL(location.href);
+      if (comparing) url.searchParams.set("compare", "e-walk");
+      else url.searchParams.delete("compare");
+      history.replaceState(null, "", url);
+      this.comparisonUI();
+    };
+    $("#lab-play").onclick = () => {
+      clock.playing = true;
+      changed();
+    };
+    $("#lab-slow").onclick = () => {
+      clock.speed = 0.25;
+      clock.playing = true;
+      $("#lab-speed").value = "0.25";
+      changed();
+    };
     $("#lab-direction").onchange = (e) => {
       clock.setDirection(e.target.value);
       changed();
@@ -179,11 +233,11 @@ class RiflemanLab extends Phaser.Scene {
     for (const id of ["#rig-gait", "#rig-move", "#rig-aim", "#rig-weapon"])
       $(id).onchange = () => this.probe();
     this.probe();
-    this.layout();
-    this.syncUI();
+    this.comparisonUI();
     window.riflemanLabSnapshot = () => ({
       ...clock.snapshot(),
       reviewOnly: review,
+      comparing,
       displayHeight: this.size,
       magnification: 4,
       reference: this.referencePose(),
@@ -226,6 +280,7 @@ class RiflemanLab extends Phaser.Scene {
       : `표현 불가: ${this.probePlan.reason}\n실제 병사의 이동·조준 방향은 바꾸지 않고 기존 렌더러를 유지해야 합니다.`;
   }
   referencePose() {
+    if (comparing) return clock.referencePose();
     const p = clock.pose("SE");
     return p.supported
       ? p
@@ -246,7 +301,10 @@ class RiflemanLab extends Phaser.Scene {
         stacked,
         height,
         points,
-      } = laboratoryLayout(stage.clientWidth, this.size),
+      } = (comparing ? walkComparisonLayout : laboratoryLayout)(
+        stage.clientWidth,
+        this.size,
+      ),
       h = this.size * 4;
     this.stacked = stacked;
     if (Math.abs(stage.clientHeight - height) > 1)
@@ -258,15 +316,23 @@ class RiflemanLab extends Phaser.Scene {
     if (
       this.scale.width !== stage.clientWidth ||
       this.scale.height !== stage.clientHeight
-    )
+    ) {
       this.scale.setParentSize(stage.clientWidth, stage.clientHeight);
+      // setParentSize may synchronously reenter layout while orientation changes
+      // the DOM width. Never let an outer, stale layout overwrite the fresh one.
+      return this.layout();
+    }
     this.floor.clear();
     this.views.forEach((v, i) => {
       v.foot = points[i];
-      v.label.setPosition(v.foot.x, v.actual ? 38 : v.foot.y - h - 32);
+      v.label.setOrigin(0.5, comparing ? 0 : 0.5);
+      v.label.setPosition(
+        v.foot.x,
+        v.actual ? (comparing ? 8 : 38) : v.foot.y - h - (comparing ? 56 : 32),
+      );
       v.label.setWordWrapWidth(v.actual || !this.stacked ? w / 2 - 16 : w - 24);
       v.missing.setPosition(v.foot.x, v.foot.y - (v.actual ? 25 : h * 0.5));
-      const r = v.actual ? 38 : 84;
+      const r = v.actual ? 38 : comparing ? Math.min(70, w * 0.21) : 84;
       this.floor.lineStyle(1, 0x3b5058, 0.55);
       for (let j = -2; j <= 2; j++)
         this.floor.lineBetween(
@@ -283,16 +349,32 @@ class RiflemanLab extends Phaser.Scene {
   syncUI() {
     const p = clock.pose();
     $("#lab-pause").textContent = clock.playing ? "일시정지" : "계속";
+    $("#lab-play").disabled = clock.playing;
+    $("#lab-slow").setAttribute("aria-pressed", String(clock.speed === 0.25));
+    $("#lab-speed").value = String(clock.speed);
+    if (comparing) {
+      const old = clock.referencePose();
+      $("#walk-new-counter").textContent =
+        `새 보행 ${p.index + 1}/8 · PROTOTYPE`;
+      $("#walk-old-counter").textContent =
+        `이전 보행 ${old.index + 1}/4 · REJECTED`;
+    }
     $("#lab-state").textContent =
       `${p.direction} · ${ACTIONS[p.action] ?? "연결 순서"} · ${STATUS_KO[p.status]}${p.supported || p.renderable ? ` · ${p.index + 1}/${p.count}셀` : ""}\n${p.reason}`;
     $("#lab-time").max = String(clock.total() || 1);
     $("#lab-time").value = String(playbackPhase(clock));
     for (const v of this.views) {
       const q = v.selected ? p : this.referencePose(),
-        name = v.selected
-          ? `${clock.direction} 선택`
-          : `SE 기준${q.action !== p.action ? " · 낮은 준비 참고" : ""}`;
-      const text = `${name} · ${v.actual ? `${this.size}px` : "4×"}${v.selected && clock.direction === "E" ? ` · ${q.status === "verified" ? "COMPLETE" : review ? "REJECTED" : "PROTOTYPE"}` : ""}`;
+        name = comparing
+          ? v.selected
+            ? "새 8프레임 · PROTOTYPE"
+            : "이전 4프레임 · REJECTED"
+          : v.selected
+            ? `${clock.direction} 선택`
+            : `SE 기준${q.action !== p.action ? " · 낮은 준비 참고" : ""}`;
+      const text = comparing
+        ? `${name}\n${v.actual ? "39px" : "4×"} · ${q.index + 1}/${q.count}`
+        : `${name} · ${v.actual ? `${this.size}px` : "4×"}${v.selected && clock.direction === "E" ? ` · ${q.status === "verified" ? "COMPLETE" : review ? "REJECTED" : "PROTOTYPE"}` : ""}`;
       if (v.label.text !== text) v.label.setText(text);
       const missing =
         q.supported || q.renderable
@@ -314,7 +396,10 @@ class RiflemanLab extends Phaser.Scene {
       v.pose = p;
       v.bounds = null;
       if (
-        !(p.supported || (review && p.reviewOnly && p.renderable)) ||
+        !(
+          p.supported ||
+          ((review || comparing) && p.reviewOnly && p.renderable)
+        ) ||
         !f ||
         !this.textures.exists(p.bank)
       ) {

@@ -15,6 +15,9 @@
         <p>v0.3.5 · 시각 검토 전용 / 실제 전투와 분리</p>
       </header>
       <section id="lab-controls" aria-label="방향과 동작 재생">
+        <button id="lab-compare" aria-pressed="false">E 보행 비교</button>
+        <button id="lab-play">재생</button>
+        <button id="lab-slow" aria-pressed="false">느리게 · 0.25×</button>
         <label
           >방향
           <select id="lab-direction" aria-label="병사 방향"></select
@@ -48,6 +51,9 @@
         <label><input id="lab-anchors" type="checkbox" /> 기준점</label>
       </section>
       <p id="lab-state" role="status" aria-live="off"></p>
+      <div id="walk-counters" hidden aria-live="off">
+        <span id="walk-new-counter"></span><span id="walk-old-counter"></span>
+      </div>
       <p id="lab-review-warning" hidden></p>
       <label class="lab-scrub"
         >시간
