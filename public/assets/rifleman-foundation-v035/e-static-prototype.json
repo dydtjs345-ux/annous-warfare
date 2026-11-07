@@ -1,0 +1,91 @@
+{
+  "version": "0.3.5",
+  "direction": "E",
+  "status": "static-prototype",
+  "image": "e-static-prototype.png",
+  "grid": [
+    2,
+    2
+  ],
+  "frameSize": [
+    627,
+    627
+  ],
+  "nativeStandingHeight": 581,
+  "weaponIntegrated": true,
+  "animationReady": false,
+  "combatApproved": false,
+  "frames": [
+    {
+      "index": 0,
+      "action": "idle",
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        180,
+        17,
+        498,
+        598
+      ],
+      "groundContacts": "not authored",
+      "fineSockets": null
+    },
+    {
+      "index": 1,
+      "action": "lowReady",
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        179,
+        17,
+        459,
+        598
+      ],
+      "groundContacts": "not authored",
+      "fineSockets": null
+    },
+    {
+      "index": 2,
+      "action": "highReady",
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        180,
+        17,
+        520,
+        597
+      ],
+      "groundContacts": "not authored",
+      "fineSockets": null
+    },
+    {
+      "index": 3,
+      "action": "aim",
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        155,
+        23,
+        544,
+        597
+      ],
+      "groundContacts": "not authored",
+      "fineSockets": null
+    }
+  ],
+  "sourceSha256": "c01320a67cb5b0691914a75a832ad1f48e43dad7fe2b9e07c9c4e3d132bfee26",
+  "notes": [
+    "Original image-authored four-stance foundation candidate, not the supplied concept sheet.",
+    "No breathing, walk, raise, lower, turning or layered-pair cels exist.",
+    "Fine hand/stock/pelvis sockets and foot contacts require artist annotation.",
+    "Do not infer motion or independent weapon layers from these static poses."
+  ]
+}
