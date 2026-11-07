@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  background: #101a24;
+  color: #dce4e6;
+  font:
+    13px system-ui,
+    sans-serif;
+}
+#preview-app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px 12px max(16px, env(safe-area-inset-bottom));
+}
+header {
+  padding: 2px 0 6px;
+}
+h1 {
+  font-size: 17px;
+  margin: 0 0 4px;
+}
+header p {
+  color: #9db1b7;
+  margin: 0;
+  font-size: 12px;
+}
+#preview-stage {
+  width: 100%;
+  height: 420px;
+  background: #1c2b34;
+  border: 1px solid #40545e;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  image-rendering: pixelated;
+  touch-action: pan-y;
+}
+#preview-state {
+  min-height: 32px;
+  margin: 8px 0;
+  font-size: 12px;
+  color: #e6d2aa;
+}
+.phase-buttons,
+.play-controls,
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+button,
+select {
+  min-height: 40px;
+  border: 1px solid #55717b;
+  border-radius: 4px;
+  color: #e4eeee;
+  background: #243c49;
+  padding: 6px 10px;
+  font: inherit;
+  touch-action: manipulation;
+}
+button.active {
+  background: #38675b;
+  border-color: #93b7a4;
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid #e8ce9d;
+  outline-offset: 2px;
+}
+.scrubber {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0 12px;
+}
+.scrubber input {
+  flex: 1;
+  min-height: 32px;
+  accent-color: #c6ac7c;
+}
+.options label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.options input {
+  width: 18px;
+  height: 18px;
+}
+.preview-note {
+  font-size: 12px;
+  color: #a5b6bb;
+  line-height: 1.6;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+#preview-error {
+  background: #542e2e;
+  padding: 12px;
+}
+@media (max-width: 450px) {
+  #preview-app {
+    padding: 6px 8px 18px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  .phase-buttons button {
+    flex: 1 0 23%;
+    padding-inline: 5px;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  #preview-stage {
+    height: 360px;
+  }
+}
