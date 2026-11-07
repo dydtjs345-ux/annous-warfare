@@ -65,7 +65,7 @@ Mobile Chromium checks: Korean inspector expand/scroll/close/reselect, portrait/
 - M3 **499c0ea** — deterministic street fittings and flat road details.
 - M4 **387392e** — restrained cosmetic damage.
 - M5 **29ace85** — static texture ownership, unit depth and selected occlusion.
-- M6 — final visual corrections, source equivalence, complete tests/simulations and delivered QA evidence in subsequent commit.
+- M6 **1f66ca8** — final visual corrections, source equivalence, complete tests/simulations and delivered QA evidence in subsequent commit.
 
 ## Reproduce
 
@@ -95,3 +95,7 @@ No new doors/interiors, soldier scaling, weapons, tactics or map geometry. Exist
 ## Final measured mobile/cache sample
 
 The final 4× sample has 298 frames over five seconds: median/P95/max **16.7/16.8/33.4ms**. All recorded mobile checks pass with zero page errors. Layout 0 uses 82 static environment textures, 1,097,200 pixels (4,388,800 raw RGBA bytes), plus the existing 2000×1060 ground cache. This is not total GPU/browser memory: canvas/GPU copies and driver overhead are additional. See `v0291-cache-budget.json`. Physical Safari and long-session memory remain unverified.
+
+## Delivery
+
+Tested implementation commit `1f66ca805d176562b0f4ec1f7a06a27803377f61` is pushed. PR creation returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created by that command and no merge occurred. [Prepared PR description](v0291-pr-description.md). Comparison: https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v0291-urban-environment?expand=1

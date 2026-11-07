@@ -21,6 +21,7 @@ reports/v0291-mobile-selected.png
 reports/v0291-mobile.json
 reports/v0291-mobile.png
 reports/v0291-parity.json
+reports/v0291-pr-description.md
 reports/v0291-tests.txt
 reports/v0291-urban-environment-audit.md
 reports/v0291-validation.json
