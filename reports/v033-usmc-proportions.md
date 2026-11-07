@@ -113,7 +113,7 @@ Each atlas is 6,291,456 raw RGBA bytes; both banks total **12,582,912 bytes**, s
 - Tests/evidence: `test/usmc-proportions.test.js`, `scripts/*v033*`, `reports/v033-*`.
 - **1f529b0** — M1: anatomy candidate, registration, pure view geometry and focused tests.
 - **83250e4** — M2: synchronized same-scale comparison, responsive stacking and parent-size correction.
-- M3: final regression/evidence, complete recording and audit.
+- **e204071** — M3: final regression/evidence, complete recording and audit.
 
 ```sh
 npm install
@@ -136,3 +136,13 @@ node scripts/verify-v033.mjs /tmp/aw-v033-base
 ```
 
 Feature branches do not deploy production Pages automatically. No merge is authorized; this proportion candidate is provided for review with the remaining issues exposed.
+
+
+## Delivery
+
+The feature branch was pushed successfully. Draft PR creation returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created and nothing was merged. The prepared text is [v033-pull-request.md](v033-pull-request.md).
+
+- [Review/create PR against main](https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v033-usmc-proportions?expand=1)
+- [Stable latest-main baseline comparison](https://github.com/dydtjs345-ux/annous-warfare/compare/384e6e9...feat/v033-usmc-proportions)
+
+The tested implementation/evidence milestone is **e204071**. A final documentation commit records this delivery status without changing the tested code. Only the SE proportion candidate is provided; further directions and final artwork approval are outside this patch.
