@@ -1,6 +1,6 @@
 # v0.3.2 — USMC SE connected-body animation prototype
 
-Branch: **feat/v032-usmc-animation-prototype**. Foundation: **c6cc07e**, the preserved v0.3.1 work. New direction: **SE only**. No other seven-direction conversion, no automatic merge, no change to the existing battle renderer.
+Branch: **feat/v032-usmc-animation-prototype**. Foundation: **c6cc07e**, the preserved v0.3.1 work. A final fetch confirmed its tree is identical to latest main **5626262**, the PR #18 merge; no rebase or discarded work was needed. New direction: **SE only**. No other seven-direction conversion, no automatic merge, no change to the existing battle renderer.
 
 **Status: functional visual prototype for review; the reference-quality artwork requirement is NOT satisfied yet.** The new complete-body cels are substantially more detailed than the old geometric rig, but generated cloth/gear varies between frames, gait/footwork and transition polish still need a dedicated sprite artist. Tests cannot certify those qualities. Further directions and battle integration wait for visual approval.
 
@@ -130,7 +130,7 @@ These are five-second desktop Chromium RAF samples, not GPU timing or physical p
 - Regression/evidence: `test/usmc-se-animation.test.js`, `scripts/{capture-v032,record-v032,mobile-v032-preview,mobile-v032-game,check-v032-parity,verify-v032}.mjs`, `scripts/evidence-v032.sh`, this report and the `reports/v032-*` logs/data/captures.
 - **391fac2** — M1: original SE cel candidate, registration and pure connected-pose clock; focused tests and initial visual review.
 - **b1b7b54** — M2: isolated Phaser preview, comparison controls, modal lifecycle and mobile-safe UI; browser review/phase corrections.
-- M3: final suite/build, deterministic comparison, complete recording/contact sheets, mobile validation and audit.
+- **18a4769** — M3: final suite/build, deterministic comparison, complete recording/contact sheets, mobile validation and audit.
 
 ```sh
 npm install
@@ -152,3 +152,13 @@ node scripts/verify-v032.mjs /tmp/aw-v032-base
 ```
 
 Feature-branch pushes do not deploy production Pages. No merge is authorized. This candidate is provided for visual approval with the unfinished art/gait quality explicitly exposed.
+
+
+## Delivery status
+
+The branch was pushed. An attempted draft PR returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created or merged. The exact prepared body is [v032-pull-request.md](v032-pull-request.md). The reviewed implementation/evidence milestone is **18a4769**; the final documentation commit records this delivery status without changing the tested code.
+
+- [Prepared comparison against main](https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v032-usmc-animation-prototype?expand=1)
+- [Stable v0.3.1-to-v0.3.2 review](https://github.com/dydtjs345-ux/annous-warfare/compare/c6cc07e...feat/v032-usmc-animation-prototype)
+
+Only SE is provided. Artwork/gait finish remains open for visual review; no other directions or in-battle replacement will proceed before approval.
