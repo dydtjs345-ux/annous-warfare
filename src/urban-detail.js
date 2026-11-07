@@ -1,3 +1,4 @@
+import {facadeWear,groundWear} from "./battle-wear.js";
 import {drawStreetDecal} from "./street-art.js";
 // All variation derives from tile coordinates, never the simulation RNG.
 import { streetAt, inside } from "./world.js";
@@ -15,6 +16,7 @@ export function drawGroundDetail(g, x, y, p) {
   const seed =
     (Math.imul(x + 31, 73856093) ^ Math.imul(y + 71, 19349663)) >>> 0;
   drawStreetDecal(g,x,y,p,road,seed);
+  if(road||pavement)groundWear(g,p,seed);
   if (pavement) {
     g.fillStyle(0x657077, 0.8);
     g.fillPoints(
@@ -75,6 +77,7 @@ export function drawBuildingDetail(g,h,iso,height=32){
   }
   panel(.78,.87,2,7,0xc0b48f,.7);panel(.79,.86,4,5,0x516e76);
   const pipeA=wallPoint(u,v,.96,height-1),pipeB=wallPoint(u,v,.96,1);g.lineStyle(3,0x32454d);g.lineBetween(pipeA.x,pipeA.y,pipeB.x,pipeB.y);g.lineStyle(1,0x9ca9a4,.7);g.lineBetween(pipeA.x-1,pipeA.y,pipeB.x-1,pipeB.y);
+  facadeWear(g,wallPoint,u,v,h.x+h.y+(bright?1:0));
   // Wall-mounted vent and a fixed, shut service panel; no doorway is navigable.
   panel(.05,.15,2,8,0x31454d);for(let z=3;z<8;z+=2){const q=wallPoint(u,v,.055,z),r=wallPoint(u,v,.145,z);g.lineStyle(1,0x84938e);g.lineBetween(q.x,q.y,r.x,r.y);}
  }
