@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "character": "USMC rifleman #1",
+  "direction": "E",
+  "baseline": "9626d592d0ac98238923445e5031a8b0e9abf6ca",
+  "status": "prototype",
+  "sources": [
+    {
+      "file": "frame-01.png",
+      "sha256": "1b8e03bb2455338cb3105beed02bcd30708d3b9e4aa207e0b2fcad5207536130",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored key candidate; full-loop review pending"
+    },
+    {
+      "file": "frame-03.png",
+      "sha256": "e9db9a9a0011c7764ccb1be32a5dd113f99d530c5a224ee33a7839ce794138dc",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored key candidate; full-loop review pending"
+    },
+    {
+      "file": "frame-05.png",
+      "sha256": "b4ebc34877a617e0fdf703cf8877198d39e8fb0c5665d5f1a1b73d50350e673b",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored key candidate; full-loop review pending"
+    }
+  ]
+}
