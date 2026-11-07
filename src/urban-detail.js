@@ -47,69 +47,33 @@ export function drawGroundDetail(g, x, y, p) {
     g.lineBetween(p.x - 3, p.y + 1, p.x + 7, p.y + 1);
   }
 }
-export function drawBuildingDetail(g, h, iso, height = 32) {
-  const a = iso(h.x - 0.5, h.y - 0.5),
-    b = iso(h.x + h.w - 0.5, h.y - 0.5),
-    c = iso(h.x + h.w - 0.5, h.y + h.h - 0.5),
-    d = iso(h.x - 0.5, h.y + h.h - 0.5);
-  const point = (u, v, t, z = 0) => ({
-    x: u.x + (v.x - u.x) * t,
-    y: u.y + (v.y - u.y) * t - z,
-  });
-  // Roof membrane seams, raised parapet and weathered wall masonry.
-  g.lineStyle(1, 0x7d9098, 0.25);
-  for (let i = 1; i < h.w; i++) {
-    const q = point(a, b, i / h.w, height),
-      r = point(d, c, i / h.w, height);
-    g.lineBetween(q.x, q.y, r.x, r.y);
+// Every facade ornament is parameterized on its own wall plane.
+export const wallPoint=(a,b,t,z)=>({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t-z});
+export function wallQuad(a,b,left,right,bottom,top){return [wallPoint(a,b,left,top),wallPoint(a,b,right,top),wallPoint(a,b,right,bottom),wallPoint(a,b,left,bottom)];}
+export function buildingPalette(h){const variant=(h.x*3+h.y*7)%3;return [{dark:0x56636a,light:0x768189,roof:0x354953},{dark:0x625d57,light:0x8b8172,roof:0x414b50},{dark:0x53665f,light:0x7c8c82,roof:0x3e4e52}][variant];}
+export function drawBuildingDetail(g,h,iso,height=32){
+ const a=iso(h.x-.5,h.y-.5),b=iso(h.x+h.w-.5,h.y-.5),c=iso(h.x+h.w-.5,h.y+h.h-.5),d=iso(h.x-.5,h.y+h.h-.5),variant=(h.x*3+h.y*7)%3;
+ // Roof panels and parapet remain entirely on the existing inaccessible roof.
+ g.lineStyle(1,0x87969a,.3);for(let i=1;i<h.w;i++){const q=wallPoint(a,b,i/h.w,height),r=wallPoint(d,c,i/h.w,height);g.lineBetween(q.x,q.y,r.x,r.y);}
+ if(variant===1)for(let i=1;i<h.h;i++){const q=wallPoint(a,d,i/h.h,height),r=wallPoint(b,c,i/h.h,height);g.lineStyle(1,0x182c36,.55);g.lineBetween(q.x,q.y,r.x,r.y);}
+ g.lineStyle(2,0x1a2b34,.9);for(const [u,v] of [[a,b],[b,c],[c,d],[d,a]])g.lineBetween(u.x,u.y-height+2,v.x,v.y-height+2);
+ g.lineStyle(1,0xa6b4af,.8);g.lineBetween(d.x,d.y-height,c.x,c.y-height);g.lineBetween(b.x,b.y-height,c.x,c.y-height);
+ for(const [u,v,n,bright] of [[d,c,h.w,false],[b,c,h.h,true]]){
+  const panel=(l,r,bot,top,color,alpha=1)=>{g.fillStyle(color,alpha);g.fillPoints(wallQuad(u,v,l,r,bot,top),true);};
+  for(let z=4;z<height;z+=7){g.lineStyle(1,0x35454b,.3);const q=wallPoint(u,v,0,z),r=wallPoint(u,v,1,z);g.lineBetween(q.x,q.y,r.x,r.y);}
+  for(let i=0;i<n;i++){
+   const left=(i+.24)/n,right=(i+.76)/n,door=i===1&&!bright;
+   if(door){panel(left-.035,right+.035,0,26,0x354048);panel(left,right,0,24,0x283a42);panel(left+.04,right-.04,3,21,0x47555a);const knob=wallPoint(u,v,right-.025,11);g.fillStyle(0xb2a98b);g.fillRect(knob.x,knob.y,2,2);continue;}
+   // Outer frame, inner recess, glass, mullion and sill all share the same plane.
+   panel(left-.02,right+.02,10,27,bright?0xa0a9a3:0x7f8d8b);
+   panel(left,right,11,26,0x182a33);panel(left+.025,right-.025,12,25,bright?0x36525d:0x29434f);
+   const mid=(left+right)/2;panel(mid-.008,mid+.008,11,26,0x899a9e);
+   const glintA=wallPoint(u,v,left+.04,23),glintB=wallPoint(u,v,Math.min(right-.04,left+.13),17);g.lineStyle(1,0xa4c0c6,.6);g.lineBetween(glintA.x,glintA.y,glintB.x,glintB.y);
+   panel(left-.035,right+.035,9,11,bright?0xaab1a4:0x8b9c97);panel(left-.035,right+.035,8,9,0x33454c);
   }
-  g.lineStyle(2, 0x1c2c36, 0.8);
-  for (const [u, v] of [
-    [a, b],
-    [b, c],
-    [c, d],
-    [d, a],
-  ]) {
-    g.lineBetween(u.x, u.y - height + 2, v.x, v.y - height + 2);
-  }
-  g.lineStyle(1, 0xa1aca7, 0.65);
-  g.lineBetween(d.x, d.y - height, c.x, c.y - height);
-  g.lineBetween(b.x, b.y - height, c.x, c.y - height);
-  for (const [u, v, n, bright] of [
-    [d, c, h.w, false],
-    [b, c, h.h, true],
-  ]) {
-    for (let i = 0; i < n; i++) {
-      const q = point(u, v, (i + 0.5) / n);
-      g.fillStyle(0x172b37, 0.9);
-      g.fillPoints(
-        [
-          { x: q.x - 5, y: q.y - 24 },
-          { x: q.x + 4, y: q.y - 20 },
-          { x: q.x + 4, y: q.y - 10 },
-          { x: q.x - 5, y: q.y - 14 },
-        ],
-        true,
-      );
-      g.lineStyle(1, bright ? 0x9aa9a8 : 0x738585, 0.8);
-      g.lineBetween(q.x - 5, q.y - 13, q.x + 4, q.y - 9);
-      g.lineStyle(1, 0x41545c, 0.8);
-      g.lineBetween(q.x, q.y - 22, q.x, q.y - 12);
-    }
-    for (let z = 5; z < height; z += 8) {
-      g.lineStyle(1, 0x354750, 0.4);
-      g.lineBetween(u.x, u.y - z, v.x, v.y - z);
-    }
-  }
-  const center = { x: (a.x + c.x) / 2, y: (a.y + c.y) / 2 - height };
-  g.fillStyle(0x1c2e38, 0.8);
-  g.fillEllipse(center.x + 3, center.y + 3, 26, 10);
-  g.fillStyle(0x61717a);
-  g.fillRect(center.x - 8, center.y - 7, 17, 9);
-  g.fillStyle(0x87928d);
-  g.fillRect(center.x - 8, center.y - 8, 17, 2);
-  for (let i = 0; i < 4; i++) {
-    g.fillStyle(0x263b47);
-    g.fillRect(center.x - 5 + i * 3, center.y - 5, 1, 4);
-  }
+  const pipeA=wallPoint(u,v,.96,height-1),pipeB=wallPoint(u,v,.96,1);g.lineStyle(3,0x32454d);g.lineBetween(pipeA.x,pipeA.y,pipeB.x,pipeB.y);g.lineStyle(1,0x9ca9a4,.7);g.lineBetween(pipeA.x-1,pipeA.y,pipeB.x-1,pipeB.y);
+  // Wall-mounted vent and a fixed, shut service panel; no doorway is navigable.
+  panel(.05,.15,2,8,0x31454d);for(let z=3;z<8;z+=2){const q=wallPoint(u,v,.055,z),r=wallPoint(u,v,.145,z);g.lineStyle(1,0x84938e);g.lineBetween(q.x,q.y,r.x,r.y);}
+ }
+ const p={x:(a.x+c.x)/2,y:(a.y+c.y)/2-height};g.fillStyle(0x1d303a,.65);g.fillEllipse(p.x+4,p.y+4,25,10);g.fillStyle(0x6b7b80);g.fillRect(p.x-8,p.y-7,17,9);g.fillStyle(0xa1aaa0);g.fillRect(p.x-8,p.y-8,17,2);for(let i=0;i<4;i++){g.fillStyle(0x243c47);g.fillRect(p.x-5+i*3,p.y-5,1,4);}
 }

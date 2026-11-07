@@ -1,6 +1,6 @@
 import { MotionPresentation } from "./motion-presentation.js";
 import { CombatAtmosphere } from "./combat-atmosphere.js";
-import { drawGroundDetail, drawBuildingDetail } from "./urban-detail.js";
+import { drawGroundDetail, drawBuildingDetail, buildingPalette } from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
@@ -396,18 +396,19 @@ class Battlefield extends Phaser.Scene {
       ],
       true,
     );
-    g.fillStyle(0x4c606a);
+    const palette=buildingPalette(h);
+    g.fillStyle(palette.dark);
     g.fillPoints(
       [{ x: d.x, y: d.y - height }, { x: c.x, y: c.y - height }, c, d],
       true,
     );
-    g.fillStyle(0x677b80);
+    g.fillStyle(palette.light);
     g.fillPoints(
       [{ x: b.x, y: b.y - height }, { x: c.x, y: c.y - height }, c, b],
       true,
     );
     const roof = [a, b, c, d].map((p) => ({ x: p.x, y: p.y - height }));
-    g.fillStyle(0x344852);
+    g.fillStyle(palette.roof);
     g.fillPoints(roof, true);
     drawBuildingDetail(g, h, this.iso, height);
     g.lineStyle(2, 0x819294);
