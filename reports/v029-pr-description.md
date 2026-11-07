@@ -13,3 +13,9 @@ Original layered infantry pixel clusters (helmet, vest/pouches, straps, directio
 Full audit: reports/v029-hybrid-visual-audit.md
 
 Limitations: procedural rather than authored eight-direction sprite atlases; repeated materials remain visible; no invented missed-bullet terrain impacts; no real-device thermal/memory guarantee. Existing AI/medical/tactical limitations remain untouched. Do not merge automatically.
+
+## Added smooth-motion priority
+
+Render-only previous/current tick buffering now drives soldier positions, picking, depth order and camera focus. Shortest-angle observation/weapon easing, actual-distance stride and authoritative action phases reduce snapping. Real shots force their recorded angle; full concealment and incapacity retain immediate boundaries. Pause/restart/speed switches are tested. No AI, RNG, tick or weapon/medical change.
+
+Final validation: 231 passing tests, successful build, 440 recorded complete executions, final 40 paired cases with motion enabled identical to baseline and pre-motion hashes. Actual gameplay recording and consecutive movement/treatment/reload/mount frame sheets are in reports/v029-hybrid-visual-audit.md. Physical iPhone Safari remains unverified.
