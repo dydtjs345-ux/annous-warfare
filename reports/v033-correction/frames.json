@@ -1,0 +1,6633 @@
+{
+  "baseline": "a920240",
+  "method": "Production preview, baseline PNG/metadata routed from git show a920240; same 39px/4x, phase/time-slider seeks. Browser screenshots only.",
+  "assetSha256": "8ae5e0d68d662257347fb872f44e2547560e1652aa6f0010fc5bb816ea3c609c",
+  "records": [
+    {
+      "revision": "before",
+      "mode": "idle",
+      "frame": 0,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 0,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "idle",
+          "local": 0.02,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 0,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.4365853658537,
+              "top": 101.19024390243902,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 0,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 767.2463414634146,
+              "top": 232.7609756097561,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.835
+          },
+          {
+            "x": 292.32,
+            "y": 351.34
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 130.10731707317072
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 348.42926829268293
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "idle",
+      "frame": 1,
+      "index": 1,
+      "time": 0.37,
+      "snapshot": {
+        "time": 0.37,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 1,
+          "index": 1,
+          "phaseTime": 0.37,
+          "frameAge": 0.020000000000000018,
+          "clip": "idle",
+          "local": 0.37,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 1,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 251.955,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 1,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 292.32,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 1,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.8463414634147,
+              "right": 728.4365853658537,
+              "top": 101.19024390243902,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 1,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.8853658536585,
+              "right": 767.2463414634146,
+              "top": 232.7609756097561,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.76,
+            "y": 130.9325
+          },
+          {
+            "x": 291.54,
+            "y": 351.73
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 130.10731707317072
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 348.42926829268293
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "idle",
+      "frame": 2,
+      "index": 2,
+      "time": 0.72,
+      "snapshot": {
+        "time": 0.72,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 2,
+          "index": 2,
+          "phaseTime": 0.72,
+          "frameAge": 0.020000000000000018,
+          "clip": "idle",
+          "local": 0.72,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 2,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 2,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 2,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.4365853658537,
+              "top": 101.19024390243902,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 2,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 767.2463414634146,
+              "top": 232.7609756097561,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.9325
+          },
+          {
+            "x": 292.32,
+            "y": 351.73
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 130.10731707317072
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 348.42926829268293
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "idle",
+      "frame": 3,
+      "index": 3,
+      "time": 1.0699999999999998,
+      "snapshot": {
+        "time": 1.07,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 3,
+          "index": 3,
+          "phaseTime": 1.07,
+          "frameAge": 0.02000000000000024,
+          "clip": "idle",
+          "local": 1.07,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 3,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 3,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 3,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.8463414634147,
+              "right": 728.4365853658537,
+              "top": 101.19024390243902,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 3,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.8853658536585,
+              "right": 767.2463414634146,
+              "top": 232.7609756097561,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.9325
+          },
+          {
+            "x": 292.32,
+            "y": 351.73
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 130.0121951219512
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 348.0487804878049
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 4,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 4,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "walk",
+          "local": 0.02,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0.35100000000000003,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.735,
+              "top": 101,
+              "bottom": 140.585
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 295.44,
+              "top": 232,
+              "bottom": 390.34
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 4,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.4658536585366,
+              "right": 728.4365853658537,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 4,
+            "groundY": 388,
+            "bounds": {
+              "left": 671.3634146341464,
+              "right": 767.2463414634146,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.47
+          },
+          {
+            "x": 294.66,
+            "y": 345.88
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 129.34634146341463
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 345.3853658536585
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 5,
+      "index": 1,
+      "time": 0.15,
+      "snapshot": {
+        "time": 0.15,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 5,
+          "index": 1,
+          "phaseTime": 0.15,
+          "frameAge": 0.01999999999999999,
+          "clip": "walk",
+          "local": 0.15,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 2.6325000000000003,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.54,
+              "top": 100.805,
+              "bottom": 140.39
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 294.66,
+              "top": 231.22,
+              "bottom": 389.56
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 5,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.2463414634146,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 5,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 766.4853658536585,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 129.47
+          },
+          {
+            "x": 293.88,
+            "y": 345.88
+          },
+          {
+            "x": 728.0560975609756,
+            "y": 129.63170731707316
+          },
+          {
+            "x": 765.7243902439025,
+            "y": 346.52682926829266
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 6,
+      "index": 2,
+      "time": 0.27,
+      "snapshot": {
+        "time": 0.27,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 6,
+          "index": 2,
+          "phaseTime": 0.27,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.27,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 4.7385,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.54,
+              "top": 100.805,
+              "bottom": 140.78
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 294.66,
+              "top": 231.22,
+              "bottom": 391.12
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 6,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.2463414634146,
+              "top": 101.19024390243902,
+              "bottom": 140.38048780487804
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 6,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 766.4853658536585,
+              "top": 232.7609756097561,
+              "bottom": 389.5219512195122
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 129.5675
+          },
+          {
+            "x": 293.88,
+            "y": 346.27
+          },
+          {
+            "x": 728.0560975609756,
+            "y": 129.63170731707316
+          },
+          {
+            "x": 765.7243902439025,
+            "y": 346.52682926829266
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 7,
+      "index": 3,
+      "time": 0.39,
+      "snapshot": {
+        "time": 0.39,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 7,
+          "index": 3,
+          "phaseTime": 0.39,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.39,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 6.844500000000001,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.93,
+              "top": 100.22,
+              "bottom": 141.56
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 296.22,
+              "top": 228.88,
+              "bottom": 394.24
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 7,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.6268292682927,
+              "top": 101.19024390243902,
+              "bottom": 140.7609756097561
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 7,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 768.0073170731707,
+              "top": 232.7609756097561,
+              "bottom": 391.0439024390244
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.735,
+            "y": 129.47
+          },
+          {
+            "x": 295.44,
+            "y": 345.88
+          },
+          {
+            "x": 728.4365853658537,
+            "y": 129.25121951219512
+          },
+          {
+            "x": 767.2463414634146,
+            "y": 345.0048780487805
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 8,
+      "index": 4,
+      "time": 0.52,
+      "snapshot": {
+        "time": 0.52,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 8,
+          "index": 4,
+          "phaseTime": 0.52,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.52,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 9.126000000000001,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.735,
+              "top": 100.61,
+              "bottom": 141.365
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 295.44,
+              "top": 230.44,
+              "bottom": 393.46
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 8,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.6268292682927,
+              "top": 101.19024390243902,
+              "bottom": 140.57073170731707
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 8,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 768.0073170731707,
+              "top": 232.7609756097561,
+              "bottom": 390.2829268292683
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.47
+          },
+          {
+            "x": 294.66,
+            "y": 345.88
+          },
+          {
+            "x": 728.4365853658537,
+            "y": 128.9658536585366
+          },
+          {
+            "x": 767.2463414634146,
+            "y": 343.86341463414635
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 9,
+      "index": 5,
+      "time": 0.65,
+      "snapshot": {
+        "time": 0.65,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 9,
+          "index": 5,
+          "phaseTime": 0.65,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.65,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 11.4075,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.385,
+              "right": 252.735,
+              "top": 101,
+              "bottom": 140.585
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.04,
+              "right": 295.44,
+              "top": 232,
+              "bottom": 390.34
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 9,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.6268292682927,
+              "top": 101.19024390243902,
+              "bottom": 140.57073170731707
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 9,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 768.0073170731707,
+              "top": 232.7609756097561,
+              "bottom": 390.2829268292683
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.08
+          },
+          {
+            "x": 294.66,
+            "y": 344.32
+          },
+          {
+            "x": 728.4365853658537,
+            "y": 128.87073170731708
+          },
+          {
+            "x": 767.2463414634146,
+            "y": 343.4829268292683
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 10,
+      "index": 6,
+      "time": 0.77,
+      "snapshot": {
+        "time": 0.77,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 10,
+          "index": 6,
+          "phaseTime": 0.77,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.77,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 13.5135,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.58,
+              "right": 253.125,
+              "top": 101,
+              "bottom": 140.975
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.82,
+              "right": 297,
+              "top": 232,
+              "bottom": 391.9
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 10,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.8463414634147,
+              "right": 728.6268292682927,
+              "top": 101.19024390243902,
+              "bottom": 140.57073170731707
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 10,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.8853658536585,
+              "right": 768.0073170731707,
+              "top": 232.7609756097561,
+              "bottom": 390.2829268292683
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.93,
+            "y": 128.7875
+          },
+          {
+            "x": 296.22,
+            "y": 343.15
+          },
+          {
+            "x": 728.4365853658537,
+            "y": 128.87073170731708
+          },
+          {
+            "x": 767.2463414634146,
+            "y": 343.4829268292683
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "walk",
+      "frame": 11,
+      "index": 7,
+      "time": 0.89,
+      "snapshot": {
+        "time": 0.89,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 11,
+          "index": 7,
+          "phaseTime": 0.89,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.89,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 15.619499999999999,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.58,
+              "right": 253.515,
+              "top": 101,
+              "bottom": 140.975
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.82,
+              "right": 298.56,
+              "top": 232,
+              "bottom": 391.9
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 11,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.8463414634147,
+              "right": 728.8170731707318,
+              "top": 101.19024390243902,
+              "bottom": 140.57073170731707
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 11,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.8853658536585,
+              "right": 768.7682926829268,
+              "top": 232.7609756097561,
+              "bottom": 390.2829268292683
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 253.32,
+            "y": 128.7875
+          },
+          {
+            "x": 297.78,
+            "y": 343.15
+          },
+          {
+            "x": 728.6268292682927,
+            "y": 128.58536585365854
+          },
+          {
+            "x": 768.0073170731707,
+            "y": 342.3414634146342
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "raise",
+      "frame": 12,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 12,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "raise",
+          "local": 0.02,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 12,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 728.4365853658537,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 12,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 767.2463414634146,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.835
+          },
+          {
+            "x": 292.32,
+            "y": 351.34
+          },
+          {
+            "x": 728.2463414634146,
+            "y": 130.10731707317072
+          },
+          {
+            "x": 766.4853658536585,
+            "y": 348.42926829268293
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "raise",
+      "frame": 13,
+      "index": 1,
+      "time": 0.16,
+      "snapshot": {
+        "time": 0.16,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 13,
+          "index": 1,
+          "phaseTime": 0.16,
+          "frameAge": 0.01999999999999999,
+          "clip": "raise",
+          "local": 0.16,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 254.49,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 302.46,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 13,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.6560975609756,
+              "right": 730.1487804878049,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 13,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.1243902439024,
+              "right": 774.0951219512195,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 254.295,
+            "y": 126.155
+          },
+          {
+            "x": 301.68,
+            "y": 332.62
+          },
+          {
+            "x": 729.9585365853659,
+            "y": 125.2560975609756
+          },
+          {
+            "x": 773.3341463414635,
+            "y": 329.0243902439024
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "raise",
+      "frame": 14,
+      "index": 2,
+      "time": 0.32000000000000006,
+      "snapshot": {
+        "time": 0.32,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 14,
+          "index": 2,
+          "phaseTime": 0.32,
+          "frameAge": 0.019999999999999962,
+          "clip": "raise",
+          "local": 0.32,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.8,
+              "right": 256.44,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14,
+            "groundY": 388,
+            "bounds": {
+              "left": 191.7,
+              "right": 310.26,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 14,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.4658536585366,
+              "right": 732.6219512195122,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 14,
+            "groundY": 388,
+            "bounds": {
+              "left": 671.3634146341464,
+              "right": 783.9878048780488,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 256.245,
+            "y": 120.0125
+          },
+          {
+            "x": 309.48,
+            "y": 308.05
+          },
+          {
+            "x": 732.4317073170731,
+            "y": 119.45365853658537
+          },
+          {
+            "x": 783.2268292682927,
+            "y": 305.81463414634146
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "raise",
+      "frame": 15,
+      "index": 3,
+      "time": 0.4800000000000001,
+      "snapshot": {
+        "time": 0.48,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 15,
+          "index": 3,
+          "phaseTime": 0.48,
+          "frameAge": 0.019999999999999907,
+          "clip": "raise",
+          "local": 0.48,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.41,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.14,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 15,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.4658536585366,
+              "right": 733.3829268292683,
+              "top": 101.38048780487804,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 15,
+            "groundY": 388,
+            "bounds": {
+              "left": 671.3634146341464,
+              "right": 787.0317073170731,
+              "top": 233.5219512195122,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 114.9425
+          },
+          {
+            "x": 313.38,
+            "y": 287.77
+          },
+          {
+            "x": 733.1926829268293,
+            "y": 114.41219512195121
+          },
+          {
+            "x": 786.270731707317,
+            "y": 285.64878048780486
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "aim",
+      "frame": 16,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "aim",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 16,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "aim",
+          "local": 0.02,
+          "label": "조준 · 견착 유지",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.8,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.215,
+              "right": 257.61,
+              "top": 101.39,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16,
+            "groundY": 388,
+            "bounds": {
+              "left": 189.36,
+              "right": 314.94,
+              "top": 233.56,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 16,
+            "groundY": 140,
+            "bounds": {
+              "left": 703.8951219512195,
+              "right": 733.7634146341463,
+              "top": 101.57073170731707,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 16,
+            "groundY": 388,
+            "bounds": {
+              "left": 669.0804878048781,
+              "right": 788.5536585365853,
+              "top": 234.2829268292683,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.9675
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.87
+          },
+          {
+            "x": 733.5731707317074,
+            "y": 113.27073170731707
+          },
+          {
+            "x": 787.7926829268292,
+            "y": 281.0829268292683
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "fire",
+      "frame": 17,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 17,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "fire",
+          "local": 0.02,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": true,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 17,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.0853658536586,
+              "right": 733.7634146341463,
+              "top": 101.57073170731707,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 17,
+            "groundY": 388,
+            "bounds": {
+              "left": 669.8414634146342,
+              "right": 788.5536585365853,
+              "top": 234.2829268292683,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 313.38,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.5731707317074,
+            "y": 113.17560975609756
+          },
+          {
+            "x": 787.7926829268292,
+            "y": 280.70243902439023
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "fire",
+      "frame": 18,
+      "index": 1,
+      "time": 0.075,
+      "snapshot": {
+        "time": 0.075,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 18,
+          "index": 1,
+          "phaseTime": 0.075,
+          "frameAge": 0.019999999999999997,
+          "clip": "fire",
+          "local": 0.075,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.61,
+              "top": 101,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.94,
+              "top": 232,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 18,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.0853658536586,
+              "right": 733.7634146341463,
+              "top": 101.57073170731707,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 18,
+            "groundY": 388,
+            "bounds": {
+              "left": 669.8414634146342,
+              "right": 788.5536585365853,
+              "top": 234.2829268292683,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.5731707317074,
+            "y": 113.17560975609756
+          },
+          {
+            "x": 787.7926829268292,
+            "y": 280.70243902439023
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "fire",
+      "frame": 19,
+      "index": 2,
+      "time": 0.13999999999999999,
+      "snapshot": {
+        "time": 0.14,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 19,
+          "index": 2,
+          "phaseTime": 0.14,
+          "frameAge": 0.020000000000000018,
+          "clip": "fire",
+          "local": 0.14,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 19,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.0853658536586,
+              "right": 733.7634146341463,
+              "top": 101.57073170731707,
+              "bottom": 140.19024390243902
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 19,
+            "groundY": 388,
+            "bounds": {
+              "left": 669.8414634146342,
+              "right": 788.5536585365853,
+              "top": 234.2829268292683,
+              "bottom": 388.7609756097561
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 313.38,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.5731707317074,
+            "y": 113.27073170731707
+          },
+          {
+            "x": 787.7926829268292,
+            "y": 281.0829268292683
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "lower",
+      "frame": 20,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 20,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "lower",
+          "local": 0.02,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.215,
+              "right": 257.61,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20,
+            "groundY": 388,
+            "bounds": {
+              "left": 189.36,
+              "right": 314.94,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 20,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.0853658536586,
+              "right": 733.7634146341463,
+              "top": 101.38048780487804,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 20,
+            "groundY": 388,
+            "bounds": {
+              "left": 669.8414634146342,
+              "right": 788.5536585365853,
+              "top": 233.5219512195122,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.9675
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.87
+          },
+          {
+            "x": 733.5731707317074,
+            "y": 113.17560975609756
+          },
+          {
+            "x": 787.7926829268292,
+            "y": 280.70243902439023
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "lower",
+      "frame": 21,
+      "index": 1,
+      "time": 0.16999999999999998,
+      "snapshot": {
+        "time": 0.17,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 21,
+          "index": 1,
+          "phaseTime": 0.17,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.17,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.41,
+              "right": 257.22,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.14,
+              "right": 313.38,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 21,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.2756097560975,
+              "right": 733.1926829268293,
+              "top": 101.38048780487804,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 21,
+            "groundY": 388,
+            "bounds": {
+              "left": 670.6024390243903,
+              "right": 786.270731707317,
+              "top": 233.5219512195122,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.025,
+            "y": 116.8925
+          },
+          {
+            "x": 312.6,
+            "y": 295.57
+          },
+          {
+            "x": 733.0024390243902,
+            "y": 116.79024390243902
+          },
+          {
+            "x": 785.509756097561,
+            "y": 295.16097560975606
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "lower",
+      "frame": 22,
+      "index": 2,
+      "time": 0.35,
+      "snapshot": {
+        "time": 0.35,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 22,
+          "index": 2,
+          "phaseTime": 0.35,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.35,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.605,
+              "right": 254.88,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.92000000000002,
+              "right": 304.02,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 22,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.4658536585366,
+              "right": 730.909756097561,
+              "top": 101.38048780487804,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 22,
+            "groundY": 388,
+            "bounds": {
+              "left": 671.3634146341464,
+              "right": 777.1390243902439,
+              "top": 233.5219512195122,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 254.685,
+            "y": 125.0825
+          },
+          {
+            "x": 303.24,
+            "y": 328.33
+          },
+          {
+            "x": 730.719512195122,
+            "y": 125.1609756097561
+          },
+          {
+            "x": 776.3780487804878,
+            "y": 328.6439024390244
+          }
+        ]
+      }
+    },
+    {
+      "revision": "before",
+      "mode": "lower",
+      "frame": 23,
+      "index": 3,
+      "time": 0.53,
+      "snapshot": {
+        "time": 0.53,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 23,
+          "index": 3,
+          "phaseTime": 0.53,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.53,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.385,
+              "right": 252.54,
+              "top": 101,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.04,
+              "right": 294.66,
+              "top": 232,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.1902439024390244,
+            "scaleY": 0.1902439024390244,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 23,
+            "groundY": 140,
+            "bounds": {
+              "left": 704.8463414634147,
+              "right": 728.6268292682927,
+              "top": 101.38048780487804,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7609756097560976,
+            "scaleY": 0.7609756097560976,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.9609375,
+            "frame": 23,
+            "groundY": 388,
+            "bounds": {
+              "left": 672.8853658536585,
+              "right": 768.0073170731707,
+              "top": 233.5219512195122,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 130.64
+          },
+          {
+            "x": 293.88,
+            "y": 350.56
+          },
+          {
+            "x": 728.4365853658537,
+            "y": 130.10731707317072
+          },
+          {
+            "x": 767.2463414634146,
+            "y": 348.42926829268293
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "idle",
+      "frame": 0,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 0,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "idle",
+          "local": 0.02,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 0,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.1417910447761,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 0,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.0671641791045,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.835
+          },
+          {
+            "x": 292.32,
+            "y": 351.34
+          },
+          {
+            "x": 726.9477611940299,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 761.2910447761194,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "idle",
+      "frame": 1,
+      "index": 1,
+      "time": 0.37,
+      "snapshot": {
+        "time": 0.37,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 1,
+          "index": 1,
+          "phaseTime": 0.37,
+          "frameAge": 0.020000000000000018,
+          "clip": "idle",
+          "local": 0.37,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 1,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 251.955,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 1,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 292.32,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 1,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 1,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.76,
+            "y": 130.9325
+          },
+          {
+            "x": 291.54,
+            "y": 351.73
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "idle",
+      "frame": 2,
+      "index": 2,
+      "time": 0.72,
+      "snapshot": {
+        "time": 0.72,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 2,
+          "index": 2,
+          "phaseTime": 0.72,
+          "frameAge": 0.020000000000000018,
+          "clip": "idle",
+          "local": 0.72,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 2,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 2,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 2,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 2,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.9325
+          },
+          {
+            "x": 292.32,
+            "y": 351.73
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "idle",
+      "frame": 3,
+      "index": 3,
+      "time": 1.0699999999999998,
+      "snapshot": {
+        "time": 1.07,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 3,
+          "index": 3,
+          "phaseTime": 1.07,
+          "frameAge": 0.02000000000000024,
+          "clip": "idle",
+          "local": 1.07,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 3,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140.195
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 3,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388.78
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 3,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 3,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.9325
+          },
+          {
+            "x": 292.32,
+            "y": 351.73
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 4,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 4,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "walk",
+          "local": 0.02,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0.35100000000000003,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.735,
+              "top": 101,
+              "bottom": 140.585
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 295.44,
+              "top": 232,
+              "bottom": 390.34
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 4,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.1417910447761,
+              "top": 101.38805970149254,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 4,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.0671641791045,
+              "top": 233.55223880597015,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.47
+          },
+          {
+            "x": 294.66,
+            "y": 345.88
+          },
+          {
+            "x": 726.9477611940299,
+            "y": 128.06716417910448
+          },
+          {
+            "x": 761.2910447761194,
+            "y": 340.2686567164179
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 5,
+      "index": 1,
+      "time": 0.15,
+      "snapshot": {
+        "time": 0.15,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 5,
+          "index": 1,
+          "phaseTime": 0.15,
+          "frameAge": 0.01999999999999999,
+          "clip": "walk",
+          "local": 0.15,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 2.6325000000000003,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.54,
+              "top": 100.805,
+              "bottom": 140.39
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 294.66,
+              "top": 231.22,
+              "bottom": 389.56
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 5,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.1417910447761,
+              "top": 101.19402985074626,
+              "bottom": 139.80597014925374
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 5,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.0671641791045,
+              "top": 232.77611940298507,
+              "bottom": 387.2238805970149
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 129.47
+          },
+          {
+            "x": 293.88,
+            "y": 345.88
+          },
+          {
+            "x": 726.9477611940299,
+            "y": 128.06716417910448
+          },
+          {
+            "x": 761.2910447761194,
+            "y": 340.2686567164179
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 6,
+      "index": 2,
+      "time": 0.27,
+      "snapshot": {
+        "time": 0.27,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 6,
+          "index": 2,
+          "phaseTime": 0.27,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.27,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 4.7385,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.995,
+              "right": 252.54,
+              "top": 100.805,
+              "bottom": 140.78
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6,
+            "groundY": 388,
+            "bounds": {
+              "left": 192.48,
+              "right": 294.66,
+              "top": 231.22,
+              "bottom": 391.12
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 6,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 6,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 129.5675
+          },
+          {
+            "x": 293.88,
+            "y": 346.27
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 128.06716417910448
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 340.2686567164179
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 7,
+      "index": 3,
+      "time": 0.39,
+      "snapshot": {
+        "time": 0.39,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 7,
+          "index": 3,
+          "phaseTime": 0.39,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.39,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 6.844500000000001,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.93,
+              "top": 100.22,
+              "bottom": 141.56
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 296.22,
+              "top": 228.88,
+              "bottom": 394.24
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 7,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.38805970149255
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 7,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 389.55223880597015
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.735,
+            "y": 129.47
+          },
+          {
+            "x": 295.44,
+            "y": 345.88
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 127.97014925373134
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 339.88059701492534
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 8,
+      "index": 4,
+      "time": 0.52,
+      "snapshot": {
+        "time": 0.52,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 8,
+          "index": 4,
+          "phaseTime": 0.52,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.52,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 9.126000000000001,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.735,
+              "top": 100.61,
+              "bottom": 141.365
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 295.44,
+              "top": 230.44,
+              "bottom": 393.46
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 8,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.1417910447761,
+              "top": 101.19402985074626,
+              "bottom": 139.80597014925374
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 8,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.0671641791045,
+              "top": 232.77611940298507,
+              "bottom": 387.2238805970149
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.47
+          },
+          {
+            "x": 294.66,
+            "y": 345.88
+          },
+          {
+            "x": 726.9477611940299,
+            "y": 128.06716417910448
+          },
+          {
+            "x": 761.2910447761194,
+            "y": 340.2686567164179
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 9,
+      "index": 5,
+      "time": 0.65,
+      "snapshot": {
+        "time": 0.65,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 9,
+          "index": 5,
+          "phaseTime": 0.65,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.65,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 11.4075,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.385,
+              "right": 252.735,
+              "top": 101,
+              "bottom": 140.585
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.04,
+              "right": 295.44,
+              "top": 232,
+              "bottom": 390.34
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 9,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 9,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.54,
+            "y": 129.08
+          },
+          {
+            "x": 294.66,
+            "y": 344.32
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 127.97014925373134
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 339.88059701492534
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 10,
+      "index": 6,
+      "time": 0.77,
+      "snapshot": {
+        "time": 0.77,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 10,
+          "index": 6,
+          "phaseTime": 0.77,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.77,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 13.5135,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.58,
+              "right": 253.125,
+              "top": 101,
+              "bottom": 140.975
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.82,
+              "right": 297,
+              "top": 232,
+              "bottom": 391.9
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 10,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.38805970149255
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 10,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 389.55223880597015
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.93,
+            "y": 128.7875
+          },
+          {
+            "x": 296.22,
+            "y": 343.15
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 127.97014925373134
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 339.88059701492534
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "walk",
+      "frame": 11,
+      "index": 7,
+      "time": 0.89,
+      "snapshot": {
+        "time": 0.89,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 11,
+          "index": 7,
+          "phaseTime": 0.89,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.89,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 15.619499999999999,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.58,
+              "right": 253.515,
+              "top": 101,
+              "bottom": 140.975
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.82,
+              "right": 298.56,
+              "top": 232,
+              "bottom": 391.9
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 11,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.3358208955224,
+              "top": 101.19402985074626,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 11,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.8432835820895,
+              "top": 232.77611940298507,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 253.32,
+            "y": 128.7875
+          },
+          {
+            "x": 297.78,
+            "y": 343.15
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 127.97014925373134
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 339.88059701492534
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "raise",
+      "frame": 12,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 12,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "raise",
+          "local": 0.02,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 252.15,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 293.1,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 12,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 727.1417910447761,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 12,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 762.0671641791045,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 251.955,
+            "y": 130.835
+          },
+          {
+            "x": 292.32,
+            "y": 351.34
+          },
+          {
+            "x": 726.9477611940299,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 761.2910447761194,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "raise",
+      "frame": 13,
+      "index": 1,
+      "time": 0.16,
+      "snapshot": {
+        "time": 0.16,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 13,
+          "index": 1,
+          "phaseTime": 0.16,
+          "frameAge": 0.01999999999999999,
+          "clip": "raise",
+          "local": 0.16,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.19,
+              "right": 254.49,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13,
+            "groundY": 388,
+            "bounds": {
+              "left": 193.26,
+              "right": 302.46,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 13,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 729.276119402985,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 13,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 770.6044776119403,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 254.295,
+            "y": 126.155
+          },
+          {
+            "x": 301.68,
+            "y": 332.62
+          },
+          {
+            "x": 729.0820895522388,
+            "y": 124.4776119402985
+          },
+          {
+            "x": 769.8283582089553,
+            "y": 325.910447761194
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "raise",
+      "frame": 14,
+      "index": 2,
+      "time": 0.32000000000000006,
+      "snapshot": {
+        "time": 0.32,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 14,
+          "index": 2,
+          "phaseTime": 0.32,
+          "frameAge": 0.019999999999999962,
+          "clip": "raise",
+          "local": 0.32,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.8,
+              "right": 256.44,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14,
+            "groundY": 388,
+            "bounds": {
+              "left": 191.7,
+              "right": 310.26,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 14,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 731.6044776119403,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 14,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 779.9179104477612,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 256.245,
+            "y": 120.0125
+          },
+          {
+            "x": 309.48,
+            "y": 308.05
+          },
+          {
+            "x": 731.4104477611941,
+            "y": 117.88059701492537
+          },
+          {
+            "x": 779.1417910447761,
+            "y": 299.5223880597015
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "raise",
+      "frame": 15,
+      "index": 3,
+      "time": 0.4800000000000001,
+      "snapshot": {
+        "time": 0.48,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 15,
+          "index": 3,
+          "phaseTime": 0.48,
+          "frameAge": 0.019999999999999907,
+          "clip": "raise",
+          "local": 0.48,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.41,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.14,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 15,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 733.7388059701492,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 15,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 788.455223880597,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 114.9425
+          },
+          {
+            "x": 313.38,
+            "y": 287.77
+          },
+          {
+            "x": 733.544776119403,
+            "y": 113.32089552238806
+          },
+          {
+            "x": 787.679104477612,
+            "y": 281.2835820895522
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "aim",
+      "frame": 16,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "aim",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 16,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "aim",
+          "local": 0.02,
+          "label": "조준 · 견착 유지",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.8,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.215,
+              "right": 257.61,
+              "top": 101.39,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16,
+            "groundY": 388,
+            "bounds": {
+              "left": 189.36,
+              "right": 314.94,
+              "top": 233.56,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 16,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 733.7388059701492,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 16,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 788.455223880597,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.9675
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.87
+          },
+          {
+            "x": 733.544776119403,
+            "y": 111.4776119402985
+          },
+          {
+            "x": 787.679104477612,
+            "y": 273.910447761194
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "fire",
+      "frame": 17,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 17,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "fire",
+          "local": 0.02,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": true,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 17,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 733.7388059701492,
+              "top": 101.58208955223881,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 17,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 788.455223880597,
+              "top": 234.32835820895522,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 313.38,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.544776119403,
+            "y": 111.57462686567163
+          },
+          {
+            "x": 787.679104477612,
+            "y": 274.29850746268653
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "fire",
+      "frame": 18,
+      "index": 1,
+      "time": 0.075,
+      "snapshot": {
+        "time": 0.075,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 18,
+          "index": 1,
+          "phaseTime": 0.075,
+          "frameAge": 0.019999999999999997,
+          "clip": "fire",
+          "local": 0.075,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.61,
+              "top": 101,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.94,
+              "top": 232,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 18,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 733.7388059701492,
+              "top": 101.58208955223881,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 18,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 788.455223880597,
+              "top": 234.32835820895522,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.544776119403,
+            "y": 111.57462686567163
+          },
+          {
+            "x": 787.679104477612,
+            "y": 274.29850746268653
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "fire",
+      "frame": 19,
+      "index": 2,
+      "time": 0.13999999999999999,
+      "snapshot": {
+        "time": 0.14,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 19,
+          "index": 2,
+          "phaseTime": 0.14,
+          "frameAge": 0.020000000000000018,
+          "clip": "fire",
+          "local": 0.14,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.02,
+              "right": 257.415,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19,
+            "groundY": 388,
+            "bounds": {
+              "left": 188.57999999999998,
+              "right": 314.15999999999997,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 19,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 733.7388059701492,
+              "top": 101.58208955223881,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 19,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 788.455223880597,
+              "top": 234.32835820895522,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.22,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 313.38,
+            "y": 283.09000000000003
+          },
+          {
+            "x": 733.544776119403,
+            "y": 111.57462686567163
+          },
+          {
+            "x": 787.679104477612,
+            "y": 274.29850746268653
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "lower",
+      "frame": 20,
+      "index": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 20,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "lower",
+          "local": 0.02,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.215,
+              "right": 257.61,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20,
+            "groundY": 388,
+            "bounds": {
+              "left": 189.36,
+              "right": 314.94,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 20,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 733.7388059701492,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 20,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 788.455223880597,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.415,
+            "y": 113.9675
+          },
+          {
+            "x": 314.15999999999997,
+            "y": 283.87
+          },
+          {
+            "x": 733.544776119403,
+            "y": 112.44776119402985
+          },
+          {
+            "x": 787.679104477612,
+            "y": 277.7910447761194
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "lower",
+      "frame": 21,
+      "index": 1,
+      "time": 0.16999999999999998,
+      "snapshot": {
+        "time": 0.17,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 21,
+          "index": 1,
+          "phaseTime": 0.17,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.17,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.41,
+              "right": 257.22,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.14,
+              "right": 313.38,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 21,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 732.5746268656717,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 21,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 783.7985074626865,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 257.025,
+            "y": 116.8925
+          },
+          {
+            "x": 312.6,
+            "y": 295.57
+          },
+          {
+            "x": 732.3805970149253,
+            "y": 116.23134328358209
+          },
+          {
+            "x": 783.0223880597015,
+            "y": 292.92537313432837
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "lower",
+      "frame": 22,
+      "index": 2,
+      "time": 0.35,
+      "snapshot": {
+        "time": 0.35,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 22,
+          "index": 2,
+          "phaseTime": 0.35,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.35,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22,
+            "groundY": 140,
+            "bounds": {
+              "left": 226.605,
+              "right": 254.88,
+              "top": 101.195,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22,
+            "groundY": 388,
+            "bounds": {
+              "left": 190.92000000000002,
+              "right": 304.02,
+              "top": 232.78,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 22,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.4104477611941,
+              "right": 730.2462686567164,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 22,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.1417910447761,
+              "right": 774.4850746268656,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 254.685,
+            "y": 125.0825
+          },
+          {
+            "x": 303.24,
+            "y": 328.33
+          },
+          {
+            "x": 730.0522388059702,
+            "y": 124.38059701492537
+          },
+          {
+            "x": 773.7089552238806,
+            "y": 325.5223880597015
+          }
+        ]
+      }
+    },
+    {
+      "revision": "after",
+      "mode": "lower",
+      "frame": 23,
+      "index": 3,
+      "time": 0.53,
+      "snapshot": {
+        "time": 0.53,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 23,
+          "index": 3,
+          "phaseTime": 0.53,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.53,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "stacked": false,
+        "views": [
+          {
+            "bank": "v032",
+            "actual": true,
+            "x": 238.5,
+            "y": 140,
+            "scale": 0.195,
+            "scaleY": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23,
+            "groundY": 140,
+            "bounds": {
+              "left": 227.385,
+              "right": 252.54,
+              "top": 101,
+              "bottom": 140
+            }
+          },
+          {
+            "bank": "v032",
+            "actual": false,
+            "x": 238.5,
+            "y": 388,
+            "scale": 0.78,
+            "scaleY": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23,
+            "groundY": 388,
+            "bounds": {
+              "left": 194.04,
+              "right": 294.66,
+              "top": 232,
+              "bottom": 388
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": true,
+            "x": 715.5,
+            "y": 140,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 23,
+            "groundY": 140,
+            "bounds": {
+              "left": 705.6044776119403,
+              "right": 727.3358208955224,
+              "top": 101.38805970149254,
+              "bottom": 140.19402985074626
+            }
+          },
+          {
+            "bank": "v033",
+            "actual": false,
+            "x": 715.5,
+            "y": 388,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "frame": 23,
+            "groundY": 388,
+            "bounds": {
+              "left": 675.9179104477612,
+              "right": 762.8432835820895,
+              "top": 233.55223880597015,
+              "bottom": 388.7761194029851
+            }
+          }
+        ],
+        "canvas": {
+          "width": 954,
+          "height": 414
+        },
+        "muzzles": [
+          {
+            "x": 252.345,
+            "y": 130.64
+          },
+          {
+            "x": 293.88,
+            "y": 350.56
+          },
+          {
+            "x": 727.1417910447761,
+            "y": 128.16417910447763
+          },
+          {
+            "x": 762.0671641791045,
+            "y": 340.65671641791045
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

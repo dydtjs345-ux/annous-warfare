@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { preloadPrototype, SoldierPrototype } from "./soldier-prototype.js";
+import { proportionLayout, proportionFigure } from "./usmc-proportion-view.js";
 import {
   CLIPS,
   DEMO_DURATION,
@@ -10,19 +10,23 @@ import {
 } from "./usmc-se-animation.js";
 import "./usmc-se-preview.css";
 
-const root = import.meta.env.BASE_URL + "assets/usmc-se-v032/";
+const BANKS = ["v032", "v033"];
+const assetRoot = (bank) =>
+  import.meta.env.BASE_URL + `assets/usmc-se-${bank}/`;
 const $ = (selector) => document.querySelector(selector);
 const clock = new SEPreviewClock();
 const stage = $("#preview-stage");
 class SEPreview extends Phaser.Scene {
   preload() {
-    this.load.spritesheet("usmc-se-body", root + "source-atlas.png", {
-      frameWidth: 256,
-      frameHeight: 256,
-      endFrame: 23,
-    });
-    this.load.json("usmc-se-design", root + "metadata.json");
-    preloadPrototype(this);
+    for (const bank of BANKS) {
+      const root = assetRoot(bank);
+      this.load.spritesheet(`usmc-se-${bank}`, root + "source-atlas.png", {
+        frameWidth: 256,
+        frameHeight: 256,
+        endFrame: 23,
+      });
+      this.load.json(`usmc-se-design-${bank}`, root + "metadata.json");
+    }
     this.load.on("loaderror", (file) => {
       $("#preview-error").hidden = false;
       $("#preview-error").textContent =
@@ -30,40 +34,41 @@ class SEPreview extends Phaser.Scene {
     });
   }
   create() {
-    this.design = this.cache.json.get("usmc-se-design");
-    if (!this.design || !this.textures.exists("usmc-se-body")) return;
+    this.designs = BANKS.map((bank) =>
+      this.cache.json.get(`usmc-se-design-${bank}`),
+    );
+    if (
+      this.designs.some(
+        (d, i) => !d || !this.textures.exists(`usmc-se-${BANKS[i]}`),
+      )
+    )
+      return;
+    this.design = this.designs[0];
     this.floor = this.add.graphics().setDepth(-10);
     this.overlay = this.add.graphics().setDepth(10);
-    this.body = this.add.image(0, 0, "usmc-se-body", 0).setDepth(1);
-    this.detail = this.add.image(0, 0, "usmc-se-body", 0).setDepth(1);
-    this.legacy = new SoldierPrototype(this);
-    this.legacy.enabled = true;
-    this.legacy.setArt("v031");
-    this.legacyUnit = {
-      id: 1,
-      team: 0,
-      role: "Rifleman",
-      active: true,
-      x: 0,
-      y: 0,
-      facing: 0,
-      movementHeading: 0,
-    };
-    this.legacyBattle = {};
-    this.legacyModel = {};
+    this.views = BANKS.flatMap((bank, index) =>
+      [1, 0].map((actual) => ({
+        bank,
+        index,
+        actual: !!actual,
+        image: this.add.image(0, 0, `usmc-se-${bank}`, 0).setDepth(1),
+      })),
+    );
+    this.body = this.views[0].image;
     const style = {
       fontFamily: "system-ui,sans-serif",
       fontSize: "12px",
       color: "#bfcbce",
       align: "center",
     };
-    this.actualLabel = this.add
-      .text(0, 38, "", style)
-      .setOrigin(0.5)
-      .setDepth(20);
-    this.oldLabel = this.add.text(0, 38, "", style).setOrigin(0.5).setDepth(20);
-    this.detailLabel = this.add
-      .text(0, 184, "", style)
+    this.actualLabels = BANKS.map(() =>
+      this.add.text(0, 38, "", style).setOrigin(0.5).setDepth(20),
+    );
+    this.detailLabels = BANKS.map(() =>
+      this.add.text(0, 204, "", style).setOrigin(0.5).setDepth(20),
+    );
+    this.detailTitle = this.add
+      .text(0, 174, "", style)
       .setOrigin(0.5)
       .setDepth(20);
     this.size = 1.3;
@@ -80,7 +85,7 @@ class SEPreview extends Phaser.Scene {
         stage.clientWidth !== this.scale.width ||
         stage.clientHeight !== this.scale.height
       )
-        this.scale.resize(stage.clientWidth, stage.clientHeight);
+        this.scale.setParentSize(stage.clientWidth, stage.clientHeight);
     });
     this.resizeObserver.observe(stage);
     this.events.once("shutdown", () => this.resizeObserver.disconnect());
@@ -101,35 +106,63 @@ class SEPreview extends Phaser.Scene {
       independentWeaponObjects: 0,
       frameSize: [256, 256],
       groundDistance: this.groundDistance,
-      views: [this.body, this.detail].map((im) => ({
+      stacked: this.positions.stacked,
+      views: this.views.map(({ bank, index, actual, image: im }) => ({
+        bank,
+        actual,
         x: im.x,
         y: im.y,
         scale: im.scaleX,
+        scaleY: im.scaleY,
         rotation: im.rotation,
         originX: im.originX,
         originY: im.originY,
         frame: Number(im.frame.name),
+        groundY: im.y,
+        bounds: proportionFigure(
+          this.designs[index],
+          Number(im.frame.name),
+          { x: im.x, y: im.y },
+          30 * this.size,
+          actual ? 1 : this.zoom,
+        ).bounds,
       })),
       canvas: { width: this.scale.width, height: this.scale.height },
-      legacy: this.legacy.snapshot(),
       muzzles: this.muzzles?.map((p) => ({ ...p })),
     });
   }
   layout() {
     if (!this.design) return;
-    const height = Math.max(400, 260 + 30 * this.size * this.zoom);
+    this.positions = proportionLayout(
+      this.scale.width,
+      30 * this.size,
+      this.zoom,
+      this.designs,
+    );
+    const height = this.positions.height;
     if (Math.abs(stage.clientHeight - height) > 1)
       stage.style.height = height + "px";
-    const w = this.scale.width;
-    this.actualLabel
-      ?.setPosition(w * 0.25, 38)
-      .setText(`SE 새 동작 · ${Math.round(30 * this.size)}px`);
-    this.oldLabel
-      ?.setPosition(w * 0.75, 38)
-      .setText(`v0.3.1 · ${Math.round(30 * this.size)}px`);
-    this.detailLabel
-      ?.setPosition(w * 0.5, 184)
-      .setText(`새 동작 · ${this.zoom}× 카메라 확대`);
+    // RESIZE refreshes from cached parentSize. Updating only gameSize leaves
+    // a stale, clipped canvas until Phaser's parent polling runs.
+    if (
+      this.scale.width !== stage.clientWidth ||
+      this.scale.height !== stage.clientHeight
+    )
+      this.scale.setParentSize(stage.clientWidth, stage.clientHeight);
+    BANKS.forEach((bank, i) => {
+      const version = i ? "v0.3.3" : "v0.3.2",
+        a = this.positions.actual[i],
+        d = this.positions.detailLabels[i];
+      this.actualLabels[i]
+        .setPosition(a.x, 38)
+        .setText(`${version} · ${Math.round(30 * this.size)}px`);
+      this.detailLabels[i]
+        .setPosition(d.x, d.y)
+        .setText(`${version} · ${this.zoom}×`);
+    });
+    this.detailTitle
+      .setPosition(this.scale.width * 0.5, 174)
+      .setText(`${this.zoom}× 비율 비교 · 같은 동작`);
   }
   bindControls() {
     document.querySelectorAll("[data-clip]").forEach(
@@ -209,8 +242,8 @@ class SEPreview extends Phaser.Scene {
     g.lineStyle(1, 0x657078, 0.2);
     g.strokeEllipse(cx, cy + 2 * s, 100 * s, 42 * s);
   }
-  drawFigure(im, pose, x, y, scale) {
-    const frame = this.design.frames[pose.frame],
+  drawFigure(im, pose, x, y, scale, design) {
+    const frame = design.frames[pose.frame],
       a = frame.footAnchor;
     im.setFrame(pose.frame)
       .setOrigin(a[0] / 256, a[1] / 256)
@@ -223,7 +256,7 @@ class SEPreview extends Phaser.Scene {
     const g = this.overlay;
     if (pose.flash) {
       // Only the preview's explicit shot cue. No asset has a baked flash.
-      const k = (scale * 200) / 39,
+      const k = (scale * design.nativeStandingHeight) / 39,
         x = Math.round(muzzle.x),
         y = Math.round(muzzle.y);
       // A tiny stepped pixel cluster instead of a flat circular/vector flare.
@@ -279,45 +312,23 @@ class SEPreview extends Phaser.Scene {
     this.groundDistance = previewTravel(clock.time, clock.mode) * s;
     this.floor.clear();
     this.overlay.clear();
-    this.drawFloor(w * 0.25, 140, 1, this.groundDistance);
-    this.drawFloor(w * 0.75, 140, 1, this.groundDistance);
-    this.drawFloor(w * 0.5, h - 28, this.zoom, this.groundDistance);
-    this.muzzles = [
-      this.drawFigure(this.body, pose, w * 0.25, 140, s),
-      this.drawFigure(this.detail, pose, w * 0.5, h - 28, s * this.zoom),
-    ];
-    const m = this.legacyModel;
-    Object.assign(m, {
-      pose: pose.walking
-        ? "walking"
-        : ["raise", "aim", "fire"].includes(pose.clip)
-          ? pose.flash
-            ? "firing"
-            : "aiming"
-          : "idle",
-      moving: pose.walking,
-      direction: 0,
-      renderDirection: 0,
-      renderTop: -30,
-      renderStride: clock.time * Math.PI * 2,
-      stride: clock.time * Math.PI * 2,
-      flash: pose.flash,
-      tucked: false,
-      crawl: false,
+    this.muzzles = this.views.map(({ index, actual, image }) => {
+      const pos = (actual ? this.positions.actual : this.positions.detail)[
+          index
+        ],
+        mag = actual ? 1 : this.zoom;
+      this.drawFloor(pos.x, pos.y, mag, this.groundDistance);
+      const scale =
+        ((30 * this.size) / this.designs[index].nativeStandingHeight) * mag;
+      return this.drawFigure(
+        image,
+        pose,
+        pos.x,
+        pos.y,
+        scale,
+        this.designs[index],
+      );
     });
-    this.legacy.visualSize = this.size;
-    this.legacy.draw(
-      this.overlay,
-      this.legacyBattle,
-      this.legacyUnit,
-      m,
-      { shot: pose.flash ? 0.04 : 0, hit: 0 },
-      { x: w * 0.75, y: 140 },
-      this.legacyUnit,
-      false,
-      !clock.playing,
-      clock.speed,
-    );
     if (Math.floor(clock.time * 10) !== this.lastUI) {
       this.lastUI = Math.floor(clock.time * 10);
       this.syncUI();

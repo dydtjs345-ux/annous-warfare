@@ -495,3 +495,11 @@ Tap **SE 동작 보기** above the battle controls. The isolated preview shows *
 Each new cel contains the whole body, both hands and the rifle. The gun is not independently rotated and no IK limbs stretch to follow it. This is **only a SE visual preview**, not a replacement for the battle renderer or eight finished directions. Preview firing is explicitly a demonstration cue and has no effect on ammunition/combat.
 
 The original generated transparent art is more detailed than v0.3.1, but **the reference-quality artwork requirement is not satisfied yet**: cel-to-cel cloth/gear consistency, gait/foot contact and authored transition quality still need dedicated artist cleanup and visual approval. No other directions will be expanded before that approval. [Audit, phase screenshots, GIF and MP4](reports/v032-usmc-animation-prototype.md). Physical iPhone Safari remains unverified.
+
+## v0.3.3 — SE soldier proportion comparison
+
+Open **SE 동작 보기** to compare **v0.3.2 (left)** and **v0.3.3 (right)** at the same **39px height** and **4×** magnification. The new full-body atlas refines leg/hip proportions, helmet size and armored torso width across all 24 SE cels. Both versions use the original, unchanged animation timing; rifle/hands/shoulders remain in the same complete cel. The original v0.3.2 atlas is retained exactly.
+
+The resumed correction from `a920240` further reduces the head and helmet together, slims the equipped torso and raises the waist for longer apparent legs across all 24 SE cels. [Current before/after screenshots, playback and validation](reports/v033-correction/README.md). The [first-pass report](reports/v033-usmc-proportions.md) and its evidence are preserved.
+
+This is an anatomical redraw, not a whole-sprite vertical stretch. The requested percentages guide the art; exact per-frame anatomical ratios are not certified. At large zoom on narrow screens, magnified figures stack to prevent clipping. Existing cloth/gear variation, bent-knee gait and limited transition cels still need artist review. No other directions or gameplay changes. Physical iPhone Safari remains unverified.
