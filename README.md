@@ -1,4 +1,12 @@
-# Autonomous Warfare v0.2.7
+# Autonomous Warfare v0.3.4
+
+## v0.3.4 — live SE full-body animation
+
+USMC rifleman **#1** now defaults to **v0.3.3 Animated** in the actual battle. The corrected v0.3.3 PNG cels move the legs, torso, both arms, hands and rifle together. Real movement, direct target acquisition and shot events drive walking, raising, aiming, recoil and lowering. The default **1.3×** visual setting is **39px** before camera zoom; 1.0×/1.5× remain available.
+
+This atlas supports **SE only**. Other directions, independent sideways movement/aiming, low-cover/injured poses, reloading and other unsupported actions retain the existing renderer. The sprite is never rotated or mirrored. Select **v0.3.1** for a stable comparison, or turn the prototype off. Other soldiers are unchanged. Tapping #1 shows the actual renderer and animation in the Korean inspector; add `?seed=7&debug=1` for the live AI/animation overlay. Seeds 7, 31 and 32 demonstrate first contact, full lowering and return to walking. **SE 동작 보기** remains the separate art preview.
+
+[Live-combat audit, screenshots and recordings](reports/v034-live-combat-animation.md). Combat code and RNG are unchanged; 40 paired complete replays match merged main. Physical iPhone Safari testing remains unverified.
 
 A mobile-first, single-player autonomous battle spectator built with Phaser 3, JavaScript and Vite. No backend, accounts, external assets or paid services.
 

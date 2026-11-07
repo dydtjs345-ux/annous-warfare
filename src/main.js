@@ -634,6 +634,12 @@ class Battlefield extends Phaser.Scene {
       legacy: this.prototypeVisual.snapshot(),
       model: this.visuals.models[1],
     });
+    if (params.has("debug")) {
+      const panel = document.querySelector("#live-animation-debug"),
+        text = `#1 AI: ${ko(this.battle.units[1].state)}\n${renderInspection(this.rendererStatus)}\n${this.rendererStatus.reason}`;
+      // Update only on a change, on the same rendered frame as the sprite.
+      if (panel.textContent !== text) panel.textContent = text;
+    }
     if (this.selected && this.staticEnvironment.obscured) {
       const p = this.iso(selectedView.x, selectedView.y),
         m = this.visuals.models[this.selected.id],
@@ -683,8 +689,6 @@ class Battlefield extends Phaser.Scene {
             this.rendererStatus,
             document.querySelector("#inspect").classList.contains("expanded"),
           );
-      document.querySelector("#live-animation-debug").textContent =
-        `#1 AI: ${ko(this.battle.units[1].state)}\n${renderInspection(this.rendererStatus)}\n${this.rendererStatus.reason}`;
       document.querySelector("#inspect").hidden = !this.selected;
       const phases = this.battle.squads
         .map((q) => ko(q.search?.phase))

@@ -13,6 +13,7 @@ import {
 } from "../src/live-usmc-inspection.js";
 import { Battle } from "../src/simulation.js";
 import { CombatVisuals } from "../src/combat-visuals.js";
+import { MotionPresentation } from "../src/motion-presentation.js";
 import { emitVisualEvent } from "../src/presentation-state.js";
 const meta = JSON.parse(
   readFileSync("public/assets/usmc-se-v033/metadata.json"),
@@ -364,4 +365,70 @@ test("missing SE texture and other identities safely fall back without drawing a
   const other = fixture();
   other.u.id = 0;
   assert.equal(other.c.update(other.b, other.u, other.m).fallback, "identity");
+});
+test("real autonomous 6v6 matches drive the full SE sequence and resume walking after fallback", () => {
+  const animations = new Set();
+  let resumedAfterCombat = false;
+  for (const seed of [7, 32]) {
+    let rng = seed;
+    const b = new Battle(
+      () => (rng = (rng * 1664525 + 1013904223) >>> 0) / 4294967296,
+      {
+        map: "expanded",
+        variant: seed % 4,
+        spawn: Math.floor(seed / 4) % 3,
+        grenades: true,
+      },
+    );
+    const v = new CombatVisuals(),
+      motion = new MotionPresentation(),
+      c = new LiveUSMCState();
+    let fired = false,
+      unsupported = false,
+      returned = false;
+    for (let tick = 0; tick < 800 && !b.result; tick++) {
+      motion.beforeStep(b);
+      b.step(0.05);
+      v.update(b, 0.05, 1, false);
+      motion.update(b, v.models, 1, 0.05, 1, false);
+      const s = c.update(
+        b,
+        b.units[1],
+        v.models[1],
+        motion.position(b.units[1]),
+      );
+      if (!s.supported) unsupported = true;
+      else {
+        animations.add(s.animation);
+        if (unsupported) returned = true;
+        if (s.animation === "walking" && fired) resumedAfterCombat = true;
+        if (s.animation === "firing") {
+          const event = b.events.find(
+            (e) => e.type === "shot" && e.id === s.shotId,
+          );
+          assert.equal(event?.unitId, 1, "recoil belongs to a real #1 shot");
+          assert.equal(s.shotAt, b.units[1].presentation.lastShotAt);
+          fired = true;
+        }
+        if (s.targetId != null)
+          assert.ok(b.units[1].visibleEnemies.some((e) => e.id === s.targetId));
+      }
+    }
+    assert.ok(
+      fired && returned,
+      `seed ${seed} fires and returns from unsupported facing`,
+    );
+  }
+  assert.deepEqual([...animations].sort(), [
+    "aiming",
+    "firing",
+    "idle",
+    "lowering",
+    "raising",
+    "walking",
+  ]);
+  assert.ok(
+    resumedAfterCombat,
+    "real surviving rifleman resumes the full-body gait after engaging",
+  );
 });

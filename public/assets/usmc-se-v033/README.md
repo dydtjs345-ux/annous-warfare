@@ -36,4 +36,10 @@ variation and imperfect gait weight transfer remain artist-cleanup work.
 This is a proportion-review prototype, not an approved final military sprite.
 Precise joint/foot-contact authoring, temporal kit consistency and transition
 in-betweens still require visual/artist review. No other new directions or battle
-renderer conversion are included. No simulation, geometry, RNG or AI changes.
+renderer conversion were included in the original v0.3.3 art change.
+
+**v0.3.4 reuse:** the exact same PNG and metadata now also feed the live
+`LiveUSMCRenderer` for USMC rifleman #1 in supported SE states. The battle adapter
+does not use the preview demonstration clock or its simulated firing cues.
+Unsupported directions/actions use the existing renderer. No simulation,
+geometry, RNG, AI, or artwork changes are part of that integration.
