@@ -1,3 +1,4 @@
+import {coverVisuals} from "./cover-art.js";
 import { MotionPresentation } from "./motion-presentation.js";
 import { CombatAtmosphere } from "./combat-atmosphere.js";
 import { drawGroundDetail, drawBuildingDetail, buildingPalette } from "./urban-detail.js";
@@ -231,10 +232,9 @@ class Battlefield extends Phaser.Scene {
     document.querySelector("#pause").textContent = "일시정지";
     document.querySelector("#outcome").hidden = true;
     this.drawables = [...this.battle.units.map((unit) => ({ unit }))];
-    for (const [k, type] of obstacles) {
-      const [x, y] = k.split(",").map(Number);
-      if (mapMode === "expanded" && type === "wall") continue;
-      this.drawables.push({ x, y, type });
+    for(const d of coverVisuals(obstacles)){
+      if(mapMode==='expanded'&&d.type==='wall')continue;
+      this.drawables.push(d);
     }
     if (mapMode === "expanded")
       for (const building of houses)
