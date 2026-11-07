@@ -1,0 +1,29 @@
+{
+  "viewport": [
+    390,
+    844
+  ],
+  "orientation": true,
+  "wholeBody39px": true,
+  "maxScale1_5AndZoom6": true,
+  "frameStep": true,
+  "previewSpeeds": [
+    1,
+    4
+  ],
+  "previewFrameStats": {
+    "samples": 301,
+    "p50": 16.699999999999818,
+    "p95": 16.700000000000728,
+    "max": 16.800000000000182,
+    "shotCues": 4
+  },
+  "touchScroll": true,
+  "battleFrozenWhileOpen": true,
+  "pausedStateRestored": true,
+  "frameDestroyedAcrossRestarts": 3,
+  "noHorizontalOverflow": true,
+  "errors": [],
+  "failed": [],
+  "physicalSafari": "unverified"
+}

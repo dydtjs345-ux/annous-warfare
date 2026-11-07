@@ -1,3 +1,4 @@
+import { bindAnimationPreview } from "./animation-preview-dialog.js";
 import { SoldierPrototype, preloadPrototype } from "./soldier-prototype.js";
 import { EnvironmentCache } from "./environment-cache.js";
 import { streetProps, drawStreetProp } from "./street-art.js";
@@ -61,6 +62,21 @@ class Battlefield extends Phaser.Scene {
     document.querySelector("#prototype-scale").onchange = (e) => {
       this.prototypeVisual.visualSize = Number(e.target.value);
     };
+    bindAnimationPreview({
+      button: document.querySelector("#animation-preview"),
+      dialog: document.querySelector("#animation-dialog"),
+      onOpen: () => {
+        this.previewWasPaused = this.paused;
+        this.paused = true;
+        document.querySelector("#pause").textContent = "계속";
+      },
+      onClose: () => {
+        this.paused = this.previewWasPaused;
+        document.querySelector("#pause").textContent = this.paused
+          ? "계속"
+          : "일시정지";
+      },
+    });
     this.atmosphere = new CombatAtmosphere();
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);

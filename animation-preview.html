@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>USMC SE 동작 시제품 · v0.3.2</title>
+  </head>
+  <body>
+    <main id="preview-app">
+      <header>
+        <h1>USMC 소총수 · SE 동작 시제품</h1>
+        <p>한 방향의 완전한 인체 프레임 · 전투와 분리된 시연</p>
+      </header>
+      <div
+        id="preview-stage"
+        aria-label="실제 크기와 확대한 병사의 동작 비교"
+      ></div>
+      <p id="preview-state" role="status" aria-live="off"></p>
+      <section class="phase-buttons" aria-label="동작 선택">
+        <button data-clip="demo" class="active">전체 순서</button
+        ><button data-clip="idle">대기</button
+        ><button data-clip="walk">보행</button
+        ><button data-clip="raise">총기 올림</button
+        ><button data-clip="aim">조준</button
+        ><button data-clip="fire">사격</button
+        ><button data-clip="lower">총기 내림</button>
+      </section>
+      <section class="play-controls" aria-label="동작 재생 제어">
+        <button id="preview-pause">일시정지</button
+        ><button id="preview-step">다음 프레임</button
+        ><button id="preview-restart">처음부터</button>
+        <label
+          >속도
+          <select id="preview-speed">
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+          </select></label
+        >
+      </section>
+      <label class="scrubber"
+        >시간
+        <input
+          id="preview-time"
+          type="range"
+          min="0"
+          max="11.44"
+          step="0.001"
+          value="0"
+          aria-label="시연 시간"
+      /></label>
+      <section class="options">
+        <label
+          >게임 크기
+          <select id="preview-size">
+            <option value="1">1.0× · 30px</option>
+            <option value="1.3" selected>1.3× · 39px</option>
+            <option value="1.5">1.5× · 45px</option>
+          </select></label
+        >
+        <label
+          >카메라 확대
+          <select id="preview-zoom">
+            <option value="2">2×</option>
+            <option value="4" selected>4×</option>
+            <option value="6">6×</option>
+          </select></label
+        >
+        <label
+          ><input id="preview-anchors" type="checkbox" /> 발 기준점·총구</label
+        >
+      </section>
+      <p class="preview-note">
+        새 동작은 한 프레임에 몸통·어깨·양팔·양손·총기를 함께 그립니다. 사격
+        섬광은 시연용 이벤트이며 실제 전투·탄약과 무관합니다. 완성 아트나 8방향
+        애니메이션으로 승인된 상태가 아닙니다.
+      </p>
+      <p class="preview-note">
+        전체 순서: 대기 → 보행 → 정지 → 총기 올림 → 조준 → 사격 → 총기 내림 →
+        대기. 보행은 카메라가 병사를 추적하는 모습이며 바닥이 이동합니다.
+      </p>
+      <p id="preview-error" role="alert" hidden></p>
+    </main>
+    <script type="module" src="/src/usmc-se-preview.js"></script>
+  </body>
+</html>

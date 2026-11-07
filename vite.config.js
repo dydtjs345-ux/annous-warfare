@@ -1,5 +1,10 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/annous-warfare/',
+  base: "/annous-warfare/",
+  build: {
+    rollupOptions: {
+      input: { main: "index.html", animation: "animation-preview.html" },
+    },
+  },
 });

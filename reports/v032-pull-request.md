@@ -1,0 +1,11 @@
+The v0.3.1 rifle could turn independently of a nearly static torso. This SE-only review prototype selects complete-body PNG cels instead: shoulders, both arms/hands, equipment and rifle change together, with no independent gun transform or stretched IK limbs.
+
+From the game, **SE 동작 보기** opens a separate preview: idle → walk → stop → raise → aim → fire → lower → idle. Includes real-size 30/39/45px, 2x/4x/6x magnification, old-renderer comparison, pause/step/scrub and full-sequence playback. Opening pauses the battle and closing restores its previous state. The battle renderer is not replaced; no other new directions are implemented.
+
+**Reference-quality artwork is NOT satisfied yet.** The original generated transparent cels are not cropped from the concept sheet. They are a stronger visual candidate, but cloth/gear temporal consistency, gait/foot-contact calibration and transition finish need a dedicated sprite artist and visual approval. This should remain a draft visual review. Do not merge automatically or expand to eight directions.
+
+Evidence: [audit and all phase screenshots](https://github.com/dydtjs345-ux/annous-warfare/blob/feat/v032-usmc-animation-prototype/reports/v032-usmc-animation-prototype.md), [GIF](https://github.com/dydtjs345-ux/annous-warfare/blob/feat/v032-usmc-animation-prototype/reports/v032-se-sequence.gif), [MP4](https://github.com/dydtjs345-ux/annous-warfare/blob/feat/v032-usmc-animation-prototype/reports/v032-se-sequence.mp4). Actual production preview screenshots/cel strips were visually reviewed. No new autonomous combat animation recording is claimed.
+
+Validation: 255 tests pass, production build succeeds, 40 paired configurations / 80 complete matches and inherited replay hashes match c6cc07e/v0.3.1 exactly. Existing simulation/AI/medical/navigation modules and main's update loop remain byte-identical. Mobile Chromium passes native preview scrolling, frame-step, orientation, pause restoration and cleanup, plus original selection/Korean inspector/pan/pinch/speed controls. Physical iPhone Safari remains unverified.
+
+Foundation c6cc07e is now merged into main by 5626262 (PR #18), with an identical source tree. The prepared review targets main and contains only v0.3.2 changes. No automatic merge or production Pages deployment.
