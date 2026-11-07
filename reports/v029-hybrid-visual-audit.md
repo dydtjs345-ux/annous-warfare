@@ -1,5 +1,7 @@
 # Autonomous Warfare v0.2.9 — hybrid pixel-art visual audit
 
+**Current branch includes the smooth-motion extension: 231 passing tests, 440 recorded complete executions, gameplay recording and consecutive-frame checks. Original milestone results below remain preserved; see the motion-extension section for the final status.**
+
 Base: merged v0.2.8 main **4abb428** (PR #15). Branch: `feat/v029-hybrid-pixel-art`. This is a presentation change, not AI balancing. No automatic merge or production deployment.
 
 ## Implemented visual changes
@@ -95,6 +97,39 @@ These are equivalence checks, not tactical-quality improvements. Percentiles use
 
 Final cached-ground mobile sample: **299 frames over five seconds at 4×**, median/P95/max **16.7/16.7/33.3ms**. All recorded mobile checks pass with zero page errors. This is a short desktop-emulation sample, not a physical-device guarantee.
 
-## Delivery
+## Original visual-checkpoint delivery
 
 Tested implementation commit `4787c8a10a492443342c4ca40fd79936a8279bb5` is pushed. PR creation returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created by that command and no merge occurred. The [prepared PR description](v029-pr-description.md) is included. Review comparison: https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v029-hybrid-pixel-art?expand=1
+
+## Additional priority — smooth motion extension (2026-11-07)
+
+Completed on the same v0.2.9 branch without replacing any earlier milestone. Checkpoint **5e83f01** adds `motion-presentation.js`, frame/video evidence and eight focused tests.
+
+### Buffering and authoritative boundaries
+
+The original renderer read new tick coordinates directly, including in camera focus, so both the sprite and follow camera advanced in discrete steps. A render-only buffer now stores the state immediately before each existing 0.05s simulation step. After stepping, the residual accumulator fraction interpolates that previous state toward the current authoritative position. It never extrapolates. Maximum deliberate visual latency is one tick: 50ms at 1×, 25ms at 2×, 12.5ms at 4×. No AI/perception/projectile tick or decision is delayed.
+
+Per-unit records and snapshot objects are reused. Render views inherit read-only soldier properties and own only visual position/direction fields. No AI consumes those views. Depth sorting, picking, observation/movement cues and follow-camera framing now use the same visual position; selection maps back to the original authoritative soldier. Camera dragging/pinch remain world-space spectator operations. Pause freezes the exact visual pose; restart discards all old unit records. Incapacity/death flush positional lag and stop visual turning; discontinuities larger than 0.6 tile reset rather than glide across the map.
+
+Observation, upper-body/weapon and travel headings use independent shortest-angle, bounded-rate easing. Existing scan targets and intervals provide the pauses; no extra scan targets, new perception rays or invented awareness are added. Actual fire overrides the visual weapon direction immediately with the recorded shot angle. Full concealment tucks immediately; rising and other noncritical stance changes settle briefly. These deliberate exceptions preserve truthful flashes and cover state rather than guaranteeing that every transition is softened.
+
+Stride is interpolated from actual traveled distance. Body height, hand height and leg offset settle continuously; reload, treatment-cycle, grenade preparation and mount phases interpolate real counters only while the relevant action is active. Existing procedural walking/running/limping, reload hand motion, treatment arms, bipod, recoil and casualty fall animations remain. There is no foot IK, motion prediction or new animation-driven combat timing.
+
+### Actual gameplay and consecutive-frame review
+
+- [Actual production gameplay recording](v029-motion-gameplay.mp4): seed 2049, layout 0, spawn 0; captured with CDP screencast across 1×/2×/4×, pause and restart. Frames retain capture-time durations. Recording overhead affects host frame rate; this is not a performance benchmark.
+- [Full-frame contact sheet](v029-motion-contact-sheet.png) and [enlarged consecutive movement frames](v029-motion-detail-frames.png): extracted from that recording, not fabricated poses.
+- [Treatment frames](v029-motion-medic-frames.png), [reload frames](v029-motion-reload-frames.png), [LMG deployment frames](v029-motion-mount-frames.png): six consecutive screenshots per controlled **real Battle** fixture, with the production renderer/interpolator. Actual times and phase values are in `v029-motion-actions.json`. Full concealment during deployment correctly remains immediately tucked.
+- [Frozen paused frame](v029-motion-paused.png).
+
+`v029-motion-frames.json` records production requestAnimationFrame observations. At 1× it contains 90 sampled frames and **454 per-soldier frame intervals** with unchanged authoritative coordinates but moving render coordinates. This verifies interpolation between ticks rather than merely replaying tick positions. There are 306/872/1610 observed heading-settling intervals at 1×/2×/4×. These count soldier-frame observations, not unique orders. The 4× sample includes **54 soldier-frames** with real-shot flashes, all matching the recorded shot angle; this is not 54 unique shots. Maximum sampled position lag is 0.0591/0.0850/0.0812 tile respectively. There is no long catch-up slide.
+
+Reviewed the enlarged frame sheets for foot cadence, body placement, hand/bipod phases and camera-relative movement. A previous noninterpolated aim calculation subtracted the draw position; using that unchanged with interpolated positions would skew the gun. The gun direction now projects a direction vector independently of the buffered position. The original abrupt follow-camera tracking was also corrected to use the rendered focus position.
+
+### Final regression status after motion extension
+
+**231 tests pass, zero failures**, including eight new cases: bounded position/no writes, angle wrap, scan settling/hold, pause/speed freeze, firing/full-cover exceptions, incapacitation/discontinuity, restart, and actual reload/treatment phases. Full production build passes. Mobile gesture/selection/inspector/orientation/speed/pause/restart checks pass with buffered picking and camera focus.
+
+Reran the same 40 baseline/current paired full matches with the motion layer active. All per-tick digests, outcome, duration, navigation, ammunition, wounds, medical/suppression/assignment state and grenade results remain identical, including against the preserved pre-motion dataset. This adds **80 complete executions**: the v0.2.9 recorded total is now **440**, with the previously preserved 200 legacy hashes unchanged. The original 360-execution results above describe the initial visual-overhaul checkpoint.
+
+Physical iPhone Safari remains unverified. Pixel snapping of very small limbs, low display frame rates, immediate shelter/fire exceptions and discrete pose-family changes can still be noticeable. The inspector deliberately reports authoritative angles/state, which can lead the short visual turn. Review the recording at normal speed and check real iPhone movement/scan settling, rapid speed switches, pause while turning, background/resume, treatment/mount phases and long-session frame stability before release.

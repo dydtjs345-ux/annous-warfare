@@ -9,6 +9,7 @@ const allowed = new Set([
   "urban-visuals.js",
   "combat-atmosphere.js",
   "urban-detail.js",
+  "motion-presentation.js",
 ]);
 const core = {};
 for (const f of readdirSync("src").filter(
@@ -42,7 +43,7 @@ const log = readFileSync("reports/v029-tests.txt", "utf8");
 const groups = [...log.matchAll(/ℹ pass (\d+)/g)].map((m) => +m[1]);
 assert.equal(
   groups.reduce((a, b) => a + b, 0),
-  223,
+  231,
 );
 assert.equal(
   [...log.matchAll(/ℹ fail (\d+)/g)].reduce((a, m) => a + +m[1], 0),
@@ -67,14 +68,40 @@ assert.ok(
 );
 assert.equal(qa.rows.find((r) => r.mode === "medic").poses[5].pose, "treating");
 assert.ok(qa.rows.find((r) => r.mode === "grenade").stats.detonated > 0);
+const motion = read("reports/v029-motion-frames.json");
+assert.equal(motion.pauseFrozen, true);
+assert.equal(motion.restart, true);
+assert.deepEqual(motion.errors, []);
+assert.deepEqual(
+  motion.runs.map((r) => r.speed),
+  [1, 2, 4],
+);
+assert.ok(motion.runs[0].intermediate > 5);
+assert.ok(motion.runs.some((r) => r.flashFrames > 0));
+assert.deepEqual(
+  read("reports/v029-parity.json").runs,
+  read("reports/v029-parity-before-motion.json").runs,
+);
+const actions = read("reports/v029-motion-actions.json");
+assert.deepEqual(
+  actions.runs.map((r) => r.mode),
+  ["medic", "reload", "mount"],
+);
+assert.ok(
+  actions.runs.every((r) => r.samples.length === 6 && r.errors.length === 0),
+);
+
 const result = {
   base: "4abb428",
   unchangedCoreModules: core,
-  tests: 223,
+  motionCheckpoint: "5e83f01",
+  motionPlaybackRuns: 80,
+  gameplayRecording: "reports/v029-motion-gameplay.mp4",
+  tests: 231,
   failures: 0,
   matchedFinalCases: 40,
   matchedInitialCases: 40,
-  recordedCompleteExecutions: 360,
+  recordedCompleteExecutions: 440,
   legacyHashesPreserved: 200,
   physicalSafari: "unverified",
   mobile,
@@ -90,8 +117,8 @@ writeFileSync(
   JSON.stringify(result, null, 2) + "\n",
 );
 console.log({
-  tests: 223,
+  tests: 231,
   legacyHashesPreserved: 200,
-  recordedCompleteExecutions: 360,
+  recordedCompleteExecutions: 440,
   qaScenes: 5,
 });

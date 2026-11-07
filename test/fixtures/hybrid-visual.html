@@ -29,6 +29,7 @@
     </p>
     <script type="module">
       import Phaser from "phaser";
+      import {MotionPresentation} from "/src/motion-presentation.js";
       import {CombatAtmosphere} from '/src/combat-atmosphere.js';
       import {drawGroundDetail} from '/src/urban-detail.js';
       const mode=new URLSearchParams(location.search).get('mode')||'grenade';
@@ -67,9 +68,12 @@
             const a=this.b.units[0],e=this.b.units[6];Object.assign(a,{active:true,dead:false,x:3,y:11});Object.assign(e,{active:true,dead:false,x:3,y:15,reload:100});
             if(mode==='medic'){Object.assign(a,{active:false,dead:true});Object.assign(e,{x:25,y:20});Object.assign(this.b.units[5],{active:true,dead:false,x:3,y:11});Object.assign(this.b.units[1],{active:true,dead:false,x:3.5,y:11});this.b.injury(this.b.units[1],'torso',60);}
           }
+          if(mode==='reload'){this.b.units[0].ammo=0;Object.assign(this.b.units[6],{x:25,y:20});}
+          if(mode==='mount'){Object.assign(this.b.units[0],{active:false,dead:true});Object.assign(this.b.units[4],{active:true,dead:false,x:3,y:11});}
           this.g = this.add.graphics();
           this.atmosphere=new CombatAtmosphere();
           this.v = new CombatVisuals();
+          this.motion=new MotionPresentation();
           this.f = new GrenadeVisuals();
           this.acc = 0;
           this.speed = Number(
@@ -79,7 +83,7 @@
           window.fixtureSnapshot = () => ({
             captured:!!window.fixturePaused,
             time: this.b.time,
-            poses:this.v.models.map((m,i)=>({id:i,pose:m.pose,posture:this.b.units[i].posture?.mode})),
+            poses:this.v.models.map((m,i)=>({id:i,pose:m.pose,posture:this.b.units[i].posture?.mode,top:m.renderTop,reload:m.renderReloadProgress,treatment:m.renderTreatmentProgress,mount:m.renderMountProgress})),
             events:this.b.events.map(e=>({type:e.type,id:e.id})),
             stats: { ...this.b.grenadeStats },
             effects: this.f.effects.map((e) => ({ kind: e.kind })),
@@ -95,6 +99,7 @@
           if (!window.fixturePaused)
             this.acc += Math.min(delta / 1000, 0.1) * this.speed;
           while (this.acc >= 0.05) {
+            this.motion.beforeStep(this.b);
             this.b.step(0.05);
             this.acc -= 0.05;
           }
@@ -110,9 +115,10 @@
             this.speed,
             !!window.fixturePaused,
           );
+          this.motion.update(this.b,this.v.models,this.acc/.05,delta/1000,this.speed,!!window.fixturePaused);
           const model=this.v.models[mode==='medic'?5:0];
           const captured=mode==='full'?model?.tucked:mode==='peek'?model?.pose==='aiming'&&this.b.units[0].posture?.mode==='peek':mode==='fire'?model?.flash&&this.b.events.some(e=>e.type==='damage'):mode==='medic'?model?.pose==='treating':this.b.grenadeStats.detonated>0;
-          if(captured)window.fixturePaused=true;
+          if(captured&&!new URLSearchParams(location.search).has('animate'))window.fixturePaused=true;
           this.atmosphere.update(this.b,delta/1000,this.speed,!!window.fixturePaused);
           const g = this.g;
           g.clear();
@@ -123,9 +129,9 @@
               drawObstacle(g, { x, y, type }, iso(x, y));
           }
           for (const u of this.b.units.filter((u) =>
-            (mode==='medic'?[1,5]:mode==='grenade'?[0,6,7,8]:[0,6]).includes(u.id),
+            (mode==='medic'?[1,5]:mode==='grenade'?[0,6,7,8]:mode==='mount'?[4,6]:[0,6]).includes(u.id),
           ))
-            this.v.drawUnit(g, this.b, u, iso(u.x, u.y), iso, false);
+            this.v.drawUnit(g, this.b, u, iso(this.motion.position(u).x, this.motion.position(u).y), iso, false);
           drawGrenades(g, this.b, iso);
           this.f.draw(g, iso);this.atmosphere.draw(g,iso);
           document.querySelector("#stats").textContent =
