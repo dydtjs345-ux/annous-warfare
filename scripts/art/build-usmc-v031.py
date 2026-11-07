@@ -26,6 +26,8 @@ def torso(direction):
  im=image();d=ImageDraw.Draw(im);a=direction*math.pi/4;profile=abs(math.cos(a))>.85;back=math.sin(a)<-.2;w=10 if profile else 13
  # Substantial shoulder/chest silhouette, pelvis at 62 (old design 34/64).
  fabric(im,[(48-w,34),(42,30),(53,30),(48+w,35),(48+w-2,51),(57,62),(38,62),(37,49)],direction)
+ # Connect the helmet/face to the collar in every octant, including rear views.
+ d.rectangle((45,23,51,32),fill=C['shade'])
  # Fabric collar/scarf and shoulder reinforcement.
  polygon(d,[(42,29),(53,29),(56,34),(50,37),(41,35)],'shade');d.line((43,31,52,33),fill=C['light'])
  polygon(d,[(39,36),(44,33),(54,33),(58,38),(58,58),(54,62),(39,60)],'deep')

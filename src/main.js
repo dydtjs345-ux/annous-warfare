@@ -47,6 +47,9 @@ class Battlefield extends Phaser.Scene {
     this.visuals = new CombatVisuals();
     this.motion = new MotionPresentation();
     this.prototypeVisual = new SoldierPrototype(this);
+    this.prototypeVisual.visualSize = 1.3;
+    document.querySelector("#prototype-art").onchange = (e) =>
+      this.prototypeVisual.setArt(e.target.value);
     document.querySelector("#prototype-toggle").onclick = () => {
       this.prototypeVisual.enabled = !this.prototypeVisual.enabled;
       if (this.prototypeVisual.enabled) this.selected = this.battle.units[1];
@@ -190,6 +193,7 @@ class Battlefield extends Phaser.Scene {
           time: this.battle.time,
           selected: this.selected?.id ?? null,
           prototype: {
+            art: this.prototypeVisual.art,
             enabled: this.prototypeVisual.enabled,
             scale: this.prototypeVisual.visualSize,
             state: this.prototypeVisual.snapshot(),
