@@ -1,0 +1,3937 @@
+{
+  "method": "Actual production Phaser laboratory, real authored PNGs and native UI controls. No synthesized poses or in-between limbs. SE videos are reference-prototype playback, not new E motion or live battle footage.",
+  "captures": [
+    {
+      "direction": "SE",
+      "action": "idle",
+      "snapshot": {
+        "direction": "SE",
+        "action": "idle",
+        "time": 0.4,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "SE",
+          "action": "idle",
+          "local": 0.4,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 낮은 준비 4셀. 정밀 호흡 연기는 검증되지 않음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 1,
+          "index": 1,
+          "count": 4
+        },
+        "total": 1.4,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "idle",
+          "local": 0.4,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 낮은 준비 4셀. 정밀 호흡 연기는 검증되지 않음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 1,
+          "index": 1,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 248.41044776119404,
+              "right": 270.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 218.1417910447761,
+              "right": 305.84328358208955,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.8432835820895,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "SE",
+      "action": "walk",
+      "snapshot": {
+        "direction": "SE",
+        "action": "walk",
+        "time": 0.4,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "SE",
+          "action": "walk",
+          "local": 0.4,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 8셀. 정확한 접지·체중 이동은 시제품 수준.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 7,
+          "index": 3,
+          "count": 8
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "walk",
+          "local": 0.4,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 8셀. 정확한 접지·체중 이동은 시제품 수준.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 7,
+          "index": 3,
+          "count": 8
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 7,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 248.6044776119403,
+              "right": 270.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.38805970149255
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 7,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 787.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.38805970149255
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 7,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 218.9179104477612,
+              "right": 305.84328358208955,
+              "top": 250.77611940298507,
+              "bottom": 407.55223880597015
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 7,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 822.8432835820895,
+              "top": 250.77611940298507,
+              "bottom": 407.55223880597015
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "SE",
+      "action": "raise",
+      "snapshot": {
+        "direction": "SE",
+        "action": "raise",
+        "time": 0.32,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "SE",
+          "action": "raise",
+          "local": 0.32,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 양손·어깨·총기가 한 그림에 포함됨.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 14,
+          "index": 2,
+          "count": 4
+        },
+        "total": 0.6400000000000001,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "raise",
+          "local": 0.32,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 양손·어깨·총기가 한 그림에 포함됨.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 14,
+          "index": 2,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 14,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 248.6044776119403,
+              "right": 274.6044776119403,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 14,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 791.6044776119403,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 14,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 218.9179104477612,
+              "right": 322.9179104477612,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 14,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 839.9179104477612,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "SE",
+      "action": "aim",
+      "snapshot": {
+        "direction": "SE",
+        "action": "aim",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "SE",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 단일 견착 셀. 조준 호흡 반복 작화는 없음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 16,
+          "index": 0,
+          "count": 1
+        },
+        "total": 0.8,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 단일 견착 셀. 조준 호흡 반복 작화는 없음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 16,
+          "index": 0,
+          "count": 1
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 248.41044776119404,
+              "right": 276.73880597014926,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 793.7388059701492,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 218.1417910447761,
+              "right": 331.45522388059703,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 848.455223880597,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "SE",
+      "action": "lower",
+      "snapshot": {
+        "direction": "SE",
+        "action": "lower",
+        "time": 0.35,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "SE",
+          "action": "lower",
+          "local": 0.35,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 정밀 역방향 연결은 작화 검토 필요.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 22,
+          "index": 2,
+          "count": 4
+        },
+        "total": 0.7,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "lower",
+          "local": 0.35,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 정밀 역방향 연결은 작화 검토 필요.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 22,
+          "index": 2,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 22,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 248.41044776119404,
+              "right": 273.24626865671644,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 22,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 790.2462686567164,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 22,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 218.1417910447761,
+              "right": 317.4850746268657,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 22,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 834.4850746268656,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "idle",
+      "snapshot": {
+        "direction": "E",
+        "action": "idle",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "E",
+          "action": "idle",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "E 정지 그림 1셀. 호흡 움직임 없음.",
+          "supported": true,
+          "bank": "e035",
+          "frame": 0,
+          "index": 0,
+          "count": 1
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "idle",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 낮은 준비 4셀. 정밀 호흡 연기는 검증되지 않음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 0,
+          "index": 0,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "e035",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 250.91480206540447,
+              "right": 272.26075731497417,
+              "top": 106,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "e035",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 228.1592082616179,
+              "right": 313.54302925989674,
+              "top": 250,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "lowReady",
+      "snapshot": {
+        "direction": "E",
+        "action": "lowReady",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "E",
+          "action": "lowReady",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
+          "supported": true,
+          "bank": "e035",
+          "frame": 1,
+          "index": 0,
+          "count": 1
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "lowReady",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "대기와 같은 기존 그림. 별도 편안한 대기 자세는 미작화.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 0,
+          "index": 0,
+          "count": 1
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "e035",
+            "action": "lowReady",
+            "frame": 1,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 250.84767641996558,
+              "right": 269.64285714285717,
+              "top": 106,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "e035",
+            "action": "lowReady",
+            "frame": 1,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 227.8907056798623,
+              "right": 303.07142857142856,
+              "top": 250,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "highReady",
+      "snapshot": {
+        "direction": "E",
+        "action": "highReady",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "E",
+          "action": "highReady",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
+          "supported": true,
+          "bank": "e035",
+          "frame": 2,
+          "index": 0,
+          "count": 1
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "lowReady",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "선택 동작의 SE 아트 없음; 낮은 준비 기준 그림만 표시",
+          "supported": true,
+          "bank": "se033",
+          "frame": 0,
+          "index": 0,
+          "count": 1,
+          "clip": {
+            "frames": [
+              0
+            ],
+            "durations": [
+              1
+            ],
+            "loop": true,
+            "status": "prototype",
+            "note": "대기와 같은 기존 그림. 별도 편안한 대기 자세는 미작화."
+          }
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "e035",
+            "action": "highReady",
+            "frame": 2,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 250.91480206540447,
+              "right": 273.73752151463,
+              "top": 106,
+              "bottom": 144.9328743545611
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "e035",
+            "action": "highReady",
+            "frame": 2,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 228.1592082616179,
+              "right": 319.4500860585198,
+              "top": 250,
+              "bottom": 405.73149741824443
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "aim",
+      "snapshot": {
+        "direction": "E",
+        "action": "aim",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "E",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
+          "supported": true,
+          "bank": "e035",
+          "frame": 3,
+          "index": 0,
+          "count": 1
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 단일 견착 셀. 조준 호흡 반복 작화는 없음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 16,
+          "index": 0,
+          "count": 1
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "e035",
+            "action": "aim",
+            "frame": 3,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 249.23666092943202,
+              "right": 275.3485370051635,
+              "top": 106.40275387263338,
+              "bottom": 144.9328743545611
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 793.7388059701492,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "e035",
+            "action": "aim",
+            "frame": 3,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 221.44664371772805,
+              "right": 325.89414802065403,
+              "top": 251.61101549053356,
+              "bottom": 405.73149741824443
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 848.455223880597,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "walk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "E",
+          "action": "walk",
+          "local": 0,
+          "stage": -1,
+          "status": "rejected",
+          "reason": "4개 보행 키 후보는 접지·연결·장비 일관성 검증 미달. 기본 재생에서 제외.",
+          "supported": false,
+          "bank": null,
+          "frame": null,
+          "index": null,
+          "count": 0
+        },
+        "total": 0,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "walk",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 8셀. 정확한 접지·체중 이동은 시제품 수준.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 4,
+          "index": 0,
+          "count": 8
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": false,
+            "bank": null,
+            "action": "walk",
+            "frame": null,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": null
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.38805970149254,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": false,
+            "bank": null,
+            "action": "walk",
+            "frame": null,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": null
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 251.55223880597015,
+              "bottom": 406
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "N",
+      "action": "aim",
+      "snapshot": {
+        "direction": "N",
+        "action": "aim",
+        "time": 0,
+        "speed": 1,
+        "playing": false,
+        "pose": {
+          "direction": "N",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "missing",
+          "reason": "N 전용 그림이 없음. SE 회전·좌우 반전으로 대신하지 않음.",
+          "supported": false,
+          "bank": null,
+          "frame": null,
+          "index": null,
+          "count": 0
+        },
+        "total": 0,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "aim",
+          "local": 0,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 단일 견착 셀. 조준 호흡 반복 작화는 없음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 16,
+          "index": 0,
+          "count": 1
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": false,
+            "bank": null,
+            "action": "aim",
+            "frame": null,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": null
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 793.7388059701492,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": false,
+            "bank": null,
+            "action": "aim",
+            "frame": null,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": null
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 848.455223880597,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "rejectedWalk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 0,
+        "speed": 0.25,
+        "playing": false,
+        "pose": {
+          "frame": 0,
+          "index": 0,
+          "frameAge": 0,
+          "direction": "E",
+          "action": "walk",
+          "local": 0,
+          "stage": -1,
+          "bank": "review-e-walk",
+          "count": 4,
+          "status": "rejected",
+          "reason": "미채택 4키 보행 검토: 연결 셀·정밀 접지/이동 곡선·장비 일관성 추가 작화 필요. 실제 전투 및 기본 재생 사용 안 함.",
+          "supported": false,
+          "renderable": true,
+          "reviewOnly": true,
+          "admitted": false
+        },
+        "total": 1,
+        "reviewOnly": true,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "frame": 4,
+          "index": 0,
+          "frameAge": 0,
+          "direction": "SE",
+          "action": "walk",
+          "local": 0,
+          "stage": -1,
+          "bank": "se033",
+          "count": 8,
+          "status": "prototype",
+          "reason": "기존 SE 보행 · 같은 순환 위상 대조",
+          "supported": true,
+          "renderable": true,
+          "reviewOnly": false,
+          "admitted": false
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 0,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 245.276247848537,
+              "right": 271.7908777969019,
+              "top": 105.7314974182444,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.38805970149254,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 0,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 205.60499139414802,
+              "right": 311.6635111876076,
+              "top": 248.9259896729776,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 251.55223880597015,
+              "bottom": 406
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "rejectedWalk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 0.25,
+        "speed": 0.25,
+        "playing": false,
+        "pose": {
+          "frame": 1,
+          "index": 1,
+          "frameAge": 0,
+          "direction": "E",
+          "action": "walk",
+          "local": 0.25,
+          "stage": -1,
+          "bank": "review-e-walk",
+          "count": 4,
+          "status": "rejected",
+          "reason": "미채택 4키 보행 검토: 연결 셀·정밀 접지/이동 곡선·장비 일관성 추가 작화 필요. 실제 전투 및 기본 재생 사용 안 함.",
+          "supported": false,
+          "renderable": true,
+          "reviewOnly": true,
+          "admitted": false
+        },
+        "total": 1,
+        "reviewOnly": true,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "frame": 6,
+          "index": 2,
+          "frameAge": 0,
+          "direction": "SE",
+          "action": "walk",
+          "local": 0.25,
+          "stage": -1,
+          "bank": "se033",
+          "count": 8,
+          "status": "prototype",
+          "reason": "기존 SE 보행 · 같은 순환 위상 대조",
+          "supported": true,
+          "renderable": true,
+          "reviewOnly": false,
+          "admitted": false
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 1,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 249.8407917383821,
+              "right": 270.44836488812393,
+              "top": 105.8657487091222,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 6,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 1,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 223.8631669535284,
+              "right": 306.29345955249573,
+              "top": 249.4629948364888,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 6,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.8432835820895,
+              "top": 250.77611940298507,
+              "bottom": 406
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "rejectedWalk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 0.5,
+        "speed": 0.25,
+        "playing": false,
+        "pose": {
+          "frame": 2,
+          "index": 2,
+          "frameAge": 0,
+          "direction": "E",
+          "action": "walk",
+          "local": 0.5,
+          "stage": -1,
+          "bank": "review-e-walk",
+          "count": 4,
+          "status": "rejected",
+          "reason": "미채택 4키 보행 검토: 연결 셀·정밀 접지/이동 곡선·장비 일관성 추가 작화 필요. 실제 전투 및 기본 재생 사용 안 함.",
+          "supported": false,
+          "renderable": true,
+          "reviewOnly": true,
+          "admitted": false
+        },
+        "total": 1,
+        "reviewOnly": true,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "frame": 8,
+          "index": 4,
+          "frameAge": 0,
+          "direction": "SE",
+          "action": "walk",
+          "local": 0.5,
+          "stage": -1,
+          "bank": "se033",
+          "count": 8,
+          "status": "prototype",
+          "reason": "기존 SE 보행 · 같은 순환 위상 대조",
+          "supported": true,
+          "renderable": true,
+          "reviewOnly": false,
+          "admitted": false
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 2,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 245.8132530120482,
+              "right": 273.4018932874355,
+              "top": 105.7986230636833,
+              "bottom": 144.7986230636833
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 8,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 144.80597014925374
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 2,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 207.75301204819277,
+              "right": 318.1075731497418,
+              "top": 249.1944922547332,
+              "bottom": 405.19449225473323
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 8,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 405.2238805970149
+            }
+          }
+        ]
+      }
+    },
+    {
+      "direction": "E",
+      "action": "rejectedWalk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 0.75,
+        "speed": 0.25,
+        "playing": false,
+        "pose": {
+          "frame": 3,
+          "index": 3,
+          "frameAge": 0,
+          "direction": "E",
+          "action": "walk",
+          "local": 0.75,
+          "stage": -1,
+          "bank": "review-e-walk",
+          "count": 4,
+          "status": "rejected",
+          "reason": "미채택 4키 보행 검토: 연결 셀·정밀 접지/이동 곡선·장비 일관성 추가 작화 필요. 실제 전투 및 기본 재생 사용 안 함.",
+          "supported": false,
+          "renderable": true,
+          "reviewOnly": true,
+          "admitted": false
+        },
+        "total": 1,
+        "reviewOnly": true,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "frame": 10,
+          "index": 6,
+          "frameAge": 0,
+          "direction": "SE",
+          "action": "walk",
+          "local": 0.75,
+          "stage": -1,
+          "bank": "se033",
+          "count": 8,
+          "status": "prototype",
+          "reason": "기존 SE 보행 · 같은 순환 위상 대조",
+          "supported": true,
+          "renderable": true,
+          "reviewOnly": false,
+          "admitted": false
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "missing",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "rejected",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 3,
+            "scale": 0.06712564543889846,
+            "scaleY": 0.06712564543889846,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 248.90103270223753,
+              "right": 270.7839931153184,
+              "top": 106.06712564543889,
+              "bottom": 145.0671256454389
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 10,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 787.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.38805970149255
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "review-e-walk",
+            "action": "walk",
+            "frame": 3,
+            "scale": 0.2685025817555938,
+            "scaleY": 0.2685025817555938,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.46730462519936206,
+            "originY": 0.9537480063795853,
+            "bounds": {
+              "left": 220.1041308089501,
+              "right": 307.6359724612737,
+              "top": 250.26850258175557,
+              "bottom": 406.26850258175557
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 10,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 822.8432835820895,
+              "top": 250.77611940298507,
+              "bottom": 407.55223880597015
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "playbacks": [
+    {
+      "name": "se-connected",
+      "action": "sequence",
+      "speed": 1,
+      "frames": 477,
+      "concat": "/tmp/aw-v035-se-connected/concat.txt",
+      "samplesFile": "playback-samples.jsonl",
+      "sampleCount": 540,
+      "states": [
+        "idle",
+        "walk",
+        "lowReady",
+        "raise",
+        "aim",
+        "lower"
+      ],
+      "framesSeen": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "name": "se-walk-slow",
+      "action": "walk",
+      "speed": 0.25,
+      "frames": 238,
+      "concat": "/tmp/aw-v035-se-walk-slow/concat.txt",
+      "samplesFile": "playback-samples.jsonl",
+      "sampleCount": 263,
+      "states": [
+        "walk"
+      ],
+      "framesSeen": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "e-keys-rejected-review",
+      "action": "review",
+      "speed": 0.25,
+      "frames": 242,
+      "concat": "/tmp/aw-v035-e-keys-rejected-review/concat.txt",
+      "samplesFile": "playback-samples.jsonl",
+      "sampleCount": 265,
+      "states": [
+        "walk"
+      ],
+      "framesSeen": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

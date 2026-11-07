@@ -1,4 +1,12 @@
-# Autonomous Warfare v0.3.4
+# Autonomous Warfare v0.3.5
+
+## v0.3.5 — rifleman foundation and animation laboratory
+
+Open **8방향 연구실** in the game, or `/annous-warfare/rifleman-lab.html`. The lab has eight direction choices, seven action choices, 30/39/45px views, a 4× SE-reference comparison, 0.1×–4× playback, pause, exact frame stepping, scrubbing, an artwork matrix and independent movement/aim capability inspection. Opening it preserves the battle's prior pause state and selection.
+
+**Artwork remains incomplete.** Existing SE motion stays a prototype. New E artwork contains four static stances; it has no accepted breathing, raise/lower or walking sequence. One separately authored E four-key walking test failed the motion-quality gate and is playable only in a clearly marked rejection-review mode. N/NE/S/SW/W/NW artwork is missing. No new full directional animation set is claimed finished. Missing views stay empty; they are never rotated or mirrored SE substitutes.
+
+Live combat continues to use the unchanged v0.3.4 renderer. The new foundation is lab-only and cannot automatically promote unfinished art. [Audit, completion matrix, screenshots and recordings](reports/v035-rifleman-animation-foundation.md) · [Artist delivery requirements](public/assets/rifleman-foundation-v035/README.md). 290 tests and 40 paired complete replay checks pass; physical iPhone Safari remains unverified.
 
 ## v0.3.4 — live SE full-body animation
 
