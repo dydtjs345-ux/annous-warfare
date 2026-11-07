@@ -1,6 +1,7 @@
 # v0.3.4 — live combat animation integration
 
-Branch: `feat/v034-live-combat-animation`  
+Branch: `feat/v034-live-combat-animation`
+
 Baseline: merged main `e68ba18`, including corrected v0.3.3 artwork `318bbfa`.
 
 The actual AI-controlled USMC rifleman **id 1** now uses the existing corrected
@@ -224,8 +225,13 @@ reads the full test log from `/tmp/aw-v034-tests-final.log`.
 - Reproducible QA: `scripts/check-v034-parity.mjs`, `scripts/find-v034-battles.mjs`, `scripts/capture-v034-live.mjs`, `scripts/mobile-v034.mjs`, `scripts/verify-v034-evidence.mjs`, `scripts/evidence-v034.sh`.
 - Evidence: `reports/v034-parity.json`, `reports/v034-discovery*.json`, `reports/v034-live/` PNGs, MP4s and JSON records.
 
-Integration checkpoint: `21fe53e`. Subsequent commits contain live visual QA,
-the synchronized debug-label fix, real-match regressions, and delivery evidence.
+Integration checkpoint: `21fe53e`. Validation checkpoint: `e31c7c6` (live visual
+QA, synchronized debug-label fix, real-match regressions and delivery evidence).
+The feature branch was pushed successfully. PR creation was attempted with both
+`gh pr create` (GraphQL) and `gh api` (REST); both GitHub API requests returned
+`Forbidden`. No PR was created. [Prepared PR description](v034-live/pull-request.md)
+is ready to paste into GitHub when access is available.
+
 Comparison: https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v034-live-combat-animation
 
 No merge or main/Pages deployment is performed by this work.
