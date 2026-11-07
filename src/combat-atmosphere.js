@@ -26,6 +26,7 @@ export class CombatAtmosphere {
       if (this.effects.length >= 64) this.effects.shift();
       this.effects.push({
         kind: e.type,
+        unitId: e.unitId,
         x: e.x ?? u.x,
         y: e.y ?? u.y,
         angle: e.angle ?? u.facing,
@@ -34,7 +35,7 @@ export class CombatAtmosphere {
       });
     }
   }
-  draw(g, iso, view) {
+  draw(g, iso, view, muzzleOverride) {
     for (const e of this.effects) {
       const p = iso(e.x, e.y),
         age = this.clock - e.at;
@@ -45,19 +46,27 @@ export class CombatAtmosphere {
           l = Math.hypot(q.x - p.x, q.y - p.y) || 1,
           dx = (q.x - p.x) / l,
           dy = (q.y - p.y) / l;
+        if (!e.assetAnchor) {
+          const anchor = muzzleOverride?.(e);
+          if (anchor)
+            e.assetAnchor = {
+              muzzle: { ...anchor.muzzle },
+              grip: { ...anchor.grip },
+            };
+        }
         // Smoke drifts only from a real shot; casing is a tiny warm pixel.
         g.fillStyle(0xa4b1b5, 0.13 * fade);
         g.fillEllipse(
-          p.x + dx * 16 - age * 5,
-          p.y - 14 + dy * 16 - age * 8,
+          (e.assetAnchor?.muzzle.x ?? p.x + dx * 16) - age * 5,
+          (e.assetAnchor?.muzzle.y ?? p.y - 14 + dy * 16) - age * 8,
           4 + age * 12,
           3 + age * 7,
         );
         if (age < 0.22) {
           g.fillStyle(0xd6b57c, fade * 0.8);
           g.fillRect(
-            p.x - dy * (4 + age * 22),
-            p.y - 11 + dx * 4 + age * 9,
+            (e.assetAnchor?.grip.x ?? p.x) - dy * (4 + age * 22),
+            (e.assetAnchor?.grip.y ?? p.y - 11) + dx * 4 + age * 9,
             2,
             1,
           );

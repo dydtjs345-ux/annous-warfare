@@ -1,3 +1,4 @@
+import { CombatAtmosphere } from "../src/combat-atmosphere.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -97,6 +98,19 @@ test("weapon direction stays continuous while sprite direction and gait index re
     assert.ok(frame >= 0 && frame < 8);
   }
   assert.ok(Math.abs(screenAngle(0) - Math.atan2(0.5, 1)) < 1e-9);
+  const u = new Battle(() => 0.9).units[1];
+  assert.ok(
+    Math.abs(
+      prototypePose(u, { direction: Math.PI / 4, stride: 0 }, 1).foreshorten -
+        0.5,
+    ) < 1e-9,
+  );
+  assert.ok(
+    Math.abs(
+      prototypePose(u, { direction: -Math.PI / 4, stride: 0 }, 1).foreshorten -
+        1,
+    ) < 1e-9,
+  );
 });
 test("active asset rendering never mutates battle and real flashes use exact projected shot axis", () => {
   const b = new Battle(() => 0.9),
@@ -114,6 +128,36 @@ test("active asset rendering never mutates battle and real flashes use exact pro
     true,
   );
   assert.equal(p.state.gunAngle, screenAngle(1.2));
+  assert.ok(
+    Math.abs(
+      Math.hypot(
+        p.state.muzzle.x - p.state.grip.x,
+        p.state.muzzle.y - p.state.grip.y,
+      ) -
+        24 * p.state.scale * p.state.foreshorten,
+    ) < 1e-9,
+    "muzzle point follows both axes of the foreshortened rifle",
+  );
+  b.events = [{ id: 1, type: "shot", unitId: 1, x: u.x, y: u.y, angle: 1.2 }];
+  const smoke = new CombatAtmosphere();
+  smoke.update(b, 0.016);
+  smoke.draw(sink, iso, null, () => p.state);
+  assert.deepEqual(smoke.effects[0].assetAnchor.muzzle, p.state.muzzle);
+  const observed = p.snapshot();
+  p.hide();
+  assert.equal(
+    observed.visible,
+    true,
+    "recorded frame snapshot does not mutate when the next frame hides old parts",
+  );
+  assert.equal(p.state.visible, false);
+  const anchored = smoke.effects[0].assetAnchor.muzzle.x;
+  p.state.muzzle.x += 1;
+  assert.equal(
+    smoke.effects[0].assetAnchor.muzzle.x,
+    anchored,
+    "shot smoke remains at latched muzzle rather than following the soldier",
+  );
   assert.equal(JSON.stringify({ ...u, visibleEnemies: [] }), before);
   assert.ok(
     Math.hypot(

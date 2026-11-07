@@ -192,7 +192,7 @@ class Battlefield extends Phaser.Scene {
           prototype: {
             enabled: this.prototypeVisual.enabled,
             scale: this.prototypeVisual.visualSize,
-            state: this.prototypeVisual.state,
+            state: this.prototypeVisual.snapshot(),
           },
           environmentCache: {
             count: this.staticEnvironment.records.length,
@@ -563,7 +563,14 @@ class Battlefield extends Phaser.Scene {
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
-    this.atmosphere.draw(g, this.iso, v);
+    this.atmosphere.draw(g, this.iso, v, (e) =>
+      e.unitId === 1 &&
+      this.prototypeVisual.enabled &&
+      this.prototypeVisual.state?.visible &&
+      this.prototypeVisual.state.flash
+        ? this.prototypeVisual.state
+        : null,
+    );
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =

@@ -18,6 +18,14 @@ export function prototypePose(u, m, visualSize = 1) {
     eligible: eligiblePrototype(u) && u.active,
     scale: (scale * 30) / 56,
     angle: screenAngle(m.renderDirection ?? m.direction),
+    foreshorten:
+      Math.hypot(
+        Math.cos(m.renderDirection ?? m.direction) -
+          Math.sin(m.renderDirection ?? m.direction),
+        0.5 *
+          (Math.sin(m.renderDirection ?? m.direction) +
+            Math.cos(m.renderDirection ?? m.direction)),
+      ) / Math.SQRT2,
     body: directionFrame(screenAngle(m.renderDirection ?? m.direction)),
     legs: directionFrame(screenAngle(u.movementHeading ?? u.facing)),
     phase: m.moving
@@ -65,7 +73,17 @@ export class SoldierPrototype {
     this.hide();
   }
   hide() {
+    if (this.state) this.state.visible = false;
     for (const p of this.parts) p.setVisible(false);
+  }
+  snapshot() {
+    return this.state
+      ? {
+          ...this.state,
+          muzzle: this.state.muzzle ? { ...this.state.muzzle } : undefined,
+          grip: this.state.grip ? { ...this.state.grip } : undefined,
+        }
+      : null;
   }
   hitTest(point, foot) {
     const k = this.visualSize;
@@ -159,7 +177,10 @@ export class SoldierPrototype {
       x: p.x + dx * 2 * s - dx * recoil,
       y: upperY - 37 * s - dy * recoil,
     };
-    let support = { x: grip.x + dx * 11 * s, y: grip.y + dy * 11 * s };
+    let support = {
+      x: grip.x + dx * 11 * s * plan.foreshorten,
+      y: grip.y + dy * 11 * s * plan.foreshorten,
+    };
     if (m.pose === "reloading") {
       const progress = m.renderReloadProgress ?? m.reloadProgress;
       support = {
@@ -202,8 +223,14 @@ export class SoldierPrototype {
           .setDepth(depth + 0.04 + i * 0.001);
       }
     }
-    show(this.gun, 0.06).setPosition(grip.x, grip.y).setRotation(angle);
-    const muzzle = { x: grip.x + dx * 24 * s, y: grip.y + dy * 24 * s };
+    show(this.gun, 0.06)
+      .setScale(s * plan.foreshorten, s)
+      .setPosition(grip.x, grip.y)
+      .setRotation(angle);
+    const muzzle = {
+      x: grip.x + dx * 24 * s * plan.foreshorten,
+      y: grip.y + dy * 24 * s * plan.foreshorten,
+    };
     if (m.flash) {
       g.fillStyle(0xffcc7c, 0.12);
       g.fillCircle(muzzle.x, muzzle.y, 7 * this.visualSize);

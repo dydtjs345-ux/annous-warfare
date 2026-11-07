@@ -54,7 +54,15 @@ def prone(direction):
  def shape(pts,c):poly(d,[pt(*p) for p in pts],c)
  shape([(-18,-4),(-5,-4),(0,-2),(0,3),(-18,3)],'shadow');shape([(-18,-4),(-5,-4),(-5,-1),(-18,-1)],'cloth');shape([(-18,1),(-5,1),(-5,4),(-18,4)],'tan')
  shape([(-6,-5),(7,-5),(10,-2),(7,5),(-6,5)],'vest');shape([(-3,-4),(5,-4),(6,3),(-3,3)],'tan')
- shape([(8,-4),(14,-4),(16,-1),(14,3),(8,3)],'cloth');shape([(9,-4),(14,-4),(14,-2),(9,-2)],'light');return im
+ shape([(8,-4),(14,-4),(16,-1),(14,3),(8,3)],'cloth')
+ # Raised helmet/backpack volumes preserve a readable human shape in full cover.
+ cx,cy=pt(12,0)
+ cloth(im,[(cx-4,cy-1),(cx-3,cy-4),(cx,cy-5),(cx+3,cy-3),(cx+4,cy),(cx+2,cy+2),(cx-2,cy+2)],salt=direction+19)
+ d.line((cx-3,cy,cx+3,cy),fill=PAL['shadow']);d.line((cx-1,cy-4,cx+1,cy-4),fill=PAL['light'])
+ bx,by=pt(-1,0);d.rectangle((bx-4,by-5,bx+3,by),fill=PAL['shadow']);d.rectangle((bx-3,by-5,bx+2,by-2),fill=PAL['tan']);d.line((bx-1,by-4,bx-1,by-1),fill=PAL['web'])
+ for side in [-1,1]:
+  x,y=pt(-17,side*3);d.rectangle((x-2,y-1,x+2,y+1),fill=PAL['sole']);a0=pt(7,side*4);a1=pt(12,side*6);d.line((a0[0],a0[1]-2,a1[0],a1[1]-2),fill=PAL['cloth'],width=2)
+ return im
 frames={};sheet=Image.new('RGBA',(64*8,72*25))
 for direction in range(8):
  sheet.alpha_composite(torso(direction),(direction*64,0));frames[f'torso-{direction}']={'frame':{'x':direction*64,'y':0,'w':64,'h':72}}
