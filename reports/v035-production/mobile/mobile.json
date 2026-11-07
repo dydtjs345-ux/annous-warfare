@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "in-game lab, pause isolation, reviewed E high-ready clip, native iframe touch scroll",
+    "existing SE preview preserved; closing restores prior paused battle and selection",
+    "running battle resumes; unchanged 1x/2x/4x live controls",
+    "three extra open/close cycles remove lab iframes",
+    "all eight E actions, accurate COMPLETE/PROTOTYPE distinction, stepping and no rotated or mirrored substitutes",
+    "mobile directions, missing-art display, stepping, scales, pairing refusal and both orientations"
+  ],
+  "frameStats": {
+    "samples": 300,
+    "p50": 16.699999999999818,
+    "p95": 16.799999999999272,
+    "max": 16.80000000000109
+  },
+  "errors": [],
+  "failed": [],
+  "physicalSafari": "unverified"
+}

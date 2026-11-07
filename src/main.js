@@ -1,5 +1,9 @@
 import { LiveUSMCRenderer, preloadLiveUSMC } from "./live-usmc-renderer.js";
 import {
+  LiveEastRenderer,
+  preloadEastRifleman,
+} from "./rifleman/live-east-renderer.js";
+import {
   liveRenderStatus,
   renderInspection,
   insertRenderInspection,
@@ -41,6 +45,7 @@ class Battlefield extends Phaser.Scene {
   preload() {
     preloadPrototype(this);
     preloadLiveUSMC(this);
+    preloadEastRifleman(this);
   }
   create() {
     this.seed = params.has("seed")
@@ -58,11 +63,14 @@ class Battlefield extends Phaser.Scene {
     this.prototypeVisual.visualSize = 1.3;
     this.prototypeVisual.enabled = true;
     this.liveVisual = new LiveUSMCRenderer(this);
+    this.eastVisual = new LiveEastRenderer(this);
     this.prototypeMode = "v033";
     document.querySelector("#prototype-art").onchange = (e) => {
       this.prototypeMode = e.target.value;
       this.prototypeVisual.setArt(
-        this.prototypeMode === "v033" ? "v031" : this.prototypeMode,
+        ["v033", "v035"].includes(this.prototypeMode)
+          ? "v031"
+          : this.prototypeMode,
       );
     };
     document.querySelector("#live-animation-debug").hidden =
@@ -168,7 +176,8 @@ class Battlefield extends Phaser.Scene {
             v = this.motion.position(u);
           if (
             u.active &&
-            (this.liveVisual.hitTest(w, this.iso(v.x, v.y)) ||
+            (this.eastVisual.hitTest(w, this.iso(v.x, v.y)) ||
+              this.liveVisual.hitTest(w, this.iso(v.x, v.y)) ||
               this.prototypeVisual.hitTest(w, this.iso(v.x, v.y)))
           )
             this.selected = u;
@@ -249,11 +258,14 @@ class Battlefield extends Phaser.Scene {
             art: this.prototypeMode,
             active: this.rendererStatus ? { ...this.rendererStatus } : null,
             live: this.liveVisual.snapshot(),
+            east: this.eastVisual.snapshot(),
             enabled: this.prototypeVisual.enabled,
             scale: this.prototypeVisual.visualSize,
-            state: this.liveVisual.state?.visible
-              ? this.liveVisual.snapshot()
-              : this.prototypeVisual.snapshot(),
+            state: this.eastVisual.state?.visible
+              ? this.eastVisual.snapshot()
+              : this.liveVisual.state?.visible
+                ? this.liveVisual.snapshot()
+                : this.prototypeVisual.snapshot(),
           },
           environmentCache: {
             count: this.staticEnvironment.records.length,
@@ -564,6 +576,14 @@ class Battlefield extends Phaser.Scene {
       this.paused,
     );
     this.liveVisual.visualSize = this.prototypeVisual.visualSize;
+    this.eastVisual.visualSize = this.prototypeVisual.visualSize;
+    this.eastVisual.update(
+      this.battle,
+      this.battle.units[1],
+      this.visuals.models[1],
+      this.visuals.effects[1],
+      this.motion.position(this.battle.units[1]),
+    );
     this.liveVisual.update(
       this.battle,
       this.battle.units[1],
@@ -595,6 +615,7 @@ class Battlefield extends Phaser.Scene {
     );
     this.prototypeVisual.hide();
     this.liveVisual.hide();
+    this.eastVisual.hide();
     for (const u of this.battle.units) {
       const rendered = this.motion.position(u),
         p = this.iso(rendered.x, rendered.y),
@@ -603,11 +624,11 @@ class Battlefield extends Phaser.Scene {
       ug.setVisible(inView(p, v, 65));
       ug.setDepth((rendered.x + rendered.y) * 100);
       if (!ug.visible) continue;
-      const liveDrawn =
+      const eastDrawn =
         u.id === 1 &&
-        this.prototypeMode === "v033" &&
+        this.prototypeMode === "v035" &&
         this.prototypeVisual.enabled &&
-        this.liveVisual.draw(
+        this.eastVisual.draw(
           ug,
           this.battle,
           u,
@@ -617,6 +638,21 @@ class Battlefield extends Phaser.Scene {
           rendered,
           this.selected === u,
         );
+      const liveDrawn =
+        eastDrawn ||
+        (u.id === 1 &&
+          ["v033", "v035"].includes(this.prototypeMode) &&
+          this.prototypeVisual.enabled &&
+          this.liveVisual.draw(
+            ug,
+            this.battle,
+            u,
+            this.visuals.models[u.id],
+            this.visuals.effects[u.id],
+            p,
+            rendered,
+            this.selected === u,
+          ));
       const drawn =
         liveDrawn ||
         (u.id === 1 &&
@@ -648,6 +684,7 @@ class Battlefield extends Phaser.Scene {
       enabled: this.prototypeVisual.enabled,
       inView: this.unitGraphics[1].visible,
       live: this.liveVisual.snapshot(),
+      east: this.eastVisual.snapshot(),
       legacy: this.prototypeVisual.snapshot(),
       model: this.visuals.models[1],
     });
@@ -663,14 +700,17 @@ class Battlefield extends Phaser.Scene {
         low = m.tucked || m.crawl || !this.selected.active,
         top = low
           ? -9
-          : this.selected.id === 1 && this.liveVisual.state?.visible
+          : this.selected.id === 1 &&
+              (this.liveVisual.state?.visible || this.eastVisual.state?.visible)
             ? -30 * this.prototypeVisual.visualSize
             : (m.renderTop ?? -30);
       g.lineStyle(1, 0xc0e4d3, 0.9);
       g.strokeEllipse(p.x, p.y + top / 2, low ? 24 : 14, Math.abs(top) + 2);
     }
     this.visuals.drawTraces(g, this.iso, (e) =>
-      e.unitId === 1 ? this.liveVisual.shotAnchor(e.id) : null,
+      e.unitId === 1
+        ? (this.eastVisual.shotAnchor(e.id) ?? this.liveVisual.shotAnchor(e.id))
+        : null,
     );
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
@@ -679,6 +719,7 @@ class Battlefield extends Phaser.Scene {
       this.iso,
       v,
       (e) =>
+        this.eastVisual.shotAnchor(e.id) ??
         this.liveVisual.shotAnchor(e.id) ??
         (e.unitId === 1 &&
         this.prototypeVisual.enabled &&

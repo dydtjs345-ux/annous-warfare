@@ -1,5 +1,6 @@
 import { LIVE_ANIMATION_KO, LIVE_REASON_KO } from "./live-usmc-state.js";
 const RENDERERS = {
+  "v035-e": "v0.3.5 E Animated",
   v033: "v0.3.3 Animated",
   v031: "v0.3.1",
   v030: "v0.3.0",
@@ -37,6 +38,7 @@ export function liveRenderStatus({
   enabled,
   inView,
   live,
+  east,
   legacy,
   model,
 }) {
@@ -48,7 +50,12 @@ export function liveRenderStatus({
     renderer = "offscreen";
     animation = null;
     reason = "화면 밖이므로 그림 생략";
-  } else if (enabled && mode === "v033" && live?.visible) {
+  } else if (enabled && mode === "v035" && east?.visible) {
+    renderer = "v035-e";
+    animation = east.animation;
+    frame = east.frame;
+    reason = LIVE_REASON_KO[east.reason];
+  } else if (enabled && ["v033", "v035"].includes(mode) && live?.visible) {
     renderer = "v033";
     animation = live.animation;
     frame = live.frame;
@@ -63,15 +70,18 @@ export function liveRenderStatus({
     animation = legacy?.visible ? legacy.pose : model?.pose;
     reason = !enabled
       ? "시제품 비교 꺼짐"
-      : mode !== "v033"
+      : !["v033", "v035"].includes(mode)
         ? "선택한 기존 렌더러로 비교"
-        : (LIVE_REASON_KO[live?.fallback] ?? "이 상태의 SE 자산 없음");
+        : mode === "v035" && east?.fallback === "eastArtwork"
+          ? "E 보행은 접지·좌우 다리 연속성 미검증; 기존 표현 유지"
+          : (LIVE_REASON_KO[live?.fallback] ?? "이 상태의 E/SE 자산 없음");
   }
   return {
     requested: mode,
     renderer,
     animation,
     frame,
+    frameCount: renderer === "v035-e" ? 8 : 24,
     reason: reason ?? "판단 근거 기록 없음",
     label: RENDERERS[renderer],
   };
@@ -82,7 +92,7 @@ export function renderInspection(status, expanded = false) {
     LIVE_ANIMATION_KO[status.animation] ??
     LEGACY_POSES[status.animation] ??
     "표시 동작 없음";
-  return `시각 표현: ${status.label} · ${animation}${status.frame == null ? "" : ` (${status.frame + 1}/24)`}${expanded ? `\n시각 전환: ${status.reason}` : ""}`;
+  return `시각 표현: ${status.label} · ${animation}${status.frame == null ? "" : ` (${status.frame + 1}/${status.frameCount ?? 24})`}${expanded ? `\n시각 전환: ${status.reason}` : ""}`;
 }
 export function insertRenderInspection(text, status, expanded) {
   const lines = text.split("\n");

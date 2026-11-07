@@ -61,7 +61,11 @@ export const LIVE_REASON_KO = {
   finished: "전투 종료",
 };
 export class LiveUSMCState {
-  constructor() {
+  constructor(art = SE_ART, durations = null) {
+    // A presentation-only direction may supply its authored sector and timing.
+    // Default SE behavior and its existing battle integration are unchanged.
+    this.art = art;
+    this.durations = durations;
     this.reset(null);
   }
   reset(b) {
@@ -138,7 +142,8 @@ export class LiveUSMCState {
         (!this.transition && Math.abs(this.amount - desired) > 1e-6) ||
         (this.transition && this.transition.to !== desired)
       ) {
-        let duration = desired ? clipDuration("raise") : clipDuration("lower");
+        const clip = desired ? "raise" : "lower";
+        let duration = this.durations?.[clip] ?? clipDuration(clip);
         // Existing aim/reaction deadline governs raise pacing. A real shot always
         // overrides an unfinished raise; animation never delays firing.
         if (desired && u.aimAt > now)
@@ -199,23 +204,23 @@ export class LiveUSMCState {
     this.lookHeld = sectorGate(
       this.lookHeld,
       lookAngle,
-      SE_ART.center,
-      SE_ART.enter,
-      SE_ART.exit,
+      this.art.center,
+      this.art.enter,
+      this.art.exit,
     );
     this.moveHeld = sectorGate(
       this.moveHeld,
       moveAngle,
-      SE_ART.center,
-      SE_ART.enter,
-      SE_ART.exit,
+      this.art.center,
+      this.art.enter,
+      this.art.exit,
     );
     this.aimHeld = sectorGate(
       this.aimHeld,
       aimAngle,
-      SE_ART.barrel,
-      SE_ART.aimEnter,
-      SE_ART.aimExit,
+      this.art.barrel,
+      this.art.aimEnter,
+      this.art.aimExit,
     );
     let fallback = null;
     if (!eligible) fallback = "identity";
@@ -234,7 +239,7 @@ export class LiveUSMCState {
     else if (
       moving &&
       (!this.moveHeld ||
-        angleDistance(lookAngle, moveAngle) > SE_ART.travelDifference)
+        angleDistance(lookAngle, moveAngle) > this.art.travelDifference)
     )
       fallback = "travel";
     else if (moving && (intent || this.amount > 1e-6 || animation === "firing"))

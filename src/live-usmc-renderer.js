@@ -10,11 +10,13 @@ export function preloadLiveUSMC(scene) {
   scene.load.json("usmc-live-meta", root + "metadata.json");
 }
 export class LiveUSMCRenderer {
-  constructor(scene) {
+  constructor(scene, options = {}) {
     this.scene = scene;
-    this.controller = new LiveUSMCState();
-    this.image = scene.add.image(0, 0, "usmc-live-v033", 0).setVisible(false);
-    this.design = scene.cache.json.get("usmc-live-meta");
+    this.controller = options.controller ?? new LiveUSMCState();
+    this.textureKey = options.texture ?? "usmc-live-v033";
+    this.art = options.art ?? SE_ART;
+    this.image = scene.add.image(0, 0, this.textureKey, 0).setVisible(false);
+    this.design = scene.cache.json.get(options.metadata ?? "usmc-live-meta");
     this.visualSize = 1.3;
     this.state = null;
     this.anchors = new Map();
@@ -33,7 +35,7 @@ export class LiveUSMCRenderer {
     if (this.state) this.state.visible = false;
   }
   draw(g, b, u, m, fx, p, view, selected) {
-    if (!this.design || !this.scene.textures.exists("usmc-live-v033")) {
+    if (!this.design || !this.scene.textures.exists(this.textureKey)) {
       this.hide();
       if (this.state) this.state.fallback = "asset";
       return false;
@@ -45,10 +47,11 @@ export class LiveUSMCRenderer {
     const frame = this.design.frames[this.plan.frame],
       a = frame.footAnchor,
       size = [1, 1.3, 1.5].includes(this.visualSize) ? this.visualSize : 1.3,
-      s = (30 * size) / this.design.nativeStandingHeight;
+      s = (30 * size) / this.design.nativeStandingHeight,
+      dimensions = this.design.frameSize ?? [256, 256];
     this.image
       .setFrame(this.plan.frame)
-      .setOrigin(a[0] / 256, a[1] / 256)
+      .setOrigin(a[0] / dimensions[0], a[1] / dimensions[1])
       .setScale(s)
       .setPosition(p.x, p.y)
       .setRotation(0)
@@ -64,10 +67,14 @@ export class LiveUSMCRenderer {
         x: p.x + (frame.muzzle[0] - a[0]) * s,
         y: p.y + (frame.muzzle[1] - a[1]) * s,
       },
-      grip = { x: p.x + (152 - a[0]) * s, y: p.y + (100 - a[1]) * s };
+      grip = {
+        x: p.x + ((frame.grip?.[0] ?? 152) - a[0]) * s,
+        y: p.y + ((frame.grip?.[1] ?? 100) - a[1]) * s,
+      },
+      gunAngle = frame.barrelAngle ?? this.art.barrel;
     if (this.plan.flash) {
-      const dx = Math.cos(SE_ART.barrel),
-        dy = Math.sin(SE_ART.barrel),
+      const dx = Math.cos(gunAngle),
+        dy = Math.sin(gunAngle),
         k = size;
       g.fillStyle(0xffc779, 0.06);
       g.fillCircle(muzzle.x, muzzle.y, 3 * k);
@@ -99,7 +106,7 @@ export class LiveUSMCRenderer {
       scale: s,
       muzzle,
       grip,
-      gunAngle: SE_ART.barrel,
+      gunAngle,
     };
     return true;
   }
