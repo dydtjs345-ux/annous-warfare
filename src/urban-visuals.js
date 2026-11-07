@@ -1,4 +1,4 @@
-import {drawCoverArt} from "./cover-art.js";
+import { drawCoverArt } from "./cover-art.js";
 import { material } from "./world.js";
 import { FRAG } from "./grenades.js";
 import { inView } from "./view.js";
@@ -16,7 +16,7 @@ export function drawObstacle(g, d, p) {
     c = colors[d.type] ?? 0x727a79;
   g.fillStyle(0x000000, 0.25);
   g.fillEllipse(p.x + 5, p.y + 3, 42, 16);
-  if(drawCoverArt(g,d,p,h))return;
+  if (drawCoverArt(g, d, p, h)) return;
   g.fillStyle(c);
   g.fillPoints(
     [
@@ -46,7 +46,6 @@ export function drawObstacle(g, d, p) {
     g.fillStyle(chip % 2 ? 0xadb5aa : 0x283d46, 0.35);
     g.fillRect(p.x - 13 + chip * 8, p.y - h + chip * 3, 3, 1);
   }
-
 }
 export function drawGrenades(g, b, iso, view = null) {
   for (const frag of b.grenades ?? []) {

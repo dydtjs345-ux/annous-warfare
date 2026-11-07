@@ -1,8 +1,13 @@
-import {streetProps,drawStreetProp} from "./street-art.js";
-import {coverVisuals} from "./cover-art.js";
+import { EnvironmentCache } from "./environment-cache.js";
+import { streetProps, drawStreetProp } from "./street-art.js";
+import { coverVisuals } from "./cover-art.js";
 import { MotionPresentation } from "./motion-presentation.js";
 import { CombatAtmosphere } from "./combat-atmosphere.js";
-import { drawGroundDetail, drawBuildingDetail, buildingPalette } from "./urban-detail.js";
+import {
+  drawGroundDetail,
+  drawBuildingDetail,
+  buildingPalette,
+} from "./urban-detail.js";
 import { drawReadability } from "./readability.js";
 import { GrenadeVisuals } from "./grenade-visuals.js";
 import { drawObstacle, drawGrenades } from "./urban-visuals.js";
@@ -34,7 +39,7 @@ class Battlefield extends Phaser.Scene {
     this.acc = 0;
     this.selected = null;
     this.ground = this.add.graphics();
-    this.g = this.add.graphics();
+    this.g = this.add.graphics().setDepth(1000000);
     this.visuals = new CombatVisuals();
     this.motion = new MotionPresentation();
     this.atmosphere = new CombatAtmosphere();
@@ -162,6 +167,13 @@ class Battlefield extends Phaser.Scene {
           paused: this.paused,
           time: this.battle.time,
           selected: this.selected?.id ?? null,
+          environmentCache: {
+            count: this.staticEnvironment.records.length,
+            textureCount: Object.keys(this.textures.list).filter((k) =>
+              k.startsWith("urban-static-"),
+            ).length,
+            obscured: this.staticEnvironment.obscured,
+          },
           viewMode: this.viewMode,
           view: {
             x: v.x,
@@ -233,8 +245,8 @@ class Battlefield extends Phaser.Scene {
     document.querySelector("#pause").textContent = "일시정지";
     document.querySelector("#outcome").hidden = true;
     this.drawables = [...this.battle.units.map((unit) => ({ unit }))];
-    for(const d of coverVisuals(obstacles)){
-      if(mapMode==='expanded'&&d.type==='wall')continue;
+    for (const d of coverVisuals(obstacles)) {
+      if (mapMode === "expanded" && d.type === "wall") continue;
       this.drawables.push(d);
     }
     if (mapMode === "expanded")
@@ -245,6 +257,29 @@ class Battlefield extends Phaser.Scene {
           y: building.y + (building.h - 1) / 2,
         });
     this.drawables.push(...streetProps(houses));
+    this.staticEnvironment?.destroy();
+    this.unitGraphics?.forEach((g) => g.destroy());
+    this.unitGraphics = this.battle.units.map(() => this.add.graphics());
+    const staticDrawables = this.drawables.filter((d) => !d.unit);
+    if (mapMode !== "expanded")
+      for (const h of houses)
+        staticDrawables.push({
+          building: h,
+          x: h.x + (h.w - 1) / 2,
+          y: h.y + (h.h - 1) / 2,
+          legacyRoof: true,
+        });
+    this.staticEnvironment = new EnvironmentCache(
+      this,
+      staticDrawables,
+      this.iso,
+      (g, d, iso) => {
+        const p = iso(d.x, d.y);
+        if (d.building) this.drawBuilding(g, d.building, iso);
+        else if (d.decoration) drawStreetProp(g, d, p);
+        else drawObstacle(g, d, p);
+      },
+    );
     this.drawGround();
     // Bake static ground once per match, never once per animation frame.
     this.groundCache?.destroy();
@@ -381,11 +416,11 @@ class Battlefield extends Phaser.Scene {
           g.lineBetween(p.x - 9, p.y - 7, p.x - 9, p.y - 22);
         }
   }
-  drawBuilding(g, h) {
-    const a = this.iso(h.x - 0.5, h.y - 0.5),
-      b = this.iso(h.x + h.w - 0.5, h.y - 0.5),
-      c = this.iso(h.x + h.w - 0.5, h.y + h.h - 0.5),
-      d = this.iso(h.x - 0.5, h.y + h.h - 0.5),
+  drawBuilding(g, h, iso = this.iso) {
+    const a = iso(h.x - 0.5, h.y - 0.5),
+      b = iso(h.x + h.w - 0.5, h.y - 0.5),
+      c = iso(h.x + h.w - 0.5, h.y + h.h - 0.5),
+      d = iso(h.x - 0.5, h.y + h.h - 0.5),
       height = 32;
     // Restrained ambient shadow cast by the existing solid building only.
     g.fillStyle(0x0b1722, 0.28);
@@ -398,7 +433,7 @@ class Battlefield extends Phaser.Scene {
       ],
       true,
     );
-    const palette=buildingPalette(h);
+    const palette = buildingPalette(h);
     g.fillStyle(palette.dark);
     g.fillPoints(
       [{ x: d.x, y: d.y - height }, { x: c.x, y: c.y - height }, c, d],
@@ -412,7 +447,7 @@ class Battlefield extends Phaser.Scene {
     const roof = [a, b, c, d].map((p) => ({ x: p.x, y: p.y - height }));
     g.fillStyle(palette.roof);
     g.fillPoints(roof, true);
-    drawBuildingDetail(g, h, this.iso, height);
+    drawBuildingDetail(g, h, iso, height);
     g.lineStyle(2, 0x819294);
     g.strokePoints([...roof, roof[0]]);
   }
@@ -447,37 +482,41 @@ class Battlefield extends Phaser.Scene {
     const g = this.g,
       v = this.cameras.main.worldView;
     g.clear();
-    this.drawables.sort(
-      (a, b) =>
-        (a.unit
-          ? this.motion.position(a.unit).x + this.motion.position(a.unit).y
-          : a.x + a.y) -
-        (b.unit
-          ? this.motion.position(b.unit).x + this.motion.position(b.unit).y
-          : b.x + b.y),
+    const selectedView = this.selected
+      ? this.motion.position(this.selected)
+      : null;
+    this.staticEnvironment.update(
+      v,
+      selectedView,
+      this.iso,
+      (h) => !this.battle.units.some((u) => u.active && inside(u.x, u.y) === h),
     );
-    for (const d of this.drawables) {
-      const rendered = d.unit ? this.motion.position(d.unit) : d;
-      const p = this.iso(rendered.x, rendered.y);
-      if (!inView(p, v, d.building ? 220 : 65)) continue;
-      if(d.decoration)drawStreetProp(g,d,p);
-      else if (d.building) this.drawBuilding(g, d.building);
-      else if (d.unit)
-        this.visuals.drawUnit(
-          g,
-          this.battle,
-          d.unit,
-          p,
-          this.iso,
-          this.selected === d.unit,
-        );
-      else drawObstacle(g, d, p);
-      if (d.unit) drawReadability(g, rendered, p, this.iso);
+    for (const u of this.battle.units) {
+      const rendered = this.motion.position(u),
+        p = this.iso(rendered.x, rendered.y),
+        ug = this.unitGraphics[u.id];
+      ug.clear();
+      ug.setVisible(inView(p, v, 65));
+      ug.setDepth((rendered.x + rendered.y) * 100);
+      if (!ug.visible) continue;
+      this.visuals.drawUnit(
+        ug,
+        this.battle,
+        u,
+        p,
+        this.iso,
+        this.selected === u,
+      );
+      drawReadability(ug, rendered, p, this.iso);
     }
-    if (mapMode !== "expanded")
-      for (const h of houses)
-        if (!this.battle.units.some((u) => u.active && inside(u.x, u.y) === h))
-          this.drawBuilding(g, h);
+    if (this.selected && this.staticEnvironment.obscured) {
+      const p = this.iso(selectedView.x, selectedView.y),
+        m = this.visuals.models[this.selected.id],
+        low = m.tucked || m.crawl || !this.selected.active,
+        top = low ? -9 : (m.renderTop ?? -30);
+      g.lineStyle(1, 0xc0e4d3, 0.9);
+      g.strokeEllipse(p.x, p.y + top / 2, low ? 24 : 14, Math.abs(top) + 2);
+    }
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
