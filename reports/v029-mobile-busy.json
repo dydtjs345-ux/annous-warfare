@@ -1,0 +1,22 @@
+{
+  "frameStats": {
+    "samples": 162,
+    "p50": 33.19999999999891,
+    "p95": 66.70000000000073,
+    "max": 183.29999999999927
+  },
+  "selection": true,
+  "expandCollapse": true,
+  "nativeScroll": true,
+  "closeAndReselect": true,
+  "orientations": 2,
+  "speeds": [
+    1,
+    2,
+    4
+  ],
+  "restart": true,
+  "errors": [],
+  "physicalSafari": "unverified",
+  "panPinch": true
+}

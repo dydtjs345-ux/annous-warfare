@@ -1,0 +1,101 @@
+{
+  "base": "4abb428",
+  "unchangedCoreModules": {
+    "coordination.js": "8d9e1e27ea0494935828d53146ba5b38ac2f4cc8f73fbb1a015e3c0a804243e2",
+    "crossings.js": "f1b9080f0fe9a7f3f05d80e6f806651cc41f3bcd4946f17cf040dbe4ec2fdc0a",
+    "diagnostics.js": "59d7b8c17732f3bf3ba554ab6b86f82135214559493ac81642a6b03bf743c9d0",
+    "expanded-world.js": "97ef2c4805943f21484d386fe6058a7bfb35c9e94ee113779dad1062071076f1",
+    "fire-movement.js": "718f51a35b8d3794c89d322c1eb7ddd8421b10048c72a9295050873378d6026a",
+    "grenade-visuals.js": "d82dc780220a25c820d68aab626006751a125b0961f2d3e5a2de76e2db0d1f8c",
+    "grenades.js": "34345f44c36dc0ff234148eab7bed9578cbe317be9f4dbf4d13d872018007170",
+    "inspection.js": "e8e623a41f46a76c0f7944bd841c5313a5581f9c53d2b0298c4daf3229cf47c0",
+    "intelligence.js": "fb8cdeb8d614bc63ca06edd333326fffc0e3c96dd8e4060ecdb00f97bd721318",
+    "korean-inspector.js": "a11415b32856078be5c805dea1f73c086132b48acc01b3f5c953cfb942100cdb",
+    "medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "postures.js": "f6782080ff185430920d5e8d2add068a9b6ceb02f2304ebcd8cb2d45332c9667",
+    "presentation-state.js": "ade69eda2447e8895c6c4b92337c6f678ce017ddf9711b97e9658f02e16f8860",
+    "readability.js": "6a795593d22c1cb3acf7a605ef39bff246940350d1cd0c51432a643aa4bbd93e",
+    "search-path.js": "245c9b7bdab116342f8b44146be96aded3a5cf9fadde444676944e0ddf5bb7d8",
+    "search.js": "d7a741cbf805390b8cdf1968694f6f6be372f095de17784e7b50721bd803483e",
+    "security.js": "bcd884a2aa9b503a6766b268be0486334c53f9d840f3b85c4b9d90fa42646c9b",
+    "simulation.js": "a69b91dd211629856f9fdccb3ffa8fed6a294f3e38665fd25da7f180a64aa602",
+    "suppressive-fire.js": "cec9dd24c84c86178accfb2d35528b0bb02a274bbcca8cc69b69d4b540716116",
+    "tactics.js": "d43f5105f1c25a0633c2438863b9d24ef0fd9d96067322ab76a4c7a41277b8fd",
+    "view.js": "19ffcb4138dd3a79ec01e4f1c5ed6f7058f8d79517f4b2dc91888c3c08c8a932",
+    "world.js": "9f57b20aefedf52b288a7934884f9c9c39a2aa226039df2897a83fffa49a8f18"
+  },
+  "motionCheckpoint": "5e83f01",
+  "motionPlaybackRuns": 80,
+  "gameplayRecording": "reports/v029-motion-gameplay.mp4",
+  "tests": 231,
+  "failures": 0,
+  "matchedFinalCases": 40,
+  "matchedInitialCases": 40,
+  "recordedCompleteExecutions": 440,
+  "legacyHashesPreserved": 200,
+  "physicalSafari": "unverified",
+  "mobile": {
+    "frameStats": {
+      "samples": 298,
+      "p50": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 33.399999999999636
+    },
+    "selection": true,
+    "expandCollapse": true,
+    "nativeScroll": true,
+    "closeAndReselect": true,
+    "orientations": 2,
+    "speeds": [
+      1,
+      2,
+      4
+    ],
+    "restart": true,
+    "errors": [],
+    "physicalSafari": "unverified",
+    "panPinch": true
+  },
+  "qaCaptureTimes": [
+    [
+      "full",
+      1.900000000000001
+    ],
+    [
+      "peek",
+      7.349999999999982
+    ],
+    [
+      "fire",
+      7.7499999999999805
+    ],
+    [
+      "medic",
+      0.5499999999999999
+    ],
+    [
+      "grenade",
+      2.8999999999999977
+    ]
+  ],
+  "images": {
+    "v029-after.png": "89575c975ba7ebf93e2b2d91826301c15e9c669e8376143970bbae5c6b4cf3ef",
+    "v029-before.png": "b3690ef36e9b82c1fcdbfbf39c6a5c5a729ba8f98040adcf114dc025c83d12f6",
+    "v029-fire.png": "f16000fefca3578ec802d7ebcd6d14ab5f8d4350f1af6925742a58d197056612",
+    "v029-full.png": "493cc1a1736f6d07ac8d73a12205704cef65c88d475ecb8ea8c909b87f0f476b",
+    "v029-grenade.png": "f063cf4d25d2b32ee9893b66c640ce8706e7dce94fb5220d14f94f24fef2f0b4",
+    "v029-inspector.png": "9db706157af64e78846c15c9b4df73e0ae89e74fed227e6b7c2a94af6bcf6cb4",
+    "v029-medic.png": "e5296edbd30b2a6e5cfc7b5e14de8612d9b5a0814e9a73284f7f960be096ef89",
+    "v029-mobile.png": "90d3c8cd134a789e6635fb82254e52ec2a6f0f3bf22be453a7f10d8b2ecdbdd0",
+    "v029-motion-contact-sheet.png": "ee83437e4643035e2c1634e2d3f17bcc817323cae5fa7dd353c79869645444f7",
+    "v029-motion-detail-frames.png": "b6fb1f46255221544a5bb222e572a0647d80e36ed957229d6a0e1721cdaccb42",
+    "v029-motion-medic-frames.png": "45aecbfc58e1361d6a94f56e165c1b9321528a39f6dc26bcee89b9f1ae07a3b4",
+    "v029-motion-mount-frames.png": "9e54c2b67919b55b3246d1ba9787ee4ff8b1a16465823c95693ec035b8ac6fd6",
+    "v029-motion-paused.png": "837fa4784f7c1610c073c6280dc1ba8316d7d02482cb127dbf46a2e99b35c4ef",
+    "v029-motion-reload-frames.png": "ecb2df45533993742a31fe07a7cce7fedfb0c72ab2f402b15a61e5206455d661",
+    "v029-moving-ru.png": "7ec9dfab99e4eb75a1be38ad2d669943b04c771139089b5e0ff58165df5b4ec2",
+    "v029-moving-usmc.png": "c8a1bcd53a3d14b7cd9822447fef5175ac0a2b302bd6a6f343336504b72c0652",
+    "v029-peek.png": "4f6e91d6fa551bc08fb1b95562820c37cc0614cfdd530e5379e2f32396b66a63"
+  }
+}
