@@ -89,7 +89,9 @@ test("asset URLs respect GitHub Pages base and do not depend on a backend", () =
     },
   });
   assert.ok(
-    urls.every((u) => u.startsWith("/annous-warfare/assets/usmc-rifleman/")),
+    urls.every((u) =>
+      /^\/annous-warfare\/assets\/usmc-rifleman(?:-v031)?\//.test(u),
+    ),
   );
 });
 test("weapon direction stays continuous while sprite direction and gait index remain bounded", () => {

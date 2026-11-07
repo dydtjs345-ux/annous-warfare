@@ -1,0 +1,66 @@
+{
+  "prototypeUnitId": 1,
+  "faction": "USMC",
+  "role": "rifleman",
+  "nativeStandingHeight": 80,
+  "nativeHeadHeight": 11,
+  "headRatio": 7.2727272727272725,
+  "logicalFrame": [
+    96,
+    112
+  ],
+  "footAnchor": [
+    48,
+    96
+  ],
+  "hipAnchor": [
+    48,
+    62
+  ],
+  "shoulders": [
+    [
+      36,
+      34
+    ],
+    [
+      60,
+      34
+    ]
+  ],
+  "crouchDrop": 22,
+  "gripOffset": [
+    3,
+    -44
+  ],
+  "upperArmLength": 13,
+  "forearmLength": 14,
+  "armWidth": 9,
+  "weaponSize": [
+    54,
+    18
+  ],
+  "weaponGrip": [
+    18,
+    8
+  ],
+  "weaponMuzzle": [
+    50,
+    8
+  ],
+  "supportGripDistance": 16,
+  "sizes": [
+    1,
+    1.3,
+    1.5
+  ],
+  "baseDisplayHeight": 30,
+  "frameFamilies": [
+    "stand",
+    "run",
+    "crouch",
+    "prone"
+  ],
+  "atlasFrames": 264,
+  "license": "Original project artwork; reference-informed design, no cropped illustrated reference poses",
+  "scope": "higher-detail original pixel prototype; artist-quality review remains required"
+}

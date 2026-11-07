@@ -12,11 +12,30 @@ export function screenAngle(direction) {
 export function directionFrame(angle) {
   return ((Math.round(angle / (TAU / DIRS)) % DIRS) + DIRS) % DIRS;
 }
-export function prototypePose(u, m, visualSize = 1) {
+export const LEGACY_DESIGN = {
+  nativeStandingHeight: 56,
+  baseDisplayHeight: 30,
+  logicalFrame: [64, 72],
+  footAnchor: [32, 64],
+  shoulders: [
+    [25, 20],
+    [38, 20],
+  ],
+  crouchDrop: 14,
+  gripOffset: [2, -37],
+  upperArmLength: 8,
+  forearmLength: 9,
+  armWidth: 7,
+  weaponSize: [38, 12],
+  weaponGrip: [12, 6],
+  weaponMuzzle: [36, 6],
+  supportGripDistance: 11,
+};
+export function prototypePose(u, m, visualSize = 1, design = LEGACY_DESIGN) {
   const scale = [1, 1.3, 1.5].includes(visualSize) ? visualSize : 1;
   return {
     eligible: eligiblePrototype(u) && u.active,
-    scale: (scale * 30) / 56,
+    scale: (scale * design.baseDisplayHeight) / design.nativeStandingHeight,
     angle: screenAngle(m.renderDirection ?? m.direction),
     foreshorten:
       Math.hypot(
@@ -46,12 +65,25 @@ export function preloadPrototype(scene) {
   for (const name of ["sleeve", "forearm", "m16a4"])
     scene.load.image("usmc-" + name, root + name + ".png");
   scene.load.json("usmc-meta", root + "metadata.json");
+  const upgraded =
+    (import.meta.env?.BASE_URL ?? "/annous-warfare/") +
+    "assets/usmc-rifleman-v031/";
+  scene.load.atlas(
+    "usmc031-rifleman",
+    upgraded + "rifleman.png",
+    upgraded + "rifleman.json",
+  );
+  for (const name of ["sleeve", "forearm", "m16a4"])
+    scene.load.image("usmc031-" + name, upgraded + name + ".png");
+  scene.load.json("usmc031-meta", upgraded + "metadata.json");
 }
 export class SoldierPrototype {
   constructor(scene) {
     this.scene = scene;
     this.enabled = false;
     this.visualSize = 1;
+    this.art = "v030";
+    this.design = LEGACY_DESIGN;
     this.battle = null;
     this.lowReady = 1;
     this.state = null;
@@ -71,6 +103,36 @@ export class SoldierPrototype {
     }));
     this.gun = image("usmc-m16a4").setOrigin(12 / 38, 6 / 12);
     this.hide();
+    if (scene.cache?.json?.get("usmc031-meta")) this.setArt("v031");
+  }
+  setArt(art) {
+    this.art = art === "v031" ? "v031" : "v030";
+    const prefix = this.art === "v031" ? "usmc031" : "usmc";
+    this.design = {
+      ...LEGACY_DESIGN,
+      ...(this.scene.cache?.json?.get(prefix + "-meta") ?? {}),
+    };
+    const d = this.design;
+    for (const [im, frame] of [
+      [this.stand, "stand-0-0"],
+      [this.crouch, "crouch-0-0"],
+      [this.torso, "torso-0"],
+      [this.prone, this.art === "v031" ? "prone-0-0" : "prone-0"],
+    ])
+      im.setTexture(prefix + "-rifleman", frame).setOrigin(
+        d.footAnchor[0] / d.logicalFrame[0],
+        d.footAnchor[1] / d.logicalFrame[1],
+      );
+    for (const a of this.arms) {
+      a.upper.setTexture(prefix + "-sleeve");
+      a.fore.setTexture(prefix + "-forearm");
+    }
+    this.gun
+      .setTexture(prefix + "-m16a4")
+      .setOrigin(
+        d.weaponGrip[0] / d.weaponSize[0],
+        d.weaponGrip[1] / d.weaponSize[1],
+      );
   }
   hide() {
     if (this.state) this.state.visible = false;
@@ -108,7 +170,9 @@ export class SoldierPrototype {
         "mounted",
         "mountedFiring",
       ].includes(m.pose) ||
-      !this.scene.textures.exists("usmc-rifleman")
+      !this.scene.textures.exists(
+        this.art === "v031" ? "usmc031-rifleman" : "usmc-rifleman",
+      )
     ) {
       this.hide();
       return false;
@@ -118,7 +182,8 @@ export class SoldierPrototype {
       this.lowReady = 1;
     }
     this.hide();
-    const plan = prototypePose(view, m, this.visualSize),
+    const plan = prototypePose(view, m, this.visualSize, this.design),
+      design = this.design,
       s = plan.scale,
       depth = (view.x + view.y) * 100;
     const show = (im, offset = 0) =>
@@ -129,7 +194,9 @@ export class SoldierPrototype {
         .setPosition(p.x, p.y);
     const crouch = plan.lowering;
     show(this.stand)
-      .setFrame(`stand-${plan.legs}-${plan.phase}`)
+      .setFrame(
+        `${this.art === "v031" && m.pose === "running" ? "run" : "stand"}-${plan.legs}-${plan.phase}`,
+      )
       .setAlpha(1 - crouch);
     show(this.crouch, 0.01)
       .setFrame(`crouch-${plan.legs}-${plan.phase}`)
@@ -149,14 +216,21 @@ export class SoldierPrototype {
     if (plan.prone) {
       this.stand.setVisible(false);
       this.crouch.setVisible(false);
-      show(this.prone, 0.02).setFrame(`prone-${plan.body}`);
-      this.state = { ...plan, pose: "prone", visible: true };
-      return true;
+      show(this.prone, 0.02).setFrame(
+        this.art === "v031"
+          ? `prone-${plan.body}-${m.moving ? plan.phase : 0}`
+          : `prone-${plan.body}`,
+      );
+      if (m.tucked || this.art === "v030") {
+        this.state = { ...plan, art: this.art, pose: "prone", visible: true };
+        return true;
+      }
     }
-    const upperY = p.y + 14 * crouch * s;
-    show(this.torso, 0.03)
-      .setFrame(`torso-${plan.body}`)
-      .setPosition(p.x, upperY);
+    const upperY = p.y + design.crouchDrop * crouch * s;
+    if (!plan.prone)
+      show(this.torso, 0.03)
+        .setFrame(`torso-${plan.body}`)
+        .setPosition(p.x, upperY);
     const dt = paused ? 0 : Math.min(this.scene.game.loop.delta / 1000, 0.05),
       ready =
         ["aiming", "firing", "seekingCover", "reloading"].includes(m.pose) ||
@@ -174,12 +248,14 @@ export class SoldierPrototype {
       dy = Math.sin(angle),
       recoil = m.flash ? Math.min(1, fx.shot * 12) * this.visualSize : 0;
     const grip = {
-      x: p.x + dx * 2 * s - dx * recoil,
-      y: upperY - 37 * s - dy * recoil,
+      x: p.x + dx * (plan.prone ? 16 : design.gripOffset[0]) * s - dx * recoil,
+      y: plan.prone
+        ? p.y - 10 * s + dy * 8 * s
+        : upperY + design.gripOffset[1] * s - dy * recoil,
     };
     let support = {
-      x: grip.x + dx * 11 * s * plan.foreshorten,
-      y: grip.y + dy * 11 * s * plan.foreshorten,
+      x: grip.x + dx * design.supportGripDistance * s * plan.foreshorten,
+      y: grip.y + dy * design.supportGripDistance * s * plan.foreshorten,
     };
     if (m.pose === "reloading") {
       const progress = m.renderReloadProgress ?? m.reloadProgress;
@@ -188,15 +264,20 @@ export class SoldierPrototype {
         y: grip.y + (5 + Math.sin(progress * Math.PI) * 4) * s,
       };
     }
-    const shoulder = [
-      { x: p.x - 7 * s, y: upperY - 44 * s },
-      { x: p.x + 6 * s, y: upperY - 44 * s },
-    ];
+    const shoulder = plan.prone
+      ? [
+          { x: p.x - 5 * s, y: p.y - 13 * s },
+          { x: p.x + 5 * s, y: p.y - 13 * s },
+        ]
+      : design.shoulders.map(([x, y]) => ({
+          x: p.x + (x - design.footAnchor[0]) * s,
+          y: upperY + (y - design.footAnchor[1]) * s,
+        }));
     for (let i = 0; i < 2; i++) {
       const start = shoulder[i],
         end = i === 0 ? grip : support,
-        L1 = 8 * s,
-        L2 = 9 * s,
+        L1 = design.upperArmLength * s,
+        L2 = design.forearmLength * s,
         vx = end.x - start.x,
         vy = end.y - start.y,
         d = Math.max(0.001, Math.hypot(vx, vy)),
@@ -218,7 +299,7 @@ export class SoldierPrototype {
       ]) {
         im.setVisible(true)
           .setPosition(A.x, A.y)
-          .setDisplaySize(7 * s, Math.hypot(B.x - A.x, B.y - A.y))
+          .setDisplaySize(design.armWidth * s, Math.hypot(B.x - A.x, B.y - A.y))
           .setRotation(Math.atan2(B.y - A.y, B.x - A.x) - Math.PI / 2)
           .setDepth(depth + 0.04 + i * 0.001);
       }
@@ -228,8 +309,18 @@ export class SoldierPrototype {
       .setPosition(grip.x, grip.y)
       .setRotation(angle);
     const muzzle = {
-      x: grip.x + dx * 24 * s * plan.foreshorten,
-      y: grip.y + dy * 24 * s * plan.foreshorten,
+      x:
+        grip.x +
+        dx *
+          (design.weaponMuzzle[0] - design.weaponGrip[0]) *
+          s *
+          plan.foreshorten,
+      y:
+        grip.y +
+        dy *
+          (design.weaponMuzzle[0] - design.weaponGrip[0]) *
+          s *
+          plan.foreshorten,
     };
     if (m.flash) {
       g.fillStyle(0xffcc7c, 0.12);
@@ -250,6 +341,7 @@ export class SoldierPrototype {
     }
     this.state = {
       ...plan,
+      art: this.art,
       pose: m.pose,
       visible: true,
       muzzle,
