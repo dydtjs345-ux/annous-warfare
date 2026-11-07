@@ -1,3 +1,4 @@
+import {streetProps,drawStreetProp} from "./street-art.js";
 import {coverVisuals} from "./cover-art.js";
 import { MotionPresentation } from "./motion-presentation.js";
 import { CombatAtmosphere } from "./combat-atmosphere.js";
@@ -243,6 +244,7 @@ class Battlefield extends Phaser.Scene {
           x: building.x + (building.w - 1) / 2,
           y: building.y + (building.h - 1) / 2,
         });
+    this.drawables.push(...streetProps(houses));
     this.drawGround();
     // Bake static ground once per match, never once per animation frame.
     this.groundCache?.destroy();
@@ -458,7 +460,8 @@ class Battlefield extends Phaser.Scene {
       const rendered = d.unit ? this.motion.position(d.unit) : d;
       const p = this.iso(rendered.x, rendered.y);
       if (!inView(p, v, d.building ? 220 : 65)) continue;
-      if (d.building) this.drawBuilding(g, d.building);
+      if(d.decoration)drawStreetProp(g,d,p);
+      else if (d.building) this.drawBuilding(g, d.building);
       else if (d.unit)
         this.visuals.drawUnit(
           g,
