@@ -24,6 +24,14 @@ export function coverVisuals(obstacles) {
       x: cells.reduce((s, p) => s + p[0], 0) / cells.length,
       y: cells.reduce((s, p) => s + p[1], 0) / cells.length,
       type,
+      alongY:
+        obstacles.get(`${x},${y - 1}`) === type ||
+        obstacles.get(`${x},${y + 1}`) === type
+          ? !(
+              obstacles.get(`${x - 1},${y}`) === type ||
+              obstacles.get(`${x + 1},${y}`) === type
+            )
+          : false,
       cells,
     });
   }
@@ -31,7 +39,7 @@ export function coverVisuals(obstacles) {
 }
 export function drawCoverArt(g, d, p, h) {
   const span = d.cells?.length ?? 1,
-    alongY = span === 2 && d.cells[0][0] === d.cells[1][0];
+    alongY = d.alongY || (span === 2 && d.cells[0][0] === d.cells[1][0]);
   const project = (s, t, z = 0) => ({
     x: p.x + (alongY ? -20 : 20) * s + (alongY ? 20 : -20) * t,
     y: p.y + 10 * s + 10 * t - z,

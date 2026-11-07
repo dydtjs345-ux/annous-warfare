@@ -135,6 +135,14 @@ export function drawBuildingDetail(g, h, iso, height = 32) {
       panel(left - 0.02, right + 0.02, 10, 27, bright ? 0xa0a9a3 : 0x7f8d8b);
       panel(left, right, 11, 26, 0x182a33);
       panel(left + 0.025, right - 0.025, 12, 25, bright ? 0x36525d : 0x29434f);
+      if ((h.x + h.y + i) % 5 === 0) {
+        const q = wallPoint(u, v, left + 0.06, 22),
+          r = wallPoint(u, v, left + 0.11, 19),
+          t = wallPoint(u, v, left + 0.07, 15);
+        g.lineStyle(1, 0x94b7bf, 0.65);
+        g.lineBetween(q.x, q.y, r.x, r.y);
+        g.lineBetween(r.x, r.y, t.x, t.y);
+      }
       const mid = (left + right) / 2;
       panel(mid - 0.008, mid + 0.008, 11, 26, 0x899a9e);
       const glintA = wallPoint(u, v, left + 0.04, 23),

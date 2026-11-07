@@ -39,6 +39,10 @@ test("visual grouping covers each physical cell once without mutating collision 
   assert.equal(cells.length, obstacles.size);
   assert.deepEqual([...obstacles], before);
   assert.ok(ds.some((d) => d.type === "vehicle" && d.cells.length === 2));
+  assert.ok(
+    ds.some((d) => d.type === "concrete" && d.alongY),
+    "vertical barricade art follows adjacent cover cells",
+  );
 });
 test("street fittings are deterministic and anchored to existing solid foundation cells", () => {
   new Battle(() => 0.9, { map: "expanded" });
