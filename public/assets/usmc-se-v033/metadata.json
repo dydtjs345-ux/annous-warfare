@@ -1,0 +1,529 @@
+{
+  "version": "0.3.3",
+  "direction": "SE",
+  "image": "source-atlas.png",
+  "grid": [
+    4,
+    6
+  ],
+  "frameSize": [
+    256,
+    256
+  ],
+  "nativeStandingHeight": 205,
+  "baseDisplayHeight": 30,
+  "comparisonSizes": [
+    1,
+    1.3,
+    1.5
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "cell": [
+        0,
+        0
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        194.0
+      ]
+    },
+    {
+      "index": 1,
+      "cell": [
+        1,
+        0
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        76,
+        42,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        194.0
+      ]
+    },
+    {
+      "index": 2,
+      "cell": [
+        2,
+        0
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        194.0
+      ]
+    },
+    {
+      "index": 3,
+      "cell": [
+        3,
+        0
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        76,
+        42,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        193.5
+      ]
+    },
+    {
+      "index": 4,
+      "cell": [
+        0,
+        1
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        74,
+        43,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        190.0
+      ]
+    },
+    {
+      "index": 5,
+      "cell": [
+        1,
+        1
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        43,
+        199,
+        247
+      ],
+      "muzzle": [
+        198,
+        191.5
+      ]
+    },
+    {
+      "index": 6,
+      "cell": [
+        2,
+        1
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        199,
+        248
+      ],
+      "muzzle": [
+        198,
+        191.5
+      ]
+    },
+    {
+      "index": 7,
+      "cell": [
+        3,
+        1
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        201,
+        250
+      ],
+      "muzzle": [
+        200,
+        189.5
+      ]
+    },
+    {
+      "index": 8,
+      "cell": [
+        0,
+        2
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        201,
+        249
+      ],
+      "muzzle": [
+        200,
+        188.0
+      ]
+    },
+    {
+      "index": 9,
+      "cell": [
+        1,
+        2
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        42,
+        201,
+        249
+      ],
+      "muzzle": [
+        200,
+        187.5
+      ]
+    },
+    {
+      "index": 10,
+      "cell": [
+        2,
+        2
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        76,
+        42,
+        201,
+        249
+      ],
+      "muzzle": [
+        200,
+        187.5
+      ]
+    },
+    {
+      "index": 11,
+      "cell": [
+        3,
+        2
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        76,
+        42,
+        202,
+        249
+      ],
+      "muzzle": [
+        201,
+        186.0
+      ]
+    },
+    {
+      "index": 12,
+      "cell": [
+        0,
+        3
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        43,
+        200,
+        247
+      ],
+      "muzzle": [
+        199,
+        194.0
+      ]
+    },
+    {
+      "index": 13,
+      "cell": [
+        1,
+        3
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        75,
+        43,
+        209,
+        247
+      ],
+      "muzzle": [
+        208,
+        168.5
+      ]
+    },
+    {
+      "index": 14,
+      "cell": [
+        2,
+        3
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        74,
+        43,
+        222,
+        247
+      ],
+      "muzzle": [
+        221,
+        138.0
+      ]
+    },
+    {
+      "index": 15,
+      "cell": [
+        3,
+        3
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        74,
+        43,
+        226,
+        247
+      ],
+      "muzzle": [
+        225,
+        111.5
+      ]
+    },
+    {
+      "index": 16,
+      "cell": [
+        0,
+        4
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        71,
+        44,
+        228,
+        247
+      ],
+      "muzzle": [
+        227,
+        105.5
+      ]
+    },
+    {
+      "index": 17,
+      "cell": [
+        1,
+        4
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "muzzle": [
+        227,
+        105.0
+      ]
+    },
+    {
+      "index": 18,
+      "cell": [
+        2,
+        4
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "muzzle": [
+        227,
+        105.0
+      ]
+    },
+    {
+      "index": 19,
+      "cell": [
+        3,
+        4
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        72,
+        44,
+        228,
+        247
+      ],
+      "muzzle": [
+        227,
+        105.5
+      ]
+    },
+    {
+      "index": 20,
+      "cell": [
+        0,
+        5
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        72,
+        43,
+        228,
+        246
+      ],
+      "muzzle": [
+        227,
+        105.0
+      ]
+    },
+    {
+      "index": 21,
+      "cell": [
+        1,
+        5
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        73,
+        43,
+        225,
+        246
+      ],
+      "muzzle": [
+        224,
+        124.0
+      ]
+    },
+    {
+      "index": 22,
+      "cell": [
+        2,
+        5
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        74,
+        43,
+        213,
+        246
+      ],
+      "muzzle": [
+        212,
+        168.0
+      ]
+    },
+    {
+      "index": 23,
+      "cell": [
+        3,
+        5
+      ],
+      "footAnchor": [
+        132,
+        246
+      ],
+      "bounds": [
+        76,
+        43,
+        201,
+        246
+      ],
+      "muzzle": [
+        200,
+        194.0
+      ]
+    }
+  ],
+  "sourceBaseSha256": "4765c95309e0dba11273e677500aef3471a41782978dc593e6a2a201f2881f04",
+  "provenance": "Original v0.3.2 full-body atlas anatomically redrawn with image editing; not a vertical scale. Targets: longer hip-to-ankle segments, smaller helmet, narrower equipped torso across all 24 cels. Percentages are design guides, not certified pixel measurements.",
+  "runtime": "Complete human and rifle in each cel. Uniform display-size normalization only; no independent weapon or per-limb stretching."
+}
