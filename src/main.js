@@ -1,3 +1,9 @@
+import { LiveUSMCRenderer, preloadLiveUSMC } from "./live-usmc-renderer.js";
+import {
+  liveRenderStatus,
+  renderInspection,
+  insertRenderInspection,
+} from "./live-usmc-inspection.js";
 import { bindAnimationPreview } from "./animation-preview-dialog.js";
 import { SoldierPrototype, preloadPrototype } from "./soldier-prototype.js";
 import { EnvironmentCache } from "./environment-cache.js";
@@ -34,6 +40,7 @@ const mapMode = ["legacy", "urban"].includes(params.get("map"))
 class Battlefield extends Phaser.Scene {
   preload() {
     preloadPrototype(this);
+    preloadLiveUSMC(this);
   }
   create() {
     this.seed = params.has("seed")
@@ -49,8 +56,17 @@ class Battlefield extends Phaser.Scene {
     this.motion = new MotionPresentation();
     this.prototypeVisual = new SoldierPrototype(this);
     this.prototypeVisual.visualSize = 1.3;
-    document.querySelector("#prototype-art").onchange = (e) =>
-      this.prototypeVisual.setArt(e.target.value);
+    this.prototypeVisual.enabled = true;
+    this.liveVisual = new LiveUSMCRenderer(this);
+    this.prototypeMode = "v033";
+    document.querySelector("#prototype-art").onchange = (e) => {
+      this.prototypeMode = e.target.value;
+      this.prototypeVisual.setArt(
+        this.prototypeMode === "v033" ? "v031" : this.prototypeMode,
+      );
+    };
+    document.querySelector("#live-animation-debug").hidden =
+      !params.has("debug");
     document.querySelector("#prototype-toggle").onclick = () => {
       this.prototypeVisual.enabled = !this.prototypeVisual.enabled;
       if (this.prototypeVisual.enabled) this.selected = this.battle.units[1];
@@ -133,7 +149,11 @@ class Battlefield extends Phaser.Scene {
         else if (this.prototypeVisual.enabled) {
           const u = this.battle.units[1],
             v = this.motion.position(u);
-          if (u.active && this.prototypeVisual.hitTest(w, this.iso(v.x, v.y)))
+          if (
+            u.active &&
+            (this.liveVisual.hitTest(w, this.iso(v.x, v.y)) ||
+              this.prototypeVisual.hitTest(w, this.iso(v.x, v.y)))
+          )
             this.selected = u;
         }
       }
@@ -209,10 +229,14 @@ class Battlefield extends Phaser.Scene {
           time: this.battle.time,
           selected: this.selected?.id ?? null,
           prototype: {
-            art: this.prototypeVisual.art,
+            art: this.prototypeMode,
+            active: this.rendererStatus ? { ...this.rendererStatus } : null,
+            live: this.liveVisual.snapshot(),
             enabled: this.prototypeVisual.enabled,
             scale: this.prototypeVisual.visualSize,
-            state: this.prototypeVisual.snapshot(),
+            state: this.liveVisual.state?.visible
+              ? this.liveVisual.snapshot()
+              : this.prototypeVisual.snapshot(),
           },
           environmentCache: {
             count: this.staticEnvironment.records.length,
@@ -261,6 +285,12 @@ class Battlefield extends Phaser.Scene {
               authoritativeObservation: u.observationHeading,
               renderStride: model?.renderStride,
               pose: model?.pose,
+              moving: model?.moving,
+              movementHeading: rendered.movementHeading,
+              targetId: u.diagnostics?.targetId,
+              directLOS: u.diagnostics?.directLOS,
+              aimAt: u.aimAt,
+              lastShotAt: u.presentation.lastShotAt,
               flash: model?.flash,
               shotDirection: this.visuals.effects[u.id]?.angle,
               renderTop: model?.renderTop,
@@ -516,6 +546,14 @@ class Battlefield extends Phaser.Scene {
       this.speed,
       this.paused,
     );
+    this.liveVisual.visualSize = this.prototypeVisual.visualSize;
+    this.liveVisual.update(
+      this.battle,
+      this.battle.units[1],
+      this.visuals.models[1],
+      this.visuals.effects[1],
+      this.motion.position(this.battle.units[1]),
+    );
     this.boundCamera();
     if (this.viewMode !== "Free" && this.viewMode !== "Map")
       this.frameCamera(false);
@@ -539,6 +577,7 @@ class Battlefield extends Phaser.Scene {
       (h) => !this.battle.units.some((u) => u.active && inside(u.x, u.y) === h),
     );
     this.prototypeVisual.hide();
+    this.liveVisual.hide();
     for (const u of this.battle.units) {
       const rendered = this.motion.position(u),
         p = this.iso(rendered.x, rendered.y),
@@ -547,9 +586,11 @@ class Battlefield extends Phaser.Scene {
       ug.setVisible(inView(p, v, 65));
       ug.setDepth((rendered.x + rendered.y) * 100);
       if (!ug.visible) continue;
-      const drawn =
+      const liveDrawn =
         u.id === 1 &&
-        this.prototypeVisual.draw(
+        this.prototypeMode === "v033" &&
+        this.prototypeVisual.enabled &&
+        this.liveVisual.draw(
           ug,
           this.battle,
           u,
@@ -558,9 +599,22 @@ class Battlefield extends Phaser.Scene {
           p,
           rendered,
           this.selected === u,
-          this.paused,
-          this.speed,
         );
+      const drawn =
+        liveDrawn ||
+        (u.id === 1 &&
+          this.prototypeVisual.draw(
+            ug,
+            this.battle,
+            u,
+            this.visuals.models[u.id],
+            this.visuals.effects[u.id],
+            p,
+            rendered,
+            this.selected === u,
+            this.paused,
+            this.speed,
+          ));
       if (!drawn)
         this.visuals.drawUnit(
           ug,
@@ -572,24 +626,43 @@ class Battlefield extends Phaser.Scene {
         );
       drawReadability(ug, rendered, p, this.iso);
     }
+    this.rendererStatus = liveRenderStatus({
+      mode: this.prototypeMode,
+      enabled: this.prototypeVisual.enabled,
+      inView: this.unitGraphics[1].visible,
+      live: this.liveVisual.snapshot(),
+      legacy: this.prototypeVisual.snapshot(),
+      model: this.visuals.models[1],
+    });
     if (this.selected && this.staticEnvironment.obscured) {
       const p = this.iso(selectedView.x, selectedView.y),
         m = this.visuals.models[this.selected.id],
         low = m.tucked || m.crawl || !this.selected.active,
-        top = low ? -9 : (m.renderTop ?? -30);
+        top = low
+          ? -9
+          : this.selected.id === 1 && this.liveVisual.state?.visible
+            ? -30 * this.prototypeVisual.visualSize
+            : (m.renderTop ?? -30);
       g.lineStyle(1, 0xc0e4d3, 0.9);
       g.strokeEllipse(p.x, p.y + top / 2, low ? 24 : 14, Math.abs(top) + 2);
     }
-    this.visuals.drawTraces(g, this.iso);
+    this.visuals.drawTraces(g, this.iso, (e) =>
+      e.unitId === 1 ? this.liveVisual.shotAnchor(e.id) : null,
+    );
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
-    this.atmosphere.draw(g, this.iso, v, (e) =>
-      e.unitId === 1 &&
-      this.prototypeVisual.enabled &&
-      this.prototypeVisual.state?.visible &&
-      this.prototypeVisual.state.flash
-        ? this.prototypeVisual.state
-        : null,
+    this.atmosphere.draw(
+      g,
+      this.iso,
+      v,
+      (e) =>
+        this.liveVisual.shotAnchor(e.id) ??
+        (e.unitId === 1 &&
+        this.prototypeVisual.enabled &&
+        this.prototypeVisual.state?.visible &&
+        this.prototypeVisual.state.flash
+          ? this.prototypeVisual.state
+          : null),
     );
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
@@ -603,6 +676,15 @@ class Battlefield extends Phaser.Scene {
             document.querySelector("#inspect").classList.contains("expanded"),
           )
         : "병사를 터치하면 상태와 판단 기록을 볼 수 있습니다.";
+      if (this.selected?.id === 1)
+        document.querySelector("#inspect-text").textContent =
+          insertRenderInspection(
+            document.querySelector("#inspect-text").textContent,
+            this.rendererStatus,
+            document.querySelector("#inspect").classList.contains("expanded"),
+          );
+      document.querySelector("#live-animation-debug").textContent =
+        `#1 AI: ${ko(this.battle.units[1].state)}\n${renderInspection(this.rendererStatus)}\n${this.rendererStatus.reason}`;
       document.querySelector("#inspect").hidden = !this.selected;
       const phases = this.battle.squads
         .map((q) => ko(q.search?.phase))
