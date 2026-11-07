@@ -118,4 +118,14 @@ node scripts/verify-v031.mjs /tmp/aw-v031-base
 
 - **ee565de**: original new atlas/rig, independent layers, run/crawl families and focused tests.
 - **8d90f31**: both-bank comparison, size UI, neck seam correction and evidence.
-- M5 final validation/report commit: full suite, paired replay, mobile and actual combat evidence.
+- **48a91f5** — M5 final validation/report commit: full suite, paired replay, mobile and actual combat evidence.
+
+
+## Delivery
+
+The feature branch was pushed successfully. PR creation using `gh pr create` returned `Post "https://api.github.com/graphql": Forbidden`; no PR was created or merged. The exact prepared review body is in [v031-pull-request.md](v031-pull-request.md).
+
+- [Create/review comparison against main](https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v031-high-detail-soldier?expand=1)
+- [v0.3.1-only comparison against the retained v0.3.0 foundation](https://github.com/dydtjs345-ux/annous-warfare/compare/e032103...feat/v031-high-detail-soldier)
+
+A final documentation commit records this delivery result. The validated implementation/evidence milestone is **48a91f5**; later documentation changes do not alter the tested build.
