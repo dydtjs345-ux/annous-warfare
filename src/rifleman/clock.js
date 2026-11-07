@@ -11,6 +11,15 @@ export const SEQUENCE = Object.freeze([
   { action: "idle", duration: 1.4 },
 ]);
 export const sequenceSeconds = SEQUENCE.reduce((n, s) => n + s.duration, 0);
+export function playbackPhase(clock) {
+  const total = clock.total();
+  if (!total) return 0;
+  const loop =
+    clock.action === "sequence" ||
+    clock.review?.clip.loop ||
+    clipAvailability(clock.direction, clock.action, clock.catalog).clip?.loop;
+  return loop ? clock.time % total : Math.min(clock.time, total);
+}
 export function sampleClip(c, seconds) {
   const total = clipSeconds(c);
   let t = Math.max(0, seconds);

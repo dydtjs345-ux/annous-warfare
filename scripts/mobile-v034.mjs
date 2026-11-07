@@ -20,7 +20,9 @@ try {
   });
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("requestfailed", (r) => failed.push(r.url()));
-  await page.goto("http://127.0.0.1:4234/annous-warfare/?seed=7&debug=1");
+  await page.goto(
+    `${process.env.AW_GAME_URL || "http://127.0.0.1:4234"}/annous-warfare/?seed=7&debug=1`,
+  );
   await page.waitForFunction(() => window.awSnapshot);
   await page.evaluate(
     () =>
@@ -181,7 +183,7 @@ try {
   await page.locator("#animation-preview").tap();
   await page.waitForTimeout(500);
   assert.ok(await page.locator("#animation-dialog").isVisible());
-  await page.locator("[data-preview-close]").tap();
+  await page.locator("#animation-dialog [data-preview-close]").tap();
   await page.waitForTimeout(100);
   assert.equal((await page.evaluate(() => awSnapshot())).paused, true);
   await page.locator("#pause").tap();

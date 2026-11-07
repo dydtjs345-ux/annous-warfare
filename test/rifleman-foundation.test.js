@@ -14,6 +14,7 @@ import {
   sampleClip,
   clipSeconds,
   sequenceSeconds,
+  playbackPhase,
 } from "../src/rifleman/clock.js";
 import {
   resolveRequest,
@@ -21,6 +22,8 @@ import {
   RiflemanIntent,
 } from "../src/rifleman/rig.js";
 import { Battle } from "../src/simulation.js";
+import { laboratoryLayout } from "../src/rifleman/lab-layout.js";
+import { QualityReviewClock } from "../src/rifleman/review.js";
 test("eight-direction inventory distinguishes prototypes from missing art without automatic combat admission", () => {
   assert.deepEqual(DIRECTIONS, ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]);
   assert.equal(CATALOG.autoAdmitToCombat, false);
@@ -29,7 +32,8 @@ test("eight-direction inventory distinguishes prototypes from missing art withou
   );
   assert.equal(statuses.filter((s) => s === "verified").length, 0);
   assert.equal(statuses.filter((s) => s === "prototype").length, 10);
-  assert.equal(statuses.filter((s) => s === "missing").length, 46);
+  assert.equal(statuses.filter((s) => s === "missing").length, 45);
+  assert.equal(statuses.filter((s) => s === "rejected").length, 1);
   assert.ok(!clipAvailability("SE", "highReady").supported);
   assert.ok(!clipAvailability("N", "aim").supported);
   assert.throws(() => {
@@ -43,6 +47,7 @@ test("available clips fit the real PNG grids and share measured ground/height me
     assert.equal(png.readUInt32BE(16), d.grid[0] * d.frameSize[0]);
     assert.equal(png.readUInt32BE(20), d.grid[1] * d.frameSize[1]);
     assert.equal(m.nativeStandingHeight, d.nativeStandingHeight);
+    assert.equal(m.direction, d.direction);
     for (const f of m.frames) {
       assert.equal(f.footAnchor.length, 2);
       assert.ok(f.bounds[0] >= 0 && f.bounds[1] >= 0);
@@ -125,6 +130,12 @@ test("playback pause, seeking, slow motion and 1x/2x/4x have stable cel timing",
   const c = new FoundationClock();
   c.seek(sequenceSeconds);
   assert.equal(c.pose().stage, 0);
+  c.select("walk");
+  c.seek(1.25);
+  assert.ok(Math.abs(playbackPhase(c) - 0.25) < 1e-8);
+  c.select("raise");
+  c.seek(100);
+  assert.ok(Math.abs(playbackPhase(c) - 0.64) < 1e-8);
   assert.equal(sampleClip(CATALOG.directions.SE.clips.raise, 100).frame, 15);
 });
 test("actual pose graph uses full-body raise/lower cels and preserves progress when interrupted", () => {
@@ -190,10 +201,42 @@ test("independent movement/aim directions remain intact and require an explicitl
   assert.equal(resolveRequest(r).supported, false);
   assert.equal(JSON.stringify(r), text);
   const key = "SE:NE:walk:aim",
-    pair = { quality: "verified", id: key };
-  const c = { ...CATALOG, pairs: { [key]: pair } };
+    pair = {
+      quality: "verified",
+      id: key,
+      lowerBank: "l",
+      upperBank: "u",
+      movementDirection: "SE",
+      aimDirection: "NE",
+      locomotion: "walk",
+      weapon: "aim",
+    };
+  const c = {
+    ...CATALOG,
+    banks: {
+      ...CATALOG.banks,
+      l: { kind: "lower-body", direction: "SE" },
+      u: {
+        kind: "upper-with-arms-and-weapon",
+        direction: "NE",
+        weaponIntegrated: true,
+      },
+    },
+    pairs: { [key]: pair },
+  };
   assert.equal(resolveRequest(r, 0.4, 0.2, c).kind, "registered-pair");
   assert.equal(resolveRequest(r, 0.4, 0.2, c).request.aimDirection, "NE");
+  assert.equal(
+    resolveRequest(r, 0.4, 0.2, { ...c, banks: CATALOG.banks }).supported,
+    false,
+  );
+  assert.equal(
+    clipAvailability("N", "aim", {
+      ...CATALOG,
+      directions: { ...CATALOG.directions, N: CATALOG.directions.SE },
+    }).supported,
+    false,
+  );
 });
 function layers() {
   const pair = {
@@ -283,4 +326,87 @@ test("lab/rig observation cannot modify an existing combat or consume its random
   }
   assert.equal(calls, count);
   assert.equal(JSON.stringify(b), before);
+});
+test("landscape-to-portrait layout derives all four anchors from the new content width", () => {
+  for (const size of [30, 39, 45]) {
+    const wide = laboratoryLayout(818, size),
+      narrow = laboratoryLayout(372, size);
+    assert.equal(wide.stacked, false);
+    assert.equal(narrow.stacked, true);
+    assert.deepEqual(
+      narrow.points.map((p) => p.x),
+      [93, 279, 186, 186],
+    );
+    assert.ok(
+      narrow.points.every((p) => p.x >= 0 && p.x <= 372 && p.y < narrow.height),
+    );
+    assert.equal(laboratoryLayout(818, size).points[3].x, 613.5);
+  }
+});
+test("explicit candidate review can inspect rejected keys without admitting or relabeling them", () => {
+  const c = new QualityReviewClock(),
+    frames = new Set();
+  for (let i = 0; i < 4; i++) {
+    const p = c.pose();
+    assert.equal(p.status, "rejected");
+    assert.equal(p.supported, false);
+    assert.equal(p.admitted, false);
+    assert.equal(p.renderable, true);
+    frames.add(p.frame);
+    c.step();
+  }
+  assert.equal(frames.size, 4);
+  assert.equal(c.pose("SE").bank, "se033");
+  assert.equal(c.pose("SE").status, "prototype");
+  assert.equal(c.setDirection("NW"), false);
+  assert.equal(c.pose("NW").renderable, false);
+  assert.equal(c.pose("NW").bank, null);
+  assert.equal(c.select("raise"), false);
+  assert.equal(clipAvailability("E", "walk").supported, false);
+  assert.equal(clipAvailability("E", "walk").status, "rejected");
+});
+test("authored turn contracts play only verified whole-body edges and interruption requires a real fallback resync", () => {
+  // Technical fixtures prove state/registration behavior; they are NOT artwork.
+  const c = {
+    ...CATALOG,
+    banks: {
+      ...CATALOG.banks,
+      turn: { kind: "whole-body", weaponIntegrated: true, grid: [2, 1] },
+    },
+    turns: {
+      "SE:E": {
+        status: "verified",
+        bank: "turn",
+        from: "SE",
+        to: "E",
+        locomotion: "idle",
+        weapon: "lowReady",
+        frames: [0, 1],
+        durations: [0.1, 0.1],
+      },
+    },
+  };
+  const a = new RiflemanIntent(c);
+  a.request({ aimDirection: "E", movementDirection: "E" });
+  assert.equal(a.plan().bank, "turn");
+  a.advance(0.1);
+  assert.equal(a.plan().frame, 1);
+  a.request({ aimDirection: "E" });
+  assert.equal(a.turn.elapsed, 0.1);
+  a.advance(0.1);
+  assert.equal(a.facing, "E");
+  assert.equal(a.plan().bank, "e035");
+  const b = new RiflemanIntent(c);
+  b.request({ aimDirection: "E", movementDirection: "E" });
+  b.advance(0.05);
+  b.request({ aimDirection: "SE", movementDirection: "SE" });
+  assert.equal(b.plan().supported, false);
+  assert.equal(
+    b.acknowledgeFallback({ direction: "SE", weapon: "lowReady" }),
+    true,
+  );
+  assert.equal(b.plan().bank, "se033");
+  const d = new RiflemanIntent(c);
+  d.request({ aimDirection: "E", movementDirection: "E", weapon: "aim" });
+  assert.equal(d.plan().supported, false);
 });

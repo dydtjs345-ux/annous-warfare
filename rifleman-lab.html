@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>USMC 소총수 동작 연구실 · v0.3.5</title>
+  </head>
+  <body>
+    <main id="lab-app">
+      <header>
+        <h1>USMC 소총수 · 동작 연구실</h1>
+        <p>v0.3.5 · 시각 검토 전용 / 실제 전투와 분리</p>
+      </header>
+      <section id="lab-controls" aria-label="방향과 동작 재생">
+        <label
+          >방향
+          <select id="lab-direction" aria-label="병사 방향"></select
+        ></label>
+        <label
+          >동작
+          <select id="lab-action" aria-label="병사 동작"></select
+        ></label>
+        <label
+          >속도
+          <select id="lab-speed">
+            <option value="0.1">0.1×</option>
+            <option value="0.25">0.25×</option>
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+          </select></label
+        >
+        <button id="lab-pause">일시정지</button
+        ><button id="lab-step">다음 프레임</button
+        ><button id="lab-restart">처음</button>
+        <label
+          >크기
+          <select id="lab-size">
+            <option value="30">30px</option>
+            <option value="39" selected>39px</option>
+            <option value="45">45px</option>
+          </select></label
+        >
+        <label><input id="lab-anchors" type="checkbox" /> 기준점</label>
+      </section>
+      <p id="lab-state" role="status" aria-live="off"></p>
+      <p id="lab-review-warning" hidden></p>
+      <label class="lab-scrub"
+        >시간
+        <input
+          id="lab-time"
+          aria-label="동작 시간"
+          type="range"
+          min="0"
+          max="8.74"
+          step="0.001"
+          value="0"
+      /></label>
+      <div
+        id="lab-stage"
+        aria-label="선택 방향과 기존 SE 기준의 실제 크기 및 4배 확대 비교"
+      ></div>
+      <p class="note" id="lab-view-note">
+        윗줄은 실제 게임 크기, 아래는 4× 확대입니다. 좁은 화면의 확대 그림은
+        위아래로 배치됩니다. SE는 기존 동작 시제품, E는 새 정지 그림 4장입니다.
+        나머지는 아트가 없습니다. 빈 방향을 회전·반전 SE로 채우지 않습니다.
+        보행은 제자리 검토 루프이며 정밀 접지 검증은 별도입니다.
+      </p>
+      <details id="lab-rig">
+        <summary>독립 이동·조준 아트 준비 검사</summary>
+        <p class="note">
+          실제 전투 명령이 아닙니다. 상하체 조합은 양손·총기·어깨가 포함된
+          검증된 레이어 쌍만 허용합니다. 현재 그런 조합 아트는 없습니다.
+        </p>
+        <div class="probe-controls">
+          <label
+            >이동
+            <select id="rig-gait">
+              <option value="idle">정지</option>
+              <option value="walk">보행</option>
+              <option value="run">달리기 (미작화)</option>
+              <option value="strafe">옆걸음 (미작화)</option>
+              <option value="backpedal">뒷걸음 (미작화)</option>
+            </select></label
+          >
+          <label
+            >이동 방향
+            <select id="rig-move"></select
+          ></label>
+          <label
+            >조준 방향
+            <select id="rig-aim"></select
+          ></label>
+          <label
+            >무기 자세
+            <select id="rig-weapon">
+              <option value="lowReady">낮은 준비</option>
+              <option value="highReady">높은 준비</option>
+              <option value="aim">견착 조준</option>
+              <option value="reload">재장전 (미작화)</option>
+            </select></label
+          >
+        </div>
+        <output id="rig-result"></output>
+      </details>
+      <h2>작업 완료표 · 전신 기준</h2>
+      <p class="note">
+        완성 / 시제품 / 아트 없음은 다릅니다. 데이터·테스트 통과만으로 작화가
+        완성되지는 않습니다. E의 대기는 정지 1셀로 호흡 움직임이 없습니다.
+      </p>
+      <div class="matrix-scroll">
+        <table id="lab-matrix">
+          <caption>
+            완성된 새 방향별 동작 세트: 0
+          </caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="lab-matrix-summary" class="note"></p>
+      <p class="note">
+        <a href="rifleman-lab.html?review=e-walk-keys"
+          >미채택 E 보행 4키 후보 검토</a
+        >
+        · 기본 재생·완료 세트에 포함하지 않습니다.
+        <a href="rifleman-lab.html">기본 연구실</a>
+      </p>
+      <details>
+        <summary>E 정지 자세 원본과 품질 검토 범위</summary>
+        <p class="note">
+          자체 작화한 방향 후보입니다. 첫 결과의 잘못된 SE 시점을 수정했습니다.
+          4장의 서로 다른 정지 자세이며, 이어붙여 만든 애니메이션이 아닙니다.
+          관절·장비 일관성과 픽셀 정리, 접지·연결 프레임은 작가 검토가 더
+          필요합니다. 전투 렌더러에는 적용하지 않습니다.
+        </p>
+        <img
+          id="lab-e-sheet"
+          loading="lazy"
+          alt="E 방향 정지 자세 시제품 네 장: 대기, 낮은 준비, 높은 준비, 견착"
+        />
+      </details>
+      <h2>다음 작화 요구</h2>
+      <p class="note">
+        N·NE·S·SW·W·NW의 전용 그림, E의 호흡·올림·내림·보행, SE의 높은 준비와
+        자연스러운 접지 보강이 필요합니다. 달리기·전술
+        이동·옆걸음·후퇴·재장전·웅크림·기울이기·포복·부상·사망의 새 전신 세트는
+        미완성입니다. 기존 SE 사격/반동과 다른 병사의 안정된 표현은 실제
+        전투에서 그대로 유지됩니다.
+      </p>
+      <p id="lab-error" role="alert" hidden></p>
+    </main>
+    <script type="module" src="/src/rifleman/lab.js"></script>
+  </body>
+</html>

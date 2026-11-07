@@ -1,6 +1,6 @@
 // Capability-gated rendering contracts. No cutting the whole-body SE PNG into
 // guessed limbs; a layered pairing needs independently authored, reviewed art.
-import { CATALOG, clipAvailability } from "./catalog.js";
+import { CATALOG, clipAvailability, assertClip } from "./catalog.js";
 import { clipSeconds, sampleClip } from "./clock.js";
 const blocked = (reason, request) => ({
   supported: false,
@@ -24,7 +24,20 @@ export function resolveRequest(
     ":",
   );
   const pair = catalog.pairs[pairKey];
-  if (pair?.quality === "verified")
+  const lower = catalog.banks[pair?.lowerBank],
+    upper = catalog.banks[pair?.upperBank];
+  if (
+    pair?.quality === "verified" &&
+    pair.movementDirection === movementDirection &&
+    pair.aimDirection === aimDirection &&
+    pair.locomotion === locomotion &&
+    pair.weapon === weapon &&
+    lower?.kind === "lower-body" &&
+    upper?.kind === "upper-with-arms-and-weapon" &&
+    upper.weaponIntegrated === true &&
+    lower.direction === movementDirection &&
+    upper.direction === aimDirection
+  )
     return {
       supported: true,
       kind: "registered-pair",
@@ -86,6 +99,13 @@ export function composeRegisteredPair(pair, lower, upper, foot, displayHeight) {
     throw new Error("invalid native scale");
   if (lower.nativeStandingHeight !== upper.nativeStandingHeight)
     throw new Error("incompatible native scale");
+  if (
+    !Number.isFinite(foot.x) ||
+    !Number.isFinite(foot.y) ||
+    !Number.isFinite(displayHeight) ||
+    displayHeight <= 0
+  )
+    throw new Error("invalid render scale or root");
   for (const p of [
     lower.frame.footAnchor,
     lower.frame.sockets?.pelvis,
@@ -152,11 +172,49 @@ export class RiflemanIntent {
     };
     this.facing = initialFacing;
     this.turnBlocked = false;
+    this.turn = null;
     this.transitionMissing = null;
   }
   request(intent) {
     this.requested = { ...this.requested, ...intent };
     this.turnBlocked = this.requested.aimDirection !== this.facing;
+    if (this.turnBlocked) {
+      if (
+        this.turn?.to === this.requested.aimDirection &&
+        this.requested.weapon === this.turn.edge.weapon
+      ) {
+        this.turnBlocked = false;
+        return;
+      }
+      const edge =
+          this.catalog.turns[`${this.facing}:${this.requested.aimDirection}`],
+        bank = this.catalog.banks[edge?.bank];
+      if (
+        !this.turn &&
+        edge?.status === "verified" &&
+        edge.from === this.facing &&
+        edge.to === this.requested.aimDirection &&
+        edge.locomotion === this.requested.locomotion &&
+        edge.weapon === this.weapon &&
+        this.requested.weapon === this.weapon &&
+        bank?.kind === "whole-body" &&
+        bank.weaponIntegrated === true
+      ) {
+        try {
+          assertClip(edge, bank.grid[0] * bank.grid[1]);
+          this.turn = { edge, from: this.facing, to: edge.to, elapsed: 0 };
+          this.turnBlocked = false;
+          this.transitionMissing = null;
+        } catch {
+          this.turnBlocked = true;
+        }
+      }
+      return;
+    }
+    if (this.turn) {
+      this.turnBlocked = true;
+      return;
+    } // no invented turn reversal
     const desired = this.requested.weapon;
     if (!["lowReady", "aim"].includes(desired)) {
       this.transition = null;
@@ -203,6 +261,17 @@ export class RiflemanIntent {
     const t = Math.max(0, dt);
     if (this.requested.locomotion !== "idle") this.lowerTime += t;
     this.upperTime += t;
+    if (this.turn) {
+      this.turn.elapsed = Math.min(
+        clipSeconds(this.turn.edge),
+        this.turn.elapsed + t,
+      );
+      if (this.turn.elapsed >= clipSeconds(this.turn.edge)) {
+        this.facing = this.turn.to;
+        this.turn = null;
+        this.turnBlocked = this.requested.aimDirection !== this.facing;
+      }
+    }
     if (this.transition) {
       const a = this.transition;
       a.elapsed = Math.min(a.duration, a.elapsed + t);
@@ -223,6 +292,20 @@ export class RiflemanIntent {
         "방향 전환·상하체 연결 프레임 미작화; 기존 렌더러 유지 필요",
         this.requested,
       );
+    if (this.turn)
+      return {
+        supported: true,
+        kind: "whole-body",
+        bank: this.turn.edge.bank,
+        frame: sampleClip(this.turn.edge, this.turn.elapsed).frame,
+        status: "verified",
+        request: { ...this.requested },
+        rotation: 0,
+        flipX: false,
+        weaponIntegrated: true,
+        layers: [],
+        turn: { from: this.turn.from, to: this.turn.to },
+      };
     if (this.transitionMissing)
       return blocked(this.transitionMissing, this.requested);
     const weapon = this.transition?.clip ?? this.requested.weapon;
@@ -248,5 +331,21 @@ export class RiflemanIntent {
       clocks: { locomotion: this.lowerTime, handling: this.upperTime },
       transition: this.transition ? { ...this.transition } : null,
     };
+  }
+  acknowledgeFallback({ direction, weapon }) {
+    if (
+      !this.catalog.directions[direction] ||
+      !["lowReady", "aim", "highReady"].includes(weapon)
+    )
+      return false;
+    this.facing = direction;
+    this.weapon = weapon;
+    this.amount = weapon === "aim" ? 1 : 0;
+    this.transition = null;
+    this.turn = null;
+    this.turnBlocked = this.requested.aimDirection !== direction;
+    this.transitionMissing = null;
+    this.upperTime = 0;
+    return true;
   }
 }

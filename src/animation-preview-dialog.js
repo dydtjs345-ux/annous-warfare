@@ -1,5 +1,12 @@
 // UI-only lifecycle. Loading/unloading the iframe cannot access Battle objects.
-export function bindAnimationPreview({ button, dialog, onOpen, onClose }) {
+export function bindAnimationPreview({
+  button,
+  dialog,
+  onOpen,
+  onClose,
+  path = "animation-preview.html",
+  title = "USMC SE 전신 동작 미리보기",
+}) {
   let opened = false;
   button.onclick = () => {
     if (opened) return;
@@ -7,8 +14,8 @@ export function bindAnimationPreview({ button, dialog, onOpen, onClose }) {
     opened = true;
     onOpen();
     const frame = document.createElement("iframe");
-    frame.title = "USMC SE 전신 동작 미리보기";
-    frame.src = import.meta.env.BASE_URL + "animation-preview.html";
+    frame.title = title;
+    frame.src = import.meta.env.BASE_URL + path;
     dialog.querySelector(".animation-preview-host").append(frame);
     dialog.querySelector("[data-preview-close]").focus();
   };

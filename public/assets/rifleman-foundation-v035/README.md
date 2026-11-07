@@ -12,8 +12,9 @@ JSON. Uniform scale `displayHeight / 581`; no anatomy warping. The approximately
 1px sole-envelope variation is less than 0.1px at 39px display size. The aiming
 pose's head drops naturally; it is not stretched to equalize every silhouette.
 
-No breathing, walking, raising, lowering, recoil, turn, strafe or transition cels
-exist for E. Do not interpolate the four static pictures to claim those actions.
+No accepted breathing, walking, raising, lowering, recoil, turn, strafe or
+transition sequence exists for E. Do not interpolate the four static pictures
+to claim those actions.
 No fine joint/grip/stock/contact metadata is fabricated. The laboratory keeps
 missing actions empty with their actual reason, alongside the unchanged SE
 reference. Production quality and temporal consistency remain unapproved.
@@ -51,3 +52,16 @@ PNG dimensions or tests pass. Even verified lab art needs an explicit later
 integration decision; `autoAdmitToCombat` is false.
 
 [Audit and remaining artwork](../../../reports/v035-asset-audit.md).
+
+## Rejected motion review
+
+`review/e-walk-keys.png` contains four newly authored gait-key candidates. They
+are separate from the static stances, not transformations of them. Four keys
+lack contact/pass in-betweens and a verified planted-foot/root-motion curve;
+visible kit and texture shifts remain. The normal E walking capability is
+`rejected`, so it stays empty. Only the explicitly labeled
+`rifleman-lab.html?review=e-walk-keys` quality sandbox can play the rejected bank.
+Its status stays rejected, its capability remains unsupported, and live combat
+admission stays false. Review playback is evidence of an unsuccessful art test,
+not a finished animation. No further directions/motion are authored after this
+failed gate. See the audit for screenshots and recordings.

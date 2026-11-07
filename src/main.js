@@ -93,6 +93,23 @@ class Battlefield extends Phaser.Scene {
           : "일시정지";
       },
     });
+    bindAnimationPreview({
+      button: document.querySelector("#rifleman-lab"),
+      dialog: document.querySelector("#rifleman-lab-dialog"),
+      path: "rifleman-lab.html",
+      title: "USMC 8방향 동작 연구실",
+      onOpen: () => {
+        this.labWasPaused = this.paused;
+        this.paused = true;
+        document.querySelector("#pause").textContent = "계속";
+      },
+      onClose: () => {
+        this.paused = this.labWasPaused;
+        document.querySelector("#pause").textContent = this.paused
+          ? "계속"
+          : "일시정지";
+      },
+    });
     this.atmosphere = new CombatAtmosphere();
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);

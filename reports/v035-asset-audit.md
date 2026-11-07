@@ -36,15 +36,27 @@ match the idle silhouette. Fine grip/stock/joint sockets and foot-contact phases
 remain explicitly unannotated. Uniform render scaling preserves each cell.
 
 Quality status: E anatomy/view/equipment can be compared at 39px and 4×, but
-pixel-cluster cleanup, exact M16/equipment continuity, contact authoring and all
-motion require dedicated artwork review. No additional directions or E motion
-frames are generated after this provisional static foundation. Passing data
-validation is not artistic approval.
+pixel-cluster cleanup, exact M16/equipment continuity, contact authoring and motion
+require dedicated artwork review. Passing data validation is not artistic approval.
+
+3. A [four-key E walking test](../public/assets/rifleman-foundation-v035/review/e-walk-keys.png)
+   was authored separately from the four static poses. Actual 0.25× Phaser
+   playback was reviewed frame by frame at 39px and 4×. It is **rejected for normal
+   playback**: four held keys show abrupt stance jumps, equipment/texture changes
+   remain visible, and there is no verified planted-foot/root-motion curve or
+   complete contact/pass interpolation. The source sole bounds also vary by up
+   to 4 native pixels. No per-frame vertical stretching or smoothing hides this.
+   The explicit `?review=e-walk-keys` laboratory mode is a rejection review,
+   watermarked as unaccepted. Its four cels are not advertised as a finished gait
+   or used by the default lab/live renderer. No further E motion or other
+   directions are generated after this failed motion gate.
 
 ## Completion boundary
 
 Six existing SE prototype actions; four new E **static** prototype stances;
-**zero finished new directional animation sets**. SE high-ready, E motion and all
-N/NE/S/SW/W/NW art are missing. The lab and completion matrix must say so.
+one rejected E walking test; **zero finished new directional animation sets**.
+SE high-ready, usable E motion and all N/NE/S/SW/W/NW art are missing. The first
+seven-action matrix records 0 finished, 10 prototype, 45 missing and 1 rejected
+cell. The lab and completion matrix must say so.
 The registered upper/lower pipeline can accept measured artist-authored pairs;
 there are currently no production pairs. Live v0.3.4 remains unchanged.

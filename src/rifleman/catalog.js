@@ -34,7 +34,7 @@ export const FUTURE_ACTIONS = Object.freeze({
   death: "사망",
 });
 export const STATUS_KO = Object.freeze({
-  prototype: "기존 시제품",
+  prototype: "시제품",
   missing: "아트 없음",
   verified: "검증 완료",
   rejected: "품질 기준 미달",
@@ -56,6 +56,7 @@ export const CATALOG = freeze({
   autoAdmitToCombat: false,
   banks: {
     e035: {
+      direction: "E",
       image: "assets/rifleman-foundation-v035/e-static-prototype.png",
       metadata: "assets/rifleman-foundation-v035/e-static-prototype.json",
       grid: [2, 2],
@@ -65,6 +66,7 @@ export const CATALOG = freeze({
       weaponIntegrated: true,
     },
     se033: {
+      direction: "SE",
       image: "assets/usmc-se-v033/source-atlas.png",
       metadata: "assets/usmc-se-v033/metadata.json",
       grid: [4, 6],
@@ -121,21 +123,27 @@ export const CATALOG = freeze({
               status: "prototype",
               bank: "e035",
               note: "새 E 정지 자세 시제품. 동작 연속성·호흡·보행은 미작화. 전투 사용 안 함.",
-              clips: Object.fromEntries(
-                ["idle", "lowReady", "highReady", "aim"].map((action, i) => [
-                  action,
-                  {
-                    frames: [i],
-                    durations: [1],
-                    loop: true,
-                    status: "prototype",
-                    note:
-                      action === "idle"
-                        ? "E 정지 그림 1셀. 호흡 움직임 없음."
-                        : "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
-                  },
-                ]),
-              ),
+              clips: {
+                ...Object.fromEntries(
+                  ["idle", "lowReady", "highReady", "aim"].map((action, i) => [
+                    action,
+                    {
+                      frames: [i],
+                      durations: [1],
+                      loop: true,
+                      status: "prototype",
+                      note:
+                        action === "idle"
+                          ? "E 정지 그림 1셀. 호흡 움직임 없음."
+                          : "E 정지 자세 1셀. 연결 동작 없음; 연구실에서만 검토.",
+                    },
+                  ]),
+                ),
+                walk: {
+                  status: "rejected",
+                  note: "4개 보행 키 후보는 접지·연결·장비 일관성 검증 미달. 기본 재생에서 제외.",
+                },
+              },
             }
           : {
               status: "missing",
@@ -164,11 +172,28 @@ export function clipAvailability(direction, action, catalog = CATALOG) {
       status: "missing",
       reason: d?.note ?? "방향 그림 없음",
     };
-  if (!c?.frames?.length)
+  if (catalog.banks[d.bank]?.direction !== direction)
     return {
       supported: false,
       status: "missing",
-      reason: c?.note ?? `${ACTIONS[action] ?? action} 그림 없음`,
+      reason: "등록 방향과 그림 방향이 다름. 회전·반전 대체 불가",
+    };
+  if (
+    catalog.banks[d.bank].kind !== "whole-body" ||
+    catalog.banks[d.bank].weaponIntegrated !== true
+  )
+    return {
+      supported: false,
+      status: "missing",
+      reason: "양손·어깨·총기가 결합된 전신 그림이 아님",
+    };
+  if (!c?.frames?.length)
+    return {
+      supported: false,
+      status: c?.status === "rejected" ? "rejected" : "missing",
+      reason:
+        c?.note ??
+        `${ACTIONS[action] ?? FUTURE_ACTIONS[action] ?? "해당 동작"} 그림 없음`,
     };
   return {
     supported: true,

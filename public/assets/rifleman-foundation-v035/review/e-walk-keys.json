@@ -1,0 +1,87 @@
+{
+  "version": "0.3.5",
+  "direction": "E",
+  "status": "rejected-motion-candidate",
+  "image": "e-walk-keys.png",
+  "grid": [
+    2,
+    2
+  ],
+  "frameSize": [
+    627,
+    627
+  ],
+  "nativeStandingHeight": 581,
+  "weaponIntegrated": true,
+  "animationReady": false,
+  "combatApproved": false,
+  "frames": [
+    {
+      "index": 0,
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        96,
+        13,
+        491,
+        598
+      ],
+      "groundContacts": "unverified",
+      "fineSockets": null
+    },
+    {
+      "index": 1,
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        164,
+        15,
+        471,
+        598
+      ],
+      "groundContacts": "unverified",
+      "fineSockets": null
+    },
+    {
+      "index": 2,
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        104,
+        14,
+        515,
+        595
+      ],
+      "groundContacts": "unverified",
+      "fineSockets": null
+    },
+    {
+      "index": 3,
+      "footAnchor": [
+        293,
+        598
+      ],
+      "bounds": [
+        150,
+        18,
+        476,
+        599
+      ],
+      "groundContacts": "unverified",
+      "fineSockets": null
+    }
+  ],
+  "sourceSha256": "5992467187b17329dfd93a9436c559b33c8027e10237f452e4e9bacf9f0db6d0",
+  "notes": [
+    "Four newly authored gait-key candidates; not static stance crops.",
+    "Not admitted: insufficient contact/pass in-betweens, no authored planted-foot/root-motion curve, temporal cloth/kit variation.",
+    "Registration uses the unchanged static E master scale/root to expose variation rather than stretching each frame.",
+    "Only the explicit rejected-candidate review URL can play this bank."
+  ]
+}

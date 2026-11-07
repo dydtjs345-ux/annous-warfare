@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  background: #101a24;
+  color: #dce4e6;
+  font:
+    13px/1.5 system-ui,
+    sans-serif;
+}
+#lab-app {
+  max-width: 1060px;
+  margin: auto;
+  padding: 10px 12px max(24px, env(safe-area-inset-bottom));
+}
+header {
+  padding: 2px 0 8px;
+}
+h1 {
+  font-size: 18px;
+  margin: 0;
+}
+h2 {
+  font-size: 15px;
+  margin: 18px 0 5px;
+}
+header p,
+.note {
+  color: #a9bbc1;
+  margin: 5px 0 10px;
+  overflow-wrap: anywhere;
+}
+#lab-controls,
+.probe-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#lab-controls {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #101a24f5;
+  border-bottom: 1px solid #465e68;
+  padding: 7px 0;
+}
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+button,
+select {
+  font: inherit;
+  color: #e4eeee;
+  background: #243c49;
+  border: 1px solid #55717b;
+  border-radius: 4px;
+  min-height: 42px;
+  padding: 5px 9px;
+  touch-action: manipulation;
+  max-width: 100%;
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #e8ce9d;
+  outline-offset: 2px;
+}
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+#lab-state {
+  min-height: 60px;
+  white-space: pre-line;
+  color: #e6d2aa;
+  margin: 8px 0;
+}
+.lab-scrub {
+  display: flex;
+  margin-bottom: 8px;
+}
+.lab-scrub input {
+  flex: 1;
+  min-height: 32px;
+  accent-color: #c6ac7c;
+}
+#lab-stage {
+  width: 100%;
+  border: 1px solid #40545e;
+  background: #1c2b34;
+  height: 440px;
+  overflow: hidden;
+}
+#lab-stage canvas {
+  display: block;
+  image-rendering: pixelated;
+  pointer-events: none;
+  touch-action: pan-y;
+}
+details {
+  margin: 12px 0;
+  border: 1px solid #3a515d;
+  padding: 8px;
+}
+summary {
+  cursor: pointer;
+  min-height: 30px;
+}
+#rig-result {
+  display: block;
+  white-space: pre-line;
+  margin: 8px 0;
+  color: #e6d2aa;
+}
+.matrix-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  touch-action: pan-x pan-y;
+}
+table {
+  border-collapse: collapse;
+  min-width: 660px;
+  width: 100%;
+  font-size: 11px;
+}
+caption {
+  text-align: left;
+  color: #e6d2aa;
+  padding: 6px;
+}
+th,
+td {
+  border: 1px solid #3f555e;
+  padding: 7px 5px;
+  text-align: center;
+}
+th:first-child,
+td:first-child {
+  text-align: left;
+  min-width: 90px;
+}
+td[data-status="prototype"] {
+  color: #e2c58e;
+  background: #302e29;
+}
+td[data-status="missing"] {
+  color: #9aaeb8;
+}
+td[data-status="verified"] {
+  color: #a4d6bf;
+}
+td[data-status="rejected"],
+#lab-review-warning {
+  color: #e6b4a3;
+  background: #3a2828;
+}
+#lab-review-warning {
+  padding: 10px;
+  border: 1px solid #865b4e;
+}
+a {
+  color: #add8cc;
+}
+#lab-e-sheet {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  max-width: 720px;
+  display: block;
+  margin: 10px auto;
+}
+#lab-error {
+  background: #542e2e;
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 450px) {
+  #lab-app {
+    padding: 6px 8px 20px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  #lab-controls {
+    gap: 5px;
+  }
+  button,
+  select {
+    padding-inline: 7px;
+  }
+  #lab-action {
+    max-width: 205px;
+  }
+}
