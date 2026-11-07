@@ -1,0 +1,2419 @@
+{
+  "method": "Actual production preview; phase selection and time slider only. Original full-body cel, not an assigned combat state. Captures use 39px game scale and 4x camera magnification.",
+  "records": [
+    {
+      "mode": "idle",
+      "time": 0.1,
+      "snapshot": {
+        "time": 0.1,
+        "mode": "idle",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 0,
+          "index": 0,
+          "phaseTime": 0.1,
+          "frameAge": 0.1,
+          "clip": "idle",
+          "local": 0.1,
+          "label": "대기 · 낮은 준비 자세",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1.4,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 0
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 727.6952011099327,
+            "y": 126.33975857532751
+          },
+          "grip": {
+            "x": 718.133838166392,
+            "y": 118.55
+          },
+          "gunAngle": 0.6836476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.455,
+            "y": 130.835
+          },
+          {
+            "x": 531.82,
+            "y": 355.34
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "time": 0.31,
+      "snapshot": {
+        "time": 0.31,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 6,
+          "index": 2,
+          "phaseTime": 0.31,
+          "frameAge": 0.06,
+          "clip": "walk",
+          "local": 0.31,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 5.4405,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 2,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 727.6952011099327,
+            "y": 126.33975857532751
+          },
+          "grip": {
+            "x": 718.133838166392,
+            "y": 118.55
+          },
+          "gunAngle": 0.6836476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.845,
+            "y": 129.5675
+          },
+          {
+            "x": 533.38,
+            "y": 350.27
+          }
+        ]
+      }
+    },
+    {
+      "mode": "raise",
+      "time": 0.25,
+      "snapshot": {
+        "time": 0.25,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 13,
+          "index": 1,
+          "phaseTime": 0.25,
+          "frameAge": 0.10999999999999999,
+          "clip": "raise",
+          "local": 0.25,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 727.6952011099327,
+            "y": 126.33975857532751
+          },
+          "grip": {
+            "x": 718.133838166392,
+            "y": 118.55
+          },
+          "gunAngle": 0.6836476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 254.795,
+            "y": 126.155
+          },
+          {
+            "x": 541.18,
+            "y": 336.62
+          }
+        ]
+      }
+    },
+    {
+      "mode": "aim",
+      "time": 0.3,
+      "snapshot": {
+        "time": 0.3,
+        "mode": "aim",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 16,
+          "index": 0,
+          "phaseTime": 0.3,
+          "frameAge": 0.3,
+          "clip": "aim",
+          "local": 0.3,
+          "label": "조준 · 견착 유지",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.8,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 727.6952011099327,
+            "y": 126.33975857532751
+          },
+          "grip": {
+            "x": 718.133838166392,
+            "y": 118.55
+          },
+          "gunAngle": 0.6836476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.915,
+            "y": 113.9675
+          },
+          {
+            "x": 553.66,
+            "y": 287.87
+          }
+        ]
+      }
+    },
+    {
+      "mode": "fire",
+      "time": 0.015,
+      "snapshot": {
+        "time": 0.015,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 17,
+          "index": 0,
+          "phaseTime": 0.015,
+          "frameAge": 0.015,
+          "clip": "fire",
+          "local": 0.015,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": true,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "firing",
+          "visible": true,
+          "muzzle": {
+            "x": 728.7808429861635,
+            "y": 123.78637160966309
+          },
+          "grip": {
+            "x": 717.7499771996534,
+            "y": 118.27093871640803
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": true
+        },
+        "muzzles": [
+          {
+            "x": 257.72,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 552.88,
+            "y": 287.09000000000003
+          }
+        ]
+      }
+    },
+    {
+      "mode": "lower",
+      "time": 0.35,
+      "snapshot": {
+        "time": 0.35,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 22,
+          "index": 2,
+          "phaseTime": 0.35,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.35,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 255.185,
+            "y": 125.0825
+          },
+          {
+            "x": 542.74,
+            "y": 332.33
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 4,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "walk",
+          "local": 0.02,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0.35100000000000003,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 4
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.04,
+            "y": 129.47
+          },
+          {
+            "x": 534.16,
+            "y": 349.88
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 1,
+      "time": 0.15,
+      "snapshot": {
+        "time": 0.15,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 5,
+          "index": 1,
+          "phaseTime": 0.15,
+          "frameAge": 0.01999999999999999,
+          "clip": "walk",
+          "local": 0.15,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 2.6325000000000003,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 5
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 1,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.845,
+            "y": 129.47
+          },
+          {
+            "x": 533.38,
+            "y": 349.88
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 2,
+      "time": 0.27,
+      "snapshot": {
+        "time": 0.27,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 6,
+          "index": 2,
+          "phaseTime": 0.27,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.27,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 4.7385,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 6
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 2,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.845,
+            "y": 129.5675
+          },
+          {
+            "x": 533.38,
+            "y": 350.27
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 3,
+      "time": 0.39,
+      "snapshot": {
+        "time": 0.39,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 7,
+          "index": 3,
+          "phaseTime": 0.39,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.39,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 6.844500000000001,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 7
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 3,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.235,
+            "y": 129.47
+          },
+          {
+            "x": 534.94,
+            "y": 349.88
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 4,
+      "time": 0.52,
+      "snapshot": {
+        "time": 0.52,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 8,
+          "index": 4,
+          "phaseTime": 0.52,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.52,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 9.126000000000001,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 8
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 4,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.04,
+            "y": 129.47
+          },
+          {
+            "x": 534.16,
+            "y": 349.88
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 5,
+      "time": 0.65,
+      "snapshot": {
+        "time": 0.65,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 9,
+          "index": 5,
+          "phaseTime": 0.65,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.65,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 11.4075,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 9
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 5,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.04,
+            "y": 129.08
+          },
+          {
+            "x": 534.16,
+            "y": 348.32
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 6,
+      "time": 0.77,
+      "snapshot": {
+        "time": 0.77,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 10,
+          "index": 6,
+          "phaseTime": 0.77,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.77,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 13.5135,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 10
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 6,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.43,
+            "y": 128.7875
+          },
+          {
+            "x": 535.72,
+            "y": 347.15
+          }
+        ]
+      }
+    },
+    {
+      "mode": "walk",
+      "cel": 7,
+      "time": 0.89,
+      "snapshot": {
+        "time": 0.89,
+        "mode": "walk",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 11,
+          "index": 7,
+          "phaseTime": 0.89,
+          "frameAge": 0.020000000000000018,
+          "clip": "walk",
+          "local": 0.89,
+          "label": "보행 · 몸통/어깨/장비 동조",
+          "stage": -1,
+          "flash": false,
+          "walking": true
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 1,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 15.619499999999999,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 11
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 7,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "walking",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 253.82,
+            "y": 128.7875
+          },
+          {
+            "x": 537.28,
+            "y": 347.15
+          }
+        ]
+      }
+    },
+    {
+      "mode": "raise",
+      "cel": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 12,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "raise",
+          "local": 0.02,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 12
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.455,
+            "y": 130.835
+          },
+          {
+            "x": 531.82,
+            "y": 355.34
+          }
+        ]
+      }
+    },
+    {
+      "mode": "raise",
+      "cel": 1,
+      "time": 0.16,
+      "snapshot": {
+        "time": 0.16,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 13,
+          "index": 1,
+          "phaseTime": 0.16,
+          "frameAge": 0.01999999999999999,
+          "clip": "raise",
+          "local": 0.16,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 13
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 254.795,
+            "y": 126.155
+          },
+          {
+            "x": 541.18,
+            "y": 336.62
+          }
+        ]
+      }
+    },
+    {
+      "mode": "raise",
+      "cel": 2,
+      "time": 0.32000000000000006,
+      "snapshot": {
+        "time": 0.32,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 14,
+          "index": 2,
+          "phaseTime": 0.32,
+          "frameAge": 0.019999999999999962,
+          "clip": "raise",
+          "local": 0.32,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 14
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 256.745,
+            "y": 120.0125
+          },
+          {
+            "x": 548.98,
+            "y": 312.05
+          }
+        ]
+      }
+    },
+    {
+      "mode": "raise",
+      "cel": 3,
+      "time": 0.4800000000000001,
+      "snapshot": {
+        "time": 0.48,
+        "mode": "raise",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 15,
+          "index": 3,
+          "phaseTime": 0.48,
+          "frameAge": 0.019999999999999907,
+          "clip": "raise",
+          "local": 0.48,
+          "label": "총기 올리기 · 양손/견착",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.6400000000000001,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 15
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.72,
+            "y": 114.9425
+          },
+          {
+            "x": 552.88,
+            "y": 291.77
+          }
+        ]
+      }
+    },
+    {
+      "mode": "fire",
+      "cel": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 17,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "fire",
+          "local": 0.02,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": true,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 17
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "firing",
+          "visible": true,
+          "muzzle": {
+            "x": 728.7808429861635,
+            "y": 123.78637160966309
+          },
+          "grip": {
+            "x": 717.7499771996534,
+            "y": 118.27093871640803
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": true
+        },
+        "muzzles": [
+          {
+            "x": 257.72,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 552.88,
+            "y": 287.09000000000003
+          }
+        ]
+      }
+    },
+    {
+      "mode": "fire",
+      "cel": 1,
+      "time": 0.075,
+      "snapshot": {
+        "time": 0.075,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 18,
+          "index": 1,
+          "phaseTime": 0.075,
+          "frameAge": 0.019999999999999997,
+          "clip": "fire",
+          "local": 0.075,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 18
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.915,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 553.66,
+            "y": 287.09000000000003
+          }
+        ]
+      }
+    },
+    {
+      "mode": "fire",
+      "cel": 2,
+      "time": 0.13999999999999999,
+      "snapshot": {
+        "time": 0.14,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 19,
+          "index": 2,
+          "phaseTime": 0.14,
+          "frameAge": 0.020000000000000018,
+          "clip": "fire",
+          "local": 0.14,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 19
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.72,
+            "y": 113.77250000000001
+          },
+          {
+            "x": 552.88,
+            "y": 287.09000000000003
+          }
+        ]
+      }
+    },
+    {
+      "mode": "fire",
+      "cel": 3,
+      "time": 0.24,
+      "snapshot": {
+        "time": 0.24,
+        "mode": "fire",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 16,
+          "index": 3,
+          "phaseTime": 0.24,
+          "frameAge": 0.01999999999999999,
+          "clip": "fire",
+          "local": 0.24,
+          "label": "사격 · 상체와 총기의 동시 반동",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 16
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "aiming",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.915,
+            "y": 113.9675
+          },
+          {
+            "x": 553.66,
+            "y": 287.87
+          }
+        ]
+      }
+    },
+    {
+      "mode": "lower",
+      "cel": 0,
+      "time": 0.02,
+      "snapshot": {
+        "time": 0.02,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 20,
+          "index": 0,
+          "phaseTime": 0.02,
+          "frameAge": 0.02,
+          "clip": "lower",
+          "local": 0.02,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 20
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.915,
+            "y": 113.9675
+          },
+          {
+            "x": 553.66,
+            "y": 287.87
+          }
+        ]
+      }
+    },
+    {
+      "mode": "lower",
+      "cel": 1,
+      "time": 0.16999999999999998,
+      "snapshot": {
+        "time": 0.17,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 21,
+          "index": 1,
+          "phaseTime": 0.17,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.17,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 21
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 257.525,
+            "y": 116.8925
+          },
+          {
+            "x": 552.1,
+            "y": 299.57
+          }
+        ]
+      }
+    },
+    {
+      "mode": "lower",
+      "cel": 2,
+      "time": 0.35,
+      "snapshot": {
+        "time": 0.35,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 22,
+          "index": 2,
+          "phaseTime": 0.35,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.35,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 22
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 255.185,
+            "y": 125.0825
+          },
+          {
+            "x": 542.74,
+            "y": 332.33
+          }
+        ]
+      }
+    },
+    {
+      "mode": "lower",
+      "cel": 3,
+      "time": 0.53,
+      "snapshot": {
+        "time": 0.53,
+        "mode": "lower",
+        "playing": false,
+        "speed": 1,
+        "pose": {
+          "frame": 23,
+          "index": 3,
+          "phaseTime": 0.53,
+          "frameAge": 0.020000000000000018,
+          "clip": "lower",
+          "local": 0.53,
+          "label": "총기 내리기 · 준비 자세 복귀",
+          "stage": -1,
+          "flash": false,
+          "walking": false
+        },
+        "shotCues": 0,
+        "size": 1.3,
+        "zoom": 4,
+        "direction": "SE",
+        "total": 0.7,
+        "source": "whole-body-atlas",
+        "independentWeaponObjects": 0,
+        "frameSize": [
+          256,
+          256
+        ],
+        "groundDistance": 0,
+        "views": [
+          {
+            "x": 239,
+            "y": 140,
+            "scale": 0.195,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23
+          },
+          {
+            "x": 478,
+            "y": 392,
+            "scale": 0.78,
+            "rotation": 0,
+            "originX": 0.515625,
+            "originY": 0.94140625,
+            "frame": 23
+          }
+        ],
+        "canvas": {
+          "width": 956,
+          "height": 420
+        },
+        "legacy": {
+          "eligible": true,
+          "scale": 0.4875,
+          "angle": 0.4636476090008061,
+          "foreshorten": 0.7905694150420948,
+          "body": 1,
+          "legs": 1,
+          "phase": 0,
+          "lowering": 0,
+          "prone": false,
+          "art": "v031",
+          "pose": "idle",
+          "visible": true,
+          "muzzle": {
+            "x": 729.3389655533475,
+            "y": 124.06543289325506
+          },
+          "grip": {
+            "x": 718.3080997668374,
+            "y": 118.55
+          },
+          "gunAngle": 0.4636476090008061,
+          "flash": false
+        },
+        "muzzles": [
+          {
+            "x": 252.845,
+            "y": 130.64
+          },
+          {
+            "x": 533.38,
+            "y": 354.56
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

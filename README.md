@@ -487,3 +487,11 @@ The prototype uses a 144-frame transparent atlas, independent articulated sleeve
 Enable **시제품 #1**, choose **그림 → v0.3.1**, and compare **1.3× / 1.5×** on the battlefield. **v0.3.0** retains the previous PNG rig; turning the toggle off restores the stock renderer. Only USMC rifleman #1 changes. The new default comparison size is 1.3×; simulation, selection and collision sizes are unchanged.
 
 The separate transparent atlas has fuller torso proportions, shorter relative legs, more helmet/carrier/pouch/backpack detail, separate run/crawl frames and a more detailed M16A4 silhouette. This is original reference-informed pixel construction, not cropped illustrated poses. It remains a prototype below the supplied reference's finished art quality; dedicated directional anatomy, equipment and hand-authored transition art are still needed. Unsupported actions retain the original renderer. [v0.3.1 audit, real screenshots and video](reports/v031-high-detail-soldier-audit.md).
+
+## v0.3.2 — SE-only connected-body animation preview
+
+Tap **SE 동작 보기** above the battle controls. The isolated preview shows **idle → walk → stop → raise → aim → fire → lower → idle**, individual phase controls, pause/frame-step/time scrub, game-scale 30/39/45px and 2×/4×/6× camera magnification. The existing v0.3.1 renderer is beside the new poses. Opening pauses the battle; closing restores its previous pause state. You can also open `/annous-warfare/animation-preview.html` directly.
+
+Each new cel contains the whole body, both hands and the rifle. The gun is not independently rotated and no IK limbs stretch to follow it. This is **only a SE visual preview**, not a replacement for the battle renderer or eight finished directions. Preview firing is explicitly a demonstration cue and has no effect on ammunition/combat.
+
+The original generated transparent art is more detailed than v0.3.1, but **the reference-quality artwork requirement is not satisfied yet**: cel-to-cel cloth/gear consistency, gait/foot contact and authored transition quality still need dedicated artist cleanup and visual approval. No other directions will be expanded before that approval. [Audit, phase screenshots, GIF and MP4](reports/v032-usmc-animation-prototype.md). Physical iPhone Safari remains unverified.

@@ -1,0 +1,180 @@
+{
+  "base": "c6cc07e",
+  "tests": 255,
+  "failures": 0,
+  "completeExecutions": 80,
+  "matchedConfigurations": 40,
+  "inheritedReplayHashesCompared": 40,
+  "combatDivergences": 0,
+  "unchangedModules": {
+    "battle-wear.js": "6fae4d73bf4b2730cea82d811f94c07b0d7c5d3965c929dadd74df2ccba0876e",
+    "combat-atmosphere.js": "0d60934ddfadfcc000383fc1d9ba73f092b26547e445f788e50971241b61c901",
+    "combat-visuals.js": "1d8eee6f558f0bcfda14c45c1dc1cf82b8bff19af4e309207524a2584da8908b",
+    "coordination.js": "8d9e1e27ea0494935828d53146ba5b38ac2f4cc8f73fbb1a015e3c0a804243e2",
+    "cover-art.js": "d4120cd4373406a17811b360f5181e2a922aa54a93ab3eda59de5a0299acfc4b",
+    "crossings.js": "f1b9080f0fe9a7f3f05d80e6f806651cc41f3bcd4946f17cf040dbe4ec2fdc0a",
+    "diagnostics.js": "59d7b8c17732f3bf3ba554ab6b86f82135214559493ac81642a6b03bf743c9d0",
+    "environment-cache.js": "059cf256d51c2de272ac160f65d2bda855e2998be2a04628a588e0e77a3a28b3",
+    "expanded-world.js": "97ef2c4805943f21484d386fe6058a7bfb35c9e94ee113779dad1062071076f1",
+    "fire-movement.js": "718f51a35b8d3794c89d322c1eb7ddd8421b10048c72a9295050873378d6026a",
+    "grenade-visuals.js": "d82dc780220a25c820d68aab626006751a125b0961f2d3e5a2de76e2db0d1f8c",
+    "grenades.js": "34345f44c36dc0ff234148eab7bed9578cbe317be9f4dbf4d13d872018007170",
+    "inspection.js": "e8e623a41f46a76c0f7944bd841c5313a5581f9c53d2b0298c4daf3229cf47c0",
+    "intelligence.js": "fb8cdeb8d614bc63ca06edd333326fffc0e3c96dd8e4060ecdb00f97bd721318",
+    "korean-inspector.js": "a11415b32856078be5c805dea1f73c086132b48acc01b3f5c953cfb942100cdb",
+    "medical.js": "9638f60cbe96c463383445905e313221c201a96d0e6ad94d00d23f7be24f8ac0",
+    "motion-presentation.js": "60698bc7cea018a18367af3e9f2d6a9cc56eb8884c5911db9e2a63e846735454",
+    "mounting.js": "9c0c15610db33ed45b8f0a6dc7f25e03431444111c83132ccda463f0e5970cbf",
+    "postures.js": "f6782080ff185430920d5e8d2add068a9b6ceb02f2304ebcd8cb2d45332c9667",
+    "presentation-state.js": "ade69eda2447e8895c6c4b92337c6f678ce017ddf9711b97e9658f02e16f8860",
+    "readability.js": "6a795593d22c1cb3acf7a605ef39bff246940350d1cd0c51432a643aa4bbd93e",
+    "search-path.js": "245c9b7bdab116342f8b44146be96aded3a5cf9fadde444676944e0ddf5bb7d8",
+    "search.js": "d7a741cbf805390b8cdf1968694f6f6be372f095de17784e7b50721bd803483e",
+    "security.js": "bcd884a2aa9b503a6766b268be0486334c53f9d840f3b85c4b9d90fa42646c9b",
+    "simulation.js": "a69b91dd211629856f9fdccb3ffa8fed6a294f3e38665fd25da7f180a64aa602",
+    "soldier-prototype.js": "681617bbb35b3d072b809bce3aaa7b6e445e6fa0b5a67c4b1fadac2064be8966",
+    "street-art.js": "b9818cc20239e3c43fcc24e8ba9470f47c16fdedfa2921594cc34bb6564eb1dd",
+    "suppressive-fire.js": "cec9dd24c84c86178accfb2d35528b0bb02a274bbcca8cc69b69d4b540716116",
+    "tactics.js": "d43f5105f1c25a0633c2438863b9d24ef0fd9d96067322ab76a4c7a41277b8fd",
+    "urban-detail.js": "99722f3e9010289eeaff6d78b9c50f1b06ca0e1e12df04cc75fd0e9dadecda35",
+    "urban-visuals.js": "4284b4da98bb7ba0841d1b9f44a93d10b1d67f6567cf759b489a54d3236903a4",
+    "view.js": "19ffcb4138dd3a79ec01e4f1c5ed6f7058f8d79517f4b2dc91888c3c08c8a932",
+    "world.js": "9f57b20aefedf52b288a7934884f9c9c39a2aa226039df2897a83fffa49a8f18"
+  },
+  "mainUpdateLoopUnchanged": true,
+  "direction": "SE only",
+  "newFigureTransforms": "whole-body frame and uniform scale only; no independent weapon/limbs",
+  "recordedFrames": 617,
+  "previewSpeedChecks": [
+    {
+      "speed": 1,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visibleFlashFrames": 6
+    },
+    {
+      "speed": 2,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visibleFlashFrames": 6
+    },
+    {
+      "speed": 4,
+      "stages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visibleFlashFrames": 6
+    }
+  ],
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "orientation": true,
+    "wholeBody39px": true,
+    "maxScale1_5AndZoom6": true,
+    "frameStep": true,
+    "previewSpeeds": [
+      1,
+      4
+    ],
+    "previewFrameStats": {
+      "samples": 301,
+      "p50": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "shotCues": 4
+    },
+    "touchScroll": true,
+    "battleFrozenWhileOpen": true,
+    "pausedStateRestored": true,
+    "frameDestroyedAcrossRestarts": 3,
+    "noHorizontalOverflow": true,
+    "errors": [],
+    "failed": [],
+    "physicalSafari": "unverified"
+  },
+  "gameControls": {
+    "frameStats": {
+      "samples": 299,
+      "p50": 16.69999999999891,
+      "p95": 16.700000000000728,
+      "max": 33.399999999999636
+    },
+    "selection": true,
+    "prototypeHeadSelection": true,
+    "isolatedUnitId": 1,
+    "artBanks": [
+      "v030",
+      "v031"
+    ],
+    "prototypeScales": [
+      1,
+      1.3,
+      1.5
+    ],
+    "expandCollapse": true,
+    "nativeScroll": true,
+    "closeAndReselect": true,
+    "orientations": 2,
+    "speeds": [
+      1,
+      2,
+      4
+    ],
+    "restart": true,
+    "cacheCleanupAcrossExtraRestarts": 4,
+    "errors": [],
+    "physicalSafari": "unverified",
+    "panPinch": true
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 980,
+        "height": 950
+      }
+    ],
+    "format": {
+      "duration": "12.320000"
+    }
+  },
+  "assetHashes": {
+    "README.md": "b3e5ee14e3387cdd8783c6450c06c087435b41d680a3e109db864c7aecd03bf0",
+    "metadata.json": "6a26b04f1bc784d1c74309602a95f8b035e78bc4dbe5cb995fce9a7086e23ccd",
+    "source-atlas.png": "4765c95309e0dba11273e677500aef3471a41782978dc593e6a2a201f2881f04"
+  },
+  "referenceQualityArtRequirement": "not satisfied; generated cel consistency and footwork need artist cleanup",
+  "newBattleRendererApplied": false,
+  "physicalSafari": "unverified"
+}
