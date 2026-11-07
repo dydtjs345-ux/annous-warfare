@@ -1,3 +1,4 @@
+import { SoldierPrototype, preloadPrototype } from "./soldier-prototype.js";
 import { EnvironmentCache } from "./environment-cache.js";
 import { streetProps, drawStreetProp } from "./street-art.js";
 import { coverVisuals } from "./cover-art.js";
@@ -30,6 +31,9 @@ const mapMode = ["legacy", "urban"].includes(params.get("map"))
   ? params.get("map")
   : "expanded";
 class Battlefield extends Phaser.Scene {
+  preload() {
+    preloadPrototype(this);
+  }
   create() {
     this.seed = params.has("seed")
       ? Number(params.get("seed")) >>> 0
@@ -42,6 +46,21 @@ class Battlefield extends Phaser.Scene {
     this.g = this.add.graphics().setDepth(1000000);
     this.visuals = new CombatVisuals();
     this.motion = new MotionPresentation();
+    this.prototypeVisual = new SoldierPrototype(this);
+    this.prototypeVisual.visualSize = 1.3;
+    document.querySelector("#prototype-art").onchange = (e) =>
+      this.prototypeVisual.setArt(e.target.value);
+    document.querySelector("#prototype-toggle").onclick = () => {
+      this.prototypeVisual.enabled = !this.prototypeVisual.enabled;
+      if (this.prototypeVisual.enabled) this.selected = this.battle.units[1];
+      document.querySelector("#prototype-toggle").textContent = this
+        .prototypeVisual.enabled
+        ? "시제품 #1: 켜짐"
+        : "시제품 #1: 꺼짐";
+    };
+    document.querySelector("#prototype-scale").onchange = (e) => {
+      this.prototypeVisual.visualSize = Number(e.target.value);
+    };
     this.atmosphere = new CombatAtmosphere();
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);
@@ -95,6 +114,12 @@ class Battlefield extends Phaser.Scene {
           this.iso,
         );
         if (picked) this.selected = this.battle.units[picked.id];
+        else if (this.prototypeVisual.enabled) {
+          const u = this.battle.units[1],
+            v = this.motion.position(u);
+          if (u.active && this.prototypeVisual.hitTest(w, this.iso(v.x, v.y)))
+            this.selected = u;
+        }
       }
     });
     this.input.on("wheel", (_, __, ___, dy) => {
@@ -167,6 +192,12 @@ class Battlefield extends Phaser.Scene {
           paused: this.paused,
           time: this.battle.time,
           selected: this.selected?.id ?? null,
+          prototype: {
+            art: this.prototypeVisual.art,
+            enabled: this.prototypeVisual.enabled,
+            scale: this.prototypeVisual.visualSize,
+            state: this.prototypeVisual.snapshot(),
+          },
           environmentCache: {
             count: this.staticEnvironment.records.length,
             textureCount: Object.keys(this.textures.list).filter((k) =>
@@ -491,6 +522,7 @@ class Battlefield extends Phaser.Scene {
       this.iso,
       (h) => !this.battle.units.some((u) => u.active && inside(u.x, u.y) === h),
     );
+    this.prototypeVisual.hide();
     for (const u of this.battle.units) {
       const rendered = this.motion.position(u),
         p = this.iso(rendered.x, rendered.y),
@@ -499,14 +531,29 @@ class Battlefield extends Phaser.Scene {
       ug.setVisible(inView(p, v, 65));
       ug.setDepth((rendered.x + rendered.y) * 100);
       if (!ug.visible) continue;
-      this.visuals.drawUnit(
-        ug,
-        this.battle,
-        u,
-        p,
-        this.iso,
-        this.selected === u,
-      );
+      const drawn =
+        u.id === 1 &&
+        this.prototypeVisual.draw(
+          ug,
+          this.battle,
+          u,
+          this.visuals.models[u.id],
+          this.visuals.effects[u.id],
+          p,
+          rendered,
+          this.selected === u,
+          this.paused,
+          this.speed,
+        );
+      if (!drawn)
+        this.visuals.drawUnit(
+          ug,
+          this.battle,
+          u,
+          p,
+          this.iso,
+          this.selected === u,
+        );
       drawReadability(ug, rendered, p, this.iso);
     }
     if (this.selected && this.staticEnvironment.obscured) {
@@ -520,7 +567,14 @@ class Battlefield extends Phaser.Scene {
     this.visuals.drawTraces(g, this.iso);
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
-    this.atmosphere.draw(g, this.iso, v);
+    this.atmosphere.draw(g, this.iso, v, (e) =>
+      e.unitId === 1 &&
+      this.prototypeVisual.enabled &&
+      this.prototypeVisual.state?.visible &&
+      this.prototypeVisual.state.flash
+        ? this.prototypeVisual.state
+        : null,
+    );
     if (this.time.now >= this.nextUI) {
       this.nextUI = this.time.now + 100;
       document.querySelector("#counts").textContent =

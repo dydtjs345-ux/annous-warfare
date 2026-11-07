@@ -117,13 +117,91 @@ footer {
     padding: 6px 8px;
   }
 }
-[hidden] { display: none !important; }
-#inspect { position:relative; max-height:132px; min-height:0; overflow-wrap:anywhere; font-size:13px; letter-spacing:0; }
-#inspect.expanded { max-height:45dvh; overflow-y:auto; overscroll-behavior:contain; touch-action:pan-y; -webkit-overflow-scrolling:touch; }
-.inspect-controls { display:flex; gap:8px; position:sticky; top:-10px; background:#162430; white-space:normal; }
-.inspect-controls button { flex:0 0 auto; padding:4px 12px; }
-#inspect-text { white-space:pre-line; }
-@media (orientation:landscape) and (max-height:500px){#inspect{max-height:100px}#inspect.expanded{max-height:48dvh}header{padding:3px 10px}h1{font-size:14px}}
-#inspect-text { word-break: keep-all; }
+[hidden] {
+  display: none !important;
+}
+#inspect {
+  position: relative;
+  max-height: 132px;
+  min-height: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+#inspect.expanded {
+  max-height: 45dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+.inspect-controls {
+  display: flex;
+  gap: 8px;
+  position: sticky;
+  top: -10px;
+  background: #162430;
+  white-space: normal;
+}
+.inspect-controls button {
+  flex: 0 0 auto;
+  padding: 4px 12px;
+}
+#inspect-text {
+  white-space: pre-line;
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  #inspect {
+    max-height: 100px;
+  }
+  #inspect.expanded {
+    max-height: 48dvh;
+  }
+  header {
+    padding: 3px 10px;
+  }
+  h1 {
+    font-size: 14px;
+  }
+}
+#inspect-text {
+  word-break: keep-all;
+}
 /* Keep Korean spectator controls on one line at iPhone portrait widths. */
-nav button { font-size: 12px; padding-inline: 4px; white-space: nowrap; }
+nav button {
+  font-size: 12px;
+  padding-inline: 4px;
+  white-space: nowrap;
+}
+.prototype-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #17232b;
+  padding: 3px 8px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.prototype-controls button {
+  flex: 0 0 auto;
+  min-height: 32px;
+  font-size: 11px;
+  padding: 3px 8px;
+}
+.prototype-controls select {
+  min-height: 32px;
+  background: #223844;
+  color: #e4ddd0;
+  border: 1px solid #637a80;
+}
+.prototype-controls span {
+  color: #a3b3b6;
+}
+
+.prototype-controls {
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.prototype-controls span {
+  font-size: 10px;
+}

@@ -1,0 +1,42 @@
+{
+  "prototypeUnitId": 1,
+  "faction": "USMC",
+  "role": "rifleman",
+  "nativeStandingHeight": 56,
+  "nativeHeadHeight": 8,
+  "headRatio": 7,
+  "footAnchor": [
+    32,
+    64
+  ],
+  "hipAnchor": [
+    32,
+    34
+  ],
+  "shoulders": [
+    [
+      25,
+      20
+    ],
+    [
+      38,
+      20
+    ]
+  ],
+  "weaponGrip": [
+    12,
+    6
+  ],
+  "weaponMuzzle": [
+    36,
+    6
+  ],
+  "sizes": [
+    1,
+    1.3,
+    1.5
+  ],
+  "baseDisplayHeight": 30,
+  "license": "Original project artwork; no external assets",
+  "scope": "visual prototype; original desert digital camouflage inspired by period equipment, not a reproduction of issued MARPAT fabric"
+}

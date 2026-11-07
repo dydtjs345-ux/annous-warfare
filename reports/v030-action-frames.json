@@ -1,0 +1,2528 @@
+{
+  "fixture": "real autonomous Battle and production sprite adapter; initial positions/ammo controlled; no fabricated actions",
+  "runs": [
+    {
+      "mode": "reload",
+      "errors": [],
+      "samples": [
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 0.6255346364968947,
+            "foreshorten": 0.7021151420427131,
+            "body": 1,
+            "legs": 1,
+            "phase": 0,
+            "lowering": 0.30218747421746067,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 149.2075075123327,
+              "y": 165.54359797592673
+            },
+            "grip": {
+              "x": 140.97688431100084,
+              "y": 157.1784707307631
+            },
+            "gunAngle": 0.7935027139776069,
+            "flash": false
+          },
+          "time": 0.05,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -26.978125257825393,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -26.978125257825393,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "reloadStart",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6629829603095136,
+            "foreshorten": 0.7817495917893985,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 0.9956332838262177,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 127.14065763768556,
+              "y": 169.91384716061665
+            },
+            "grip": {
+              "x": 138.76126110872647,
+              "y": 163.93956737444847
+            },
+            "gunAngle": 2.6667200963232767,
+            "flash": false
+          },
+          "time": 0.25,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.043667161737822,
+              "reload": 0.06591599999999977,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.043667161737822,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "reloadStart",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6778628822616115,
+            "foreshorten": 0.7905207002760783,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 0.9999757521838426,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 126.93617432102307,
+              "y": 169.89100728244622
+            },
+            "grip": {
+              "x": 138.7541945244355,
+              "y": 163.98190644093532
+            },
+            "gunAngle": 2.6779389021370736,
+            "flash": false
+          },
+          "time": 0.44999999999999996,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000242478161574,
+              "reload": 0.14914420512820448,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000242478161574,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "reloadStart",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6779427871364883,
+            "foreshorten": 0.7905680765385519,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 0.999999333738766,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 126.9354071699922,
+              "y": 169.8914847862113
+            },
+            "grip": {
+              "x": 138.7541889086471,
+              "y": 163.98213636109583
+            },
+            "gunAngle": 2.677947917593931,
+            "flash": false
+          },
+          "time": 0.6,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.00000666261234,
+              "reload": 0.20674676923076826,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.00000666261234,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "reloadStart",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6779449823917485,
+            "foreshorten": 0.7905693781636699,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 0.9999999816431678,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 126.9354046182007,
+              "y": 169.89153142266292
+            },
+            "grip": {
+              "x": 138.75419052087432,
+              "y": 163.98214267816374
+            },
+            "gunAngle": 2.677945329345019,
+            "flash": false
+          },
+          "time": 0.7500000000000001,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.00000018356832,
+              "reload": 0.2643057435897424,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.00000018356832,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "reloadStart",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.67794504287971,
+            "foreshorten": 0.790569414028618,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 0.9999999994955256,
+            "prone": false,
+            "pose": "reloading",
+            "visible": true,
+            "muzzle": {
+              "x": 126.93540580033182,
+              "y": 169.8915349737069
+            },
+            "grip": {
+              "x": 138.75419068472758,
+              "y": 163.98214285222423
+            },
+            "gunAngle": 2.67794506629783,
+            "flash": false
+          },
+          "time": 0.9000000000000002,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000005044743,
+              "reload": 0.32190574358974244,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000005044743,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        }
+      ]
+    },
+    {
+      "mode": "full",
+      "errors": [],
+      "samples": [
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.2314782289988946,
+            "foreshorten": 0.5902524283210958,
+            "body": 3,
+            "legs": 2,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.1,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -22.372691804192772,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6736648364413775,
+            "foreshorten": 0.7880356809413673,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.25,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.03050895881055,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677866407183002,
+            "foreshorten": 0.7905227901712932,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.44999999999999996,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000562288830395,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6779428839799744,
+            "foreshorten": 0.7905681339595801,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.6,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000015450102705,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677944956023357,
+            "foreshorten": 0.7905693625291378,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.7000000000000001,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.0000006333169,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945042155844,
+            "foreshorten": 0.7905694135994183,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": true,
+            "pose": "prone",
+            "visible": true
+          },
+          "time": 0.8500000000000002,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "fullCover",
+              "posture": "full",
+              "top": -9,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000017398968,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        }
+      ]
+    },
+    {
+      "mode": "peek",
+      "errors": [],
+      "samples": [
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945044097166,
+            "foreshorten": 0.7905694147504808,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "aiming",
+            "visible": true,
+            "muzzle": {
+              "x": 126.49595123234599,
+              "y": 169.0185873528648
+            },
+            "grip": {
+              "x": 138.712285320338,
+              "y": 163.98214285714286
+            },
+            "gunAngle": 2.750552495019752,
+            "flash": false
+          },
+          "time": 0.9500000000000003,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "aiming",
+              "posture": "peek",
+              "top": -12.621758930064665,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.00000000351673,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.6779450445829176,
+            "foreshorten": 0.7905694150384962,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "aiming",
+            "visible": true,
+            "muzzle": {
+              "x": 126.9178924085134,
+              "y": 169.8597415355362
+            },
+            "grip": {
+              "x": 138.75252064986066,
+              "y": 163.98214285714286
+            },
+            "gunAngle": 2.6806333406117,
+            "flash": false
+          },
+          "time": 1.1000000000000003,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "aiming",
+              "posture": "peek",
+              "top": -19.908949841062352,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000000043396,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945044588987,
+            "foreshorten": 0.7905694150420947,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "firing",
+            "visible": true,
+            "muzzle": {
+              "x": 128.09816127528916,
+              "y": 169.31015756862337
+            },
+            "grip": {
+              "x": 139.91694604655,
+              "y": 163.40076518299293
+            },
+            "gunAngle": 2.677945044588987,
+            "flash": true
+          },
+          "time": 1.3000000000000005,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "firing",
+              "posture": "peek",
+              "top": -20,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000000000536,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "shot",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945044588987,
+            "foreshorten": 0.7905694150420947,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "aiming",
+            "visible": true,
+            "muzzle": {
+              "x": 126.93540592698925,
+              "y": 169.8915352427733
+            },
+            "grip": {
+              "x": 138.7541906982501,
+              "y": 163.98214285714286
+            },
+            "gunAngle": 2.677945044588987,
+            "flash": false
+          },
+          "time": 1.5000000000000007,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "aiming",
+              "posture": "peek",
+              "top": -20,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000000000007,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "shot",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945044588987,
+            "foreshorten": 0.7905694150420947,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "aiming",
+            "visible": true,
+            "muzzle": {
+              "x": 126.93540592698925,
+              "y": 169.8915352427733
+            },
+            "grip": {
+              "x": 138.7541906982501,
+              "y": 163.98214285714286
+            },
+            "gunAngle": 2.677945044588987,
+            "flash": false
+          },
+          "time": 1.7000000000000008,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "aiming",
+              "posture": "peek",
+              "top": -20,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000000000004,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "shot",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        },
+        {
+          "captured": false,
+          "prototype": {
+            "eligible": true,
+            "scale": 0.6964285714285714,
+            "angle": 2.677945044588987,
+            "foreshorten": 0.7905694150420947,
+            "body": 3,
+            "legs": 3,
+            "phase": 0,
+            "lowering": 1,
+            "prone": false,
+            "pose": "aiming",
+            "visible": true,
+            "muzzle": {
+              "x": 126.93540592698925,
+              "y": 169.8915352427733
+            },
+            "grip": {
+              "x": 138.7541906982501,
+              "y": 163.98214285714286
+            },
+            "gunAngle": 2.677945044588987,
+            "flash": false
+          },
+          "time": 1.850000000000001,
+          "poses": [
+            {
+              "id": 0,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 1,
+              "pose": "aiming",
+              "posture": "peek",
+              "top": -20,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 2,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 3,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 4,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 5,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 6,
+              "pose": "reloading",
+              "posture": "sustained",
+              "top": -20.000000000000004,
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 7,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 8,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 9,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 10,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            },
+            {
+              "id": 11,
+              "pose": "dead",
+              "posture": "sustained",
+              "reload": 0,
+              "treatment": 0,
+              "mount": 0
+            }
+          ],
+          "events": [
+            {
+              "type": "shot",
+              "id": 1
+            }
+          ],
+          "stats": {
+            "thrown": 0,
+            "detonated": 0,
+            "effective": 0,
+            "friendlyHits": 0,
+            "detections": 0,
+            "reactions": 0,
+            "safeReactions": 0
+          },
+          "effects": [],
+          "grenades": [],
+          "result": null
+        }
+      ]
+    }
+  ]
+}
