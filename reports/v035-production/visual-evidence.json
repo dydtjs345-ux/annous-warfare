@@ -1,0 +1,5125 @@
+{
+  "method": "Actual production Phaser. Native spectator UI only; no injected targets, poses, events or unit orders.",
+  "captures": [
+    {
+      "action": "walk",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 0,
+        "index": 0,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 0,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 247.9640522875817,
+            "right": 270.05555555555554,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.38805970149254,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 0,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 216.3562091503268,
+            "right": 304.72222222222223,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 251.55223880597015,
+            "bottom": 406
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.125,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.125,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 1,
+        "index": 1,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 1,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 248.8986928104575,
+            "right": 269.6307189542484,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.38805970149254,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 1,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 220.09477124183007,
+            "right": 303.02287581699346,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 251.55223880597015,
+            "bottom": 406
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.25,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.25,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 2,
+        "index": 2,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 2,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 250.0032679738562,
+            "right": 269.46078431372547,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 6,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 2,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.904296875,
+          "bounds": {
+            "left": 224.51307189542484,
+            "right": 302.343137254902,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 6,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 406
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.375,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.375,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 3,
+        "index": 3,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 3,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.890625,
+          "bounds": {
+            "left": 248.55882352941177,
+            "right": 269.37581699346407,
+            "top": 107.69934640522877,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 7,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145.38805970149255
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 3,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.890625,
+          "bounds": {
+            "left": 218.73529411764707,
+            "right": 302.0032679738562,
+            "top": 256.79738562091507,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 7,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 407.55223880597015
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.5,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.5,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 4,
+        "index": 4,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.908203125,
+          "bounds": {
+            "left": 248.04901960784315,
+            "right": 269.46078431372547,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 8,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 144.80597014925374
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 4,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.908203125,
+          "bounds": {
+            "left": 216.69607843137254,
+            "right": 302.343137254902,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 8,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 405.2238805970149
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.625,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.625,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 5,
+        "index": 5,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 5,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.91015625,
+          "bounds": {
+            "left": 249.91830065359477,
+            "right": 269.7156862745098,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 8,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 144.80597014925374
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 5,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.91015625,
+          "bounds": {
+            "left": 224.17320261437908,
+            "right": 303.3627450980392,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 8,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 405.2238805970149
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.75,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.75,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 6,
+        "index": 6,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 6,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.90625,
+          "bounds": {
+            "left": 250.17320261437908,
+            "right": 269.8856209150327,
+            "top": 107.18954248366012,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 10,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145.38805970149255
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 6,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.90625,
+          "bounds": {
+            "left": 225.19281045751634,
+            "right": 304.0424836601307,
+            "top": 254.7581699346405,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 10,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 407.55223880597015
+          }
+        }
+      ]
+    },
+    {
+      "action": "walk",
+      "time": 0.875,
+      "pose": {
+        "direction": "E",
+        "action": "walk",
+        "local": 0.875,
+        "stage": -1,
+        "status": "prototype",
+        "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+        "supported": true,
+        "bank": "eWalk2",
+        "frame": 7,
+        "index": 7,
+        "count": 8
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 7,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4947916666666667,
+          "originY": 0.908203125,
+          "bounds": {
+            "left": 248.38888888888889,
+            "right": 269.8856209150327,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 11,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eWalk2",
+          "action": "walk",
+          "frame": 7,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4947916666666667,
+          "originY": 0.908203125,
+          "bounds": {
+            "left": 218.05555555555554,
+            "right": 304.0424836601307,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "walk",
+          "frame": 11,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "raise",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "raise",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 0,
+        "index": 0,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 0,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.17320261437908,
+            "right": 270.48039215686276,
+            "top": 106,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 12,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 0,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.19281045751634,
+            "right": 306.421568627451,
+            "top": 250,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 12,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "raise",
+      "time": 0.16,
+      "pose": {
+        "direction": "E",
+        "action": "raise",
+        "local": 0.16,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 1,
+        "index": 1,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 1,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.9607843137255,
+            "right": 272.8169934640523,
+            "top": 106,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 13,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 789.276119402985,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 1,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 224.34313725490196,
+            "right": 315.76797385620915,
+            "top": 250,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 13,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 830.6044776119403,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "raise",
+      "time": 0.34,
+      "pose": {
+        "direction": "E",
+        "action": "raise",
+        "local": 0.34,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 2,
+        "index": 2,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 2,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.23856209150327,
+            "right": 273.87908496732024,
+            "top": 106.59477124183007,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 14,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 791.6044776119403,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 2,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.45424836601308,
+            "right": 320.01633986928107,
+            "top": 252.37908496732027,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 14,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 839.9179104477612,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "raise",
+      "time": 0.52,
+      "pose": {
+        "direction": "E",
+        "action": "raise",
+        "local": 0.52,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 3,
+        "index": 3,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 3,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.39453125,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.11111111111111,
+            "right": 273.921568627451,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 15,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 793.7388059701492,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "raise",
+          "frame": 3,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.39453125,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 220.94444444444446,
+            "right": 320.1862745098039,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "raise",
+          "frame": 15,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 848.455223880597,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "fire",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "fire",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 5,
+        "index": 0,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 5,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.36601307189542,
+            "right": 273.921568627451,
+            "top": 107.18954248366012,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 17,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.58208955223881,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 5,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.9640522875817,
+            "right": 320.1862745098039,
+            "top": 254.7581699346405,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 17,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 252.32835820895522,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "fire",
+      "time": 0.06,
+      "pose": {
+        "direction": "E",
+        "action": "fire",
+        "local": 0.06,
+        "stage": -1,
+        "status": "verified",
+        "reason": "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 6,
+        "index": 1,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 6,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.15359477124184,
+            "right": 273.9640522875817,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 18,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.58208955223881,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 6,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.1143790849673,
+            "right": 320.3562091503268,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 18,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 252.32835820895522,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "fire",
+      "time": 0.13,
+      "pose": {
+        "direction": "E",
+        "action": "fire",
+        "local": 0.13,
+        "stage": -1,
+        "status": "verified",
+        "reason": "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 7,
+        "index": 2,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 7,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.15359477124184,
+            "right": 274.04901960784315,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 19,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.58208955223881,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 7,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.1143790849673,
+            "right": 320.69607843137254,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 19,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 252.32835820895522,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "fire",
+      "time": 0.25,
+      "pose": {
+        "direction": "E",
+        "action": "fire",
+        "local": 0.25,
+        "stage": -1,
+        "status": "verified",
+        "reason": "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 4,
+        "index": 3,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 4,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.15359477124184,
+            "right": 273.9640522875817,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 16,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "fire",
+          "frame": 4,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.1143790849673,
+            "right": 320.3562091503268,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "fire",
+          "frame": 16,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "idle",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "idle",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 0,
+        "index": 0,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.17320261437908,
+            "right": 270.3954248366013,
+            "top": 106.08496732026143,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.19281045751634,
+            "right": 306.08169934640523,
+            "top": 250.33986928104574,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "idle",
+      "time": 0.8,
+      "pose": {
+        "direction": "E",
+        "action": "idle",
+        "local": 0.8,
+        "stage": -1,
+        "status": "verified",
+        "reason": "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 1,
+        "index": 1,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 1,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.13071895424838,
+            "right": 270.437908496732,
+            "top": 106.08496732026143,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 1,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.02287581699346,
+            "right": 306.2516339869281,
+            "top": 250.33986928104574,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "idle",
+      "time": 1.6,
+      "pose": {
+        "direction": "E",
+        "action": "idle",
+        "local": 1.6,
+        "stage": -1,
+        "status": "verified",
+        "reason": "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 2,
+        "index": 2,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.30065359477123,
+            "right": 270.6078431372549,
+            "top": 106.08496732026143,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.70261437908496,
+            "right": 306.9313725490196,
+            "top": 250.33986928104574,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "idle",
+      "time": 2.4,
+      "pose": {
+        "direction": "E",
+        "action": "idle",
+        "local": 2.4,
+        "stage": -1,
+        "status": "verified",
+        "reason": "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 3,
+        "index": 3,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 3,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.30065359477123,
+            "right": 270.3529411764706,
+            "top": 106.08496732026143,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.3358208955224,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "idle",
+          "frame": 3,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.70261437908496,
+            "right": 305.9117647058824,
+            "top": 250.33986928104574,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "idle",
+          "frame": 2,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.8432835820895,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "highReady",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "highReady",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 4,
+        "index": 0,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 4,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.7058823529412,
+            "right": 272.6470588235294,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 4,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 223.3235294117647,
+            "right": 315.0882352941177,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "highReady",
+      "time": 0.8,
+      "pose": {
+        "direction": "E",
+        "action": "highReady",
+        "local": 0.8,
+        "stage": -1,
+        "status": "verified",
+        "reason": "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 5,
+        "index": 1,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 5,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.7483660130719,
+            "right": 272.6045751633987,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 5,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 223.49346405228758,
+            "right": 314.91830065359477,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "highReady",
+      "time": 1.6,
+      "pose": {
+        "direction": "E",
+        "action": "highReady",
+        "local": 1.6,
+        "stage": -1,
+        "status": "verified",
+        "reason": "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 6,
+        "index": 2,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 6,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.79084967320262,
+            "right": 272.6470588235294,
+            "top": 106.76470588235294,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 6,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4778645833333333,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 223.66339869281046,
+            "right": 315.0882352941177,
+            "top": 253.05882352941177,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "highReady",
+      "time": 2.4,
+      "pose": {
+        "direction": "E",
+        "action": "highReady",
+        "local": 2.4,
+        "stage": -1,
+        "status": "verified",
+        "reason": "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+        "supported": true,
+        "bank": "eQuiet",
+        "frame": 7,
+        "index": 3,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 7,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.7483660130719,
+            "right": 272.68954248366015,
+            "top": 107.01960784313725,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 787.1417910447761,
+            "top": 106.19402985074626,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eQuiet",
+          "action": "highReady",
+          "frame": 7,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 223.49346405228758,
+            "right": 315.25816993464053,
+            "top": 254.078431372549,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lowReady",
+          "frame": 0,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 822.0671641791045,
+            "top": 250.77611940298507,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "aim",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "aim",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "발을 고정한 견착. 총구 방향 E 전용; 다른 방향으로 그림을 돌리지 않음.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 4,
+        "index": 0,
+        "count": 1
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "aim",
+          "frame": 4,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.15359477124184,
+            "right": 273.9640522875817,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "aim",
+          "frame": 16,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "aim",
+          "frame": 4,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.1143790849673,
+            "right": 320.3562091503268,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "aim",
+          "frame": 16,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "lower",
+      "time": 0,
+      "pose": {
+        "direction": "E",
+        "action": "lower",
+        "local": 0,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 3,
+        "index": 0,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 3,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.39453125,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.11111111111111,
+            "right": 273.921568627451,
+            "top": 107.10457516339869,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 20,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 793.7388059701492,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 3,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.39453125,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 220.94444444444446,
+            "right": 320.1862745098039,
+            "top": 254.41830065359477,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 20,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 848.455223880597,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "lower",
+      "time": 0.19,
+      "pose": {
+        "direction": "E",
+        "action": "lower",
+        "local": 0.19,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 2,
+        "index": 1,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 2,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.23856209150327,
+            "right": 273.87908496732024,
+            "top": 106.59477124183007,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 21,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 792.5746268656717,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 2,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.3932291666666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 221.45424836601308,
+            "right": 320.01633986928107,
+            "top": 252.37908496732027,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 21,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 843.7985074626865,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "lower",
+      "time": 0.37,
+      "pose": {
+        "direction": "E",
+        "action": "lower",
+        "local": 0.37,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 1,
+        "index": 2,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 1,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 249.9607843137255,
+            "right": 272.8169934640523,
+            "top": 106,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 22,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.4104477611941,
+            "right": 790.2462686567164,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 1,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4752604166666667,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 224.34313725490196,
+            "right": 315.76797385620915,
+            "top": 250,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 22,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.1417910447761,
+            "right": 834.4850746268656,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    },
+    {
+      "action": "lower",
+      "time": 0.55,
+      "pose": {
+        "direction": "E",
+        "action": "lower",
+        "local": 0.55,
+        "stage": -1,
+        "status": "verified",
+        "reason": "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+        "supported": true,
+        "bank": "eHandling",
+        "frame": 0,
+        "index": 3,
+        "count": 4
+      },
+      "views": [
+        {
+          "selected": true,
+          "actual": true,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 0,
+          "scale": 0.08496732026143791,
+          "scaleY": 0.08496732026143791,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 145,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 250.17320261437908,
+            "right": 270.48039215686276,
+            "top": 106,
+            "bottom": 145
+          }
+        },
+        {
+          "selected": false,
+          "actual": true,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 23,
+          "scale": 0.19402985074626866,
+          "scaleY": 0.19402985074626866,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 145,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 765.6044776119403,
+            "right": 787.3358208955224,
+            "top": 106.38805970149254,
+            "bottom": 145.19402985074626
+          }
+        },
+        {
+          "selected": true,
+          "actual": false,
+          "visible": true,
+          "bank": "eHandling",
+          "action": "lower",
+          "frame": 0,
+          "scale": 0.33986928104575165,
+          "scaleY": 0.33986928104575165,
+          "rotation": 0,
+          "flipX": false,
+          "x": 258.5,
+          "y": 406,
+          "originX": 0.4765625,
+          "originY": 0.92578125,
+          "bounds": {
+            "left": 225.19281045751634,
+            "right": 306.421568627451,
+            "top": 250,
+            "bottom": 406
+          }
+        },
+        {
+          "selected": false,
+          "actual": false,
+          "visible": true,
+          "bank": "se033",
+          "action": "lower",
+          "frame": 23,
+          "scale": 0.7761194029850746,
+          "scaleY": 0.7761194029850746,
+          "rotation": 0,
+          "flipX": false,
+          "x": 775.5,
+          "y": 406,
+          "originX": 0.515625,
+          "originY": 0.96484375,
+          "bounds": {
+            "left": 735.9179104477612,
+            "right": 822.8432835820895,
+            "top": 251.55223880597015,
+            "bottom": 406.7761194029851
+          }
+        }
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "action": "idle",
+      "snapshot": {
+        "direction": "E",
+        "action": "idle",
+        "time": 3.3137566666666642,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "idle",
+          "local": 3.3137566666666642,
+          "stage": -1,
+          "status": "verified",
+          "reason": "새 전신 호흡 4셀. 39px/4× 연속·셀별 검토 완료; 양발 접지, 미세 어깨 호흡.",
+          "supported": true,
+          "bank": "eQuiet",
+          "frame": 0,
+          "index": 0,
+          "count": 4
+        },
+        "total": 3.2,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "idle",
+          "local": 3.3137566666666642,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 낮은 준비 4셀. 정밀 호흡 연기는 검증되지 않음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 1,
+          "index": 1,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eQuiet",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 250.17320261437908,
+              "right": 270.3954248366013,
+              "top": 106.08496732026143,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.3358208955224,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eQuiet",
+            "action": "idle",
+            "frame": 0,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 225.19281045751634,
+              "right": 306.08169934640523,
+              "top": 250.33986928104574,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "idle",
+            "frame": 1,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.8432835820895,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "highReady",
+      "snapshot": {
+        "direction": "E",
+        "action": "highReady",
+        "time": 3.3165599999999915,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "highReady",
+          "local": 3.3165599999999915,
+          "stage": -1,
+          "status": "verified",
+          "reason": "높은 준비 4셀. 양손·어깨·총기가 함께 유지됨. 낮은 준비와의 연결 작화는 별도 미완성.",
+          "supported": true,
+          "bank": "eQuiet",
+          "frame": 4,
+          "index": 0,
+          "count": 4
+        },
+        "total": 3.2,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "lowReady",
+          "local": 3.3165599999999915,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "선택 동작의 SE 아트 없음; 낮은 준비 기준 그림만 표시",
+          "supported": true,
+          "bank": "se033",
+          "frame": 0,
+          "index": 0,
+          "count": 1,
+          "clip": {
+            "frames": [
+              0
+            ],
+            "durations": [
+              1
+            ],
+            "loop": true,
+            "status": "prototype",
+            "note": "대기와 같은 기존 그림. 별도 편안한 대기 자세는 미작화."
+          }
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eQuiet",
+            "action": "highReady",
+            "frame": 4,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4752604166666667,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 249.7058823529412,
+              "right": 272.6470588235294,
+              "top": 107.01960784313725,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eQuiet",
+            "action": "highReady",
+            "frame": 4,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4752604166666667,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 223.3235294117647,
+              "right": 315.0882352941177,
+              "top": 254.078431372549,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lowReady",
+            "frame": 0,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "raise",
+      "snapshot": {
+        "direction": "E",
+        "action": "raise",
+        "time": 0.69,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "raise",
+          "local": 0.69,
+          "stage": -1,
+          "status": "verified",
+          "reason": "4셀 전신 올림. 셀별 발 기준 등록으로 32px 전체 인물 배치 차이 제거. 양손·개머리판·어깨 연결 검토 완료.",
+          "supported": true,
+          "bank": "eHandling",
+          "frame": 3,
+          "index": 3,
+          "count": 4
+        },
+        "total": 0.69,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "raise",
+          "local": 0.69,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 양손·어깨·총기가 한 그림에 포함됨.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 15,
+          "index": 3,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "raise",
+            "frame": 3,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.39453125,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 249.11111111111111,
+              "right": 273.921568627451,
+              "top": 107.10457516339869,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 15,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 793.7388059701492,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "raise",
+            "frame": 3,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.39453125,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 220.94444444444446,
+              "right": 320.1862745098039,
+              "top": 254.41830065359477,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "raise",
+            "frame": 15,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 848.455223880597,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "aim",
+      "snapshot": {
+        "direction": "E",
+        "action": "aim",
+        "time": 0.8999599999999996,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "aim",
+          "local": 0.8999599999999996,
+          "stage": -1,
+          "status": "verified",
+          "reason": "발을 고정한 견착. 총구 방향 E 전용; 다른 방향으로 그림을 돌리지 않음.",
+          "supported": true,
+          "bank": "eHandling",
+          "frame": 4,
+          "index": 0,
+          "count": 1
+        },
+        "total": 0.8,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "aim",
+          "local": 0.8999599999999996,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 단일 견착 셀. 조준 호흡 반복 작화는 없음.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 16,
+          "index": 0,
+          "count": 1
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "aim",
+            "frame": 4,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 249.15359477124184,
+              "right": 273.9640522875817,
+              "top": 107.10457516339869,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 793.7388059701492,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "aim",
+            "frame": 4,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 221.1143790849673,
+              "right": 320.3562091503268,
+              "top": 254.41830065359477,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "aim",
+            "frame": 16,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 848.455223880597,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "fire",
+      "snapshot": {
+        "direction": "E",
+        "action": "fire",
+        "time": 2.1166000000000027,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "fire",
+          "local": 2.1166000000000027,
+          "stage": -1,
+          "status": "verified",
+          "reason": "전신 반동 3셀과 견착 복귀 1셀. 연구실은 시연 루프; 전투에서는 실제 shot 이벤트에만 반응.",
+          "supported": true,
+          "bank": "eHandling",
+          "frame": 5,
+          "index": 0,
+          "count": 4
+        },
+        "total": 0.7,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "fire",
+          "local": 2.1166000000000027,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 SE 실제 반동 셀. 새 방향 작화와 구분.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 17,
+          "index": 0,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "fire",
+            "frame": 5,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4752604166666667,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 249.36601307189542,
+              "right": 273.921568627451,
+              "top": 107.18954248366012,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "fire",
+            "frame": 17,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.4104477611941,
+              "right": 793.7388059701492,
+              "top": 106.58208955223881,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "fire",
+            "frame": 5,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4752604166666667,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 221.9640522875817,
+              "right": 320.1862745098039,
+              "top": 254.7581699346405,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "fire",
+            "frame": 17,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.1417910447761,
+              "right": 848.455223880597,
+              "top": 252.32835820895522,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "lower",
+      "snapshot": {
+        "direction": "E",
+        "action": "lower",
+        "time": 0.7000000000000001,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "lower",
+          "local": 0.7000000000000001,
+          "stage": -1,
+          "status": "verified",
+          "reason": "4셀 올림 경로의 역재생 내림. 별도 신규 셀로 중복 집계하지 않음.",
+          "supported": true,
+          "bank": "eHandling",
+          "frame": 0,
+          "index": 3,
+          "count": 4
+        },
+        "total": 0.7000000000000001,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "lower",
+          "local": 0.7000000000000001,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 4셀. 정밀 역방향 연결은 작화 검토 필요.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 23,
+          "index": 3,
+          "count": 4
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": true,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "lower",
+            "frame": 0,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 250.17320261437908,
+              "right": 270.48039215686276,
+              "top": 106,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 23,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 787.3358208955224,
+              "top": 106.38805970149254,
+              "bottom": 145.19402985074626
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eHandling",
+            "action": "lower",
+            "frame": 0,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4765625,
+            "originY": 0.92578125,
+            "bounds": {
+              "left": 225.19281045751634,
+              "right": 306.421568627451,
+              "top": 250,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "lower",
+            "frame": 23,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 822.8432835820895,
+              "top": 251.55223880597015,
+              "bottom": 406.7761194029851
+            }
+          }
+        ]
+      }
+    },
+    {
+      "action": "walk",
+      "snapshot": {
+        "direction": "E",
+        "action": "walk",
+        "time": 2.599860000000001,
+        "speed": 1,
+        "playing": true,
+        "pose": {
+          "direction": "E",
+          "action": "walk",
+          "local": 2.599860000000001,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "8셀 보행 시제품: 앞다리 반복·높은 무릎·접지 곡선·시작/정지 연결이 미달. 전투에 사용 안 함. 이전 거부작은 별도 링크에 보존.",
+          "supported": true,
+          "bank": "eWalk2",
+          "frame": 4,
+          "index": 4,
+          "count": 8
+        },
+        "total": 1,
+        "reviewOnly": false,
+        "displayHeight": 39,
+        "magnification": 4,
+        "reference": {
+          "direction": "SE",
+          "action": "walk",
+          "local": 2.599860000000001,
+          "stage": -1,
+          "status": "prototype",
+          "reason": "기존 8셀. 정확한 접지·체중 이동은 시제품 수준.",
+          "supported": true,
+          "bank": "se033",
+          "frame": 8,
+          "index": 4,
+          "count": 8
+        },
+        "completion": [
+          {
+            "action": "idle",
+            "label": "대기 / 호흡",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lowReady",
+            "label": "낮은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "highReady",
+            "label": "높은 준비",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "missing",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "raise",
+            "label": "총기 올림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "aim",
+            "label": "견착 조준",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "lower",
+            "label": "총기 내림",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "walk",
+            "label": "기본 보행",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "prototype",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          },
+          {
+            "action": "fire",
+            "label": "사격 / 반동",
+            "directions": {
+              "N": "missing",
+              "NE": "missing",
+              "E": "verified",
+              "SE": "prototype",
+              "S": "missing",
+              "SW": "missing",
+              "W": "missing",
+              "NW": "missing"
+            }
+          }
+        ],
+        "probe": {
+          "supported": true,
+          "kind": "whole-body",
+          "bank": "se033",
+          "frame": 0,
+          "status": "prototype",
+          "request": {
+            "locomotion": "idle",
+            "weapon": "lowReady",
+            "movementDirection": "SE",
+            "aimDirection": "SE"
+          },
+          "rotation": 0,
+          "flipX": false,
+          "weaponIntegrated": true,
+          "layers": []
+        },
+        "independentWeaponObjects": 0,
+        "liveCombatAdmission": false,
+        "liveApprovedClip": false,
+        "stacked": false,
+        "canvas": {
+          "width": 1034,
+          "height": 438
+        },
+        "views": [
+          {
+            "selected": true,
+            "actual": true,
+            "visible": true,
+            "bank": "eWalk2",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.08496732026143791,
+            "scaleY": 0.08496732026143791,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 145,
+            "originX": 0.4947916666666667,
+            "originY": 0.908203125,
+            "bounds": {
+              "left": 248.04901960784315,
+              "right": 269.46078431372547,
+              "top": 107.01960784313725,
+              "bottom": 145
+            }
+          },
+          {
+            "selected": false,
+            "actual": true,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 8,
+            "scale": 0.19402985074626866,
+            "scaleY": 0.19402985074626866,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 145,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 765.6044776119403,
+              "right": 787.1417910447761,
+              "top": 106.19402985074626,
+              "bottom": 144.80597014925374
+            }
+          },
+          {
+            "selected": true,
+            "actual": false,
+            "visible": true,
+            "bank": "eWalk2",
+            "action": "walk",
+            "frame": 4,
+            "scale": 0.33986928104575165,
+            "scaleY": 0.33986928104575165,
+            "rotation": 0,
+            "flipX": false,
+            "x": 258.5,
+            "y": 406,
+            "originX": 0.4947916666666667,
+            "originY": 0.908203125,
+            "bounds": {
+              "left": 216.69607843137254,
+              "right": 302.343137254902,
+              "top": 254.078431372549,
+              "bottom": 406
+            }
+          },
+          {
+            "selected": false,
+            "actual": false,
+            "visible": true,
+            "bank": "se033",
+            "action": "walk",
+            "frame": 8,
+            "scale": 0.7761194029850746,
+            "scaleY": 0.7761194029850746,
+            "rotation": 0,
+            "flipX": false,
+            "x": 775.5,
+            "y": 406,
+            "originX": 0.515625,
+            "originY": 0.96484375,
+            "bounds": {
+              "left": 735.9179104477612,
+              "right": 822.0671641791045,
+              "top": 250.77611940298507,
+              "bottom": 405.2238805970149
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "live": {
+    "seed": 9,
+    "variant": 1,
+    "spawn": 2,
+    "start": 50.44999999999927,
+    "end": 59.04999999999878,
+    "videoFrames": 259,
+    "samples": 244,
+    "actualEShotIds": [
+      187,
+      195
+    ],
+    "states": [
+      "raising",
+      "firing",
+      "aiming"
+    ],
+    "comparison": {
+      "art": "v035",
+      "active": {
+        "requested": "v035",
+        "renderer": "v035-e",
+        "animation": "firing",
+        "frame": 5,
+        "frameCount": 8,
+        "reason": "실제 shot 이벤트",
+        "label": "v0.3.5 E Animated"
+      },
+      "live": {
+        "animation": "firing",
+        "frame": 17,
+        "reason": "shot",
+        "supported": false,
+        "fallback": "facing",
+        "amount": 1,
+        "lookAngle": 0.0042141545277615666,
+        "moveAngle": -2.6779111340627013,
+        "aimAngle": 0.0042141545277615666,
+        "moving": false,
+        "targetId": 10,
+        "shotId": 187,
+        "shotAt": 52.299999999999166,
+        "flash": true,
+        "time": 52.34999999999916,
+        "visible": false,
+        "muzzle": null,
+        "grip": null
+      },
+      "east": {
+        "animation": "firing",
+        "frame": 5,
+        "reason": "shot",
+        "supported": true,
+        "fallback": null,
+        "amount": 1,
+        "lookAngle": 0.0042141545277615666,
+        "moveAngle": -2.6779111340627013,
+        "aimAngle": 0.0042141545277615666,
+        "moving": false,
+        "targetId": 10,
+        "shotId": 187,
+        "shotAt": 52.299999999999166,
+        "flash": true,
+        "time": 52.34999999999916,
+        "action": "fire",
+        "direction": "E",
+        "bank": "eHandling",
+        "frameCount": 8,
+        "renderer": "v035-e",
+        "visible": true,
+        "scale": 0.08496732026143791,
+        "muzzle": {
+          "x": 1233.6366013071895,
+          "y": 522.2022875816994
+        },
+        "grip": {
+          "x": 1225.5647058823529,
+          "y": 524.5813725490195
+        },
+        "gunAngle": -0.035
+      },
+      "enabled": true,
+      "scale": 1.3,
+      "state": {
+        "animation": "firing",
+        "frame": 5,
+        "reason": "shot",
+        "supported": true,
+        "fallback": null,
+        "amount": 1,
+        "lookAngle": 0.0042141545277615666,
+        "moveAngle": -2.6779111340627013,
+        "aimAngle": 0.0042141545277615666,
+        "moving": false,
+        "targetId": 10,
+        "shotId": 187,
+        "shotAt": 52.299999999999166,
+        "flash": true,
+        "time": 52.34999999999916,
+        "action": "fire",
+        "direction": "E",
+        "bank": "eHandling",
+        "frameCount": 8,
+        "renderer": "v035-e",
+        "visible": true,
+        "scale": 0.08496732026143791,
+        "muzzle": {
+          "x": 1233.6366013071895,
+          "y": 522.2022875816994
+        },
+        "grip": {
+          "x": 1225.5647058823529,
+          "y": 524.5813725490195
+        },
+        "gunAngle": -0.035
+      }
+    },
+    "comparisonTime": 52.34999999999916
+  },
+  "errors": [],
+  "failed": []
+}

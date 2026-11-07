@@ -5,12 +5,13 @@
     "running battle resumes; unchanged 1x/2x/4x live controls",
     "three extra open/close cycles remove lab iframes",
     "all eight E actions, accurate COMPLETE/PROTOTYPE distinction, stepping and no rotated or mirrored substitutes",
-    "mobile directions, missing-art display, stepping, scales, pairing refusal and both orientations"
+    "mobile directions, missing-art display, stepping, scales, pairing refusal and both orientations",
+    "actual E shot, 30/39/45px E upper-body touch selection, Korean renderer diagnostic, paused stability and clean restart"
   ],
   "frameStats": {
     "samples": 300,
     "p50": 16.699999999999818,
-    "p95": 16.799999999999272,
+    "p95": 16.700000000000728,
     "max": 16.80000000000109
   },
   "errors": [],

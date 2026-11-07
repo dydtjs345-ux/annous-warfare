@@ -1,0 +1,96 @@
+{
+  "baseline": "819867f063914302c483446cbcab23dc0356c513",
+  "unchangedExistingModules": [
+    "src/animation-preview-dialog.js",
+    "src/battle-wear.js",
+    "src/combat-atmosphere.js",
+    "src/combat-visuals.js",
+    "src/coordination.js",
+    "src/cover-art.js",
+    "src/crossings.js",
+    "src/diagnostics.js",
+    "src/environment-cache.js",
+    "src/expanded-world.js",
+    "src/fire-movement.js",
+    "src/grenade-visuals.js",
+    "src/grenades.js",
+    "src/inspection.js",
+    "src/intelligence.js",
+    "src/korean-inspector.js",
+    "src/medical.js",
+    "src/motion-presentation.js",
+    "src/mounting.js",
+    "src/postures.js",
+    "src/presentation-state.js",
+    "src/readability.js",
+    "src/rifleman/lab-layout.js",
+    "src/rifleman/review.js",
+    "src/rifleman/rig.js",
+    "src/search-path.js",
+    "src/search.js",
+    "src/security.js",
+    "src/simulation.js",
+    "src/soldier-prototype.js",
+    "src/street-art.js",
+    "src/suppressive-fire.js",
+    "src/tactics.js",
+    "src/urban-detail.js",
+    "src/urban-visuals.js",
+    "src/usmc-proportion-view.js",
+    "src/usmc-se-animation.js",
+    "src/usmc-se-preview.js",
+    "src/view.js",
+    "src/world.js"
+  ],
+  "unchangedExistingModuleCount": 40,
+  "unchangedExistingArt": [
+    {
+      "path": "public/assets/usmc-se-v033/README.md",
+      "sha256": "62c8157ffebdc24ca36553b9b03545970ee7d361cf1ebf9e7d542a0ba6143be4"
+    },
+    {
+      "path": "public/assets/usmc-se-v033/metadata.json",
+      "sha256": "07ca53f8b59872fbb006fc81082960de7496fa4f0cc75313e5655b0bfd9d28ff"
+    },
+    {
+      "path": "public/assets/usmc-se-v033/source-atlas.png",
+      "sha256": "8ae5e0d68d662257347fb872f44e2547560e1652aa6f0010fc5bb816ea3c609c"
+    },
+    {
+      "path": "public/assets/rifleman-foundation-v035/README.md",
+      "sha256": "3d04d193fe43eaf43d7cbc7bacc790627d2535755ec5ea980424c09468c391e4"
+    },
+    {
+      "path": "public/assets/rifleman-foundation-v035/e-static-prototype.json",
+      "sha256": "e5a0aec82a450d529d2f4b177af7c1d68adc352d2b0f1095a98903832ecf249f"
+    },
+    {
+      "path": "public/assets/rifleman-foundation-v035/e-static-prototype.png",
+      "sha256": "c01320a67cb5b0691914a75a832ad1f48e43dad7fe2b9e07c9c4e3d132bfee26"
+    },
+    {
+      "path": "public/assets/rifleman-foundation-v035/review/e-walk-keys.json",
+      "sha256": "8d8d228e00a6dd8e37ded8ddb03d569d67245122025df7c1cc39ca0f1443118a"
+    },
+    {
+      "path": "public/assets/rifleman-foundation-v035/review/e-walk-keys.png",
+      "sha256": "5992467187b17329dfd93a9436c559b33c8027e10237f452e4e9bacf9f0db6d0"
+    }
+  ],
+  "tests": {
+    "tests": 303,
+    "pass": 303,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "changedExistingModulesArePresentationOnly": [
+    "src/live-usmc-inspection.js",
+    "src/live-usmc-renderer.js",
+    "src/live-usmc-state.js",
+    "src/main.js",
+    "src/rifleman/catalog.js",
+    "src/rifleman/clock.js",
+    "src/rifleman/lab.js"
+  ]
+}

@@ -229,7 +229,6 @@ After review/merge and successful Pages deployment, open https://dydtjs345-ux.gi
 
 Known limits: these are procedural placeholder poses, not a full anatomical sprite set. Range, damage, healing, suppression and AI remain the same. Some cues are subtle at overview zoom. Desktop Chromium mobile emulation and bounded-memory tests do not prove physical iPhone Safari frame rate, battery use or behavior after OS suspension; those require device testing.
 
-
 ## v0.2.3: cover intelligence and supported LMG fire
 
 This version retains the existing squad coordinator, contact snapshots, navigation,
@@ -334,7 +333,6 @@ branch push does not deploy production Pages.
 Host Chromium checks do not establish physical Safari performance, battery use,
 thermal behavior or touch reliability. Those remain device-verification steps.
 
-
 ## v0.2.3.1 stability audit and rough humanoids
 
 Based on merged v0.2.3 (`27166d9`). Completed 200 recorded baseline cases, 200 paired
@@ -362,7 +360,6 @@ medical/mount animation synchronization, late injured survivors, touch/scrolling
 both orientations and all speeds. Detailed steps and reproduction commands are in
 the audit report. Feature branches do not deploy production Pages automatically.
 
-
 ## v0.2.4 cover and medic stabilization
 
 Based on merged v0.2.3.1 (`6f152cb`). Completed 300 recorded baseline and 300 final
@@ -389,7 +386,6 @@ Pages URL deploys after review/merge and successful Actions completion. Physical
 checks should cover medical holds/return to assignments, urgent cover moves, unsafe
 rescue refusal, late-game waits, all speeds, gestures and both screen orientations.
 
-
 ### v0.2.4 navigation and duration follow-up
 
 Continues the existing v0.2.4 branch; [three-way audit](reports/v024-followup-audit.md)
@@ -407,7 +403,6 @@ and a rejected intermediate timeout are documented. No forced aggression, artifi
 match cap, new balance rule or graphical change was added. Build and mobile Chromium
 checks pass; physical Safari checks remain necessary.
 
-
 ## v0.2.5 urban cover and fragmentation grenades
 
 The live battlefield now has long horizontal sandbag and concrete lines, short vertical/stepped lines, abandoned vehicles and crate stacks. All are functional terrain. Low barricades block movement, protect directionally and support LMG mounting while permitting firing over them; vehicles/crates block sight and bullets. Existing cover reservations, collision spacing, leadership and treatment remain.
@@ -422,13 +417,11 @@ Inspector shows actual frag inventory/preparation/evasion; seven exclusive activ
 
 Physical iPhone Safari testing remains necessary: both orientations, inspector scrolling, pan/pinch, firing over low lines, routes around high obstacles, LMG mounting, actual grenade release/fuse/evasion, medic care, pause/resume/restart and 1×/2×/4×. Grenades are conditional and may not appear in every ordinary match. Prototype limits include coarse radial fragmentation, no wall lobs/bounces/destruction, conservative friendly safety, casualty congestion and existing unlimited medicine; long fights or ammunition stalemates remain possible outside the recorded cases.
 
-
 ### v0.2.5 focused navigation follow-up
 
 [Paired 200-case regression investigation](reports/v025-followup-audit.md) continues the existing v0.2.5 branch. A medic's selected patient no longer blocks the endpoint of every urban congestion replan; actual collision, sight, treatment reach and healing remain unchanged. All 200 legacy hashes are preserved. Broader cover-policy experiments were rejected after adverse full-cohort results, so map geometry, cover scoring/timers and LMG mounting retain their previous behavior.
 
 Navigation failures improve 1.685→0.750/match and both paired urban cohorts have zero timeouts. P95 worsens 103.1→119.9s, exposure share is nearly unchanged but slightly worse (45.042710→45.142391%), and medical/cycle results remain mixed. This is a confirmed routing fix, not complete tactical-stability clearance. Raw data, rejected trials, 31 paired diagnostic cases and remaining adverse seeds are retained. `npm test` now runs 154 tests; build and mobile Chromium checks pass. Physical iPhone Safari verification remains required, especially crowded medical approaches and late survivor fights.
-
 
 ## v0.2.6 expanded urban search and destroy
 
@@ -449,7 +442,6 @@ Useful URLs (append to the Pages URL or local development address):
 **Validation:** 178 tests, successful production build, 200 legacy + 200 initial expanded + 200 paired corrected expanded matches, zero audit timeouts, and all 200 legacy hashes preserved. Complete-match render parity and mobile Chromium checks also pass. Results are mixed: useful cover and mounted LMG fire increase, but expanded P95 duration rises **177.3→193.8s**, maximum **273.9→349.1s**, passive share and some medic metrics worsen. This is not a claim of universal tactical improvement. Exact configurations, paired data, extreme-case diagnoses and reproduction commands are in [the audit](reports/v026-audit.md).
 
 Physical iPhone Safari remains unverified. Test both orientations at 1×/2×/4×; cycle USMC/RU/Map, select soldiers at distant edges, drag/pinch then return to focus, and scroll the inspector. Observe a full separated start, contact, expired contact and renewed search, including injured survivors and medic care. Check pause/resume, restart, background/foreground, frame responsiveness and battery/thermal behavior. Long legitimate searches and ammunition-exhaustion stalemates remain possible; no timer reveals enemies or awards a forced victory.
-
 
 ## v0.2.7 tactical infantry AI
 
@@ -519,3 +511,13 @@ Open **SE 동작 보기** to compare **v0.3.2 (left)** and **v0.3.3 (right)** at
 The resumed correction from `a920240` further reduces the head and helmet together, slims the equipped torso and raises the waist for longer apparent legs across all 24 SE cels. [Current before/after screenshots, playback and validation](reports/v033-correction/README.md). The [first-pass report](reports/v033-usmc-proportions.md) and its evidence are preserved.
 
 This is an anatomical redraw, not a whole-sprite vertical stretch. The requested percentages guide the art; exact per-frame anatomical ratios are not certified. At large zoom on narrow screens, magnified figures stack to prevent clipping. Existing cloth/gear variation, bent-knee gait and limited transition cels still need artist review. No other directions or gameplay changes. Physical iPhone Safari remains unverified.
+
+## v0.3.5 — continued E-direction artwork production
+
+Open **8방향 연구실** and select **E**. The new full-body PNGs contain **16 newly approved cels** for breathing, low/high ready, raising, shouldered aim, lowering and recoil. Every cel includes the body, both arms/hands and rifle. The laboratory offers 39px/4× comparison, slow motion, pause, scrub and exact frame stepping. Its shot loop is a labeled demonstration; actual combat recoil requires a real shot event.
+
+**E walking is still PROTOTYPE**, with eight new review cels. Repeated lead-leg identity, high passing knees, stance-foot travel and idle/walk transitions need further artwork; it is excluded from combat. The old four-key rejected gait remains available under **미채택 E 보행 4키 후보 검토**. The six other missing directions have not been filled by rotating or mirroring SE. A complete eight-direction soldier is not delivered yet.
+
+For actual battle comparison, choose **그림 → v0.3.5 E + SE Animated**. Only rifleman #1 uses approved E standing/weapon-handling clips in the narrow authored E sector. SE animation remains available, and moving, injured, cover, medical, grenade and other unsupported states retain stable fallback. The default **v0.3.3 Animated** option is preserved. Size controls remain 30/39/45px without changing collision or gameplay.
+
+[Production continuation audit, complete status matrix, before/after walking, real battle footage and validation](reports/v035-production-audit.md). Physical iPhone Safari is unverified. Feature-branch pushes do not deploy production Pages or merge into main.

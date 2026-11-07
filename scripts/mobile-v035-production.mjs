@@ -219,6 +219,54 @@ try {
         requestAnimationFrame(tick);
       }),
   );
+  // The additional standing art must also be selectable in a real mobile battle.
+  await p.goto(root + "?seed=9&debug=1");
+  await p.waitForFunction(() => window.awSnapshot);
+  await p.locator("#prototype-art").selectOption("v035");
+  await p.locator('[data-speed="4"]').tap();
+  const found = await p.evaluate(
+    () =>
+      new Promise((resolve) => {
+        function tick() {
+          const s = awSnapshot();
+          if (s.prototype.east?.visible && s.prototype.east.flash) {
+            document.querySelector("#pause").click();
+            resolve(true);
+          } else if (s.time > 150) resolve(false);
+          else requestAnimationFrame(tick);
+        }
+        tick();
+      }),
+  );
+  assert.equal(found, true, "actual E shot visible on mobile");
+  const frozen = (await p.evaluate(() => awSnapshot())).time;
+  for (const size of [1, 1.3, 1.5]) {
+    await p.locator("#prototype-scale").selectOption(String(size));
+    await p.waitForTimeout(150);
+    let s = await p.evaluate(() => awSnapshot());
+    assert.equal(s.prototype.active.renderer, "v035-e");
+    assert.equal(s.prototype.east.scale, (30 * size) / 459);
+    const box = await p.locator("canvas").boundingBox(),
+      u = s.units[1];
+    await p.touchscreen.tap(
+      box.x + u.screenX,
+      box.y + u.screenY - 25 * size * s.view.zoom,
+    );
+    await p.waitForTimeout(150);
+    s = await p.evaluate(() => awSnapshot());
+    assert.equal(s.selected, 1, "E upper-body pixel bounds can be tapped");
+    assert.equal(s.time, frozen);
+  }
+  await p.locator("#prototype-scale").selectOption("1.3");
+  await p.screenshot({ path: `${out}/mobile-live-E.png` });
+  await p.locator("#restart").tap();
+  await p.waitForTimeout(150);
+  const restarted = await p.evaluate(() => awSnapshot());
+  assert.equal(restarted.selected, null);
+  assert.equal(restarted.prototype.east.shotId, null);
+  checks.push(
+    "actual E shot, 30/39/45px E upper-body touch selection, Korean renderer diagnostic, paused stability and clean restart",
+  );
   assert.deepEqual(errors, []);
   assert.deepEqual(failed, []);
   writeFileSync(
