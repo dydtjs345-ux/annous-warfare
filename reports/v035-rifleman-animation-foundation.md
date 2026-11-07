@@ -292,7 +292,8 @@ Save the full test log to `/tmp/aw-v035-tests-final.log` and run
 
 Milestones: **`6f7df3c`** asset audit / initial contracts / static E prototype;
 **`8a174b1`** mobile lab, rejection review, verified pairing/turn contracts,
-orientation fix and regression checks. Delivery evidence is committed separately.
+orientation fix and regression checks; **`3f71902`** visual evidence, completion
+matrix and combat-parity results.
 
 Changed areas: `src/rifleman/` (catalog, clocks, rig, layout, lab and rejection
 review), `rifleman-lab.html`, the existing modal helper and main UI binding,
@@ -304,3 +305,7 @@ Review comparison:
 https://github.com/dydtjs345-ux/annous-warfare/compare/main...feat/v035-rifleman-animation-foundation
 
 No merge or main/Pages deployment is performed.
+
+The branch was pushed successfully. A GitHub REST PR-creation request returned
+`Forbidden`, so no PR was created. The comparison URL above and
+[prepared PR description](v035-lab/pull-request.md) are ready for review.
