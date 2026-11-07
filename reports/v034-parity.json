@@ -1,0 +1,288 @@
+{
+  "base": "e68ba18",
+  "dt": 0.05,
+  "matched": 40,
+  "completeExecutions": 80,
+  "runs": [
+    {
+      "map": "legacy",
+      "seed": 2001,
+      "duration": 87.0499999999972,
+      "result": "USMC victory",
+      "digest": "558d6af85f5792e1a3a61b9d1ff2d5f057f1396b6d1d5dc1ba214370e3ecfdee"
+    },
+    {
+      "map": "legacy",
+      "seed": 2002,
+      "duration": 58.59999999999881,
+      "result": "USMC victory",
+      "digest": "3ccff520f7b69004b4e45a37b788a8c14301dfcdcb84b855a6de14a4dddbfe66"
+    },
+    {
+      "map": "legacy",
+      "seed": 2003,
+      "duration": 38.949999999999925,
+      "result": "USMC victory",
+      "digest": "33a192e26a6bb0b64958d951bd87a75b5d02e0a52b6085e3b29b765b19b0cdf6"
+    },
+    {
+      "map": "legacy",
+      "seed": 2004,
+      "duration": 70.84999999999812,
+      "result": "Russian infantry victory",
+      "digest": "e44b8999d259e95a824886757dc7cf988d0c6d40ddcc5e98ff432cc42bb32554"
+    },
+    {
+      "map": "legacy",
+      "seed": 2005,
+      "duration": 59.699999999998745,
+      "result": "USMC victory",
+      "digest": "3f52cc462223538f90b0d83e3cb1141892edf1f902e6b8b14233bf2f5fdfe82b"
+    },
+    {
+      "map": "legacy",
+      "seed": 2006,
+      "duration": 40.549999999999834,
+      "result": "USMC victory",
+      "digest": "db13fd3c5ce9aa3c7764c83dfb42be5b4c5a1e808f47b2df1211d2eb412fc111"
+    },
+    {
+      "map": "legacy",
+      "seed": 2007,
+      "duration": 78.1499999999977,
+      "result": "Russian infantry victory",
+      "digest": "4d16d37e9bf3e4ed695c11888451cd8d714d4ff6d94066af9ed4540f4544267d"
+    },
+    {
+      "map": "legacy",
+      "seed": 2008,
+      "duration": 196.8500000000105,
+      "result": "Russian infantry victory",
+      "digest": "01e4d2f5a1297563c0504034aa87bb8c7ce00ea83643b3b2d7cd3599863d51dc"
+    },
+    {
+      "map": "legacy",
+      "seed": 2009,
+      "duration": 53.4499999999991,
+      "result": "USMC victory",
+      "digest": "0a7f3b71e7b0462c6970db29d47c7fd6260fe6eb3203585e25d54fe692766637"
+    },
+    {
+      "map": "legacy",
+      "seed": 2010,
+      "duration": 78.1999999999977,
+      "result": "Russian infantry victory",
+      "digest": "4cd0bd816732e2f729d2058e7464be1bc507d55942f37c8897e9875264c598ce"
+    },
+    {
+      "map": "legacy",
+      "seed": 2011,
+      "duration": 61.649999999998634,
+      "result": "USMC victory",
+      "digest": "daaf8e406ad05d19602cad6913acfb17ce5a27aa8470a5c3d085f2539e92b941"
+    },
+    {
+      "map": "legacy",
+      "seed": 2012,
+      "duration": 49.849999999999305,
+      "result": "USMC victory",
+      "digest": "b44be2504d707e2c526e8b81d8a24452f2cfa26b9bf8f45c3de768ae39d1d9c2"
+    },
+    {
+      "map": "legacy",
+      "seed": 2013,
+      "duration": 74.44999999999791,
+      "result": "USMC victory",
+      "digest": "897fb29be744d9fd9b1ff6355f68227d59bfaf5279e1a11288b03aaaf8d897d3"
+    },
+    {
+      "map": "legacy",
+      "seed": 2014,
+      "duration": 96.49999999999666,
+      "result": "USMC victory",
+      "digest": "efd310a5831d168d09177bdbc83c78b1401123a8491c62a34e4a13b30001cf5d"
+    },
+    {
+      "map": "legacy",
+      "seed": 2015,
+      "duration": 70.24999999999815,
+      "result": "Russian infantry victory",
+      "digest": "6bdbd26c6fbe9d6d33a1146d3f4f7b61ce15c24624f385322fdaa17b4f60db61"
+    },
+    {
+      "map": "legacy",
+      "seed": 2016,
+      "duration": 43.64999999999966,
+      "result": "USMC victory",
+      "digest": "ea4bc466f298fb7403d9946ab773ac16661cc91ea315f0084870a64805cf0c9d"
+    },
+    {
+      "map": "legacy",
+      "seed": 2017,
+      "duration": 68.49999999999825,
+      "result": "USMC victory",
+      "digest": "a962dcf76fc3da5517e4d85e03052e179e43cec53e7c3c97e3a91e77e1d04fcb"
+    },
+    {
+      "map": "legacy",
+      "seed": 2018,
+      "duration": 73.34999999999798,
+      "result": "Russian infantry victory",
+      "digest": "9a677d3f18ff090d3ece903ed7ff9f2aba6b9125d3bb24f8e9dbcee3e9d1560a"
+    },
+    {
+      "map": "legacy",
+      "seed": 2019,
+      "duration": 162.1000000000026,
+      "result": "Russian infantry victory",
+      "digest": "348f7146ed6086f4b73283f32e8b16dfd509398440c3ffc497c4705434790b01"
+    },
+    {
+      "map": "legacy",
+      "seed": 2020,
+      "duration": 81.14999999999753,
+      "result": "Russian infantry victory",
+      "digest": "6e41cb40fdb0bbcf63180cbcdd18564e0f90a44145b22580a6bdfefbf5282378"
+    },
+    {
+      "map": "expanded",
+      "seed": 2001,
+      "duration": 100.59999999999643,
+      "result": "USMC victory",
+      "digest": "e9c96c980395cc13e5975a39e2a5c443187506b2db766929ef5526786c1ff208"
+    },
+    {
+      "map": "expanded",
+      "seed": 2002,
+      "duration": 159.95000000000212,
+      "result": "USMC victory",
+      "digest": "b27e5e636f7f40ec9db340cc54aa7bd0adab5ea19d6389a44421d242a16854d3"
+    },
+    {
+      "map": "expanded",
+      "seed": 2003,
+      "duration": 69.84999999999818,
+      "result": "Russian infantry victory",
+      "digest": "19715ec9671809c612fc45a20d89bfef1f7821977f631024433afc8970049b53"
+    },
+    {
+      "map": "expanded",
+      "seed": 2004,
+      "duration": 91.99999999999692,
+      "result": "USMC victory",
+      "digest": "56ee09df6be4e4b833e197aadb0e932e5b77ee68a5d3b064d0841e96b7ff079a"
+    },
+    {
+      "map": "expanded",
+      "seed": 2005,
+      "duration": 86.04999999999725,
+      "result": "Russian infantry victory",
+      "digest": "233a92cc24245766a91262efc48db80f2679e67954b689eb28c026688dec336e"
+    },
+    {
+      "map": "expanded",
+      "seed": 2006,
+      "duration": 186.40000000000813,
+      "result": "USMC victory",
+      "digest": "264513c4f70dbe4468a96ce8c29cddd1b250eae5a1186be5b519e1cf50639963"
+    },
+    {
+      "map": "expanded",
+      "seed": 2007,
+      "duration": 66.64999999999836,
+      "result": "USMC victory",
+      "digest": "9b54f059a3fcc001253c662ac121f00fc07ded97874817a8043a9aab73e6d59b"
+    },
+    {
+      "map": "expanded",
+      "seed": 2008,
+      "duration": 67.29999999999832,
+      "result": "USMC victory",
+      "digest": "84ee3b9257abe38d89076ead5778d3ddef0da4bcdfab24fc21317a7fe7461e14"
+    },
+    {
+      "map": "expanded",
+      "seed": 2009,
+      "duration": 120.29999999999531,
+      "result": "Russian infantry victory",
+      "digest": "0a201085e03e472a557d2c0e9e2934d5f4d6e24505dfbb0c121e5521664dc048"
+    },
+    {
+      "map": "expanded",
+      "seed": 2010,
+      "duration": 61.49999999999864,
+      "result": "Russian infantry victory",
+      "digest": "44286bcd0739df53bc5525a9aa2389c6d1404243da4a42ca2e52f7a6611d412c"
+    },
+    {
+      "map": "expanded",
+      "seed": 2011,
+      "duration": 90.29999999999701,
+      "result": "Russian infantry victory",
+      "digest": "1485fa4c1c0dc1934e963c7b09f107bb7a93e032db0cfe9687099a5c25b9d3ba"
+    },
+    {
+      "map": "expanded",
+      "seed": 2012,
+      "duration": 92.59999999999688,
+      "result": "USMC victory",
+      "digest": "24a8a937b24d3f6e50a77359a08d3c114c4d5f126c3f48854773bb9bec30c137"
+    },
+    {
+      "map": "expanded",
+      "seed": 2013,
+      "duration": 70.64999999999813,
+      "result": "USMC victory",
+      "digest": "ae043ff210cb40c1e6aef12d95f1d332fca81e239fe28afa6c6d9a43038c32c8"
+    },
+    {
+      "map": "expanded",
+      "seed": 2014,
+      "duration": 138.49999999999724,
+      "result": "USMC victory",
+      "digest": "008e38f204aa435f3a80774be961f561fc4128abb98fc9fc114aa319d11d0473"
+    },
+    {
+      "map": "expanded",
+      "seed": 2015,
+      "duration": 98.74999999999653,
+      "result": "USMC victory",
+      "digest": "27c2d13458d05a614e2ef6dd7b95e62c66e054176d230256b22ab427d6686571"
+    },
+    {
+      "map": "expanded",
+      "seed": 2016,
+      "duration": 127.14999999999492,
+      "result": "USMC victory",
+      "digest": "f514d7b673c2e00a86fbf3f959db35b03cb6725f24a91652649e32501a9ee00c"
+    },
+    {
+      "map": "expanded",
+      "seed": 2017,
+      "duration": 79.39999999999763,
+      "result": "USMC victory",
+      "digest": "b25452f4fcbcf02761dbf2d4d6fe529b5c8e677a737f2ede180e14c9f7c313e0"
+    },
+    {
+      "map": "expanded",
+      "seed": 2018,
+      "duration": 152.30000000000038,
+      "result": "USMC victory",
+      "digest": "6c14744a3eaf442d4c5e61c48c550bb67fe442b7f35316abdf82227de106d468"
+    },
+    {
+      "map": "expanded",
+      "seed": 2019,
+      "duration": 103.49999999999626,
+      "result": "Russian infantry victory",
+      "digest": "bb6397758bef33dde106bee8bb827a520c48567ac5f007fcf20bb01df2e33c01"
+    },
+    {
+      "map": "expanded",
+      "seed": 2020,
+      "duration": 74.5999999999979,
+      "result": "USMC victory",
+      "digest": "f5ef37614452892b10a5b66b45f9e57ba3a0f61659109cf7054e38bd8f1944c0"
+    }
+  ]
+}

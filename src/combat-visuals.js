@@ -145,6 +145,8 @@ export class CombatVisuals {
         fx.angle = e.angle;
         if (this.traces.length < 48)
           this.traces.push({
+            id: e.id,
+            unitId: e.unitId,
             x: e.x,
             y: e.y,
             targetX: e.targetX,
@@ -500,12 +502,14 @@ export class CombatVisuals {
       g.lineBetween(p.x + 4, p.y - 5, p.x - 4, p.y + 3);
     }
   }
-  drawTraces(g, iso) {
+  drawTraces(g, iso, muzzleOverride) {
     for (const s of this.traces) {
       const a = iso(s.x, s.y),
         b = iso(s.targetX, s.targetY);
+      // A render-only start point; the authoritative shot endpoint/ray is intact.
+      const muzzle = muzzleOverride?.(s)?.muzzle;
       g.lineStyle(1, 0xffe9ac, 0.55);
-      g.lineBetween(a.x, a.y - 14, b.x, b.y - 14);
+      g.lineBetween(muzzle?.x ?? a.x, muzzle?.y ?? a.y - 14, b.x, b.y - 14);
     }
   }
 }
