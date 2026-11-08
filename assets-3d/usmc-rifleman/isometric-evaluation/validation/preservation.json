@@ -1,0 +1,8 @@
+{
+  "base_commit": "aba8585c6d499e38b9d1a750f2c6a5d553a872d5",
+  "existing_tracked_files_changed": [],
+  "original_3d_asset_checksum_manifest_passed": true,
+  "base_model_and_game_samples_byte_identical": true,
+  "new_files_scope": "assets-3d/usmc-rifleman/isometric-evaluation only",
+  "main_merged": false
+}

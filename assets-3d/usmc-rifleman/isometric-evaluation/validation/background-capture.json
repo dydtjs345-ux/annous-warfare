@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "name": "street",
+      "seed": 2049,
+      "layout": 0,
+      "spawn": 0,
+      "cameraTarget": [
+        14,
+        14
+      ],
+      "overlayWorldTarget": [
+        14,
+        14
+      ],
+      "walkableOverlay": true,
+      "camera": {
+        "x": 460,
+        "y": 5,
+        "width": 1200,
+        "height": 704,
+        "zoom": 1
+      },
+      "paused": true,
+      "battleTime": 0.2,
+      "clip": {
+        "x": 340,
+        "y": 203,
+        "width": 520,
+        "height": 360
+      },
+      "footAnchor": [
+        260,
+        200
+      ]
+    },
+    {
+      "name": "cover",
+      "seed": 2049,
+      "layout": 0,
+      "spawn": 0,
+      "cameraTarget": [
+        33,
+        28
+      ],
+      "overlayWorldTarget": [
+        32,
+        26
+      ],
+      "walkableOverlay": true,
+      "camera": {
+        "x": 560,
+        "y": 313,
+        "width": 1200,
+        "height": 704,
+        "zoom": 1
+      },
+      "paused": true,
+      "battleTime": 0.2,
+      "clip": {
+        "x": 340,
+        "y": 225,
+        "width": 520,
+        "height": 360
+      },
+      "footAnchor": [
+        280,
+        170
+      ]
+    }
+  ],
+  "browserErrors": [],
+  "method": "Existing game, existing pause and mouse camera controls only; no source edits or simulation command injection."
+}

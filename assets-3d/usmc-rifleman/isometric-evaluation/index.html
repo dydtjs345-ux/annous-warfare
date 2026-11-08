@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USMC isometric scale and knee-pad comparison</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#14212a;color:#e5e9e9;font:14px/1.4 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:12px}h1{font-size:20px;margin:0 0 7px}p{margin:5px 0 10px;color:#b9c8cd}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0}button,select{font:inherit;padding:9px 12px;min-height:42px;color:#e5e9e9;background:#263e4b;border:1px solid #617985;border-radius:5px}button[aria-pressed=true]{background:#496953;border-color:#a5b29a}label{display:flex;gap:6px;align-items:center}input{width:19px;height:19px}#cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:12px}.direction{background:#1c2e39;border:1px solid #4a5f6a;border-radius:6px;overflow:hidden}.direction h2{font-size:14px;margin:0;padding:7px 10px;background:#263c48}.pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#52606a}.variant{min-width:0;background:#152631}.variant header{text-align:center;padding:5px 2px;font-size:12px;color:#d8dfd9}.stage{position:relative;overflow:hidden;background-color:#25333e;background-repeat:no-repeat;image-rendering:pixelated}.soldier{position:absolute;max-width:none;image-rendering:pixelated}.shadow{position:absolute;border-radius:50%;background:#060c1190;filter:blur(.7px)}.caption{text-align:center;font-size:11px;padding:3px;color:#a8b8bc}.ruler{position:absolute;width:4px;border-left:1px solid #b9d3d390;border-top:1px solid #b9d3d390;border-bottom:1px solid #b9d3d390;left:10px;pointer-events:none}.legend{font-size:12px}.sheet-mode main{max-width:none;padding:10px}.sheet-mode #cards{display:block}.sheet-mode .direction{margin-bottom:8px}.sheet-mode .controls{display:none}.overview-mode #cards{grid-template-columns:repeat(4,1fr)}.overview-mode main{max-width:none}#summary{font-size:12px}a{color:#bdd3df}.detail{margin-top:14px;border:1px solid #4a5f6a;padding:10px}.detail-images{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail img{max-width:100%;height:auto;image-rendering:pixelated}
+</style>
+<main>
+<h1>USMC · isometric gameplay-scale study</h1>
+<p class="legend">Same low-ready pose, camera and lighting. Original boots and anatomy unchanged. Right column adds matte tan knee pads only.</p>
+<div class="controls"><span>Figure height</span><span id="sizes"></span><label>Backdrop <select id="context"><option value="street">Urban street</option><option value="cover">Near cover</option><option value="neutral">Neutral</option></select></label><label><input type="checkbox" id="zoom" checked>Match terrain zoom to figure height</label></div>
+<p id="summary"></p>
+<div id="cards"></div>
+<p class="legend">Actual 3D render composites on captured, paused game imagery. This page does not replace the live game renderer. Native sprite pixels are shown at 1:1 CSS pixels. A one-pixel antialiased boundary can fall below 50% alpha.</p>
+<details class="detail"><summary>Magnified pose and equipment check</summary><label>Direction <select id="detail-direction"></select></label><div class="detail-images"><figure><figcaption>Current model</figcaption><img id="detail-current" alt="Original low-ready pose"></figure><figure><figcaption>Tan knee pads</figcaption><img id="detail-pads" alt="Low-ready pose with tan knee pads"></figure></div></details>
+<p class="legend"><a href="README.md">Evaluation notes and recommendations</a> · No live AI, animation, collision or map changes.</p>
+</main>
+<script type="module">
+const [data,backgrounds]=await Promise.all([fetch('validation/render-manifest.json').then(r=>r.json()),fetch('validation/background-capture.json').then(r=>r.json())]);
+const params=new URLSearchParams(location.search),directions=['N','NE','E','SE','S','SW','W','NW'];
+let height=Number(params.get('height')||60),context=params.get('context')||'street',matched=params.get('fixed')!=='1';
+if(![40,60,80,120].includes(height))height=60;
+if(params.has('sheet'))document.body.classList.add('sheet-mode');if(params.has('overview'))document.body.classList.add('overview-mode');
+document.querySelector('#context').value=context;document.querySelector('#zoom').checked=matched;
+const sizes=document.querySelector('#sizes');for(const h of[40,60,80,120]){const b=document.createElement('button');b.textContent=h+'px';b.dataset.height=h;b.onclick=()=>{height=h;draw()};sizes.append(b)}
+for(const d of directions){const o=document.createElement('option');o.value=d;o.textContent=d;document.querySelector('#detail-direction').append(o)}
+document.querySelector('#detail-direction').value='SE';function detail(){const d=document.querySelector('#detail-direction').value;for(const v of['current','pads'])document.querySelector('#detail-'+v).src=`large/${v}-${d}.png`}document.querySelector('#detail-direction').onchange=detail;detail();
+document.querySelector('#context').onchange=e=>{context=e.target.value;draw()};document.querySelector('#zoom').onchange=e=>{matched=e.target.checked;draw()};
+let rows=[];function draw(){
+ for(const b of sizes.children)b.setAttribute('aria-pressed',Number(b.dataset.height)===height);
+ const zoom=matched?height/40:1,back=backgrounds.records.find(r=>r.name===context);rows=[];
+ document.querySelector('#summary').textContent=`${height}px figure height · 30° elevation / exact 2:1 map axes · ${context==='neutral'?'neutral backdrop':`captured terrain ${zoom.toFixed(2)}× from 40px study baseline`} · low-ready, no firing`;
+ const cards=document.querySelector('#cards');cards.replaceChildren();
+ for(const d of directions){
+  const card=document.createElement('section');card.className='direction';const title=document.createElement('h2');title.textContent=d;card.append(title);const pair=document.createElement('div');pair.className='pair';card.append(pair);cards.append(card);
+  for(const variant of['current','pads']){
+   const f=data.native.find(f=>f.direction===d&&f.variant===variant&&f.nominal_figure_height===height);const article=document.createElement('article');article.className='variant';
+   const label=document.createElement('header');label.textContent=variant==='current'?'Current model':'Tan knee pads';article.append(label);
+   const stage=document.createElement('div');stage.className='stage';stage.style.height=height+70+'px';article.append(stage);
+   const shadow=document.createElement('div');shadow.className='shadow';stage.append(shadow);const img=document.createElement('img');img.className='soldier';img.src=f.file;img.width=f.width;img.height=f.height;img.alt=`${d}, ${height}px, ${variant}`;stage.append(img);
+   const ruler=document.createElement('div');ruler.className='ruler';ruler.style.height=height+'px';stage.append(ruler);
+   const cap=document.createElement('div');cap.className='caption';cap.textContent=`${height}px native · ${f.opaque_height}px at ≥50% alpha`;article.append(cap);pair.append(article);
+   const row={d,variant,stage,shadow,img,ruler,f};rows.push(row);
+   img.onload=()=>{const probe=document.createElement('canvas');probe.width=img.naturalWidth;probe.height=img.naturalHeight;const c=probe.getContext('2d');c.drawImage(img,0,0);const a=c.getImageData(0,0,probe.width,probe.height).data;let lo=probe.height,hi=0;for(let y=0;y<probe.height;y++)for(let x=0;x<probe.width;x++)if(a[(y*probe.width+x)*4+3]>=128){lo=Math.min(lo,y);hi=Math.max(hi,y)}row.opaqueTop=lo;row.opaqueBottom=hi+1;position()};
+  }
+ }
+ function position(){for(const r of rows){const w=r.stage.clientWidth,footY=height+52;r.img.style.left=w/2-r.f.pivot[0]+'px';r.img.style.top=footY-r.f.pivot[1]+'px';r.shadow.style.cssText=`width:${height*.32}px;height:${height*.07}px;left:${w/2-height*.16}px;top:${footY-height*.045}px`;r.ruler.style.top=(r.opaqueTop===undefined?footY-height:footY-r.f.pivot[1]+r.opaqueTop)+'px';r.ruler.style.height=(r.opaqueBottom===undefined?height:r.opaqueBottom-r.opaqueTop)+'px';if(back){r.stage.style.backgroundImage=`url(context/${context}.png)`;r.stage.style.backgroundSize=`${520*zoom}px ${360*zoom}px`;r.stage.style.backgroundPosition=`${w/2-back.footAnchor[0]*zoom}px ${footY-back.footAnchor[1]*zoom}px`}else r.stage.style.backgroundImage='none';}}
+ position();requestAnimationFrame(position);window.onresize=position;
+ window.isometricReviewSnapshot=()=>({height,context,matched,projection:data.projection,bootsDeltaMetres:data.boot_max_pose_delta_metres,rows:rows.map(r=>({direction:r.d,variant:r.variant,visibleHeight:r.f.opaque_height,nominalHeight:r.f.nominal_figure_height,naturalSize:[r.img.naturalWidth,r.img.naturalHeight],displaySize:[r.img.width,r.img.height],loaded:r.img.complete&&r.img.naturalWidth>0,stage:r.stage.getBoundingClientRect().toJSON(),image:r.img.getBoundingClientRect().toJSON()}))});
+}
+draw();
+</script></html>

@@ -1,0 +1,12 @@
+{
+  "blender": "4.3.2",
+  "original_mesh_preserved": true,
+  "boot_max_delta_metres": 4.218798746506171e-08,
+  "wrist_errors_metres": {
+    "L": 1.1934018492431453e-07,
+    "R": 1.8005141576520461e-07
+  },
+  "native_pairs": 32,
+  "native_images": 64,
+  "large_images": 16
+}
