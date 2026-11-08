@@ -203,6 +203,8 @@ for k in [0,1]:
    a=k*count+j*segments+i;b=k*count+j*segments+(i+1)%segments;c=b+segments;d=a+segments
    f.append((a,b,c,d)if not k else(d,c,b,a))
 for i in range(segments):a=rings*segments+i;b=rings*segments+(i+1)%segments;f.append((a,a+count,b+count,b))
+# Close the small pole rings as well as the lower rim; no pinhole through the cap.
+f.append(tuple(range(segments-1,-1,-1)));f.append(tuple(count+i for i in range(segments)))
 mesh('Helmet covered shell',verts,f,mat['camo'],'head')
 rim=[]
 for i in range(segments+1):
@@ -229,10 +231,17 @@ for side in [-1,1]:
  def pt(x,y,z):return(cx+x*math.cos(ang)-y*math.sin(ang),ankle.y+x*math.sin(ang)+y*math.cos(ang),z)
  # Shoe upper: varying cross-sections along the foot, not an ellipsoid/cube foot.
  sections=[(.065,.039,.145),(.035,.049,.18),(-.02,.054,.195),(-.09,.058,.12),(-.17,.058,.086),(-.23,.043,.064),(-.246,.012,.05)]
- vv=[];ff=[];n=16
+ def foot_section(y):
+  for (ya,wa,ta),(yb,wb,tb) in zip(sections,sections[1:]):
+   if yb<=y<=ya:
+    t=(ya-y)/(ya-yb);return wa+(wb-wa)*t,ta+(tb-ta)*t
+  return (sections[0][1],sections[0][2])if y>sections[0][0]else(sections[-1][1],sections[-1][2])
+ vv=[];ff=[];n=9
  for y,w,top in sections:
   for i in range(n):
-   t=2*math.pi*i/n;vv.append(pt(w*math.cos(t),y,.03+(top-.03)*(.5+.5*math.sin(t))))
+   # A D-shaped upper meets a flat footbed. An oval cross-section touches only
+   # along its centre and visibly floats above the sole at both sides.
+   t=math.pi*i/(n-1);vv.append(pt(w*math.cos(t),y,.031+(top-.031)*max(0,math.sin(t))))
  for j in range(len(sections)-1):
   for i in range(n):ff.append((j*n+i,j*n+(i+1)%n,(j+1)*n+(i+1)%n,(j+1)*n+i))
  ff += [tuple(range(n-1,-1,-1)),tuple((len(sections)-1)*n+i for i in range(n))]
@@ -251,17 +260,35 @@ for side in [-1,1]:
   z=.122+j*.013;y=-.100+j*.005
   tongue.extend([pt(-.026,y+.003,z),pt(.026,y+.003,z)])
  mesh('Boot articulated tongue',tongue,[(j*2,j*2+1,j*2+3,j*2+2)for j in range(8)],mat['boot_panel'],bone)
+ def outer_x(y,z):
+  w,top=foot_section(y);h=(z-.031)/(top-.031);x=w*math.sqrt(max(0,1-h*h))if 0<=h<=1 else 0
+  u=(y-.002)/.055
+  if .10<=z<=.228 and abs(u)<=1:
+   shaftx=(.05-.003*(z-.1)/.128)*math.sqrt(max(0,1-u*u));x=max(x,shaftx)
+  assert x>0,('Boot panel has no supporting surface',y,z)
+  return x
  for sx in [-1,1]:
-  vpanel=[pt(sx*.048,.037,.052),pt(sx*.052,.019,.151),pt(sx*.047,-.041,.185),pt(sx*.055,-.106,.096),pt(sx*.056,-.171,.055)]
-  mesh('Boot suede side reinforcement',vpanel,[(0,1,2,3,4)],mat['boot_panel'],bone)
-  cord('Boot quarter seam',[pt(sx*.050,.039,.060),pt(sx*.055,.021,.152),pt(sx*.050,-.039,.186),pt(sx*.057,-.106,.100),pt(sx*.058,-.171,.058)],.0009,mat['thread'],bone)
+  # Sample the actual upper/shaft union, instead of floating planar triangles.
+  ys=[-.17,-.13,-.10,-.075,-.052,-.03,-.005,.02,.038,.05];vpanel=[]
+  for y in ys:
+   _,top=foot_section(y);high=.21 if -.049<y<.049 else .031+.60*(top-.031)
+   for k in range(5):
+    z=.044+(high-.044)*k/4;vpanel.append(pt(sx*(outer_x(y,z)+.0012),y,z))
+  fp=[(j*5+k,(j+1)*5+k,(j+1)*5+k+1,j*5+k+1)for j in range(len(ys)-1)for k in range(4)]
+  mesh('Fitted suede boot quarter',vpanel,fp,mat['boot_panel'],bone)
+  for k in [0,4]:cord('Boot quarter stitched edge',[vpanel[j*5+k]for j in range(len(ys))],.0009,mat['thread'],bone)
+  # Eyelet stays join the laced throat to the actual ankle shell on both sides.
+  stay=[]
+  for j in range(8):
+   z=.126+j*.013;y=-.103+j*.005
+   stay.extend([pt(sx*.035,y+.001,z),pt(sx*(outer_x(.002,z)+.0012),.002,z)])
+  mesh('Boot lace eyelet stay',stay,[(j*2,j*2+1,j*2+3,j*2+2)for j in range(7)],mat['boot_panel'],bone)
  # Twin heel seams continue above the ankle, not a smooth slipper heel.
- for sx in [-1,1]:cord('Boot heel stitching',[pt(sx*.026,.054,.053),pt(sx*.027,.057,.14),pt(sx*.027,.054,.213)],.001,mat['trim'],bone)
+ for sx in [-1,1]:cord('Boot heel stitching',[pt(sx*(outer_x(.045,z)+.0014),.045,z)for z in [.053,.14,.213]],.001,mat['trim'],bone)
  # Sole follows an asymmetric toe/heel footprint.
- outline=[]
- for i in range(32):
-  t=2*math.pi*i/32;y=-.085+.164*math.sin(t);w=.06 if y<-.03 else .047;outline.append((w*math.cos(t),y))
- vv=[pt(x,y,z)for z in [.005,.029]for x,y in outline];n=len(outline);ff=[tuple(range(n-1,-1,-1)),tuple(range(n,2*n))]
+ right=[(0,.077),(.043,.072),(.055,.035),(.060,-.02),(.064,-.09),(.063,-.17),(.049,-.23),(.021,-.247),(0,-.256)]
+ outline=right+[(-x,y)for x,y in reversed(right[1:-1])]
+ vv=[pt(x,y,z)for z in [.005,.033]for x,y in outline];n=len(outline);ff=[tuple(range(n-1,-1,-1)),tuple(range(n,2*n))]
  ff +=[(i,(i+1)%n,(i+1)%n+n,i+n)for i in range(n)]
  mesh('Rubber outsole',vv,ff,mat['sole'],bone)
  for j in range(8):
@@ -272,8 +299,11 @@ for side in [-1,1]:
    cord('Crossed boot lace',[pt(.033,y-.004,z),pt(-.033,y+.001,z+.013)],.0013,mat['trim'],bone)
  for j in range(7):
   for x in [-.032,.032]:box('Outsole tread lug',pt(x,-.20+j*.039,.007),(.029,.022,.010),mat['sole'],bone,.002,rotation=(0,0,ang))
- cord('Boot toe seam',[pt(-.053,-.157,.06),pt(-.038,-.18,.08),pt(0,-.184,.085),pt(.038,-.18,.08),pt(.053,-.157,.06)],.0011,mat['trim'],bone)
- cord('Boot welt stitch',[pt(x,y,.030)for x,y in outline+[outline[0]]],.001,mat['thread'],bone)
+ seam=[]
+ for f in [-.9,-.6,0,.6,.9]:
+  y=-.17-.012*(1-abs(f));w,top=foot_section(y);seam.append(pt(f*w,y,.032+(top-.031)*math.sqrt(1-f*f)))
+ cord('Boot toe seam',seam,.0011,mat['trim'],bone)
+ cord('Boot welt stitch',[pt(x,y,.034)for x,y in outline+[outline[0]]],.001,mat['thread'],bone)
 # Wrist seam bands and shoulder pocket panels follow the A-pose arm directions.
 for side in ['L','R']:
  wrist=joint(rigdata['bones']['wrist.'+side]['head']);elbow=joint(rigdata['bones']['lowerarm01.'+side]['head'])

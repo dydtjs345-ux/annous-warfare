@@ -80,7 +80,7 @@ def render_views(root,char,weapon,rig,fast=False):
     if scene.world is None:scene.world=bpy.data.worlds.new('Studio world')
     scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs[0].default_value=(.055,.07,.085,1);scene.world.node_tree.nodes['Background'].inputs[1].default_value=.45
     scene.view_settings.view_transform='AgX'
-    bpy.ops.mesh.primitive_plane_add(size=200,location=(0,0,-.012));floor=bpy.context.object;floor.name='STUDIO_only_floor'
+    bpy.ops.mesh.primitive_plane_add(size=200,location=(0,0,0));floor=bpy.context.object;floor.name='STUDIO_only_floor'
     m=bpy.data.materials.new('STUDIO_only_floor_material');m.diffuse_color=(.055,.068,.08,1);floor.data.materials.append(m)
     for name,loc,power,size,color in [('Key',(-3,-4,4),450,3,(1,.89,.74)),('Fill',(3,-2,3),270,3,(.74,.84,1)),('Rim',(1,3,4),550,2,(.85,.91,1))]:
         bpy.ops.object.light_add(type='AREA',location=loc);o=bpy.context.object;o.name='STUDIO_'+name;o.data.energy=power;o.data.shape='DISK';o.data.size=size;o.data.color=color;aim(o,(0,0,1))
