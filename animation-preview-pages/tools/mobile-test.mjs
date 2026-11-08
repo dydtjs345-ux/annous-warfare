@@ -22,7 +22,7 @@ for(const engine of engines){
   page.on('console',message=>{if(message.type()==='error'&&errors.length<12)errors.push(message.text());});
   page.on('response',response=>{
    if(response.status()>=400)networkErrors.push({url:response.url(),status:response.status()});
-   if(response.url().endsWith('.glb'))downloads.push(response.body().then(bytes=>{hashes[response.url().includes('Russian')?'Russian':'USMC']=createHash('sha256').update(bytes).digest('hex');}));
+   if(response.url().endsWith('.glb'))downloads.push(response.body().then(bytes=>{hashes[response.url().includes('Russian')?'Russian':'USMC']=createHash('sha256').update(bytes).digest('hex');}).catch(()=>null));
   });
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:120000});
   await page.waitForFunction(()=>window.animationPreview?.ready,{timeout:120000});
@@ -124,11 +124,40 @@ for(const engine of engines){
   const landscape=await page.evaluate(()=>({width:innerWidth,content:document.documentElement.scrollWidth}));
   assert(landscape.content<=landscape.width,'Landscape must not overflow horizontally');
   await page.screenshot({path:path.join(output,`${engine}-iphone-landscape.png`),fullPage:true});
+  const squads=[];
+  await page.setViewportSize({width:390,height:844});
+  for(const configuration of ['USMC','Russian','mixed']){
+   if(configuration==='mixed')await page.selectOption('#comparison','mixed');
+   else{if(await page.locator('#faction').isDisabled())await page.selectOption('#comparison','single');await page.selectOption('#faction',configuration);await page.selectOption('#comparison','squad');}
+   await page.waitForFunction(()=>animationPreview.ready&&animationPreview.actors.length===6,{timeout:120000});
+   assert.equal(await page.locator('canvas').count(),1,'Squad must share one WebGL canvas');assert(await page.locator('#view').isDisabled());
+   const structure=await page.evaluate(()=>{const a=animationPreview.actors,firstMesh=o=>{let m;o.traverse(x=>{if(x.isSkinnedMesh&&!m)m=x;});return m;};let spacing=Infinity;for(let i=0;i<6;i++)for(let j=i+1;j<6;j++)spacing=Math.min(spacing,a[i].assembly.position.distanceTo(a[j].assembly.position));return {factions:a.map(x=>x.faction),renderers:new Set(a.map(x=>x.renderer)).size,scenes:new Set(a.map(x=>x.scene)).size,skeletons:new Set(a.map(x=>firstMesh(x.model).skeleton)).size,sharedGeometry:a.every(x=>firstMesh(x.model).geometry===firstMesh(a.find(y=>y.faction===x.faction).model).geometry),spacing,urban:a[0].scene.getObjectByName('Readability_Urban_Test').children.map(x=>x.name)};});
+   assert.equal(structure.renderers,1);assert.equal(structure.scenes,1);assert.equal(structure.skeletons,6);assert(structure.sharedGeometry&&structure.spacing>=2.39);assert(structure.urban.includes('Road')&&structure.urban.includes('Building_corner')&&structure.urban.includes('Cover_barrier'));
+   assert.equal(structure.factions.filter(x=>x==='USMC').length,configuration==='mixed'?3:configuration==='USMC'?6:0);
+   const motions={};
+   for(const motion of ['Walk','Sprint','Aim','MovingFire']){
+    motions[motion]=await page.evaluate(motion=>{const api=animationPreview;api.pause();api.setState(motion,true);api.restart();for(let i=0;i<8;i++)api.step(.1);return api.snapshot();},motion);
+    assert(motions[motion].every(a=>a.lower&&a.upper));
+   }
+   assert(motions.MovingFire.every(a=>a.distance>0&&a.shots>=4&&a.lower==='Lower_AimWalk'&&a.upper==='Upper_Aim'));
+   for(const size of ['60','80','120']){
+    await page.selectOption('#height',size);
+    const visible=await page.evaluate(()=>{const a=animationPreview.actors,cam=a[0].camera;return a.every(x=>[0,1.8].every(y=>{const p=x.assembly.position.clone();p.y+=y;p.project(cam);return Math.abs(p.x)<.99&&Math.abs(p.y)<.99;}));});
+    assert(visible,'All six soldier positions and heads must fit at the selected native scale');
+   }
+   await page.evaluate(()=>animationPreview.step(0));
+   await page.locator('#panels').screenshot({path:path.join(output,`${engine}-squad-${configuration}.png`)});
+   squads.push({configuration,structure,motions});
+  }
+  // Exercise real playback for six actors, rather than only stepping static samples.
+  await page.locator('#play').tap();const liveStart=await page.evaluate(()=>animationPreview.snapshot());await page.waitForTimeout(1200);const liveEnd=await page.evaluate(()=>animationPreview.snapshot());await page.locator('#play').tap();
+  assert(liveEnd.every((a,i)=>a.distance>liveStart[i].distance&&a.shots>liveStart[i].shots));
+  await page.selectOption('#comparison','single');await page.waitForFunction(()=>animationPreview.ready&&animationPreview.actors.length===1,{timeout:120000});assert.equal(await page.locator('canvas').count(),1);
   await Promise.all(downloads);
   assert.deepEqual(hashes,manifest.asset_sha256,'Published GLBs must match a1d2804 byte for byte');
   assert.deepEqual(errors,[],'No browser JavaScript or graphics errors');
   assert.deepEqual(networkErrors,[],'No failed asset responses');
-  const result={gameplayCamera,inspection,comparison,engine,version:browser.version(),device:'iPhone 13 emulation',checks,hashes,portrait,landscape,play_pause_touch:true,speed_options:speeds,errors,networkErrors};
+  const result={squads,gameplayCamera,inspection,comparison,engine,version:browser.version(),device:'iPhone 13 emulation',checks,hashes,portrait,landscape,play_pause_touch:true,speed_options:speeds,errors,networkErrors};
   report.browsers.push(result);
   await fs.writeFile(path.join(output,'mobile-validation.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({engine,passed:true,source:manifest.commit,hashes,checks:['38 motions per faction','continuous moving fire','8 3D directions','60/80/120px','touch play/pause','portrait/landscape','asset hashes']}));

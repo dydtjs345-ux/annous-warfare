@@ -1,13 +1,7 @@
 {
-  "status": "blocked",
-  "public_preview_url": null,
+  "status": "published",
+  "public_preview_url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
   "requested_repository": "dydtjs345-ux/annous-warfare-animation-preview",
-  "blocker": {
-    "operation": "POST /user/repos",
-    "http_status": 403,
-    "message": "Resource not accessible by integration",
-    "repository_created": false
-  },
   "source_commit": "a1d280461f94456c905b677b213a6ee31245b1d0",
   "feature_branch": "feat/infantry-animation-pages",
   "existing_game_pages": {
@@ -17,9 +11,9 @@
     "modified": false
   },
   "ready_bundle": "animation-preview-pages/dist/",
-  "public_https_browser_validation": "not run: no preview deployment exists",
+  "public_https_browser_validation": "Byte-identical bundle tested locally in mobile WebKit and Chromium; anonymous public HTTPS validation of ten files passed. Managed Sites browser tool unavailable.",
   "physical_iphone_validation": "not run: no physical device available",
-  "latest_publication_attempt": "Separate repository still unavailable; creation retried and returned HTTP 403 after isometric-camera update.",
+  "latest_publication_attempt": "Sites deployment succeeded independently after GitHub repository creation returned HTTP 403.",
   "camera_implementation": {
     "default": "orthographic gameplay isometric, 30 degrees",
     "other_views": [
@@ -28,5 +22,28 @@
     ],
     "comparison": "synchronized USMC and Russian animation clocks",
     "contact_shadows": "realtime shadow map from animated geometry"
+  },
+  "github_pages_blocker": {
+    "operation": "POST /user/repos",
+    "http_status": 403,
+    "message": "Resource not accessible by integration",
+    "repository_created": false
+  },
+  "hosting_provider": "Sites",
+  "site_project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+  "site_source_commit": "53c3b9a5b4671b4406fcea46028d2a9cf830fa92",
+  "saved_version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_e373cb52e0b48191a7577d87fa964ae6",
+  "deployment_id": "appgdep_6af0d20370a88191915ed25e959709fd",
+  "access_mode": "public",
+  "squad_mode": {
+    "soldiers": 6,
+    "factions": [
+      "USMC",
+      "Russian",
+      "mixed 3+3"
+    ],
+    "renderers": 1,
+    "skeletons": 6,
+    "locomotion": "in-place formation readability review; no navigation"
   }
 }
