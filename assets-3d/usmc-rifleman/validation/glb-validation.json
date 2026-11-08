@@ -3,11 +3,11 @@
   "files": [
     {
       "file": "USMC_Rifleman_Kit.glb",
-      "bytes": 8538212,
-      "sha256": "ec79d3cabcb77f5b65c331a0d53c473be1efe3c5f69e33dfcd724947474f67b4",
-      "triangles": 67162,
-      "exportedVertices": 54989,
-      "weightedVertices": 46757,
+      "bytes": 8615268,
+      "sha256": "b428a7ca55628e1184a91bbe4ef939ff98a171b2a8c0e9ad630d742e56272b87",
+      "triangles": 67698,
+      "exportedVertices": 55731,
+      "weightedVertices": 47499,
       "bones": 163,
       "embeddedImages": 6,
       "degenerateTriangles": 0,
@@ -18,7 +18,7 @@
             "min": [
               -0.579927921295166,
               0.0020000003278255463,
-              -0.4034999907016754
+              -0.38010525703430176
             ],
             "max": [
               0.579927921295166,
@@ -29,7 +29,7 @@
           "dimensionsMetres": [
             1.159855842590332,
             1.8229965902864933,
-            0.78922039270401
+            0.7658256590366364
           ]
         },
         {
@@ -64,11 +64,11 @@
     },
     {
       "file": "USMC_Rifleman_Apose.glb",
-      "bytes": 7041080,
-      "sha256": "2793abfa1482822506c72bb1453520c4e53cc477f0b73df006accee3d63c4d37",
-      "triangles": 58450,
-      "exportedVertices": 46757,
-      "weightedVertices": 46757,
+      "bytes": 7118140,
+      "sha256": "74d4dfec1aa612fd4c8dfc6c44ca52115a03df1b835be4cf32b17d5b1628aa86",
+      "triangles": 58986,
+      "exportedVertices": 47499,
+      "weightedVertices": 47499,
       "bones": 163,
       "embeddedImages": 3,
       "degenerateTriangles": 0,
@@ -79,7 +79,7 @@
             "min": [
               -0.579927921295166,
               0.0020000003278255463,
-              -0.4034999907016754
+              -0.38010525703430176
             ],
             "max": [
               0.579927921295166,
@@ -90,7 +90,7 @@
           "dimensionsMetres": [
             1.159855842590332,
             1.8229965902864933,
-            0.78922039270401
+            0.7658256590366364
           ]
         }
       ],

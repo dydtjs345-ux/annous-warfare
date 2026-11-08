@@ -67,11 +67,11 @@ def cord(name,points,r,mat,bone=None,weapon=False):
     for v,co in zip(s.points,points):v.co=(*co,1)
     o=bpy.data.objects.new(name,c);bpy.context.collection.objects.link(o);bpy.context.view_layer.objects.active=o;o.select_set(True);bpy.ops.object.convert(target='MESH');o=bpy.context.object;o.select_set(False);return tag(o,name,mat,bone,weapon)
 
-def panel(name,outline,depth,mat,bone=None,curve=.0,back=False,weapon=False):
+def panel(name,outline,depth,mat,bone=None,curve=.0,back=False,weapon=False,vertical=0):
     # Outline is (x,z), depth is y front/back. Geometry follows a curved plate.
     y0,y1=depth;v=[]
     for y in (y0,y1):
-        for x,z in outline:v.append((x,y+(curve*x*x),z))
+        for x,z in outline:v.append((x,y+(curve*x*x)+vertical*max(0,z-1.28),z))
     n=len(outline);f=[tuple(range(n-1,-1,-1)),tuple(range(n,2*n))]
     for i in range(n):j=(i+1)%n;f.append((i,j,n+j,n+i))
     o=mesh(name,v,f,mat,bone,weapon);b=o.modifiers.new('Stitched softened perimeter','BEVEL');b.width=.003;b.segments=2;apply(o,b);return o

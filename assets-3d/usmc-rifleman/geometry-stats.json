@@ -1,14 +1,14 @@
 {
   "USMC_Rifleman_Character": {
-    "vertices": 31850,
-    "faces": 30026,
-    "triangles": 58450,
-    "quads": 28132,
+    "vertices": 32166,
+    "faces": 30302,
+    "triangles": 58986,
+    "quads": 28392,
     "uv_layers": 1,
     "materials": 1,
     "bounds_metres": [
       1.159855842590332,
-      0.7892202734947205,
+      0.7658255100250244,
       1.8229966163635254
     ]
   },

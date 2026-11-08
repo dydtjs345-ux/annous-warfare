@@ -120,6 +120,15 @@ for v in uniform.data.vertices:
   folds=.0028*math.sin(p.z*103+p.x*31)*math.exp(-((p.z-1.27)/.12)**2)
   v.co+=v.normal*(.002*arm+folds)
 uniform.data.update()
+garment_bvh=BVHTree.FromPolygons([v.co for v in uniform.data.vertices],[tuple(f.vertices)for f in uniform.data.polygons])
+def garment_ray(origin,direction):
+ hit=garment_bvh.ray_cast(Vector(origin),Vector(direction),3)[0]
+ assert hit is not None,('No garment support',origin,direction)
+ return hit
+# Fit armour to this morphed human, not to an assumed world-origin torso.
+front_body=garment_ray((0,-1,1.28),(0,1,0)).y;rear_body=garment_ray((0,1,1.28),(0,-1,0)).y
+front_shift=front_body-.004+.135;rear_shift=rear_body+.004-.135
+pack_shift=rear_body+.004+.041+.004-.157
 # Fitted sleeve pockets duplicate the garment's actual curved surface. Never invent a
 # fallback projection outside the sleeve: that produces floating corners in an A-pose.
 def sleeve_patch(side):
@@ -141,26 +150,37 @@ def sleeve_patch(side):
 for side in [-1,1]:sleeve_patch(side)
 # Tailored carrier: curved cut-corner plates, not cuboid stand-ins.
 outline=[(-.101,1.445),(.101,1.445),(.139,1.39),(.145,1.158),(.131,1.125),(.105,1.112),(-.105,1.112),(-.131,1.125),(-.145,1.158),(-.139,1.39)]
-panel('Front curved plate carrier',outline,(-.175,-.135),mat['coyote'],'spine02',.35)
-panel('Rear curved plate carrier',outline,(.135,.176),mat['coyote'],'spine02',-.30)
-cord('Carrier stitched perimeter',[(x,-.18+.35*x*x,z)for x,z in outline+[outline[0]]],.00115,mat['thread'],'spine02')
+panel('Front curved plate carrier',outline,(-.175+front_shift,-.135+front_shift),mat['coyote'],'spine02',.35,vertical=.25)
+panel('Rear curved plate carrier',outline,(.135+rear_shift,.176+rear_shift),mat['coyote'],'spine02',-.30,vertical=-.09)
+cord('Carrier stitched perimeter',[(x,-.18+front_shift+.35*x*x+.25*max(0,z-1.28),z)for x,z in outline+[outline[0]]],.00115,mat['thread'],'spine02')
 for side in [-1,1]:
- ribbon('Carrier shoulder strap',[(side*.112,-.14,1.424),(side*.155,-.07,1.462),(side*.156,.015,1.465),(side*.12,.14,1.425)],.053,.008,mat['coyote'],'spine01')
- box('Quick release shoulder buckle',(side*.123,-.136,1.42),(.045,.018,.035),mat['fastener'],'spine01',.004)
+ stations=[(.105,-.14+front_shift+.25*.144,1.424),(.13,-.11,None),(.145,-.07,None),(.15,-.03,None),(.15,.01,None),(.145,.05,None),(.105,.14+rear_shift-.09*.145,1.425)]
+ vertices=[]
+ for cx,y,anchor in stations:
+  for j in range(5):
+   x=side*(cx+(j/4-.5)*.053)
+   z=anchor if anchor is not None else garment_ray((x,y,2),(0,0,-1)).z+.006
+   vertices.append((x,y,z))
+ strap=mesh('Surface fitted carrier shoulder strap',vertices,[(r*5+j,r*5+j+1,(r+1)*5+j+1,(r+1)*5+j)for r in range(len(stations)-1)for j in range(4)],mat['coyote'],'spine01')
+ solid=strap.modifiers.new('Actual padded webbing thickness','SOLIDIFY');solid.thickness=.004;solid.offset=0;M.apply(strap,solid)
+ for j in [0,4]:cord('Shoulder strap stitched border',[Vector(vertices[r*5+j])+Vector((0,0,.0025))for r in range(len(stations))],.0009,mat['thread'],'spine01')
+ box('Quick release shoulder buckle',(side*.123,-.136+front_shift+.25*.14,1.42),(.045,.018,.035),mat['fastener'],'spine01',.004,rotation=(-math.atan(.25),0,0))
 # Cummerbund follows actual ribcage contour; two parallel webbing rows.
 for z in [1.145,1.19]:
- points=[(.216*math.cos(t),.153*math.sin(t),z)for t in [i*2*math.pi/56 for i in range(57)]]
+ front=garment_ray((0,-1,z),(0,1,0)).y;back=garment_ray((0,1,z),(0,-1,0)).y;cy=(front+back)/2;points=[]
+ for i in range(57):
+  t=i*2*math.pi/56;direction=Vector((math.cos(t),math.sin(t),0));hit=garment_ray((0,cy,z),direction);points.append(hit+direction*.008)
  ribbon('Cummerbund perimeter webbing',points,.043,.005,mat['trim'],'spine03',width_axis=(0,0,1))
 for z in [1.18,1.22,1.26,1.30,1.34,1.38]:
  for x in [-.12,-.08,-.04,0,.04,.08,.12]:
-  box('Front MOLLE loop',(x,-.179+.35*x*x,z),(.034,.005,.012),mat['trim'],'spine02',.001)
+  box('Front MOLLE loop',(x,-.179+front_shift+.35*x*x+.25*max(0,z-1.28),z),(.034,.005,.012),mat['trim'],'spine02',.001,rotation=(-math.atan(.25)if z>1.28 else 0,0,0))
 # Three double-magazine pouches with flaps, pull tabs and seam binding.
 for x in [-.083,0,.083]:
- box('Double magazine pouch',(x,-.205,1.19),(.075,.070,.145),mat['coyote'],'spine02',.012)
- box('Magazine pouch flap',(x,-.245,1.238),(.073,.009,.050),mat['trim'],'spine02',.006)
- box('Magazine pouch pull tab',(x,-.251,1.205),(.015,.007,.032),mat['coyote'],'spine02',.002)
- cord('Pouch sewn binding',[(x-.029,-.242,1.244),(x-.029,-.243,1.129),(x+.029,-.243,1.129),(x+.029,-.242,1.244)],.0009,mat['thread'],'spine02')
- rod('Pouch snap',(x,-.251,1.221),(x,-.253,1.221),.004,mat['fastener'],'spine02',vertices=10)
+ box('Double magazine pouch',(x,-.205+front_shift,1.19),(.075,.070,.145),mat['coyote'],'spine02',.012)
+ box('Magazine pouch flap',(x,-.245+front_shift,1.238),(.073,.009,.050),mat['trim'],'spine02',.006)
+ box('Magazine pouch pull tab',(x,-.251+front_shift,1.205),(.015,.007,.032),mat['coyote'],'spine02',.002)
+ cord('Pouch sewn binding',[(x-.029,-.242+front_shift,1.244),(x-.029,-.243+front_shift,1.129),(x+.029,-.243+front_shift,1.129),(x+.029,-.242+front_shift,1.244)],.0009,mat['thread'],'spine02')
+ rod('Pouch snap',(x,-.251+front_shift,1.221),(x,-.253+front_shift,1.221),.004,mat['fastener'],'spine02',vertices=10)
 for side in [-1,1]:
  box('Belt utility pouch',(side*.16,-.052,1.015),(.079,.092,.10),mat['coyote'],'root',.016)
  box('Utility pouch flap',(side*.16,-.101,1.044),(.074,.012,.046),mat['trim'],'root',.008)
@@ -173,6 +193,7 @@ box('Left radio pouch',(-.214,.047,1.282),(.060,.074,.150),mat['trim'],'spine02'
 box('Radio housing',(-.214,.047,1.315),(.047,.058,.155),mat['rubber'],'spine02',.006)
 cord('Flexible radio antenna',[(-.214,.058,1.39),(-.22,.063,1.55),(-.23,.075,1.72)],.0035,mat['rubber'],'spine02')
 # Assault pack: soft rounded volumes, compression straps and zip tracks.
+pack_start=len(M.CHAR)
 box('Assault pack main', (0,.245,1.265),(.263,.176,.36),mat['coyote'],'spine02',.036)
 box('Pack lower pocket',(0,.352,1.19),(.203,.075,.155),mat['coyote'],'spine02',.022)
 box('Pack upper pocket',(0,.343,1.365),(.198,.052,.095),mat['coyote'],'spine02',.018)
@@ -187,6 +208,11 @@ for sx in [-1,1]:
  cord('Pack zipper pull',[(sx*.108,.326,1.437),(sx*.111,.344,1.412),(sx*.119,.345,1.424),(sx*.108,.326,1.437)],.0015,mat['trim'],'spine02')
  cord('Pack pocket stitched outline',[(sx*.084,.387,1.256),(sx*.092,.39,1.245),(sx*.092,.39,1.133),(sx*.08,.388,1.121)],.001,mat['thread'],'spine02')
 ribbon('Pack lift handle',[(-.043,.288,1.442),(-.033,.279,1.475),(.033,.279,1.475),(.043,.288,1.442)],.014,.004,mat['trim'],'spine02',width_axis=(0,1,0))
+for ob in M.CHAR[pack_start:]:ob.location.y+=pack_shift
+for x in [-.09,.09]:
+ for z in [1.18,1.37]:
+  plate_y=.176+rear_shift-.30*x*x-.09*max(0,z-1.28);pack_y=.157+pack_shift
+  ribbon('Pack MOLLE attachment tab',[(x,plate_y-.002,z+.014),(x,pack_y+.003,z+.014),(x,pack_y+.003,z-.014),(x,plate_y-.002,z-.014)],.024,.003,mat['trim'],'spine02')
 # Helmet dome has physical thickness and an ear/back skirt with a forward brow.
 hc=Vector((0,.014,1.705));rx,ry,rz=.113,.139,.12;segments=48;rings=12;verts=[]
 for inner in [False,True]:
@@ -313,8 +339,8 @@ for side in ['L','R']:
  # Knuckle pad, gloved hand anatomy already has five separate articulated fingers.
  hand=joint(rigdata['bones']['wrist.'+side]['tail']);box('Glove dorsal reinforcement',(hand.x,hand.y+.009,hand.z),(.043,.012,.043),mat['trim'],'wrist.'+side,.008)
 # Sewn USMC tape on upper carrier. Actual mesh lettering, not a pasted sprite.
-box('Carrier identification tape',(0,-.181,1.402),(.093,.004,.021),mat['trim'],'spine02',.002)
-bpy.ops.object.text_add(location=(-.033,-.185,1.395),rotation=(math.pi/2,0,0));text=bpy.context.object;text.data.body='USMC';text.data.size=.016;text.data.extrude=.00015;text.data.align_x='LEFT';bpy.ops.object.convert(target='MESH');M.tag(bpy.context.object,'USMC sewn tape lettering',mat['thread'],'spine02')
+box('Carrier identification tape',(0,-.181+front_shift+.25*.122,1.402),(.093,.004,.021),mat['trim'],'spine02',.002,rotation=(-math.atan(.25),0,0))
+bpy.ops.object.text_add(location=(-.033,-.185+front_shift+.25*.115,1.395),rotation=(math.pi/2-math.atan(.25),0,0));text=bpy.context.object;text.data.body='USMC';text.data.size=.016;text.data.extrude=.00015;text.data.align_x='LEFT';bpy.ops.object.convert(target='MESH');M.tag(bpy.context.object,'USMC sewn tape lettering',mat['thread'],'spine02')
 # Build one separately named rifle mesh, fixed A2 stock, long quad rail and ACOG-style optic.
 w=lambda *args,**kw:box(*args,weapon=True,**kw)
 def receiver_profile(name,profile,width):
