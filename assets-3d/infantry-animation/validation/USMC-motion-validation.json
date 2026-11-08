@@ -1,0 +1,214 @@
+{
+  "faction": "USMC",
+  "loop_endpoint_max_curve_deltas": {
+    "Lower_Idle": 0.0,
+    "Lower_AimStance": 0.0,
+    "Lower_Walk": 0.0,
+    "Lower_Sprint": 0.0,
+    "Lower_AimWalk": 0.0,
+    "Upper_LowReady": 0.0,
+    "Upper_Sprint": 0.0,
+    "Upper_Aim": 0.0
+  },
+  "planted_foot_checks": {
+    "Walk": {
+      "samples": 35,
+      "max_planted_support_vertex_world_velocity_residual_mps": 8.835208257998631e-06,
+      "speed_mps": 1.05,
+      "duration": 1.2
+    },
+    "Sprint": {
+      "samples": 10,
+      "max_planted_support_vertex_world_velocity_residual_mps": 6.922618364387908e-06,
+      "speed_mps": 3,
+      "duration": 0.8
+    },
+    "AimWalk": {
+      "samples": 42,
+      "max_planted_support_vertex_world_velocity_residual_mps": 7.793764493784644e-06,
+      "speed_mps": 0.62,
+      "duration": 1.2
+    }
+  },
+  "contact_transitions": {
+    "Start_Walk": {
+      "max_endpoint_matrix_error": 2.209097146987915e-06,
+      "support_vertex_samples": 16,
+      "max_planted_world_velocity_residual_mps": 2.664215699987351e-05,
+      "root_travel_m": 0.23939996026456356
+    },
+    "Stop_Walk": {
+      "max_endpoint_matrix_error": 6.288290023803711e-06,
+      "support_vertex_samples": 17,
+      "max_planted_world_velocity_residual_mps": 2.6402625415312016e-05,
+      "root_travel_m": 0.3906000182032585
+    },
+    "Walk_To_Sprint": {
+      "max_endpoint_matrix_error": 2.1979212760925293e-06,
+      "support_vertex_samples": 12,
+      "max_planted_world_velocity_residual_mps": 7.416510881830894e-06,
+      "root_travel_m": 1.62
+    },
+    "Sprint_To_Walk": {
+      "max_endpoint_matrix_error": 6.9141387939453125e-06,
+      "support_vertex_samples": 11,
+      "max_planted_world_velocity_residual_mps": 9.78303968411633e-06,
+      "root_travel_m": 1.62
+    },
+    "Sprint_Stop": {
+      "max_endpoint_matrix_error": 2.130866050720215e-06,
+      "support_vertex_samples": 15,
+      "max_planted_world_velocity_residual_mps": 1.0222295175154116e-05,
+      "root_travel_m": 1.2000000000000002
+    }
+  },
+  "turn_orientation_commit_endpoint_errors": {
+    "Turn_Left": 7.510185241699219e-06,
+    "Turn_Right": 7.510185241699219e-06
+  },
+  "moving_fire_lower_body_matrix_deltas": [
+    1.7881393432617188e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.1920928955078125e-07,
+    1.7881393432617188e-07
+  ],
+  "aim_and_recoil_palm_contacts": [
+    {
+      "time": 0,
+      "recoil_time": null,
+      "right_palm_error_m": 8.965497587019994e-07,
+      "left_palm_error_m": 2.0609442611606275e-06
+    },
+    {
+      "time": 0,
+      "recoil_time": 0.03333333333333333,
+      "right_palm_error_m": 8.024520884654677e-07,
+      "left_palm_error_m": 2.3023137945923765e-06
+    },
+    {
+      "time": 0,
+      "recoil_time": 0.06666666666666667,
+      "right_palm_error_m": 8.112584107408642e-07,
+      "left_palm_error_m": 2.044027102907547e-06
+    },
+    {
+      "time": 0.2,
+      "recoil_time": null,
+      "right_palm_error_m": 7.897615432739258e-07,
+      "left_palm_error_m": 2.7369604131046705e-06
+    },
+    {
+      "time": 0.2,
+      "recoil_time": 0.03333333333333333,
+      "right_palm_error_m": 7.952600492780461e-07,
+      "left_palm_error_m": 1.283138159771669e-05
+    },
+    {
+      "time": 0.2,
+      "recoil_time": 0.06666666666666667,
+      "right_palm_error_m": 8.97323380175394e-07,
+      "left_palm_error_m": 6.060186339171478e-06
+    },
+    {
+      "time": 0.6,
+      "recoil_time": null,
+      "right_palm_error_m": 8.199701602576735e-07,
+      "left_palm_error_m": 2.6341358847451858e-06
+    },
+    {
+      "time": 0.6,
+      "recoil_time": 0.03333333333333333,
+      "right_palm_error_m": 8.441215180318682e-07,
+      "left_palm_error_m": 2.5432664637231112e-05
+    },
+    {
+      "time": 0.6,
+      "recoil_time": 0.06666666666666667,
+      "right_palm_error_m": 8.053522775692737e-07,
+      "left_palm_error_m": 1.130463264556987e-05
+    },
+    {
+      "time": 1.0,
+      "recoil_time": null,
+      "right_palm_error_m": 7.754332918678336e-07,
+      "left_palm_error_m": 2.8576934739548316e-06
+    },
+    {
+      "time": 1.0,
+      "recoil_time": 0.03333333333333333,
+      "right_palm_error_m": 7.014633593523395e-07,
+      "left_palm_error_m": 1.2796280533831697e-05
+    },
+    {
+      "time": 1.0,
+      "recoil_time": 0.06666666666666667,
+      "right_palm_error_m": 7.913063792795988e-07,
+      "left_palm_error_m": 6.093700469782524e-06
+    }
+  ],
+  "reload_handoffs": [
+    {
+      "fraction": 0.3,
+      "held": "Magazine",
+      "left_palm_contact_error_m": 2.1849518340319092e-06,
+      "weapon_relative_translation_m": [
+        -6.51925802230835e-08,
+        6.332993507385254e-08,
+        -0.04480922967195511
+      ]
+    },
+    {
+      "fraction": 0.4,
+      "held": "Magazine",
+      "left_palm_contact_error_m": 1.8230681622763522e-06,
+      "weapon_relative_translation_m": [
+        0.042887285351753235,
+        0.014390632510185242,
+        -0.1261581927537918
+      ]
+    },
+    {
+      "fraction": 0.65,
+      "held": "SpareMagazine",
+      "left_palm_contact_error_m": 3.2322899409062616e-06,
+      "weapon_relative_translation_m": [
+        0.18320326507091522,
+        0.061472609639167786,
+        -0.1368570327758789
+      ]
+    },
+    {
+      "fraction": 0.78,
+      "held": "SpareMagazine",
+      "left_palm_contact_error_m": 2.2767589468309676e-06,
+      "weapon_relative_translation_m": [
+        -8.195638656616211e-08,
+        4.842877388000488e-08,
+        -0.050935812294483185
+      ]
+    },
+    {
+      "fraction": 0.86,
+      "held": "SpareMagazine",
+      "left_palm_contact_error_m": 0.017595523125843004,
+      "weapon_relative_translation_m": [
+        -8.940696716308594e-08,
+        3.725290298461914e-09,
+        -6.984919309616089e-08
+      ]
+    }
+  ],
+  "max_ik_wrist_error_m": 3.819467311494439e-07,
+  "skin_repair": {
+    "boot_upper_vertices_reweighted": 2032,
+    "uniform_vertices": 8427,
+    "shoulder_collar_vertices_reweighted": 3003,
+    "smoothing_iterations": 16,
+    "scope": "clothing component shoulder/axilla/collar only; original sources untouched"
+  },
+  "limitations": [
+    "Flat-contact intervals are tested against authored travel speed; heel/toe roll and starts/stops need separate biomechanical judgement.",
+    "Nearest contact anchors do not prove collision-free finger volumes."
+  ]
+}

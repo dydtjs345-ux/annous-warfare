@@ -1,0 +1,37 @@
+/* Validate real WebGL playback, directional rotation and independent firing. */
+const {chromium}=require('playwright');const fs=require('node:fs/promises');const path=require('node:path');const assert=require('node:assert/strict');const crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),review=path.join(root,'review');
+(async()=>{await fs.mkdir(path.join(review,'directions'),{recursive:true});await fs.mkdir('/tmp/aw-moving-fire-frames',{recursive:true});
+ const browser=await chromium.launch({executablePath:process.env.AW_CHROMIUM||'/usr/bin/chromium',headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader']});
+ const page=await browser.newPage({viewport:{width:1240,height:920},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ const assetHashes={};for(const faction of ['USMC','Russian'])assetHashes[faction]=crypto.createHash('sha256').update(await fs.readFile(path.join(root,'models',`${faction}_Animated.glb`))).digest('hex');
+ await page.goto(process.env.AW_PREVIEW_URL||'http://127.0.0.1:8765/preview/');await page.waitForFunction(()=>window.review,{timeout:120000});await page.evaluate(()=>window.review.pause());
+ const restart=async state=>{await page.evaluate(s=>window.review.setState(s),state);await page.locator('#restart').click();await page.evaluate(()=>window.review.step(0));};
+ await restart('AimWalk');await page.evaluate(()=>window.review.step(.37));const before=await page.evaluate(()=>window.review.snapshot());await page.evaluate(()=>window.review.setState('MovingFire'));const after=await page.evaluate(()=>window.review.snapshot());
+ for(let i=0;i<2;i++)assert.equal(before[i].gaitTime,after[i].gaitTime,'Firing restarted the walk');
+ for(let i=0;i<24;i++)await page.evaluate(()=>window.review.step(1/30));const during=await page.evaluate(()=>window.review.snapshot());
+ for(let i=0;i<2;i++){assert.ok(during[i].shots>=5,'Repeated recoil missing');assert.ok(Math.abs(during[i].gaitTime-((.37+.8)%1.2))<1e-5);}
+ await page.locator('#fire').click();const stoppedAt=await page.evaluate(()=>window.review.snapshot());for(let i=0;i<12;i++)await page.evaluate(()=>window.review.step(1/30));const recovered=await page.evaluate(()=>window.review.snapshot());
+ for(let i=0;i<2;i++){assert.equal(recovered[i].shots,stoppedAt[i].shots);assert.ok(Math.abs(recovered[i].gaitTime-((.37+1.2)%1.2))<1e-5);}
+ const activeAfterRecovery=await page.evaluate(()=>window.review.actors.map(a=>a.recoil.filter(s=>s.isRunning()).length));assert.deepEqual(activeAfterRecovery,[0,0]);
+ const transitionChecks=[];
+ for(const [state,expected,T]of [['Start','Lower_Walk',.6],['Stop','Lower_Idle',.6],['Accelerate','Lower_Sprint',.8],['Decelerate','Lower_Walk',.8],['SprintStop','Lower_Idle',.8]]){
+  await restart(state);for(let i=0;i<Math.ceil((T+.12)*30);i++)await page.evaluate(()=>window.review.step(1/30));const result=await page.evaluate(()=>window.review.snapshot());assert.ok(result.every(a=>a.lower===expected));transitionChecks.push({state,result});
+ }
+ await page.selectOption('#direction','SE');await restart('TurnLeft');for(let i=0;i<26;i++)await page.evaluate(()=>window.review.step(1/30));
+ const feet=()=>window.review.actors.map(a=>{a.assembly.updateMatrixWorld(true);let mesh;a.model.traverse(o=>{if(o.isSkinnedMesh)mesh=o;});return mesh.skeleton.bones.filter(b=>b.name.replaceAll('.','').match(/^foot[LR]$/)).map(b=>{const e=b.matrixWorld.elements;return [e[12],e[13],e[14]];});});
+ const turnBefore=await page.evaluate(feet);await page.evaluate(()=>window.review.step(1/30));const turnAfter=await page.evaluate(feet);let turnFootJump=0;for(let i=0;i<2;i++)for(let j=0;j<2;j++)turnFootJump=Math.max(turnFootJump,Math.hypot(...turnAfter[i][j].map((x,k)=>x-turnBefore[i][j][k])));assert.ok(turnFootJump<.01,'Turn completion moved planted feet');
+ const states=['Idle','Walk','Sprint','Raise','Lower','Aim','Fire','AimWalk','MovingFire','Reload','Start','Stop','Accelerate','Decelerate','SprintStop','TurnLeft','TurnRight'];const stateChecks=[];
+ for(const state of states){await restart(state);for(let i=0;i<6;i++)await page.evaluate(()=>window.review.step(1/30));const result=await page.evaluate(()=>window.review.actors.map(a=>({faction:a.faction,missing:a.missing,lower:a.lower.getClip().name,upper:a.upper.getClip().name})));assert.ok(result.every(a=>!a.missing));stateChecks.push({state,actors:result});}
+ await restart('Reload');for(let i=0;i<126;i++)await page.evaluate(()=>window.review.step(1/30));const reloadFinish=await page.evaluate(()=>window.review.actors.map(a=>({upper:a.upper.getClip().name,magazineScale:a.model.getObjectByName('Magazine').scale.toArray(),spareScale:a.model.getObjectByName('SpareMagazine').scale.toArray()})));assert.ok(reloadFinish.every(a=>a.upper==='Upper_Aim'&&a.magazineScale.every(x=>Math.abs(x-1)<1e-6)&&a.spareScale.every(x=>Math.abs(x-.001)<1e-6)));
+ await restart('MovingFire');for(let i=0;i<10;i++)await page.evaluate(()=>window.review.step(1/30));
+ for(const d of ['N','NE','E','SE','S','SW','W','NW']){await page.selectOption('#direction',d);await page.evaluate(()=>window.review.step(0));await page.locator('#panels').screenshot({path:path.join(review,'directions',`${d}.png`)});}
+ for(const h of ['60','80','120']){await page.selectOption('#height',h);await page.evaluate(()=>window.review.step(0));await page.screenshot({path:path.join(review,`preview-${h}px.png`)});}
+ await page.selectOption('#direction','SE');await restart('MovingFire');
+ for(let i=0;i<144;i++){await page.evaluate(()=>window.review.step(1/30));await page.locator('#panels').screenshot({path:`/tmp/aw-moving-fire-frames/frame-${String(i).padStart(4,'0')}.png`});}
+ // Contact sheets from real animated frames, with a larger inspection view for hands.
+ await page.evaluate(()=>{const s=document.querySelector('#height');s.add(new Option('300 · detail','300'));s.value='300';s.dispatchEvent(new Event('change'));});
+ const captures=[];for(const [state,times]of [['Walk',[0,.3,.6,.9]],['Sprint',[0,.2,.4,.6]],['Raise',[0,.2,.4,.7]],['Fire',[0,.033,.066,.13]],['AimWalk',[0,.3,.6,.9]],['MovingFire',[0,.3,.6,.9]],['Reload',[0,.7,1.3,2,2.8,3.3]]]){await restart(state);let previous=0;for(let i=0;i<times.length;i++){let dt=times[i]-previous;while(dt>1e-6){const step=Math.min(dt,1/30);await page.evaluate(d=>window.review.step(d),step);dt-=step;}previous=times[i];const file=`detail-${state}-${i}.png`;await page.locator('#panels').screenshot({path:path.join(review,file)});captures.push({state,time:times[i],file});}}
+ await page.setViewportSize({width:390,height:844});await page.selectOption('#height','80');await page.evaluate(()=>window.review.step(0));await page.screenshot({path:path.join(review,'mobile-80px.png'),fullPage:true});
+ assert.deepEqual(errors,[]);const report={reloadFinish,assetHashes,transitionChecks,turnCompletionMaxFootJumpMetres:turnFootJump,browser:'Chromium / Playwright',errors,movingFire:{before,after,during,stoppedAt,recovered,activeRecoilActionsAfterRecovery:activeAfterRecovery,lowerCyclePreserved:true,repeatedRecoil:true},states:stateChecks,directions:['N','NE','E','SE','S','SW','W','NW'],sizes:[60,80,120],detailCaptures:captures,videoFrames:144,videoFps:30};await fs.writeFile(path.join(root,'validation','browser-review.json'),JSON.stringify(report,null,2)+'\n');await browser.close();console.log('BROWSER_ANIMATION_REVIEW_PASS');
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,225 @@
+{
+  "blender": "4.3.2",
+  "isolated_imports": [
+    {
+      "file": "USMC_Animated.glb",
+      "sha256": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
+      "bones": 163,
+      "meshes": 4,
+      "decoded_images": 6,
+      "clips": [
+        {
+          "name": "Reload",
+          "duration_seconds": 3.4
+        },
+        {
+          "name": "Recoil_Shot",
+          "duration_seconds": 0.2
+        },
+        {
+          "name": "Upper_Aim",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Weapon_Lower",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Weapon_Raise",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Upper_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Upper_LowReady",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Upper_Turn_Right",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Upper_Turn_Left",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Turn_Right",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Turn_Left",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Sprint_Stop",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Sprint_To_Walk",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Walk_To_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Stop_Walk",
+          "duration_seconds": 0.6
+        },
+        {
+          "name": "Start_Walk",
+          "duration_seconds": 0.6
+        },
+        {
+          "name": "Lower_AimWalk",
+          "duration_seconds": 1.2
+        },
+        {
+          "name": "Lower_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Lower_Walk",
+          "duration_seconds": 1.2
+        },
+        {
+          "name": "Lower_AimStance",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Lower_Idle",
+          "duration_seconds": 2.4
+        }
+      ],
+      "max_source_joint_and_weapon_position_error_m": 2.7191471381446705e-05,
+      "passed": true
+    },
+    {
+      "file": "USMC_MovingFire.fbx",
+      "sha256": "8b238327e468af0986b781630b436bcfec5c13cd3d7b2b6a38971d3c740e3efb",
+      "bones": 163,
+      "meshes": 4,
+      "decoded_images": 10,
+      "clips": [
+        {
+          "name": "InfantryRig|Scene",
+          "duration_seconds": 7.2
+        }
+      ],
+      "max_source_joint_and_weapon_position_error_m": 2.7288546577055724e-05,
+      "passed": true
+    },
+    {
+      "file": "Russian_Animated.glb",
+      "sha256": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0",
+      "bones": 163,
+      "meshes": 4,
+      "decoded_images": 6,
+      "clips": [
+        {
+          "name": "Reload",
+          "duration_seconds": 3.8
+        },
+        {
+          "name": "Recoil_Shot",
+          "duration_seconds": 0.2
+        },
+        {
+          "name": "Upper_Aim",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Weapon_Lower",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Weapon_Raise",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Upper_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Upper_LowReady",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Upper_Turn_Right",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Upper_Turn_Left",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Turn_Right",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Turn_Left",
+          "duration_seconds": 0.9
+        },
+        {
+          "name": "Sprint_Stop",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Sprint_To_Walk",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Walk_To_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Stop_Walk",
+          "duration_seconds": 0.6
+        },
+        {
+          "name": "Start_Walk",
+          "duration_seconds": 0.6
+        },
+        {
+          "name": "Lower_AimWalk",
+          "duration_seconds": 1.2
+        },
+        {
+          "name": "Lower_Sprint",
+          "duration_seconds": 0.8
+        },
+        {
+          "name": "Lower_Walk",
+          "duration_seconds": 1.2
+        },
+        {
+          "name": "Lower_AimStance",
+          "duration_seconds": 2.4
+        },
+        {
+          "name": "Lower_Idle",
+          "duration_seconds": 2.4
+        }
+      ],
+      "max_source_joint_and_weapon_position_error_m": 2.7191471381446705e-05,
+      "passed": true
+    },
+    {
+      "file": "Russian_MovingFire.fbx",
+      "sha256": "a28b4aa540a888075b5c0ce0ec550b1e39791876b85dcac961a9c3a356ff70dc",
+      "bones": 163,
+      "meshes": 4,
+      "decoded_images": 10,
+      "clips": [
+        {
+          "name": "InfantryRig|Scene",
+          "duration_seconds": 7.2
+        }
+      ],
+      "max_source_joint_and_weapon_position_error_m": 2.7288546577055724e-05,
+      "passed": true
+    }
+  ]
+}

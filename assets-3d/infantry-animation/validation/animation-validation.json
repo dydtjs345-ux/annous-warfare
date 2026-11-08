@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "base_commit": "1ab40c26b6e02fedd161b7711ecec1e7ecef71dd",
+  "branch": "feat/shared-infantry-combat-animation",
+  "main_commit_unchanged": "b381e6017d01fa34f14e889ff639347db9e5feae",
+  "original_model_files_verified_against_git_blobs": 258,
+  "changed_original_model_files": [],
+  "tracked_changes_outside_new_asset_directory": [],
+  "shared_skeleton_bones": 163,
+  "identical_lower_actions": 12,
+  "reusable_glb_clips_per_faction": 21,
+  "animated_reimports_passed": 4,
+  "max_reimport_joint_weapon_and_surface_error_m": 2.7288546577055724e-05,
+  "max_contact_transition_support_velocity_residual_mps": 2.664215699987351e-05,
+  "moving_fire_lower_body_unchanged_by_recoil": true,
+  "browser_fire_preserves_gait_phase": true,
+  "browser_turn_completion_foot_jump_m": 4.819365263781652e-06,
+  "browser_errors": [],
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1192,
+        "height": 454,
+        "nb_frames": "144"
+      }
+    ],
+    "format": {
+      "duration": "4.800000"
+    }
+  },
+  "required_files_present": 40,
+  "largest_file": "source/Russian_Animation.blend",
+  "largest_file_bytes": 34726568,
+  "payload_bytes_before_final_manifest_and_checksums": 123699549,
+  "per_file_github_limit_pass": true,
+  "known_limits": [
+    "No battle renderer, AI or gameplay integration.",
+    "Reloads are tactical magazine exchanges; internal bolt/trigger parts are not articulated.",
+    "Slope adaptation, foot terrain IK and locomotion at arbitrary speeds are not validated.",
+    "FBX files contain a flattened moving-fire take; all reusable layers are in GLB and Blender."
+  ]
+}

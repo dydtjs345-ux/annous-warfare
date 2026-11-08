@@ -1,0 +1,782 @@
+{
+  "reloadFinish": [
+    {
+      "upper": "Upper_Aim",
+      "magazineScale": [
+        1,
+        1,
+        1
+      ],
+      "spareScale": [
+        0.0010000000474974513,
+        0.0009999999310821295,
+        0.0009999998146668077
+      ]
+    },
+    {
+      "upper": "Upper_Aim",
+      "magazineScale": [
+        1,
+        1,
+        1
+      ],
+      "spareScale": [
+        0.0010000001639127731,
+        0.001000000280328095,
+        0.001000000280328095
+      ]
+    }
+  ],
+  "assetHashes": {
+    "USMC": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
+    "Russian": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0"
+  },
+  "transitionChecks": [
+    {
+      "state": "Start",
+      "result": [
+        {
+          "faction": "USMC",
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333333,
+          "shots": 0,
+          "weaponPosition": [
+            0.30009066710719884,
+            1.0939244565919564,
+            0.09262159495328742
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333333,
+          "shots": 0,
+          "weaponPosition": [
+            0.3000908913825274,
+            1.0939242628256953,
+            0.09262169388953437
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Stop",
+      "result": [
+        {
+          "faction": "USMC",
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333333,
+          "shots": 0,
+          "weaponPosition": [
+            0.29527818993988186,
+            1.159356192098623,
+            0.10928167096039065
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333333,
+          "shots": 0,
+          "weaponPosition": [
+            0.2952784162096114,
+            1.1593560011120971,
+            0.10928177075628816
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Accelerate",
+      "result": [
+        {
+          "faction": "USMC",
+          "lower": "Lower_Sprint",
+          "upper": "Upper_Sprint",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.30460635837260613,
+            1.0550409176185043,
+            0.09021812063224662
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "Lower_Sprint",
+          "upper": "Upper_Sprint",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.3046065524585394,
+            1.0550413982909703,
+            0.09021829201373367
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Decelerate",
+      "result": [
+        {
+          "faction": "USMC",
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.3000752490036661,
+            1.093479263051856,
+            0.09262475461960565
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.30007536072932167,
+            1.093479140041961,
+            0.09262473834827754
+          ]
+        }
+      ]
+    },
+    {
+      "state": "SprintStop",
+      "result": [
+        {
+          "faction": "USMC",
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.29526941562283165,
+            1.1589108030293425,
+            0.10928205953361282
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady",
+          "gaitTime": 0.1333333333333332,
+          "shots": 0,
+          "weaponPosition": [
+            0.2952695293175729,
+            1.1589106818003607,
+            0.10928204353917191
+          ]
+        }
+      ]
+    }
+  ],
+  "turnCompletionMaxFootJumpMetres": 0.000004819365263781652,
+  "browser": "Chromium / Playwright",
+  "errors": [],
+  "movingFire": {
+    "before": [
+      {
+        "faction": "USMC",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.37,
+        "shots": 0,
+        "weaponPosition": [
+          0.40030679704021765,
+          1.309328949741529,
+          0.08186699156473345
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.37,
+        "shots": 0,
+        "weaponPosition": [
+          0.4087583119430751,
+          1.3421758524755822,
+          0.08023115554523508
+        ]
+      }
+    ],
+    "after": [
+      {
+        "faction": "USMC",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.37,
+        "shots": 0,
+        "weaponPosition": [
+          0.40030679704021765,
+          1.309328949741529,
+          0.08186699156473345
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.37,
+        "shots": 0,
+        "weaponPosition": [
+          0.4087583119430751,
+          1.3421758524755822,
+          0.08023115554523508
+        ]
+      }
+    ],
+    "during": [
+      {
+        "faction": "USMC",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 1.1700000000000004,
+        "shots": 5,
+        "weaponPosition": [
+          0.39978871877815997,
+          1.3150319547057985,
+          0.1192860637658778
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 1.1700000000000004,
+        "shots": 5,
+        "weaponPosition": [
+          0.4082916037122422,
+          1.3478829528430318,
+          0.11804862727509674
+        ]
+      }
+    ],
+    "stoppedAt": [
+      {
+        "faction": "USMC",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 1.1700000000000004,
+        "shots": 5,
+        "weaponPosition": [
+          0.39978871877815997,
+          1.3150319547057985,
+          0.1192860637658778
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 1.1700000000000004,
+        "shots": 5,
+        "weaponPosition": [
+          0.4082916037122422,
+          1.3478829528430318,
+          0.11804862727509674
+        ]
+      }
+    ],
+    "recovered": [
+      {
+        "faction": "USMC",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.36999995231628463,
+        "shots": 5,
+        "weaponPosition": [
+          0.40230442757122825,
+          1.306566929516043,
+          0.0821300106820269
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "Lower_AimWalk",
+        "upper": "Upper_Aim",
+        "gaitTime": 0.36999995231628463,
+        "shots": 5,
+        "weaponPosition": [
+          0.41075608138547476,
+          1.3394136427366372,
+          0.08049427953771661
+        ]
+      }
+    ],
+    "activeRecoilActionsAfterRecovery": [
+      0,
+      0
+    ],
+    "lowerCyclePreserved": true,
+    "repeatedRecoil": true
+  },
+  "states": [
+    {
+      "state": "Idle",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_Idle",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "Walk",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_Walk",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "Sprint",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_Sprint",
+          "upper": "Upper_Sprint"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_Sprint",
+          "upper": "Upper_Sprint"
+        }
+      ]
+    },
+    {
+      "state": "Raise",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Weapon_Raise"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Weapon_Raise"
+        }
+      ]
+    },
+    {
+      "state": "Lower",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Weapon_Lower"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Weapon_Lower"
+        }
+      ]
+    },
+    {
+      "state": "Aim",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Upper_Aim"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Upper_Aim"
+        }
+      ]
+    },
+    {
+      "state": "Fire",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Upper_Aim"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Upper_Aim"
+        }
+      ]
+    },
+    {
+      "state": "AimWalk",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimWalk",
+          "upper": "Upper_Aim"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimWalk",
+          "upper": "Upper_Aim"
+        }
+      ]
+    },
+    {
+      "state": "MovingFire",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimWalk",
+          "upper": "Upper_Aim"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimWalk",
+          "upper": "Upper_Aim"
+        }
+      ]
+    },
+    {
+      "state": "Reload",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Reload"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Lower_AimStance",
+          "upper": "Reload"
+        }
+      ]
+    },
+    {
+      "state": "Start",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Start_Walk",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Start_Walk",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "Stop",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Stop_Walk",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Stop_Walk",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "Accelerate",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Walk_To_Sprint",
+          "upper": "Upper_Sprint"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Walk_To_Sprint",
+          "upper": "Upper_Sprint"
+        }
+      ]
+    },
+    {
+      "state": "Decelerate",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Sprint_To_Walk",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Sprint_To_Walk",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "SprintStop",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Sprint_Stop",
+          "upper": "Upper_LowReady"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Sprint_Stop",
+          "upper": "Upper_LowReady"
+        }
+      ]
+    },
+    {
+      "state": "TurnLeft",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Turn_Left",
+          "upper": "Upper_Turn_Left"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Turn_Left",
+          "upper": "Upper_Turn_Left"
+        }
+      ]
+    },
+    {
+      "state": "TurnRight",
+      "actors": [
+        {
+          "faction": "USMC",
+          "missing": null,
+          "lower": "Turn_Right",
+          "upper": "Upper_Turn_Right"
+        },
+        {
+          "faction": "Russian",
+          "missing": null,
+          "lower": "Turn_Right",
+          "upper": "Upper_Turn_Right"
+        }
+      ]
+    }
+  ],
+  "directions": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "sizes": [
+    60,
+    80,
+    120
+  ],
+  "detailCaptures": [
+    {
+      "state": "Walk",
+      "time": 0,
+      "file": "detail-Walk-0.png"
+    },
+    {
+      "state": "Walk",
+      "time": 0.3,
+      "file": "detail-Walk-1.png"
+    },
+    {
+      "state": "Walk",
+      "time": 0.6,
+      "file": "detail-Walk-2.png"
+    },
+    {
+      "state": "Walk",
+      "time": 0.9,
+      "file": "detail-Walk-3.png"
+    },
+    {
+      "state": "Sprint",
+      "time": 0,
+      "file": "detail-Sprint-0.png"
+    },
+    {
+      "state": "Sprint",
+      "time": 0.2,
+      "file": "detail-Sprint-1.png"
+    },
+    {
+      "state": "Sprint",
+      "time": 0.4,
+      "file": "detail-Sprint-2.png"
+    },
+    {
+      "state": "Sprint",
+      "time": 0.6,
+      "file": "detail-Sprint-3.png"
+    },
+    {
+      "state": "Raise",
+      "time": 0,
+      "file": "detail-Raise-0.png"
+    },
+    {
+      "state": "Raise",
+      "time": 0.2,
+      "file": "detail-Raise-1.png"
+    },
+    {
+      "state": "Raise",
+      "time": 0.4,
+      "file": "detail-Raise-2.png"
+    },
+    {
+      "state": "Raise",
+      "time": 0.7,
+      "file": "detail-Raise-3.png"
+    },
+    {
+      "state": "Fire",
+      "time": 0,
+      "file": "detail-Fire-0.png"
+    },
+    {
+      "state": "Fire",
+      "time": 0.033,
+      "file": "detail-Fire-1.png"
+    },
+    {
+      "state": "Fire",
+      "time": 0.066,
+      "file": "detail-Fire-2.png"
+    },
+    {
+      "state": "Fire",
+      "time": 0.13,
+      "file": "detail-Fire-3.png"
+    },
+    {
+      "state": "AimWalk",
+      "time": 0,
+      "file": "detail-AimWalk-0.png"
+    },
+    {
+      "state": "AimWalk",
+      "time": 0.3,
+      "file": "detail-AimWalk-1.png"
+    },
+    {
+      "state": "AimWalk",
+      "time": 0.6,
+      "file": "detail-AimWalk-2.png"
+    },
+    {
+      "state": "AimWalk",
+      "time": 0.9,
+      "file": "detail-AimWalk-3.png"
+    },
+    {
+      "state": "MovingFire",
+      "time": 0,
+      "file": "detail-MovingFire-0.png"
+    },
+    {
+      "state": "MovingFire",
+      "time": 0.3,
+      "file": "detail-MovingFire-1.png"
+    },
+    {
+      "state": "MovingFire",
+      "time": 0.6,
+      "file": "detail-MovingFire-2.png"
+    },
+    {
+      "state": "MovingFire",
+      "time": 0.9,
+      "file": "detail-MovingFire-3.png"
+    },
+    {
+      "state": "Reload",
+      "time": 0,
+      "file": "detail-Reload-0.png"
+    },
+    {
+      "state": "Reload",
+      "time": 0.7,
+      "file": "detail-Reload-1.png"
+    },
+    {
+      "state": "Reload",
+      "time": 1.3,
+      "file": "detail-Reload-2.png"
+    },
+    {
+      "state": "Reload",
+      "time": 2,
+      "file": "detail-Reload-3.png"
+    },
+    {
+      "state": "Reload",
+      "time": 2.8,
+      "file": "detail-Reload-4.png"
+    },
+    {
+      "state": "Reload",
+      "time": 3.3,
+      "file": "detail-Reload-5.png"
+    }
+  ],
+  "videoFrames": 144,
+  "videoFps": 30
+}

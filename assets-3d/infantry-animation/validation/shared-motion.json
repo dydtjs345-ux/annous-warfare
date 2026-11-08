@@ -1,0 +1,17 @@
+{
+  "shared_lower_action_hashes": {
+    "Lower_Idle": "b1d07fd853ea4c05ebcf5b011647fde8594d69c0c839f14603b222628b4859b1",
+    "Lower_AimStance": "92b7d2023b19cd686d4a61924e158bc6223fabc6f9cbb5544596f176b316d561",
+    "Lower_Walk": "815683ea3497f7b7cef94b6442eb80e4e0abf8ede7f3ca90dccbee2c47de6ef8",
+    "Lower_Sprint": "b2dfc32ba378a8918361e01f056052d155702e034d5d94b53ee78910356d223b",
+    "Lower_AimWalk": "4735454680ec025a7c2e8f1dafede4412d639dcd893d77f20c239fd8ec67446b",
+    "Start_Walk": "01ad58733d53c9fbfa02bb4955d946246c91f6a28b90323ad2cdb8e8a301efac",
+    "Stop_Walk": "bb9cf9ca0724abf8d16e31f8a1024905ade6865bfe776712c633983eba55967e",
+    "Walk_To_Sprint": "d6658559fadd6471c776f56976e06565be68907732d5c59fab668083423c951c",
+    "Sprint_To_Walk": "c77a2d9aaf6345d390d3095d0fc0bddc5f5b07a535008e779ac1b077378a16a8",
+    "Sprint_Stop": "41b9d8b47cf2aae6b7ac367ec525a613fd89fdb15791130303c9ef65f30fa45d",
+    "Turn_Left": "46d0155011daccc628a9309551c1a2925ddb1140be81f4866cf80dedf7a82900",
+    "Turn_Right": "2298e90d43b15bb565bc3b76c825d95e918745f8610b00a640266d0e67f4be37"
+  },
+  "exactly_equal_between_factions": true
+}

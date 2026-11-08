@@ -1,0 +1,1 @@
+{"name":"autonomous-warfare-infantry-animation-tools","private":true,"type":"module","dependencies":{"gltf-validator":"2.0.0-dev.3.10","three":"0.170.0"},"devDependencies":{"playwright":"1.62.1"}}

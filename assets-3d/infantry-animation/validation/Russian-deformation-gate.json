@@ -1,0 +1,228 @@
+{
+  "faction": "Russian",
+  "blender": "4.3.2",
+  "samples": [
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.0,
+      "edge_stretch_p99": 1.3281999439517724,
+      "max_edge_stretch": 6.532209692812224,
+      "right_palm_weapon_error_m": 8.206468709119775e-07,
+      "minimum_vertex_z": 0.002999984659254551
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.15,
+      "edge_stretch_p99": 1.342652655141599,
+      "max_edge_stretch": 6.535548458722565,
+      "right_palm_weapon_error_m": 8.530182708121366e-07,
+      "minimum_vertex_z": 0.0018749237060546875
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.3,
+      "edge_stretch_p99": 1.3502655088911044,
+      "max_edge_stretch": 6.538489398129183,
+      "right_palm_weapon_error_m": 8.397700073483808e-07,
+      "minimum_vertex_z": 0.0030001376289874315
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.44999999999999996,
+      "edge_stretch_p99": 1.3898731653601177,
+      "max_edge_stretch": 6.540401629616124,
+      "right_palm_weapon_error_m": 8.751181876674904e-07,
+      "minimum_vertex_z": 0.0027744174003601074
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.6,
+      "edge_stretch_p99": 1.3292631857664943,
+      "max_edge_stretch": 6.541095172393672,
+      "right_palm_weapon_error_m": 8.287242985656459e-07,
+      "minimum_vertex_z": 0.00299997441470623
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.75,
+      "edge_stretch_p99": 1.3427550804471051,
+      "max_edge_stretch": 6.540384309172815,
+      "right_palm_weapon_error_m": 8.36192837154758e-07,
+      "minimum_vertex_z": 0.0018749386072158813
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 0.8999999999999999,
+      "edge_stretch_p99": 1.348712981683642,
+      "max_edge_stretch": 6.538506755381892,
+      "right_palm_weapon_error_m": 7.755764531894389e-07,
+      "minimum_vertex_z": 0.003000110387802124
+    },
+    {
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "time": 1.05,
+      "edge_stretch_p99": 1.3892087976236691,
+      "max_edge_stretch": 6.535572025583003,
+      "right_palm_weapon_error_m": 7.755764531894389e-07,
+      "minimum_vertex_z": 0.0027744509279727936
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.0,
+      "edge_stretch_p99": 1.343206357702353,
+      "max_edge_stretch": 5.397335750481397,
+      "right_palm_weapon_error_m": 8.280541890531661e-07,
+      "minimum_vertex_z": 0.0030001280829310417
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.1,
+      "edge_stretch_p99": 1.4128061177199118,
+      "max_edge_stretch": 5.395313380209424,
+      "right_palm_weapon_error_m": 8.409590160562076e-07,
+      "minimum_vertex_z": 0.003000128548592329
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.2,
+      "edge_stretch_p99": 1.4535068056681972,
+      "max_edge_stretch": 5.394471606734572,
+      "right_palm_weapon_error_m": 8.686559035006253e-07,
+      "minimum_vertex_z": 0.0029999613761901855
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.30000000000000004,
+      "edge_stretch_p99": 1.3893028080653913,
+      "max_edge_stretch": 5.395313380209424,
+      "right_palm_weapon_error_m": 8.409590160562076e-07,
+      "minimum_vertex_z": 0.0030000656843185425
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.4,
+      "edge_stretch_p99": 1.343206357702353,
+      "max_edge_stretch": 5.397335750481397,
+      "right_palm_weapon_error_m": 8.280541890531661e-07,
+      "minimum_vertex_z": 0.0030000070109963417
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.5,
+      "edge_stretch_p99": 1.4114721066655802,
+      "max_edge_stretch": 5.399617980089867,
+      "right_palm_weapon_error_m": 8.264437093652515e-07,
+      "minimum_vertex_z": 0.003000016091391444
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.6000000000000001,
+      "edge_stretch_p99": 1.4528639607642213,
+      "max_edge_stretch": 5.400517646673062,
+      "right_palm_weapon_error_m": 9.546051846770623e-07,
+      "minimum_vertex_z": 0.0029999613761901855
+    },
+    {
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "time": 0.7000000000000001,
+      "edge_stretch_p99": 1.3918679621412113,
+      "max_edge_stretch": 5.399617980089867,
+      "right_palm_weapon_error_m": 8.264437093652515e-07,
+      "minimum_vertex_z": 0.003000110387802124
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.0,
+      "edge_stretch_p99": 1.3754420838787784,
+      "max_edge_stretch": 7.52496264301304,
+      "right_palm_weapon_error_m": 8.221336736758782e-07,
+      "minimum_vertex_z": 0.0029999911785125732
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.15,
+      "edge_stretch_p99": 1.377930984574561,
+      "max_edge_stretch": 7.520946097366396,
+      "right_palm_weapon_error_m": 8.052488792493428e-07,
+      "minimum_vertex_z": 0.0028980569913983345
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.3,
+      "edge_stretch_p99": 1.3783065024755858,
+      "max_edge_stretch": 7.517589060279918,
+      "right_palm_weapon_error_m": 8.123866548561862e-07,
+      "minimum_vertex_z": 0.0030000582337379456
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.44999999999999996,
+      "edge_stretch_p99": 1.3873407642235964,
+      "max_edge_stretch": 7.515265974875019,
+      "right_palm_weapon_error_m": 7.589724740244289e-07,
+      "minimum_vertex_z": 0.0029278856236487627
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.6,
+      "edge_stretch_p99": 1.3757222292654223,
+      "max_edge_stretch": 7.514540828073389,
+      "right_palm_weapon_error_m": 8.124891448149434e-07,
+      "minimum_vertex_z": 0.003000016324222088
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.75,
+      "edge_stretch_p99": 1.3783762033592022,
+      "max_edge_stretch": 7.515276042408473,
+      "right_palm_weapon_error_m": 8.367237532953296e-07,
+      "minimum_vertex_z": 0.002898021135479212
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 0.8999999999999999,
+      "edge_stretch_p99": 1.3784352913203572,
+      "max_edge_stretch": 7.517499337017794,
+      "right_palm_weapon_error_m": 8.917071998344172e-07,
+      "minimum_vertex_z": 0.0030001774430274963
+    },
+    {
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "time": 1.05,
+      "edge_stretch_p99": 1.3901423060296303,
+      "max_edge_stretch": 7.5209019606461025,
+      "right_palm_weapon_error_m": 7.897615432739258e-07,
+      "minimum_vertex_z": 0.0029278495348989964
+    }
+  ],
+  "max_right_palm_error_m": 9.546051846770623e-07,
+  "max_p99_stretch": 1.4535068056681972,
+  "limitations": [
+    "Edge stretch detects broad failures; narrow cloth folds can open strongly. It is not a full collision or muscle-volume test.",
+    "Contact and deformation review covers authored Phase 1 ranges, not every possible retargeted pose."
+  ]
+}

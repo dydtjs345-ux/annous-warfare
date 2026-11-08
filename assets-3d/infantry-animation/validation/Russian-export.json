@@ -1,0 +1,111 @@
+{
+  "animations": [
+    {
+      "name": "Lower_Idle",
+      "channels": 123
+    },
+    {
+      "name": "Lower_AimStance",
+      "channels": 123
+    },
+    {
+      "name": "Lower_Walk",
+      "channels": 123
+    },
+    {
+      "name": "Lower_Sprint",
+      "channels": 123
+    },
+    {
+      "name": "Lower_AimWalk",
+      "channels": 123
+    },
+    {
+      "name": "Start_Walk",
+      "channels": 123
+    },
+    {
+      "name": "Stop_Walk",
+      "channels": 123
+    },
+    {
+      "name": "Walk_To_Sprint",
+      "channels": 123
+    },
+    {
+      "name": "Sprint_To_Walk",
+      "channels": 123
+    },
+    {
+      "name": "Sprint_Stop",
+      "channels": 123
+    },
+    {
+      "name": "Turn_Left",
+      "channels": 123
+    },
+    {
+      "name": "Turn_Right",
+      "channels": 123
+    },
+    {
+      "name": "Upper_Turn_Left",
+      "channels": 183
+    },
+    {
+      "name": "Upper_Turn_Right",
+      "channels": 183
+    },
+    {
+      "name": "Upper_LowReady",
+      "channels": 183
+    },
+    {
+      "name": "Upper_Sprint",
+      "channels": 183
+    },
+    {
+      "name": "Weapon_Raise",
+      "channels": 183
+    },
+    {
+      "name": "Weapon_Lower",
+      "channels": 183
+    },
+    {
+      "name": "Upper_Aim",
+      "channels": 183
+    },
+    {
+      "name": "Recoil_Shot",
+      "channels": 183
+    },
+    {
+      "name": "Reload",
+      "channels": 189
+    }
+  ],
+  "mask_channels_removed": {
+    "Lower_Idle": 366,
+    "Lower_AimStance": 366,
+    "Lower_Walk": 366,
+    "Lower_Sprint": 366,
+    "Lower_AimWalk": 366,
+    "Start_Walk": 366,
+    "Stop_Walk": 366,
+    "Walk_To_Sprint": 366,
+    "Sprint_To_Walk": 366,
+    "Sprint_Stop": 366,
+    "Turn_Left": 366,
+    "Turn_Right": 366,
+    "Upper_Turn_Left": 306,
+    "Upper_Turn_Right": 306,
+    "Upper_LowReady": 306,
+    "Upper_Sprint": 306,
+    "Weapon_Raise": 306,
+    "Weapon_Lower": 306,
+    "Upper_Aim": 306,
+    "Recoil_Shot": 306,
+    "Reload": 306
+  }
+}
