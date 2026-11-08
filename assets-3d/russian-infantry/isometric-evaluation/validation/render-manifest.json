@@ -1,0 +1,624 @@
+{
+  "reference_evaluation_commit": "e4a100891fb353ad0afaa72e3b08f6b3713acd05",
+  "projection": {
+    "elevation_degrees": 30,
+    "on_screen_axis_degrees": 26.56505117707799,
+    "azimuth_degrees": -45,
+    "game_to_blender_ground_axes": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "measured_game_basis_pixels": [
+      [
+        20.0,
+        10.000000842937055
+      ],
+      [
+        -20.00000337174822,
+        10.0
+      ]
+    ]
+  },
+  "pose": {
+    "R": {
+      "wrist_target_metres": [
+        -0.18678992986679077,
+        -0.18447858095169067,
+        1.2337754964828491
+      ],
+      "wrist_error_metres": 1.2731557704981462e-07,
+      "palm_anchor_metres": [
+        -0.16090023517608643,
+        -0.23999911546707153,
+        1.2162513732910156
+      ],
+      "elbow_metres": [
+        -0.3234047293663025,
+        0.044150859117507935,
+        1.2122764587402344
+      ],
+      "upper_arm_length": 0.25889095847477683,
+      "forearm_length": 0.26720260108970895,
+      "reach": 0.251193425307447
+    },
+    "L": {
+      "wrist_target_metres": [
+        0.028860080987215042,
+        -0.4259355068206787,
+        1.1477129459381104
+      ],
+      "wrist_error_metres": 1.30385160446167e-08,
+      "palm_anchor_metres": [
+        -0.026280410587787628,
+        -0.4577062726020813,
+        1.144542932510376
+      ],
+      "elbow_metres": [
+        0.1536063402891159,
+        -0.21890774369239807,
+        1.261621356010437
+      ],
+      "upper_arm_length": 0.25889095847477683,
+      "forearm_length": 0.26720260108970895,
+      "reach": 0.5164886884923221
+    }
+  },
+  "boot_max_pose_delta_metres": 4.218798746506171e-08,
+  "original_mesh_vertex_sha256": "f7f6185253b703f5a935d0694764c7f451d4552417323b848f07c1acc21f301c",
+  "native": [
+    {
+      "direction": "N",
+      "variant": "russian",
+      "file": "native/russian-N-40.png",
+      "width": 26,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        9.188359498977661,
+        42.141590267419815
+      ],
+      "opaque_height": 40,
+      "opaque_width": 15
+    },
+    {
+      "direction": "N",
+      "variant": "russian",
+      "file": "native/russian-N-60.png",
+      "width": 33,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        14.599949687719345,
+        64.11805734038353
+      ],
+      "opaque_height": 60,
+      "opaque_width": 23
+    },
+    {
+      "direction": "N",
+      "variant": "russian",
+      "file": "native/russian-N-80.png",
+      "width": 41,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        17.9666006565094,
+        83.82407493889332
+      ],
+      "opaque_height": 80,
+      "opaque_width": 31
+    },
+    {
+      "direction": "N",
+      "variant": "russian",
+      "file": "native/russian-N-120.png",
+      "width": 56,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        24.199899673461914,
+        123.23611441999674
+      ],
+      "opaque_height": 120,
+      "opaque_width": 46
+    },
+    {
+      "direction": "NE",
+      "variant": "russian",
+      "file": "native/russian-NE-40.png",
+      "width": 30,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        13.785525262355804,
+        43.6116948723793
+      ],
+      "opaque_height": 40,
+      "opaque_width": 18
+    },
+    {
+      "direction": "NE",
+      "variant": "russian",
+      "file": "native/russian-NE-60.png",
+      "width": 39,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        16.99320423603058,
+        61.48770414292812
+      ],
+      "opaque_height": 60,
+      "opaque_width": 28
+    },
+    {
+      "direction": "NE",
+      "variant": "russian",
+      "file": "native/russian-NE-80.png",
+      "width": 49,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        21.157606035470963,
+        80.3169384598732
+      ],
+      "opaque_height": 80,
+      "opaque_width": 37
+    },
+    {
+      "direction": "NE",
+      "variant": "russian",
+      "file": "native/russian-NE-120.png",
+      "width": 68,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        28.986409187316895,
+        117.975407615304
+      ],
+      "opaque_height": 120,
+      "opaque_width": 57
+    },
+    {
+      "direction": "E",
+      "variant": "russian",
+      "file": "native/russian-E-40.png",
+      "width": 38,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        17.32276678085327,
+        42.72224381566048
+      ],
+      "opaque_height": 40,
+      "opaque_width": 23
+    },
+    {
+      "direction": "E",
+      "variant": "russian",
+      "file": "native/russian-E-60.png",
+      "width": 52,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        18.684197545051575,
+        60.64622178673744
+      ],
+      "opaque_height": 60,
+      "opaque_width": 40
+    },
+    {
+      "direction": "E",
+      "variant": "russian",
+      "file": "native/russian-E-80.png",
+      "width": 65,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        22.745594531297684,
+        79.19496305286884
+      ],
+      "opaque_height": 80,
+      "opaque_width": 55
+    },
+    {
+      "direction": "E",
+      "variant": "russian",
+      "file": "native/russian-E-120.png",
+      "width": 93,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        31.868392556905746,
+        116.29244573414326
+      ],
+      "opaque_height": 120,
+      "opaque_width": 83
+    },
+    {
+      "direction": "SE",
+      "variant": "russian",
+      "file": "native/russian-SE-40.png",
+      "width": 33,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        11.69992983341217,
+        41.827089339494705
+      ],
+      "opaque_height": 40,
+      "opaque_width": 18
+    },
+    {
+      "direction": "SE",
+      "variant": "russian",
+      "file": "native/russian-SE-60.png",
+      "width": 45,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        17.085474282503128,
+        59.35003995895386
+      ],
+      "opaque_height": 60,
+      "opaque_width": 33
+    },
+    {
+      "direction": "SE",
+      "variant": "russian",
+      "file": "native/russian-SE-80.png",
+      "width": 56,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        20.780632495880127,
+        77.46671989560127
+      ],
+      "opaque_height": 80,
+      "opaque_width": 45
+    },
+    {
+      "direction": "SE",
+      "variant": "russian",
+      "file": "native/russian-SE-120.png",
+      "width": 79,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        28.670947313308716,
+        113.70008155703545
+      ],
+      "opaque_height": 120,
+      "opaque_width": 68
+    },
+    {
+      "direction": "S",
+      "variant": "russian",
+      "file": "native/russian-S-40.png",
+      "width": 25,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        8.804220706224442,
+        41.62054732441902
+      ],
+      "opaque_height": 40,
+      "opaque_width": 15
+    },
+    {
+      "direction": "S",
+      "variant": "russian",
+      "file": "native/russian-S-60.png",
+      "width": 32,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        17.842288970947266,
+        60.339359790086746
+      ],
+      "opaque_height": 60,
+      "opaque_width": 22
+    },
+    {
+      "direction": "S",
+      "variant": "russian",
+      "file": "native/russian-S-80.png",
+      "width": 40,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        22.45638370513916,
+        78.78581419587135
+      ],
+      "opaque_height": 80,
+      "opaque_width": 30
+    },
+    {
+      "direction": "S",
+      "variant": "russian",
+      "file": "native/russian-S-120.png",
+      "width": 54,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        30.684576272964478,
+        115.67872241139412
+      ],
+      "opaque_height": 120,
+      "opaque_width": 44
+    },
+    {
+      "direction": "SW",
+      "variant": "russian",
+      "file": "native/russian-SW-40.png",
+      "width": 29,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        15.699580609798431,
+        41.49937406182289
+      ],
+      "opaque_height": 40,
+      "opaque_width": 17
+    },
+    {
+      "direction": "SW",
+      "variant": "russian",
+      "file": "native/russian-SW-60.png",
+      "width": 39,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        21.97605550289154,
+        59.350042045116425
+      ],
+      "opaque_height": 60,
+      "opaque_width": 27
+    },
+    {
+      "direction": "SW",
+      "variant": "russian",
+      "file": "native/russian-SW-80.png",
+      "width": 48,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        27.301405906677246,
+        77.46672257781029
+      ],
+      "opaque_height": 80,
+      "opaque_width": 38
+    },
+    {
+      "direction": "SW",
+      "variant": "russian",
+      "file": "native/russian-SW-120.png",
+      "width": 67,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        38.45210963487625,
+        113.70008543133736
+      ],
+      "opaque_height": 120,
+      "opaque_width": 57
+    },
+    {
+      "direction": "W",
+      "variant": "russian",
+      "file": "native/russian-W-40.png",
+      "width": 38,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        20.677228689193726,
+        41.49421229958534
+      ],
+      "opaque_height": 40,
+      "opaque_width": 23
+    },
+    {
+      "direction": "W",
+      "variant": "russian",
+      "file": "native/russian-W-60.png",
+      "width": 52,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        33.31580400466919,
+        60.64622178673744
+      ],
+      "opaque_height": 60,
+      "opaque_width": 40
+    },
+    {
+      "direction": "W",
+      "variant": "russian",
+      "file": "native/russian-W-80.png",
+      "width": 65,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        42.25440740585327,
+        79.19496305286884
+      ],
+      "opaque_height": 80,
+      "opaque_width": 54
+    },
+    {
+      "direction": "W",
+      "variant": "russian",
+      "file": "native/russian-W-120.png",
+      "width": 93,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        61.131610214710236,
+        116.29244573414326
+      ],
+      "opaque_height": 120,
+      "opaque_width": 82
+    },
+    {
+      "direction": "NW",
+      "variant": "russian",
+      "file": "native/russian-NW-40.png",
+      "width": 34,
+      "height": 50,
+      "nominal_figure_height": 40,
+      "pivot": [
+        21.85965144634247,
+        42.03595370054245
+      ],
+      "opaque_height": 40,
+      "opaque_width": 18
+    },
+    {
+      "direction": "NW",
+      "variant": "russian",
+      "file": "native/russian-NW-60.png",
+      "width": 45,
+      "height": 70,
+      "nominal_figure_height": 60,
+      "pivot": [
+        27.981735169887543,
+        61.48770414292812
+      ],
+      "opaque_height": 60,
+      "opaque_width": 34
+    },
+    {
+      "direction": "NW",
+      "variant": "russian",
+      "file": "native/russian-NW-80.png",
+      "width": 57,
+      "height": 90,
+      "nominal_figure_height": 80,
+      "pivot": [
+        35.808979511260986,
+        80.31693644821644
+      ],
+      "opaque_height": 80,
+      "opaque_width": 45
+    },
+    {
+      "direction": "NW",
+      "variant": "russian",
+      "file": "native/russian-NW-120.png",
+      "width": 80,
+      "height": 130,
+      "nominal_figure_height": 120,
+      "pivot": [
+        50.96346855163574,
+        117.975407615304
+      ],
+      "opaque_height": 120,
+      "opaque_width": 69
+    }
+  ],
+  "large": [
+    {
+      "direction": "N",
+      "variant": "russian",
+      "file": "large/russian-N.png",
+      "width": 241,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        120.50024420022964,
+        280.00020027160645
+      ]
+    },
+    {
+      "direction": "NE",
+      "variant": "russian",
+      "file": "large/russian-NE.png",
+      "width": 293,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        130.95472249388695,
+        518.2296764850616
+      ]
+    },
+    {
+      "direction": "E",
+      "variant": "russian",
+      "file": "large/russian-E.png",
+      "width": 400,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        178.53142023086548,
+        506.8447321653366
+      ]
+    },
+    {
+      "direction": "SE",
+      "variant": "russian",
+      "file": "large/russian-SE.png",
+      "width": 340,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        108.55909049510956,
+        495.3867471218109
+      ]
+    },
+    {
+      "direction": "S",
+      "variant": "russian",
+      "file": "large/russian-S.png",
+      "width": 235,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        70.19402489066124,
+        492.7430075407028
+      ]
+    },
+    {
+      "direction": "SW",
+      "variant": "russian",
+      "file": "large/russian-SW.png",
+      "width": 290,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        160.354625582695,
+        491.19199991226196
+      ]
+    },
+    {
+      "direction": "W",
+      "variant": "russian",
+      "file": "large/russian-W.png",
+      "width": 400,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        221.46852016448975,
+        491.1259186267853
+      ]
+    },
+    {
+      "direction": "NW",
+      "variant": "russian",
+      "file": "large/russian-NW.png",
+      "width": 343,
+      "height": 560,
+      "nominal_figure_height": 512,
+      "pivot": [
+        233.70355862379074,
+        498.0602103471756
+      ]
+    }
+  ]
+}

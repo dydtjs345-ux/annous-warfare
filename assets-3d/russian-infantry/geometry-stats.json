@@ -1,0 +1,46 @@
+{
+  "Russian_Infantry_Character": {
+    "vertices": 31770,
+    "faces": 30197,
+    "triangles": 59434,
+    "quads": 28981,
+    "uv_layers": 1,
+    "materials": 1,
+    "bounds_metres": [
+      1.159855842590332,
+      0.7658255100250244,
+      1.816996455192566
+    ]
+  },
+  "AK74M_Separate_Weapon": {
+    "vertices": 1982,
+    "faces": 1801,
+    "triangles": 3744,
+    "quads": 1709,
+    "uv_layers": 1,
+    "materials": 1,
+    "bounds_metres": [
+      0.07174031436443329,
+      0.9434999823570251,
+      0.25179141759872437
+    ]
+  },
+  "AK74M_Magazine": {
+    "vertices": 152,
+    "faces": 146,
+    "triangles": 276,
+    "quads": 120,
+    "uv_layers": 1,
+    "materials": 1,
+    "bounds_metres": [
+      0.03060000203549862,
+      0.12445985525846481,
+      0.24067842960357666
+    ]
+  },
+  "bones": 163,
+  "textures": {
+    "character": 2048,
+    "weapon": 1024
+  }
+}

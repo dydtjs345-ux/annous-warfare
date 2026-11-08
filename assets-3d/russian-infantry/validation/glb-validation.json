@@ -1,0 +1,188 @@
+{
+  "validator": "Khronos glTF-Validator 2.0.0-dev.3.10",
+  "files": [
+    {
+      "file": "Russian_Infantry_Kit.glb",
+      "bytes": 8742792,
+      "sha256": "015e2de2d886704d3dc9f240d55169f7a44f6fc7c6625c7840e70ad7f47b01d2",
+      "triangles": 63454,
+      "exportedVertices": 52528,
+      "weightedVertices": 48522,
+      "bones": 163,
+      "embeddedImages": 6,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "Russian_Infantry_Character",
+          "bounds": {
+            "min": [
+              -0.579927921295166,
+              0.0020000003278255463,
+              -0.38010525703430176
+            ],
+            "max": [
+              0.579927921295166,
+              1.8189964294433594,
+              0.3857204020023346
+            ]
+          },
+          "dimensionsMetres": [
+            1.159855842590332,
+            1.8169964291155338,
+            0.7658256590366364
+          ]
+        },
+        {
+          "name": "AK74M_Magazine",
+          "bounds": {
+            "min": [
+              -0.01530000101774931,
+              -0.19367842376232147,
+              0.06314324587583542
+            ],
+            "max": [
+              0.01530000101774931,
+              0.04699999839067459,
+              0.18760310113430023
+            ]
+          },
+          "dimensionsMetres": [
+            0.03060000203549862,
+            0.24067842215299606,
+            0.12445985525846481
+          ]
+        },
+        {
+          "name": "AK74M_Separate_Weapon",
+          "bounds": {
+            "min": [
+              -0.02449999935925007,
+              -0.08569887280464172,
+              -0.3504999876022339
+            ],
+            "max": [
+              0.04724031314253807,
+              0.16609252989292145,
+              0.5929999947547913
+            ]
+          },
+          "dimensionsMetres": [
+            0.07174031250178814,
+            0.25179140269756317,
+            0.9434999823570251
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "Russian_Infantry_Apose.glb",
+      "bytes": 7373388,
+      "sha256": "39118723a764ba67db079d1599931dede6849289e3ae948d8f89357a5586a01f",
+      "triangles": 59434,
+      "exportedVertices": 48522,
+      "weightedVertices": 48522,
+      "bones": 163,
+      "embeddedImages": 3,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "Russian_Infantry_Character",
+          "bounds": {
+            "min": [
+              -0.579927921295166,
+              0.0020000003278255463,
+              -0.38010525703430176
+            ],
+            "max": [
+              0.579927921295166,
+              1.8189964294433594,
+              0.3857204020023346
+            ]
+          },
+          "dimensionsMetres": [
+            1.159855842590332,
+            1.8169964291155338,
+            0.7658256590366364
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "AK74M.glb",
+      "bytes": 1369568,
+      "sha256": "8b95f0489b1b73d0433c4db2eb430f6a2e15e29b0a33e4ba4a5ccd47de92e8bb",
+      "triangles": 4020,
+      "exportedVertices": 4006,
+      "weightedVertices": 0,
+      "bones": 0,
+      "embeddedImages": 3,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "AK74M_Magazine",
+          "bounds": {
+            "min": [
+              -0.01530000101774931,
+              -0.19367842376232147,
+              0.06314324587583542
+            ],
+            "max": [
+              0.01530000101774931,
+              0.04699999839067459,
+              0.18760310113430023
+            ]
+          },
+          "dimensionsMetres": [
+            0.03060000203549862,
+            0.24067842215299606,
+            0.12445985525846481
+          ]
+        },
+        {
+          "name": "AK74M_Separate_Weapon",
+          "bounds": {
+            "min": [
+              -0.02449999935925007,
+              -0.08569887280464172,
+              -0.3504999876022339
+            ],
+            "max": [
+              0.04724031314253807,
+              0.16609252989292145,
+              0.5929999947547913
+            ]
+          },
+          "dimensionsMetres": [
+            0.07174031250178814,
+            0.25179140269756317,
+            0.9434999823570251
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    }
+  ]
+}

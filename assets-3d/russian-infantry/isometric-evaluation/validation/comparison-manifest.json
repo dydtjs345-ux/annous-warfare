@@ -1,0 +1,445 @@
+{
+  "method": "Actual 3D rotations; unscaled RGBA renders, shared opaque sheet background; native figure height from geometric projection.",
+  "sizes": [
+    {
+      "height": 40,
+      "sheet": "isometric-evaluation/sheets/usmc-vs-russian-40px.png",
+      "figures": [
+        {
+          "direction": "N",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-N-40.png",
+            "opaque_height": 40,
+            "sha256": "6eca790533614d5a52ff789ad997dce723c1cebadc62576ff7944e280b5de0c4"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-N-40.png",
+            "opaque_height": 40,
+            "sha256": "b2d8ef5764f110002c681a589964d6b98ac8465dc1229a20490fdd121f17e7fc"
+          }
+        },
+        {
+          "direction": "NE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NE-40.png",
+            "opaque_height": 40,
+            "sha256": "a5dff9eb0e18a3c56730d9f349479f7d12d9f78458c3fa382e0468b0dcdfe586"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NE-40.png",
+            "opaque_height": 40,
+            "sha256": "fef08c2fe5a8413e35c9877cac6a2fc77459e13d63cf26530ed9b63d5800dc54"
+          }
+        },
+        {
+          "direction": "E",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-E-40.png",
+            "opaque_height": 40,
+            "sha256": "dd5921479bdeb3cad04c5887eb7910aa93d19290fb075f3bac6c83b432822165"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-E-40.png",
+            "opaque_height": 40,
+            "sha256": "554efb091354bf0452db985a95dab59481cc69877b7c05e28ca5b4b469b6a2bc"
+          }
+        },
+        {
+          "direction": "SE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SE-40.png",
+            "opaque_height": 40,
+            "sha256": "2c49ff8ce5ee0999bc4dc07fae00b999a2a459ca92d997d59da3131594664d55"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SE-40.png",
+            "opaque_height": 40,
+            "sha256": "15bf638e33a8dbd8a6dc19728cfd77c3a6e483af75dab97d407998926da86504"
+          }
+        },
+        {
+          "direction": "S",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-S-40.png",
+            "opaque_height": 40,
+            "sha256": "11a6c8936bfd366e44fac5b715b1695c208c588a4423d6ff12888baad738d073"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-S-40.png",
+            "opaque_height": 40,
+            "sha256": "375222dbb2672bcbdbf8453d75e3b1ebb3be719c5585a28be39c4de8c34a8e0b"
+          }
+        },
+        {
+          "direction": "SW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SW-40.png",
+            "opaque_height": 40,
+            "sha256": "fbabd209af7beb67fb1dcfacb0584c47992caa850710bf5d9341af19e4a8d788"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SW-40.png",
+            "opaque_height": 40,
+            "sha256": "58d0cf59139004c89f1fe11dcaffc797484a5509993db9982a256e7c1eb0567a"
+          }
+        },
+        {
+          "direction": "W",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-W-40.png",
+            "opaque_height": 40,
+            "sha256": "92b6a316d7c945ba9e7efe09c6b80d4ef19f36860746e6ed8fc9d47f4e8930cb"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-W-40.png",
+            "opaque_height": 40,
+            "sha256": "ec898f07148498bed854da49d80a7480f49cc5b51030168a5a8d8d25510401e6"
+          }
+        },
+        {
+          "direction": "NW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NW-40.png",
+            "opaque_height": 40,
+            "sha256": "24499694e24a019d6c2da8e1e6a6d47171a0302f80de5de5c2bafaf532ca0abe"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NW-40.png",
+            "opaque_height": 40,
+            "sha256": "a88c5db16c1c8567ea33f145ddd2d1a51a329d818d33d9d090c24cd637d5b568"
+          }
+        }
+      ]
+    },
+    {
+      "height": 60,
+      "sheet": "isometric-evaluation/sheets/usmc-vs-russian-60px.png",
+      "figures": [
+        {
+          "direction": "N",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-N-60.png",
+            "opaque_height": 60,
+            "sha256": "30820907a10a7524834a23c3dfe17e704ff6ada1b9acb874dfdf3cbba0650cc5"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-N-60.png",
+            "opaque_height": 60,
+            "sha256": "59e67edcdf17e96af75d191903ca5d6dd7eea6317ee54eee75f325526aac857f"
+          }
+        },
+        {
+          "direction": "NE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NE-60.png",
+            "opaque_height": 60,
+            "sha256": "664ac50ecf1ffe2527a8ed56e89cd472aec704f67b1e7f9f262fe8d7cf16881e"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NE-60.png",
+            "opaque_height": 60,
+            "sha256": "db105af912145f2691382e8d7bda937d42a75b4d8a1760ed6a8bbda1b534eec1"
+          }
+        },
+        {
+          "direction": "E",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-E-60.png",
+            "opaque_height": 60,
+            "sha256": "ad708ccdd2335134ab397ccfbc588183d000984596e635daf23ecff5e996a346"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-E-60.png",
+            "opaque_height": 60,
+            "sha256": "6ac4ebb3f0889d2ecb36b39cdad38f414f3efd687290116fb356fc88e3b17714"
+          }
+        },
+        {
+          "direction": "SE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SE-60.png",
+            "opaque_height": 60,
+            "sha256": "cda63eb2b284e91db6761c376b04a1721782e59c862f644c894a42809e00ffd9"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SE-60.png",
+            "opaque_height": 60,
+            "sha256": "e516e74b08c53c8112af1018aca0f7528f60f54ffa0119ec13804d1a4b30ee47"
+          }
+        },
+        {
+          "direction": "S",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-S-60.png",
+            "opaque_height": 60,
+            "sha256": "2cc3ca6e540b66849e82f8c95516673b762b041eef1e8c44ad61e88d45e87e8a"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-S-60.png",
+            "opaque_height": 60,
+            "sha256": "290d4fcdfb45296e772d90ca6792d9596847cfefc3f68c2195863eb1523acb04"
+          }
+        },
+        {
+          "direction": "SW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SW-60.png",
+            "opaque_height": 59,
+            "sha256": "9e8955bab3d99bdd656f959387b865e91b46cb8698019f79ca05cbedd1c51586"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SW-60.png",
+            "opaque_height": 60,
+            "sha256": "6f13af110e9d35c897073806abc111530455e77305b75bc48c65804c136b8f30"
+          }
+        },
+        {
+          "direction": "W",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-W-60.png",
+            "opaque_height": 60,
+            "sha256": "1d4f8a0bffe89b6a6df70062b8c72e1f31510d99e993004aa62cffc8400afd6b"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-W-60.png",
+            "opaque_height": 60,
+            "sha256": "257ba41f012824eea93aa6ecaee1d43dc14598df190a9961d1eec9b33c3ff23e"
+          }
+        },
+        {
+          "direction": "NW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NW-60.png",
+            "opaque_height": 60,
+            "sha256": "8ae09315e29c25c91448f74c319de773a3c5a2afb8af67a803e750849681ea93"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NW-60.png",
+            "opaque_height": 60,
+            "sha256": "1ab915776308e14de21cb2e2722d48c153700191157553286d0f7240cf479230"
+          }
+        }
+      ]
+    },
+    {
+      "height": 80,
+      "sheet": "isometric-evaluation/sheets/usmc-vs-russian-80px.png",
+      "figures": [
+        {
+          "direction": "N",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-N-80.png",
+            "opaque_height": 80,
+            "sha256": "1b1e53d4596197e9a5e3cd8c5ad2bb6394e8f04962917f69a34773639f5f51cf"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-N-80.png",
+            "opaque_height": 80,
+            "sha256": "7eb509861ba1465560cd70b312b61a6ae238697af09033551ba3f61ad14f4f96"
+          }
+        },
+        {
+          "direction": "NE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NE-80.png",
+            "opaque_height": 80,
+            "sha256": "c4ba316cbfbfb24e441b37b69191af37da29b9205cec959cbe51e3ec59973fcc"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NE-80.png",
+            "opaque_height": 80,
+            "sha256": "36064a6f2d21595fdafe9f8774b68c320393dbcb28d6fb247809f372e191774e"
+          }
+        },
+        {
+          "direction": "E",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-E-80.png",
+            "opaque_height": 80,
+            "sha256": "fe74aa2bb3ddfa8c7a483afba7ba1e516439b60629efa48a181f9fb02aa6b56c"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-E-80.png",
+            "opaque_height": 80,
+            "sha256": "fe5466dcaddd34c11095316ab816d78c2ef9ab6146efd1b7fb361559aff80a35"
+          }
+        },
+        {
+          "direction": "SE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SE-80.png",
+            "opaque_height": 80,
+            "sha256": "78c8ff92958b3611604d1919a0f8d7144d6d7da5b85c76b1b5fee2f59c2d672d"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SE-80.png",
+            "opaque_height": 80,
+            "sha256": "4be4fec4f4ac71a462f930fad89a4eeab05105a3fe7be76f5e0e9433ffd6ac2b"
+          }
+        },
+        {
+          "direction": "S",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-S-80.png",
+            "opaque_height": 80,
+            "sha256": "86e9481678266d4c986aaca91350144dd11d2c0cc7120dd5c102389d4c7e37f9"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-S-80.png",
+            "opaque_height": 80,
+            "sha256": "6e214824edde7f9507c55c4da625de745ed68774b4219ae4d64be6db1e0e95d8"
+          }
+        },
+        {
+          "direction": "SW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SW-80.png",
+            "opaque_height": 79,
+            "sha256": "39da1725303fc6253a2e1f244aa0e39d77aabc709ba4606542dc4124f55031ee"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SW-80.png",
+            "opaque_height": 80,
+            "sha256": "6decad52778e98c81e249d08f606ed6d6dff755f0bc6f9375707b72e37b4d9e7"
+          }
+        },
+        {
+          "direction": "W",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-W-80.png",
+            "opaque_height": 80,
+            "sha256": "992337ee4980b96c06aed9d52dc2e449a0bf630a6c8410ebb4cf5de1aed63169"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-W-80.png",
+            "opaque_height": 80,
+            "sha256": "1f024834eb63879e0eda8eb1cd273a4394d5800fcb8241d4960c5efa1ac51091"
+          }
+        },
+        {
+          "direction": "NW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NW-80.png",
+            "opaque_height": 80,
+            "sha256": "6a05d2395bc2c1819ea23ca486aadf03f2c24d1a50ffb5741554a2424af967bd"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NW-80.png",
+            "opaque_height": 80,
+            "sha256": "c0d8e81b2143338506eea44a79022f845dbcbfb914444f5658ebb274d2544be1"
+          }
+        }
+      ]
+    },
+    {
+      "height": 120,
+      "sheet": "isometric-evaluation/sheets/usmc-vs-russian-120px.png",
+      "figures": [
+        {
+          "direction": "N",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-N-120.png",
+            "opaque_height": 120,
+            "sha256": "8708c56fb6008ea01dec6997c9d55b625a4f1b856d867fa9c3cf97afde8977ef"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-N-120.png",
+            "opaque_height": 120,
+            "sha256": "8cfaffdda6fbb6aa74269e9cd53cad4e50979dab4e9693b03723469a2299dba7"
+          }
+        },
+        {
+          "direction": "NE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NE-120.png",
+            "opaque_height": 120,
+            "sha256": "95c7e2996be2e5dc0c34b94575f0cb961a4fcc2af4942b2dcf3414952531ff12"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NE-120.png",
+            "opaque_height": 120,
+            "sha256": "2c81f1e0d9cf1568092bff8ff6d3f3e1c42a9d676d84421c416c5f5e891c15ad"
+          }
+        },
+        {
+          "direction": "E",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-E-120.png",
+            "opaque_height": 120,
+            "sha256": "f22d414816b193167b5b7a1e7994146d5389f0f423d8e5af4d95fecec76c80e6"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-E-120.png",
+            "opaque_height": 120,
+            "sha256": "9938549df2d7c6c18f9e2d75bda8cdf069279e4e375a73abc0c80e5e630d6060"
+          }
+        },
+        {
+          "direction": "SE",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SE-120.png",
+            "opaque_height": 120,
+            "sha256": "b55c75e06cfe3e09b70e75eba3f6230f847c10de4d240bbb65b8e66151f527c7"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SE-120.png",
+            "opaque_height": 120,
+            "sha256": "bb843515831dd6813944aba551f29b7dad743821ed3fc2b0b1037378f3961eff"
+          }
+        },
+        {
+          "direction": "S",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-S-120.png",
+            "opaque_height": 120,
+            "sha256": "8c68845d725fe92d5230b04bf0720593a96383285317ed51e0f1817bf6f4c17a"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-S-120.png",
+            "opaque_height": 120,
+            "sha256": "5bdff6a0038890388e649ef7489c80be2a99091bbfa2bb0f00f7e8c2263168c9"
+          }
+        },
+        {
+          "direction": "SW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-SW-120.png",
+            "opaque_height": 119,
+            "sha256": "d96e9c46f715fecd59cb61c58407cf047448c29b2c002df2d9eb8f51417d8173"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-SW-120.png",
+            "opaque_height": 120,
+            "sha256": "160fd9b3ada72e76f39f63955983f4e5d8e973e88520a74a20d113a561e82be9"
+          }
+        },
+        {
+          "direction": "W",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-W-120.png",
+            "opaque_height": 119,
+            "sha256": "9abd520865b6f4cc227be3a57f99e58c098c34b3a54c517d7d9fea7aa24b7d25"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-W-120.png",
+            "opaque_height": 120,
+            "sha256": "960eee46d801d0ae2420ab2a218d75434da8a69a6372cf72c35f191f78e9fbdf"
+          }
+        },
+        {
+          "direction": "NW",
+          "usmc": {
+            "source": "usmc-rifleman/isometric-evaluation/native/current-NW-120.png",
+            "opaque_height": 120,
+            "sha256": "c1035556ad22a87ccabaebbdb0e0503a545829fd94d5bff548d5efa78bad0d27"
+          },
+          "russian": {
+            "source": "russian-infantry/isometric-evaluation/native/russian-NW-120.png",
+            "opaque_height": 120,
+            "sha256": "705692450c78d75b7683ec7fc6b0e33d992f951896642ef620e1b1dba3e4aadf"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "blender": "4.3.2",
+  "isolated_imports": [
+    {
+      "file": "Russian_Infantry_Kit.glb",
+      "sha256": "015e2de2d886704d3dc9f240d55169f7a44f6fc7c6625c7840e70ad7f47b01d2",
+      "mesh_count": 3,
+      "armatures": 1,
+      "importer_bone_display_helpers": 1,
+      "decoded_images": [
+        {
+          "name": "AK74M_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Metallic-AK74M_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "Russian_Infantry_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Metallic-Russian_Infantry_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Russian_Infantry_Character",
+          "vertices": 48522,
+          "triangles": 59434,
+          "dimensions_metres": [
+            1.159854769706726,
+            0.7658254504203796,
+            1.816995620727539
+          ],
+          "skinned": true
+        },
+        {
+          "name": "AK74M_Separate_Weapon",
+          "vertices": 3722,
+          "triangles": 3744,
+          "dimensions_metres": [
+            0.07174030691385269,
+            0.9434999227523804,
+            0.25179141759872437
+          ],
+          "skinned": false
+        },
+        {
+          "name": "AK74M_Magazine",
+          "vertices": 284,
+          "triangles": 276,
+          "dimensions_metres": [
+            0.03060000017285347,
+            0.12445984780788422,
+            0.24067842960357666
+          ],
+          "skinned": false
+        }
+      ]
+    },
+    {
+      "file": "Russian_Infantry_Apose.glb",
+      "sha256": "39118723a764ba67db079d1599931dede6849289e3ae948d8f89357a5586a01f",
+      "mesh_count": 1,
+      "armatures": 1,
+      "importer_bone_display_helpers": 1,
+      "decoded_images": [
+        {
+          "name": "Russian_Infantry_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Metallic-Russian_Infantry_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Russian_Infantry_Character",
+          "vertices": 48522,
+          "triangles": 59434,
+          "dimensions_metres": [
+            1.159854769706726,
+            0.7658254504203796,
+            1.816995620727539
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "AK74M.glb",
+      "sha256": "8b95f0489b1b73d0433c4db2eb430f6a2e15e29b0a33e4ba4a5ccd47de92e8bb",
+      "mesh_count": 2,
+      "armatures": 0,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "AK74M_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Metallic-AK74M_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "AK74M_Separate_Weapon",
+          "vertices": 3722,
+          "triangles": 3744,
+          "dimensions_metres": [
+            0.07174031436443329,
+            0.9434999823570251,
+            0.25179141759872437
+          ],
+          "skinned": false
+        },
+        {
+          "name": "AK74M_Magazine",
+          "vertices": 284,
+          "triangles": 276,
+          "dimensions_metres": [
+            0.03060000203549862,
+            0.12445985525846481,
+            0.24067842960357666
+          ],
+          "skinned": false
+        }
+      ]
+    },
+    {
+      "file": "Russian_Infantry_Kit.fbx",
+      "sha256": "aebad9464d0e47e70b4b9863f069062bd05743803c17376e04488c6d0a02f9a4",
+      "mesh_count": 3,
+      "armatures": 1,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "AK74M_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_BaseColor.001",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Metallic",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "Russian_Infantry_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_BaseColor.001",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Metallic",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "AK74M_Magazine",
+          "vertices": 152,
+          "triangles": 276,
+          "dimensions_metres": [
+            0.03060000203549862,
+            0.12445985525846481,
+            0.24067842960357666
+          ],
+          "skinned": false
+        },
+        {
+          "name": "AK74M_Separate_Weapon",
+          "vertices": 1982,
+          "triangles": 3744,
+          "dimensions_metres": [
+            0.07174031436443329,
+            0.9434999823570251,
+            0.25179141759872437
+          ],
+          "skinned": false
+        },
+        {
+          "name": "Russian_Infantry_Character",
+          "vertices": 31770,
+          "triangles": 59434,
+          "dimensions_metres": [
+            1.159855604171753,
+            0.7658262252807617,
+            1.8169972896575928
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "Russian_Infantry_Apose.fbx",
+      "sha256": "f475c014f42e745952e5d49cc44ae6e45f10126abe38f2e4b9d8a3e0b7f1fcad",
+      "mesh_count": 1,
+      "armatures": 1,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "Russian_Infantry_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_BaseColor.001",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Metallic",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "Russian_Infantry_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "Russian_Infantry_Character",
+          "vertices": 31770,
+          "triangles": 59434,
+          "dimensions_metres": [
+            1.159855604171753,
+            0.7658262252807617,
+            1.8169972896575928
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "AK74M.fbx",
+      "sha256": "758829d98211d55ca4219796b82178276c44107dc8f808db11093de7bd5c1f52",
+      "mesh_count": 2,
+      "armatures": 0,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "AK74M_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_BaseColor.001",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Metallic",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "AK74M_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "AK74M_Magazine",
+          "vertices": 152,
+          "triangles": 276,
+          "dimensions_metres": [
+            0.03060000203549862,
+            0.12445985525846481,
+            0.24067842960357666
+          ],
+          "skinned": false
+        },
+        {
+          "name": "AK74M_Separate_Weapon",
+          "vertices": 1982,
+          "triangles": 3744,
+          "dimensions_metres": [
+            0.07174031436443329,
+            0.9434999823570251,
+            0.25179141759872437
+          ],
+          "skinned": false
+        }
+      ]
+    }
+  ]
+}

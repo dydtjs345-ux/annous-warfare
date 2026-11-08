@@ -1,0 +1,96 @@
+{
+  "blender": "4.3.2",
+  "shared_skeleton": {
+    "reference": "usmc-rifleman/source/USMC_Rifleman.blend",
+    "bones": 163,
+    "same_bone_names": true,
+    "same_parents": true,
+    "max_rest_matrix_difference": 0.0
+  },
+  "weights": {
+    "max_sum_error": 5.21540641784668e-08,
+    "max_influences": 4
+  },
+  "weapon": {
+    "separate_mesh": true,
+    "skinned": false,
+    "sockets_local_metres": {
+      "attach_bolt": [
+        0.0430000014603138,
+        -0.004999999888241291,
+        0.10400000214576721
+      ],
+      "attach_grip_R": [
+        -0.02500000037252903,
+        0.061000000685453415,
+        -0.02800000086426735
+      ],
+      "attach_magazine": [
+        0.0,
+        -0.10000000149011612,
+        0.02500000037252903
+      ],
+      "attach_muzzle": [
+        0.0,
+        -0.5929999947547913,
+        0.08100000023841858
+      ],
+      "attach_stock": [
+        0.0,
+        0.34599998593330383,
+        0.029999999329447746
+      ],
+      "attach_support_L": [
+        0.004999999888241291,
+        -0.19499999284744263,
+        0.03700000047683716
+      ]
+    }
+  },
+  "a_pose": {
+    "all_pose_basis_identity": true
+  },
+  "geometry": {
+    "Russian_Infantry_Character": {
+      "loose_vertices": 0,
+      "boundary_edges": 2820,
+      "nonmanifold_edges": 2820,
+      "finite_coordinates": true,
+      "zero_area_faces": 0
+    },
+    "AK74M_Separate_Weapon": {
+      "loose_vertices": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "finite_coordinates": true,
+      "zero_area_faces": 0
+    },
+    "AK74M_Magazine": {
+      "loose_vertices": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "finite_coordinates": true,
+      "zero_area_faces": 0
+    }
+  },
+  "low_ready_hand_contacts": {
+    "R": {
+      "hand_vertices": 1480,
+      "min_surface_gap_m": 2.7847974706673995e-05,
+      "vertices_within_5mm": 190,
+      "vertices_within_10mm": 419
+    },
+    "L": {
+      "hand_vertices": 1480,
+      "min_surface_gap_m": 1.2065571297625866e-07,
+      "vertices_within_5mm": 211,
+      "vertices_within_10mm": 455
+    }
+  },
+  "limits": [
+    "Initial skin only; full movement and extreme-pose deformation not validated.",
+    "Character has open cloth, boot shafts, surface seams and anatomical cut boundaries; it is not watertight. Weapon and detachable magazine are closed.",
+    "Nearest-surface contact checks are not a full hand penetration or dynamic grip solve.",
+    "Weapon and magazine are separately addressable rigid meshes; internal bolt and trigger are not articulated."
+  ]
+}

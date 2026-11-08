@@ -1,0 +1,14 @@
+{
+  "base_commit": "e4a100891fb353ad0afaa72e3b08f6b3713acd05",
+  "feature_branch": "feat/russian-infantry-base",
+  "main_commit_unchanged": "b381e6017d01fa34f14e889ff639347db9e5feae",
+  "existing_usmc_files_verified_against_git_blobs": 160,
+  "modified_existing_usmc_files": [],
+  "tracked_changes_outside_new_asset_directory": [],
+  "required_files_present": 82,
+  "missing": [],
+  "largest_file": "isometric-evaluation/source/Russian_Infantry_LowReady.blend",
+  "largest_file_bytes": 11529420,
+  "delivered_bytes_before_audit_and_checksums": 76987560,
+  "per_file_github_100MiB_limit_pass": true
+}
