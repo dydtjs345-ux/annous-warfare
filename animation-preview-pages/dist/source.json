@@ -1,0 +1,11 @@
+{
+  "repository": "dydtjs345-ux/annous-warfare",
+  "commit": "a1d280461f94456c905b677b213a6ee31245b1d0",
+  "asset_sha256": {
+    "USMC": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
+    "Russian": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0"
+  },
+  "clips_per_faction": 21,
+  "animation_type": "skeletal GLB with independent locomotion, aiming and recoil layers",
+  "built_at": "2026-11-08T19:44:06.701Z"
+}

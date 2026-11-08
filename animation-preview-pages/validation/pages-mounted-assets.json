@@ -1,0 +1,56 @@
+{
+  "mount": "/annous-warfare/animation-preview/",
+  "all_assets_match": true,
+  "assets": [
+    {
+      "file": "LICENSE-three.txt",
+      "status": 200,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "3a50f0b72cb35e01d90037791611b4242ccba627d8f24e2111d7e67514a38e86"
+    },
+    {
+      "file": "architecture.json",
+      "status": 200,
+      "sha256": "0ca9139921e7a7a765cdb8b52c43e8c4b049d838baf3ff3c275a7f60d1a4cab6"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "1eeb5d0f00ed208b067933b1faba9732f4dfe9be93dc897d0b1e3ca2f9b7cc7e"
+    },
+    {
+      "file": "models/Russian_Animated.glb",
+      "status": 200,
+      "sha256": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0"
+    },
+    {
+      "file": "models/USMC_Animated.glb",
+      "status": 200,
+      "sha256": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094"
+    },
+    {
+      "file": "moving-fire.mp4",
+      "status": 200,
+      "sha256": "062a7fbecba779c2e119ab3d7d97820bfd9cc02588a24f929830dbe797e3c0c8"
+    },
+    {
+      "file": "poster.png",
+      "status": 200,
+      "sha256": "99ef4ae4bac4466c61328a765bae1cf51a62eca34719490deea0109e7b772ee1"
+    },
+    {
+      "file": "source.json",
+      "status": 200,
+      "sha256": "05bf2092694e7647887861de37de3ce824c965fcfc5c46a5607d73f4edd7895f"
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "sha256": "451244c1bfc3f7e537e34f444fcebb2130b8d9812862daf4f8dc4c5d578346a6"
+    }
+  ]
+}
