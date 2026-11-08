@@ -1,0 +1,22 @@
+{
+  "status": "blocked",
+  "public_preview_url": null,
+  "requested_repository": "dydtjs345-ux/annous-warfare-animation-preview",
+  "blocker": {
+    "operation": "POST /user/repos",
+    "http_status": 403,
+    "message": "Resource not accessible by integration",
+    "repository_created": false
+  },
+  "source_commit": "a1d280461f94456c905b677b213a6ee31245b1d0",
+  "feature_branch": "feat/infantry-animation-pages",
+  "existing_game_pages": {
+    "url": "https://dydtjs345-ux.github.io/annous-warfare/",
+    "build_type": "workflow",
+    "source_branch": "main",
+    "modified": false
+  },
+  "ready_bundle": "animation-preview-pages/dist/",
+  "public_https_browser_validation": "not run: no preview deployment exists",
+  "physical_iphone_validation": "not run: no physical device available"
+}
