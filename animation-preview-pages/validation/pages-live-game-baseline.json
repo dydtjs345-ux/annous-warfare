@@ -1,0 +1,196 @@
+{
+  "live_base": "https://dydtjs345-ux.github.io/annous-warfare/",
+  "main_commit": "b381e6017d01fa34f14e889ff639347db9e5feae",
+  "all_existing_game_files_match_live": true,
+  "files": [
+    {
+      "file": "animation-preview.html",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "8aba438615a443dd78a94f9d105c206e20a3b911599f49a2eada527a7b6299be",
+      "published_sha256": "8aba438615a443dd78a94f9d105c206e20a3b911599f49a2eada527a7b6299be"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "dd18bd9ccd543f4d95dbd8acbe7d5eb1e47f6011b93b8df22ff94a30f2c273cc",
+      "published_sha256": "dd18bd9ccd543f4d95dbd8acbe7d5eb1e47f6011b93b8df22ff94a30f2c273cc"
+    },
+    {
+      "file": "assets/animation-SS1_x9RO.css",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "6b660eaf3bfda6d1452e0bc1f2d3880613bac6c441af1b8acc4492abee594fdb",
+      "published_sha256": "6b660eaf3bfda6d1452e0bc1f2d3880613bac6c441af1b8acc4492abee594fdb"
+    },
+    {
+      "file": "assets/usmc-se-animation-DDq64cx9.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "43159c0819f496cad5ad3556197f69f839fef216d9d789cfc87a66a8924723a0",
+      "published_sha256": "43159c0819f496cad5ad3556197f69f839fef216d9d789cfc87a66a8924723a0"
+    },
+    {
+      "file": "assets/main-Cq4V4vWG.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "aa87b33a0c5dad90830d2b9b3995e50536ebd15f08d0e69b9ad8744d872c84fa",
+      "published_sha256": "aa87b33a0c5dad90830d2b9b3995e50536ebd15f08d0e69b9ad8744d872c84fa"
+    },
+    {
+      "file": "assets/animation-D3b0gGuj.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "a98f79395483e87843ef206eaa810095be09f76bb62e36357266e30d424a31cd",
+      "published_sha256": "a98f79395483e87843ef206eaa810095be09f76bb62e36357266e30d424a31cd"
+    },
+    {
+      "file": "assets/main-CW9yXLeX.css",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "e568f8946ac0ad5ef3fbdb7ac560766563ff09c9dc091a09bc802f5182323620",
+      "published_sha256": "e568f8946ac0ad5ef3fbdb7ac560766563ff09c9dc091a09bc802f5182323620"
+    },
+    {
+      "file": "assets/usmc-se-v032/README.md",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "b3e5ee14e3387cdd8783c6450c06c087435b41d680a3e109db864c7aecd03bf0",
+      "published_sha256": "b3e5ee14e3387cdd8783c6450c06c087435b41d680a3e109db864c7aecd03bf0"
+    },
+    {
+      "file": "assets/usmc-se-v032/source-atlas.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "4765c95309e0dba11273e677500aef3471a41782978dc593e6a2a201f2881f04",
+      "published_sha256": "4765c95309e0dba11273e677500aef3471a41782978dc593e6a2a201f2881f04"
+    },
+    {
+      "file": "assets/usmc-se-v032/metadata.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "6a26b04f1bc784d1c74309602a95f8b035e78bc4dbe5cb995fce9a7086e23ccd",
+      "published_sha256": "6a26b04f1bc784d1c74309602a95f8b035e78bc4dbe5cb995fce9a7086e23ccd"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/rifleman.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "5b9baec3bcfc04a3928ea59916b01567c290b788aab88fb4d52f4eb19f216945",
+      "published_sha256": "5b9baec3bcfc04a3928ea59916b01567c290b788aab88fb4d52f4eb19f216945"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/forearm.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "2315d80eead8464a8269570a314dd690799287d545412ec4ef7cd98d2c13ba47",
+      "published_sha256": "2315d80eead8464a8269570a314dd690799287d545412ec4ef7cd98d2c13ba47"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/rifleman.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "80863a816b99181a4186204ab3c2d928d0e9f0ec622841850aef855e275c55ab",
+      "published_sha256": "80863a816b99181a4186204ab3c2d928d0e9f0ec622841850aef855e275c55ab"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/README.md",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "ea5c035bfe53309e54e83b7ffab5736cf0ce0e24be3df4e207051c54aab97b74",
+      "published_sha256": "ea5c035bfe53309e54e83b7ffab5736cf0ce0e24be3df4e207051c54aab97b74"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/sleeve.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "7ab3b53f5295bb26fe63ec37465fd169283b5c440b60f1d7ad2f0367fdb0640d",
+      "published_sha256": "7ab3b53f5295bb26fe63ec37465fd169283b5c440b60f1d7ad2f0367fdb0640d"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/m16a4.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "9095fcc9a39e3d0829af8e62a2c343f27923f3e9be70501dee4c4a7c5d6dfb06",
+      "published_sha256": "9095fcc9a39e3d0829af8e62a2c343f27923f3e9be70501dee4c4a7c5d6dfb06"
+    },
+    {
+      "file": "assets/usmc-rifleman-v031/metadata.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "cb8d0e7e38de1435f5c5f70b489896da7fb652024c89469529535f2dd17b2c22",
+      "published_sha256": "cb8d0e7e38de1435f5c5f70b489896da7fb652024c89469529535f2dd17b2c22"
+    },
+    {
+      "file": "assets/usmc-rifleman/rifleman.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "041c73e4ea5ff29f8d94a26f5c90a95999887757b77f39cd1be0b4afa6b4916a",
+      "published_sha256": "041c73e4ea5ff29f8d94a26f5c90a95999887757b77f39cd1be0b4afa6b4916a"
+    },
+    {
+      "file": "assets/usmc-rifleman/forearm.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "87ab5faf2e6647757a5ce40afa2f74e0a1e07f438aa0e878ace59339d9216c91",
+      "published_sha256": "87ab5faf2e6647757a5ce40afa2f74e0a1e07f438aa0e878ace59339d9216c91"
+    },
+    {
+      "file": "assets/usmc-rifleman/rifleman.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "8a033f28f35bed2b5b0339ace65abb0c2c862563fa114f910d442f1dcda4dfca",
+      "published_sha256": "8a033f28f35bed2b5b0339ace65abb0c2c862563fa114f910d442f1dcda4dfca"
+    },
+    {
+      "file": "assets/usmc-rifleman/README.md",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "ae611ae81eec610cc3ba4c0200a673529ad2ab27e058954cef4bf8ba9358f13f",
+      "published_sha256": "ae611ae81eec610cc3ba4c0200a673529ad2ab27e058954cef4bf8ba9358f13f"
+    },
+    {
+      "file": "assets/usmc-rifleman/sleeve.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "62b7ea001dd799a0896582e99ea957dffe44d95d5de4ae0ecc031a64860ffcd5",
+      "published_sha256": "62b7ea001dd799a0896582e99ea957dffe44d95d5de4ae0ecc031a64860ffcd5"
+    },
+    {
+      "file": "assets/usmc-rifleman/m16a4.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "bf4fdccd45e75f31d0f6e22013db0d376c80a5a3a017649a30e8f337e9aa30e7",
+      "published_sha256": "bf4fdccd45e75f31d0f6e22013db0d376c80a5a3a017649a30e8f337e9aa30e7"
+    },
+    {
+      "file": "assets/usmc-rifleman/metadata.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "951d5e35b4ab9d3eb9eb66a4b653b432fc02b57bdab558636a4e553fa11b6186",
+      "published_sha256": "951d5e35b4ab9d3eb9eb66a4b653b432fc02b57bdab558636a4e553fa11b6186"
+    },
+    {
+      "file": "assets/usmc-se-v033/README.md",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "62c8157ffebdc24ca36553b9b03545970ee7d361cf1ebf9e7d542a0ba6143be4",
+      "published_sha256": "62c8157ffebdc24ca36553b9b03545970ee7d361cf1ebf9e7d542a0ba6143be4"
+    },
+    {
+      "file": "assets/usmc-se-v033/source-atlas.png",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "8ae5e0d68d662257347fb872f44e2547560e1652aa6f0010fc5bb816ea3c609c",
+      "published_sha256": "8ae5e0d68d662257347fb872f44e2547560e1652aa6f0010fc5bb816ea3c609c"
+    },
+    {
+      "file": "assets/usmc-se-v033/metadata.json",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "07ca53f8b59872fbb006fc81082960de7496fa4f0cc75313e5655b0bfd9d28ff",
+      "published_sha256": "07ca53f8b59872fbb006fc81082960de7496fa4f0cc75313e5655b0bfd9d28ff"
+    }
+  ]
+}

@@ -31,6 +31,8 @@ jobs:
         run: npm ci
       - name: Build game
         run: npm run build
+      - name: Append standalone infantry animation preview
+        run: node scripts/stage-animation-preview.mjs
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

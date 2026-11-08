@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17212c"><meta name="description" content="Standalone USMC and Russian infantry animation review for Autonomous Warfare.">
+<title>Autonomous Warfare · Infantry preview</title><link rel="icon" href="data:,"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header><p class="eyebrow">AUTONOMOUS WARFARE</p><h1>Infantry animation preview</h1><p class="intro">USMC and Russian infantry · real animated 3D</p></header>
+<main>
+<div class="controls">
+<label>Camera<select id="view"><option value="gameplay">Gameplay isometric · 30°</option><option value="free">Free 3D inspection</option><option value="side">Side · gait inspection</option></select></label>
+<label>Presentation<select id="comparison"><option value="single">One soldier</option><option value="both">Compare both factions</option><option value="squad">Squad · six soldiers</option><option value="mixed">Squad · mixed factions</option></select></label>
+<label>Faction<select id="faction"><option value="USMC">USMC · M16A4</option><option value="Russian">Russian · AK-74M</option></select></label>
+<label>Motion or clip<select id="animation"><optgroup label="Combat motions"><option value="MovingFire">Firing while moving</option><option value="Walk">Tactical walk</option><option value="Sprint">Sprint</option><option value="Aim">Aiming idle</option><option value="Fire">Stationary firing</option><option value="AimWalk">Aiming while walking</option><option value="Reload">Reload</option><option value="Raise">Weapon raise</option><option value="Lower">Weapon lower</option><option value="Idle">Idle · low ready</option><option value="Start">Idle → walk</option><option value="Stop">Walk → idle</option><option value="Accelerate">Walk → sprint</option><option value="Decelerate">Sprint → walk</option><option value="SprintStop">Sprint → stop</option><option value="TurnLeft">Turn left</option><option value="TurnRight">Turn right</option></optgroup><optgroup label="Individual animation clips" id="clip-options"></optgroup></select></label>
+<label>Direction<select id="direction"><option>N</option><option>NE</option><option>E</option><option selected>SE</option><option>S</option><option>SW</option><option>W</option><option>NW</option></select></label>
+<label>Standing height<select id="height"><option value="60">60 px</option><option value="80">80 px</option><option value="120" selected>120 px</option></select></label>
+<label>Playback speed<select id="speed"><option value="0.25">¼×</option><option value="0.5">½×</option><option value="1" selected>1×</option><option value="1.5">1½×</option><option value="2">2×</option></select></label>
+</div>
+<div class="buttons"><button id="play" aria-pressed="true">Pause</button><button id="restart">Replay</button><button id="fire" aria-pressed="true">Fire on</button><button id="shot">Single shot</button></div>
+<div class="loading" id="loading" role="status" aria-live="polite"><span id="status">Loading animation data…</span><progress id="progress" max="1"></progress><button id="retry" hidden>Retry loading</button></div>
+<p id="view-tip" class="camera-tip">Orthographic gameplay camera · 30° elevation · fixed orientation.</p>
+<div id="inspection-tools" hidden><button id="zoom-out" aria-label="Zoom out">Zoom −</button> <button id="zoom-in" aria-label="Zoom in">Zoom +</button></div>
+<div id="panels" aria-label="Animated infantry character"></div>
+<p class="tip">Moving fire combines continuous footsteps, aiming and repeated recoil. Toggle Fire off/on to inspect the transition. Use a slower playback speed for detail.</p>
+<details><summary>About this preview</summary><p>Choose a combat motion or any of the 21 individual clips. Display size uses a standing reference; stride and posture change the visible height naturally.</p><p>Single-soldier mode loads one faction to reduce phone memory use. Comparison mode loads both and synchronizes their animations. The original animated assets are unchanged from <a href="https://github.com/dydtjs345-ux/annous-warfare/commit/a1d280461f94456c905b677b213a6ee31245b1d0">commit a1d2804</a>. This preview is separate from the playable game.</p><p>These are flat-ground Phase 1 animations. Terrain adaptation, arbitrary interruption, and army-scale performance remain outside this preview.</p><p><a href="./source.json">Asset provenance</a> · <a href="./LICENSE-three.txt">Three.js license</a></p></details>
+<details id="recording"><summary>Moving-fire recording</summary><p>A continuous recording of the same animated assets, useful for a quick check or if WebGL is unavailable.</p><video controls playsinline muted loop preload="none" poster="./poster.png" src="./moving-fire.mp4" aria-label="Continuous moving-fire animation recording"></video></details>
+</main>
+<footer>Independent animation review · no live combat integration</footer>
+<script type="module" src="./app.js"></script>
+</body></html>
