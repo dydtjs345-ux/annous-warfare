@@ -8,17 +8,21 @@ scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=96;sce
 scene.render.resolution_percentage=100;scene.render.image_settings.file_format='PNG'
 cam=scene.camera;cam.data.type='ORTHO'
 char=bpy.data.objects['USMC_Rifleman_Character']
+weapon=bpy.data.objects['M16A4_Separate_Weapon']
 views=[('head-and-carrier',(.8,-2.1,1.9),(0,-.035,1.485),.88,1200,1200),
  ('boots',(.72,-1.5,.56),(0,-.08,.20),.67,1000,1000),
- ('weapon',(1.48,-1.8,1.26),(1.106,0,1.0),1.20,1600,900)]
+ ('weapon',(1.48,-1.8,1.26),(1.106,0,1.0),1.20,1600,900),
+ ('side',(4,0,1.4),(0,0,.93),2.15,1000,1280)]
 if os.environ.get('AW_DETAIL_VIEW')=='topology':views=[]
 elif os.environ.get('AW_DETAIL_VIEW'):
  views=[v for v in views if v[0]==os.environ['AW_DETAIL_VIEW']];assert views,'Unknown detail view'
 for name,pos,target,scale,w,h in views:
  char.hide_render=name=='weapon'
+ weapon.hide_render=name=='side'
  cam.location=pos;aim(cam,target);cam.data.ortho_scale=scale;scene.render.resolution_x=w;scene.render.resolution_y=h
  scene.render.filepath=str(ROOT/'previews'/f'{name}.png');print('DETAIL_RENDER',name,flush=True);bpy.ops.render.render(write_still=True)
 char.hide_render=False
+weapon.hide_render=False
 if not os.environ.get('AW_DETAIL_VIEW') or os.environ['AW_DETAIL_VIEW']=='topology':
  # Show actual source edges, including quad clothing loops, as geometry.
  weapon=bpy.data.objects['M16A4_Separate_Weapon'];weapon.hide_render=True

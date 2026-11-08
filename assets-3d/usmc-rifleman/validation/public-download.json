@@ -1,0 +1,19 @@
+{
+  "model_commit": "bd5c3210d0f37a2057780eca4f0aa6bd33eab2a4",
+  "files": [
+    {
+      "file": "USMC_Rifleman_Kit.glb",
+      "url": "https://raw.githubusercontent.com/dydtjs345-ux/annous-warfare/bd5c3210d0f37a2057780eca4f0aa6bd33eab2a4/assets-3d/usmc-rifleman/models/USMC_Rifleman_Kit.glb",
+      "http_status": 200,
+      "bytes": 8615268,
+      "sha256": "b428a7ca55628e1184a91bbe4ef939ff98a171b2a8c0e9ad630d742e56272b87"
+    },
+    {
+      "file": "USMC_Rifleman_Kit.fbx",
+      "url": "https://raw.githubusercontent.com/dydtjs345-ux/annous-warfare/bd5c3210d0f37a2057780eca4f0aa6bd33eab2a4/assets-3d/usmc-rifleman/models/USMC_Rifleman_Kit.fbx",
+      "http_status": 200,
+      "bytes": 7453564,
+      "sha256": "2114f74bd622ebb61e74c7f91e94c486ba361ad8731333414b9c357d08d97e46"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "preserved_commit": "f80c0e510dcffe759f62a43d1bd3ddea510274db",
+  "branch": "feat/usmc-rifleman-3d-apose",
+  "changed_existing_paths_outside_asset_directory": [],
+  "game_test_suite": {
+    "tests": 308,
+    "pass": 308,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "test_processes": 31,
+  "game_test_exit_code": 0,
+  "production_build_exit_code": 0,
+  "production_build_has_existing_large_chunk_advisory": true,
+  "unchanged_file_samples": {
+    "package.json": "9dcb73073c6b886cf83ad85e8b114f3a4d433854ccc0a1918c446e3d1bebef0e",
+    "package-lock.json": "af8117eded4368fe0d7018fb1b4950b8121fa191b2c8f972c19836a9ae1a4c17",
+    "src/simulation.js": "a69b91dd211629856f9fdccb3ffa8fed6a294f3e38665fd25da7f180a64aa602",
+    "src/main.js": "b60c8d8c2feac1b2b8ff5a2efbb4522713ccd4bcf4640c2cae8ce5b629372483"
+  }
+}
