@@ -1,7 +1,7 @@
-# E gait correction — source cels
+# E gait correction checkpoint
 
-These are original full-body transparent PNG authoring masters for the v0.3.5 E gait correction. They preserve the equipped USMC appearance and include both legs, pelvis, torso, hands and rifle in each cel. They are not cropped poses from the concept sheet or geometric stand-ins.
+Eight original full-body transparent PNG authoring masters are preserved here. Frame 1 has the near/right pocket leg leading; frame 5 has the far/left leg leading and pocket leg trailing. Frame 3 has right support/left passing; the revised frame 7 has left support/right passing. The intermediate weight-acceptance and terminal-swing poses are also present.
 
-The numbered files correspond to the eight-phase cycle, not independent soldier directions. Frame 1 has the near/right pocket leg leading. Frame 5 has the far/left leg leading while the pocket leg trails. Frame 3 has right support/left passing. Remaining source cels and the complete loop review are still in progress at this checkpoint.
+These are candidate source cels, not an approved completed animation. Atlas export, anatomical/foot-contact annotation, actual 1x/0.25x loop review and final gait corrections remain unfinished. No COMPLETE label or live-combat admission is granted.
 
-Individual source-key acceptance does not approve the full gait or admit it to combat. The final atlas must retain common uniform scale, ground/upper-body consistency and verified alternating support across every phase. Earlier four-key/eight-frame prototypes remain unchanged.
+The in-progress comparison changes are preserved exactly in `integration-wip.patch`, relative to the current branch's stable laboratory. They are not applied because the revised eight-cel atlas is not exported yet. Applying the patch is only an integration starting point, not a finished gait release. The existing game, prior eight-frame prototype, rejected four-key art and published preview remain intact. Work paused when the user requested a separate genuine 3D asset.

@@ -3,7 +3,7 @@
   "character": "USMC rifleman #1",
   "direction": "E",
   "baseline": "9626d592d0ac98238923445e5031a8b0e9abf6ca",
-  "status": "prototype",
+  "status": "eight authored source cels; integration paused for separate 3D request",
   "sources": [
     {
       "file": "frame-01.png",
@@ -12,7 +12,16 @@
         1024,
         1536
       ],
-      "status": "authored key candidate; full-loop review pending"
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
+    },
+    {
+      "file": "frame-02.png",
+      "sha256": "ce8fdd9d35f57d5023422b8b1ea11c78587fb4fea64830e8ab4215156191699a",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
     },
     {
       "file": "frame-03.png",
@@ -21,7 +30,16 @@
         1024,
         1536
       ],
-      "status": "authored key candidate; full-loop review pending"
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
+    },
+    {
+      "file": "frame-04.png",
+      "sha256": "a4de8810f63e0fb66f36e941eecf0299b3c1ccae89f79f79e25c7c5bee791819",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
     },
     {
       "file": "frame-05.png",
@@ -30,7 +48,34 @@
         1024,
         1536
       ],
-      "status": "authored key candidate; full-loop review pending"
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
+    },
+    {
+      "file": "frame-06.png",
+      "sha256": "f442e0338df222c15d88a6841490c827c4c9e6a3421d1c3b068eb84b96d1cc7a",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
+    },
+    {
+      "file": "frame-07.png",
+      "sha256": "3e7d15cfbcf7e3a38a6ba9e78aabd82178380348ef5ad87a144efa306d956987",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
+    },
+    {
+      "file": "frame-08.png",
+      "sha256": "cadcc701bd87d6c6e1b0f5b630337fa590e980ee905df0172df4e744d921c613",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "authored source candidate; moving-loop and ground-contact review pending"
     }
   ]
 }
