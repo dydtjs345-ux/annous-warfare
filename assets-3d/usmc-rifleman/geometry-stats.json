@@ -1,0 +1,33 @@
+{
+  "USMC_Rifleman_Character": {
+    "vertices": 31624,
+    "faces": 29860,
+    "triangles": 58142,
+    "quads": 27980,
+    "uv_layers": 1,
+    "materials": 1,
+    "bounds_metres": [
+      1.159855842590332,
+      0.7892202734947205,
+      1.8229966163635254
+    ]
+  },
+  "M16A4_Separate_Weapon": {
+    "vertices": 4610,
+    "faces": 4149,
+    "triangles": 8712,
+    "quads": 4067,
+    "uv_layers": 1,
+    "materials": 1,
+    "bounds_metres": [
+      0.07860365509986877,
+      1.0120000839233398,
+      0.406000018119812
+    ]
+  },
+  "bones": 163,
+  "textures": {
+    "character": 2048,
+    "weapon": 1024
+  }
+}

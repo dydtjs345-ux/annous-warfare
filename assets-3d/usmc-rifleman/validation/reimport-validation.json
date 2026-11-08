@@ -1,0 +1,383 @@
+{
+  "blender": "4.3.2",
+  "isolated_imports": [
+    {
+      "file": "USMC_Rifleman_Kit.glb",
+      "sha256": "83a571eca79fae032654b722c3870b5411110e5569a18ce872e3d2022dc7dbda",
+      "mesh_count": 2,
+      "armatures": 1,
+      "importer_bone_display_helpers": 1,
+      "decoded_images": [
+        {
+          "name": "M16A4_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Metallic-M16A4_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "USMC_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Metallic-USMC_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "USMC_Rifleman_Character",
+          "vertices": 46507,
+          "triangles": 58142,
+          "dimensions_metres": [
+            1.159854769706726,
+            0.7892202138900757,
+            1.8229957818984985
+          ],
+          "skinned": true
+        },
+        {
+          "name": "M16A4_Separate_Weapon",
+          "vertices": 8232,
+          "triangles": 8712,
+          "dimensions_metres": [
+            0.07860365509986877,
+            1.0120000839233398,
+            0.406000018119812
+          ],
+          "skinned": false
+        }
+      ]
+    },
+    {
+      "file": "USMC_Rifleman_Apose.glb",
+      "sha256": "9e62599a2a902f2d0650dd1bc8f0ade3eb1cc699ded1bb6b7dd2f296dcd56e35",
+      "mesh_count": 1,
+      "armatures": 1,
+      "importer_bone_display_helpers": 1,
+      "decoded_images": [
+        {
+          "name": "USMC_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Metallic-USMC_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "USMC_Rifleman_Character",
+          "vertices": 46507,
+          "triangles": 58142,
+          "dimensions_metres": [
+            1.159854769706726,
+            0.7892202138900757,
+            1.8229957818984985
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "M16A4.glb",
+      "sha256": "b224bb483a29b8a465ccda32230b866a03ef333e7fed18b1e5c3e033b5f1db35",
+      "mesh_count": 1,
+      "armatures": 0,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "M16A4_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Metallic-M16A4_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "M16A4_Separate_Weapon",
+          "vertices": 8232,
+          "triangles": 8712,
+          "dimensions_metres": [
+            0.07860364764928818,
+            1.0119999647140503,
+            0.406000018119812
+          ],
+          "skinned": false
+        }
+      ]
+    },
+    {
+      "file": "USMC_Rifleman_Kit.fbx",
+      "sha256": "7e10230c8914cb73157361abf2e6710fe7b39c908cee0dc24105302eb1833d1a",
+      "mesh_count": 2,
+      "armatures": 1,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "M16A4_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_BaseColor.001",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Metallic",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "USMC_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_BaseColor.001",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Metallic",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "M16A4_Separate_Weapon",
+          "vertices": 4610,
+          "triangles": 8712,
+          "dimensions_metres": [
+            0.07860365509986877,
+            1.0120000839233398,
+            0.406000018119812
+          ],
+          "skinned": false
+        },
+        {
+          "name": "USMC_Rifleman_Character",
+          "vertices": 31624,
+          "triangles": 58142,
+          "dimensions_metres": [
+            1.159855604171753,
+            0.7892209887504578,
+            1.8229974508285522
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "USMC_Rifleman_Apose.fbx",
+      "sha256": "1e3c10e91a42806bfd68440c15ea56f591f79797138c4af0bcc8e974062d31cb",
+      "mesh_count": 1,
+      "armatures": 1,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "USMC_BaseColor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_BaseColor.001",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Metallic",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "USMC_Roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "USMC_Rifleman_Character",
+          "vertices": 31624,
+          "triangles": 58142,
+          "dimensions_metres": [
+            1.159855604171753,
+            0.7892209887504578,
+            1.8229974508285522
+          ],
+          "skinned": true
+        }
+      ]
+    },
+    {
+      "file": "M16A4.fbx",
+      "sha256": "76b63b162acfb1e5701cf1db23774e0844e8b9b828ccf5d20edbcf159e33bc91",
+      "mesh_count": 1,
+      "armatures": 0,
+      "importer_bone_display_helpers": 0,
+      "decoded_images": [
+        {
+          "name": "M16A4_BaseColor",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_BaseColor.001",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Metallic",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Normal",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "M16A4_Roughness",
+          "dimensions": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "meshes": [
+        {
+          "name": "M16A4_Separate_Weapon",
+          "vertices": 4610,
+          "triangles": 8712,
+          "dimensions_metres": [
+            0.07860365509986877,
+            1.0120000839233398,
+            0.406000018119812
+          ],
+          "skinned": false
+        }
+      ]
+    }
+  ]
+}

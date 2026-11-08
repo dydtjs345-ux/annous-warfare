@@ -1,0 +1,148 @@
+{
+  "validator": "Khronos glTF-Validator 2.0.0-dev.3.10",
+  "files": [
+    {
+      "file": "USMC_Rifleman_Kit.glb",
+      "bytes": 8632664,
+      "sha256": "83a571eca79fae032654b722c3870b5411110e5569a18ce872e3d2022dc7dbda",
+      "triangles": 66854,
+      "exportedVertices": 54739,
+      "weightedVertices": 46507,
+      "bones": 163,
+      "embeddedImages": 6,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "USMC_Rifleman_Character",
+          "bounds": {
+            "min": [
+              -0.579927921295166,
+              0.0020000003278255463,
+              -0.4034999907016754
+            ],
+            "max": [
+              0.579927921295166,
+              1.8249965906143188,
+              0.3857204020023346
+            ]
+          },
+          "dimensionsMetres": [
+            1.159855842590332,
+            1.8229965902864933,
+            0.78922039270401
+          ]
+        },
+        {
+          "name": "M16A4_Separate_Weapon",
+          "bounds": {
+            "min": [
+              -0.03550000116229057,
+              -0.17000000178813934,
+              -0.34200000762939453
+            ],
+            "max": [
+              0.0431036502122879,
+              0.23600000143051147,
+              0.6700000762939453
+            ]
+          },
+          "dimensionsMetres": [
+            0.07860365137457848,
+            0.4060000032186508,
+            1.0120000839233398
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "USMC_Rifleman_Apose.glb",
+      "bytes": 7135532,
+      "sha256": "9e62599a2a902f2d0650dd1bc8f0ade3eb1cc699ded1bb6b7dd2f296dcd56e35",
+      "triangles": 58142,
+      "exportedVertices": 46507,
+      "weightedVertices": 46507,
+      "bones": 163,
+      "embeddedImages": 3,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "USMC_Rifleman_Character",
+          "bounds": {
+            "min": [
+              -0.579927921295166,
+              0.0020000003278255463,
+              -0.4034999907016754
+            ],
+            "max": [
+              0.579927921295166,
+              1.8249965906143188,
+              0.3857204020023346
+            ]
+          },
+          "dimensionsMetres": [
+            1.159855842590332,
+            1.8229965902864933,
+            0.78922039270401
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "M16A4.glb",
+      "bytes": 1497484,
+      "sha256": "b224bb483a29b8a465ccda32230b866a03ef333e7fed18b1e5c3e033b5f1db35",
+      "triangles": 8712,
+      "exportedVertices": 8232,
+      "weightedVertices": 0,
+      "bones": 0,
+      "embeddedImages": 3,
+      "degenerateTriangles": 0,
+      "meshes": [
+        {
+          "name": "M16A4_Separate_Weapon",
+          "bounds": {
+            "min": [
+              -0.03550000116229057,
+              -0.17000000178813934,
+              -0.34200000762939453
+            ],
+            "max": [
+              0.0431036502122879,
+              0.23600000143051147,
+              0.6700000762939453
+            ]
+          },
+          "dimensionsMetres": [
+            0.07860365137457848,
+            0.4060000032186508,
+            1.0120000839233398
+          ]
+        }
+      ],
+      "khronos": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    }
+  ]
+}
