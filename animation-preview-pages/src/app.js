@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 const $=id=>document.getElementById(id),actors=[],headings={N:225,NE:180,E:135,SE:90,S:45,SW:0,W:315,NW:270};
 const states={Idle:['Lower_Idle','Upper_LowReady',0],Walk:['Lower_Walk','Upper_LowReady',1.05],Sprint:['Lower_Sprint','Upper_Sprint',3],Aim:['Lower_AimStance','Upper_Aim',0],AimWalk:['Lower_AimWalk','Upper_Aim',.62],MovingFire:['Lower_AimWalk','Upper_Aim',.62],Fire:['Lower_AimStance','Upper_Aim',0],Raise:['Lower_AimStance','Weapon_Raise',0],Lower:['Lower_AimStance','Weapon_Lower',0],Reload:['Lower_AimStance','Reload',0],Start:['Start_Walk','Upper_LowReady',0],Stop:['Stop_Walk','Upper_LowReady',0],Accelerate:['Walk_To_Sprint','Upper_Sprint',0],Decelerate:['Sprint_To_Walk','Upper_LowReady',0],SprintStop:['Sprint_Stop','Upper_LowReady',0],TurnLeft:['Turn_Left','Upper_Turn_Left',0],TurnRight:['Turn_Right','Upper_Turn_Right',0]};
@@ -19,13 +20,14 @@ class Actor{
   const panel=document.createElement('section');panel.className='panel';panel.dataset.faction=faction;panel.innerHTML=`<h2>${faction==='Russian'?'Russian infantry · AK-74M':'USMC · M16A4'}</h2><div class="viewport"></div><div class="readout"></div>`;$('panels').append(panel);this.panel=panel;this.viewport=panel.querySelector('.viewport');this.readout=panel.querySelector('.readout');
   this.scene=new T.Scene();this.scene.background=new T.Color('#28333f');this.assembly=new T.Group();this.assembly.add(this.model);this.scene.add(this.assembly);
   this.scene.add(new T.HemisphereLight(0xc4d8ee,0x434232,1.2));for(const [pos,power,color]of [[[-3,6,4],2.4,0xebefff],[[4,5,-2],1.5,0xd1e3ff],[[-2,4,-4],1.6,0xf2e5d1]]){const l=new T.DirectionalLight(color,power);l.position.set(...pos);this.scene.add(l);}
-  this.ground=new T.Group();this.scene.add(this.ground);const grid=new T.GridHelper(20,80,0x71808a,0x465765);grid.material.transparent=true;grid.material.opacity=.32;this.ground.add(grid);grid.material.vertexColors=false;grid.material.color.setHex(0x526270);
+  this.model.traverse(o=>{if(o.isMesh)o.castShadow=true;});
+  this.ground=new T.Group();this.scene.add(this.ground);const grid=new T.GridHelper(20,80,0x71808a,0x465765);grid.material.transparent=true;grid.material.opacity=.32;this.ground.add(grid);const floor=new T.Mesh(new T.PlaneGeometry(40,40),new T.MeshStandardMaterial({color:0x28333f,roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-.012;floor.receiveShadow=true;this.ground.add(floor);grid.material.vertexColors=false;grid.material.color.setHex(0x526270);
   this.camera=new T.OrthographicCamera(-1,1,1,-1,.01,100);this.camera.position.set(6,4.899+ .85,6);this.camera.lookAt(0,.85,0);
-  this.renderer=new T.WebGLRenderer({antialias:true,preserveDrawingBuffer:false,powerPreference:'low-power'});this.renderer.setPixelRatio(1);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1;this.viewport.append(this.renderer.domElement);this.renderer.domElement.setAttribute('aria-label',faction+' animated infantry');this.renderer.domElement.addEventListener('webglcontextlost',event=>{if(this.disposing)return;event.preventDefault();playing=false;showError('Graphics paused by the browser. Tap Retry loading to resume.');});
+  this.renderer=new T.WebGLRenderer({antialias:true,preserveDrawingBuffer:false,powerPreference:'low-power'});this.renderer.setPixelRatio(1);this.renderer.outputColorSpace=T.SRGBColorSpace;this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1;this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.type=T.PCFSoftShadowMap;const key=this.scene.children.find(o=>o.isDirectionalLight);key.castShadow=true;key.shadow.mapSize.set(1024,1024);Object.assign(key.shadow.camera,{left:-2.2,right:2.2,top:2.2,bottom:-2.2,near:.1,far:20});key.shadow.camera.updateProjectionMatrix();key.shadow.normalBias=.015;key.shadow.bias=-.00015;this.viewport.append(this.renderer.domElement);this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.target.set(0,.85,0);this.controls.enablePan=false;this.controls.minZoom=.4;this.controls.maxZoom=5;this.controls.minPolarAngle=.15;this.controls.maxPolarAngle=Math.PI/2;this.controls.addEventListener('change',()=>{needsRender=true;});this.renderer.domElement.setAttribute('aria-label',faction+' animated infantry');this.renderer.domElement.addEventListener('webglcontextlost',event=>{if(this.disposing)return;event.preventDefault();playing=false;showError('Graphics paused by the browser. Tap Retry loading to resume.');});
   const reference=this.clips.get('Upper_Aim'),recoil=this.clips.get('Recoil_Shot');this.recoil=[];
   if(reference&&recoil){for(let i=0;i<4;i++){const c=recoil.clone();c.name=`shot_${i}`;T.AnimationUtils.makeClipAdditive(c,0,reference,30);const a=this.mixer.clipAction(c);a.setLoop(T.LoopOnce,1);a.clampWhenFinished=false;a.blendMode=T.AdditiveAnimationBlendMode;this.recoil.push(a);}}
   this.finished=[];this.mixer.addEventListener('finished',e=>this.finished.push(e.action));
-  this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(this.viewport);this.resize();this.setDirection();this.setState(state,true);
+  this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(this.viewport);this.resize();this.setView();this.setDirection();this.setState(state,true);
  }
  action(name){if(!this.clips.has(name))return null;if(!this.actions.has(name)){const a=this.mixer.clipAction(this.clips.get(name));if(oneShots.has(name)){a.setLoop(T.LoopOnce,1);a.clampWhenFinished=true;}this.actions.set(name,a);}return this.actions.get(name);}
  changeLayer(which,name,immediate=false){const action=this.action(name);if(!action){this.missing=name;return;}const old=this[which];if(old===action)return;const phase=which==='lower'&&old&&!oneShots.has(name)&&!oneShots.has(old.getClip().name)?old.time/old.getClip().duration:0;action.reset().setEffectiveTimeScale(1).setEffectiveWeight(1).play();if(which==='lower')action.time=phase*action.getClip().duration;if(old){if(immediate)old.stop();else{old.fadeOut(.18);action.fadeIn(.18);}}this[which]=action;}
@@ -41,11 +43,17 @@ class Actor{
   const geometries=new Set(),materials=new Set(),textures=new Set();
   this.scene.traverse(o=>{if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){if(!m)continue;materials.add(m);for(const value of Object.values(m))if(value?.isTexture)textures.add(value);}});
   for(const g of geometries)g.dispose();for(const m of materials)m.dispose();for(const t of textures){t.dispose();t.image?.close?.();}
-  this.renderer.dispose();this.renderer.forceContextLoss();this.panel.remove();this.scene.clear();
+  this.controls.dispose();this.renderer.dispose();this.renderer.forceContextLoss();this.panel.remove();this.scene.clear();
  }
  triggerShot(){if(!this.recoil.length)return;const a=this.recoil[this.shotCount%this.recoil.length];a.stop().reset().setEffectiveWeight(1).play();this.shotCount++;}
- setDirection(){this.assembly.rotation.y=T.MathUtils.degToRad(headings[$('direction').value]);this.resize();}
- resize(){const w=this.viewport.clientWidth,h=this.viewport.clientHeight;if(w<1||h<1)return;this.renderer.setSize(w,h,false);const worldSpan=(this.referenceSpans?.[$('direction').value]??1.73)*h/Number($('height').value);this.camera.left=-worldSpan*w/h/2;this.camera.right=worldSpan*w/h/2;this.camera.top=worldSpan/2;this.camera.bottom=-worldSpan/2;this.camera.updateProjectionMatrix();needsRender=true;}
+ setView(){
+  const mode=$('view').value;this.controls.enabled=mode==='free';this.camera.zoom=1;
+  if(mode==='side'){const offset=new T.Vector3(9,0,0).applyAxisAngle(new T.Vector3(0,1,0),this.assembly.rotation.y);this.camera.position.copy(offset).add(this.controls.target);}
+  else this.camera.position.set(6,4.899+.85,6);
+  this.camera.lookAt(this.controls.target);this.controls.update();this.resize();
+ }
+ setDirection(){this.assembly.rotation.y=T.MathUtils.degToRad(headings[$('direction').value]);if($('view').value==='side')this.setView();else this.resize();}
+ resize(){const w=this.viewport.clientWidth,h=this.viewport.clientHeight;if(w<1||h<1)return;this.renderer.setSize(w,h,false);const worldSpan=($('view').value==='side'?1.73:(this.referenceSpans?.[$('direction').value]??1.73))*h/Number($('height').value);this.camera.left=-worldSpan*w/h/2;this.camera.right=worldSpan*w/h/2;this.camera.top=worldSpan/2;this.camera.bottom=-worldSpan/2;this.camera.updateProjectionMatrix();needsRender=true;}
  update(dt){
   if(dt>0&&firing&&this.upper?.getClip().name==='Upper_Aim'&&(this.state==='MovingFire'||this.state==='Fire')&&clock+1e-9>=this.nextShot&&this.recoil.length){this.triggerShot();this.nextShot=clock+.14;}
   if(!firing)this.nextShot=clock;const oldLower=this.lower,oldTime=oldLower?.time??0,info=this.manifest?.clips?.[oldLower?.getClip().name];this.mixer.update(dt);if(this.finished.length){const events=this.finished.splice(0);for(const action of events){if(this.recoil.includes(action))action.stop();else if(action===this.upper||action===this.lower)this.finishTransition(action.getClip().name);}this.mixer.update(0);}if(this.pendingSingleShot&&this.upper?.getClip().name==='Upper_Aim'){this.pendingSingleShot=false;this.triggerShot();}if(info?.travel_samples_m){const samples=info.travel_samples_m;const at=t=>{const f=Math.max(0,Math.min(samples.length-1,t*30)),i=Math.min(samples.length-2,Math.floor(f));return samples[i].distance_m+(samples[i+1].distance_m-samples[i].distance_m)*(f-i);};this.distance+=at(Math.min(info.duration,oldTime+dt))-at(oldTime);if(oldLower!==this.lower){const tail=Math.max(0,oldTime+dt-info.duration);this.lower.time=tail;this.distance+=this.speed*tail;this.mixer.update(0);}}else this.distance+=this.speed*dt;const fwd=new T.Vector3(0,0,-1).applyAxisAngle(new T.Vector3(0,1,0),this.assembly.rotation.y);this.ground.position.copy(fwd.multiplyScalar(this.distance% .25));
@@ -78,12 +86,17 @@ async function loadFaction(){
  const ticket=++generation;requestController?.abort();requestController=new AbortController();ready=false;for(const actor of actors)actor.dispose();actors.length=0;
  $('retry').hidden=true;$('progress').hidden=false;$('progress').removeAttribute('value');$('status').textContent='Loading '+$('faction').selectedOptions[0].text+'…';
  try{
-  const faction=$('faction').value,info=architecture.factions[faction],url=new URL('./'+info.model,document.baseURI);
+  const factions=$('comparison').value==='both'?['USMC','Russian']:[$('faction').value];
+  for(const faction of factions){const info=architecture.factions[faction],url=new URL('./'+info.model,document.baseURI);
   const buffer=await fetchModel(url.href,requestController.signal);if(ticket!==generation)return;$('status').textContent='Preparing animated 3D model…';
   await new Promise(requestAnimationFrame);const gltf=await new GLTFLoader().parseAsync(buffer,new URL('.',url).href);if(ticket!==generation)return;
-  const actor=new Actor(faction,gltf,info);actor.calibrate();actors.push(actor);clock=0;ready=true;needsRender=true;last=performance.now();$('status').textContent='Ready · '+gltf.animations.length+' animation clips';$('progress').hidden=true;
+  const actor=new Actor(faction,gltf,info);actor.calibrate();actors.push(actor);}
+  restart();ready=true;needsRender=true;last=performance.now();$('status').textContent='Ready · '+'21 animation clips · '+actors.length+' soldier'+(actors.length>1?'s':'');$('progress').hidden=true;
  }catch(error){if(error.name==='AbortError'||ticket!==generation)return;console.error(error);showError('Could not load the 3D preview. '+error.message);}
 }
+$('comparison').onchange=()=>{$('faction').disabled=$('comparison').value==='both';$('panels').classList.toggle('comparison',$('comparison').value==='both');loadFaction();};
+for(const [id,factor]of [['zoom-in',1.25],['zoom-out',.8]])$(id).onclick=()=>{for(const a of actors){a.camera.zoom=T.MathUtils.clamp(a.camera.zoom*factor,.4,5);a.camera.updateProjectionMatrix();}needsRender=true;};
+$('view').onchange=()=>{$('inspection-tools').hidden=$('view').value!=='free';actors.forEach(a=>a.setView());$('view-tip').textContent=$('view').value==='free'?'Drag to rotate. Pinch or scroll to zoom.':'Orthographic camera · fixed gameplay framing. Side view follows the selected facing.';needsRender=true;};
 $('faction').onchange=()=>loadFaction();$('animation').onchange=()=>setState($('animation').value);
 $('play').onclick=()=>{manual=false;playing=!playing;last=performance.now();updateButtons();needsRender=true;};
 $('restart').onclick=restart;$('fire').onclick=()=>{firing=!firing;updateButtons();needsRender=true;};

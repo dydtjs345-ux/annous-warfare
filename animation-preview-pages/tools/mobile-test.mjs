@@ -38,6 +38,8 @@ for(const engine of engines){
   assert.deepEqual(Object.keys(hashes),['USMC'],'Russian must load only on selection');
   const manifest=await page.evaluate(async()=>fetch('./source.json').then(r=>r.json()));
   assert.equal(manifest.commit,report.source_commit);
+  const gameplayCamera=await page.evaluate(()=>{const a=animationPreview.actors[0],d=a.camera.position.clone().sub(a.controls.target);return {orthographic:a.camera.isOrthographicCamera,position:a.camera.position.toArray(),elevation:Math.atan2(d.y,Math.hypot(d.x,d.z))*180/Math.PI,controls:a.controls.enabled};});
+  assert(gameplayCamera.orthographic&&!gameplayCamera.controls);assert(Math.abs(gameplayCamera.elevation-30)<.01);
   const checks={};
   for(const faction of ['USMC','Russian']){
    if(faction==='Russian'){
@@ -77,6 +79,7 @@ for(const engine of engines){
     await page.selectOption('#direction',direction);
     headings.push(await page.evaluate(()=>animationPreview.actors[0].assembly.rotation.y));
    }
+   assert.deepEqual(await page.evaluate(()=>animationPreview.actors[0].camera.position.toArray()),gameplayCamera.position,'Gameplay camera stays fixed across headings');
    assert.equal(new Set(headings).size,8,'Directions must rotate the 3D model');
    const scales=[];
    for(const height of ['60','80','120']){
@@ -90,6 +93,20 @@ for(const engine of engines){
    assert.equal(await page.locator('canvas').count(),1,'Faction switch must release the old renderer');
    checks[faction]={motions:evaluated.length,raw_clips:21,moving_fire:moving,heading_rotations:headings,projection_spans:scales,reload_completed:true};
   }
+  await page.selectOption('#view','side');
+  assert(Math.abs(await page.evaluate(()=>animationPreview.actors[0].camera.position.y)-.85)<1e-8);
+  await page.selectOption('#view','free');await page.locator('canvas').scrollIntoViewIfNeeded();
+  const canvas=await page.locator('canvas').boundingBox();
+  await page.mouse.move(canvas.x+canvas.width/2,canvas.y+canvas.height/2);await page.mouse.down();await page.mouse.move(canvas.x+canvas.width/2+45,canvas.y+canvas.height/2+10,{steps:5});await page.mouse.up();await page.locator('#zoom-in').tap();
+  const inspection=await page.evaluate(()=>{const a=animationPreview.actors[0];return {position:a.camera.position.toArray(),zoom:a.camera.zoom,orthographic:a.camera.isOrthographicCamera,touches:a.controls.touches};});
+  assert(inspection.orthographic&&inspection.zoom!==1);assert.notDeepEqual(inspection.position,gameplayCamera.position);
+  await page.selectOption('#view','gameplay');
+  await page.selectOption('#comparison','both');await page.waitForFunction(()=>animationPreview.ready&&animationPreview.actors.length===2,{timeout:120000});
+  await page.evaluate(()=>{animationPreview.pause();animationPreview.setState('MovingFire',true);animationPreview.restart();for(let i=0;i<24;i++)animationPreview.step(1/30);});
+  const comparison=await page.evaluate(()=>animationPreview.actors.map(a=>({...animationPreview.snapshot().find(s=>s.faction===a.faction),shadowEnabled:a.renderer.shadowMap.enabled,receivers:a.ground.children.filter(o=>o.receiveShadow).length,camera:a.camera.position.toArray()})));
+  assert.equal(comparison.length,2);assert.equal(comparison[0].gaitTime,comparison[1].gaitTime);assert.equal(comparison[0].shots,comparison[1].shots);assert(comparison.every(a=>a.distance>0&&a.shots>=4&&a.shadowEnabled&&a.receivers===1));
+  await page.evaluate(()=>animationPreview.step(0));
+  await page.screenshot({path:path.join(output,`${engine}-isometric-comparison.png`),fullPage:true});
   await page.selectOption('#animation','MovingFire');await page.selectOption('#direction','SE');await page.selectOption('#height','120');
   await page.locator('#panels').scrollIntoViewIfNeeded();
   await page.locator('#play').tap();
@@ -111,7 +128,7 @@ for(const engine of engines){
   assert.deepEqual(hashes,manifest.asset_sha256,'Published GLBs must match a1d2804 byte for byte');
   assert.deepEqual(errors,[],'No browser JavaScript or graphics errors');
   assert.deepEqual(networkErrors,[],'No failed asset responses');
-  const result={engine,version:browser.version(),device:'iPhone 13 emulation',checks,hashes,portrait,landscape,play_pause_touch:true,speed_options:speeds,errors,networkErrors};
+  const result={gameplayCamera,inspection,comparison,engine,version:browser.version(),device:'iPhone 13 emulation',checks,hashes,portrait,landscape,play_pause_touch:true,speed_options:speeds,errors,networkErrors};
   report.browsers.push(result);
   await fs.writeFile(path.join(output,'mobile-validation.json'),JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({engine,passed:true,source:manifest.commit,hashes,checks:['38 motions per faction','continuous moving fire','8 3D directions','60/80/120px','touch play/pause','portrait/landscape','asset hashes']}));

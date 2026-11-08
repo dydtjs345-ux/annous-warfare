@@ -18,5 +18,15 @@
   },
   "ready_bundle": "animation-preview-pages/dist/",
   "public_https_browser_validation": "not run: no preview deployment exists",
-  "physical_iphone_validation": "not run: no physical device available"
+  "physical_iphone_validation": "not run: no physical device available",
+  "latest_publication_attempt": "Separate repository still unavailable; creation retried and returned HTTP 403 after isometric-camera update.",
+  "camera_implementation": {
+    "default": "orthographic gameplay isometric, 30 degrees",
+    "other_views": [
+      "orthographic free inspection",
+      "orthographic side"
+    ],
+    "comparison": "synchronized USMC and Russian animation clocks",
+    "contact_shadows": "realtime shadow map from animated geometry"
+  }
 }
