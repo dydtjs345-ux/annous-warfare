@@ -26,6 +26,8 @@ for(const engine of engines){
   });
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:120000});
   await page.waitForFunction(()=>window.animationPreview?.ready,{timeout:120000});
+  // Existing animation regression assertions use English labels explicitly.
+  if(await page.locator('#language').count())await page.selectOption('#language','en');
   await page.locator('#panels').scrollIntoViewIfNeeded();
   const frames=await page.evaluate(async()=>{
    const start=animationPreview.snapshot()[0];await new Promise(resolve=>setTimeout(resolve,1500));

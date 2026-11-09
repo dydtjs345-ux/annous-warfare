@@ -1,0 +1,20 @@
+{
+  "status": "published_and_http_verified",
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+  "version_number": 2,
+  "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_424035c7e6988191ab40e1493a65469d",
+  "deployment_id": "appgdep_6af12c79d2a081918b84541fa12518cf",
+  "site_source_commit": "7727011bdcfeec419f536c99d2a5b84250a1e07d",
+  "feature_branch": "feat/infantry-preview-ko",
+  "default_language": "ko",
+  "languages": [
+    "ko",
+    "en"
+  ],
+  "model_and_animation_bytes_unchanged": true,
+  "main_merged": false,
+  "live_game_modified": false,
+  "mobile_browser_rendering_verified": false,
+  "verification_limit": "Managed Sites browser tool and physical iPhone unavailable; DOM localization and anonymous HTTPS with iPhone user agent verified."
+}

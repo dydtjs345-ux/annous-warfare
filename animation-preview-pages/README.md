@@ -2,6 +2,14 @@
 
 Standalone static preview for the original animated GLBs at `a1d280461f94456c905b677b213a6ee31245b1d0` on `feat/shared-infantry-combat-animation`. The source models and existing playable game are unchanged.
 
+## 한국어 / English
+
+The interface defaults to **한국어**. Use the language selector to switch to English without reloading assets or resetting the selected animation. The 17 combat motion labels, all 21 individual clip labels, camera/presentation/faction labels, headings, sizes, buttons, help, readouts, tooltips, loading states, and recovery errors are localized. Internal clip IDs, control values, model URLs, skeletons, and animation data remain unchanged.
+
+On phones, camera, presentation, and animation controls use full-width rows; native selects retain 16px text and touch targets are at least 48px high. Korean system fonts and wrapping are enabled. The Korean help section describes animations, camera movement, directions, sizes, and squad modes.
+
+`tools/localization-test.mjs` checks the actual UI module in a non-rendering DOM: default Korean, both languages, clip coverage, unchanged option values, play/fire state, camera guidance, HTTP 503 recovery text, and no new downloads when switching languages. It requires `linkedom` (the recorded run used an isolated temporary installation via `DOM_MODULE`). This is **not** a WebGL or mobile layout test. The managed Sites browser tool and a physical iPhone were unavailable for this localization update; visual rendering, pinch gestures, and hardware performance remain unverified. `validation/localization-public-https.json` verifies the Korean page and every required asset anonymously using an iPhone Safari user agent.
+
 ## Controls
 
 - Choose USMC / M16A4 or Russian infantry / AK-74M, or compare both simultaneously. Single-soldier mode keeps only the selected faction in GPU memory; comparison loads both and starts them together on the same animation clock.

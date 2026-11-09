@@ -1,0 +1,19 @@
+{
+  "dom_only": true,
+  "default_language": "ko",
+  "languages": [
+    "ko",
+    "en"
+  ],
+  "translated_individual_clips": 21,
+  "translated_combat_motions": 17,
+  "internal_option_values_unchanged": true,
+  "no_reload_on_language_switch": true,
+  "play_pause_and_fire_labels_passed": true,
+  "camera_tooltip_translation_passed": true,
+  "http_503_error_translation_passed": true,
+  "original_animation_files_unchanged": true,
+  "mobile_rendering_tested": false,
+  "mobile_rendering_limit": "Managed Sites browser tool unavailable; no physical iPhone available",
+  "checked_at": "2026-11-09T02:13:41.920Z"
+}
