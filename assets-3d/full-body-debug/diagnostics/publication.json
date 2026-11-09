@@ -1,0 +1,16 @@
+{
+  "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+  "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_195a961284288191a88569b478a62a9c",
+  "version_number": 6,
+  "deployment_id": "appgdep_6af1c73422d08191b55a0431a6fef343",
+  "status": "succeeded",
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site",
+  "review_url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/?review=body&state=MovingFire&markers=1",
+  "report_url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/diagnostic-report.html",
+  "sites_source_commit": "c91db18cf8ba60b58a7b147a5b436ab3f15a5641",
+  "core_browser_validation_version": "appgprj_6af0d17863348191b4ea48163f305325~appgver_c3d7427c5b5081919731bb91646d2502",
+  "final_ui_touch_squad_smoke": "passed",
+  "game_main_merged": false,
+  "live_game_modified": false,
+  "updated_at": "2026-11-09T13:14:51.335186+00:00"
+}

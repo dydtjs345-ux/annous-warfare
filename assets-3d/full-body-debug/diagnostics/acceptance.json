@@ -1,0 +1,16 @@
+{
+  "core_acceptance": {
+    "1_root_cause_evidenced": true,
+    "2_authored_torso_and_shoulders": true,
+    "3_motion_survives_export": true,
+    "4_visible_in_actual_public_browser": true,
+    "5_distinct_sprint_silhouette": true,
+    "6_reload_rifle_and_torso_coordinated": true,
+    "7_moving_fire_keeps_gait_and_recoil": true,
+    "8_moving_before_after_proof": true,
+    "9_both_factions_pass": true
+  },
+  "all_core_checks_pass": true,
+  "physical_iPhone_tested": false,
+  "quality_note": "Numerical and visible-motion checks do not certify motion-capture fidelity or mobile GPU performance."
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "faction": "USMC",
+    "bones": 163,
+    "clips": [
+      {
+        "name": "Lower_Idle",
+        "channels": 123
+      },
+      {
+        "name": "Lower_AimStance",
+        "channels": 123
+      },
+      {
+        "name": "Lower_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Lower_Sprint",
+        "channels": 123
+      },
+      {
+        "name": "Lower_AimWalk",
+        "channels": 123
+      },
+      {
+        "name": "Start_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Stop_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Walk_To_Sprint",
+        "channels": 123
+      },
+      {
+        "name": "Sprint_To_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Sprint_Stop",
+        "channels": 123
+      },
+      {
+        "name": "Turn_Left",
+        "channels": 123
+      },
+      {
+        "name": "Turn_Right",
+        "channels": 123
+      },
+      {
+        "name": "Upper_Turn_Left",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Turn_Right",
+        "channels": 183
+      },
+      {
+        "name": "Upper_LowReady",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Sprint",
+        "channels": 183
+      },
+      {
+        "name": "Weapon_Raise",
+        "channels": 183
+      },
+      {
+        "name": "Weapon_Lower",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Aim",
+        "channels": 183
+      },
+      {
+        "name": "Recoil_Shot",
+        "channels": 183
+      },
+      {
+        "name": "Reload",
+        "channels": 187
+      },
+      {
+        "name": "Reload_Tactical",
+        "channels": 189
+      },
+      {
+        "name": "Reload_Tactical_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Walk_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Walk_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_Sprint_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Sprint_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_AimWalk_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_AimWalk_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_AimIdle_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_LowReady_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_Recoil_Shot",
+        "channels": 12
+      },
+      {
+        "name": "FB_Reload_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Reload_Upper",
+        "channels": 189
+      }
+    ],
+    "weapon_independent_and_bone_parented": true,
+    "old_and_spare_magazines_separate": true,
+    "khronos": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 100
+    },
+    "bytes": 11875796
+  },
+  {
+    "faction": "Russian",
+    "bones": 163,
+    "clips": [
+      {
+        "name": "Lower_Idle",
+        "channels": 123
+      },
+      {
+        "name": "Lower_AimStance",
+        "channels": 123
+      },
+      {
+        "name": "Lower_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Lower_Sprint",
+        "channels": 123
+      },
+      {
+        "name": "Lower_AimWalk",
+        "channels": 123
+      },
+      {
+        "name": "Start_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Stop_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Walk_To_Sprint",
+        "channels": 123
+      },
+      {
+        "name": "Sprint_To_Walk",
+        "channels": 123
+      },
+      {
+        "name": "Sprint_Stop",
+        "channels": 123
+      },
+      {
+        "name": "Turn_Left",
+        "channels": 123
+      },
+      {
+        "name": "Turn_Right",
+        "channels": 123
+      },
+      {
+        "name": "Upper_Turn_Left",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Turn_Right",
+        "channels": 183
+      },
+      {
+        "name": "Upper_LowReady",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Sprint",
+        "channels": 183
+      },
+      {
+        "name": "Weapon_Raise",
+        "channels": 183
+      },
+      {
+        "name": "Weapon_Lower",
+        "channels": 183
+      },
+      {
+        "name": "Upper_Aim",
+        "channels": 183
+      },
+      {
+        "name": "Recoil_Shot",
+        "channels": 183
+      },
+      {
+        "name": "Reload",
+        "channels": 189
+      },
+      {
+        "name": "Reload_Tactical",
+        "channels": 189
+      },
+      {
+        "name": "Reload_Tactical_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Walk_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Walk_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_Sprint_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Sprint_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_AimWalk_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_AimWalk_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_AimIdle_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_LowReady_Upper",
+        "channels": 183
+      },
+      {
+        "name": "FB_Recoil_Shot",
+        "channels": 12
+      },
+      {
+        "name": "FB_Reload_Lower",
+        "channels": 123
+      },
+      {
+        "name": "FB_Reload_Upper",
+        "channels": 189
+      }
+    ],
+    "weapon_independent_and_bone_parented": true,
+    "old_and_spare_magazines_separate": true,
+    "khronos": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 100
+    },
+    "bytes": 12034056
+  }
+]

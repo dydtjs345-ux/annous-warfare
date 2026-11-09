@@ -215,3 +215,31 @@ export function translateDocument(){
  document.querySelectorAll('[data-i18n-group]').forEach(el=>el.setAttribute('label',t(el.getAttribute('data-i18n-group'))));
  for(const attr of ['aria-label','title'])document.querySelectorAll('[data-i18n-'+attr+']').forEach(el=>el.setAttribute(attr,t(el.getAttribute('data-i18n-'+attr))));
 }
+
+Object.assign(korean,{"Full-body before / after": "상체 수정 전후 비교", "Before · {faction}": "수정 전 · {faction}", "Corrected · {faction}": "수정 후 · {faction}", "Show pelvis, spine and shoulder axes": "골반·척추·어깨 축 표시", "Save live bone diagnostic JSON": "실시간 본 진단 JSON 저장", "Measured before / after report": "수정 전후 측정 보고서", "Orange: pelvis · yellow: lower spine · cyan: chest · green / blue: shoulders · purple: head. Markers follow actual animated bones.": "주황: 골반 · 노랑: 하부 척추 · 청록: 가슴 · 초록/파랑: 어깨 · 보라: 머리. 표시는 실제 애니메이션 본을 따라 움직입니다.", "Full-body motion proof · isometric and side": "상체 동작 검토 영상 · 쿼터뷰와 측면", "Left: before. Right: corrected. Top: 30-degree orthographic gameplay view. Bottom: side view. These recordings evaluate actual 3D rigs with bone markers.": "왼쪽은 수정 전, 오른쪽은 수정 후입니다. 위는 30° 직교 게임 쿼터뷰, 아래는 측면입니다. 실제 3D 리그와 본 표시를 연속 렌더링한 영상입니다.", "Comparison recording": "비교 영상", "Full-body before and after animation": "상체 수정 전후 애니메이션", "Earlier reload comparison recordings": "이전 단계 재장전 비교 영상", "Moving-fire before / after recording": "이동 사격 수정 전후 녹화 영상", "The corrected moving-fire comparison includes real 3D isometric and side views.": "실제 3D 쿼터뷰·측면으로 수정 전후 이동 사격을 비교합니다.", "Animation asset version mismatch. Refresh and retry.": "애니메이션 자산 버전이 일치하지 않습니다. 새로고침 후 다시 불러오세요.", "Ready · full-body revision verified · {count} soldiers": "준비 완료 · 상체 수정 자산 확인 · 병사 {count}명", "Client diagnostic saved · {frames} rendered samples": "실시간 진단 저장 · 렌더 후 측정 {frames}회", "The comparison video could not load. Check your connection and retry.": "비교 영상을 불러오지 못했습니다. 인터넷 연결을 확인하고 다시 선택해 주세요."} );
+korean["USMC \u00b7 Tactical walk"]="미 해병대 · 전술 보행";
+korean["USMC \u00b7 Sprint"]="미 해병대 · 전력 질주";
+korean["USMC \u00b7 Aiming while walking"]="미 해병대 · 조준 이동";
+korean["USMC \u00b7 Firing while moving"]="미 해병대 · 이동 사격";
+korean["USMC \u00b7 Reload"]="미 해병대 · 재장전";
+korean["Russian \u00b7 Tactical walk"]="러시아군 · 전술 보행";
+korean["Russian \u00b7 Sprint"]="러시아군 · 전력 질주";
+korean["Russian \u00b7 Aiming while walking"]="러시아군 · 조준 이동";
+korean["Russian \u00b7 Firing while moving"]="러시아군 · 이동 사격";
+korean["Russian \u00b7 Reload"]="러시아군 · 재장전";
+clipLabels.FB_Walk_Lower=["수정 전술 보행 · 하체", "Corrected · Tactical walk · lower body"];
+clipLabels.FB_Walk_Upper=["수정 전술 보행 · 상체", "Corrected · Tactical walk · upper body"];
+clipLabels.FB_Sprint_Lower=["수정 전력 질주 · 하체", "Corrected · Sprint · lower body"];
+clipLabels.FB_Sprint_Upper=["수정 전력 질주 · 상체", "Corrected · Sprint · upper body"];
+clipLabels.FB_AimWalk_Lower=["수정 조준 이동 · 하체", "Corrected · Aiming walk · lower body"];
+clipLabels.FB_AimWalk_Upper=["수정 조준 이동 · 상체", "Corrected · Aiming walk · upper body"];
+clipLabels.FB_AimIdle_Upper=["수정 정지 조준 · 상체", "Corrected · Aim idle · upper body"];
+clipLabels.FB_LowReady_Upper=["수정 대기 · 상체", "Corrected · Low ready · upper body"];
+clipLabels.FB_Recoil_Shot=["수정 가슴·척추 반동", "Corrected · Chest and spine recoil"];
+clipLabels.FB_Reload_Lower=["수정 재장전 · 골반·체중 이동", "Corrected · Reload · pelvis and weight shift"];
+clipLabels.FB_Reload_Upper=["수정 재장전 · 몸통·소총", "Corrected · Reload · torso and rifle"];
+for(const [id,labels]of Object.entries(clipLabels))if(!id.startsWith('FB_')){if(!labels[0].includes('원본'))labels[0]='원본 · '+labels[0];if(!labels[1].toLowerCase().includes('original'))labels[1]='Original · '+labels[1];}
+
+Object.assign(korean,{"Choose a combat motion or any of the 34 individual clips. Display size uses a standing reference; stride and posture change the visible height naturally.": "전투 동작 또는 34개 개별 애니메이션을 선택할 수 있습니다. 병사 크기는 선 자세 기준이며, 보폭과 자세에 따라 보이는 높이가 달라집니다.", "Single-soldier mode loads one faction. Full-body comparison reuses one versioned GLB containing preserved original clips and corrected clips. Original baseline: ": "1명 보기에서는 선택한 진영만 불러옵니다. 상체 비교는 원본·수정 클립을 함께 담은 버전 GLB 하나를 재사용합니다. 원본 기준: ", "For before / after comparisons choose a combat motion. Individual clips play the exact selected original or corrected clip.": "수정 전후 비교에서는 전투 동작을 선택하세요. 개별 클립은 선택한 원본 또는 수정 클립을 그대로 재생합니다."});
+
+clipLabels.Reload_Tactical=['이전 개선 재장전 · 상체','Earlier tactical reload · upper body'];clipLabels.Reload_Tactical_Lower=['이전 재장전 체중 이동 · 하체','Earlier reload weight shift · lower body'];

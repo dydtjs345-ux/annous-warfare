@@ -1,0 +1,76 @@
+[
+  {
+    "faction": "USMC",
+    "max_source_magazine_contact_error_m": 5.475487389935147e-06,
+    "rifle_trajectory_preserved_error_m": 1.8130494563883698e-06,
+    "all_163_bones_match_aim_entry_exit_matrix_error": [
+      6.109476089477539e-07,
+      6.109476089477539e-07
+    ],
+    "pouch_visibility_events": [
+      {
+        "event": "old_hidden",
+        "visible_vertices_in_eight_directions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "event": "replacement_visible",
+        "visible_vertices_in_eight_directions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "faction": "Russian",
+    "max_source_magazine_contact_error_m": 5.466187905399147e-06,
+    "rifle_trajectory_preserved_error_m": 1.843476757696015e-06,
+    "all_163_bones_match_aim_entry_exit_matrix_error": [
+      7.152557373046875e-07,
+      7.152557373046875e-07
+    ],
+    "pouch_visibility_events": [
+      {
+        "event": "old_hidden",
+        "visible_vertices_in_eight_directions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "event": "replacement_visible",
+        "visible_vertices_in_eight_directions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+]

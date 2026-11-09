@@ -2,7 +2,7 @@ import * as T from 'three';
 // Keep object visibility/attachment tracks independent of upper-body crossfades.
 export function prepareReloadObjectActions(clips,mixer){
  const actions=new Map();
- for(const name of ['Reload','Reload_Tactical']){
+ for(const name of ['Reload','Reload_Tactical','FB_Reload_Upper']){
   const reload=clips.get(name);if(!reload)continue;
   const objectTracks=reload.tracks.filter(t=>/^(Magazine|SpareMagazine)\./.test(t.name));
   clips.set(name,new T.AnimationClip(name,reload.duration,reload.tracks.filter(t=>!/^(Magazine|SpareMagazine)\./.test(t.name))));

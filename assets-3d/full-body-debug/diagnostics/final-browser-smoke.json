@@ -1,0 +1,88 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/?review=body&state=MovingFire&markers=1",
+  "passed": true,
+  "physical_iPhone": false,
+  "touch_play_pause": true,
+  "touch_orbit": true,
+  "touch_pinch": true,
+  "six_soldier_mixed": {
+    "actors": [
+      {
+        "faction": "USMC",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "79a24a06-b754-45f3-9592-0ed9bab7cba2",
+        "position": [
+          -3.6769552621700474,
+          0,
+          -1.9798989873223332
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "b23ceb9b-15a3-4c59-a216-5919cf82a772",
+        "position": [
+          -1.9798989873223332,
+          0,
+          -3.6769552621700474
+        ]
+      },
+      {
+        "faction": "USMC",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "fe9f2dda-4a1c-470f-b8ab-c234e5db9540",
+        "position": [
+          -0.848528137423857,
+          0,
+          0.848528137423857
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "17a441e6-0153-4132-9708-4938a8ae5486",
+        "position": [
+          0.848528137423857,
+          0,
+          -0.848528137423857
+        ]
+      },
+      {
+        "faction": "USMC",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "119c0902-5f83-496e-b5f0-0a659f6d9f26",
+        "position": [
+          1.9798989873223332,
+          0,
+          3.6769552621700474
+        ]
+      },
+      {
+        "faction": "Russian",
+        "lower": "FB_AimWalk_Lower",
+        "upper": "FB_AimWalk_Upper",
+        "shots": 4,
+        "bones": "14f16911-9ecb-49df-93f9-96587e521c49",
+        "position": [
+          3.6769552621700474,
+          0,
+          1.9798989873223332
+        ]
+      }
+    ],
+    "canvases": 1,
+    "camera_locked": true,
+    "orthographic": true
+  },
+  "errors": []
+}

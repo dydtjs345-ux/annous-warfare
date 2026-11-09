@@ -1,0 +1,376 @@
+[
+  {
+    "faction": "USMC",
+    "bone_count": 163,
+    "isolated_reimport_passed": true,
+    "states": [
+      {
+        "state": "Walk",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.3972371587000207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.6338261796758232e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.6338261796758232e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.6338261796758232e-06
+      },
+      {
+        "state": "Sprint",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 5.795166296584741e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 9.816988163244464e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 9.583196157701926e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 5.795166296584741e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.3175578162235243e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 5.795166588908682e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.3175578162235243e-06
+      },
+      {
+        "state": "AimWalk",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.568807279042539e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.5887839040632062e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.5887839040632062e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.5887839040632062e-06
+      },
+      {
+        "state": "MovingFire",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.2364597106497534e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.2878746666837207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 9.763405954840305e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.2878746666837207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 9.763405954840305e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.2878746666837207e-06
+      },
+      {
+        "state": "Reload",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.4239967848722894e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.45,
+            "max_joint_position_error_m": 1.6480820694168277e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.9166666666666666,
+            "max_joint_position_error_m": 1.4722890324625165e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.85,
+            "max_joint_position_error_m": 1.412186012183064e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.783333333333333,
+            "max_joint_position_error_m": 1.7249984784342115e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 3.7,
+            "max_joint_position_error_m": 1.4239967848722894e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.7249984784342115e-06
+      }
+    ]
+  },
+  {
+    "faction": "Russian",
+    "bone_count": 163,
+    "isolated_reimport_passed": true,
+    "states": [
+      {
+        "state": "Walk",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.3972371587000207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.6338261796758232e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.6338261796758232e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 1.297555296469903e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.6338261796758232e-06
+      },
+      {
+        "state": "Sprint",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 5.795166296584741e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 9.816988163244464e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 9.583196157701926e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 5.795166296584741e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.3175578162235243e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 5.795166588908682e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.3175578162235243e-06
+      },
+      {
+        "state": "AimWalk",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.568807279042539e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.5887839040632062e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.5887839040632062e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.5887839040632062e-06
+      },
+      {
+        "state": "MovingFire",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.153493295976192e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.3,
+            "max_joint_position_error_m": 1.2364597106497534e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.6,
+            "max_joint_position_error_m": 1.2878746666837207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.2,
+            "max_joint_position_error_m": 9.763405954840305e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.8,
+            "max_joint_position_error_m": 1.2878746666837207e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.4,
+            "max_joint_position_error_m": 9.763405954840305e-07,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.2878746666837207e-06
+      },
+      {
+        "state": "Reload",
+        "samples": [
+          {
+            "time": 0.0,
+            "max_joint_position_error_m": 1.4239967848722894e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 0.5,
+            "max_joint_position_error_m": 1.4344644370642316e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 1.0166666666666666,
+            "max_joint_position_error_m": 1.7461600389045405e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 2.05,
+            "max_joint_position_error_m": 1.6250124504356682e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 3.0833333333333335,
+            "max_joint_position_error_m": 1.8758640020900347e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          },
+          {
+            "time": 4.1,
+            "max_joint_position_error_m": 1.4239967848722894e-06,
+            "max_world_rotation_delta_error_degrees": 0.0
+          }
+        ],
+        "max_error_m": 1.8758640020900347e-06
+      }
+    ]
+  }
+]

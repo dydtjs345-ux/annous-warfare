@@ -2,9 +2,15 @@
   "repository": "dydtjs345-ux/annous-warfare",
   "commit": "a1d280461f94456c905b677b213a6ee31245b1d0",
   "asset_sha256": {
+    "USMC": "4d7f1f77560c7f38423bd9a55114a20d77b1047a7e0ff9e16d9942c6a9c2af6a",
+    "Russian": "50f6796a59b97d13cc878fb8a9b2ff1f93a013ffb349c75679f4e8f1b673d6af"
+  },
+  "original_asset_sha256": {
     "USMC": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
     "Russian": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0"
   },
+  "motion_revision": "full-body-1",
+  "baseline_preview_commit": "a93cbae7f0476c7aee2559e39e9cfa8a20057d70",
   "reload_sha256": {
     "USMC": "1036fc4eec62c46b480b40c21e548ef39ed648641c0e473a4beee34ec1062b16",
     "Russian": "33ef7d5b319ace17ef588f3df3c83a767177a4afdb7e61d1d276d493f47c0db5"
@@ -13,7 +19,8 @@
     "Reload_Tactical",
     "Reload_Tactical_Lower"
   ],
-  "clips_per_faction": 21,
+  "clips_per_faction": 34,
+  "original_clips_retained": 21,
   "animation_type": "skeletal GLB with independent locomotion, aiming and recoil layers",
-  "built_at": "2026-11-09T04:20:47.461Z"
+  "built_at": "2026-11-09T13:09:20.505Z"
 }

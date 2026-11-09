@@ -1,0 +1,42 @@
+[
+  {
+    "faction": "USMC",
+    "profile": "before",
+    "available_states_and_clips": 51,
+    "continuous_gait_action_and_phase_preserved": true,
+    "repeated_shots": 7,
+    "fire_stop_preserves_walking": true,
+    "gait_upper_lower_phase_sync": false,
+    "reload_recovers_and_restores_magazine": true
+  },
+  {
+    "faction": "USMC",
+    "profile": "corrected",
+    "available_states_and_clips": 51,
+    "continuous_gait_action_and_phase_preserved": true,
+    "repeated_shots": 7,
+    "fire_stop_preserves_walking": true,
+    "gait_upper_lower_phase_sync": true,
+    "reload_recovers_and_restores_magazine": true
+  },
+  {
+    "faction": "Russian",
+    "profile": "before",
+    "available_states_and_clips": 51,
+    "continuous_gait_action_and_phase_preserved": true,
+    "repeated_shots": 7,
+    "fire_stop_preserves_walking": true,
+    "gait_upper_lower_phase_sync": false,
+    "reload_recovers_and_restores_magazine": true
+  },
+  {
+    "faction": "Russian",
+    "profile": "corrected",
+    "available_states_and_clips": 51,
+    "continuous_gait_action_and_phase_preserved": true,
+    "repeated_shots": 7,
+    "fire_stop_preserves_walking": true,
+    "gait_upper_lower_phase_sync": true,
+    "reload_recovers_and_restores_magazine": true
+  }
+]

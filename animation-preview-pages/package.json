@@ -1,1 +1,19 @@
-{"name":"autonomous-warfare-mobile-animation-preview","private":true,"type":"module","scripts":{"build":"node tools/build.mjs","test":"node tools/mobile-test.mjs"},"dependencies":{"three":"0.170.0"},"devDependencies":{"esbuild":"0.25.12","playwright":"1.62.1"}}
+{
+  "name": "autonomous-warfare-mobile-animation-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node ../assets-3d/full-body-debug/tools/browser_after.mjs",
+    "test:dom": "node tools/localization-test.mjs",
+    "test:motion": "node ../assets-3d/full-body-debug/tools/contracts.mjs"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "linkedom": "0.18.12",
+    "playwright": "1.62.1"
+  }
+}

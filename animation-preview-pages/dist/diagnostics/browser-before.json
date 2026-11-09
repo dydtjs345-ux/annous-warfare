@@ -1,0 +1,132 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "browser": "Chromium",
+  "device_emulation": "iPhone 13",
+  "physical_iPhone": false,
+  "assets": {
+    "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/USMC_Animated.glb": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094"
+  },
+  "errors": [],
+  "states": [
+    {
+      "state": "Walk",
+      "local_max_rotation_from_first_degrees": {
+        "root": 3.5319102636392627,
+        "pelvisL": 0,
+        "pelvisR": 0,
+        "spine05": 0,
+        "spine04": 0.023860180123750605,
+        "spine03": 0.0014014272451252797,
+        "spine02": 0.36213361764903623,
+        "spine01": 0,
+        "clavicleL": 0,
+        "clavicleR": 0.013431680976769523,
+        "shoulder01L": 0.01863415232574299,
+        "shoulder01R": 0,
+        "neck01": 0,
+        "head": 0
+      },
+      "frames_drawn": 11,
+      "lower": "Lower_Walk",
+      "upper": "Upper_LowReady",
+      "shots": 0,
+      "camera_orthographic": true
+    },
+    {
+      "state": "Sprint",
+      "local_max_rotation_from_first_degrees": {
+        "root": 5.0359030531387665,
+        "pelvisL": 0,
+        "pelvisR": 0,
+        "spine05": 0,
+        "spine04": 0.023860180123750605,
+        "spine03": 0.0014014272451252797,
+        "spine02": 0.5114816404243355,
+        "spine01": 0,
+        "clavicleL": 0,
+        "clavicleR": 0.013431680976769523,
+        "shoulder01L": 0.01863415232574299,
+        "shoulder01R": 0,
+        "neck01": 0,
+        "head": 0
+      },
+      "frames_drawn": 12,
+      "lower": "Lower_Sprint",
+      "upper": "Upper_Sprint",
+      "shots": 0,
+      "camera_orthographic": true
+    },
+    {
+      "state": "AimWalk",
+      "local_max_rotation_from_first_degrees": {
+        "root": 1.4624580970579637,
+        "pelvisL": 0,
+        "pelvisR": 0,
+        "spine05": 0,
+        "spine04": 0,
+        "spine03": 0.03334495728218405,
+        "spine02": 0.4251881169325349,
+        "spine01": 0,
+        "clavicleL": 0,
+        "clavicleR": 0.01283074897156614,
+        "shoulder01L": 0.018954034406121804,
+        "shoulder01R": 0,
+        "neck01": 0.12502438992677214,
+        "head": 0.06900292583352015
+      },
+      "frames_drawn": 12,
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "shots": 0,
+      "camera_orthographic": true
+    },
+    {
+      "state": "MovingFire",
+      "local_max_rotation_from_first_degrees": {
+        "root": 1.4624580970579637,
+        "pelvisL": 0,
+        "pelvisR": 0,
+        "spine05": 0,
+        "spine04": 0,
+        "spine03": 0.06513535258867184,
+        "spine02": 0.2842673596590358,
+        "spine01": 0,
+        "clavicleL": 0,
+        "clavicleR": 0.01283074897156614,
+        "shoulder01L": 0.018954034406121804,
+        "shoulder01R": 0,
+        "neck01": 0.08420314567905225,
+        "head": 0.045078910406659255
+      },
+      "frames_drawn": 11,
+      "lower": "Lower_AimWalk",
+      "upper": "Upper_Aim",
+      "shots": 7,
+      "camera_orthographic": true
+    },
+    {
+      "state": "Reload",
+      "local_max_rotation_from_first_degrees": {
+        "root": 0.23671835957583423,
+        "pelvisL": 0,
+        "pelvisR": 0,
+        "spine05": 0,
+        "spine04": 0,
+        "spine03": 5.727439631568583,
+        "spine02": 2.628046945433301,
+        "spine01": 0,
+        "clavicleL": 1.9016961487291764,
+        "clavicleR": 2.3711426655613903,
+        "shoulder01L": 0.019059468733941747,
+        "shoulder01R": 0,
+        "neck01": 5.012743540132609,
+        "head": 11.094779859386955
+      },
+      "frames_drawn": 12,
+      "lower": "Reload_Tactical_Lower",
+      "upper": "Reload_Tactical",
+      "shots": 0,
+      "camera_orthographic": true
+    }
+  ]
+}

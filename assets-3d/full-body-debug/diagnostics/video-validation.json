@@ -1,0 +1,332 @@
+[
+  {
+    "faction": "USMC",
+    "state": "Walk",
+    "file": "USMC-Walk.mp4",
+    "poster": "USMC-Walk.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 35,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "USMC",
+    "state": "Sprint",
+    "file": "USMC-Sprint.mp4",
+    "poster": "USMC-Sprint.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 12,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "USMC",
+    "state": "AimWalk",
+    "file": "USMC-AimWalk.mp4",
+    "poster": "USMC-AimWalk.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 35,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "USMC",
+    "state": "MovingFire",
+    "file": "USMC-MovingFire.mp4",
+    "poster": "USMC-MovingFire.png",
+    "source_fps": 30,
+    "source_actual_3d_samples": 72,
+    "unique_isometric_frames": 72,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "USMC",
+    "state": "Reload",
+    "file": "USMC-Reload.mp4",
+    "poster": "USMC-Reload.png",
+    "source_fps": 30,
+    "source_actual_3d_samples": 120,
+    "unique_isometric_frames": 103,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "120"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "faction": "Russian",
+    "state": "Walk",
+    "file": "Russian-Walk.mp4",
+    "poster": "Russian-Walk.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 35,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "Russian",
+    "state": "Sprint",
+    "file": "Russian-Sprint.mp4",
+    "poster": "Russian-Sprint.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 12,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "Russian",
+    "state": "AimWalk",
+    "file": "Russian-AimWalk.mp4",
+    "poster": "Russian-AimWalk.png",
+    "source_fps": 15,
+    "source_actual_3d_samples": 36,
+    "unique_isometric_frames": 35,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "Russian",
+    "state": "MovingFire",
+    "file": "Russian-MovingFire.mp4",
+    "poster": "Russian-MovingFire.png",
+    "source_fps": 30,
+    "source_actual_3d_samples": 72,
+    "unique_isometric_frames": 72,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "2.400000"
+      }
+    }
+  },
+  {
+    "faction": "Russian",
+    "state": "Reload",
+    "file": "Russian-Reload.mp4",
+    "poster": "Russian-Reload.png",
+    "source_fps": 30,
+    "source_actual_3d_samples": 132,
+    "unique_isometric_frames": 114,
+    "render_engine": "Blender Workbench studio lighting, FXAA",
+    "iso_orthographic_elevation_degrees": 30,
+    "iso_standing_reference_px": 120,
+    "side_elevation_degrees": 0,
+    "side_standing_reference_px": 180,
+    "actual_bone_markers": true,
+    "before_profile": "a93cbae",
+    "after_profile": "full-body-1",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 640,
+          "r_frame_rate": "30/1",
+          "nb_frames": "132"
+        }
+      ],
+      "format": {
+        "duration": "4.400000"
+      }
+    }
+  }
+]

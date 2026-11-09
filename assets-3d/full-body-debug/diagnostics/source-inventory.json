@@ -1,0 +1,284 @@
+[
+  {
+    "faction": "USMC",
+    "variant": "original",
+    "source": "assets-3d/infantry-animation/source/USMC_Animation.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "6383cb28ba819940b2279c4823026c5f8eee4c37567284fb33c07f53e5d27a30",
+    "character_weight_hash": "24637772e44597a30ffa5cf851a32520f6f284896f3025df7ff298ec974cba1c",
+    "nla_tracks": [
+      {
+        "name": "01 Locomotion",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Lower_AimWalk",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 6.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      },
+      {
+        "name": "02 Aiming",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Upper_Aim",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 3.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      },
+      {
+        "name": "03 Additive recoil",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Recoil_Additive",
+            "blend_type": "COMBINE",
+            "scale": 0.75,
+            "repeat": 48.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  },
+  {
+    "faction": "USMC",
+    "variant": "previous_reload",
+    "source": "assets-3d/tactical-reload/source/USMC_TacticalReload.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "6383cb28ba819940b2279c4823026c5f8eee4c37567284fb33c07f53e5d27a30",
+    "character_weight_hash": "24637772e44597a30ffa5cf851a32520f6f284896f3025df7ff298ec974cba1c",
+    "nla_tracks": [
+      {
+        "name": "Reload_Tactical",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Reload_Tactical",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 1.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 111.0
+          }
+        ]
+      },
+      {
+        "name": "Reload_Tactical_Lower",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Reload_Tactical_Lower",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 1.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 111.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  },
+  {
+    "faction": "USMC",
+    "variant": "corrected",
+    "source": "assets-3d/full-body-debug/source/USMC_FullBody.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "6383cb28ba819940b2279c4823026c5f8eee4c37567284fb33c07f53e5d27a30",
+    "character_weight_hash": "24637772e44597a30ffa5cf851a32520f6f284896f3025df7ff298ec974cba1c",
+    "nla_tracks": [
+      {
+        "name": "FB_Walk_Lower",
+        "mute": false,
+        "strips": [
+          {
+            "action": "FB_Walk_Lower",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 4.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 144.0
+          }
+        ]
+      },
+      {
+        "name": "FB_Walk_Upper",
+        "mute": false,
+        "strips": [
+          {
+            "action": "FB_Walk_Upper",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 4.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 144.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  },
+  {
+    "faction": "Russian",
+    "variant": "original",
+    "source": "assets-3d/infantry-animation/source/Russian_Animation.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "5ae5736a0a04350a3df3a3a9ecc032a3cbcacfa9c119c2078dfe87dc0e9c6225",
+    "character_weight_hash": "c8eb20ae8b3e69c5b00b258bf8879e55fbcf2362dd96afccf6a6e4b8744de0e1",
+    "nla_tracks": [
+      {
+        "name": "01 Locomotion",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Lower_AimWalk",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 6.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      },
+      {
+        "name": "02 Aiming",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Upper_Aim",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 3.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      },
+      {
+        "name": "03 Additive recoil",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Recoil_Additive",
+            "blend_type": "COMBINE",
+            "scale": 0.75,
+            "repeat": 48.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 216.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  },
+  {
+    "faction": "Russian",
+    "variant": "previous_reload",
+    "source": "assets-3d/tactical-reload/source/Russian_TacticalReload.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "5ae5736a0a04350a3df3a3a9ecc032a3cbcacfa9c119c2078dfe87dc0e9c6225",
+    "character_weight_hash": "c8eb20ae8b3e69c5b00b258bf8879e55fbcf2362dd96afccf6a6e4b8744de0e1",
+    "nla_tracks": [
+      {
+        "name": "Reload_Tactical",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Reload_Tactical",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 1.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 123.0
+          }
+        ]
+      },
+      {
+        "name": "Reload_Tactical_Lower",
+        "mute": false,
+        "strips": [
+          {
+            "action": "Reload_Tactical_Lower",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 1.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 123.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  },
+  {
+    "faction": "Russian",
+    "variant": "corrected",
+    "source": "assets-3d/full-body-debug/source/Russian_FullBody.blend",
+    "bone_count": 163,
+    "rest_hierarchy_hash": "c6cf26eed5cb12ce5fbd65dd108067b1968b259a88e55c42cec9db57f81c6c43",
+    "character_vertex_hash": "5ae5736a0a04350a3df3a3a9ecc032a3cbcacfa9c119c2078dfe87dc0e9c6225",
+    "character_weight_hash": "c8eb20ae8b3e69c5b00b258bf8879e55fbcf2362dd96afccf6a6e4b8744de0e1",
+    "nla_tracks": [
+      {
+        "name": "FB_Walk_Lower",
+        "mute": false,
+        "strips": [
+          {
+            "action": "FB_Walk_Lower",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 4.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 144.0
+          }
+        ]
+      },
+      {
+        "name": "FB_Walk_Upper",
+        "mute": false,
+        "strips": [
+          {
+            "action": "FB_Walk_Upper",
+            "blend_type": "REPLACE",
+            "scale": 1.0,
+            "repeat": 4.0,
+            "influence": 0.0,
+            "frame_start": 0.0,
+            "frame_end": 144.0
+          }
+        ]
+      }
+    ],
+    "weapon_parent_bone": "wrist.R"
+  }
+]
