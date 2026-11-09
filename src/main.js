@@ -1,3 +1,4 @@
+import { InfantryRenderer, preloadInfantry } from "./infantry/renderer.js";
 import { LiveUSMCRenderer, preloadLiveUSMC } from "./live-usmc-renderer.js";
 import {
   liveRenderStatus,
@@ -34,11 +35,13 @@ import { Battle } from "./simulation.js";
 import { W, H, houses, obstacles, inside, streetAt } from "./world.js";
 
 const params = new URLSearchParams(location.search);
+const infantryTest = document.body.dataset.infantryTest === "true";
 const mapMode = ["legacy", "urban"].includes(params.get("map"))
   ? params.get("map")
   : "expanded";
 class Battlefield extends Phaser.Scene {
   preload() {
+    if (infantryTest && params.get("quality") !== "legacy") preloadInfantry(this);
     preloadPrototype(this);
     preloadLiveUSMC(this);
   }
@@ -58,6 +61,13 @@ class Battlefield extends Phaser.Scene {
     this.prototypeVisual.visualSize = 1.3;
     this.prototypeVisual.enabled = true;
     this.liveVisual = new LiveUSMCRenderer(this);
+    if (infantryTest) {
+      this.infantry = new InfantryRenderer(this);
+      this.infantry.enabled = params.get("quality") !== "legacy";
+      document.querySelector("#infantry-quality").value = this.infantry.enabled ? "sprites" : "legacy";
+      document.querySelector("#infantry-quality").onchange = e => { const url = new URL(location.href); url.searchParams.set("quality", e.target.value); location.assign(url); };
+      document.querySelector("#infantry-sprint").onchange = e => { this.infantry.sprint = e.target.value; };
+    }
     this.prototypeMode = "v033";
     document.querySelector("#prototype-art").onchange = (e) => {
       this.prototypeMode = e.target.value;
@@ -214,11 +224,12 @@ class Battlefield extends Phaser.Scene {
     };
     // Opt-in read-only spectator diagnostics for reproducible browser checks.
     // No reference or command API into the simulation is exposed.
-    if (params.has("debug"))
+    if (params.has("debug") || infantryTest)
       window.awSnapshot = () => {
         const c = this.cameras.main,
           v = c.worldView;
         return {
+          infantry: this.infantry?.snapshot(),
           seed: this.seed,
           map: { ...this.battle.world },
           spawn: this.battle.spawn,
@@ -554,6 +565,7 @@ class Battlefield extends Phaser.Scene {
       this.visuals.effects[1],
       this.motion.position(this.battle.units[1]),
     );
+    this.infantry?.update(this.battle, this.visuals.models, this.visuals.effects, this.motion, this.visuals.clock, delta);
     this.boundCamera();
     if (this.viewMode !== "Free" && this.viewMode !== "Map")
       this.frameCamera(false);
@@ -586,8 +598,9 @@ class Battlefield extends Phaser.Scene {
       ug.setVisible(inView(p, v, 65));
       ug.setDepth((rendered.x + rendered.y) * 100);
       if (!ug.visible) continue;
+      const infantryDrawn = this.infantry?.draw(ug, this.battle, u, this.visuals.models[u.id], this.visuals.effects[u.id], p, rendered, this.selected === u);
       const liveDrawn =
-        u.id === 1 &&
+        !infantryTest && u.id === 1 &&
         this.prototypeMode === "v033" &&
         this.prototypeVisual.enabled &&
         this.liveVisual.draw(
@@ -601,8 +614,8 @@ class Battlefield extends Phaser.Scene {
           this.selected === u,
         );
       const drawn =
-        liveDrawn ||
-        (u.id === 1 &&
+        infantryDrawn || liveDrawn ||
+        (!infantryTest && u.id === 1 &&
           this.prototypeVisual.draw(
             ug,
             this.battle,
@@ -653,7 +666,7 @@ class Battlefield extends Phaser.Scene {
       g.strokeEllipse(p.x, p.y + top / 2, low ? 24 : 14, Math.abs(top) + 2);
     }
     this.visuals.drawTraces(g, this.iso, (e) =>
-      e.unitId === 1 ? this.liveVisual.shotAnchor(e.id) : null,
+      this.infantry?.shotAnchor(e.id) ?? (e.unitId === 1 ? this.liveVisual.shotAnchor(e.id) : null),
     );
     drawGrenades(g, this.battle, this.iso, v);
     this.grenadeVisuals.draw(g, this.iso, v);
@@ -662,7 +675,7 @@ class Battlefield extends Phaser.Scene {
       this.iso,
       v,
       (e) =>
-        this.liveVisual.shotAnchor(e.id) ??
+        this.infantry?.shotAnchor(e.id) ?? this.liveVisual.shotAnchor(e.id) ??
         (e.unitId === 1 &&
         this.prototypeVisual.enabled &&
         this.prototypeVisual.state?.visible &&
@@ -697,6 +710,11 @@ class Battlefield extends Phaser.Scene {
       document.querySelector("footer").textContent =
         `${phases || "섬멸전"} · ${W}×${H} · 시드 ${this.seed} · 수류탄 ${this.battle.grenadeStats.thrown}/${this.battle.grenadeStats.detonated}`;
     }
+    if (infantryTest && this.time.now >= (this.nextInfantryUI ?? 0)) {
+      this.nextInfantryUI = this.time.now + 500;
+      const s = this.infantry.snapshot(), fallbacks = s.units.filter(u => u.fallback);
+      document.querySelector("#infantry-status").textContent = `${s.enabled ? "3D → 2D sprites" : "Legacy fallback"} · ${s.units.filter(u=>u.visible).length}/12 new visuals · ${s.fps.toFixed(0)} FPS (this device) · fallback: ${[...new Set(fallbacks.map(u=>u.fallback))].join(", ") || "none"}`;
+    }
     if (this.battle.result) {
       const o = document.querySelector("#outcome");
       o.hidden = false;
@@ -723,8 +741,8 @@ document.querySelector("#close-inspect").onclick = () => {
 const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: "game",
-  pixelArt: true,
-  antialias: false,
+  pixelArt: !infantryTest,
+  antialias: infantryTest,
   scale: { mode: Phaser.Scale.RESIZE, width: "100%", height: "100%" },
   scene: Battlefield,
 });

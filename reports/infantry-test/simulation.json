@@ -1,0 +1,397 @@
+{
+  "passed": true,
+  "adapterParity": "exact combat hashes and RNG counts for three 120-second expanded-map runs",
+  "syntheticChecks": [
+    "identical gait phase across shot onset"
+  ],
+  "cases": [
+    {
+      "seed": 7,
+      "fingerprint": "e18afc48dd1eca0f007683b1cb0fb99828e16b25b35c69118f94ba316625b26c",
+      "calls": 327,
+      "rng": 1093706800,
+      "result": "Russian infantry victory",
+      "time": 109.74999999999591,
+      "seen": {
+        "Sprint": 8507,
+        "Idle": 8565,
+        "TurnLeft": 2425,
+        "TurnRight": 2904,
+        "Stop": 1189,
+        "Aim": 1609,
+        "Fire": 372,
+        "Raise": 422,
+        "Walk": 156,
+        "MovingFire": 45,
+        "Reload": 146
+      },
+      "events": {
+        "shot": 251,
+        "damage": 54,
+        "treatmentTick": 7,
+        "treatmentComplete": 1,
+        "incapacitated": 6,
+        "death": 3,
+        "mountState": 29,
+        "reloadStart": 2,
+        "reloadEnd": 2,
+        "grenadeThrow": 1,
+        "grenadeBlast": 1
+      },
+      "examples": {
+        "Sprint": {
+          "seed": 7,
+          "time": 0.05,
+          "id": 0,
+          "aiState": "Searching district",
+          "speed": 1.700000000000017,
+          "brisk": true
+        },
+        "Idle": {
+          "seed": 7,
+          "time": 0.05,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnLeft": {
+          "seed": 7,
+          "time": 0.1,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnRight": {
+          "seed": 7,
+          "time": 0.1,
+          "id": 4,
+          "aiState": "Awaiting coordination",
+          "speed": 0,
+          "brisk": false
+        },
+        "Stop": {
+          "seed": 7,
+          "time": 0.2,
+          "id": 3,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "Aim": {
+          "seed": 7,
+          "time": 21.750000000000174,
+          "id": 1,
+          "aiState": "Aiming",
+          "speed": 0,
+          "brisk": true
+        },
+        "Fire": {
+          "seed": 7,
+          "time": 22.10000000000018,
+          "id": 1,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "Raise": {
+          "seed": 7,
+          "time": 25.200000000000223,
+          "id": 10,
+          "aiState": "Aiming",
+          "speed": 0,
+          "brisk": true
+        },
+        "Walk": {
+          "seed": 7,
+          "time": 33.500000000000234,
+          "id": 0,
+          "aiState": "Reacquiring contact",
+          "speed": 0.4533529456319775,
+          "brisk": false
+        },
+        "MovingFire": {
+          "seed": 7,
+          "time": 35.950000000000095,
+          "id": 8,
+          "aiState": "Reacquiring contact",
+          "speed": 1.700000000000017,
+          "brisk": true
+        },
+        "Reload": {
+          "seed": 7,
+          "time": 80.14999999999759,
+          "id": 10,
+          "aiState": "Reloading",
+          "speed": 0,
+          "brisk": true
+        }
+      },
+      "fallbacks": {
+        "treating": 168,
+        "incapacitated": 4776,
+        "dead": 2687,
+        "fullCover": 914,
+        "deploying": 54,
+        "unmounting": 21,
+        "mounted": 152,
+        "mountedFiring": 42,
+        "grenadePrep": 15,
+        "grenadeThrow": 1
+      },
+      "maxSpeed": 1.7000000000000606,
+      "movingShots": 45
+    },
+    {
+      "seed": 19,
+      "fingerprint": "d8ad0ea5079df2cec47e695b000234c32d3d86da38f585273d21c1af8ae80b40",
+      "calls": 235,
+      "rng": 3169847040,
+      "result": "Russian infantry victory",
+      "time": 72.999999999998,
+      "seen": {
+        "Sprint": 7130,
+        "Idle": 3439,
+        "TurnLeft": 2163,
+        "TurnRight": 2384,
+        "Stop": 918,
+        "Aim": 932,
+        "Fire": 216,
+        "Raise": 94,
+        "MovingFire": 14,
+        "Walk": 230
+      },
+      "events": {
+        "shot": 120,
+        "damage": 46,
+        "treatmentTick": 24,
+        "treatmentComplete": 3,
+        "incapacitated": 6,
+        "death": 2
+      },
+      "examples": {
+        "Sprint": {
+          "seed": 19,
+          "time": 0.05,
+          "id": 0,
+          "aiState": "Searching district",
+          "speed": 1.700000000000017,
+          "brisk": true
+        },
+        "Idle": {
+          "seed": 19,
+          "time": 0.05,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnLeft": {
+          "seed": 19,
+          "time": 0.1,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnRight": {
+          "seed": 19,
+          "time": 0.1,
+          "id": 4,
+          "aiState": "Awaiting coordination",
+          "speed": 0,
+          "brisk": false
+        },
+        "Stop": {
+          "seed": 19,
+          "time": 0.2,
+          "id": 3,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "Aim": {
+          "seed": 19,
+          "time": 21.750000000000174,
+          "id": 1,
+          "aiState": "Aiming",
+          "speed": 0,
+          "brisk": true
+        },
+        "Fire": {
+          "seed": 19,
+          "time": 22.10000000000018,
+          "id": 1,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "Raise": {
+          "seed": 19,
+          "time": 28.950000000000276,
+          "id": 9,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "MovingFire": {
+          "seed": 19,
+          "time": 35.30000000000013,
+          "id": 1,
+          "aiState": "Seeking cover",
+          "speed": 1.4177877290754475,
+          "brisk": true
+        },
+        "Walk": {
+          "seed": 19,
+          "time": 37.50000000000001,
+          "id": 1,
+          "aiState": "Seeking cover",
+          "speed": 0.24771906934396587,
+          "brisk": false
+        }
+      },
+      "fallbacks": {
+        "treating": 515,
+        "fullCover": 45,
+        "incapacitated": 2268,
+        "dead": 589
+      },
+      "maxSpeed": 1.7000000000000606,
+      "movingShots": 14
+    },
+    {
+      "seed": 42,
+      "fingerprint": "1a88088d4ec0b514bfbfa52776eb268d3bc973c9c55b203e30b18680cb700be8",
+      "calls": 283,
+      "rng": 3277654131,
+      "result": null,
+      "time": 119.99999999999532,
+      "seen": {
+        "Sprint": 5939,
+        "Idle": 13009,
+        "TurnLeft": 3055,
+        "TurnRight": 3803,
+        "Stop": 930,
+        "Aim": 1285,
+        "Fire": 284,
+        "MovingFire": 67,
+        "Raise": 296,
+        "Walk": 40,
+        "Reload": 92
+      },
+      "events": {
+        "shot": 209,
+        "damage": 44,
+        "death": 7,
+        "incapacitated": 5,
+        "treatmentTick": 21,
+        "treatmentComplete": 3,
+        "reloadStart": 1,
+        "reloadEnd": 1,
+        "mountState": 3
+      },
+      "examples": {
+        "Sprint": {
+          "seed": 42,
+          "time": 0.05,
+          "id": 0,
+          "aiState": "Searching district",
+          "speed": 1.700000000000017,
+          "brisk": true
+        },
+        "Idle": {
+          "seed": 42,
+          "time": 0.05,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnLeft": {
+          "seed": 42,
+          "time": 0.1,
+          "id": 2,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "TurnRight": {
+          "seed": 42,
+          "time": 0.1,
+          "id": 10,
+          "aiState": "Awaiting coordination",
+          "speed": 0,
+          "brisk": false
+        },
+        "Stop": {
+          "seed": 42,
+          "time": 0.2,
+          "id": 3,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "Aim": {
+          "seed": 42,
+          "time": 16.100000000000094,
+          "id": 6,
+          "aiState": "Aiming",
+          "speed": 0,
+          "brisk": true
+        },
+        "Fire": {
+          "seed": 42,
+          "time": 16.4500000000001,
+          "id": 6,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "MovingFire": {
+          "seed": 42,
+          "time": 17.450000000000113,
+          "id": 1,
+          "aiState": "Seeking cover",
+          "speed": 1.700000000000017,
+          "brisk": true
+        },
+        "Raise": {
+          "seed": 42,
+          "time": 20.05000000000015,
+          "id": 7,
+          "aiState": "Suppressing last-known",
+          "speed": 0,
+          "brisk": true
+        },
+        "Walk": {
+          "seed": 42,
+          "time": 88.24999999999713,
+          "id": 0,
+          "aiState": "Seeking cover",
+          "speed": 0.030666147585662884,
+          "brisk": false
+        },
+        "Reload": {
+          "seed": 42,
+          "time": 89.49999999999706,
+          "id": 10,
+          "aiState": "Reloading",
+          "speed": 0,
+          "brisk": true
+        }
+      },
+      "fallbacks": {
+        "fullCover": 306,
+        "dead": 8666,
+        "incapacitated": 3339,
+        "treating": 420,
+        "deploying": 1
+      },
+      "maxSpeed": 1.7000000000000606,
+      "movingShots": 67
+    }
+  ],
+  "physicalIPhone": false
+}
