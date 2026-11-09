@@ -14,6 +14,20 @@ for faction in ['USMC','Russian']:
  assert max(contactErrors)<.0001,(faction,max(contactErrors))
  samples=meta['samples'];W0=Matrix(samples[0]['weapon_world']);originRange=max((Matrix(s['weapon_world']).translation-W0.translation).length for s in samples);lift=max(Matrix(s['weapon_world']).translation.z-W0.translation.z for s in samples);angle=max(W0.to_quaternion().rotation_difference(Matrix(s['weapon_world']).to_quaternion()).angle for s in samples);footSlip=max((Vector(s['feet'][i])-Vector(samples[0]['feet'][i])).length for s in samples for i in [0,1]);assert originRange>.15 and lift>.10 and angle>math.radians(25);assert footSlip<.0001
  relative=[(s['phase'],Matrix(s['weapon_world']).inverted()@Matrix(s['new_world']))for s in samples]
+ # Entry/exit must reproduce every bone in the existing shouldered stance.
+ endpoints=[]
+ for frame_index in [0,round(meta['duration']*30)]:
+  bpy.context.scene.frame_set(frame_index);bpy.context.view_layer.update()
+  error=max(abs(rig.pose.bones[name].matrix[i][j]-value[i][j])for name,value in meta['aim_reference_matrices'].items()for i in range(4)for j in range(4))
+  assert error<.00002,(faction,'shouldered boundary mismatch',frame_index,error)
+  endpoints.append({'frame':frame_index,'max_bone_matrix_error':error})
+ # Stage-specific counter-motion must continue after the initial rifle lift.
+ stages=[]
+ for begin,end in [(.8,1.38),(1.38,2.16),(2.16,2.68)]:
+  A=Matrix(min(samples,key=lambda s:abs(s['phase']-begin))['weapon_world']);B=Matrix(min(samples,key=lambda s:abs(s['phase']-end))['weapon_world'])
+  distance=(A.translation-B.translation).length;beat_angle=math.degrees(A.to_quaternion().rotation_difference(B.to_quaternion()).angle)
+  assert distance>.003 or beat_angle>.5,(faction,'frozen handling beat',begin,end)
+  stages.append({'phase_interval':[begin,end],'weapon_translation_m':distance,'weapon_rotation_degrees':beat_angle})
  if faction=='USMC':
   insertion=[m for u,m in relative if 2.30<=u<=2.54];sideMotion=max(math.hypot(m.translation.x,m.translation.y)for m in insertion);assert sideMotion<.0001;mechanism={'straight_in_lateral_error_m':sideMotion}
  else:
@@ -29,5 +43,6 @@ for faction in ['USMC','Russian']:
     if hit is None:visible+=1
    directions.append({'heading_degrees':degrees,'potentially_visible_vertices':visible,'sample_vertices':len(points)})
   ev.to_mesh_clear();occlusion.append({'event':event,'directions':directions})
- reports.append({'faction':faction,'max_left_palm_magazine_contact_error_m':max(contactErrors),'weapon_origin_travel_m':originRange,'weapon_raise_m':lift,'weapon_orientation_change_degrees':math.degrees(angle),'max_foot_slide_m':footSlip,'magazine_mechanism':mechanism,'pouch_visibility_occlusion':occlusion});print('CONTACT_AND_MECHANISM_PASS',faction,originRange,lift,max(contactErrors),flush=True)
+ assert all(d['potentially_visible_vertices']==0 for event in occlusion for d in event['directions']),(faction,'visible magazine visibility switch')
+ reports.append({'faction':faction,'max_left_palm_magazine_contact_error_m':max(contactErrors),'weapon_origin_travel_m':originRange,'weapon_raise_m':lift,'weapon_orientation_change_degrees':math.degrees(angle),'max_foot_slide_m':footSlip,'shouldered_endpoint_matches':endpoints,'handling_beat_motion':stages,'magazine_mechanism':mechanism,'pouch_visibility_occlusion':occlusion});print('CONTACT_AND_MECHANISM_PASS',faction,originRange,lift,max(contactErrors),flush=True)
 (ROOT/'validation/contacts.json').write_text(json.dumps(reports,indent=2)+'\n')

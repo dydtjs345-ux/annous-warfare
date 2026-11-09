@@ -32,7 +32,7 @@ def author(faction):
  pose(rig,'Lower_AimStance','Upper_Aim',0)
  a=Author.__new__(Author);a.rig=rig;a.char=char;a.weapon=weapon;a.mag=mag;a.faction=faction;a.russian=russian;a.bones=rig.pose.bones;a.rest={b.name:b.matrix_local.copy()for b in rig.data.bones};a.errors=[];a.previous={}
  meta=json.loads((BASE/'validation'/f'{faction}-authoring.json').read_text());a.lower=meta['actions']['Lower_AimStance']['bones'];a.upper=meta['actions']['Reload']['bones']
- initial={p.name:p.matrix_basis.copy()for p in rig.pose.bones};W0=weapon.matrix_world.copy();C=rig.pose.bones['wrist.R'].matrix.inverted()@rig.matrix_world.inverted()@W0;LC=W0.inverted()@rig.matrix_world@rig.pose.bones['wrist.L'].matrix
+ initial={p.name:p.matrix_basis.copy()for p in rig.pose.bones};aim_matrices={p.name:p.matrix.copy()for p in rig.pose.bones};W0=weapon.matrix_world.copy();C=rig.pose.bones['wrist.R'].matrix.inverted()@rig.matrix_world.inverted()@W0;LC=W0.inverted()@rig.matrix_world@rig.pose.bones['wrist.L'].matrix
  rest_elbows={s:rig.pose.bones['lowerarm01.'+s].head.copy()for s in ['L','R']};feet={s:rig.pose.bones['foot.'+s].matrix.copy()for s in ['L','R']};root0=rig.pose.bones['root'].matrix.copy();lowerbase={n:rig.pose.bones[n].matrix_basis.copy()for n in a.lower}
  # Preserve trigger-hand grip exactly through the existing wrist.R weapon mount.
  def solve(side,M,hint):
@@ -48,6 +48,9 @@ def author(faction):
   return Matrix.Translation(goal)@rot.to_4x4()@a.rest['wrist.L'].to_3x3().to_4x4()
  def pouch_matrix(point):return Matrix.Translation(point)@Euler((0,-.06,-.16),'XYZ').to_matrix().to_4x4()@Matrix.Translation(-contact)
  oldP=pouch_matrix(pouchOld);newP=pouch_matrix(pouchNew);oldHidden=oldP.copy();oldHidden.translation.y+=.22;oldHidden.translation.z-=.055;newHidden=newP.copy();newHidden.translation.y+=.33;newHidden.translation.z-=.055
+ # Keep the replacement fully inside the pouch/torso during the visibility key,
+ # including the small lateral weight transfer of the M16A4 stance.
+ if not russian:newHidden.translation.x+=.015
  upper=bpy.data.actions.new('Reload_Tactical');lower=bpy.data.actions.new('Reload_Tactical_Lower');oldAction=bpy.data.actions.new('Reload_Tactical_Magazine');newAction=bpy.data.actions.new('Reload_Tactical_SpareMagazine')
  for ac in [upper,lower,oldAction,newAction]:ac.use_fake_user=True
  rig.animation_data.action=upper;mag.animation_data_create();spare.animation_data_create();mag.animation_data.action=oldAction;spare.animation_data.action=newAction
@@ -56,21 +59,24 @@ def author(faction):
   t=i/FPS;u=t/ratio
   for p in rig.pose.bones:p.matrix_basis=initial[p.name]
   # Asymmetric, planted weight transfer. Feet are analytically locked in place.
-  env=span(u,.05,.5)*(1-span(u,2.85,3.38));work=span(u,.48,.9)*(1-span(u,2.7,3.12));reach=span(u,1.07,1.40)*(1-span(u,2.07,2.35));breath=math.sin(2*math.pi*u/2.4)*work;shift=.014*env-.006*math.sin(math.pi*min(1,u/3.7))*env+.005*reach
+  env=span(u,.05,.5)*(1-span(u,2.85,3.38));work=span(u,.48,.9)*(1-span(u,2.7,3.12));reach=span(u,1.07,1.40)*(1-span(u,2.07,2.35));breath=math.sin(2*math.pi*u/2.4)*work
+  # Distinct authored beats: release, pouch check, magwell alignment, seating.
+  release=span(u,.67,.88)*(1-span(u,1.04,1.26));pouch=span(u,1.22,1.52)*(1-span(u,1.83,2.12));align=span(u,1.92,2.18)*(1-span(u,2.60,2.84));check=span(u,2.62,2.69)*(1-span(u,2.76,2.86))
+  shift=.014*env-.006*math.sin(math.pi*min(1,u/3.7))*env+.009*reach-.003*align
   Rroot=Euler((.006*env,.006*env,0),'XYZ').to_matrix();rig.pose.bones['root'].matrix=Matrix.Translation(Vector((shift,0,-.004*env)))@Matrix.Translation(root0.translation)@Rroot.to_4x4()@Matrix.Translation(-root0.translation)@root0;a.update()
   for side in ['L','R']:
    foot=feet[side];a.chain(side,foot.translation.copy(),(foot@a.rest['foot.'+side].inverted()).to_3x3())
-  a.rot('spine03',(math.radians(-2.5*env-.5*breath),0,math.radians(5.5*env+2.5*reach)));a.rot('spine02',(math.radians(1.8*env+1.2*reach+.35*breath),math.radians(-1.0*env),math.radians(3*env+.5*breath)))
-  a.rot('clavicle.R',(0,math.radians(-2.5*env),math.radians(-2*env)));a.rot('clavicle.L',(0,math.radians(2*env),math.radians(2*env)))
-  glance=span(u,.42,.85)*(1-span(u,2.6,3.14));a.rot('neck01',(math.radians(2.5*glance+1.5*reach),0,math.radians(4*glance-2*reach)));a.rot('head',(math.radians(3.5*glance+2.5*reach+.4*breath),math.radians(-2*env),math.radians(3*glance+3.5*reach)))
+  a.rot('spine03',(math.radians(-2.5*env-.5*breath-1.4*align),math.radians(.6*release),math.radians(5.5*env+3.5*reach-1.1*align)));a.rot('spine02',(math.radians(1.8*env+1.8*reach+.35*breath),math.radians(-1.0*env-.5*pouch),math.radians(3*env+.5*breath)))
+  a.rot('clavicle.R',(math.radians(.7*release-.8*check),math.radians(-2.5*env-1.2*reach),math.radians(-2*env-.9*align)));a.rot('clavicle.L',(math.radians(.6*align),math.radians(2*env+.9*reach),math.radians(2*env+.7*release)))
+  glance=span(u,.42,.85)*(1-span(u,2.6,3.14));a.rot('neck01',(math.radians(2.5*glance+2.1*pouch),0,math.radians(4*glance-2*pouch)));a.rot('head',(math.radians(3.5*glance+4.0*pouch+1.2*align+.4*breath),math.radians(-2*env-1.1*pouch),math.radians(3*glance+5*pouch-1.2*align)))
   # Rifle motion uses a distinct anticipatory lift, canted working position,
   # alignment pause, insertion response, and rapid recovery. The whole rifle moves.
   lift=span(u,.10,.54)*(1-span(u,2.82,3.26));cant=span(u,.16,.62)*(1-span(u,2.78,3.18));settle=.007*math.sin(2*math.pi*(u-.6)/2.2)*env
-  pitch=math.radians(-29*lift+1.2*reach);roll=math.radians(-18*cant+.6*breath);yaw=math.radians(18*cant+2*reach)
-  R=W0.to_3x3()@Euler((pitch,roll,yaw),'XYZ').to_matrix();g0=W0@griplocal;g=g0+Vector((.075*lift,.050*lift,(.100 if russian else .135)*lift+settle))
+  pitch=math.radians(-29*lift+1.8*reach-3.0*align+.9*release);roll=math.radians(-18*cant+1.7*release-2.1*align+.6*breath);yaw=math.radians(18*cant+3.3*reach-1.2*align)
+  R=W0.to_3x3()@Euler((pitch,roll,yaw),'XYZ').to_matrix();g0=W0@griplocal;g=g0+Vector((.075*lift+.004*release-.003*align,.050*lift+.012*reach-.004*align,(.100 if russian else .135)*lift+settle+.004*release+.004*align-.002*check))
   # A short magazine seating impulse transmits to the supporting right arm.
   seating=.006*math.sin(math.pi*max(0,min(1,(u-2.48)/.13))) if 2.48<u<2.61 else 0;g.z+=seating
-  W=Matrix.Translation(g-R@griplocal)@R.to_4x4();maxerr=max(maxerr,solve('R',rig.matrix_world.inverted()@W@C.inverted(),rest_elbows['R'].lerp(Vector((-.36,.01,1.17)),env)))
+  W=Matrix.Translation(g-R@griplocal)@R.to_4x4();right_pole=Vector((-.36+.018*reach,.01+.012*align,1.17-.015*reach));maxerr=max(maxerr,solve('R',rig.matrix_world.inverted()@W@C.inverted(),rest_elbows['R'].lerp(right_pole,env)))
   actual=weapon.matrix_world.copy();werr=(actual.translation-W.translation).length;assert werr<.0001,(faction,'weapon mount error',werr)
   # Old magazine: M16 straight down; AK pivots around its front catch first.
   if russian:
@@ -103,7 +109,7 @@ def author(faction):
   elif u<2.80:hand=palm_matrix(new)
   elif u<3.06:hand=interp(palm_matrix(new),fore,span(u,2.80,3.06),(.04,-.025,.025))
   else:hand=fore
-  maxerr=max(maxerr,solve('L',rig.matrix_world.inverted()@hand,rest_elbows['L'].lerp(Vector((.37,-.085,1.11)),env)))
+  left_pole=Vector((.37-.018*pouch,-.085-.025*align,1.11+.018*release));maxerr=max(maxerr,solve('L',rig.matrix_world.inverted()@hand,rest_elbows['L'].lerp(left_pole,env)))
   # Finger opening during reaches, firm cylindrical magazine grip, safe trigger finger.
   grasp=span(u,.62,.78)*(1-span(u,2.80,3.06));finger_open=(span(u,.46,.58)*(1-span(u,.65,.78)))+(span(u,1.43,1.51)*(1-span(u,1.80,1.91)))
   wrist,anchor,frame=a.hand_frame('L');axis=frame.col[1].cross(-frame.col[2]).normalized()
@@ -114,6 +120,9 @@ def author(faction):
   # Copy original trigger-finger curl at the boundaries; extend along receiver in work phase.
   for segment in range(1,4):
    name=f'finger2-{segment}.R';rig.pose.bones[name].rotation_quaternion=initial[name].to_quaternion().slerp(Quaternion(),.65*env)
+  # Exact entry/exit poses avoid an IK pole correction popping at state boundaries.
+  if i in [0,round(D*FPS)]:
+   for p in rig.pose.bones:p.matrix_basis=initial[p.name]
   a.update()
   for names,action in [(a.upper,upper),(a.lower,lower)]:
    rig.animation_data.action=action
@@ -161,7 +170,7 @@ def author(faction):
    for scene in j['scenes']:
     if idx not in scene['nodes']:scene['nodes'].append(idx)
  write_glb(out,j,binary)
- report={'faction':faction,'duration':D,'fps':FPS,'mechanism':'front-catch rocking'if russian else'straight-in magwell','reload_type':'retention reload with chambered round; no unnecessary charging cycle','original_actions_unchanged':original,'bones':len(rig.data.bones),'max_ik_error_m':maxerr,'samples':samples,'new_actions':{'Reload_Tactical':{'duration':D,'layer':'upper','bones':a.upper},'Reload_Tactical_Lower':{'duration':D,'layer':'lower','bones':a.lower}},'pouch_visibility_times':{'old_hidden':old_hide*ratio,'replacement_visible':new_show*ratio}}
+ report={'faction':faction,'revision':'coordinated handling beats, exact shouldered endpoints','duration':D,'fps':FPS,'mechanism':'front-catch rocking'if russian else'straight-in magwell','reload_type':'retention reload with chambered round; no unnecessary charging cycle','original_actions_unchanged':original,'aim_reference_matrices':{n:matlist(m)for n,m in aim_matrices.items()},'bones':len(rig.data.bones),'max_ik_error_m':maxerr,'samples':samples,'new_actions':{'Reload_Tactical':{'duration':D,'layer':'upper','bones':a.upper},'Reload_Tactical_Lower':{'duration':D,'layer':'lower','bones':a.lower}},'pouch_visibility_times':{'old_hidden':old_hide*ratio,'replacement_visible':new_show*ratio}}
  (ROOT/'validation'/f'{faction}-authoring.json').write_text(json.dumps(report,indent=2)+'\n');print('TACTICAL_RELOAD_AUTHORED',faction,D,flush=True)
 
 if __name__=='__main__':author(os.environ.get('AW_FACTION','USMC'))

@@ -1,13 +1,49 @@
 [
   {
     "faction": "USMC",
-    "max_left_palm_magazine_contact_error_m": 1.7816860506720815e-06,
-    "weapon_origin_travel_m": 0.1926035631142673,
-    "weapon_raise_m": 0.16701018810272217,
-    "weapon_orientation_change_degrees": 36.33653466748155,
-    "max_foot_slide_m": 4.59284633619262e-08,
+    "max_left_palm_magazine_contact_error_m": 2.8112690413933417e-06,
+    "weapon_origin_travel_m": 0.19724267056493214,
+    "weapon_raise_m": 0.1700599193572998,
+    "weapon_orientation_change_degrees": 38.785669749118874,
+    "max_foot_slide_m": 1.4619094781837301e-07,
+    "shouldered_endpoint_matches": [
+      {
+        "frame": 0,
+        "max_bone_matrix_error": 5.066394805908203e-07
+      },
+      {
+        "frame": 111,
+        "max_bone_matrix_error": 5.066394805908203e-07
+      }
+    ],
+    "handling_beat_motion": [
+      {
+        "phase_interval": [
+          0.8,
+          1.38
+        ],
+        "weapon_translation_m": 0.01176310406587594,
+        "weapon_rotation_degrees": 4.240498186766676
+      },
+      {
+        "phase_interval": [
+          1.38,
+          2.16
+        ],
+        "weapon_translation_m": 0.01181506398553562,
+        "weapon_rotation_degrees": 4.928208163067279
+      },
+      {
+        "phase_interval": [
+          2.16,
+          2.68
+        ],
+        "weapon_translation_m": 0.00849806832319275,
+        "weapon_rotation_degrees": 3.050934938557506
+      }
+    ],
     "magazine_mechanism": {
-      "straight_in_lateral_error_m": 1.8838574710409494e-07
+      "straight_in_lateral_error_m": 1.8962551542718314e-07
     },
     "pouch_visibility_occlusion": [
       {
@@ -104,13 +140,49 @@
   },
   {
     "faction": "Russian",
-    "max_left_palm_magazine_contact_error_m": 1.9957023716797287e-06,
-    "weapon_origin_travel_m": 0.1695168768705285,
-    "weapon_raise_m": 0.1381087303161621,
-    "weapon_orientation_change_degrees": 36.33651417691404,
-    "max_foot_slide_m": 3.414284955677271e-08,
+    "max_left_palm_magazine_contact_error_m": 2.9869395268466668e-06,
+    "weapon_origin_travel_m": 0.17438722155112077,
+    "weapon_raise_m": 0.14103484153747559,
+    "weapon_orientation_change_degrees": 38.78781101342367,
+    "max_foot_slide_m": 1.4175696365863417e-07,
+    "shouldered_endpoint_matches": [
+      {
+        "frame": 0,
+        "max_bone_matrix_error": 4.76837158203125e-07
+      },
+      {
+        "frame": 123,
+        "max_bone_matrix_error": 4.76837158203125e-07
+      }
+    ],
+    "handling_beat_motion": [
+      {
+        "phase_interval": [
+          0.8,
+          1.38
+        ],
+        "weapon_translation_m": 0.01221246641201311,
+        "weapon_rotation_degrees": 4.314801253426305
+      },
+      {
+        "phase_interval": [
+          1.38,
+          2.16
+        ],
+        "weapon_translation_m": 0.011939544029089078,
+        "weapon_rotation_degrees": 4.928684568761888
+      },
+      {
+        "phase_interval": [
+          2.16,
+          2.68
+        ],
+        "weapon_translation_m": 0.008536199409820264,
+        "weapon_rotation_degrees": 2.955539820854054
+      }
+    ],
     "magazine_mechanism": {
-      "rock_in_front_lug_error_m": 3.8886718570879057e-07,
+      "rock_in_front_lug_error_m": 2.9455763658753113e-07,
       "rock_in_rotation_degrees": 22.60129323864533
     },
     "pouch_visibility_occlusion": [

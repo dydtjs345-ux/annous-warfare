@@ -1,0 +1,44 @@
+[
+  {
+    "file": "review/USMC-grip-directions.png",
+    "headings": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "actual_3d_rotations": true,
+    "camera_elevation_degrees": 30,
+    "standing_reference_px": 300,
+    "phases": [
+      1.05,
+      2.42
+    ],
+    "camera_scale_calibrated_per_heading": true
+  },
+  {
+    "file": "review/Russian-grip-directions.png",
+    "headings": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "actual_3d_rotations": true,
+    "camera_elevation_degrees": 30,
+    "standing_reference_px": 300,
+    "phases": [
+      1.05,
+      2.42
+    ],
+    "camera_scale_calibrated_per_heading": true
+  }
+]

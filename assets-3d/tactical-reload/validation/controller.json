@@ -20,7 +20,7 @@
       "canonical_magazine_restore_passed": true,
       "moving_fire_gait_phase_preserved": true,
       "other_states_available": 16,
-      "weapon_raise_sample_m": 0.16197581828166618
+      "weapon_raise_sample_m": 0.16205286834987898
     },
     {
       "faction": "Russian",
@@ -40,7 +40,7 @@
       "canonical_magazine_restore_passed": true,
       "moving_fire_gait_phase_preserved": true,
       "other_states_available": 16,
-      "weapon_raise_sample_m": 0.13179246172044068
+      "weapon_raise_sample_m": 0.13179243556423303
     }
   ]
 }

@@ -59,6 +59,11 @@ elif mode=='native':
 elif mode=='video':
  out=Path('/tmp')/f'reload-{faction}-{variant}';out.mkdir(exist_ok=True);D=4.1 if faction=='Russian'else 3.7
  for i in range(round((D+.4)*60)+1):render(min(i/60,D),120,280,280,out/f'{i:04d}.png')
+elif mode=='grips':
+ out=Path('/tmp')/f'reload-grips-{faction}';out.mkdir(exist_ok=True)
+ for heading,degrees in {'N':225,'NE':180,'E':135,'SE':90,'S':45,'SW':0,'W':315,'NW':270}.items():
+  root.rotation_euler.z=math.radians(degrees);ref=spans[faction][heading]
+  for i,t in enumerate([1.05,2.42]):render(t*(4.1/3.7 if faction=='Russian'else 1),300,380,440,out/f'{heading}-{i}.png')
 else:
  times=[0,.54,1.05,1.48,1.95,2.42,2.65,3.08,3.45,3.7]
  if faction=='Russian':times=[x*4.1/3.7 for x in times]

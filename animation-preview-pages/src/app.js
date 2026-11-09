@@ -130,7 +130,7 @@ async function loadFaction(){
 $('comparison').onchange=()=>{
  const squad=isSquad();$('animation').disabled=isReloadCompare();$('reload-version').disabled=isReloadCompare();if(isReloadCompare()){state='Reload';$('animation').value='Reload';firing=false;updateButtons();}
  $('faction').disabled=['both','mixed'].includes($('comparison').value);$('view').disabled=squad;
- $('panels').classList.toggle('comparison',($('comparison').value==='both'||isReloadCompare()));$('panels').classList.toggle('squad',squad);
+ $('panels').classList.toggle('comparison',($('comparison').value==='both'||isReloadCompare()));$('panels').classList.toggle('reload-comparison',isReloadCompare());$('panels').classList.toggle('squad',squad);
  if(squad){$('view').value='gameplay';$('inspection-tools').hidden=true;updateViewTip();}
  else updateViewTip();
  loadFaction();
@@ -149,9 +149,18 @@ async function init(){
   const response=await fetch('./architecture.json');if(!response.ok)throw Object.assign(new Error('Animation manifest returned HTTP '+response.status),{status:response.status});architecture=await response.json();
   for(const name of Object.keys(architecture.factions.USMC.clips))$('clip-options').append(new Option(clipLabel(name),'clip:'+name));
   for(const faction of ['USMC','Russian']){const response=await fetch('./reload/'+faction+'-reload.json');if(!response.ok)throw Object.assign(new Error('Reload keyframes unavailable'),{status:response.status});const data=await response.json();data.animationClips=data.clips.map(c=>T.AnimationClip.parse(c));reloadData.set(faction,data);}
-  applyLanguage();await loadFaction();
+  applyReloadReviewLink();applyLanguage();await loadFaction();
   window.animationPreview={actors,setState,restart,loadFaction,get ready(){return ready;},get time(){return clock;},get firing(){return firing;},pause(){playing=false;manual=true;updateButtons();},step(dt){clock+=dt;for(const actor of actors)actor.update(dt);for(const actor of actors)actor.render();},snapshot(){return actors.map(a=>({faction:a.faction,lower:a.lower?.getClip().name,upper:a.upper?.getClip().name,gaitTime:a.lower?.time,shots:a.shotCount,distance:a.distance,clips:[...a.clips.keys()],webgl:a.renderer.getContext().getParameter(a.renderer.getContext().VERSION)}));}};
  }catch(error){console.error(error);showError('Unable to initialize preview. Refresh the page and check your connection. {detail}',{detail:error.status?'HTTP '+error.status:''});}
+}
+export function applyReloadReviewLink(search=globalThis.location?.search||''){
+ const query=new URLSearchParams(search);if(query.get('review')!=='reload')return false;
+ $('comparison').value='reload';$('animation').value='Reload';state='Reload';firing=false;
+ $('animation').disabled=true;$('reload-version').disabled=true;$('panels').classList.add('comparison','reload-comparison');
+ $('view').value='gameplay';$('view').disabled=false;$('faction').disabled=false;$('inspection-tools').hidden=true;
+ const faction=query.get('faction');if(['USMC','Russian'].includes(faction))$('faction').value=faction;
+ const speed=query.get('speed');if(['0.25','0.5','1','1.5','2'].includes(speed))$('speed').value=speed;
+ return true;
 }
 let statusKey='Loading animation data…',statusParams={};
 function setStatus(key,params={}){statusKey=key;statusParams=params;$('status').textContent=t(key,{...params,faction:params.factionId?t(params.factionId):params.faction});}

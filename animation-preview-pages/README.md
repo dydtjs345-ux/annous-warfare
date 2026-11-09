@@ -4,9 +4,11 @@
 
 **보기 모드 → 재장전 원본 / 개선 비교**에서 같은 진영의 원본(왼쪽)과 개선본(오른쪽)을 동시에 확인할 수 있습니다. 진영에서 미 해병대 M16A4 / 러시아군 AK-74M을 선택하고 **재장전 · 보통 속도**, **재장전 · 느리게**로 재생하세요. 60 / 80 / 120px, 여덟 방향, 게임 쿼터뷰·자유 시점·측면 시점도 사용할 수 있습니다. **재장전 비교 영상**에는 두 진영의 일반 속도·슬로모션 연속 영상이 있습니다.
 
+[재장전 비교 바로 열기](https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/?review=reload&faction=USMC). `faction=Russian`은 AK-74M, `speed=0.5`는 느린 재생입니다. 휴대폰에서도 재장전 원본·개선본을 좌우로 함께 표시합니다. 개별 애니메이션의 **재장전 · 원본 클립**은 보존된 구버전이며, 전투 동작의 **재장전**은 선택한 개선본을 재생합니다.
+
 The default reload version is improved. The separate version selector restores the original reload; the 21 individual source clip choices remain unchanged. New keyframes load from relative `reload/` URLs onto the original hash-verified GLBs. Other animations and squad playback remain available. Full projects, exports, authoring tools, and validation are in [`../assets-3d/tactical-reload/README.md`](../assets-3d/tactical-reload/README.md). Browser/device QA limitations for this revision are stated there; earlier WebKit results below predate these reload changes.
 
-Published as version 3 at the same public HTTPS address. The Sites source mirror commit is `8336c567263118e866971fda0964d363d7526195`. [`public-https.json`](../assets-3d/tactical-reload/validation/public-https.json) verifies all 18 public files against this build; [`publication.json`](../assets-3d/tactical-reload/validation/publication.json) records the successful deployment. This verifies publication and asset bytes, not new browser/device interaction.
+Published as version 4 at the same public HTTPS address. The Sites source mirror commit is `51a28a59e6472ce809463e434f286f5dee1542ac`. [`public-https.json`](../assets-3d/tactical-reload/validation/public-https.json) verifies all 18 public files against this build; [`publication.json`](../assets-3d/tactical-reload/validation/publication.json) records the successful deployment. This verifies publication and asset bytes, not new browser/device interaction.
 
 Standalone static preview for the original animated GLBs at `a1d280461f94456c905b677b213a6ee31245b1d0` on `feat/shared-infantry-combat-animation`. The source models and existing playable game are unchanged.
 

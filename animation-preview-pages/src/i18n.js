@@ -196,8 +196,8 @@ export const clipLabels={
     "Shot recoil · additive layer"
   ],
   "Reload": [
-    "재장전 · 무기별 동작",
-    "Reload · weapon specific"
+    "재장전 · 원본 클립",
+    "Reload · original clip"
   ]
 };
 Object.assign(korean,{
