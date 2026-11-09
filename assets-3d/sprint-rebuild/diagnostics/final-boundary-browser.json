@@ -1,0 +1,71 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "physical_iPhone": false,
+  "passed": true,
+  "factions": [
+    {
+      "faction": "USMC",
+      "transition_overruns": [
+        {
+          "state": "SprintStartNew",
+          "lower": "SR_Sprint_Lower",
+          "upper": "SR_Sprint_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        },
+        {
+          "state": "SprintAccelerateNew",
+          "lower": "SR_Sprint_Lower",
+          "upper": "SR_Sprint_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        },
+        {
+          "state": "SprintDecelerateNew",
+          "lower": "FB_Walk_Lower",
+          "upper": "FB_Walk_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        }
+      ],
+      "true_front_camera": true,
+      "actual_playback_after_tap": true
+    },
+    {
+      "faction": "Russian",
+      "transition_overruns": [
+        {
+          "state": "SprintStartNew",
+          "lower": "SR_Sprint_Lower",
+          "upper": "SR_Sprint_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        },
+        {
+          "state": "SprintAccelerateNew",
+          "lower": "SR_Sprint_Lower",
+          "upper": "SR_Sprint_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        },
+        {
+          "state": "SprintDecelerateNew",
+          "lower": "FB_Walk_Lower",
+          "upper": "FB_Walk_Upper",
+          "lower_time": 0.09000000000000008,
+          "upper_time": 0.09000000000000008,
+          "webgl_error": 0
+        }
+      ],
+      "true_front_camera": true,
+      "actual_playback_after_tap": true
+    }
+  ],
+  "app_sha256": "32be780322e52c0ae1a31f2ba37968b5b339706bf00b4a6e9d9b4c83e8d8bc65",
+  "errors": []
+}

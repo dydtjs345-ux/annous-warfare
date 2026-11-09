@@ -1,0 +1,230 @@
+[
+  {
+    "faction": "USMC",
+    "bones": 163,
+    "preserved_geometry_rest_weights": {
+      "rest": "facde8e32fd0acdc703196d22931ab71d9e10777d55447251ac3154f9be77884",
+      "geometry": "ceb9ea3cec028e70907af322c2b905ee738ffc7a123d3c6655197734c8e2cc63",
+      "weights": "915ff1c8f601de4c5eb38bf658acffb03825a368ebdb700511d0710d41c7da26"
+    },
+    "geometry_rest_weights_match": true,
+    "loop_error_m": 0.0,
+    "running": {
+      "L": {
+        "ankle_relative_deg": [
+          -18.000016289798673,
+          19.891429662425036
+        ],
+        "hip_angle_deg": [
+          -13.11120001385178,
+          54.940510701170886
+        ],
+        "knee_flex_deg": [
+          25.78084454158028,
+          107.65156955628761
+        ],
+        "sole_z_m": [
+          0.0029999795369803905,
+          0.3577001392841339
+        ],
+        "contact_fraction": 0.3902439024390244,
+        "same_material_contact_slip_rms_mps": 8.872148246402805e-06,
+        "same_material_contact_slip_max_mps": 1.4455080000800512e-05
+      },
+      "R": {
+        "ankle_relative_deg": [
+          -17.99998799318589,
+          19.891465046840345
+        ],
+        "hip_angle_deg": [
+          -13.111193985616394,
+          54.940526396282436
+        ],
+        "knee_flex_deg": [
+          25.78084454158028,
+          107.65160370723346
+        ],
+        "sole_z_m": [
+          0.0029999399557709694,
+          0.3577003479003906
+        ],
+        "contact_fraction": 0.36585365853658536,
+        "same_material_contact_slip_rms_mps": 8.964134207605445e-06,
+        "same_material_contact_slip_max_mps": 1.6389435968055793e-05
+      },
+      "flight_fraction": 0.24390243902439024,
+      "vertical_root_range_m": [
+        0.9000275135040283,
+        0.9306966066360474
+      ]
+    },
+    "transitions": [
+      {
+        "state": "IdleToSprint",
+        "boundary_errors_m": [
+          2.585523232737278e-07,
+          3.554481399618555e-07
+        ],
+        "ankle_relative_deg": [
+          -20.000028191759593,
+          18.005699501562408
+        ],
+        "same_material_contact_slip_rms_mps": 9.180805066383408e-06,
+        "same_material_contact_slip_max_mps": 1.9552820219767426e-05
+      },
+      {
+        "state": "WalkToSprint",
+        "boundary_errors_m": [
+          9.396006328126458e-07,
+          2.6034422531211596e-07
+        ],
+        "ankle_relative_deg": [
+          -25.274310853371137,
+          18.949116628878095
+        ],
+        "same_material_contact_slip_rms_mps": 1.0484914170655242e-05,
+        "same_material_contact_slip_max_mps": 2.243901927503271e-05
+      },
+      {
+        "state": "SprintToWalk",
+        "boundary_errors_m": [
+          3.554481399618555e-07,
+          1.0218166388881758e-06
+        ],
+        "ankle_relative_deg": [
+          -24.601019635362412,
+          13.41562569442238
+        ],
+        "same_material_contact_slip_rms_mps": 8.295339683078353e-06,
+        "same_material_contact_slip_max_mps": 2.3042894872475296e-05
+      },
+      {
+        "state": "SprintToStop",
+        "boundary_errors_m": [
+          3.554481399618555e-07,
+          3.143403397460131e-07
+        ],
+        "ankle_relative_deg": [
+          -20.000026458722832,
+          13.41562569442238
+        ],
+        "same_material_contact_slip_rms_mps": 4.8403609641055924e-05,
+        "same_material_contact_slip_max_mps": 0.000383929421351632
+      }
+    ]
+  },
+  {
+    "faction": "Russian",
+    "bones": 163,
+    "preserved_geometry_rest_weights": {
+      "rest": "facde8e32fd0acdc703196d22931ab71d9e10777d55447251ac3154f9be77884",
+      "geometry": "c504a54dab7f6e37df01647846c6667196b11c75b2cdc982cb3e10edebfa5bbb",
+      "weights": "93a8bcc24220731b678495e59c38ff8124c4b9cafdd36c479d64750ed28fbee5"
+    },
+    "geometry_rest_weights_match": true,
+    "loop_error_m": 0.0,
+    "running": {
+      "L": {
+        "ankle_relative_deg": [
+          -18.000016289798673,
+          19.891429662425036
+        ],
+        "hip_angle_deg": [
+          -13.11120001385178,
+          54.940510701170886
+        ],
+        "knee_flex_deg": [
+          25.78084454158028,
+          107.65156955628761
+        ],
+        "sole_z_m": [
+          0.0029999795369803905,
+          0.3577001392841339
+        ],
+        "contact_fraction": 0.3902439024390244,
+        "same_material_contact_slip_rms_mps": 8.872148246402805e-06,
+        "same_material_contact_slip_max_mps": 1.4455080000800512e-05
+      },
+      "R": {
+        "ankle_relative_deg": [
+          -17.99998799318589,
+          19.891465046840345
+        ],
+        "hip_angle_deg": [
+          -13.111193985616394,
+          54.940526396282436
+        ],
+        "knee_flex_deg": [
+          25.78084454158028,
+          107.65160370723346
+        ],
+        "sole_z_m": [
+          0.0029999399557709694,
+          0.3577003479003906
+        ],
+        "contact_fraction": 0.36585365853658536,
+        "same_material_contact_slip_rms_mps": 8.964134207605445e-06,
+        "same_material_contact_slip_max_mps": 1.6389435968055793e-05
+      },
+      "flight_fraction": 0.24390243902439024,
+      "vertical_root_range_m": [
+        0.9000275135040283,
+        0.9306966066360474
+      ]
+    },
+    "transitions": [
+      {
+        "state": "IdleToSprint",
+        "boundary_errors_m": [
+          2.585523232737278e-07,
+          3.554481399618555e-07
+        ],
+        "ankle_relative_deg": [
+          -20.000028191759593,
+          18.005699501562408
+        ],
+        "same_material_contact_slip_rms_mps": 9.180805066383408e-06,
+        "same_material_contact_slip_max_mps": 1.9552820219767426e-05
+      },
+      {
+        "state": "WalkToSprint",
+        "boundary_errors_m": [
+          9.396006328126458e-07,
+          2.6034422531211596e-07
+        ],
+        "ankle_relative_deg": [
+          -25.274310853371137,
+          18.949116628878095
+        ],
+        "same_material_contact_slip_rms_mps": 1.0484914170655242e-05,
+        "same_material_contact_slip_max_mps": 2.243901927503271e-05
+      },
+      {
+        "state": "SprintToWalk",
+        "boundary_errors_m": [
+          3.554481399618555e-07,
+          1.0218166388881758e-06
+        ],
+        "ankle_relative_deg": [
+          -24.601019635362412,
+          13.41562569442238
+        ],
+        "same_material_contact_slip_rms_mps": 8.295339683078353e-06,
+        "same_material_contact_slip_max_mps": 2.3042894872475296e-05
+      },
+      {
+        "state": "SprintToStop",
+        "boundary_errors_m": [
+          3.554481399618555e-07,
+          3.143403397460131e-07
+        ],
+        "ankle_relative_deg": [
+          -20.000026458722832,
+          13.41562569442238
+        ],
+        "same_material_contact_slip_rms_mps": 4.8403609641055924e-05,
+        "same_material_contact_slip_max_mps": 0.000383929421351632
+      }
+    ]
+  }
+]

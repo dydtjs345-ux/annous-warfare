@@ -14,8 +14,8 @@
         {
           "state": "Walk",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000012999226674000295,
-            "corrected": 0.000001992356310627768
+            "before": 1.2999226674000295e-06,
+            "corrected": 1.992356310627768e-06
           },
           "source_frames_checked": [
             0,
@@ -30,8 +30,8 @@
         {
           "state": "Sprint",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.000001670712304076121,
-            "corrected": 0.0000010453318407273426
+            "before": 1.670712304076121e-06,
+            "corrected": 1.0453318407273426e-06
           },
           "source_frames_checked": [
             0,
@@ -46,8 +46,8 @@
         {
           "state": "AimWalk",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.000001361539866191641,
-            "corrected": 0.0000014314172316899368
+            "before": 1.361539866191641e-06,
+            "corrected": 1.4314172316899368e-06
           },
           "source_frames_checked": [
             0,
@@ -62,8 +62,8 @@
         {
           "state": "MovingFire",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000013030913086638126,
-            "corrected": 9.887479304283157e-7
+            "before": 1.3030913086638126e-06,
+            "corrected": 9.887479304283157e-07
           },
           "source_frames_checked": [
             0,
@@ -78,8 +78,8 @@
         {
           "state": "Reload",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000010849730700291559,
-            "corrected": 0.0000014864201890049265
+            "before": 1.0849730700291559e-06,
+            "corrected": 1.4864201890049265e-06
           },
           "source_frames_checked": [
             0,
@@ -124,8 +124,8 @@
         {
           "state": "Walk",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000012999226673229343,
-            "corrected": 0.000001992356310627768
+            "before": 1.2999226673229343e-06,
+            "corrected": 1.992356310627768e-06
           },
           "source_frames_checked": [
             0,
@@ -140,8 +140,8 @@
         {
           "state": "Sprint",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000016707123039198386,
-            "corrected": 0.0000010453318405607964
+            "before": 1.6707123039198386e-06,
+            "corrected": 1.0453318405607964e-06
           },
           "source_frames_checked": [
             0,
@@ -156,8 +156,8 @@
         {
           "state": "AimWalk",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.000001361539866191641,
-            "corrected": 0.000001431417231798161
+            "before": 1.361539866191641e-06,
+            "corrected": 1.431417231798161e-06
           },
           "source_frames_checked": [
             0,
@@ -172,8 +172,8 @@
         {
           "state": "MovingFire",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000013030913086638126,
-            "corrected": 9.887479305027602e-7
+            "before": 1.3030913086638126e-06,
+            "corrected": 9.887479305027602e-07
           },
           "source_frames_checked": [
             0,
@@ -188,8 +188,8 @@
         {
           "state": "Reload",
           "max_blender_to_actual_browser_joint_error_m": {
-            "before": 0.0000010924345395747173,
-            "corrected": 0.0000015553253172497443
+            "before": 1.0924345395747173e-06,
+            "corrected": 1.5553253172497443e-06
           },
           "source_frames_checked": [
             0,
@@ -1852,7 +1852,7 @@
                       ]
                     },
                     "clavicle.R": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.8328727498312791,
                         1.3600896128220568,
@@ -2499,7 +2499,7 @@
                       ]
                     },
                     "spine01": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.9058613071107043,
                         1.2289279797786046,
@@ -2525,7 +2525,7 @@
                       ]
                     },
                     "clavicle.R": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.8328727041359691,
                         1.3600056072990967,
@@ -5224,7 +5224,7 @@
                       ]
                     },
                     "clavicle.R": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.8328727498312791,
                         1.3600896128220568,
@@ -5871,7 +5871,7 @@
                       ]
                     },
                     "spine01": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.9058613071107043,
                         1.2289279797786046,
@@ -5897,7 +5897,7 @@
                       ]
                     },
                     "clavicle.R": {
-                      "local_rotation_range_degrees": 0.0000017075472925031877,
+                      "local_rotation_range_degrees": 1.7075472925031877e-06,
                       "translation_min": [
                         -0.8328727041359691,
                         1.3600056072990967,
@@ -7090,5 +7090,93 @@
     "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/Russian_FullBody.50f6796a59b9.glb": "50f6796a59b97d13cc878fb8a9b2ff1f93a013ffb349c75679f4e8f1b673d6af"
   },
   "errors": [],
-  "failed_responses": []
+  "failed_responses": [],
+  "final_ui_touch_squad_smoke": {
+    "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/?review=body&state=MovingFire&markers=1",
+    "passed": true,
+    "physical_iPhone": false,
+    "touch_play_pause": true,
+    "touch_orbit": true,
+    "touch_pinch": true,
+    "six_soldier_mixed": {
+      "actors": [
+        {
+          "faction": "USMC",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "79a24a06-b754-45f3-9592-0ed9bab7cba2",
+          "position": [
+            -3.6769552621700474,
+            0,
+            -1.9798989873223332
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "b23ceb9b-15a3-4c59-a216-5919cf82a772",
+          "position": [
+            -1.9798989873223332,
+            0,
+            -3.6769552621700474
+          ]
+        },
+        {
+          "faction": "USMC",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "fe9f2dda-4a1c-470f-b8ab-c234e5db9540",
+          "position": [
+            -0.848528137423857,
+            0,
+            0.848528137423857
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "17a441e6-0153-4132-9708-4938a8ae5486",
+          "position": [
+            0.848528137423857,
+            0,
+            -0.848528137423857
+          ]
+        },
+        {
+          "faction": "USMC",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "119c0902-5f83-496e-b5f0-0a659f6d9f26",
+          "position": [
+            1.9798989873223332,
+            0,
+            3.6769552621700474
+          ]
+        },
+        {
+          "faction": "Russian",
+          "lower": "FB_AimWalk_Lower",
+          "upper": "FB_AimWalk_Upper",
+          "shots": 4,
+          "bones": "14f16911-9ecb-49df-93f9-96587e521c49",
+          "position": [
+            3.6769552621700474,
+            0,
+            1.9798989873223332
+          ]
+        }
+      ],
+      "canvases": 1,
+      "camera_locked": true,
+      "orthographic": true
+    },
+    "errors": []
+  }
 }

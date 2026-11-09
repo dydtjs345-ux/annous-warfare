@@ -2,15 +2,17 @@
   "repository": "dydtjs345-ux/annous-warfare",
   "commit": "a1d280461f94456c905b677b213a6ee31245b1d0",
   "asset_sha256": {
-    "USMC": "4d7f1f77560c7f38423bd9a55114a20d77b1047a7e0ff9e16d9942c6a9c2af6a",
-    "Russian": "50f6796a59b97d13cc878fb8a9b2ff1f93a013ffb349c75679f4e8f1b673d6af"
+    "USMC": "43556447081e389101d9b382e379ef9a4f9da554e62b39afbf5d91ab5952473b",
+    "Russian": "da9c7726b80fbab6a327093082b2dfc24e77aefac3fb46d8459b83645a7c0d6c"
   },
   "original_asset_sha256": {
     "USMC": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
     "Russian": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0"
   },
-  "motion_revision": "full-body-1",
+  "motion_revision": "sprint-review-2",
   "baseline_preview_commit": "a93cbae7f0476c7aee2559e39e9cfa8a20057d70",
+  "sprint_baseline_commit": "5481fc8407e0f137628bae5529283ead5af74c82",
+  "sprint_source_branch": "feat/infantry-sprint-rebuild",
   "reload_sha256": {
     "USMC": "1036fc4eec62c46b480b40c21e548ef39ed648641c0e473a4beee34ec1062b16",
     "Russian": "33ef7d5b319ace17ef588f3df3c83a767177a4afdb7e61d1d276d493f47c0db5"
@@ -19,8 +21,11 @@
     "Reload_Tactical",
     "Reload_Tactical_Lower"
   ],
-  "clips_per_faction": 34,
+  "clips_per_faction": 44,
   "original_clips_retained": 21,
+  "previous_full_body_clips_retained": 34,
+  "sprint_candidate_approved": false,
+  "default_sprint": "FB_Sprint_Lower + FB_Sprint_Upper",
   "animation_type": "skeletal GLB with independent locomotion, aiming and recoil layers",
-  "built_at": "2026-11-09T13:09:20.505Z"
+  "built_at": "2026-11-09T17:26:17.976Z"
 }

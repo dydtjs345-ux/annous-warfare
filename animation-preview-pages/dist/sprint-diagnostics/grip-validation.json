@@ -1,0 +1,64 @@
+[
+  {
+    "faction": "USMC",
+    "reference": "same LowReady weapon-relative support wrist frame",
+    "checks": [
+      {
+        "state": "Sprint",
+        "max_support_wrist_position_error_m": 8.943354471128438e-07,
+        "max_support_wrist_rotation_error_deg": 0.0
+      },
+      {
+        "state": "IdleToSprint",
+        "max_support_wrist_position_error_m": 0.005051518838251356,
+        "max_support_wrist_rotation_error_deg": 1.0682502306481625
+      },
+      {
+        "state": "WalkToSprint",
+        "max_support_wrist_position_error_m": 0.0060505303883733605,
+        "max_support_wrist_rotation_error_deg": 1.3175764679025461
+      },
+      {
+        "state": "SprintToWalk",
+        "max_support_wrist_position_error_m": 0.006817764294557058,
+        "max_support_wrist_rotation_error_deg": 1.0667838744107254
+      },
+      {
+        "state": "SprintToStop",
+        "max_support_wrist_position_error_m": 0.004950465941642523,
+        "max_support_wrist_rotation_error_deg": 0.8137270732090455
+      }
+    ]
+  },
+  {
+    "faction": "Russian",
+    "reference": "same LowReady weapon-relative support wrist frame",
+    "checks": [
+      {
+        "state": "Sprint",
+        "max_support_wrist_position_error_m": 1.3781963073814808e-06,
+        "max_support_wrist_rotation_error_deg": 0.0
+      },
+      {
+        "state": "IdleToSprint",
+        "max_support_wrist_position_error_m": 0.008211701555847353,
+        "max_support_wrist_rotation_error_deg": 0.748600258977622
+      },
+      {
+        "state": "WalkToSprint",
+        "max_support_wrist_position_error_m": 0.00903033464910659,
+        "max_support_wrist_rotation_error_deg": 0.8961226333746712
+      },
+      {
+        "state": "SprintToWalk",
+        "max_support_wrist_position_error_m": 0.008329677063693527,
+        "max_support_wrist_rotation_error_deg": 0.8364931609297558
+      },
+      {
+        "state": "SprintToStop",
+        "max_support_wrist_position_error_m": 0.0072080509827406325,
+        "max_support_wrist_rotation_error_deg": 0.5650972484457388
+      }
+    ]
+  }
+]

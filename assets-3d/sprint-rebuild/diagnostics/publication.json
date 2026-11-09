@@ -1,0 +1,33 @@
+{
+  "motion_revision": "sprint-review-2",
+  "github_branch": "feat/infantry-sprint-rebuild",
+  "github_main_merged": false,
+  "core_validation": {
+    "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+    "version_number": 9,
+    "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_bfac01690ec481918bfc17d8df7abe32",
+    "source_commit": "09da81c7f7f8bed48c5833207b414cee5210188d",
+    "deployment_id": "appgdep_6af1fc2742708191b51effc472210581",
+    "status": "succeeded",
+    "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site"
+  },
+  "front_validation": {
+    "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+    "version_number": 10,
+    "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_2317ecfa51488191b0893902d78f2fb0",
+    "source_commit": "1f77ba8187fb7a55b29c0c88a994a94ff6100670",
+    "deployment_id": "appgdep_6af1ff26162c8191896fd665e862879d",
+    "status": "succeeded",
+    "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site"
+  },
+  "final": {
+    "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+    "version_number": 11,
+    "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_7a7e91b4d0f081918e3b89ef00060510",
+    "source_commit": "62fb2fd4183f5c8a6678b449045148e79a56a513",
+    "deployment_id": "appgdep_6af202c86ec48191b9406d838ead9872",
+    "status": "succeeded",
+    "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site"
+  },
+  "physical_iPhone_tested": false
+}

@@ -1,0 +1,34 @@
+{
+  "technical_checks_passed": true,
+  "source_actions_preserved": [
+    {
+      "faction": "USMC",
+      "original_source_actions_preserved_after_reopen": 39,
+      "passed": true
+    },
+    {
+      "faction": "Russian",
+      "original_source_actions_preserved_after_reopen": 39,
+      "passed": true
+    }
+  ],
+  "shared_bones": 163,
+  "clips_per_faction": 44,
+  "old_clips_preserved": 34,
+  "new_layers": 10,
+  "actual_public_browser_verified": true,
+  "final_app_sha256": "32be780322e52c0ae1a31f2ba37968b5b339706bf00b4a6e9d9b4c83e8d8bc65",
+  "public_files_verified": 78,
+  "actual_travel_m": 9.12,
+  "old_sprint_default_preserved": true,
+  "new_sprint_visual_approval_pending": true,
+  "physical_iPhone_Safari_tested": false,
+  "professional_realism_automatically_certified": false,
+  "known_limits": [
+    "Flat ground and specified transition entry/exit phases",
+    "Support-wrist transition drift up to 9.1mm; loop grip is within micrometres",
+    "Cloud software rendering does not establish mobile GPU performance",
+    "No terrain adaptation or live-game integration"
+  ],
+  "main_merged": false
+}

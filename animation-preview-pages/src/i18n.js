@@ -243,3 +243,15 @@ for(const [id,labels]of Object.entries(clipLabels))if(!id.startsWith('FB_')){if(
 Object.assign(korean,{"Choose a combat motion or any of the 34 individual clips. Display size uses a standing reference; stride and posture change the visible height naturally.": "전투 동작 또는 34개 개별 애니메이션을 선택할 수 있습니다. 병사 크기는 선 자세 기준이며, 보폭과 자세에 따라 보이는 높이가 달라집니다.", "Single-soldier mode loads one faction. Full-body comparison reuses one versioned GLB containing preserved original clips and corrected clips. Original baseline: ": "1명 보기에서는 선택한 진영만 불러옵니다. 상체 비교는 원본·수정 클립을 함께 담은 버전 GLB 하나를 재사용합니다. 원본 기준: ", "For before / after comparisons choose a combat motion. Individual clips play the exact selected original or corrected clip.": "수정 전후 비교에서는 전투 동작을 선택하세요. 개별 클립은 선택한 원본 또는 수정 클립을 그대로 재생합니다."});
 
 clipLabels.Reload_Tactical=['이전 개선 재장전 · 상체','Earlier tactical reload · upper body'];clipLabels.Reload_Tactical_Lower=['이전 재장전 체중 이동 · 하체','Earlier reload weight shift · lower body'];
+
+Object.assign(korean,{
+ 'Front inspection':'정면 시점','OLD / NEW sprint comparison':'질주 OLD / NEW 비교','Walk / NEW sprint comparison':'보행 / 새 질주 비교','Sprint · 9.12 m travel test':'질주 · 9.12m 이동 시험','NEW sprint · awaiting approval':'새 전력 질주 · 승인 대기','NEW idle → sprint':'새 동작 · 대기 → 질주','NEW walk → sprint':'새 동작 · 보행 → 질주','NEW sprint → walk':'새 동작 · 질주 → 보행','NEW sprint → stop':'새 동작 · 질주 → 정지','OLD sprint':'기존 질주 (OLD)','Tactical walk':'전술 보행','Sprint diagnosis and moving comparisons':'질주 진단·비교 영상',
+ 'The new sprint is a separate review candidate. Existing sprint remains unchanged. Compare OLD / NEW, then test the 9.12 m route. The route physically moves the soldier over fixed ground.':'새 질주는 별도 검토 후보입니다. 기존 질주는 그대로 유지합니다. OLD / NEW 비교 후 9.12m 이동 시험을 선택하세요. 이동 시험에서는 고정된 지면 위로 병사가 실제 이동합니다.',
+ '9.12 m route · fixed 30° camera · accelerate, run, decelerate, stop. Replay to repeat.':'9.12m 이동 시험 · 30° 고정 카메라 · 가속 → 질주 → 감속 → 정지 순서입니다. 처음부터 재생으로 다시 확인하세요.',
+ 'OLD / NEW sprint · select side or front view, slow playback, and native character size.':'기존/새 질주를 나란히 비교합니다. 측면·정면 시점, 느린 재생, 병사 크기를 바꿔 확인하세요.',
+ 'Travel route · {distance} / 9.12 m · {motion}':'이동 거리 {distance} / 9.12m · {motion}',
+ 'Choose a combat motion or any of the 44 individual clips. Display size uses a standing reference; stride and posture change the visible height naturally.':'전투 동작 또는 44개 개별 애니메이션을 선택할 수 있습니다. 병사 크기는 선 자세 기준이며, 보폭과 자세에 따라 보이는 높이가 달라집니다.'
+});
+for(const [name,ko,en]of [['Sprint','새 전력 질주','NEW sprint'],['IdleToSprint','새 대기 → 질주','NEW idle → sprint'],['WalkToSprint','새 보행 → 질주','NEW walk → sprint'],['SprintToWalk','새 질주 → 보행','NEW sprint → walk'],['SprintToStop','새 질주 → 정지','NEW sprint → stop']])for(const [part,k,e]of [['Lower','하체','lower body'],['Upper','상체','upper body']])clipLabels['SR_'+name+'_'+part]=[ko+' · '+k,en+' · '+e];
+
+korean['Ready · animation assets verified · {count} soldiers']='준비 완료 · 애니메이션 자산 확인 · 병사 {count}명';

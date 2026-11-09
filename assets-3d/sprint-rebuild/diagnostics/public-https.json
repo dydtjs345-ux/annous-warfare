@@ -1,0 +1,634 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "review_url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/?review=sprint",
+  "all_assets_hash_match": true,
+  "anonymous_https": true,
+  "iphone_safari_user_agent": true,
+  "runtime_browser_verification": "See browser-after.json; this file verifies HTTPS and bytes only.",
+  "files": [
+    {
+      "file": "LICENSE-three.txt",
+      "status": 200,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "matches_build": true,
+      "bytes": 1081,
+      "content_type": "text/plain"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "sha256": "32be780322e52c0ae1a31f2ba37968b5b339706bf00b4a6e9d9b4c83e8d8bc65",
+      "matches_build": true,
+      "bytes": 661466,
+      "content_type": "text/javascript"
+    },
+    {
+      "file": "architecture.json",
+      "status": 200,
+      "sha256": "e139c0d8293080c3f8a211d38d604e6a416214cf73d25c560e64384d94d4d3d8",
+      "matches_build": true,
+      "bytes": 163221,
+      "content_type": "application/json"
+    },
+    {
+      "file": "body-review/Russian-AimWalk.mp4",
+      "status": 200,
+      "sha256": "95b6cc7d0d15a98e428611d9ee7de723b002365dfb87721015cc6b76ce3d6a4b",
+      "matches_build": true,
+      "bytes": 304631,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/Russian-AimWalk.png",
+      "status": 200,
+      "sha256": "3cfd808ac388791da1b007514260558f8beb3639e9d90c31ebc52f82bbaf4fc7",
+      "matches_build": true,
+      "bytes": 309646,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/Russian-MovingFire.mp4",
+      "status": 200,
+      "sha256": "0e5a78cc33a1b55eb1624077b12c8f3426e80d95e0a52562fe1ca7551329df6c",
+      "matches_build": true,
+      "bytes": 413828,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/Russian-MovingFire.png",
+      "status": 200,
+      "sha256": "2bef614d84dc19b2bd9f6397804f128eb2fb1452237a5f9b1b072c9c7bc610f4",
+      "matches_build": true,
+      "bytes": 309783,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/Russian-Reload.mp4",
+      "status": 200,
+      "sha256": "0259923994d46cfe4dc973cc4a45873ebf80bbc912a8e4994b7a23c327b3dddc",
+      "matches_build": true,
+      "bytes": 335933,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/Russian-Reload.png",
+      "status": 200,
+      "sha256": "049fb405aaeabc8f637b6589524c2275d598e05290d58aae68e4890e674268c2",
+      "matches_build": true,
+      "bytes": 306154,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/Russian-Sprint.mp4",
+      "status": 200,
+      "sha256": "7dac8dd675a6660d05e028ca2656a009912072bfbf5ee7854f92083fd1f1c4ba",
+      "matches_build": true,
+      "bytes": 343531,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/Russian-Sprint.png",
+      "status": 200,
+      "sha256": "c1fe318cddc019c9370c80f088856dd55b77e198c9db238bb44fdc913b09393c",
+      "matches_build": true,
+      "bytes": 305708,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/Russian-Walk.mp4",
+      "status": 200,
+      "sha256": "6f8e8accbf36e35464d41973c4c020a8ba38eba52e916da8432e464a1c743a4b",
+      "matches_build": true,
+      "bytes": 327948,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/Russian-Walk.png",
+      "status": 200,
+      "sha256": "5767e5cde71c94bfc5aa11b0db2552bf8090e19d8e950424f98655e5741570f0",
+      "matches_build": true,
+      "bytes": 310299,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/Russian-public-browser.mp4",
+      "status": 200,
+      "sha256": "b2c48cb102cfc1641202dc04132e5436ac8bd1167d3c1089e595ca9e701a7d1f",
+      "matches_build": true,
+      "bytes": 1880731,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-AimWalk.mp4",
+      "status": 200,
+      "sha256": "2eeea42674f6c1fd5b3c937bcce429f5ff7f225fd68464588013efec3a795bbb",
+      "matches_build": true,
+      "bytes": 309860,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-AimWalk.png",
+      "status": 200,
+      "sha256": "65949d73c2d0d4819f92a09a5182b283e9b0ac697852bd2177c446a43e0bcf41",
+      "matches_build": true,
+      "bytes": 314442,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/USMC-MovingFire.mp4",
+      "status": 200,
+      "sha256": "72e1c85f2378debef766ed701e6f5fb29222fbe47722203f2d586fb771f0d978",
+      "matches_build": true,
+      "bytes": 417405,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-MovingFire.png",
+      "status": 200,
+      "sha256": "a9ade3dd9d85c4590848eda88dd669a0f40171e3478cb1be8a6c2ee360adeb7b",
+      "matches_build": true,
+      "bytes": 314139,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/USMC-Reload.mp4",
+      "status": 200,
+      "sha256": "9390e8dfb77c517f3a90f8500f4ee6c36c6aa24cbbf43155b552794b1befbccc",
+      "matches_build": true,
+      "bytes": 327099,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-Reload.png",
+      "status": 200,
+      "sha256": "584b7eda0f899977d87c3db9bc26c6ba6708649eb7eb28a6e58663fe4a6c221a",
+      "matches_build": true,
+      "bytes": 310948,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/USMC-Sprint.mp4",
+      "status": 200,
+      "sha256": "b1f9755cc3a93b763e66b68b57ee28de171c5110b57903dba936b954302d2434",
+      "matches_build": true,
+      "bytes": 348143,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-Sprint.png",
+      "status": 200,
+      "sha256": "cf908ff76e5ade7c620c3df7af630e86567fe0dc4bc98495f10672d42faea572",
+      "matches_build": true,
+      "bytes": 311382,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/USMC-Walk.mp4",
+      "status": 200,
+      "sha256": "5fe5a582ce57445d38246849d7da4b61561d0ff643e2863505fb755da2a61d99",
+      "matches_build": true,
+      "bytes": 330541,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "body-review/USMC-Walk.png",
+      "status": 200,
+      "sha256": "267f021de1e0cbd1b802f66c702bf27d93aac3c40b03056f06a88cb654144e66",
+      "matches_build": true,
+      "bytes": 315441,
+      "content_type": "image/png"
+    },
+    {
+      "file": "body-review/USMC-public-browser.mp4",
+      "status": 200,
+      "sha256": "0bc546c609dc3855ae3659c191422538b89946e5d6a6ed46177b959f8c866c18",
+      "matches_build": true,
+      "bytes": 1800348,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "diagnostic-report.html",
+      "status": 200,
+      "sha256": "47819f6dc0b0567a47fabcd1af27855c5f7a7903102b72673585f8cfc10e2abf",
+      "matches_build": true,
+      "bytes": 22707,
+      "content_type": "text/html"
+    },
+    {
+      "file": "diagnostics/after-pipeline.json",
+      "status": 200,
+      "sha256": "4c6d897172744c259d95f0600d6ef3740b1477f9d2cc501c12556a6d9bdd1aa3",
+      "matches_build": true,
+      "bytes": 673827,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/before-pipeline.json",
+      "status": 200,
+      "sha256": "1d7ff73dfed4c8c64582e564b4c27d9cec76c32a4c3ca7c54095788ae548f86d",
+      "matches_build": true,
+      "bytes": 652463,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/browser-after.json",
+      "status": 200,
+      "sha256": "30b79df421760c195ac5d4dfe7e24a78dd9b4a39ca50a376b54d63bf12f7be9a",
+      "matches_build": true,
+      "bytes": 264131,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/browser-before.json",
+      "status": 200,
+      "sha256": "92e3706669b468027d9953ea28f6314cd8c325e1ae973afbdf56a7915ff93f4e",
+      "matches_build": true,
+      "bytes": 3776,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/export-integrity.json",
+      "status": 200,
+      "sha256": "b4fd4c9dea7ebb457f75f3bc574b1dc7be4830f691baf47a5be514a4c92da068",
+      "matches_build": true,
+      "bytes": 5586,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/reimport.json",
+      "status": 200,
+      "sha256": "e50e066da7f73ad0947461cf62195c3aed19711bdca6117a5f360fe1f4288326",
+      "matches_build": true,
+      "bytes": 11921,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/reload-contact.json",
+      "status": 200,
+      "sha256": "26afd2767273ed90b80282f70c147c621616bb6e9911777337f87f5232ccde14",
+      "matches_build": true,
+      "bytes": 1513,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/runtime-contracts.json",
+      "status": 200,
+      "sha256": "3edbe5017a80322403a30b4ecc29905592339f12587c11bd15a0132d6689b2b3",
+      "matches_build": true,
+      "bytes": 1249,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/source-inventory.json",
+      "status": 200,
+      "sha256": "ee970fcbb2de8a0937c192dab8b6842d3293ecef837c44ca52472110b5a71244",
+      "matches_build": true,
+      "bytes": 8003,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/summary.json",
+      "status": 200,
+      "sha256": "e4e26158377d604da025da3095e437f314a5687c0d9e8b0b051d96225611963e",
+      "matches_build": true,
+      "bytes": 368623,
+      "content_type": "application/json"
+    },
+    {
+      "file": "diagnostics/video-validation.json",
+      "status": 200,
+      "sha256": "e52e07ec80a2329ce2b7e2ca79c40a657d5faaf17771ef466af6c89792cbdb10",
+      "matches_build": true,
+      "bytes": 8592,
+      "content_type": "application/json"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "6c30bd0d3afaf9fb62c7ceb6f11e0364d290bf30104e2179234158da18ba0dc7",
+      "matches_build": true,
+      "bytes": 17383,
+      "content_type": "text/html"
+    },
+    {
+      "file": "models/Russian_SprintReview.da9c7726b80f.glb",
+      "status": 200,
+      "sha256": "da9c7726b80fbab6a327093082b2dfc24e77aefac3fb46d8459b83645a7c0d6c",
+      "matches_build": true,
+      "bytes": 12700944,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "file": "models/USMC_SprintReview.43556447081e.glb",
+      "status": 200,
+      "sha256": "43556447081e389101d9b382e379ef9a4f9da554e62b39afbf5d91ab5952473b",
+      "matches_build": true,
+      "bytes": 12542640,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "file": "moving-fire.mp4",
+      "status": 200,
+      "sha256": "72e1c85f2378debef766ed701e6f5fb29222fbe47722203f2d586fb771f0d978",
+      "matches_build": true,
+      "bytes": 417405,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "poster.png",
+      "status": 200,
+      "sha256": "a9ade3dd9d85c4590848eda88dd669a0f40171e3478cb1be8a6c2ee360adeb7b",
+      "matches_build": true,
+      "bytes": 314139,
+      "content_type": "image/png"
+    },
+    {
+      "file": "reload/Russian-normal.mp4",
+      "status": 200,
+      "sha256": "4a77ab106db844d5b65abbe336a3b2f2281d9f637c0a207d106b92699b04a5e3",
+      "matches_build": true,
+      "bytes": 71249,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "reload/Russian-poster.png",
+      "status": 200,
+      "sha256": "1da08d10c80ab18bef60f24e6e075f5b8bca630bfafa50cfe4191e21831faf3c",
+      "matches_build": true,
+      "bytes": 95737,
+      "content_type": "image/png"
+    },
+    {
+      "file": "reload/Russian-reload.json",
+      "status": 200,
+      "sha256": "33ef7d5b319ace17ef588f3df3c83a767177a4afdb7e61d1d276d493f47c0db5",
+      "matches_build": true,
+      "bytes": 583293,
+      "content_type": "application/json"
+    },
+    {
+      "file": "reload/Russian-slow.mp4",
+      "status": 200,
+      "sha256": "0ad91915891a2c8c6deaf877174cb16078551392ee5b53ffe5192934766d84d3",
+      "matches_build": true,
+      "bytes": 130078,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "reload/USMC-normal.mp4",
+      "status": 200,
+      "sha256": "d083e7aaba18491504d19b8b26e47811ae7b4ed1c6f1667e1752d1a9da2a3072",
+      "matches_build": true,
+      "bytes": 75073,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "reload/USMC-poster.png",
+      "status": 200,
+      "sha256": "4a67515e9893475be7851dc6aab064c45a97671a94390f74feca601f014e92e7",
+      "matches_build": true,
+      "bytes": 98460,
+      "content_type": "image/png"
+    },
+    {
+      "file": "reload/USMC-reload.json",
+      "status": 200,
+      "sha256": "1036fc4eec62c46b480b40c21e548ef39ed648641c0e473a4beee34ec1062b16",
+      "matches_build": true,
+      "bytes": 532172,
+      "content_type": "application/json"
+    },
+    {
+      "file": "reload/USMC-slow.mp4",
+      "status": 200,
+      "sha256": "a28743c45ffbad94d07b882b556c8d7dab073b8aab074f5cbdbc1c20e746c081",
+      "matches_build": true,
+      "bytes": 110104,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "source.json",
+      "status": 200,
+      "sha256": "079a9d04ff615443ebe94bc9be6f22840c00915f00a010d26a2540a07d114a7c",
+      "matches_build": true,
+      "bytes": 1330,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/Russian-authored.json",
+      "status": 200,
+      "sha256": "9a46e407e2a75016e29a2d6ec9ff0dcef398a2c4403e730b35cbb6595126f116",
+      "matches_build": true,
+      "bytes": 380855,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/USMC-authored.json",
+      "status": 200,
+      "sha256": "8c0ede74fae29aa1355bd08eb045e60849c7d001413c18a12c85a8cffb623dd3",
+      "matches_build": true,
+      "bytes": 380858,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/after-source.json",
+      "status": 200,
+      "sha256": "7c3811ec21d6f8e4b3c7f2410aee3f02f247b5b2153099123cb99c4531bb826c",
+      "matches_build": true,
+      "bytes": 425718,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/before-source.json",
+      "status": 200,
+      "sha256": "76f6ba343dcc2f111475110e6eff886c0f5e7788d1a6807e1f38990df3ee909c",
+      "matches_build": true,
+      "bytes": 510460,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/bone-transform-ranges.json",
+      "status": 200,
+      "sha256": "b3fa64dda107ba64f395829e0db0c245099e4ab90494f99cd9607525878d95c9",
+      "matches_build": true,
+      "bytes": 25511,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/browser-after.json",
+      "status": 200,
+      "sha256": "1c44056cce27426d226da1b7df4585092bb19fa465dbf1a55e26feeef0e934e8",
+      "matches_build": true,
+      "bytes": 300503,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/browser-before.json",
+      "status": 200,
+      "sha256": "439f996dc8d1381e0e249d6c740e9b38709a9429fa11c6313acf3a578dcd4104",
+      "matches_build": true,
+      "bytes": 75098,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/export-integrity.json",
+      "status": 200,
+      "sha256": "c35dd14b39ced5b03871f77bc563999e18041d5f6178d57b4c36bbe477dabe5f",
+      "matches_build": true,
+      "bytes": 7494,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/grip-validation.json",
+      "status": 200,
+      "sha256": "7c6607a75e813cb4a9cb41ee6f8c7731530ba176927f38c2f6f50248d02eb35a",
+      "matches_build": true,
+      "bytes": 2062,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/runtime-contracts.json",
+      "status": 200,
+      "sha256": "b5b7df930f675c9d7cf54f58396df2245d0c7d0732c56e0ae0798c6f45753b62",
+      "matches_build": true,
+      "bytes": 1853,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/source-action-preservation.json",
+      "status": 200,
+      "sha256": "5d91b0ba65d8e2f391083e417dc476eec0aefd2700e2b6e86098fd50aa675bd2",
+      "matches_build": true,
+      "bytes": 223,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/source-and-reimport.json",
+      "status": 200,
+      "sha256": "06dc731dc23d0dddd7274e7847938de174e7b7982ce79df53607897d9472b033",
+      "matches_build": true,
+      "bytes": 8352,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/source-stats.json",
+      "status": 200,
+      "sha256": "628c130fdefdefae1b875176cb0dffcdd0b7c37d515bf6342509175e19a6d41b",
+      "matches_build": true,
+      "bytes": 6801,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-diagnostics/video-validation.json",
+      "status": 200,
+      "sha256": "cd88758f8e7dc4a5d719ac9db9d774070b5d9c4360e68bffbdba6e23aaefc8cd",
+      "matches_build": true,
+      "bytes": 1107,
+      "content_type": "application/json"
+    },
+    {
+      "file": "sprint-report.html",
+      "status": 200,
+      "sha256": "f850778071bd6d60ea25a77308def2cc02c6408af7acf2e2cc7b01c9272adb2f",
+      "matches_build": true,
+      "bytes": 10454,
+      "content_type": "text/html"
+    },
+    {
+      "file": "sprint-review/Russian-sprint-normal.mp4",
+      "status": 200,
+      "sha256": "791a908473c94fa6809f55b92d3865539d06521f3052b6f02fd803aaa45b91e0",
+      "matches_build": true,
+      "bytes": 629050,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/Russian-sprint-slow.mp4",
+      "status": 200,
+      "sha256": "08094598cd9a1ce1df0c6f844fdbaa01b165f0ccf1f964b9296d6c80c2d8985b",
+      "matches_build": true,
+      "bytes": 778185,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/Russian-sprint.png",
+      "status": 200,
+      "sha256": "77fd112e5f7b6e8bfd1b1e90c2b17d0530240b782660e45e3bd8bed345cb19b3",
+      "matches_build": true,
+      "bytes": 437647,
+      "content_type": "image/png"
+    },
+    {
+      "file": "sprint-review/Russian-travel.mp4",
+      "status": 200,
+      "sha256": "bded61da0f3f1656273702733e59fcc49f399c6d8023dabfe7f3e72388b1d181",
+      "matches_build": true,
+      "bytes": 171441,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/Russian-travel.png",
+      "status": 200,
+      "sha256": "5980dd6d77210eeeda0a635564810fc2dc432e3a32cfcdcafdcdf8f988728235",
+      "matches_build": true,
+      "bytes": 253798,
+      "content_type": "image/png"
+    },
+    {
+      "file": "sprint-review/USMC-sprint-normal.mp4",
+      "status": 200,
+      "sha256": "01527086946f0abcb34dc345d7ce3d28d0ef793fcfda9b2e1b95697dafa7e696",
+      "matches_build": true,
+      "bytes": 645725,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/USMC-sprint-slow.mp4",
+      "status": 200,
+      "sha256": "b130045799a31c04413a6b57fbbdcbf677ff217ef1fa1828be9c165b6f6f5678",
+      "matches_build": true,
+      "bytes": 809518,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/USMC-sprint.png",
+      "status": 200,
+      "sha256": "653f7e54d7efd1449fd08ab90f76f3e8ae51a8ee94169ad259392025ed93ee77",
+      "matches_build": true,
+      "bytes": 444540,
+      "content_type": "image/png"
+    },
+    {
+      "file": "sprint-review/USMC-travel.mp4",
+      "status": 200,
+      "sha256": "5af5bfd26277b2b0755facccf1a490ba3c8c689a285fc8a2d7e2e9b7771b4305",
+      "matches_build": true,
+      "bytes": 179074,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "sprint-review/USMC-travel.png",
+      "status": 200,
+      "sha256": "48d461eb67589d5a0bd20fbeb245203060328f50c852881b3a34a74f57fcb949",
+      "matches_build": true,
+      "bytes": 254545,
+      "content_type": "image/png"
+    },
+    {
+      "file": "sprint-review/final-public-front.mp4",
+      "status": 200,
+      "sha256": "931a0390305e686d408a8d6651d843368e5f0ea5bf91ea9e9da0ed5a5a0f0ac1",
+      "matches_build": true,
+      "bytes": 1039906,
+      "content_type": "video/mp4"
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "sha256": "80efbc80f8263f058d9d9eeab567eb79504fcf00360339500917a1de07e8bac5",
+      "matches_build": true,
+      "bytes": 5259,
+      "content_type": "text/css"
+    }
+  ]
+}

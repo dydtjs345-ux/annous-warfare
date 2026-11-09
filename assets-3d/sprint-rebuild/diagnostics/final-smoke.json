@@ -1,0 +1,85 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "physical_iPhone": false,
+  "passed": true,
+  "factions": [
+    {
+      "actors": [
+        {
+          "faction": "USMC",
+          "lower": "FB_Sprint_Lower",
+          "asset": {
+            "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/USMC_SprintReview.43556447081e.glb",
+            "sha256": "43556447081e389101d9b382e379ef9a4f9da554e62b39afbf5d91ab5952473b",
+            "revision": "sprint-review-2"
+          }
+        },
+        {
+          "faction": "USMC",
+          "lower": "SR_Sprint_Lower",
+          "asset": {
+            "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/USMC_SprintReview.43556447081e.glb",
+            "sha256": "43556447081e389101d9b382e379ef9a4f9da554e62b39afbf5d91ab5952473b",
+            "revision": "sprint-review-2"
+          }
+        }
+      ],
+      "frames": 5,
+      "webgl_error": 0,
+      "true_front_camera_forward_dot": 9,
+      "front_playback": [
+        {
+          "speed": "1",
+          "frames": 13,
+          "actual_RAF": true
+        },
+        {
+          "speed": "0.5",
+          "frames": 26,
+          "actual_RAF": true
+        }
+      ]
+    },
+    {
+      "actors": [
+        {
+          "faction": "Russian",
+          "lower": "FB_Sprint_Lower",
+          "asset": {
+            "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/Russian_SprintReview.da9c7726b80f.glb",
+            "sha256": "da9c7726b80fbab6a327093082b2dfc24e77aefac3fb46d8459b83645a7c0d6c",
+            "revision": "sprint-review-2"
+          }
+        },
+        {
+          "faction": "Russian",
+          "lower": "SR_Sprint_Lower",
+          "asset": {
+            "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/Russian_SprintReview.da9c7726b80f.glb",
+            "sha256": "da9c7726b80fbab6a327093082b2dfc24e77aefac3fb46d8459b83645a7c0d6c",
+            "revision": "sprint-review-2"
+          }
+        }
+      ],
+      "frames": 9,
+      "webgl_error": 0,
+      "true_front_camera_forward_dot": 9,
+      "front_playback": [
+        {
+          "speed": "1",
+          "frames": 13,
+          "actual_RAF": true
+        },
+        {
+          "speed": "0.5",
+          "frames": 26,
+          "actual_RAF": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "report_video_loaded": true,
+  "app_matches_final_build": true,
+  "recording": "review/browser-after/final-front-public.webm"
+}

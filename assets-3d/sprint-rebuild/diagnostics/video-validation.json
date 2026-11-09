@@ -1,0 +1,50 @@
+[
+  {
+    "faction": "USMC",
+    "type": "OLD_NEW",
+    "normal": "USMC-sprint-normal.mp4",
+    "slow": "USMC-sprint-slow.mp4",
+    "real_3d_evaluations": 60,
+    "source_fps": 30,
+    "views": [
+      "30_degree_orthographic",
+      "side",
+      "front"
+    ],
+    "native_gameplay_reference_px": 120,
+    "old_profile": "full-body-1",
+    "new_profile": "sprint-review-2"
+  },
+  {
+    "faction": "USMC",
+    "type": "WORLD_TRAVEL",
+    "file": "USMC-travel.mp4",
+    "route_m": 9.12,
+    "actual_3d_samples": 144,
+    "fixed_camera": true
+  },
+  {
+    "faction": "Russian",
+    "type": "OLD_NEW",
+    "normal": "Russian-sprint-normal.mp4",
+    "slow": "Russian-sprint-slow.mp4",
+    "real_3d_evaluations": 60,
+    "source_fps": 30,
+    "views": [
+      "30_degree_orthographic",
+      "side",
+      "front"
+    ],
+    "native_gameplay_reference_px": 120,
+    "old_profile": "full-body-1",
+    "new_profile": "sprint-review-2"
+  },
+  {
+    "faction": "Russian",
+    "type": "WORLD_TRAVEL",
+    "file": "Russian-travel.mp4",
+    "route_m": 9.12,
+    "actual_3d_samples": 144,
+    "fixed_camera": true
+  }
+]
