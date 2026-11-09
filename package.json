@@ -14,12 +14,16 @@
     "audit:stability": "node scripts/audit-stability.mjs",
     "audit:cover-medic": "node scripts/audit-cover-medic.mjs",
     "audit:urban": "node scripts/audit-v025.mjs",
-    "audit:search": "node scripts/audit-v025.mjs"
+    "audit:search": "node scripts/audit-v025.mjs",
+    "build:infantry": "vite build --config vite.infantry.config.js && node tools/infantry/stage.mjs",
+    "bake:infantry": "node tools/infantry/bake.mjs",
+    "test:infantry": "node scripts/validate-infantry.mjs"
   },
   "dependencies": {
     "phaser": "^3.90.0"
   },
   "devDependencies": {
+    "three": "0.170.0",
     "vite": "^6.4.1"
   }
 }
