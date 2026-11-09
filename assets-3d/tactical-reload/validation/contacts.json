@@ -1,0 +1,209 @@
+[
+  {
+    "faction": "USMC",
+    "max_left_palm_magazine_contact_error_m": 1.7816860506720815e-06,
+    "weapon_origin_travel_m": 0.1926035631142673,
+    "weapon_raise_m": 0.16701018810272217,
+    "weapon_orientation_change_degrees": 36.33653466748155,
+    "max_foot_slide_m": 4.59284633619262e-08,
+    "magazine_mechanism": {
+      "straight_in_lateral_error_m": 1.8838574710409494e-07
+    },
+    "pouch_visibility_occlusion": [
+      {
+        "event": "old_hidden",
+        "directions": [
+          {
+            "heading_degrees": 225,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 180,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 135,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 90,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 45,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 0,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 315,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 270,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          }
+        ]
+      },
+      {
+        "event": "replacement_visible",
+        "directions": [
+          {
+            "heading_degrees": 225,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 180,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 135,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 90,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 45,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 0,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 315,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          },
+          {
+            "heading_degrees": 270,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 92
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "faction": "Russian",
+    "max_left_palm_magazine_contact_error_m": 1.9957023716797287e-06,
+    "weapon_origin_travel_m": 0.1695168768705285,
+    "weapon_raise_m": 0.1381087303161621,
+    "weapon_orientation_change_degrees": 36.33651417691404,
+    "max_foot_slide_m": 3.414284955677271e-08,
+    "magazine_mechanism": {
+      "rock_in_front_lug_error_m": 3.8886718570879057e-07,
+      "rock_in_rotation_degrees": 22.60129323864533
+    },
+    "pouch_visibility_occlusion": [
+      {
+        "event": "old_hidden",
+        "directions": [
+          {
+            "heading_degrees": 225,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 180,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 135,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 90,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 45,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 0,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 315,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 270,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          }
+        ]
+      },
+      {
+        "event": "replacement_visible",
+        "directions": [
+          {
+            "heading_degrees": 225,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 180,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 135,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 90,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 45,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 0,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 315,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          },
+          {
+            "heading_degrees": 270,
+            "potentially_visible_vertices": 0,
+            "sample_vertices": 152
+          }
+        ]
+      }
+    ]
+  }
+]

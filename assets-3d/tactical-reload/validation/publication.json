@@ -1,0 +1,12 @@
+{
+  "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+  "version_id": "appgprj_6af0d17863348191b4ea48163f305325~appgver_ff2e976ffe5c81919aaec80cc2c71e2b",
+  "version_number": 3,
+  "deployment_id": "appgdep_6af1462dc69481919758b766265e8015",
+  "source_commit": "8336c567263118e866971fda0964d363d7526195",
+  "status": "succeeded",
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site",
+  "updated_at": "2026-11-09T04:04:13.279202+00:00",
+  "preview_only": true,
+  "main_merged": false
+}

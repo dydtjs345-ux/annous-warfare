@@ -1,3 +1,4 @@
+import {prepareReloadObjectActions} from './reload-layers.js';
 import {t,clipLabel,setLanguage,translateDocument} from './i18n.js';
 import * as T from 'three';
 import {clone as cloneSkeleton} from 'three/examples/jsm/utils/SkeletonUtils.js';
@@ -5,11 +6,14 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 const $=id=>document.getElementById(id),actors=[],headings={N:225,NE:180,E:135,SE:90,S:45,SW:0,W:315,NW:270};
 const states={Idle:['Lower_Idle','Upper_LowReady',0],Walk:['Lower_Walk','Upper_LowReady',1.05],Sprint:['Lower_Sprint','Upper_Sprint',3],Aim:['Lower_AimStance','Upper_Aim',0],AimWalk:['Lower_AimWalk','Upper_Aim',.62],MovingFire:['Lower_AimWalk','Upper_Aim',.62],Fire:['Lower_AimStance','Upper_Aim',0],Raise:['Lower_AimStance','Weapon_Raise',0],Lower:['Lower_AimStance','Weapon_Lower',0],Reload:['Lower_AimStance','Reload',0],Start:['Start_Walk','Upper_LowReady',0],Stop:['Stop_Walk','Upper_LowReady',0],Accelerate:['Walk_To_Sprint','Upper_Sprint',0],Decelerate:['Sprint_To_Walk','Upper_LowReady',0],SprintStop:['Sprint_Stop','Upper_LowReady',0],TurnLeft:['Turn_Left','Upper_Turn_Left',0],TurnRight:['Turn_Right','Upper_Turn_Right',0]};
+const reloadData=new Map();
+const isReloadCompare=()=>$('comparison').value==='reload';
 const isSquad=()=>['squad','mixed'].includes($('comparison').value);
-const oneShots=new Set(['Weapon_Raise','Weapon_Lower','Reload','Start_Walk','Stop_Walk','Walk_To_Sprint','Sprint_To_Walk','Sprint_Stop','Turn_Left','Turn_Right','Upper_Turn_Left','Upper_Turn_Right']);
+const oneShots=new Set(['Reload_Tactical','Reload_Tactical_Lower','Weapon_Raise','Weapon_Lower','Reload','Start_Walk','Stop_Walk','Walk_To_Sprint','Sprint_To_Walk','Sprint_Stop','Turn_Left','Turn_Right','Upper_Turn_Left','Upper_Turn_Right']);
 let manual=false,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,firing=true,state='MovingFire',clock=0,ready=false,architecture=null,needsRender=true,generation=0,requestController=null;
 
-function resolveMotion(value){
+function resolveMotion(value,version='improved'){
+ if(value==='Reload'&&version==='improved')return ['Reload_Tactical_Lower','Reload_Tactical',0];
  if(states[value])return states[value];
  const name=value.slice(5),info=architecture.factions[$('faction').value].clips[name];
  if(!info)throw new Error('Unknown animation clip: '+name);
@@ -17,10 +21,10 @@ function resolveMotion(value){
  if(name==='Recoil_Shot')return ['Lower_AimStance','Upper_Aim',0];
  return [name==='Upper_Sprint'?'Lower_Sprint':name==='Upper_LowReady'||name.startsWith('Upper_Turn')?'Lower_Idle':'Lower_AimStance',name,name==='Upper_Sprint'?3:0];
 }
-class Actor{
- constructor(faction,gltf,manifest,host=null){
-  this.host=host;
-  this.manifest=manifest;this.faction=faction;this.model=gltf.scene;this.clips=new Map(gltf.animations.map(c=>[c.name,c]));this.mixer=new T.AnimationMixer(this.model);const reload=this.clips.get('Reload');if(reload){const objectTracks=reload.tracks.filter(t=>/^(Magazine|SpareMagazine)\./.test(t.name));this.clips.set('Reload',new T.AnimationClip('Reload',reload.duration,reload.tracks.filter(t=>!/^(Magazine|SpareMagazine)\./.test(t.name))));const objectClip=new T.AnimationClip('Reload_Objects',reload.duration,objectTracks);this.reloadObjects=this.mixer.clipAction(objectClip);this.reloadObjects.setLoop(T.LoopOnce,1);this.reloadObjects.clampWhenFinished=true;}this.actions=new Map();this.nextShot=0;this.distance=0;this.shotCount=0;
+export class Actor{
+ constructor(faction,gltf,manifest,host=null,version='improved'){
+  this.host=host;this.reloadVersion=version;
+  this.manifest=manifest;this.faction=faction;this.model=gltf.scene;this.clips=new Map(gltf.animations.map(c=>[c.name,c]));this.mixer=new T.AnimationMixer(this.model);this.reloadObjectActions=prepareReloadObjectActions(this.clips,this.mixer);this.actions=new Map();this.nextShot=0;this.distance=0;this.shotCount=0;
   if(host){this.panel=host.panel;this.viewport=host.viewport;this.readout={textContent:''};this.scene=host.scene;this.ground=host.ground;this.camera=host.camera;this.renderer=host.renderer;this.controls=host.controls;this.assembly=new T.Group();this.assembly.add(this.model);this.scene.add(this.assembly);this.model.traverse(o=>{if(o.isMesh)o.castShadow=true;});}
   else{
   const panel=document.createElement('section');panel.className='panel';panel.dataset.faction=faction;panel.innerHTML=`<h2>${t('{faction} · {weapon}',{faction:t(faction),weapon:faction==='Russian'?'AK-74M':'M16A4'})}</h2><div class="viewport"></div><div class="readout"></div>`;$('panels').append(panel);this.panel=panel;this.viewport=panel.querySelector('.viewport');this.readout=panel.querySelector('.readout');
@@ -38,8 +42,8 @@ class Actor{
  }
  action(name){if(!this.clips.has(name))return null;if(!this.actions.has(name)){const a=this.mixer.clipAction(this.clips.get(name));if(oneShots.has(name)){a.setLoop(T.LoopOnce,1);a.clampWhenFinished=true;}this.actions.set(name,a);}return this.actions.get(name);}
  changeLayer(which,name,immediate=false){const action=this.action(name);if(!action){this.missing=name;return;}const old=this[which];if(old===action)return;const phase=which==='lower'&&old&&!oneShots.has(name)&&!oneShots.has(old.getClip().name)?old.time/old.getClip().duration:0;action.reset().setEffectiveTimeScale(1).setEffectiveWeight(1).play();if(which==='lower')action.time=phase*action.getClip().duration;if(old){if(immediate)old.stop();else{old.fadeOut(.18);action.fadeIn(.18);}}this[which]=action;}
- setState(next,immediate=false){const [lower,upper,speed]=resolveMotion(next);this.state=next;this.speed=speed;this.missing=null;if(upper==='Reload')this.reloadObjects?.stop().reset().setEffectiveWeight(1).play();else if(this.reloadObjects?.isRunning())this.reloadObjects.stop();this.changeLayer('lower',lower,immediate);let chosen=upper;this.pendingUpper=null;if(!immediate&&!next.startsWith('clip:')&&upper==='Upper_Aim'&&['Upper_LowReady','Upper_Sprint'].includes(this.upper?.getClip().name)){chosen='Weapon_Raise';this.pendingUpper=upper;}else if(!immediate&&!next.startsWith('clip:')&&['Upper_LowReady','Upper_Sprint'].includes(upper)&&this.upper?.getClip().name==='Upper_Aim'){chosen='Weapon_Lower';this.pendingUpper=upper;}this.changeLayer('upper',chosen,immediate);this.mixer.update(0);if(next==='clip:Recoil_Shot')this.triggerShot();}
- finishTransition(name){if(name==='Reload')this.reloadObjects?.stop();const target={Weapon_Raise:['upper','Upper_Aim'],Weapon_Lower:['upper','Upper_LowReady'],Reload:['upper','Upper_Aim'],Start_Walk:['lower','Lower_Walk'],Stop_Walk:['lower','Lower_Idle'],Walk_To_Sprint:['lower','Lower_Sprint'],Sprint_To_Walk:['lower','Lower_Walk'],Sprint_Stop:['lower','Lower_Idle'],Turn_Left:['lower','Lower_Idle'],Turn_Right:['lower','Lower_Idle']}[name];if(target){if((name==='Weapon_Raise'||name==='Weapon_Lower')&&this.pendingUpper){target[1]=this.pendingUpper;this.pendingUpper=null;}if(name==='Turn_Left'||name==='Turn_Right'){this.assembly.rotation.y+=(name==='Turn_Left'?1:-1)*Math.PI/4;this.changeLayer(...target,true);}else this.changeLayer(...target);const speeds={Lower_Walk:1.05,Lower_Sprint:3,Lower_AimWalk:.62};if(target[0]==='lower')this.speed=speeds[target[1]]??0;if(target[0]==='lower')this.lower.time={Start_Walk:0,Stop_Walk:0,Walk_To_Sprint:0,Sprint_To_Walk:0,Sprint_Stop:0}[name]??0;}if(name==='Upper_Turn_Left'||name==='Upper_Turn_Right')this.changeLayer('upper','Upper_LowReady',true);}
+ setState(next,immediate=false){const [lower,upper,speed]=resolveMotion(next,this.reloadVersion);this.state=next;this.speed=speed;this.missing=null;if(this.reloadObjects)this.reloadObjects.stop();this.reloadObjects=this.reloadObjectActions.get(upper);if(this.reloadObjects)this.reloadObjects.reset().setEffectiveWeight(1).play();this.changeLayer('lower',lower,immediate);let chosen=upper;this.pendingUpper=null;if(!immediate&&!next.startsWith('clip:')&&upper==='Upper_Aim'&&['Upper_LowReady','Upper_Sprint'].includes(this.upper?.getClip().name)){chosen='Weapon_Raise';this.pendingUpper=upper;}else if(!immediate&&!next.startsWith('clip:')&&['Upper_LowReady','Upper_Sprint'].includes(upper)&&this.upper?.getClip().name==='Upper_Aim'){chosen='Weapon_Lower';this.pendingUpper=upper;}this.changeLayer('upper',chosen,immediate);this.mixer.update(0);if(next==='clip:Recoil_Shot')this.triggerShot();}
+ finishTransition(name){if(name==='Reload'||name==='Reload_Tactical')this.reloadObjects?.stop();const target={Reload_Tactical:['upper','Upper_Aim'],Reload_Tactical_Lower:['lower','Lower_AimStance'],Weapon_Raise:['upper','Upper_Aim'],Weapon_Lower:['upper','Upper_LowReady'],Reload:['upper','Upper_Aim'],Start_Walk:['lower','Lower_Walk'],Stop_Walk:['lower','Lower_Idle'],Walk_To_Sprint:['lower','Lower_Sprint'],Sprint_To_Walk:['lower','Lower_Walk'],Sprint_Stop:['lower','Lower_Idle'],Turn_Left:['lower','Lower_Idle'],Turn_Right:['lower','Lower_Idle']}[name];if(target){if((name==='Weapon_Raise'||name==='Weapon_Lower')&&this.pendingUpper){target[1]=this.pendingUpper;this.pendingUpper=null;}if(name==='Turn_Left'||name==='Turn_Right'){this.assembly.rotation.y+=(name==='Turn_Left'?1:-1)*Math.PI/4;this.changeLayer(...target,true);}else this.changeLayer(...target);const speeds={Lower_Walk:1.05,Lower_Sprint:3,Lower_AimWalk:.62};if(target[0]==='lower')this.speed=speeds[target[1]]??0;if(target[0]==='lower')this.lower.time={Start_Walk:0,Stop_Walk:0,Walk_To_Sprint:0,Sprint_To_Walk:0,Sprint_Stop:0}[name]??0;}if(name==='Upper_Turn_Left'||name==='Upper_Turn_Right')this.changeLayer('upper','Upper_LowReady',true);}
  calibrate(){
   this.referenceSpans=this.manifest.reference_spans;
   if(!this.referenceSpans)throw new Error('Camera calibration is missing');
@@ -69,7 +73,7 @@ class Actor{
   this.refreshReadout();
  }
  refreshReadout(){this.readout.textContent=this.missing?t('Unavailable: {clip}',{clip:clipLabel(this.missing)}):t('{lower} + {upper} · gait {time}s · shots {shots}',{lower:clipLabel(this.lower?.getClip().name||''),upper:clipLabel(this.upper?.getClip().name||''),time:this.lower?.time.toFixed(2)??'0',shots:this.shotCount});}
- refreshLabels(){if(this.host)return;this.panel.querySelector('h2').textContent=this.squadPositions?($('comparison').value==='mixed'?t('Squad preview · 3 USMC + 3 Russian'):t('Squad preview · 6 {faction}',{faction:t(this.faction)})):t('{faction} · {weapon}',{faction:t(this.faction),weapon:this.faction==='Russian'?'AK-74M':'M16A4'});this.renderer.domElement.setAttribute('aria-label',this.panel.querySelector('h2').textContent);this.refreshReadout();}
+ refreshLabels(){if(this.host)return;this.panel.querySelector('h2').textContent=this.squadPositions?($('comparison').value==='mixed'?t('Squad preview · 3 USMC + 3 Russian'):t('Squad preview · 6 {faction}',{faction:t(this.faction)})):t('{faction} · {weapon}',{faction:t(this.faction),weapon:this.faction==='Russian'?'AK-74M':'M16A4'});if(isReloadCompare())this.panel.querySelector('h2').textContent=t(this.reloadVersion==='original'?'Original reload · {faction}':'Improved reload · {faction}',{faction:t(this.faction)});this.renderer.domElement.setAttribute('aria-label',this.panel.querySelector('h2').textContent);this.refreshReadout();}
  render(){if(this.host||this.panel.hidden)return;this.renderer.render(this.scene,this.camera);}
 }
 
@@ -113,19 +117,20 @@ async function loadFaction(){
  const ticket=++generation;requestController?.abort();requestController=new AbortController();ready=false;for(const actor of actors)actor.dispose();actors.length=0;
  $('retry').hidden=true;$('progress').hidden=false;$('progress').removeAttribute('value');setStatus('Loading {faction}…',{factionId:$('faction').value});
  try{
-  const factions=isSquad()?Array.from({length:6},(_,i)=>$('comparison').value==='mixed'?(i%2?'Russian':'USMC'):$('faction').value):$('comparison').value==='both'?['USMC','Russian']:[$('faction').value];
+  const factions=isReloadCompare()?[$('faction').value,$('faction').value]:isSquad()?Array.from({length:6},(_,i)=>$('comparison').value==='mixed'?(i%2?'Russian':'USMC'):$('faction').value):$('comparison').value==='both'?['USMC','Russian']:[$('faction').value];
   const sources=new Map();
   for(const faction of factions){const info=architecture.factions[faction],url=new URL('./'+info.model,document.baseURI);
    if(!sources.has(faction)){const buffer=await fetchModel(url.href,requestController.signal,faction);if(ticket!==generation)return;setStatus('Preparing animated 3D model…');await new Promise(requestAnimationFrame);sources.set(faction,await new GLTFLoader().parseAsync(buffer,new URL('.',url).href));if(ticket!==generation)return;}
-   const source=sources.get(faction),actor=new Actor(faction,{scene:cloneSkeleton(source.scene),animations:source.animations},info,isSquad()?actors[0]:null);actor.calibrate();actors.push(actor);
+   const source=sources.get(faction),extra=reloadData.get(faction),version=isReloadCompare()?(actors.length===0?'original':'improved'):$('reload-version').value;const actor=new Actor(faction,{scene:cloneSkeleton(source.scene),animations:[...source.animations,...extra.animationClips]},{...info,clips:{...info.clips,...extra.actions}},isSquad()?actors[0]:null,version);actor.calibrate();actor.refreshLabels();actors.push(actor);
   }
   if(isSquad())setupSquad();
-  restart();ready=true;needsRender=true;last=performance.now();setStatus('Ready · 21 animation clips · {count} soldiers',{count:actors.length});$('progress').hidden=true;
+  restart();ready=true;needsRender=true;last=performance.now();setStatus('Ready · original clips + improved reload · {count} soldiers',{count:actors.length});$('progress').hidden=true;
  }catch(error){if(error.name==='AbortError'||ticket!==generation)return;console.error(error);showError('Could not load the 3D preview. Check your connection and tap Retry loading. {detail}',{detail:error.status?'HTTP '+error.status:''});}
 }
 $('comparison').onchange=()=>{
- const squad=isSquad();$('faction').disabled=['both','mixed'].includes($('comparison').value);$('view').disabled=squad;
- $('panels').classList.toggle('comparison',$('comparison').value==='both');$('panels').classList.toggle('squad',squad);
+ const squad=isSquad();$('animation').disabled=isReloadCompare();$('reload-version').disabled=isReloadCompare();if(isReloadCompare()){state='Reload';$('animation').value='Reload';firing=false;updateButtons();}
+ $('faction').disabled=['both','mixed'].includes($('comparison').value);$('view').disabled=squad;
+ $('panels').classList.toggle('comparison',($('comparison').value==='both'||isReloadCompare()));$('panels').classList.toggle('squad',squad);
  if(squad){$('view').value='gameplay';$('inspection-tools').hidden=true;updateViewTip();}
  else updateViewTip();
  loadFaction();
@@ -138,11 +143,12 @@ $('restart').onclick=restart;$('fire').onclick=()=>{firing=!firing;updateButtons
 $('shot').onclick=()=>{if(!['MovingFire','AimWalk','Aim','Fire'].includes(state))setState('Aim');firing=false;updateButtons();for(const actor of actors){if(actor.upper?.getClip().name==='Upper_Aim')actor.triggerShot();else actor.pendingSingleShot=true;}needsRender=true;};
 $('direction').onchange=()=>{actors.forEach(a=>a.setDirection());needsRender=true;};$('height').onchange=()=>{if(isSquad())sizeSquad();actors.forEach(a=>a.resize());needsRender=true;};$('retry').onclick=loadFaction;
 addEventListener('resize',()=>{actors.forEach(a=>a.resize());needsRender=true;});document.addEventListener('visibilitychange',()=>{last=performance.now();needsRender=true;});
-let last=performance.now();function tick(now){const dt=playing?Math.min((now-last)/1000,.1)*Number($('speed').value):0;last=now;if(ready&&!manual&&!document.hidden&&(playing||needsRender)){clock+=dt;for(const actor of actors)actor.update(dt);for(const actor of actors)actor.render();needsRender=false;}requestAnimationFrame(tick);}requestAnimationFrame(tick);
+let last=performance.now();function tick(now){const dt=playing?Math.min((now-last)/1000,.1)*Number($('speed').value):0;last=now;if(ready&&!manual&&!document.hidden&&(playing||needsRender)){clock+=dt;for(const actor of actors)actor.update(dt);for(const actor of actors)actor.render();needsRender=false;if(playing&&state==='Reload'&&$('reload-repeat').checked&&actors.every(a=>a.upper?.getClip().name==='Upper_Aim')&&clock>Math.max(...actors.map(a=>a.clips.get(a.reloadVersion==='original'?'Reload':'Reload_Tactical').duration))+.6)restart();}requestAnimationFrame(tick);}requestAnimationFrame(tick);
 async function init(){
  try{
   const response=await fetch('./architecture.json');if(!response.ok)throw Object.assign(new Error('Animation manifest returned HTTP '+response.status),{status:response.status});architecture=await response.json();
   for(const name of Object.keys(architecture.factions.USMC.clips))$('clip-options').append(new Option(clipLabel(name),'clip:'+name));
+  for(const faction of ['USMC','Russian']){const response=await fetch('./reload/'+faction+'-reload.json');if(!response.ok)throw Object.assign(new Error('Reload keyframes unavailable'),{status:response.status});const data=await response.json();data.animationClips=data.clips.map(c=>T.AnimationClip.parse(c));reloadData.set(faction,data);}
   applyLanguage();await loadFaction();
   window.animationPreview={actors,setState,restart,loadFaction,get ready(){return ready;},get time(){return clock;},get firing(){return firing;},pause(){playing=false;manual=true;updateButtons();},step(dt){clock+=dt;for(const actor of actors)actor.update(dt);for(const actor of actors)actor.render();},snapshot(){return actors.map(a=>({faction:a.faction,lower:a.lower?.getClip().name,upper:a.upper?.getClip().name,gaitTime:a.lower?.time,shots:a.shotCount,distance:a.distance,clips:[...a.clips.keys()],webgl:a.renderer.getContext().getParameter(a.renderer.getContext().VERSION)}));}};
  }catch(error){console.error(error);showError('Unable to initialize preview. Refresh the page and check your connection. {detail}',{detail:error.status?'HTTP '+error.status:''});}
@@ -150,6 +156,11 @@ async function init(){
 let statusKey='Loading animation data…',statusParams={};
 function setStatus(key,params={}){statusKey=key;statusParams=params;$('status').textContent=t(key,{...params,faction:params.factionId?t(params.factionId):params.faction});}
 function updateViewTip(){$('view-tip').textContent=t(isSquad()?'Fixed 30° squad view · in-place gait review · road and cover provide scale. Scroll the page to see the whole scene.':$('view').value==='free'?'Drag to rotate. Pinch or scroll to zoom.':'Orthographic gameplay camera · fixed gameplay framing. Side view follows the selected facing.');}
-function applyLanguage(){setLanguage($('language').value);translateDocument();for(const option of $('clip-options').options||$('clip-options').children)option.textContent=clipLabel(option.value.slice(5));updateButtons();setStatus(statusKey,statusParams);updateViewTip();for(const a of actors)a.refreshLabels();needsRender=true;}
+function applyLanguage(){setLanguage($('language').value);translateDocument();for(const option of $('clip-options').options||$('clip-options').children)option.textContent=clipLabel(option.value.slice(5));updateButtons();setStatus(statusKey,statusParams);updateViewTip();for(const a of actors)a.refreshLabels();updateRecordingStatus();needsRender=true;}
+let recordingNameKey='',recordingError=false;
+function updateRecordingStatus(){$('reload-video-status').textContent=recordingError?t('Tap the video play button if playback does not start.'):recordingNameKey?t('Selected recording: {name}',{name:t(recordingNameKey)}):'';}
+for(const button of document.querySelectorAll('[data-reload-video]'))button.onclick=()=>{recordingNameKey=button.getAttribute('data-i18n');recordingError=false;const video=$('reload-video');video.src=new URL('./reload/'+button.getAttribute('data-reload-video'),document.baseURI).href;video.load();video.play().catch(()=>{recordingError=true;updateRecordingStatus();});updateRecordingStatus();};
 $('language').onchange=applyLanguage;
+$('reload-version').onchange=()=>{for(const a of actors)a.reloadVersion=$('reload-version').value;setState('Reload',true);restart();};
+for(const [id,speed]of [['reload-normal','1'],['reload-slow','0.5']])$(id).onclick=()=>{$('speed').value=speed;setState('Reload',true);restart();manual=false;playing=true;updateButtons();};
 applyLanguage();init();

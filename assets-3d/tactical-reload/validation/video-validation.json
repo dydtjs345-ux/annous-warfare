@@ -1,0 +1,106 @@
+[
+  {
+    "file": "review/USMC-normal.mp4",
+    "source_3d_pose_samples": 247,
+    "unique_frames": 223,
+    "source_pose_fps": 60,
+    "playback_multiplier": 1,
+    "native_character_reference_px": 120,
+    "camera_elevation_degrees": 30,
+    "render_engine": "Blender Workbench textured studio lighting",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 328,
+          "r_frame_rate": "30/1",
+          "nb_frames": "123"
+        }
+      ],
+      "format": {
+        "duration": "4.100000"
+      }
+    }
+  },
+  {
+    "file": "review/USMC-slow.mp4",
+    "source_3d_pose_samples": 247,
+    "unique_frames": 223,
+    "source_pose_fps": 60,
+    "playback_multiplier": 0.5,
+    "native_character_reference_px": 120,
+    "camera_elevation_degrees": 30,
+    "render_engine": "Blender Workbench textured studio lighting",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 328,
+          "r_frame_rate": "30/1",
+          "nb_frames": "246"
+        }
+      ],
+      "format": {
+        "duration": "8.200000"
+      }
+    }
+  },
+  {
+    "file": "review/Russian-normal.mp4",
+    "source_3d_pose_samples": 271,
+    "unique_frames": 247,
+    "source_pose_fps": 60,
+    "playback_multiplier": 1,
+    "native_character_reference_px": 120,
+    "camera_elevation_degrees": 30,
+    "render_engine": "Blender Workbench textured studio lighting",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 328,
+          "r_frame_rate": "30/1",
+          "nb_frames": "135"
+        }
+      ],
+      "format": {
+        "duration": "4.500000"
+      }
+    }
+  },
+  {
+    "file": "review/Russian-slow.mp4",
+    "source_3d_pose_samples": 271,
+    "unique_frames": 247,
+    "source_pose_fps": 60,
+    "playback_multiplier": 0.5,
+    "native_character_reference_px": 120,
+    "camera_elevation_degrees": 30,
+    "render_engine": "Blender Workbench textured studio lighting",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 560,
+          "height": 328,
+          "r_frame_rate": "30/1",
+          "nb_frames": "270"
+        }
+      ],
+      "format": {
+        "duration": "9.000000"
+      }
+    }
+  }
+]

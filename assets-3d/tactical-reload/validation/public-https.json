@@ -1,0 +1,172 @@
+{
+  "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "anonymous_https": true,
+  "iphone_user_agent": true,
+  "all_assets_match_bundle": true,
+  "browser_device_tested": false,
+  "limitation": "Managed Sites browser tool and physical iPhone unavailable; HTTPS checks do not verify WebGL interaction or device layout.",
+  "assets": [
+    {
+      "file": "LICENSE-three.txt",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/LICENSE-three.txt",
+      "content_type": "text/plain",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "matches_bundle": true
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/app.js",
+      "content_type": "text/javascript",
+      "bytes": 635757,
+      "sha256": "4f97547729ec7b8bd76848257805818bd37708d76153c8a9cb409373970e3a7a",
+      "matches_bundle": true
+    },
+    {
+      "file": "architecture.json",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/architecture.json",
+      "content_type": "application/json",
+      "bytes": 26683,
+      "sha256": "0ca9139921e7a7a765cdb8b52c43e8c4b049d838baf3ff3c275a7f60d1a4cab6",
+      "matches_bundle": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+      "content_type": "text/html",
+      "bytes": 12805,
+      "sha256": "19ee98566c07dadf45b6e219926bd04bc68372599fb9ebfffc6bcc25a6fe828c",
+      "matches_bundle": true
+    },
+    {
+      "file": "models/Russian_Animated.glb",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/Russian_Animated.glb",
+      "content_type": "application/octet-stream",
+      "bytes": 10652152,
+      "sha256": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0",
+      "matches_bundle": true
+    },
+    {
+      "file": "models/USMC_Animated.glb",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/models/USMC_Animated.glb",
+      "content_type": "application/octet-stream",
+      "bytes": 10518288,
+      "sha256": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
+      "matches_bundle": true
+    },
+    {
+      "file": "moving-fire.mp4",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/moving-fire.mp4",
+      "content_type": "video/mp4",
+      "bytes": 1771162,
+      "sha256": "062a7fbecba779c2e119ab3d7d97820bfd9cc02588a24f929830dbe797e3c0c8",
+      "matches_bundle": true
+    },
+    {
+      "file": "poster.png",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/poster.png",
+      "content_type": "image/png",
+      "bytes": 234141,
+      "sha256": "99ef4ae4bac4466c61328a765bae1cf51a62eca34719490deea0109e7b772ee1",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/Russian-normal.mp4",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/Russian-normal.mp4",
+      "content_type": "video/mp4",
+      "bytes": 69767,
+      "sha256": "3d4bd8f3c1d5e6170e90897e1a6148e6fe13bb967caa56047fff401ae0115703",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/Russian-poster.png",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/Russian-poster.png",
+      "content_type": "image/png",
+      "bytes": 95745,
+      "sha256": "fcf0be59738df4248a19426b149f13ed92cfde5adb3f00cca3fa6003ae4febbc",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/Russian-reload.json",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/Russian-reload.json",
+      "content_type": "application/json",
+      "bytes": 583377,
+      "sha256": "1f35e77fdd59c637e5e9d48fa511ad9836c0862ec6697e0081551d4fcde96476",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/Russian-slow.mp4",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/Russian-slow.mp4",
+      "content_type": "video/mp4",
+      "bytes": 125011,
+      "sha256": "3d109ff2925c78d8f247f40f68b25c43cf96a4e467186907cf227f03ae00331f",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/USMC-normal.mp4",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/USMC-normal.mp4",
+      "content_type": "video/mp4",
+      "bytes": 71601,
+      "sha256": "ada94f7dc6b8aac124f6bbf10219f93f33a9427f1771b1a01bd1de5e5971c103",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/USMC-poster.png",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/USMC-poster.png",
+      "content_type": "image/png",
+      "bytes": 98447,
+      "sha256": "579a56517cf8d5b2bceda5ac649a73de79c591a5b71e3f56bd808eccdf9cbda5",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/USMC-reload.json",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/USMC-reload.json",
+      "content_type": "application/json",
+      "bytes": 531650,
+      "sha256": "44c24a006300b6134d1c9e5ec36c641fc8e58338ef745ed855400aed8988a2bf",
+      "matches_bundle": true
+    },
+    {
+      "file": "reload/USMC-slow.mp4",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/reload/USMC-slow.mp4",
+      "content_type": "video/mp4",
+      "bytes": 105755,
+      "sha256": "543f563f8c255cf095b8a95347434c16b62fca5311942bb1226d56a6cb2416df",
+      "matches_bundle": true
+    },
+    {
+      "file": "source.json",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/source.json",
+      "content_type": "application/json",
+      "bytes": 720,
+      "sha256": "001d54b72cfff60f938719c695f16a9a86985acf8dfcc3d7da9b7a40f06105e7",
+      "matches_bundle": true
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "url": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/style.css",
+      "content_type": "text/css",
+      "bytes": 4183,
+      "sha256": "1bd86a88b7eb77b6db80e3845d9f8a837bb5ca1a7bd3328a85badb3aa9b1956e",
+      "matches_bundle": true
+    }
+  ]
+}

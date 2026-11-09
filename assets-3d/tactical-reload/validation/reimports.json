@@ -1,0 +1,118 @@
+[
+  {
+    "faction": "USMC",
+    "bone_count": 163,
+    "hierarchy_matches_source": true,
+    "source_nla_matches_authored_trajectory": true,
+    "isolated_glb_reimport_passed": true,
+    "samples": [
+      {
+        "time": 0.0,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      },
+      {
+        "time": 0.5333333333333333,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.100448587653546e-06
+      },
+      {
+        "time": 0.5666666666666667,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.108040367145725e-06
+      },
+      {
+        "time": 0.54,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.0910073028570127e-06
+      },
+      {
+        "time": 1.05,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.4243713006709205e-06
+      },
+      {
+        "time": 1.48,
+        "max_joint_weapon_magazine_and_bounds_error_m": 1.9079051623773937e-06
+      },
+      {
+        "time": 1.95,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.0843556840786484e-06
+      },
+      {
+        "time": 2.42,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.1145510367837336e-06
+      },
+      {
+        "time": 2.65,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.0260785084493357e-06
+      },
+      {
+        "time": 3.08,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.4705837659921966e-06
+      },
+      {
+        "time": 3.45,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      },
+      {
+        "time": 3.7,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      }
+    ],
+    "max_error_m": 2.4705837659921966e-06
+  },
+  {
+    "faction": "Russian",
+    "bone_count": 163,
+    "hierarchy_matches_source": true,
+    "source_nla_matches_authored_trajectory": true,
+    "isolated_glb_reimport_passed": true,
+    "samples": [
+      {
+        "time": 0.0,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      },
+      {
+        "time": 0.590990990990991,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.57222123339913e-06
+      },
+      {
+        "time": 0.6279279279279278,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.5839232236060665e-06
+      },
+      {
+        "time": 0.5983783783783784,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.7465067483101447e-06
+      },
+      {
+        "time": 1.1635135135135133,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.042092046852227e-06
+      },
+      {
+        "time": 1.64,
+        "max_joint_weapon_magazine_and_bounds_error_m": 1.9902152051330977e-06
+      },
+      {
+        "time": 2.1608108108108106,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.0065322716315457e-06
+      },
+      {
+        "time": 2.681621621621621,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.223221290297301e-06
+      },
+      {
+        "time": 2.936486486486486,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.334125518816801e-06
+      },
+      {
+        "time": 3.4129729729729723,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.034104020981482e-06
+      },
+      {
+        "time": 3.822972972972973,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      },
+      {
+        "time": 4.1,
+        "max_joint_weapon_magazine_and_bounds_error_m": 2.2248818751097565e-06
+      }
+    ],
+    "max_error_m": 2.7465067483101447e-06
+  }
+]

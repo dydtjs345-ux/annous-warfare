@@ -1,0 +1,14 @@
+[
+  {
+    "faction": "USMC",
+    "packed_file_images": 8,
+    "standalone_source": true,
+    "bytes": 40584684
+  },
+  {
+    "faction": "Russian",
+    "packed_file_images": 8,
+    "standalone_source": true,
+    "bytes": 41468920
+  }
+]

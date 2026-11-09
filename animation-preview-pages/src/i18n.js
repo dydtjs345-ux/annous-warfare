@@ -200,6 +200,12 @@ export const clipLabels={
     "Reload · weapon specific"
   ]
 };
+Object.assign(korean,{
+ 'Reload comparison recordings':'재장전 비교 영상','The left soldier is the original reload; the right soldier is the improved reload. These are continuous 3D recordings.':'왼쪽은 원본, 오른쪽은 개선 재장전입니다. 실제 3D 동작을 연속으로 녹화했습니다.','USMC · normal speed':'미 해병대 · 보통 속도','USMC · slow motion':'미 해병대 · 느리게','Russian · normal speed':'러시아군 · 보통 속도','Russian · slow motion':'러시아군 · 느리게','Reload comparison video':'재장전 비교 영상','Selected recording: {name}':'선택한 영상: {name}','Tap the video play button if playback does not start.':'영상이 시작되지 않으면 영상 안의 재생 버튼을 눌러 주세요.',
+ 'Original / improved reload':'재장전 원본 / 개선 비교','Reload version':'재장전 동작','Improved tactical reload':'개선 전술 재장전','Original reload':'원본 재장전','Original reload · {faction}':'원본 재장전 · {faction}','Improved reload · {faction}':'개선 재장전 · {faction}','Reload · normal speed':'재장전 · 보통 속도','Reload · slow motion':'재장전 · 느리게','Repeat reload':'재장전 반복','Ready · original clips + improved reload · {count} soldiers':'준비 완료 · 원본 동작 + 개선 재장전 · 병사 {count}명',
+ 'Choose Original / improved reload to compare the same faction side by side. Switch faction for M16A4 or AK-74M, then use normal speed, slow motion and character size controls.':'재장전 원본 / 개선 비교를 선택하면 같은 진영의 원본과 개선본을 동시에 볼 수 있습니다. 진영에서 M16A4와 AK-74M을 바꾸고, 보통 속도·느리게 버튼과 병사 크기를 사용해 확인하세요.'
+});
+clipLabels.Reload_Tactical=['개선 전술 재장전 · 상체','Improved tactical reload · upper body'];clipLabels.Reload_Tactical_Lower=['개선 재장전 체중 이동 · 하체','Reload weight shift · lower body'];
 export let language='ko';
 export function setLanguage(value){language=value==='en'?'en':'ko';document.documentElement.lang=language;}
 export function t(key,params={}){const value=language==='ko'?(korean[key]??key):key;return value.replace(/\{(\w+)\}/g,(_,name)=>String(params[name]??''));}

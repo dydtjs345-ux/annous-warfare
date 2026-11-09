@@ -1,0 +1,46 @@
+{
+  "renderer_tested": false,
+  "actual_actor_methods": true,
+  "results": [
+    {
+      "faction": "USMC",
+      "version": "original",
+      "duration": 3.4000000953674316,
+      "returned_to_shouldered_stance": true,
+      "canonical_magazine_restore_passed": true,
+      "moving_fire_gait_phase_preserved": true,
+      "other_states_available": 16,
+      "weapon_raise_sample_m": -0.13744456298839358
+    },
+    {
+      "faction": "USMC",
+      "version": "improved",
+      "duration": 3.700000047683716,
+      "returned_to_shouldered_stance": true,
+      "canonical_magazine_restore_passed": true,
+      "moving_fire_gait_phase_preserved": true,
+      "other_states_available": 16,
+      "weapon_raise_sample_m": 0.16197581828166618
+    },
+    {
+      "faction": "Russian",
+      "version": "original",
+      "duration": 3.799999952316284,
+      "returned_to_shouldered_stance": true,
+      "canonical_magazine_restore_passed": true,
+      "moving_fire_gait_phase_preserved": true,
+      "other_states_available": 16,
+      "weapon_raise_sample_m": -0.16065388640482547
+    },
+    {
+      "faction": "Russian",
+      "version": "improved",
+      "duration": 4.099999904632568,
+      "returned_to_shouldered_stance": true,
+      "canonical_magazine_restore_passed": true,
+      "moving_fire_gait_phase_preserved": true,
+      "other_states_available": 16,
+      "weapon_raise_sample_m": 0.13179246172044068
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "base_commit": "3da1cd575a06064b78963f85e54f6ee9698c81ec",
+  "original_infantry_animation_directory_unchanged": true,
+  "live_game_or_ai_changes": false,
+  "main_merged": false,
+  "factions": {
+    "USMC": {
+      "base_glb_sha256": "137fbabb13432b913a937e349393cbbc2c34de202558b83cf89ee952a622b094",
+      "original_actions_unchanged": {
+        "Lower_AimStance": "53eb12fc9a827ccd2ee23b0a4988d1f16eb5df760c147767b7874c66cba3387f",
+        "Lower_AimWalk": "4bb476b000c9a7d49788e5070011135ed058decdb524aa99e77e67165777b09d",
+        "Lower_Idle": "4773214e81d99d63ffd3928b59178ffdc23f4c3705c98060c998e7efc43028fe",
+        "Lower_Sprint": "c063f7db2e43609adb2ed987c17e9e45802f945cabe511f8551e1cad4284bf0a",
+        "Lower_Walk": "1879c5c040d59699f7e10767f9fbc463b8d1e5a0fa8654ec4aad9a6bf0303ff6",
+        "Recoil_Additive": "c0b5193fc741d52926314a69e8ff997532704fc7e5cd6fd91a7395f727190cc7",
+        "Recoil_Shot": "a1b14230e3ab28b5eaa540bbbd5a87beccae57755f8e5a8689cf28f31dd5682c",
+        "Reload": "a01a1c525396bae2fa3160ae63a779e0c67a4ecfe05d7aece70a29141b7c4166",
+        "Reload_Magazine": "8c4f2df84084829dec678355e8b3e7a9e6035ede2f1b124cf4b47d384a8ecb78",
+        "Reload_SpareMagazine": "ac47f0eafbfe8867129a3796c07a69b18ab33ccf4d6495a069b49648f686fab3",
+        "Sprint_Stop": "ca6906b1a4d0f62ac83578a3a6fa75af033009f754c41cf16b57d9ac300eb5d2",
+        "Sprint_To_Walk": "d9ae4c20a6aaff6d910034ca798204d56fe35083072ef6da92754587d350ac05",
+        "Start_Walk": "db38394428ff3a42e95bbf48b18c8883673e7a058f617eeca74537f77e6a7b59",
+        "Stop_Walk": "ca48764a0555f552f8f1f36678a04046ff93103d16088799f0fee2267e4702ba",
+        "Turn_Left": "6255f0e9d5f224a4afbb88838346951667811880fe5d44752a70abcc17101f26",
+        "Turn_Right": "5505a1e7a7f3e672d086b2ad4eec0c9d62f84356c4531458895a907d3e53f444",
+        "Upper_Aim": "a9097d56473c8a166ba533e763d21bee670ca54833898dd3fc3874d9ced5bdcb",
+        "Upper_LowReady": "336020c64f073db15fae96e7bd55768189ebf3e25e62c0037bee92584583c999",
+        "Upper_Sprint": "f1640d64f3df84b7a507a6657f6888c7f5e00e4f5d95ee4a60a9a3a49a67bd04",
+        "Upper_Turn_Left": "4b979906ace7c5865965c4ce01d4ff650b1376bc8bd807429d34e9188c022dc7",
+        "Upper_Turn_Right": "958b5924bbf3acc591eb9277d9d817613de348272d75a5ae8f4519897d5e8b88",
+        "Walk_To_Sprint": "3ed75922a27456bc2988a3fe05e235b7ece54a616d7bc4594e717882443f9696",
+        "Weapon_Lower": "27cd43e3e836a2deb84a6d06fa11a03f7235c3a069ee20eb59417934e131e340",
+        "Weapon_Raise": "1fc240c65f4743669ca75364e3e320718e50c234f837e13821f9c792d1a9b1b1"
+      },
+      "bone_count": 163
+    },
+    "Russian": {
+      "base_glb_sha256": "d36e4148f89572190c8c3437c30ed2b938d5c52edf8476067808218d79fd82e0",
+      "original_actions_unchanged": {
+        "Lower_AimStance": "53eb12fc9a827ccd2ee23b0a4988d1f16eb5df760c147767b7874c66cba3387f",
+        "Lower_AimWalk": "4bb476b000c9a7d49788e5070011135ed058decdb524aa99e77e67165777b09d",
+        "Lower_Idle": "4773214e81d99d63ffd3928b59178ffdc23f4c3705c98060c998e7efc43028fe",
+        "Lower_Sprint": "c063f7db2e43609adb2ed987c17e9e45802f945cabe511f8551e1cad4284bf0a",
+        "Lower_Walk": "1879c5c040d59699f7e10767f9fbc463b8d1e5a0fa8654ec4aad9a6bf0303ff6",
+        "Recoil_Additive": "296544c8c85c275c65e4028f1f41e14ed57f3d53505aa06cd4c831bb150f2776",
+        "Recoil_Shot": "e544a0757acb2bee44ea040b4d4df809ed3d4d9e0a1c0600b5a4290e17b23173",
+        "Reload": "b6b6582daa8fae5e4e21c49a96568418629cebf9ee4a2f3588de3081f236c386",
+        "Reload_Magazine": "84fba4c5dbafd31c885df357f29c4bbd565eee5bf4133f867a9757838115f17f",
+        "Reload_SpareMagazine": "e72e0dbefdf90472870208237cc7587af8f54d33321fcd24cbc8235ddb963b20",
+        "Sprint_Stop": "ca6906b1a4d0f62ac83578a3a6fa75af033009f754c41cf16b57d9ac300eb5d2",
+        "Sprint_To_Walk": "d9ae4c20a6aaff6d910034ca798204d56fe35083072ef6da92754587d350ac05",
+        "Start_Walk": "db38394428ff3a42e95bbf48b18c8883673e7a058f617eeca74537f77e6a7b59",
+        "Stop_Walk": "ca48764a0555f552f8f1f36678a04046ff93103d16088799f0fee2267e4702ba",
+        "Turn_Left": "6255f0e9d5f224a4afbb88838346951667811880fe5d44752a70abcc17101f26",
+        "Turn_Right": "5505a1e7a7f3e672d086b2ad4eec0c9d62f84356c4531458895a907d3e53f444",
+        "Upper_Aim": "cacc7f8cb75670a549a6196a60fc2e5b3341d2648023f610a555c70d30ffd669",
+        "Upper_LowReady": "9c95ada3fd537d8eeb59957c92c676a7b1a1027535e98a31d58c2f135264b01c",
+        "Upper_Sprint": "70f102fc8b29206460f11827ebf2ec6fb4319e98fba0b3a85ef8bb82449f5038",
+        "Upper_Turn_Left": "fef23d39d60ef4350d9f1ccba11e2a1fcfce1e4f2d2bee87f7044680de1802f3",
+        "Upper_Turn_Right": "0225695b371898a8a3e9ee542ae622ca7f7a86df2256656b836dbf453435e746",
+        "Walk_To_Sprint": "3ed75922a27456bc2988a3fe05e235b7ece54a616d7bc4594e717882443f9696",
+        "Weapon_Lower": "4eb4b453492bdae398a9bb803b5bd10f5f52b4b745aa64a17a73dc0a8fa661a9",
+        "Weapon_Raise": "51a63e2464ae6da2639513ed51177585f53d4fda0277fdbe27b642b477effadd"
+      },
+      "bone_count": 163
+    }
+  }
+}

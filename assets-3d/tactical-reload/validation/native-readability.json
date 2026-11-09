@@ -1,0 +1,44 @@
+[
+  {
+    "file": "review/USMC-native-60.png",
+    "standing_reference_px": 60,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  },
+  {
+    "file": "review/USMC-native-80.png",
+    "standing_reference_px": 80,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  },
+  {
+    "file": "review/USMC-native-120.png",
+    "standing_reference_px": 120,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  },
+  {
+    "file": "review/Russian-native-60.png",
+    "standing_reference_px": 60,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  },
+  {
+    "file": "review/Russian-native-80.png",
+    "standing_reference_px": 80,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  },
+  {
+    "file": "review/Russian-native-120.png",
+    "standing_reference_px": 120,
+    "camera": "orthographic 30 degrees, SE",
+    "pose_images_resized": false,
+    "render_engine": "Blender Workbench textured studio lighting"
+  }
+]
