@@ -2,6 +2,8 @@
 
 Branch: `feat/reference-tactical-motion-rework`, based on the preserved tactical set at `aa650ce` and its read-only audit at `86be56d`.
 
+Verified public comparisons: [side view](https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/crawl-review/?view=side) · [fixed 30-degree isometric view](https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/crawl-review/?view=iso). Both faction models, normal/half/quarter playback, and inspected reference frames are available. Animation asset/source commit: `9d195c92eca2fad30c5aa68c8c26e6dfccdee99d`.
+
 Only `TC_CrawlForward_Lower` and `TC_CrawlForward_Upper` are revised, in separate asset copies for USMC/M16A4 and Russian/AK-74M. Each complete model still has 110 clips. All 108 other animation definitions, original geometry, rest nodes, skeletons, skins, textures, weapons and original binary data remain unchanged. No game, AI, map or existing preview source is modified. The original tactical assets remain at `assets-3d/tactical-combat`.
 
 ## Actual reference inspection
@@ -37,6 +39,8 @@ Recordings: [USMC side](review/USMC-side.mp4), [USMC isometric](review/USMC-iso.
 
 The comparison is published under a separate `/crawl-review/` path on the existing Korean preview Site. The root preview and all its existing assets are preserved. The live game and separate combat test are not deployment targets. Publication/verification details are recorded separately after successful deployment.
 
+Sites version 13 deployed successfully. Anonymous HTTPS checks verified all 108 runtime files against the tested artifact, including the side/isometric query URLs. All 87 prior public preview runtime files and both protected game entry points retained their original hashes. See [validation/deployment.json](validation/deployment.json). The empty hidden `.nojekyll` marker is excluded from public-route checks.
+
 The video fallback uses the selected playback rate and can be viewed fullscreen on phones. Selecting a faction loads only that faction's existing model plus its small animation patch; both actors share the loaded geometry and textures. Old comparison resources are disposed on faction changes.
 
 ## Validation
@@ -48,6 +52,7 @@ The video fallback uses the selected playback rate and can be viewed fullscreen 
 - Lowest sampled character surface: approximately 1.05 mm above the floor. Active forearm support surfaces remain within 15 mm of ground. The padded knee and palm surfaces also approach ground during the cycle.
 - Maximum planted elbow/foot drift: below 0.07 mm. Maximum limb-segment length error: below 0.003 mm. Maximum held right-wrist error: below 0.0002 mm. Loop start/end matrices match.
 - Browser playback of the animation-only patch is checked against the authored joint positions for both factions. Side/isometric recordings are visually inspected across the cycle; validation is not based on GLB generation alone.
+- Maximum sampled source/browser joint difference is below 0.0031 mm. Frame step, scrubbing, 30-degree camera, normal/half-speed fallback video, reference images and a 390 px phone layout pass Chromium checks with no page/WebGL errors. These checks do not verify physical iPhone Safari.
 
 See `validation/assets.json`, `*-source.json`, `*-authored.json`, and `browser.json` for exact values and scope. The tight numerical errors establish consistent evaluation and contact constraints, not automatic visual realism or force balance.
 
