@@ -1,0 +1,9 @@
+{
+  "name": "autonomous-warfare-tactical-animation-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "gltf-validator": "2.0.0-dev.3.10",
+    "playwright": "1.57.0"
+  }
+}

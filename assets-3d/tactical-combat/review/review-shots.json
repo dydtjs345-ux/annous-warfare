@@ -1,0 +1,845 @@
+{
+  "method": "actual Three.js skeletal evaluation at selected phases and uniform 12Hz demonstration rendering; not hardware FPS evidence",
+  "shots": [
+    {
+      "faction": "USMC",
+      "name": "SprintProne",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 381.74239380268517,
+        "y": 95.93154789455997,
+        "right": 593.4003088737862,
+        "bottom": 276.87666507072186,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-SprintProne-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "SprintProne",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 319.4539198016582,
+        "y": 116.64357425350639,
+        "right": 548.2353886390435,
+        "bottom": 273.8381140757292,
+        "distance": 0.6513467455621302
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-SprintProne-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "SprintProne",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 306.5246205384102,
+        "y": 123.44020655227663,
+        "right": 552.0982312033768,
+        "bottom": 274.0523452399269,
+        "distance": 0.7791810650887575
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-SprintProne-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "SprintProne",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 291.81090472717733,
+        "y": 154.6387149592841,
+        "right": 552.5050427799467,
+        "bottom": 274.05442589315464,
+        "distance": 0.78
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-SprintProne-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "SprintProne",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 288.29160174505853,
+        "y": 174.74047357268478,
+        "right": 554.8136507414455,
+        "bottom": 274.05194410897775,
+        "distance": 0.78
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-SprintProne-phase-4.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrawlForward",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 342.3967162316092,
+        "y": 174.2874184520937,
+        "right": 604.4783462247453,
+        "bottom": 274.0519650838451,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrawlForward-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrawlForward",
+      "time": 0.588,
+      "fraction": 0.245,
+      "crop": {
+        "x": 333.6297391857928,
+        "y": 175.7971470278481,
+        "right": 594.7688566041464,
+        "bottom": 274.05331397927984,
+        "distance": 0.13524
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrawlForward-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrawlForward",
+      "time": 1.176,
+      "fraction": 0.49,
+      "crop": {
+        "x": 323.5429080626958,
+        "y": 174.32467813937626,
+        "right": 585.3347661233041,
+        "bottom": 274.05356986622286,
+        "distance": 0.27048
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrawlForward-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrawlForward",
+      "time": 1.764,
+      "fraction": 0.735,
+      "crop": {
+        "x": 315.826647075065,
+        "y": 174.77961263231504,
+        "right": 576.9335680972854,
+        "bottom": 274.052359122146,
+        "distance": 0.40572
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrawlForward-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrawlForward",
+      "time": 2.352,
+      "fraction": 0.98,
+      "crop": {
+        "x": 305.0529510609982,
+        "y": 174.24128903487522,
+        "right": 566.1902398846696,
+        "bottom": 274.05386863558704,
+        "distance": 0.54096
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrawlForward-phase-4.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "ProneStand",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 342.3966652839182,
+        "y": 174.77295714523063,
+        "right": 608.9176936958493,
+        "bottom": 274.05192704588194,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-ProneStand-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "ProneStand",
+      "time": 0.637,
+      "fraction": 0.245,
+      "crop": {
+        "x": 357.9432106795543,
+        "y": 158.8609233905121,
+        "right": 608.9180830196274,
+        "bottom": 274.0521430617812,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-ProneStand-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "ProneStand",
+      "time": 1.274,
+      "fraction": 0.49,
+      "crop": {
+        "x": 358.86925156252187,
+        "y": 125.81998579124013,
+        "right": 608.5587326925814,
+        "bottom": 273.74845866975005,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-ProneStand-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "ProneStand",
+      "time": 1.911,
+      "fraction": 0.735,
+      "crop": {
+        "x": 363.7448014145168,
+        "y": 118.94960852305223,
+        "right": 554.474302569913,
+        "bottom": 277.48892273455283,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-ProneStand-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "ProneStand",
+      "time": 2.548,
+      "fraction": 0.98,
+      "crop": {
+        "x": 381.78179407369316,
+        "y": 93.37994441813953,
+        "right": 552.376040785352,
+        "bottom": 277.4884907317012,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-ProneStand-phase-4.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrouchWalk",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 363.22120711986753,
+        "y": 119.54323041221531,
+        "right": 562.8439201871124,
+        "bottom": 277.4883799405909,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrouchWalk-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrouchWalk",
+      "time": 0.392,
+      "fraction": 0.245,
+      "crop": {
+        "x": 347.9559096282816,
+        "y": 120.85587628010103,
+        "right": 551.7286633767392,
+        "bottom": 277.49275622818107,
+        "distance": 0.2156
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrouchWalk-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrouchWalk",
+      "time": 0.784,
+      "fraction": 0.49,
+      "crop": {
+        "x": 333.2918402607146,
+        "y": 119.56515414049866,
+        "right": 523.998530145441,
+        "bottom": 277.4942298171624,
+        "distance": 0.4312
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrouchWalk-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrouchWalk",
+      "time": 1.176,
+      "fraction": 0.735,
+      "crop": {
+        "x": 318.6673764389814,
+        "y": 120.43875744730332,
+        "right": 514.8660966827273,
+        "bottom": 277.4931505115434,
+        "distance": 0.6468
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrouchWalk-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CrouchWalk",
+      "time": 1.568,
+      "fraction": 0.98,
+      "crop": {
+        "x": 303.4406494950886,
+        "y": 119.53575893972692,
+        "right": 501.80318023108515,
+        "bottom": 277.4893261659572,
+        "distance": 0.8624
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CrouchWalk-phase-4.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverLeanLeft",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 405.85023047849506,
+        "y": 144.86788852068514,
+        "right": 588.8865955341181,
+        "bottom": 279.4053560587449,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverLeanLeft-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverLeanLeft",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 405.85023195807037,
+        "y": 144.405308685682,
+        "right": 589.6012793852449,
+        "bottom": 279.4053747479235,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverLeanLeft-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverLeanLeft",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 405.8502129448667,
+        "y": 143.00670604516102,
+        "right": 592.485042647541,
+        "bottom": 279.4054193505927,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverLeanLeft-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverLeanLeft",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 405.8502110199295,
+        "y": 142.2453667915553,
+        "right": 595.7560219636636,
+        "bottom": 279.4053864264065,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverLeanLeft-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverLeanLeft",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 405.8502092557646,
+        "y": 142.15842027669865,
+        "right": 596.8192503054381,
+        "bottom": 279.40535251051926,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverLeanLeft-phase-4.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverRise",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 405.8502304366965,
+        "y": 144.86788852068514,
+        "right": 588.8866194260377,
+        "bottom": 279.4053549638136,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverRise-phase-0.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverRise",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 405.8492126917637,
+        "y": 140.93390939052847,
+        "right": 587.7597710513427,
+        "bottom": 279.4054038021061,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverRise-phase-1.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverRise",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 405.8460923125558,
+        "y": 125.91059942142857,
+        "right": 582.7642501994907,
+        "bottom": 279.4103224084067,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverRise-phase-2.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverRise",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 405.8482474520158,
+        "y": 110.71187164169046,
+        "right": 576.569043946246,
+        "bottom": 279.4132482220817,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverRise-phase-3.png"
+    },
+    {
+      "faction": "USMC",
+      "name": "CoverRise",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 405.85022344202633,
+        "y": 106.21290000003657,
+        "right": 574.5154371475834,
+        "bottom": 279.4053557289954,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/USMC-CoverRise-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "SprintProne",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 380.9423519413594,
+        "y": 95.93154789455997,
+        "right": 593.4003088737862,
+        "bottom": 276.87666507072186,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-SprintProne-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "SprintProne",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 318.0390688780799,
+        "y": 116.64357425350639,
+        "right": 548.2353886390435,
+        "bottom": 273.8381140757292,
+        "distance": 0.6513467455621302
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-SprintProne-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "SprintProne",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 305.3710956464824,
+        "y": 123.44020655227663,
+        "right": 552.0982312033768,
+        "bottom": 274.0523452399269,
+        "distance": 0.7791810650887575
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-SprintProne-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "SprintProne",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 290.6960968390275,
+        "y": 154.6387149592841,
+        "right": 552.5050427799467,
+        "bottom": 274.05442589315464,
+        "distance": 0.78
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-SprintProne-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "SprintProne",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 287.17474429248693,
+        "y": 174.74047357268478,
+        "right": 554.8136507414455,
+        "bottom": 274.05194410897775,
+        "distance": 0.78
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-SprintProne-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrawlForward",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 341.27800532198563,
+        "y": 174.2874184520937,
+        "right": 604.4783462247453,
+        "bottom": 274.0519650838451,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrawlForward-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrawlForward",
+      "time": 0.588,
+      "fraction": 0.245,
+      "crop": {
+        "x": 333.20434603140166,
+        "y": 175.7971470278481,
+        "right": 594.7688566041464,
+        "bottom": 274.05331397927984,
+        "distance": 0.13524
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrawlForward-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrawlForward",
+      "time": 1.176,
+      "fraction": 0.49,
+      "crop": {
+        "x": 322.58891699522854,
+        "y": 174.32467813937626,
+        "right": 585.3347661233041,
+        "bottom": 274.05356986622286,
+        "distance": 0.27048
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrawlForward-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrawlForward",
+      "time": 1.764,
+      "fraction": 0.735,
+      "crop": {
+        "x": 313.2839620355075,
+        "y": 174.77961263231504,
+        "right": 576.9335680972854,
+        "bottom": 274.052359122146,
+        "distance": 0.40572
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrawlForward-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrawlForward",
+      "time": 2.352,
+      "fraction": 0.98,
+      "crop": {
+        "x": 303.61383150921944,
+        "y": 174.24128903487522,
+        "right": 566.1902398846696,
+        "bottom": 274.05386863558704,
+        "distance": 0.54096
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrawlForward-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "ProneStand",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 341.2779524683179,
+        "y": 174.77295714523063,
+        "right": 608.9176936958493,
+        "bottom": 274.05192704588194,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-ProneStand-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "ProneStand",
+      "time": 0.637,
+      "fraction": 0.245,
+      "crop": {
+        "x": 359.55553490085913,
+        "y": 158.8609233905121,
+        "right": 608.9180830196273,
+        "bottom": 274.0521430617812,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-ProneStand-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "ProneStand",
+      "time": 1.274,
+      "fraction": 0.49,
+      "crop": {
+        "x": 357.72173197554105,
+        "y": 125.81998579124013,
+        "right": 608.5587326925813,
+        "bottom": 273.74845866975005,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-ProneStand-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "ProneStand",
+      "time": 1.911,
+      "fraction": 0.735,
+      "crop": {
+        "x": 362.5626053703827,
+        "y": 118.94960852305223,
+        "right": 554.474302569913,
+        "bottom": 277.48892273455283,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-ProneStand-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "ProneStand",
+      "time": 2.548,
+      "fraction": 0.98,
+      "crop": {
+        "x": 380.2177617782229,
+        "y": 93.37994441813953,
+        "right": 552.376040785352,
+        "bottom": 277.4884907317012,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-ProneStand-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrouchWalk",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 362.0583451147834,
+        "y": 119.54323041221531,
+        "right": 562.8439201871124,
+        "bottom": 277.4883799405909,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrouchWalk-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrouchWalk",
+      "time": 0.392,
+      "fraction": 0.245,
+      "crop": {
+        "x": 346.80292150034603,
+        "y": 120.85587628010103,
+        "right": 551.7286633767392,
+        "bottom": 277.49275622818107,
+        "distance": 0.2156
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrouchWalk-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrouchWalk",
+      "time": 0.784,
+      "fraction": 0.49,
+      "crop": {
+        "x": 332.1295981276035,
+        "y": 119.56515414049866,
+        "right": 523.998530145441,
+        "bottom": 277.4942298171624,
+        "distance": 0.4312
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrouchWalk-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrouchWalk",
+      "time": 1.176,
+      "fraction": 0.735,
+      "crop": {
+        "x": 317.4947903384317,
+        "y": 120.43875744730332,
+        "right": 514.8660966827273,
+        "bottom": 277.4931505115434,
+        "distance": 0.6468
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrouchWalk-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CrouchWalk",
+      "time": 1.568,
+      "fraction": 0.98,
+      "crop": {
+        "x": 302.276565095653,
+        "y": 119.53575893972692,
+        "right": 501.80318023108515,
+        "bottom": 277.4893261659572,
+        "distance": 0.8624
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CrouchWalk-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverLeanLeft",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 397.3183020356416,
+        "y": 148.17113752999236,
+        "right": 564.2435157444287,
+        "bottom": 280.70621016714756,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverLeanLeft-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverLeanLeft",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 395.57304843482075,
+        "y": 148.1203490676957,
+        "right": 564.2435175507878,
+        "bottom": 280.7062224544926,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverLeanLeft-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverLeanLeft",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 399.68786655728616,
+        "y": 148.3584453953091,
+        "right": 565.6076464809016,
+        "bottom": 280.70623112249746,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverLeanLeft-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverLeanLeft",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 401.7564764373944,
+        "y": 149.3375103562447,
+        "right": 568.3304777857952,
+        "bottom": 280.70620090620514,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverLeanLeft-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverLeanLeft",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 401.7564728380383,
+        "y": 149.77786896626284,
+        "right": 569.0786192814472,
+        "bottom": 280.7061736524879,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverLeanLeft-phase-4.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverRise",
+      "time": 0,
+      "fraction": 0,
+      "crop": {
+        "x": 397.3183020356416,
+        "y": 148.17113752999236,
+        "right": 564.2435013003017,
+        "bottom": 280.70622254492207,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverRise-phase-0.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverRise",
+      "time": 0.294,
+      "fraction": 0.245,
+      "crop": {
+        "x": 394.4302722808287,
+        "y": 143.93982658125304,
+        "right": 564.2438396634035,
+        "bottom": 280.70689484844496,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverRise-phase-1.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverRise",
+      "time": 0.588,
+      "fraction": 0.49,
+      "crop": {
+        "x": 393.93538874940305,
+        "y": 127.70770166817553,
+        "right": 564.2455203433962,
+        "bottom": 280.71290702414376,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverRise-phase-2.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverRise",
+      "time": 0.882,
+      "fraction": 0.735,
+      "crop": {
+        "x": 393.5679595933018,
+        "y": 111.17203587356184,
+        "right": 564.2448172478065,
+        "bottom": 280.7148671343688,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverRise-phase-3.png"
+    },
+    {
+      "faction": "Russian",
+      "name": "CoverRise",
+      "time": 1.176,
+      "fraction": 0.98,
+      "crop": {
+        "x": 394.1086015261344,
+        "y": 106.25645707249006,
+        "right": 564.2434186659019,
+        "bottom": 280.706245090642,
+        "distance": 0
+      },
+      "file": "/workspace/annous-warfare/assets-3d/tactical-combat/review/Russian-CoverRise-phase-4.png"
+    }
+  ]
+}
