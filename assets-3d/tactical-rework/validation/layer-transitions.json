@@ -1,0 +1,1036 @@
+{
+  "scope": "Actual preview setState(false) and update; sampled 250 ms after transition, beyond the 180 ms crossfade. Does not certify arbitrary-phase biomechanical continuity.",
+  "factions": [
+    {
+      "faction": "USMC",
+      "checks": [
+        {
+          "from": "Idle",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Idle",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4557087470033732e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Idle",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 7.521259306987919e-10,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Idle",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Idle",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Idle",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.280196055711848e-9,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Walk",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Walk",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 4.4618072807507575e-10,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Walk",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.7625182120207567e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Walk",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Walk",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Walk",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.280196055711848e-9,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "MovingFire",
+          "to": "SprintProne",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "MovingFire",
+          "to": "CrawlForward",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 4.4618072807507575e-10,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "MovingFire",
+          "to": "CrouchWalk",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.7625182120207567e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "MovingFire",
+          "to": "ProneStand",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "MovingFire",
+          "to": "CoverEnter",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "MovingFire",
+          "to": "CoverExit",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.280196055711848e-9,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Reload",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Reload",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 2.917085447974876e-10,
+          "maxQuaternionErrorDeg": 0.000004829673078902933
+        },
+        {
+          "from": "Reload",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0408462999915512e-9,
+          "maxQuaternionErrorDeg": 0.000003818191820832845
+        },
+        {
+          "from": "Reload",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Reload",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Reload",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.280196055711848e-9,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "SprintNew",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "SprintNew",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.2919304146477822e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "SprintNew",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 2.012435076834705e-8,
+          "maxQuaternionErrorDeg": 0.000003818191820832845
+        },
+        {
+          "from": "SprintNew",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "SprintNew",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "SprintNew",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.280196055711848e-9,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        }
+      ]
+    },
+    {
+      "faction": "Russian",
+      "checks": [
+        {
+          "from": "Idle",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Idle",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4557087470033732e-8,
+          "maxQuaternionErrorDeg": 0.0000029575586669421963
+        },
+        {
+          "from": "Idle",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 7.521259306987919e-10,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Idle",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Idle",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Idle",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.8297009716262496e-9,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Walk",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Walk",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 4.4618072807507575e-10,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Walk",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.7625182120207567e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Walk",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Walk",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Walk",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.8297009716262496e-9,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "MovingFire",
+          "to": "SprintProne",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "MovingFire",
+          "to": "CrawlForward",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 4.4618072807507575e-10,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "MovingFire",
+          "to": "CrouchWalk",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.7625182120207567e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "MovingFire",
+          "to": "ProneStand",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "MovingFire",
+          "to": "CoverEnter",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "MovingFire",
+          "to": "CoverExit",
+          "priorShots": 1,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.8297009716262496e-9,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Reload",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "Reload",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 2.917085447974876e-10,
+          "maxQuaternionErrorDeg": 0.000004829673078902933
+        },
+        {
+          "from": "Reload",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0408462999915512e-9,
+          "maxQuaternionErrorDeg": 0.000003818191820832845
+        },
+        {
+          "from": "Reload",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "Reload",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "Reload",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.8297009716262496e-9,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "SprintNew",
+          "to": "SprintProne",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_SprintProne_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_SprintProne_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.0477960655395358e-8,
+          "maxQuaternionErrorDeg": 0.000004182619578303746
+        },
+        {
+          "from": "SprintNew",
+          "to": "CrawlForward",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrawlForward_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrawlForward_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.2919304146477822e-8,
+          "maxQuaternionErrorDeg": 0.0000029575586669421963
+        },
+        {
+          "from": "SprintNew",
+          "to": "CrouchWalk",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CrouchWalk_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CrouchWalk_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 2.012435076834705e-8,
+          "maxQuaternionErrorDeg": 0.000003818191820832845
+        },
+        {
+          "from": "SprintNew",
+          "to": "ProneStand",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_ProneStand_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_ProneStand_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.4901158418417279e-8,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        },
+        {
+          "from": "SprintNew",
+          "to": "CoverEnter",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverEnter_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverEnter_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 1.1175871617030798e-8,
+          "maxQuaternionErrorDeg": 0.000004517745487845101
+        },
+        {
+          "from": "SprintNew",
+          "to": "CoverExit",
+          "priorShots": 0,
+          "active": [
+            {
+              "clip": "TC_CoverExit_Lower",
+              "weight": 1
+            },
+            {
+              "clip": "TC_CoverExit_Upper",
+              "weight": 1
+            }
+          ],
+          "maxPositionErrorM": 6.8297009716262496e-9,
+          "maxQuaternionErrorDeg": 0.0000034150945850063755
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

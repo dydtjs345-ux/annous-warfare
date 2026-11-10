@@ -1,0 +1,28 @@
+{
+  "status": "blocked-awaiting-reference-files",
+  "actualExternalVideoFramesInspected": 0,
+  "externalAnimationAssetsImported": false,
+  "attempts": [
+    {
+      "source": "Arma Reforger third-person prone/crawl movement",
+      "method": "Web search and yt-dlp YouTube video search",
+      "result": "Video search requests failed: proxy tunnel HTTP 403 Forbidden. No video downloaded or analyzed."
+    },
+    {
+      "source": "Squad official August 2017 animation-system update",
+      "article": "https://store.steampowered.com/news/posts/?appids=393380&enddate=1504890154",
+      "linkedVideo": "https://www.youtube.com/watch?v=XAczCP5krPo",
+      "method": "Official article HTML retrieved; embedded video link located",
+      "result": "Article text accessible. YouTube video access unavailable in this environment. No footage or frames analyzed."
+    },
+    {
+      "source": "Ready or Not official Development Briefing Vol. 87",
+      "article": "https://store.steampowered.com/news/app/1144200/view/526472884483260567",
+      "developerPage": "https://voidinteractive.net/vol-87-ready-or-not-development-briefing/",
+      "method": "Developer page HTTP request; official Steam event API",
+      "result": "Developer page HTTP 403. Official Steam text accessible; its examples embed YouTube videos, whose access is blocked. No footage or frames analyzed."
+    }
+  ],
+  "requiredInput": "Attach video files or extracted frame sequences showing sprint-to-prone, forward crawl, crouched walk, prone-to-stand, and cover entry/exit. Prefer clear third-person side views and original timing. Identify source game and whether reference thumbnails may be included in the review.",
+  "interpretation": "Article descriptions and URLs are discovery evidence only. They are not motion-reference analysis. Authoring revisions remain paused until actual references can be inspected."
+}

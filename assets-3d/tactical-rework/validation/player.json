@@ -1,0 +1,8 @@
+{
+  "normalAndHalfSpeed": true,
+  "actionSeeking": true,
+  "bothFactionMoviesDecode": true,
+  "duration": 10.5,
+  "browser": "Chromium, local HTTP server with byte ranges",
+  "errors": []
+}

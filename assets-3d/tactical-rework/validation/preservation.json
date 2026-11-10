@@ -1,0 +1,29 @@
+{
+  "baselineCommit": "aa650ce1b74390a70a46df76439a5420191a3898",
+  "protectedModelAndSourceHashes": [
+    {
+      "path": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+      "sha256": "112592f71ac7650c722b0f119b645b3bfea8578f9c42482ab2d25c980aa30fef",
+      "unchanged": true
+    },
+    {
+      "path": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+      "sha256": "46d44c1bbdf59108456bca85d1304b7c07f945b4a9657ecc8c1fe6834817cc46",
+      "unchanged": true
+    },
+    {
+      "path": "assets-3d/tactical-combat/source/USMC_Tactical.blend",
+      "sha256": "ac655ac498b2e87a42bc4e59ab081295fb1674119c977ecabdf66bbd6c5870b9",
+      "unchanged": true
+    },
+    {
+      "path": "assets-3d/tactical-combat/source/Russian_Tactical.blend",
+      "sha256": "8aa49949de9df6dde1b2c4c0f1123c5224348c795c92ef6f87ae750580880090",
+      "unchanged": true
+    }
+  ],
+  "modifiedPreviouslyTrackedPaths": [],
+  "newAnimationClips": 0,
+  "revisedAnimationClips": 0,
+  "deployed": false
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전술 동작 원본 진단 · 외부 참고 영상 대기</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;background:#15212d;color:#e6edf5;margin:0 auto;padding:24px;max-width:1280px}h1{font-size:1.5rem}a{color:#a9d7ff}video{width:100%;background:#25313d}label,button,select{margin:6px;font:inherit}button,select{padding:8px;background:#2e4356;color:white;border:1px solid #70879b;border-radius:6px}.status{padding:16px;border-left:4px solid #efbf72;background:#2f302f}small{display:block;color:#bbccdb}
+</style>
+<h1>전술 동작 원본 진단</h1>
+<p class="status">외부 참고 영상 접근이 차단되어 재작업을 시작하지 않았습니다. 이 페이지에는 <strong>기존 원본 동작만</strong> 표시됩니다. 수정본·외부 참고 프레임·새 애니메이션은 없습니다.</p>
+<p>왼쪽: 측면 카메라 · 오른쪽: 고정 30° 등각 카메라. 두 화면은 같은 GLB 동작과 시간을 사용합니다. 전신 확인을 위해 엄폐물은 숨겼습니다.</p>
+<label>모델 <select id="faction"><option>USMC</option><option>Russian</option></select></label>
+<label>동작 <select id="action"><option value="0">질주 → 엎드리기</option><option value="1">전진 포복</option><option value="2">낮은 자세 보행</option><option value="3">엎드리기 → 일어서기</option><option value="4">엄폐 진입</option><option value="5">엄폐 이탈</option></select></label>
+<button id="normal">정상 속도 1×</button><button id="slow">느린 재생 0.5×</button>
+<video id="video" controls playsinline preload="metadata" src="USMC-original-side-iso.mp4"></video>
+<small id="video-status" role="status"></small>
+<small>원본 GLB를 12 Hz로 평가한 검토 영상입니다. 영상 프레임 수는 기기 성능 측정값이 아닙니다. 구간 경계에서 다음 동작으로 바뀝니다.</small>
+<p><a href="../README.md">진단 결과 및 재개 조건</a> · <a href="USMC-original-side.jpg">USMC 측면 프레임</a> · <a href="Russian-original-iso30.jpg">Russian 등각 프레임</a></p>
+<script>
+const video=document.querySelector('#video'),faction=document.querySelector('#faction'),action=document.querySelector('#action');
+// Starts follow capture-frame counts (ceil(duration * 12)), not rounded clip lengths.
+const starts=[0,15/12,44/12,64/12,96/12,111/12];
+function seek(){video.currentTime=starts[Number(action.value)];}
+action.onchange=seek;
+faction.onchange=()=>{video.pause();video.src=faction.value+'-original-side-iso.mp4';video.load();video.addEventListener('loadedmetadata',seek,{once:true});};
+function playAt(rate){video.playbackRate=rate;document.querySelector('#video-status').textContent='';video.play().catch(error=>{if(error.name!=='AbortError')document.querySelector('#video-status').textContent='브라우저의 영상 재생 버튼을 눌러 주세요.';});}
+document.querySelector('#normal').onclick=()=>playAt(1);
+document.querySelector('#slow').onclick=()=>playAt(.5);
+</script>
+</html>
