@@ -1,0 +1,5 @@
+source/*.blend1
+source/*.blend2
+tools/__pycache__/
+review/*-phase-*.png
+validation/browser-draft.json

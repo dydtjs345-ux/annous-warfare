@@ -1,0 +1,17 @@
+{
+  "browser": "Chromium; desktop and 390px phone layout",
+  "physicalIPhone": false,
+  "errors": [],
+  "scrubAndFrameStep": true,
+  "isometricAngle": 29.999999999999996,
+  "contactMarkers": true,
+  "halfSpeedVideo": true,
+  "normalSpeedVideo": true,
+  "phoneLayout": {
+    "viewport": 390,
+    "document": 390,
+    "actors": 2,
+    "webglError": 0
+  },
+  "referenceFrames": 10
+}

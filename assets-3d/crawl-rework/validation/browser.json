@@ -1,0 +1,226 @@
+{
+  "browser": "Chromium with software WebGL",
+  "physicalIPhone": false,
+  "errors": [],
+  "factions": [
+    {
+      "faction": "USMC",
+      "sourceMatch": [
+        {
+          "time": 0,
+          "maxJointErrorM": 0.000002290727843797304
+        },
+        {
+          "time": 0.1,
+          "maxJointErrorM": 0.0000019197104542637386
+        },
+        {
+          "time": 0.2,
+          "maxJointErrorM": 0.000001753072735748503
+        },
+        {
+          "time": 0.3,
+          "maxJointErrorM": 0.000001908740520557452
+        },
+        {
+          "time": 0.4,
+          "maxJointErrorM": 0.000001947636864804345
+        },
+        {
+          "time": 0.5,
+          "maxJointErrorM": 0.0000021718203060842195
+        },
+        {
+          "time": 0.6,
+          "maxJointErrorM": 0.0000029792351661556826
+        },
+        {
+          "time": 0.7,
+          "maxJointErrorM": 0.000002675857079458517
+        },
+        {
+          "time": 0.8,
+          "maxJointErrorM": 0.000002321354156137091
+        },
+        {
+          "time": 0.9,
+          "maxJointErrorM": 0.0000021487820287473356
+        },
+        {
+          "time": 1,
+          "maxJointErrorM": 0.000002141843705328658
+        },
+        {
+          "time": 1.1,
+          "maxJointErrorM": 0.0000022368699040253515
+        },
+        {
+          "time": 1.2,
+          "maxJointErrorM": 0.0000021929344915941827
+        },
+        {
+          "time": 1.3,
+          "maxJointErrorM": 0.000002320046264367879
+        },
+        {
+          "time": 1.4,
+          "maxJointErrorM": 0.000002351307776193114
+        },
+        {
+          "time": 1.5,
+          "maxJointErrorM": 0.0000027392175267621113
+        },
+        {
+          "time": 1.6,
+          "maxJointErrorM": 0.000002894996873197759
+        },
+        {
+          "time": 1.7,
+          "maxJointErrorM": 0.0000030385041402843443
+        },
+        {
+          "time": 1.8,
+          "maxJointErrorM": 0.0000024083991027415553
+        },
+        {
+          "time": 1.9,
+          "maxJointErrorM": 0.0000028955497914845214
+        },
+        {
+          "time": 2,
+          "maxJointErrorM": 0.0000021971399505481616
+        },
+        {
+          "time": 2.1,
+          "maxJointErrorM": 0.0000023108004544199777
+        },
+        {
+          "time": 2.2,
+          "maxJointErrorM": 0.0000023411062092289084
+        },
+        {
+          "time": 2.3,
+          "maxJointErrorM": 0.0000023583172459920265
+        },
+        {
+          "time": 2.4,
+          "maxJointErrorM": 0.0000022907278438048806
+        }
+      ],
+      "views": [
+        "side",
+        "iso"
+      ]
+    },
+    {
+      "faction": "Russian",
+      "sourceMatch": [
+        {
+          "time": 0,
+          "maxJointErrorM": 0.000002290727843797304
+        },
+        {
+          "time": 0.1,
+          "maxJointErrorM": 0.0000019197104542637386
+        },
+        {
+          "time": 0.2,
+          "maxJointErrorM": 0.000001753072735748503
+        },
+        {
+          "time": 0.3,
+          "maxJointErrorM": 0.000001908740520557452
+        },
+        {
+          "time": 0.4,
+          "maxJointErrorM": 0.000001947636864804345
+        },
+        {
+          "time": 0.5,
+          "maxJointErrorM": 0.0000021718203060842195
+        },
+        {
+          "time": 0.6,
+          "maxJointErrorM": 0.0000029792351661556826
+        },
+        {
+          "time": 0.7,
+          "maxJointErrorM": 0.000002675857079458517
+        },
+        {
+          "time": 0.8,
+          "maxJointErrorM": 0.000002321354156137091
+        },
+        {
+          "time": 0.9,
+          "maxJointErrorM": 0.0000021487820287473356
+        },
+        {
+          "time": 1,
+          "maxJointErrorM": 0.000002141843705328658
+        },
+        {
+          "time": 1.1,
+          "maxJointErrorM": 0.0000022368699040253515
+        },
+        {
+          "time": 1.2,
+          "maxJointErrorM": 0.0000021929344915941827
+        },
+        {
+          "time": 1.3,
+          "maxJointErrorM": 0.000002320046264367879
+        },
+        {
+          "time": 1.4,
+          "maxJointErrorM": 0.000002351307776193114
+        },
+        {
+          "time": 1.5,
+          "maxJointErrorM": 0.0000027392175267621113
+        },
+        {
+          "time": 1.6,
+          "maxJointErrorM": 0.000002894996873197759
+        },
+        {
+          "time": 1.7,
+          "maxJointErrorM": 0.0000030385041402843443
+        },
+        {
+          "time": 1.8,
+          "maxJointErrorM": 0.0000024083991027415553
+        },
+        {
+          "time": 1.9,
+          "maxJointErrorM": 0.0000028955497914845214
+        },
+        {
+          "time": 2,
+          "maxJointErrorM": 0.0000021971399505481616
+        },
+        {
+          "time": 2.1,
+          "maxJointErrorM": 0.0000023108004544199777
+        },
+        {
+          "time": 2.2,
+          "maxJointErrorM": 0.0000023411062092289084
+        },
+        {
+          "time": 2.3,
+          "maxJointErrorM": 0.0000023583172459920265
+        },
+        {
+          "time": 2.4,
+          "maxJointErrorM": 0.0000022907278438048806
+        }
+      ],
+      "views": [
+        "side",
+        "iso"
+      ]
+    }
+  ],
+  "recordingFps": 24
+}

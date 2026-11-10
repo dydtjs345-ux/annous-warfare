@@ -1,0 +1,142 @@
+{
+  "actualFilesDecoded": 2,
+  "initialInspection": "Complete 6 Hz decoded sequences and chronological detail sheets; selected native frames below have exact PTS.",
+  "sources": [
+    {
+      "file": "2-crawl_reference_small.mov",
+      "sourceSha256": "31cce573184f6c9b5575c34b530f3c36309ecc61f38bb19b68c5986f4bcc95de",
+      "nativeFrameCount": 90,
+      "label": "\uc2e4\uc81c \ud6c8\ub828 \u00b7 \uc0ac\uc6a9\uc790 \uc81c\uacf5",
+      "selectedFrames": [
+        {
+          "nativeFrameIndex": 12,
+          "presentationTimeSeconds": 0.8,
+          "nativeFramePngSha256": "3e120168e38891c8e4f2efd5fa7ec10cbfdcdb5797e65eab58c9a3f978e4856c",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-012.jpg"
+        },
+        {
+          "nativeFrameIndex": 18,
+          "presentationTimeSeconds": 1.2,
+          "nativeFramePngSha256": "5ead59e018eea24aafda04450f5e7da5a1f03af3c8ec285c185b201c042cdd29",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-018.jpg"
+        },
+        {
+          "nativeFrameIndex": 22,
+          "presentationTimeSeconds": 1.466667,
+          "nativeFramePngSha256": "e334c520a02c398e871fb4f2fcba2ec8864ff878df71054136cd17e9cbbf427f",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-022.jpg"
+        },
+        {
+          "nativeFrameIndex": 27,
+          "presentationTimeSeconds": 1.8,
+          "nativeFramePngSha256": "30c96b16da1b21fdab6e7cb032f2ecc0fe556c245c419cd4ec2e91eba8d224ef",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-027.jpg"
+        },
+        {
+          "nativeFrameIndex": 33,
+          "presentationTimeSeconds": 2.2,
+          "nativeFramePngSha256": "48e90a4387ac0169bd036e1b1f580b99680c1fe624c2d36555dcd99bd3735434",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-033.jpg"
+        },
+        {
+          "nativeFrameIndex": 42,
+          "presentationTimeSeconds": 2.8,
+          "nativeFramePngSha256": "e8f12e4f2952c04f6131683fb7fa3250e11d1709629ef6aa332cd19988dcaa97",
+          "cropXYXY": [
+            0,
+            140,
+            430,
+            820
+          ],
+          "file": "ref-1-frame-042.jpg"
+        }
+      ]
+    },
+    {
+      "file": "1-crawl_reference_second_small.mov",
+      "sourceSha256": "5bb50fef9a1f0fd8cca78a47dc6f2af42cd0a6ec02c2abcd24bf5bfdaf157da5",
+      "nativeFrameCount": 171,
+      "label": "Arma Reforger \ud558\ub2e8 \ud654\uba74 \u00b7 \uc0ac\uc6a9\uc790 \uc81c\uacf5",
+      "selectedFrames": [
+        {
+          "nativeFrameIndex": 108,
+          "presentationTimeSeconds": 9.0,
+          "nativeFramePngSha256": "6b56f0cb8f1678416670ea092ac4c8f6b5beb796c9650b3619e1f962ffb13b19",
+          "cropXYXY": [
+            0,
+            600,
+            420,
+            815
+          ],
+          "file": "ref-2-frame-108.jpg"
+        },
+        {
+          "nativeFrameIndex": 116,
+          "presentationTimeSeconds": 9.666667,
+          "nativeFramePngSha256": "3118e1db525e626a37979738c95b9169405630f9b8b674b019a1cfb98cf16a0b",
+          "cropXYXY": [
+            0,
+            600,
+            420,
+            815
+          ],
+          "file": "ref-2-frame-116.jpg"
+        },
+        {
+          "nativeFrameIndex": 124,
+          "presentationTimeSeconds": 10.333333,
+          "nativeFramePngSha256": "e79c8a95b442158a7bbac48be48dc14bbec872069b7a4547c32fd61805b12b14",
+          "cropXYXY": [
+            0,
+            600,
+            420,
+            815
+          ],
+          "file": "ref-2-frame-124.jpg"
+        },
+        {
+          "nativeFrameIndex": 132,
+          "presentationTimeSeconds": 11.0,
+          "nativeFramePngSha256": "22c09224fe944c8bcbf39d45459c859cafe349800b9b310458b99a7a4bf875fc",
+          "cropXYXY": [
+            0,
+            600,
+            420,
+            815
+          ],
+          "file": "ref-2-frame-132.jpg"
+        }
+      ]
+    }
+  ]
+}
