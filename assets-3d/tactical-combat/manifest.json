@@ -1,0 +1,1727 @@
+{
+  "revision": "tactical-review-1",
+  "status": "review candidates; not visually approved",
+  "skeleton": {
+    "bones": 163,
+    "source": "shared infantry rig preserved",
+    "rest_sha256": "fe4d6e6f903e8dc2d5956127c521a17244f7f5ccd8e32de3820c07ca5bc1cfbf"
+  },
+  "originalClipCount": 44,
+  "newClipsPerFaction": 66,
+  "states": {
+    "ProneIdle": {
+      "clips": [
+        "TC_ProneIdle_Lower",
+        "TC_ProneIdle_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "ProneAim": {
+      "clips": [
+        "TC_ProneAim_Lower",
+        "TC_ProneAim_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "ProneFire": {
+      "clips": [
+        "TC_ProneFire_Lower",
+        "TC_ProneFire_Upper"
+      ],
+      "duration": 0.6,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "CrawlForward": {
+      "clips": [
+        "TC_CrawlForward_Lower",
+        "TC_CrawlForward_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0.23
+    },
+    "CrawlBackward": {
+      "clips": [
+        "TC_CrawlBackward_Lower",
+        "TC_CrawlBackward_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": -0.17
+    },
+    "ProneToCrawl": {
+      "clips": [
+        "TC_ProneToCrawl_Lower",
+        "TC_ProneToCrawl_Upper"
+      ],
+      "duration": 0.8,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CrawlToProneAim": {
+      "clips": [
+        "TC_CrawlToProneAim_Lower",
+        "TC_CrawlToProneAim_Upper"
+      ],
+      "duration": 0.8,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CrouchIdle": {
+      "clips": [
+        "TC_CrouchIdle_Lower",
+        "TC_CrouchIdle_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "CrouchWalk": {
+      "clips": [
+        "TC_CrouchWalk_Lower",
+        "TC_CrouchWalk_Upper"
+      ],
+      "duration": 1.6,
+      "loop": true,
+      "speed_mps": 0.55
+    },
+    "CrouchAim": {
+      "clips": [
+        "TC_CrouchAim_Lower",
+        "TC_CrouchAim_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "CrouchFire": {
+      "clips": [
+        "TC_CrouchFire_Lower",
+        "TC_CrouchFire_Upper"
+      ],
+      "duration": 0.6,
+      "loop": true,
+      "speed_mps": 0
+    },
+    "StandProne": {
+      "clips": [
+        "TC_StandProne_Lower",
+        "TC_StandProne_Upper"
+      ],
+      "duration": 1.4666666666666666,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4666666666666666,
+          "distance_m": 0
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": null
+    },
+    "WalkProne": {
+      "clips": [
+        "TC_WalkProne_Lower",
+        "TC_WalkProne_Upper"
+      ],
+      "duration": 1.3333333333333333,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0.032471422039323274
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0.06014174668495656
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0.08339506172839509
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0.10261545496113396
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0.11818701417466852
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0.13049382716049385
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0.13991998171010517
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0.1468495656149977
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0.15166666666666667
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0.15475537265660724
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0.15649977137631457
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0.15728395061728398
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0.15749199817101056
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.0333333333333334,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.0666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.1,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.1333333333333333,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.1666666666666667,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.2,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.2333333333333334,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.2666666666666666,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.3,
+          "distance_m": 0.1575
+        },
+        {
+          "time": 1.3333333333333333,
+          "distance_m": 0.1575
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": null
+    },
+    "SprintProne": {
+      "clips": [
+        "TC_SprintProne_Lower",
+        "TC_SprintProne_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0.11395134779750164
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0.21622616699539782
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0.3074556213017752
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0.38827087442472064
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0.4593030900723209
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0.5211834319526628
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0.574543063773833
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0.6200131492439186
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0.6582248520710059
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0.6898093359631823
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0.7153977646285339
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0.7356213017751481
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0.7511111111111112
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0.7624983563445102
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0.7704142011834321
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0.7754898093359633
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0.7783563445101908
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0.7796449704142012
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0.7799868507560815
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0.78
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.0333333333333334,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.0666666666666667,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.1,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.1333333333333333,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.1666666666666667,
+          "distance_m": 0.78
+        },
+        {
+          "time": 1.2,
+          "distance_m": 0.78
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": null
+    },
+    "ProneCrouch": {
+      "clips": [
+        "TC_ProneCrouch_Lower",
+        "TC_ProneCrouch_Upper"
+      ],
+      "duration": 1.8,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.8,
+          "distance_m": 0
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": {
+        "left_release_phase": [
+          0.05,
+          0.12
+        ],
+        "left_plant_phase": [
+          0.12,
+          0.2
+        ],
+        "left_return_phase": [
+          0.2,
+          0.34
+        ],
+        "right_grip": "continuous"
+      }
+    },
+    "ProneStand": {
+      "clips": [
+        "TC_ProneStand_Lower",
+        "TC_ProneStand_Upper"
+      ],
+      "duration": 2.6,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.0666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.1666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.2666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.3666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.4666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.6666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 1.7666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 1.8,
+          "distance_m": 0
+        },
+        {
+          "time": 1.8333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1.9,
+          "distance_m": 0
+        },
+        {
+          "time": 1.9333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 1.9666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 2,
+          "distance_m": 0
+        },
+        {
+          "time": 2.033333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 2.066666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 2.1,
+          "distance_m": 0
+        },
+        {
+          "time": 2.1333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 2.1666666666666665,
+          "distance_m": 0
+        },
+        {
+          "time": 2.2,
+          "distance_m": 0
+        },
+        {
+          "time": 2.2333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 2.2666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 2.3,
+          "distance_m": 0
+        },
+        {
+          "time": 2.3333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 2.3666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 2.4,
+          "distance_m": 0
+        },
+        {
+          "time": 2.433333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 2.466666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 2.5,
+          "distance_m": 0
+        },
+        {
+          "time": 2.533333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 2.566666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 2.6,
+          "distance_m": 0
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": {
+        "left_release_phase": [
+          0.05,
+          0.12
+        ],
+        "left_plant_phase": [
+          0.12,
+          0.2
+        ],
+        "left_return_phase": [
+          0.2,
+          0.34
+        ],
+        "right_grip": "continuous"
+      }
+    },
+    "StandCrouch": {
+      "clips": [
+        "TC_StandCrouch_Lower",
+        "TC_StandCrouch_Upper"
+      ],
+      "duration": 0.9,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": null
+    },
+    "CrouchStand": {
+      "clips": [
+        "TC_CrouchStand_Lower",
+        "TC_CrouchStand_Upper"
+      ],
+      "duration": 1,
+      "loop": false,
+      "speed_mps": 0,
+      "travel_samples_m": [
+        {
+          "time": 0,
+          "distance_m": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.1,
+          "distance_m": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.2,
+          "distance_m": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3,
+          "distance_m": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4,
+          "distance_m": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "distance_m": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.7666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8333333333333334,
+          "distance_m": 0
+        },
+        {
+          "time": 0.8666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9333333333333333,
+          "distance_m": 0
+        },
+        {
+          "time": 0.9666666666666667,
+          "distance_m": 0
+        },
+        {
+          "time": 1,
+          "distance_m": 0
+        }
+      ],
+      "requires_entry_phase": 0,
+      "support_hand_plant": null
+    },
+    "CoverIdle": {
+      "clips": [
+        "TC_CoverIdle_Lower",
+        "TC_CoverIdle_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverAimLeft": {
+      "clips": [
+        "TC_CoverAimLeft_Lower",
+        "TC_CoverAimLeft_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverAimRight": {
+      "clips": [
+        "TC_CoverAimRight_Lower",
+        "TC_CoverAimRight_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverFireLeft": {
+      "clips": [
+        "TC_CoverFireLeft_Lower",
+        "TC_CoverFireLeft_Upper"
+      ],
+      "duration": 0.6,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverFireRight": {
+      "clips": [
+        "TC_CoverFireRight_Lower",
+        "TC_CoverFireRight_Upper"
+      ],
+      "duration": 0.6,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverAboveAim": {
+      "clips": [
+        "TC_CoverAboveAim_Lower",
+        "TC_CoverAboveAim_Upper"
+      ],
+      "duration": 2.4,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverAboveFire": {
+      "clips": [
+        "TC_CoverAboveFire_Lower",
+        "TC_CoverAboveFire_Upper"
+      ],
+      "duration": 0.6,
+      "loop": true,
+      "speed_mps": 0,
+      "cover_anchor": {
+        "forward_m": 1.3,
+        "height_m": 1.3,
+        "corner_edge_x_m": 0.12
+      }
+    },
+    "CoverEnter": {
+      "clips": [
+        "TC_CoverEnter_Lower",
+        "TC_CoverEnter_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverExit": {
+      "clips": [
+        "TC_CoverExit_Lower",
+        "TC_CoverExit_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverLeanLeft": {
+      "clips": [
+        "TC_CoverLeanLeft_Lower",
+        "TC_CoverLeanLeft_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverLeanRight": {
+      "clips": [
+        "TC_CoverLeanRight_Lower",
+        "TC_CoverLeanRight_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverReturnLeft": {
+      "clips": [
+        "TC_CoverReturnLeft_Lower",
+        "TC_CoverReturnLeft_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverReturnRight": {
+      "clips": [
+        "TC_CoverReturnRight_Lower",
+        "TC_CoverReturnRight_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverRise": {
+      "clips": [
+        "TC_CoverRise_Lower",
+        "TC_CoverRise_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    },
+    "CoverLower": {
+      "clips": [
+        "TC_CoverLower_Lower",
+        "TC_CoverLower_Upper"
+      ],
+      "duration": 1.2,
+      "loop": false,
+      "speed_mps": 0,
+      "requires_entry_phase": 0
+    }
+  },
+  "aiBindings": null,
+  "coordinates": {
+    "source": "metres; Z up; forward -Y",
+    "gltf": "metres; Y up; forward +Z"
+  },
+  "transitions": [
+    [
+      "SprintNew",
+      "SprintProne",
+      "ProneToCrawl",
+      "CrawlForward",
+      "CrawlToProneAim",
+      "ProneAim",
+      "ProneFire",
+      "ProneStand"
+    ],
+    [
+      "StandCrouch",
+      "CrouchIdle",
+      "CrouchWalk"
+    ],
+    [
+      "CoverEnter",
+      "CoverLeanLeft",
+      "CoverAimLeft",
+      "CoverFireLeft",
+      "CoverReturnLeft"
+    ],
+    [
+      "CoverEnter",
+      "CoverLeanRight",
+      "CoverAimRight",
+      "CoverFireRight",
+      "CoverReturnRight"
+    ],
+    [
+      "CoverRise",
+      "CoverAboveAim",
+      "CoverAboveFire",
+      "CoverLower"
+    ],
+    [
+      "CoverExit",
+      "Idle",
+      "SprintStartNew",
+      "SprintNew"
+    ]
+  ],
+  "models": {
+    "USMC": "models/USMC_Tactical.glb",
+    "Russian": "models/Russian_Tactical.glb"
+  }
+}

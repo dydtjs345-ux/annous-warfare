@@ -4,3 +4,9 @@ dist/
 
 dist-infantry/
 public/assets/infantry-test/*.png
+
+.cache/tactical-source/
+assets-3d/tactical-combat/source/*.blend1
+assets-3d/tactical-combat/source/*.blend2
+assets-3d/tactical-combat/review/*-phase-*.png
+assets-3d/tactical-combat/tools/__pycache__/

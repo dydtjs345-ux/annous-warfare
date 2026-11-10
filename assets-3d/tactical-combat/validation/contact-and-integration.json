@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "contacts": [
+    {
+      "faction": "USMC",
+      "clip": "CrawlForward",
+      "maxPlantedFootForwardDriftM": 1.249313353324233e-7,
+      "jointMotionRangesM": {
+        "root": 0.04399999976158142,
+        "lowerarm01.L": 0.08850301802158356,
+        "lowerarm01.R": 0.10452522337436676,
+        "wrist.L": 0.14580721408128738,
+        "wrist.R": 0.14580725133419037
+      }
+    },
+    {
+      "faction": "USMC",
+      "clip": "CrawlBackward",
+      "maxPlantedFootForwardDriftM": 1.7595291146310643e-7,
+      "jointMotionRangesM": {
+        "root": 0.04399999976158142,
+        "lowerarm01.L": 0.08850301802158356,
+        "lowerarm01.R": 0.10452522337436676,
+        "wrist.L": 0.14580721408128738,
+        "wrist.R": 0.14580725133419037
+      }
+    },
+    {
+      "faction": "USMC",
+      "clip": "CrouchWalk",
+      "maxPlantedFootForwardDriftM": 4.6193599723132195e-8,
+      "jointMotionRangesM": {
+        "root": 0.035999998450279236,
+        "lowerarm01.L": 0.031254373490810394,
+        "lowerarm01.R": 0.02275511622428894,
+        "wrist.L": 0.035999929532408714,
+        "wrist.R": 0.03599996864795685
+      }
+    },
+    {
+      "faction": "Russian",
+      "clip": "CrawlForward",
+      "maxPlantedFootForwardDriftM": 1.249313353324233e-7,
+      "jointMotionRangesM": {
+        "root": 0.04399999976158142,
+        "lowerarm01.L": 0.11262819916009903,
+        "lowerarm01.R": 0.10546699166297913,
+        "wrist.L": 0.15470582991838455,
+        "wrist.R": 0.15470570046454668
+      }
+    },
+    {
+      "faction": "Russian",
+      "clip": "CrawlBackward",
+      "maxPlantedFootForwardDriftM": 1.7595291146310643e-7,
+      "jointMotionRangesM": {
+        "root": 0.04399999976158142,
+        "lowerarm01.L": 0.11262819916009903,
+        "lowerarm01.R": 0.10546699166297913,
+        "wrist.L": 0.15470582991838455,
+        "wrist.R": 0.15470570046454668
+      }
+    },
+    {
+      "faction": "Russian",
+      "clip": "CrouchWalk",
+      "maxPlantedFootForwardDriftM": 4.6193599723132195e-8,
+      "jointMotionRangesM": {
+        "root": 0.035999998450279236,
+        "lowerarm01.L": 0.03292837738990784,
+        "lowerarm01.R": 0.02205798029899597,
+        "wrist.L": 0.03609119914472103,
+        "wrist.R": 0.036091044545173645
+      }
+    }
+  ],
+  "workingIntegrationCommit": "ceffb85",
+  "protectedIntegrationFiles": "unchanged",
+  "liveGameOrAIOrMapChanged": false,
+  "notes": "Flat-ground source plant checks. Does not establish arbitrary-phase interruption or terrain IK."
+}
