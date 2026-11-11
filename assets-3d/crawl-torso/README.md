@@ -2,6 +2,8 @@
 
 Feature branch: `feat/crawl-torso-weight-transfer`, based on `e94ec93`. Only the existing forward-crawl pair is replaced in separate asset copies for both USMC/M16A4 and Russian/AK-74M. All prior assets remain intact.
 
+Verified public three-way preview: [side view](https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/crawl-torso-review/?view=side) · [rear three-quarter view](https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/crawl-torso-review/?view=rear). Animation/source commit: `dd525edcd8ff6cf923903173e85dac138b9e7740`.
+
 ## Diagnosis before editing
 
 The previous **exported** pelvis/root, lumbar, thoracic, chest, clavicle and shoulder tracks were inspected in actual browser playback. They are present and applied correctly: source/browser positions agree within 0.0014 mm, independently sampled quaternion/position tracks agree with the mixer, both layers have full weight, and their bindings do not overlap.
@@ -29,7 +31,7 @@ Each comparison shows **original crawl**, **previous revised crawl**, and **new 
 
 The Korean preview uses one WebGL renderer and shared model geometry/textures. Optional markers show the real pelvic, spine and contact positions; they do not affect animation. On narrow screens the full comparison can scroll horizontally. Normal-speed MP4 recordings provide an alternate review path.
 
-The original preview and previous `/crawl-review/` comparison are preserved. The new page is packaged for a separate `/crawl-torso-review/` path; public deployment details will be recorded after verification.
+The original preview and previous `/crawl-review/` comparison are preserved. Sites version 14 deployed successfully at the separate `/crawl-torso-review/` path. Anonymous HTTPS checks verified all 118 public runtime files against the packaged build, including side/rear query URLs. All 108 prior public preview files, previous comparison routes and both protected game entry points retained their original hashes. See [validation/deployment.json](validation/deployment.json).
 
 ## Assets and validation
 
@@ -46,9 +48,11 @@ The pose diagnostics confirm the intended support-side trunk projection. Rib-cag
 
 Evidence is in `validation/*-before-source.json`, `before-playback.json`, `*-mechanics.json`, `*-source.json`, `assets.json`, and `browser.json`.
 
+Final review checks confirm that camera frustum aspect matches each viewport, all three camera/projection matrices are identical, and action times and assembly translations match exactly in both views. Normal/half-speed video, frame step, scrubbing, markers and a horizontally scrollable 390 px phone layout pass Chromium checks without page/WebGL errors. Final side/rear frame sequences were visually inspected for both factions.
+
 ## Preserved scope and limits
 
-Original crawl and previous revised crawl are retained unchanged. Sprint, aim, fire, reload and all other clips are unchanged. No game, map, combat AI, live deployment or tactical AI state binding is changed. Entry/aim transition clips retain their prior endpoints and need their own review before enabling the new crawl in gameplay.
+Original crawl and previous revised crawl are retained unchanged. Sprint, aim, fire, reload and all other clips are unchanged. No game, map, combat AI, live game deployment or tactical AI state binding is changed. Entry/aim transition clips retain their prior endpoints and need their own review before enabling the new crawl in gameplay.
 
 This remains a level-ground authored animation candidate. Support weights and trunk markers describe the intended motion; they are not a rigid-body force or true center-of-mass simulation. Terrain adaptation, full equipment/self-collision certification and physical iPhone Safari playback are not certified by these checks.
 
