@@ -1,0 +1,28 @@
+{
+  "baseCommit": "e94ec933afeb06cf803f414e6bd839df1a6122af",
+  "modifiedExistingTrackedPaths": [],
+  "preservedOriginalAndPreviousModels": [
+    {
+      "file": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+      "sha256": "112592f71ac7650c722b0f119b645b3bfea8578f9c42482ab2d25c980aa30fef"
+    },
+    {
+      "file": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+      "sha256": "46d44c1bbdf59108456bca85d1304b7c07f945b4a9657ecc8c1fe6834817cc46"
+    },
+    {
+      "file": "assets-3d/crawl-rework/models/USMC_CrawlRework.glb",
+      "sha256": "ba83e920f4896cd38b2dbfadbb2a37f89b1d73946f6ecef7c71c68a10c5e80e9"
+    },
+    {
+      "file": "assets-3d/crawl-rework/models/Russian_CrawlRework.glb",
+      "sha256": "ef1a958db96d7a5890991def1017103845fe3cbfdb9b7d50ffdab806959bc0e0"
+    }
+  ],
+  "changedClipNames": [
+    "TC_CrawlForward_Lower",
+    "TC_CrawlForward_Upper"
+  ],
+  "newClipNames": [],
+  "gameAiMapAndExistingPreviewUnchanged": true
+}

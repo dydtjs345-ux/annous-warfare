@@ -1,0 +1,404 @@
+{
+  "scope": "Previous revised crawl: exported tracks evaluated in the existing comparison player, before authoring changes.",
+  "factions": [
+    {
+      "faction": "USMC",
+      "maxSourcePositionErrorM": 0.0000013376629321067083,
+      "maxKeyPositionErrorM": 1.3505843837120953e-8,
+      "maxKeyQuaternionErrorDeg": 0.000004829673078902933,
+      "overlap": [],
+      "trackInventory": [
+        {
+          "name": "root.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 73
+        },
+        {
+          "name": "root.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 73
+        },
+        {
+          "name": "root.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "spine05.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine05.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine05.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine04.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine04.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine04.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine03.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine03.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine03.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine02.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine02.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine02.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine01.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine01.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine01.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "clavicleL.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleL.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleL.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "clavicleR.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleR.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleR.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        }
+      ],
+      "active": [
+        {
+          "name": "TC_CrawlForward_Lower",
+          "weight": 1
+        },
+        {
+          "name": "TC_CrawlForward_Upper",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "faction": "Russian",
+      "maxSourcePositionErrorM": 0.0000013376629321067083,
+      "maxKeyPositionErrorM": 1.3505843837120953e-8,
+      "maxKeyQuaternionErrorDeg": 0.000004829673078902933,
+      "overlap": [],
+      "trackInventory": [
+        {
+          "name": "root.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 73
+        },
+        {
+          "name": "root.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 73
+        },
+        {
+          "name": "root.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisL.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.position",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.quaternion",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "pelvisR.scale",
+          "layer": "TC_CrawlForward_Lower",
+          "keys": 2
+        },
+        {
+          "name": "spine05.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine05.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine05.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine04.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine04.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine04.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine03.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine03.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine03.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine02.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine02.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine02.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine01.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "spine01.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "spine01.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "clavicleL.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleL.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleL.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01L.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "clavicleR.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleR.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 73
+        },
+        {
+          "name": "clavicleR.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.position",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.quaternion",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        },
+        {
+          "name": "shoulder01R.scale",
+          "layer": "TC_CrawlForward_Upper",
+          "keys": 2
+        }
+      ],
+      "active": [
+        {
+          "name": "TC_CrawlForward_Lower",
+          "weight": 1
+        },
+        {
+          "name": "TC_CrawlForward_Upper",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

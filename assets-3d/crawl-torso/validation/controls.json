@@ -1,0 +1,24 @@
+{
+  "browser": "Chromium; desktop and 390px phone layout",
+  "physicalIPhone": false,
+  "errors": [],
+  "scrubAndFrameStep": true,
+  "rearCameraElevationDeg": 29.999999999999996,
+  "cameraAspects": {
+    "viewport": 1.1111111111111112,
+    "frustums": [
+      1.1111111111111112,
+      1.1111111111111112,
+      1.1111111111111112
+    ]
+  },
+  "contactMarkers": true,
+  "halfSpeedVideo": true,
+  "normalSpeedVideo": true,
+  "phoneLayout": {
+    "viewport": 390,
+    "document": 390,
+    "actors": 3,
+    "webglError": 0
+  }
+}
