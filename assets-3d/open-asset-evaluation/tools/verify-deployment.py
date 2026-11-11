@@ -2,7 +2,7 @@
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote
-import subprocess,tempfile,hashlib,json
+import subprocess,tempfile,hashlib,json,re
 ROOT=Path(__file__).resolve().parents[1];DIST=Path('/workspace/sites/infantry-tactical-preview/dist');SITE='https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/'
 def sha(b):return hashlib.sha256(b).hexdigest()
 before=json.loads(Path('/workspace/open-asset-site-before.json').read_text())
@@ -23,5 +23,5 @@ for name,url in [('live-game','https://dydtjs345-ux.github.io/annous-warfare/'),
  actual=fetch(url);old=Path(f'/workspace/open-asset-downloads/{name}-before.html').read_bytes();assert actual==old,name;protected.append({'url':url,'sha256':sha(actual),'unchanged':True})
 video=next(p for p in files if 'open-asset-review/recordings/'in str(p));relative=str(video.relative_to(DIST))
 with tempfile.TemporaryDirectory()as tmp:
- head=Path(tmp)/'headers';body=Path(tmp)/'body';subprocess.run(['curl','-LfsS','--max-time','30','--range','0-127','-D',str(head),'-o',str(body),SITE+quote(relative)],check=True);headers=head.read_text();assert '206' in headers;assert body.read_bytes()==video.read_bytes()[:128];assert 'video/mp4'in headers.lower();rangeCheck={'path':relative,'status':206,'bytes':128,'mime':'video/mp4'}
+ head=Path(tmp)/'headers';body=Path(tmp)/'body';subprocess.run(['curl','-LfsS','--max-time','30','--range','0-127','-D',str(head),'-o',str(body),SITE+quote(relative)],check=True);headers=head.read_text();status=int(re.findall(r'HTTP/[^ ]+ (\d+)',headers)[-1]);assert status in [200,206];assert body.read_bytes()==(video.read_bytes()[:128]if status==206 else video.read_bytes());assert 'video/mp4'in headers.lower();rangeCheck={'path':relative,'status':status,'rangeSupported':status==206,'bytes':len(body.read_bytes()),'mime':'video/mp4','fallback':'Full short MP4 fetched into local Blob; static image comparison also available. Browser playback unverified.'}
 x={'site':SITE,'comparison':SITE+'open-asset-review/','anonymousVerifiedFiles':len(checks),'previousPreviewFilesPreserved':len(before),'queryUrls':queries,'protectedGameBuilds':protected,'videoRangeRequest':rangeCheck,'physicalSafari':False,'browserQA':False,'files':checks};(ROOT/'validation/deployment-http.json').write_text(json.dumps(x,indent=2)+'\n');print({k:v for k,v in x.items()if k!='files'})
