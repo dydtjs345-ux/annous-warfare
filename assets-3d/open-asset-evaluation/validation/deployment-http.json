@@ -1,0 +1,815 @@
+{
+  "site": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/",
+  "comparison": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/open-asset-review/",
+  "anonymousVerifiedFiles": 156,
+  "previousPreviewFilesPreserved": 119,
+  "queryUrls": [
+    "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/open-asset-review/?view=side&faction=USMC&action=walk",
+    "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/open-asset-review/?view=iso&faction=Russian&action=sprint",
+    "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/open-asset-review/?action=crawl"
+  ],
+  "protectedGameBuilds": [
+    {
+      "url": "https://dydtjs345-ux.github.io/annous-warfare/",
+      "sha256": "dd18bd9ccd543f4d95dbd8acbe7d5eb1e47f6011b93b8df22ff94a30f2c273cc",
+      "unchanged": true
+    },
+    {
+      "url": "https://autonomous-warfare-infantry-combat-test.companionablejellyfish2.chatgpt.site/",
+      "sha256": "6a050fc31fe0291174e4ebcd45e1899873de597596eef6edf264501b9ff10600",
+      "unchanged": true
+    }
+  ],
+  "videoRangeRequest": {
+    "path": "open-asset-review/recordings/Russian-walk-iso.mp4",
+    "status": 200,
+    "rangeSupported": false,
+    "bytes": 659965,
+    "mime": "video/mp4",
+    "fallback": "Full short MP4 fetched into local Blob; static image comparison also available. Browser playback unverified."
+  },
+  "physicalSafari": false,
+  "browserQA": false,
+  "files": [
+    {
+      "path": "architecture.json",
+      "sha256": "00245c3a007c80e7767d6acaecbeca50a8577f95f051b3c38da38b1443a5f58a",
+      "bytes": 320799
+    },
+    {
+      "path": "moving-fire.mp4",
+      "sha256": "72e1c85f2378debef766ed701e6f5fb29222fbe47722203f2d586fb771f0d978",
+      "bytes": 417405
+    },
+    {
+      "path": "source.json",
+      "sha256": "e7cfb28accce2b806e08e6ab17dd058cc41568abb5cf3a1b686376aa76db37f3",
+      "bytes": 1695
+    },
+    {
+      "path": "sprint-report.html",
+      "sha256": "f850778071bd6d60ea25a77308def2cc02c6408af7acf2e2cc7b01c9272adb2f",
+      "bytes": 10454
+    },
+    {
+      "path": "app.js",
+      "sha256": "0dde33cd09b31e4067eaf173c4dc8689210266137968631e912cb1291c70e124",
+      "bytes": 672935
+    },
+    {
+      "path": "tactical-source.json",
+      "sha256": "2537e2fad343146fc3de0e8c62cc23e2394cf003d62ed96ed6b8b9ee6f140e5d",
+      "bytes": 566
+    },
+    {
+      "path": "diagnostic-report.html",
+      "sha256": "47819f6dc0b0567a47fabcd1af27855c5f7a7903102b72673585f8cfc10e2abf",
+      "bytes": 22707
+    },
+    {
+      "path": "index.html",
+      "sha256": "ee88d89da4e083ddc6921a6003aa0b7a3c012e371338bded0044417582c0096d",
+      "bytes": 19361
+    },
+    {
+      "path": "style.css",
+      "sha256": "80efbc80f8263f058d9d9eeab567eb79504fcf00360339500917a1de07e8bac5",
+      "bytes": 5259
+    },
+    {
+      "path": "LICENSE-three.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "bytes": 1081
+    },
+    {
+      "path": "poster.png",
+      "sha256": "a9ade3dd9d85c4590848eda88dd669a0f40171e3478cb1be8a6c2ee360adeb7b",
+      "bytes": 314139
+    },
+    {
+      "path": "sprint-diagnostics/after-source.json",
+      "sha256": "7c3811ec21d6f8e4b3c7f2410aee3f02f247b5b2153099123cb99c4531bb826c",
+      "bytes": 425718
+    },
+    {
+      "path": "sprint-diagnostics/export-integrity.json",
+      "sha256": "c35dd14b39ced5b03871f77bc563999e18041d5f6178d57b4c36bbe477dabe5f",
+      "bytes": 7494
+    },
+    {
+      "path": "sprint-diagnostics/USMC-authored.json",
+      "sha256": "8c0ede74fae29aa1355bd08eb045e60849c7d001413c18a12c85a8cffb623dd3",
+      "bytes": 380858
+    },
+    {
+      "path": "sprint-diagnostics/grip-validation.json",
+      "sha256": "7c6607a75e813cb4a9cb41ee6f8c7731530ba176927f38c2f6f50248d02eb35a",
+      "bytes": 2062
+    },
+    {
+      "path": "sprint-diagnostics/source-action-preservation.json",
+      "sha256": "5d91b0ba65d8e2f391083e417dc476eec0aefd2700e2b6e86098fd50aa675bd2",
+      "bytes": 223
+    },
+    {
+      "path": "sprint-diagnostics/before-source.json",
+      "sha256": "76f6ba343dcc2f111475110e6eff886c0f5e7788d1a6807e1f38990df3ee909c",
+      "bytes": 510460
+    },
+    {
+      "path": "sprint-diagnostics/Russian-authored.json",
+      "sha256": "9a46e407e2a75016e29a2d6ec9ff0dcef398a2c4403e730b35cbb6595126f116",
+      "bytes": 380855
+    },
+    {
+      "path": "sprint-diagnostics/video-validation.json",
+      "sha256": "cd88758f8e7dc4a5d719ac9db9d774070b5d9c4360e68bffbdba6e23aaefc8cd",
+      "bytes": 1107
+    },
+    {
+      "path": "sprint-diagnostics/source-and-reimport.json",
+      "sha256": "06dc731dc23d0dddd7274e7847938de174e7b7982ce79df53607897d9472b033",
+      "bytes": 8352
+    },
+    {
+      "path": "sprint-diagnostics/runtime-contracts.json",
+      "sha256": "b5b7df930f675c9d7cf54f58396df2245d0c7d0732c56e0ae0798c6f45753b62",
+      "bytes": 1853
+    },
+    {
+      "path": "sprint-diagnostics/browser-before.json",
+      "sha256": "439f996dc8d1381e0e249d6c740e9b38709a9429fa11c6313acf3a578dcd4104",
+      "bytes": 75098
+    },
+    {
+      "path": "sprint-diagnostics/source-stats.json",
+      "sha256": "628c130fdefdefae1b875176cb0dffcdd0b7c37d515bf6342509175e19a6d41b",
+      "bytes": 6801
+    },
+    {
+      "path": "sprint-diagnostics/browser-after.json",
+      "sha256": "1c44056cce27426d226da1b7df4585092bb19fa465dbf1a55e26feeef0e934e8",
+      "bytes": 300503
+    },
+    {
+      "path": "sprint-diagnostics/bone-transform-ranges.json",
+      "sha256": "b3fa64dda107ba64f395829e0db0c245099e4ab90494f99cd9607525878d95c9",
+      "bytes": 25511
+    },
+    {
+      "path": "crawl-review/app.js",
+      "sha256": "8aebb5c96442a41b3d7f453be0d245b159d00cd49a02e709501491d60b0d9445",
+      "bytes": 581386
+    },
+    {
+      "path": "crawl-review/index.html",
+      "sha256": "6562000ea2d493ac874db4a3c08c4762f52322dee7609d74ac70708d831f83a3",
+      "bytes": 2463
+    },
+    {
+      "path": "crawl-review/manifest.json",
+      "sha256": "5182fdbb65fb3befa5241110c7bf5f757eea53c518282e8d85a5efe426bf573a",
+      "bytes": 1033
+    },
+    {
+      "path": "crawl-review/reference-study.html",
+      "sha256": "a5e6e4fd00123f91e61fd8a5da005dd76d0e517855780b685622dc5e8ab87cac",
+      "bytes": 3048
+    },
+    {
+      "path": "crawl-review/style.css",
+      "sha256": "27d565cbc4d5caac70df0002f2e9aa8421eac732a5b8a8d365152a7c72b2818c",
+      "bytes": 1026
+    },
+    {
+      "path": "sprint-review/USMC-travel.mp4",
+      "sha256": "5af5bfd26277b2b0755facccf1a490ba3c8c689a285fc8a2d7e2e9b7771b4305",
+      "bytes": 179074
+    },
+    {
+      "path": "sprint-review/USMC-travel.png",
+      "sha256": "48d461eb67589d5a0bd20fbeb245203060328f50c852881b3a34a74f57fcb949",
+      "bytes": 254545
+    },
+    {
+      "path": "sprint-review/Russian-sprint-normal.mp4",
+      "sha256": "791a908473c94fa6809f55b92d3865539d06521f3052b6f02fd803aaa45b91e0",
+      "bytes": 629050
+    },
+    {
+      "path": "sprint-review/Russian-sprint.png",
+      "sha256": "77fd112e5f7b6e8bfd1b1e90c2b17d0530240b782660e45e3bd8bed345cb19b3",
+      "bytes": 437647
+    },
+    {
+      "path": "sprint-review/USMC-sprint-slow.mp4",
+      "sha256": "b130045799a31c04413a6b57fbbdcbf677ff217ef1fa1828be9c165b6f6f5678",
+      "bytes": 809518
+    },
+    {
+      "path": "sprint-review/USMC-sprint.png",
+      "sha256": "653f7e54d7efd1449fd08ab90f76f3e8ae51a8ee94169ad259392025ed93ee77",
+      "bytes": 444540
+    },
+    {
+      "path": "sprint-review/Russian-sprint-slow.mp4",
+      "sha256": "08094598cd9a1ce1df0c6f844fdbaa01b165f0ccf1f964b9296d6c80c2d8985b",
+      "bytes": 778185
+    },
+    {
+      "path": "sprint-review/final-public-front.mp4",
+      "sha256": "931a0390305e686d408a8d6651d843368e5f0ea5bf91ea9e9da0ed5a5a0f0ac1",
+      "bytes": 1039906
+    },
+    {
+      "path": "sprint-review/Russian-travel.png",
+      "sha256": "5980dd6d77210eeeda0a635564810fc2dc432e3a32cfcdcafdcdf8f988728235",
+      "bytes": 253798
+    },
+    {
+      "path": "sprint-review/USMC-sprint-normal.mp4",
+      "sha256": "01527086946f0abcb34dc345d7ce3d28d0ef793fcfda9b2e1b95697dafa7e696",
+      "bytes": 645725
+    },
+    {
+      "path": "sprint-review/Russian-travel.mp4",
+      "sha256": "bded61da0f3f1656273702733e59fcc49f399c6d8023dabfe7f3e72388b1d181",
+      "bytes": 171441
+    },
+    {
+      "path": "crawl-torso-review/app.js",
+      "sha256": "b413817cf3be37d0ad3ba77cda5be8e03585e2d26f786e412fde0e84349bb289",
+      "bytes": 581645
+    },
+    {
+      "path": "crawl-torso-review/index.html",
+      "sha256": "8e90286bb1161f58951780ae7abb81374d1b8cc7030c707804fe457f3eba3c0e",
+      "bytes": 2896
+    },
+    {
+      "path": "crawl-torso-review/manifest.json",
+      "sha256": "894f26d9aeefaccc7a0829aa832b320879b72d85ae9a53b419e9459f351df158",
+      "bytes": 1447
+    },
+    {
+      "path": "crawl-torso-review/style.css",
+      "sha256": "6d6091592bf4172eb3b8db86c8ecdc8a4f039b11d86f66c850bc96ee63342da8",
+      "bytes": 1183
+    },
+    {
+      "path": "diagnostics/reimport.json",
+      "sha256": "e50e066da7f73ad0947461cf62195c3aed19711bdca6117a5f360fe1f4288326",
+      "bytes": 11921
+    },
+    {
+      "path": "diagnostics/export-integrity.json",
+      "sha256": "b4fd4c9dea7ebb457f75f3bc574b1dc7be4830f691baf47a5be514a4c92da068",
+      "bytes": 5586
+    },
+    {
+      "path": "diagnostics/reload-contact.json",
+      "sha256": "26afd2767273ed90b80282f70c147c621616bb6e9911777337f87f5232ccde14",
+      "bytes": 1513
+    },
+    {
+      "path": "diagnostics/after-pipeline.json",
+      "sha256": "4c6d897172744c259d95f0600d6ef3740b1477f9d2cc501c12556a6d9bdd1aa3",
+      "bytes": 673827
+    },
+    {
+      "path": "diagnostics/video-validation.json",
+      "sha256": "e52e07ec80a2329ce2b7e2ca79c40a657d5faaf17771ef466af6c89792cbdb10",
+      "bytes": 8592
+    },
+    {
+      "path": "diagnostics/source-inventory.json",
+      "sha256": "ee970fcbb2de8a0937c192dab8b6842d3293ecef837c44ca52472110b5a71244",
+      "bytes": 8003
+    },
+    {
+      "path": "diagnostics/runtime-contracts.json",
+      "sha256": "3edbe5017a80322403a30b4ecc29905592339f12587c11bd15a0132d6689b2b3",
+      "bytes": 1249
+    },
+    {
+      "path": "diagnostics/browser-before.json",
+      "sha256": "92e3706669b468027d9953ea28f6314cd8c325e1ae973afbdf56a7915ff93f4e",
+      "bytes": 3776
+    },
+    {
+      "path": "diagnostics/browser-after.json",
+      "sha256": "30b79df421760c195ac5d4dfe7e24a78dd9b4a39ca50a376b54d63bf12f7be9a",
+      "bytes": 264131
+    },
+    {
+      "path": "diagnostics/before-pipeline.json",
+      "sha256": "1d7ff73dfed4c8c64582e564b4c27d9cec76c32a4c3ca7c54095788ae548f86d",
+      "bytes": 652463
+    },
+    {
+      "path": "diagnostics/summary.json",
+      "sha256": "e4e26158377d604da025da3095e437f314a5687c0d9e8b0b051d96225611963e",
+      "bytes": 368623
+    },
+    {
+      "path": "open-asset-review/report.md",
+      "sha256": "e0c22556990b01bc8661ce10733800af0a84b215aa6e919eeae651f939ad16fa",
+      "bytes": 17609
+    },
+    {
+      "path": "open-asset-review/app.js",
+      "sha256": "06ac76a0debe85bf583d5f74f2f044d3bb4eac7d0819c820a9e3aa901f5064c1",
+      "bytes": 582749
+    },
+    {
+      "path": "open-asset-review/index.html",
+      "sha256": "096a7e96a1499785e09b7a304bc359eff1c57217e87e9e9e1fcc8d5c43755fa6",
+      "bytes": 4291
+    },
+    {
+      "path": "open-asset-review/manifest.json",
+      "sha256": "63bc1807d498ff940068897d82432b45229d307b5794ab85105559abb64f73c2",
+      "bytes": 4244
+    },
+    {
+      "path": "open-asset-review/style.css",
+      "sha256": "710e5b4d81ad79795d0df000734472e7d0b3e6fc52a614c03cff795bfe349f7b",
+      "bytes": 1263
+    },
+    {
+      "path": "body-review/USMC-MovingFire.png",
+      "sha256": "a9ade3dd9d85c4590848eda88dd669a0f40171e3478cb1be8a6c2ee360adeb7b",
+      "bytes": 314139
+    },
+    {
+      "path": "body-review/USMC-Reload.png",
+      "sha256": "584b7eda0f899977d87c3db9bc26c6ba6708649eb7eb28a6e58663fe4a6c221a",
+      "bytes": 310948
+    },
+    {
+      "path": "body-review/USMC-AimWalk.png",
+      "sha256": "65949d73c2d0d4819f92a09a5182b283e9b0ac697852bd2177c446a43e0bcf41",
+      "bytes": 314442
+    },
+    {
+      "path": "body-review/USMC-Walk.png",
+      "sha256": "267f021de1e0cbd1b802f66c702bf27d93aac3c40b03056f06a88cb654144e66",
+      "bytes": 315441
+    },
+    {
+      "path": "body-review/Russian-public-browser.mp4",
+      "sha256": "b2c48cb102cfc1641202dc04132e5436ac8bd1167d3c1089e595ca9e701a7d1f",
+      "bytes": 1880731
+    },
+    {
+      "path": "body-review/Russian-Sprint.png",
+      "sha256": "c1fe318cddc019c9370c80f088856dd55b77e198c9db238bb44fdc913b09393c",
+      "bytes": 305708
+    },
+    {
+      "path": "body-review/Russian-MovingFire.png",
+      "sha256": "2bef614d84dc19b2bd9f6397804f128eb2fb1452237a5f9b1b072c9c7bc610f4",
+      "bytes": 309783
+    },
+    {
+      "path": "body-review/Russian-Sprint.mp4",
+      "sha256": "7dac8dd675a6660d05e028ca2656a009912072bfbf5ee7854f92083fd1f1c4ba",
+      "bytes": 343531
+    },
+    {
+      "path": "body-review/Russian-Walk.png",
+      "sha256": "5767e5cde71c94bfc5aa11b0db2552bf8090e19d8e950424f98655e5741570f0",
+      "bytes": 310299
+    },
+    {
+      "path": "body-review/USMC-Reload.mp4",
+      "sha256": "9390e8dfb77c517f3a90f8500f4ee6c36c6aa24cbbf43155b552794b1befbccc",
+      "bytes": 327099
+    },
+    {
+      "path": "body-review/Russian-Reload.png",
+      "sha256": "049fb405aaeabc8f637b6589524c2275d598e05290d58aae68e4890e674268c2",
+      "bytes": 306154
+    },
+    {
+      "path": "body-review/Russian-Walk.mp4",
+      "sha256": "6f8e8accbf36e35464d41973c4c020a8ba38eba52e916da8432e464a1c743a4b",
+      "bytes": 327948
+    },
+    {
+      "path": "body-review/USMC-MovingFire.mp4",
+      "sha256": "72e1c85f2378debef766ed701e6f5fb29222fbe47722203f2d586fb771f0d978",
+      "bytes": 417405
+    },
+    {
+      "path": "body-review/Russian-AimWalk.mp4",
+      "sha256": "95b6cc7d0d15a98e428611d9ee7de723b002365dfb87721015cc6b76ce3d6a4b",
+      "bytes": 304631
+    },
+    {
+      "path": "body-review/Russian-Reload.mp4",
+      "sha256": "0259923994d46cfe4dc973cc4a45873ebf80bbc912a8e4994b7a23c327b3dddc",
+      "bytes": 335933
+    },
+    {
+      "path": "body-review/USMC-public-browser.mp4",
+      "sha256": "0bc546c609dc3855ae3659c191422538b89946e5d6a6ed46177b959f8c866c18",
+      "bytes": 1800348
+    },
+    {
+      "path": "body-review/Russian-MovingFire.mp4",
+      "sha256": "0e5a78cc33a1b55eb1624077b12c8f3426e80d95e0a52562fe1ca7551329df6c",
+      "bytes": 413828
+    },
+    {
+      "path": "body-review/USMC-Sprint.mp4",
+      "sha256": "b1f9755cc3a93b763e66b68b57ee28de171c5110b57903dba936b954302d2434",
+      "bytes": 348143
+    },
+    {
+      "path": "body-review/USMC-Walk.mp4",
+      "sha256": "5fe5a582ce57445d38246849d7da4b61561d0ff643e2863505fb755da2a61d99",
+      "bytes": 330541
+    },
+    {
+      "path": "body-review/USMC-Sprint.png",
+      "sha256": "cf908ff76e5ade7c620c3df7af630e86567fe0dc4bc98495f10672d42faea572",
+      "bytes": 311382
+    },
+    {
+      "path": "body-review/Russian-AimWalk.png",
+      "sha256": "3cfd808ac388791da1b007514260558f8beb3639e9d90c31ebc52f82bbaf4fc7",
+      "bytes": 309646
+    },
+    {
+      "path": "body-review/USMC-AimWalk.mp4",
+      "sha256": "2eeea42674f6c1fd5b3c937bcce429f5ff7f225fd68464588013efec3a795bbb",
+      "bytes": 309860
+    },
+    {
+      "path": "models/USMC_Tactical.112592f71ac7.glb",
+      "sha256": "112592f71ac7650c722b0f119b645b3bfea8578f9c42482ab2d25c980aa30fef",
+      "bytes": 15625036
+    },
+    {
+      "path": "models/Russian_Tactical.46d44c1bbdf5.glb",
+      "sha256": "46d44c1bbdf59108456bca85d1304b7c07f945b4a9657ecc8c1fe6834817cc46",
+      "bytes": 15785884
+    },
+    {
+      "path": "models/USMC_SprintReview.43556447081e.glb",
+      "sha256": "43556447081e389101d9b382e379ef9a4f9da554e62b39afbf5d91ab5952473b",
+      "bytes": 12542640
+    },
+    {
+      "path": "models/Russian_SprintReview.da9c7726b80f.glb",
+      "sha256": "da9c7726b80fbab6a327093082b2dfc24e77aefac3fb46d8459b83645a7c0d6c",
+      "bytes": 12700944
+    },
+    {
+      "path": "reload/Russian-slow.mp4",
+      "sha256": "0ad91915891a2c8c6deaf877174cb16078551392ee5b53ffe5192934766d84d3",
+      "bytes": 130078
+    },
+    {
+      "path": "reload/USMC-reload.json",
+      "sha256": "1036fc4eec62c46b480b40c21e548ef39ed648641c0e473a4beee34ec1062b16",
+      "bytes": 532172
+    },
+    {
+      "path": "reload/USMC-slow.mp4",
+      "sha256": "a28743c45ffbad94d07b882b556c8d7dab073b8aab074f5cbdbc1c20e746c081",
+      "bytes": 110104
+    },
+    {
+      "path": "reload/Russian-normal.mp4",
+      "sha256": "4a77ab106db844d5b65abbe336a3b2f2281d9f637c0a207d106b92699b04a5e3",
+      "bytes": 71249
+    },
+    {
+      "path": "reload/USMC-poster.png",
+      "sha256": "4a67515e9893475be7851dc6aab064c45a97671a94390f74feca601f014e92e7",
+      "bytes": 98460
+    },
+    {
+      "path": "reload/Russian-poster.png",
+      "sha256": "1da08d10c80ab18bef60f24e6e075f5b8bca630bfafa50cfe4191e21831faf3c",
+      "bytes": 95737
+    },
+    {
+      "path": "reload/USMC-normal.mp4",
+      "sha256": "d083e7aaba18491504d19b8b26e47811ae7b4ed1c6f1667e1752d1a9da2a3072",
+      "bytes": 75073
+    },
+    {
+      "path": "reload/Russian-reload.json",
+      "sha256": "33ef7d5b319ace17ef588f3df3c83a767177a4afdb7e61d1d276d493f47c0db5",
+      "bytes": 583293
+    },
+    {
+      "path": "tactical-review/Russian-tactical-poster.jpg",
+      "sha256": "defc03058cd335e3553473fb82764b036924bb0dfcb299e5fd58a1cbbec7c343",
+      "bytes": 65443
+    },
+    {
+      "path": "tactical-review/USMC-tactical-contact-sheet.jpg",
+      "sha256": "cdf707cf400e8738a6ba42d8f51b5ee1091954caa1df8031a87aa3532686fadb",
+      "bytes": 272431
+    },
+    {
+      "path": "tactical-review/Russian-tactical-demo.mp4",
+      "sha256": "8d84f7db5576e6e81727bc68480d4c0b8de821a3c6c67bec291624e342f17447",
+      "bytes": 521558
+    },
+    {
+      "path": "tactical-review/Russian-tactical-contact-sheet.jpg",
+      "sha256": "1bd44c0bea04bb5bf646c0474845be49de8a47fa339969e44e4c4b89a41f0471",
+      "bytes": 236506
+    },
+    {
+      "path": "tactical-review/USMC-tactical-demo.mp4",
+      "sha256": "b76801c081f326cd564f65f8508c906e01e48c2f04ec1d41dc6472359bd88b3f",
+      "bytes": 547930
+    },
+    {
+      "path": "tactical-review/USMC-tactical-poster.jpg",
+      "sha256": "7ded6560c2bf1ba39b11488b1247c4f26bf0fad547c4ee19f5c352f00ebca97b",
+      "bytes": 44639
+    },
+    {
+      "path": "crawl-review/reference/ref-2-frame-124.jpg",
+      "sha256": "6a4f16d0506e9a688f0f10a24c0dd6282d9b0cec650515a54d7a2fe3d6eb08ef",
+      "bytes": 18643
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-027.jpg",
+      "sha256": "31b8949a2edd368a89cb601ab03d6b103e26fa8d75f2b0a6845aa0cfd6a24e89",
+      "bytes": 71695
+    },
+    {
+      "path": "crawl-review/reference/ref-2-frame-132.jpg",
+      "sha256": "d55ae32e660f1324cffa256da47490ec325af3cc79e770428ab45fd558e28af2",
+      "bytes": 19853
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-018.jpg",
+      "sha256": "819dedb59e678c57257d48614089dfb65f3adaa986400275dbcc7cdc776a25b4",
+      "bytes": 61565
+    },
+    {
+      "path": "crawl-review/reference/ref-2-frame-116.jpg",
+      "sha256": "1d2db191c8cabb10ba68839e45d1e2157184bf29e026123f6875e7c497d99c4a",
+      "bytes": 17740
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-012.jpg",
+      "sha256": "00458cf5b5b20f148de104718e11f7949f5ee506d12622110ae434101990be3f",
+      "bytes": 57698
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-042.jpg",
+      "sha256": "a82524a3f7aa8b667edd88464c80ddc02f9925cf309d91e8f8949cc034e7f088",
+      "bytes": 55107
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-022.jpg",
+      "sha256": "161f3ca438a36662a42d0dd04ee519ad41854fb95713ce75a42877f994793ca4",
+      "bytes": 64650
+    },
+    {
+      "path": "crawl-review/reference/ref-2-frame-108.jpg",
+      "sha256": "e8e635b7a978a6270f73439c4b052a3d23f7446dde320ed6b0b22d66a0b5ff86",
+      "bytes": 18001
+    },
+    {
+      "path": "crawl-review/reference/ref-1-frame-033.jpg",
+      "sha256": "1f20f55c39a8b0f9953a02bf758c2697e88dd307dc63eed28ef726518e8be347",
+      "bytes": 57185
+    },
+    {
+      "path": "crawl-review/models/USMC_CrawlForward.94e4784af82b.glb",
+      "sha256": "94e4784af82b4a9d719e65aeb8fb93fe0b8c8e4e050f280067978b6391f4ff78",
+      "bytes": 144216
+    },
+    {
+      "path": "crawl-review/models/Russian_CrawlForward.d178e095d481.glb",
+      "sha256": "d178e095d481aa5d24a79007233c1e6b48cccd9e0d113f2d48b59ff44c5a6b6d",
+      "bytes": 145356
+    },
+    {
+      "path": "crawl-review/recordings/USMC-side.mp4",
+      "sha256": "84031d0cb83c631829aa0d0c2139a46926969ab7094ecbe41f459307029db34b",
+      "bytes": 542739
+    },
+    {
+      "path": "crawl-review/recordings/Russian-iso.mp4",
+      "sha256": "2eda76603ca5a4443211688355bfb6734e5bd1e4a2ad900148dfc415fad5fffe",
+      "bytes": 776682
+    },
+    {
+      "path": "crawl-review/recordings/Russian-side.mp4",
+      "sha256": "cc03928ff9fbf48608423f8577c2767447efad99488410dfccca8cae01e43ce7",
+      "bytes": 422373
+    },
+    {
+      "path": "crawl-review/recordings/USMC-iso.mp4",
+      "sha256": "9b2508567cd36d8ec86fc96c1955778740859c71b404aa2f038b23ddb4c75b3d",
+      "bytes": 892938
+    },
+    {
+      "path": "crawl-torso-review/models/USMC_CrawlForward.6cd88b18cf06.glb",
+      "sha256": "6cd88b18cf064d560c9c72b6b1c9bd153091119552b99c51ea684d91de91ee1d",
+      "bytes": 146540
+    },
+    {
+      "path": "crawl-torso-review/models/Russian_CrawlForward.1362ae5548b3.glb",
+      "sha256": "1362ae5548b36b32c03dc6e23726ab59816c02b34481af46752b2032debb842f",
+      "bytes": 147672
+    },
+    {
+      "path": "crawl-torso-review/recordings/Russian-rear.mp4",
+      "sha256": "4726411216db18cb721af933df3fc891d7a55c773db58a2d7217bc3ba13e3c5e",
+      "bytes": 1161614
+    },
+    {
+      "path": "crawl-torso-review/recordings/USMC-rear.mp4",
+      "sha256": "4cd5e00783b09fbd66662e57b3b2a099808d7b9f6490f89293efeeab6293f567",
+      "bytes": 1315104
+    },
+    {
+      "path": "crawl-torso-review/recordings/USMC-side.mp4",
+      "sha256": "f95f555bb38311fe99538016243e93c12a3302f00b6ee1ea44c0e5054e331e55",
+      "bytes": 823459
+    },
+    {
+      "path": "crawl-torso-review/recordings/Russian-side.mp4",
+      "sha256": "d80ad242a2aeb2615b7d02faa057fdfd5872c08c3dad2b4e5043ee9e908eb3e0",
+      "bytes": 648135
+    },
+    {
+      "path": "open-asset-review/images/Russian-sprint-iso-comparison.jpg",
+      "sha256": "080ed929b69d34d1b88d21ca3860480b05d5e817a33e1808890eb3d0afe927a8",
+      "bytes": 465073
+    },
+    {
+      "path": "open-asset-review/images/USMC-sprint-side-comparison.jpg",
+      "sha256": "3403f746f106c5c395b7edc19363032d9940bafb1935a9d9aad854aa1d17d0ae",
+      "bytes": 212508
+    },
+    {
+      "path": "open-asset-review/images/USMC-walk-iso-comparison.jpg",
+      "sha256": "ccb2af08e54beac80681f0a20b2e60532a073a8d450a2772876825c1b83189de",
+      "bytes": 430624
+    },
+    {
+      "path": "open-asset-review/images/Russian-walk-side-comparison.jpg",
+      "sha256": "057797ae70726c71ac6996ca00e970e5c338bc3fe9d6330a4b6429b505b90354",
+      "bytes": 200189
+    },
+    {
+      "path": "open-asset-review/images/USMC-walk-side-comparison.jpg",
+      "sha256": "84a4a4cecff674af87b8ff0ef39bc4587eccd250e61820a20939ddcce2db48ad",
+      "bytes": 203657
+    },
+    {
+      "path": "open-asset-review/images/Russian-walk-iso-comparison.jpg",
+      "sha256": "c8864374115308253d8e665acdeebeb207c984f2111f81a13dc9218f2b69155c",
+      "bytes": 435308
+    },
+    {
+      "path": "open-asset-review/images/Quaternius-Sprint_Loop-source.jpg",
+      "sha256": "dba406731f93c580b91687446fbaea85627ab5155dd9b6e9e109e0cb7b6cbd7d",
+      "bytes": 79615
+    },
+    {
+      "path": "open-asset-review/images/Quaternius-Walk_Loop-source.jpg",
+      "sha256": "f2a323cda691451a2d02218d9a2a8d93b03ea7201e43c59acc291e82f3ed0f94",
+      "bytes": 76350
+    },
+    {
+      "path": "open-asset-review/images/Russian-sprint-side-comparison.jpg",
+      "sha256": "9be8ba18f3e5ad9bda520781793d0957b1ac2e41849e32550e0cf7ed91be1a9b",
+      "bytes": 209484
+    },
+    {
+      "path": "open-asset-review/images/USMC-sprint-iso-comparison.jpg",
+      "sha256": "e727ceb481fc6e509217a27fa58541daccb5019423d3f62df8b3604d3ac2c0b5",
+      "bytes": 461511
+    },
+    {
+      "path": "open-asset-review/licenses/Sketchfab-redveil.json",
+      "sha256": "ce312a8e48d7d357ece890917095d52fa296569abf0604dc1a99c683ac2e8605",
+      "bytes": 1838
+    },
+    {
+      "path": "open-asset-review/licenses/Quaternius-UAL2-License.txt",
+      "sha256": "6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061",
+      "bytes": 332
+    },
+    {
+      "path": "open-asset-review/licenses/Sketchfab-danly.json",
+      "sha256": "5f9fe3e8a610359974923787a053fa670a25bbd9ebb222e06c5fda69117c768a",
+      "bytes": 1324
+    },
+    {
+      "path": "open-asset-review/licenses/Quaternius-UAL1-License.txt",
+      "sha256": "6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061",
+      "bytes": 332
+    },
+    {
+      "path": "open-asset-review/licenses/ATTRIBUTION.md",
+      "sha256": "56641e9393141b39810efca5ccc5a635af379aba98a170587a13f3320c9e9861",
+      "bytes": 3986
+    },
+    {
+      "path": "open-asset-review/licenses/PROVENANCE.json",
+      "sha256": "3a9395ff7082ef9efc1a56b33d652851ad46ae6aa9c3f528bba3ed7f62033e3f",
+      "bytes": 6554
+    },
+    {
+      "path": "open-asset-review/licenses/Quaternius-UAL2-README.txt",
+      "sha256": "ccd02718886b5a57f10f0a8911a38cfe10c36880e1d6dfa3445923fba32d2a72",
+      "bytes": 702
+    },
+    {
+      "path": "open-asset-review/licenses/Sketchfab-bamen.json",
+      "sha256": "403b9df86817c398462fa4eedcae7a370225a2983f7997c72188e250dcfb107d",
+      "bytes": 1664
+    },
+    {
+      "path": "open-asset-review/licenses/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    {
+      "path": "open-asset-review/licenses/Quaternius-UAL1-README.txt",
+      "sha256": "ccd02718886b5a57f10f0a8911a38cfe10c36880e1d6dfa3445923fba32d2a72",
+      "bytes": 702
+    },
+    {
+      "path": "open-asset-review/licenses/Quaternius-UAL1-OlderStandard-License.txt",
+      "sha256": "11eac7504a28077e9d8dbac8ddfca2566510efba7eef46e11f21cdd2bc96d4d5",
+      "bytes": 446
+    },
+    {
+      "path": "open-asset-review/licenses/Three-MIT.txt",
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+      "bytes": 1081
+    },
+    {
+      "path": "open-asset-review/licenses/Sketchfab-download-status.json",
+      "sha256": "dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862",
+      "bytes": 58
+    },
+    {
+      "path": "open-asset-review/models/USMC_QuaterniusSamples.02113ae9d18a.glb",
+      "sha256": "02113ae9d18a187edbf1cfbd586d496cd8b9f58d268402f2004880d8ca5fd670",
+      "bytes": 276788
+    },
+    {
+      "path": "open-asset-review/models/Russian_QuaterniusSamples.c60d13264367.glb",
+      "sha256": "c60d13264367d7f8f42e733e239cc2c5e3a8fa0977c469fb768500df806fbb83",
+      "bytes": 277928
+    },
+    {
+      "path": "open-asset-review/recordings/Russian-walk-iso.mp4",
+      "sha256": "45686b43882c0b84b0ddcb1588a9920f2d8e09035a4c099655f4f214b8a518b9",
+      "bytes": 659965
+    },
+    {
+      "path": "open-asset-review/recordings/USMC-sprint-iso.mp4",
+      "sha256": "c0d34df00ff9a03560fcbb2e12b46ab448a42445d9f5422e1617b8ffb3b9c4ad",
+      "bytes": 556896
+    },
+    {
+      "path": "open-asset-review/recordings/Russian-walk-side.mp4",
+      "sha256": "0e6070160f104f96adab016f3b099010ed5b0f15c09a6b4202476d5694840650",
+      "bytes": 305567
+    },
+    {
+      "path": "open-asset-review/recordings/USMC-sprint-side.mp4",
+      "sha256": "7642fdacfdbef61f131ae18e13b6d3c3f0e8d42bde4d6de6af5b19b578326c7a",
+      "bytes": 207196
+    },
+    {
+      "path": "open-asset-review/recordings/USMC-walk-iso.mp4",
+      "sha256": "1ccf4c47f526f7a925db9992ffea9c8b96750e44967f38231132c4fac176bef5",
+      "bytes": 658652
+    },
+    {
+      "path": "open-asset-review/recordings/Russian-sprint-side.mp4",
+      "sha256": "4402035e9e93a09767f4313306ed6d2c042d0fee792423e75a8a74150e54e794",
+      "bytes": 195957
+    },
+    {
+      "path": "open-asset-review/recordings/Russian-sprint-iso.mp4",
+      "sha256": "a2e52ce34b89b781394af0972b6fb1a6195c050b46ad962702f495e6cc76ead9",
+      "bytes": 552577
+    },
+    {
+      "path": "open-asset-review/recordings/USMC-walk-side.mp4",
+      "sha256": "64d4b78f26dbfdc01101d6d231acbd448f43809918073aabeca7f80799cd188c",
+      "bytes": 340397
+    }
+  ]
+}
