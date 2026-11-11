@@ -1,0 +1,210 @@
+[
+  {
+    "file": "USMC-walk-side.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "pixelFormat": "yuv420p",
+    "sha256": "64d4b78f26dbfdc01101d6d231acbd448f43809918073aabeca7f80799cd188c",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 1.003962399164798
+  },
+  {
+    "file": "USMC-walk-iso.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "pixelFormat": "yuv420p",
+    "sha256": "1ccf4c47f526f7a925db9992ffea9c8b96750e44967f38231132c4fac176bef5",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 1.003962399164798
+  },
+  {
+    "file": "USMC-sprint-side.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "pixelFormat": "yuv420p",
+    "sha256": "7642fdacfdbef61f131ae18e13b6d3c3f0e8d42bde4d6de6af5b19b578326c7a",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 8.495067665894016
+  },
+  {
+    "file": "USMC-sprint-iso.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "pixelFormat": "yuv420p",
+    "sha256": "c0d34df00ff9a03560fcbb2e12b46ab448a42445d9f5422e1617b8ffb3b9c4ad",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 8.495067665894016
+  },
+  {
+    "file": "Russian-walk-side.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "pixelFormat": "yuv420p",
+    "sha256": "0e6070160f104f96adab016f3b099010ed5b0f15c09a6b4202476d5694840650",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 1.003962399164798
+  },
+  {
+    "file": "Russian-walk-iso.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "pixelFormat": "yuv420p",
+    "sha256": "45686b43882c0b84b0ddcb1588a9920f2d8e09035a4c099655f4f214b8a518b9",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 32,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 1.003962399164798
+  },
+  {
+    "file": "Russian-sprint-side.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "pixelFormat": "yuv420p",
+    "sha256": "4402035e9e93a09767f4313306ed6d2c042d0fee792423e75a8a74150e54e794",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 8.495067665894016
+  },
+  {
+    "file": "Russian-sprint-iso.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "pixelFormat": "yuv420p",
+    "sha256": "a2e52ce34b89b781394af0972b6fb1a6195c050b46ad962702f495e6cc76ead9",
+    "sourceCaptures": [
+      {
+        "sourceModelSha256": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      },
+      {
+        "sourceModelSha256": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740",
+        "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+        "frames": 16,
+        "unusedSpareMagazineHidden": true
+      }
+    ],
+    "cameraEqual": true,
+    "characterGeometryEqual": true,
+    "nativeTiming": true,
+    "sharedGroundSpeedMps": 8.495067665894016
+  }
+]

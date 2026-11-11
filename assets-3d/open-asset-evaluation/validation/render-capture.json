@@ -1,0 +1,218 @@
+[
+  {
+    "faction": "USMC",
+    "action": "walk",
+    "view": "side",
+    "framesPerActor": 32,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      0,
+      0
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+      "imported": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "USMC",
+    "action": "walk",
+    "view": "iso",
+    "framesPerActor": 32,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      -6,
+      4.898979485566356
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+      "imported": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "USMC",
+    "action": "sprint",
+    "view": "side",
+    "framesPerActor": 16,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      0,
+      0
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+      "imported": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "USMC",
+    "action": "sprint",
+    "view": "iso",
+    "framesPerActor": 16,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      -6,
+      4.898979485566356
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "c3543126cf9e5aa0d3a944d19eadcba5e73ff31d26533bdd5aeb39c7737a5d27",
+      "imported": "b592bd4eff6571e087177ef6fd66ee796b8adc114a295c2d78f2163d73c7fd15"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "Russian",
+    "action": "walk",
+    "view": "side",
+    "framesPerActor": 32,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      0,
+      0
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+      "imported": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "Russian",
+    "action": "walk",
+    "view": "iso",
+    "framesPerActor": 32,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      -6,
+      4.898979485566356
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+      "imported": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "Russian",
+    "action": "sprint",
+    "view": "side",
+    "framesPerActor": 16,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      0,
+      0
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+      "imported": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  },
+  {
+    "faction": "Russian",
+    "action": "sprint",
+    "view": "iso",
+    "framesPerActor": 16,
+    "nativePlaybackSpeed": 1,
+    "sampleTime": "frameIndex / 24 seconds",
+    "sceneFpsAtGLBImport": 30,
+    "imageSize": [
+      480,
+      420
+    ],
+    "orthographicVerticalSpanM": 2.15,
+    "cameraOffset": [
+      6,
+      -6,
+      4.898979485566356
+    ],
+    "cameraAndGroundShared": true,
+    "rendererSha256": "6a0d7171c58a555543da40ad3319463b46f52789e3b374c3e3e7c8c619e170af",
+    "modelSha256": {
+      "original": "f59d11a0b295d7c7c021145794688236d2f80d048789fae97a965b80ab5c1998",
+      "imported": "477c7767f1cce1e73c929e2bf0eb32aebeabab20618f5e453ab62b0c3a919740"
+    },
+    "unusedSpareMagazineHidden": true,
+    "completed": true
+  }
+]

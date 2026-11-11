@@ -1,0 +1,55 @@
+{
+  "engine": "Three.js 0.170 AnimationMixer in Node; no browser or GPU",
+  "factions": [
+    {
+      "faction": "USMC",
+      "clips": [
+        {
+          "action": "walk",
+          "duration": 1.3333333730697632,
+          "fullBodyTracks": 164,
+          "timeScale": 1,
+          "weight": 1,
+          "maxPositionErrorM": 3.167347148413613e-7,
+          "maxOrientationErrorDeg": 0.00026043315158259095,
+          "upperBodyOverlay": false
+        },
+        {
+          "action": "sprint",
+          "duration": 0.6666666865348816,
+          "fullBodyTracks": 164,
+          "timeScale": 1,
+          "weight": 1,
+          "maxPositionErrorM": 5.751107992268235e-7,
+          "maxOrientationErrorDeg": 0.0002484701345603249,
+          "upperBodyOverlay": false
+        }
+      ]
+    },
+    {
+      "faction": "Russian",
+      "clips": [
+        {
+          "action": "walk",
+          "duration": 1.3333333730697632,
+          "fullBodyTracks": 164,
+          "timeScale": 1,
+          "weight": 1,
+          "maxPositionErrorM": 3.167347148413613e-7,
+          "maxOrientationErrorDeg": 0.00026043315158259095,
+          "upperBodyOverlay": false
+        },
+        {
+          "action": "sprint",
+          "duration": 0.6666666865348816,
+          "fullBodyTracks": 164,
+          "timeScale": 1,
+          "weight": 1,
+          "maxPositionErrorM": 5.751107992268235e-7,
+          "maxOrientationErrorDeg": 0.0002484701345603249,
+          "upperBodyOverlay": false
+        }
+      ]
+    }
+  ]
+}

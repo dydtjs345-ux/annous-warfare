@@ -1,0 +1,21 @@
+{
+  "animationPatchBytes": {
+    "USMC": 276788,
+    "Russian": 277928
+  },
+  "videoBytes": {
+    "USMC-walk-side.mp4": 340397,
+    "USMC-walk-iso.mp4": 658652,
+    "USMC-sprint-side.mp4": 207196,
+    "USMC-sprint-iso.mp4": 556896,
+    "Russian-walk-side.mp4": 305567,
+    "Russian-walk-iso.mp4": 659965,
+    "Russian-sprint-side.mp4": 195957,
+    "Russian-sprint-iso.mp4": 552577
+  },
+  "defaultLoadsFullModels": false,
+  "fullModelLoadingTimeMeasured": false,
+  "browserRAMMeasured": false,
+  "liveFPSMeasured": false,
+  "physicalIPhoneTested": false
+}

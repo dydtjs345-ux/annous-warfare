@@ -1,0 +1,25 @@
+{
+  "uid": "5b1967e7f83547be8a1c3ae656ab1ad4",
+  "name": "AMERICAN SOLDIER RIGGED",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "An American soldier character model, fully detailed with high-quality textures and professionally rigged for seamless animation workflows. This asset is designed to be easily downloadable and ready for immediate integration into your project, whether you're developing a game, cinematic scene, or simulation. The model includes realistic clothing, gear, and equipment typical of a modern U.S. military soldier, with carefully crafted materials to enhance visual fidelity.\n\nThe rigging is optimized for compatibility with animation platforms such as Mixamo, allowing you to quickly apply a wide range of pre-made animations or create your own with ease. Its clean topology and well-structured skeleton ensure smooth deformation during movement, making it ideal for both beginners and experienced developers. Whether you need walking, running, combat, or idle animations, this character can be effortlessly brought to life and adapted to fit the style and needs of your project",
+  "isDownloadable": true,
+  "animationCount": 1,
+  "faceCount": 9710,
+  "vertexCount": 5115,
+  "viewerUrl": "https://sketchfab.com/3d-models/american-soldier-rigged-5b1967e7f83547be8a1c3ae656ab1ad4",
+  "publishedAt": "2026-04-04T11:27:07.471754",
+  "author": {
+    "username": "matheofrelin3",
+    "displayName": "RedVeil studio",
+    "profileUrl": "https://sketchfab.com/matheofrelin3"
+  },
+  "retrieved": "2026-11-11"
+}

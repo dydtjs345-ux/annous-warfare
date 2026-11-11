@@ -1,0 +1,142 @@
+{
+  "method": "Visual inspection of actual Blender-reimported GLB frame sequences, including four-phase before/after contact sheets and original Quaternius source frames. No browser playback claimed.",
+  "records": [
+    {
+      "faction": "USMC",
+      "action": "walk",
+      "view": "side",
+      "reviewedArtifact": "review/USMC-walk-side-comparison.jpg",
+      "sha256": "84a4a4cecff674af87b8ff0ef39bc4587eccd250e61820a20939ddcce2db48ad",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Natural unarmed arm swing and modest chest/pelvis counterrotation transfer; left hand leaves rifle. Raw ground contact fails."
+    },
+    {
+      "faction": "USMC",
+      "action": "walk",
+      "view": "iso",
+      "reviewedArtifact": "review/USMC-walk-iso-comparison.jpg",
+      "sha256": "ccb2af08e54beac80681f0a20b2e60532a073a8d450a2772876825c1b83189de",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Natural unarmed arm swing and modest chest/pelvis counterrotation transfer; left hand leaves rifle. Raw ground contact fails."
+    },
+    {
+      "faction": "USMC",
+      "action": "sprint",
+      "view": "side",
+      "reviewedArtifact": "review/USMC-sprint-side-comparison.jpg",
+      "sha256": "3403f746f106c5c395b7edc19363032d9940bafb1935a9d9aad854aa1d17d0ae",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Strong forward lean and exaggerated source chest/pelvis counterrotation; rifle crosses vest, support hand detached. Not suitable for direct armed infantry use."
+    },
+    {
+      "faction": "USMC",
+      "action": "sprint",
+      "view": "iso",
+      "reviewedArtifact": "review/USMC-sprint-iso-comparison.jpg",
+      "sha256": "e727ceb481fc6e509217a27fa58541daccb5019423d3f62df8b3604d3ac2c0b5",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Strong forward lean and exaggerated source chest/pelvis counterrotation; rifle crosses vest, support hand detached. Not suitable for direct armed infantry use."
+    },
+    {
+      "faction": "Russian",
+      "action": "walk",
+      "view": "side",
+      "reviewedArtifact": "review/Russian-walk-side-comparison.jpg",
+      "sha256": "057797ae70726c71ac6996ca00e970e5c338bc3fe9d6330a4b6429b505b90354",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Natural unarmed arm swing and modest chest/pelvis counterrotation transfer; left hand leaves rifle. Raw ground contact fails."
+    },
+    {
+      "faction": "Russian",
+      "action": "walk",
+      "view": "iso",
+      "reviewedArtifact": "review/Russian-walk-iso-comparison.jpg",
+      "sha256": "c8864374115308253d8e665acdeebeb207c984f2111f81a13dc9218f2b69155c",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Natural unarmed arm swing and modest chest/pelvis counterrotation transfer; left hand leaves rifle. Raw ground contact fails."
+    },
+    {
+      "faction": "Russian",
+      "action": "sprint",
+      "view": "side",
+      "reviewedArtifact": "review/Russian-sprint-side-comparison.jpg",
+      "sha256": "9be8ba18f3e5ad9bda520781793d0957b1ac2e41849e32550e0cf7ed91be1a9b",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Strong forward lean and exaggerated source chest/pelvis counterrotation; rifle crosses vest, support hand detached. Not suitable for direct armed infantry use."
+    },
+    {
+      "faction": "Russian",
+      "action": "sprint",
+      "view": "iso",
+      "reviewedArtifact": "review/Russian-sprint-iso-comparison.jpg",
+      "sha256": "080ed929b69d34d1b88d21ca3860480b05d5e817a33e1808890eb3d0afe927a8",
+      "inspectedPhases": [
+        0,
+        0.25,
+        0.5,
+        0.75
+      ],
+      "pelvisAndChestIndependent": true,
+      "twoHandedRifleGripPass": false,
+      "productionGroundContactPass": false,
+      "visualFinding": "Strong forward lean and exaggerated source chest/pelvis counterrotation; rifle crosses vest, support hand detached. Not suitable for direct armed infantry use."
+    }
+  ],
+  "crawl": "No licensed source clip acquired; no fabricated import or replacement."
+}

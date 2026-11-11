@@ -1,0 +1,25 @@
+{
+  "uid": "e9c56308a67d4a3db62e914fafa4d198",
+  "name": "FREE [Military Soldier] RIGGED",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "description": "A **ready-to-use** Military Special Forces **soldier** model for games. Fully rigged and prepared for animation. Perfect for shooters, action games, and tactical FPS.\n\nThe model features primarily quad-based topology with **quad retopology** for optimal performance. Comes with a complete skeleton \u2014 ready for animation. Basic materials included for quick export.\n\nTechnical Details:\nFormat: FBX\nPolycount: Optimized for games\nTopology: Mostly Quads\nRigged: Yes\nMaterials: Basic\n\nUsage:\nCompletely FREE for commercial and personal use. Ideal for indie developers.\n\nKeywords: free, male, soldier, special forces, military, tactical, game ready, low poly, rigged, skeletal mesh, quad topology, retopology, shooter, fps, tps, action, 3d model, ue5, unity, download, helmet, combat, character",
+  "isDownloadable": true,
+  "animationCount": 0,
+  "faceCount": 11104,
+  "vertexCount": 6265,
+  "viewerUrl": "https://sketchfab.com/3d-models/free-military-soldier-rigged-e9c56308a67d4a3db62e914fafa4d198",
+  "publishedAt": "2026-02-16T19:15:34.634694",
+  "author": {
+    "username": "bamenwo05",
+    "displayName": "BAMEN",
+    "profileUrl": "https://sketchfab.com/bamenwo05"
+  },
+  "retrieved": "2026-11-11"
+}
