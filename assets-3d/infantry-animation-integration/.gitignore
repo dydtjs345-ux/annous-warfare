@@ -1,0 +1,4 @@
+__pycache__/
+models/TacticalSuit_ProjectSprint.glb
+models/TacticalSuit_ProjectIdle.glb
+validation/*-partial.json

@@ -1,0 +1,24 @@
+[
+  {
+    "file": "sprint-roles-side.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "sha256": "082455d5f2dec483822cb0dc323f243e63438a0857a60e7b696e444a6b0cdd4b",
+    "sameExternalCharacter": true,
+    "nativeTiming": true,
+    "sameCameraAndLighting": true,
+    "rightFramesReused": "Previously rendered actual Quaternius clip, unchanged in new integrated GLB. No image/model substitution."
+  },
+  {
+    "file": "sprint-roles-iso.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "sha256": "75d2e7eef20e7f0b9ad16b182bfaac39e716f3ac0c3f9caf4de216c3f69f39a7",
+    "sameExternalCharacter": true,
+    "nativeTiming": true,
+    "sameCameraAndLighting": true,
+    "rightFramesReused": "Previously rendered actual Quaternius clip, unchanged in new integrated GLB. No image/model substitution."
+  }
+]

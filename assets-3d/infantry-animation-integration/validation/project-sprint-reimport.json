@@ -1,0 +1,3227 @@
+{
+  "source": "Exported TacticalSuit_Integrated.glb, reimported into Blender",
+  "sampleHz": 480,
+  "bones": 87,
+  "characterMesh": "Actual Tactical Suit; original USMC body absent",
+  "actions": {
+    "sprint": {
+      "duration": 0.6666666666666666,
+      "maxWristErrorM": 3.0878235565004404e-06,
+      "minimumMeshZ": -0.0005435391794890165,
+      "minimumWeaponZ": 0.7226757407188416,
+      "maxBodyOrientationErrorDeg": 0.05595291023658669,
+      "frames": [
+        {
+          "time": 0.0,
+          "gripErrorsM": [
+            6.064333243705223e-07,
+            2.407644485243637e-07
+          ],
+          "meshMinZ": -2.6775524020195007e-08,
+          "weaponMinZ": 0.7413769364356995,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.0020833333333333333,
+          "gripErrorsM": [
+            1.7500460667453748e-06,
+            5.822069796952525e-07
+          ],
+          "meshMinZ": -0.00019582384265959263,
+          "weaponMinZ": 0.7401750683784485,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.004166666666666667,
+          "gripErrorsM": [
+            2.4666513980781825e-07,
+            2.986047331594191e-07
+          ],
+          "meshMinZ": -1.7741695046424866e-07,
+          "weaponMinZ": 0.738973081111908,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.00625,
+          "gripErrorsM": [
+            1.7395510207252142e-06,
+            6.398829982752767e-07
+          ],
+          "meshMinZ": -0.00016127107664942741,
+          "weaponMinZ": 0.7377692461013794,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.008333333333333333,
+          "gripErrorsM": [
+            4.938925756659587e-07,
+            4.0788101235541687e-07
+          ],
+          "meshMinZ": 3.110617399215698e-07,
+          "weaponMinZ": 0.7365655899047852,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.010416666666666666,
+          "gripErrorsM": [
+            1.424251367469793e-06,
+            5.6722361775262e-07
+          ],
+          "meshMinZ": -4.497077316045761e-05,
+          "weaponMinZ": 0.7355762124061584,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.0125,
+          "gripErrorsM": [
+            5.317419658474999e-07,
+            7.377297638424652e-07
+          ],
+          "meshMinZ": 2.6981811970472336e-05,
+          "weaponMinZ": 0.7345868945121765,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.014583333333333334,
+          "gripErrorsM": [
+            1.5082595855677317e-06,
+            7.50588218563305e-07
+          ],
+          "meshMinZ": 7.798522710800171e-05,
+          "weaponMinZ": 0.7335960268974304,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.016666666666666666,
+          "gripErrorsM": [
+            7.544241735085684e-07,
+            6.122296716929527e-07
+          ],
+          "meshMinZ": 0.00024031265638768673,
+          "weaponMinZ": 0.7326050400733948,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.01875,
+          "gripErrorsM": [
+            1.6489375876318642e-06,
+            6.33781263772748e-07
+          ],
+          "meshMinZ": 0.00021895556710660458,
+          "weaponMinZ": 0.7318102717399597,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.020833333333333332,
+          "gripErrorsM": [
+            3.945291726253547e-07,
+            5.033417270795862e-07
+          ],
+          "meshMinZ": 0.0002715995069593191,
+          "weaponMinZ": 0.7310155630111694,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.022916666666666665,
+          "gripErrorsM": [
+            1.5129735811291337e-06,
+            5.577619288619265e-07
+          ],
+          "meshMinZ": 0.00027807895094156265,
+          "weaponMinZ": 0.7302200198173523,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.025,
+          "gripErrorsM": [
+            5.139854454714724e-07,
+            5.960930120637897e-07
+          ],
+          "meshMinZ": 0.00035583670251071453,
+          "weaponMinZ": 0.7294245362281799,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.027083333333333334,
+          "gripErrorsM": [
+            1.4907225198246256e-06,
+            4.0679078384395535e-07
+          ],
+          "meshMinZ": 0.00024154153652489185,
+          "weaponMinZ": 0.7288071513175964,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.029166666666666667,
+          "gripErrorsM": [
+            2.6104292287537877e-07,
+            5.174936437555495e-07
+          ],
+          "meshMinZ": 0.00019811349920928478,
+          "weaponMinZ": 0.7281897664070129,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.03125,
+          "gripErrorsM": [
+            1.4695266867213401e-06,
+            4.7615272698606353e-07
+          ],
+          "meshMinZ": 0.00012342585250735283,
+          "weaponMinZ": 0.7275717854499817,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.03333333333333333,
+          "gripErrorsM": [
+            4.097141946812725e-07,
+            5.479090306416224e-07
+          ],
+          "meshMinZ": 0.00011861580424010754,
+          "weaponMinZ": 0.72695392370224,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.035416666666666666,
+          "gripErrorsM": [
+            1.3376230509698547e-06,
+            4.861896335078563e-07
+          ],
+          "meshMinZ": 3.8696685805916786e-05,
+          "weaponMinZ": 0.7264959216117859,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.0375,
+          "gripErrorsM": [
+            6.206941818099612e-07,
+            7.093719658341118e-07
+          ],
+          "meshMinZ": 3.371061757206917e-05,
+          "weaponMinZ": 0.7260381579399109,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.03958333333333333,
+          "gripErrorsM": [
+            1.2163629038106657e-06,
+            4.5382843548611445e-07
+          ],
+          "meshMinZ": -1.7089536413550377e-05,
+          "weaponMinZ": 0.7255798578262329,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.041666666666666664,
+          "gripErrorsM": [
+            2.950279395762582e-07,
+            5.994361366483772e-07
+          ],
+          "meshMinZ": 7.028225809335709e-06,
+          "weaponMinZ": 0.7251216173171997,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.04375,
+          "gripErrorsM": [
+            1.2242453990582516e-06,
+            2.874031889734553e-07
+          ],
+          "meshMinZ": -3.1538307666778564e-05,
+          "weaponMinZ": 0.7248051762580872,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.04583333333333333,
+          "gripErrorsM": [
+            6.406010107110552e-07,
+            7.123004438112449e-07
+          ],
+          "meshMinZ": 4.784669727087021e-07,
+          "weaponMinZ": 0.7244886755943298,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.04791666666666667,
+          "gripErrorsM": [
+            1.3338737320809688e-06,
+            4.1121873065099935e-07
+          ],
+          "meshMinZ": -3.56379896402359e-05,
+          "weaponMinZ": 0.7241715788841248,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.05,
+          "gripErrorsM": [
+            4.3450365399787824e-07,
+            2.533471306550399e-07
+          ],
+          "meshMinZ": -2.7543865144252777e-07,
+          "weaponMinZ": 0.7238544821739197,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.052083333333333336,
+          "gripErrorsM": [
+            1.0790809914064246e-06,
+            3.7551591433014217e-07
+          ],
+          "meshMinZ": -2.9816757887601852e-05,
+          "weaponMinZ": 0.7236608862876892,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.05416666666666667,
+          "gripErrorsM": [
+            3.2770381673672986e-07,
+            5.906318245108639e-07
+          ],
+          "meshMinZ": 1.8207356333732605e-07,
+          "weaponMinZ": 0.7234674096107483,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.05625,
+          "gripErrorsM": [
+            7.239342364982507e-07,
+            4.5088325938836317e-07
+          ],
+          "meshMinZ": -2.8989510610699654e-05,
+          "weaponMinZ": 0.7232732176780701,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.058333333333333334,
+          "gripErrorsM": [
+            4.873763284829334e-07,
+            4.4543319621276916e-07
+          ],
+          "meshMinZ": 1.3152603060007095e-06,
+          "weaponMinZ": 0.7230789065361023,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.06041666666666667,
+          "gripErrorsM": [
+            1.1511629250372836e-06,
+            5.790879592842771e-07
+          ],
+          "meshMinZ": -4.873145371675491e-07,
+          "weaponMinZ": 0.7229887843132019,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.0625,
+          "gripErrorsM": [
+            8.524975025884987e-07,
+            4.4142725177487943e-07
+          ],
+          "meshMinZ": 6.074621342122555e-05,
+          "weaponMinZ": 0.7228987812995911,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.06458333333333334,
+          "gripErrorsM": [
+            1.1512910070748015e-06,
+            4.6195101809690053e-07
+          ],
+          "meshMinZ": 0.00021699746139347553,
+          "weaponMinZ": 0.7228083610534668,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.06666666666666667,
+          "gripErrorsM": [
+            6.13330894188097e-07,
+            6.882417115057202e-07
+          ],
+          "meshMinZ": 0.0004360165912657976,
+          "weaponMinZ": 0.7227180600166321,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.06875,
+          "gripErrorsM": [
+            9.183955082618486e-07,
+            6.527767418030018e-07
+          ],
+          "meshMinZ": 0.0011199589353054762,
+          "weaponMinZ": 0.7227076888084412,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.07083333333333333,
+          "gripErrorsM": [
+            6.447228089804631e-07,
+            5.536037083941675e-07
+          ],
+          "meshMinZ": 0.0018865622114390135,
+          "weaponMinZ": 0.7226974368095398,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.07291666666666667,
+          "gripErrorsM": [
+            8.812831476452277e-07,
+            7.789420779143054e-07
+          ],
+          "meshMinZ": 0.003475319826975465,
+          "weaponMinZ": 0.7226865887641907,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.075,
+          "gripErrorsM": [
+            9.115626269108987e-07,
+            5.789561373041507e-07
+          ],
+          "meshMinZ": 0.00516362302005291,
+          "weaponMinZ": 0.7226757407188416,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.07708333333333334,
+          "gripErrorsM": [
+            1.1965606922945488e-06,
+            7.776582535414451e-07
+          ],
+          "meshMinZ": 0.006910648196935654,
+          "weaponMinZ": 0.7227136492729187,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.07916666666666666,
+          "gripErrorsM": [
+            9.982127198388276e-07,
+            2.6693076265629514e-07
+          ],
+          "meshMinZ": 0.008741416968405247,
+          "weaponMinZ": 0.7227515578269958,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.08125,
+          "gripErrorsM": [
+            7.37478117394137e-07,
+            4.949206241963221e-07
+          ],
+          "meshMinZ": 0.01095324195921421,
+          "weaponMinZ": 0.7227891087532043,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.08333333333333333,
+          "gripErrorsM": [
+            3.0174851417541504e-07,
+            6.582810374748815e-07
+          ],
+          "meshMinZ": 0.013254149816930294,
+          "weaponMinZ": 0.7228266596794128,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.08541666666666667,
+          "gripErrorsM": [
+            5.727868552651515e-07,
+            1.9086433138623087e-07
+          ],
+          "meshMinZ": 0.014860919676721096,
+          "weaponMinZ": 0.7229087948799133,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.0875,
+          "gripErrorsM": [
+            3.6141556177633196e-07,
+            4.2232783279459967e-07
+          ],
+          "meshMinZ": 0.016535380855202675,
+          "weaponMinZ": 0.7229909300804138,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.08958333333333333,
+          "gripErrorsM": [
+            7.459539190788399e-07,
+            4.810098526349358e-07
+          ],
+          "meshMinZ": 0.01798650249838829,
+          "weaponMinZ": 0.7230716943740845,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.09166666666666666,
+          "gripErrorsM": [
+            8.695181882914995e-07,
+            2.5940970120659e-07
+          ],
+          "meshMinZ": 0.01950140856206417,
+          "weaponMinZ": 0.7231525778770447,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.09375,
+          "gripErrorsM": [
+            7.84719822999485e-07,
+            8.393732968275345e-07
+          ],
+          "meshMinZ": 0.020105306059122086,
+          "weaponMinZ": 0.7232767939567566,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.09583333333333334,
+          "gripErrorsM": [
+            1.6179300742766982e-07,
+            3.427317689568528e-07
+          ],
+          "meshMinZ": 0.02076627127826214,
+          "weaponMinZ": 0.7234010100364685,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.09791666666666667,
+          "gripErrorsM": [
+            7.980842177830635e-07,
+            7.235219650422295e-07
+          ],
+          "meshMinZ": 0.021077265962958336,
+          "weaponMinZ": 0.7235237956047058,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.1,
+          "gripErrorsM": [
+            6.957422214704008e-07,
+            2.946749366904065e-07
+          ],
+          "meshMinZ": 0.021298177540302277,
+          "weaponMinZ": 0.7236465811729431,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.10208333333333333,
+          "gripErrorsM": [
+            1.2286584031395353e-06,
+            7.23706557462256e-07
+          ],
+          "meshMinZ": 0.02132803574204445,
+          "weaponMinZ": 0.7238113284111023,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.10416666666666667,
+          "gripErrorsM": [
+            1.0761898806850784e-06,
+            2.908590629092326e-07
+          ],
+          "meshMinZ": 0.021417269483208656,
+          "weaponMinZ": 0.7239763140678406,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.10625,
+          "gripErrorsM": [
+            8.052488792493428e-07,
+            7.312204925051509e-07
+          ],
+          "meshMinZ": 0.021557724103331566,
+          "weaponMinZ": 0.7241396307945251,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.10833333333333334,
+          "gripErrorsM": [
+            1.210719347000122e-07,
+            1.6697447621088453e-07
+          ],
+          "meshMinZ": 0.021757228299975395,
+          "weaponMinZ": 0.724303126335144,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.11041666666666666,
+          "gripErrorsM": [
+            1.0307683709574498e-06,
+            6.010343468424765e-07
+          ],
+          "meshMinZ": 0.02177985943853855,
+          "weaponMinZ": 0.7245067358016968,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.1125,
+          "gripErrorsM": [
+            1.0750803131794477e-06,
+            2.9690353341655844e-07
+          ],
+          "meshMinZ": 0.02186453901231289,
+          "weaponMinZ": 0.7247104644775391,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.11458333333333333,
+          "gripErrorsM": [
+            1.3969304650751138e-06,
+            8.409672671834693e-07
+          ],
+          "meshMinZ": 0.022000379860401154,
+          "weaponMinZ": 0.724912703037262,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.11666666666666667,
+          "gripErrorsM": [
+            8.673528689488575e-07,
+            4.6079296159941634e-07
+          ],
+          "meshMinZ": 0.022197941318154335,
+          "weaponMinZ": 0.7251150012016296,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.11875,
+          "gripErrorsM": [
+            1.52575084402206e-06,
+            8.356698871426631e-07
+          ],
+          "meshMinZ": 0.022219834849238396,
+          "weaponMinZ": 0.7253564596176147,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.12083333333333333,
+          "gripErrorsM": [
+            5.987527807361489e-07,
+            1.4836994611492478e-07
+          ],
+          "meshMinZ": 0.02230624295771122,
+          "weaponMinZ": 0.725598156452179,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.12291666666666666,
+          "gripErrorsM": [
+            9.59594938539724e-07,
+            6.007572048481606e-07
+          ],
+          "meshMinZ": 0.022444115951657295,
+          "weaponMinZ": 0.7258381247520447,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.125,
+          "gripErrorsM": [
+            1.656079048692825e-07,
+            3.0149689468205587e-07
+          ],
+          "meshMinZ": 0.022647077217698097,
+          "weaponMinZ": 0.7260782122612,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.12708333333333333,
+          "gripErrorsM": [
+            1.1144285470576082e-06,
+            4.953410520935162e-07
+          ],
+          "meshMinZ": 0.022677190601825714,
+          "weaponMinZ": 0.7263568043708801,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.12916666666666668,
+          "gripErrorsM": [
+            6.500498142143742e-07,
+            3.22667992805571e-07
+          ],
+          "meshMinZ": 0.022773709148168564,
+          "weaponMinZ": 0.7266356348991394,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.13125,
+          "gripErrorsM": [
+            1.2396655640478773e-06,
+            5.967626992297429e-07
+          ],
+          "meshMinZ": 0.022921321913599968,
+          "weaponMinZ": 0.726912260055542,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.13333333333333333,
+          "gripErrorsM": [
+            9.829843962921494e-07,
+            2.1784389541724487e-07
+          ],
+          "meshMinZ": 0.023136118426918983,
+          "weaponMinZ": 0.7271890044212341,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.13541666666666666,
+          "gripErrorsM": [
+            1.3405675959860035e-06,
+            7.201888023124279e-07
+          ],
+          "meshMinZ": 0.023180095478892326,
+          "weaponMinZ": 0.7275042533874512,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.1375,
+          "gripErrorsM": [
+            6.321615672917621e-07,
+            5.270339555807997e-07
+          ],
+          "meshMinZ": 0.023202503100037575,
+          "weaponMinZ": 0.7278193831443787,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.13958333333333334,
+          "gripErrorsM": [
+            9.984073377668298e-07,
+            4.041221031867702e-07
+          ],
+          "meshMinZ": 0.023253170773386955,
+          "weaponMinZ": 0.7281328439712524,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.14166666666666666,
+          "gripErrorsM": [
+            5.293092193709743e-07,
+            6.859094341343147e-07
+          ],
+          "meshMinZ": 0.023365648463368416,
+          "weaponMinZ": 0.7284463047981262,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.14375,
+          "gripErrorsM": [
+            9.045630819068068e-07,
+            1.3318889692965713e-07
+          ],
+          "meshMinZ": 0.023304440081119537,
+          "weaponMinZ": 0.7287974953651428,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.14583333333333334,
+          "gripErrorsM": [
+            4.152487369181207e-07,
+            5.169570193111638e-07
+          ],
+          "meshMinZ": 0.023328419774770737,
+          "weaponMinZ": 0.729148805141449,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.14791666666666667,
+          "gripErrorsM": [
+            1.0946586629017007e-06,
+            1.9323316345457575e-07
+          ],
+          "meshMinZ": 0.023441439494490623,
+          "weaponMinZ": 0.7294986844062805,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.15,
+          "gripErrorsM": [
+            6.390610370342693e-07,
+            6.383963204106248e-07
+          ],
+          "meshMinZ": 0.02364124171435833,
+          "weaponMinZ": 0.729848325252533,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.15208333333333332,
+          "gripErrorsM": [
+            1.2928756706454694e-06,
+            1.3457530638715954e-07
+          ],
+          "meshMinZ": 0.023601118475198746,
+          "weaponMinZ": 0.7302361130714417,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.15416666666666667,
+          "gripErrorsM": [
+            9.5800097249762e-07,
+            3.9506633359769254e-07
+          ],
+          "meshMinZ": 0.023679988458752632,
+          "weaponMinZ": 0.7306236624717712,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.15625,
+          "gripErrorsM": [
+            1.2581571674308025e-06,
+            2.4668799504435634e-07
+          ],
+          "meshMinZ": 0.02388092130422592,
+          "weaponMinZ": 0.7310101389884949,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.15833333333333333,
+          "gripErrorsM": [
+            8.36192837154758e-07,
+            2.680203334454302e-07
+          ],
+          "meshMinZ": 0.02420312911272049,
+          "weaponMinZ": 0.731396496295929,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.16041666666666668,
+          "gripErrorsM": [
+            1.3761721042181314e-06,
+            6.006164197206625e-07
+          ],
+          "meshMinZ": 0.024214688688516617,
+          "weaponMinZ": 0.7318212389945984,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.1625,
+          "gripErrorsM": [
+            7.699103523366723e-07,
+            5.96119202889698e-08
+          ],
+          "meshMinZ": 0.024361679330468178,
+          "weaponMinZ": 0.7322461009025574,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.16458333333333333,
+          "gripErrorsM": [
+            1.012463725979462e-06,
+            2.543039346616866e-07
+          ],
+          "meshMinZ": 0.02464704029262066,
+          "weaponMinZ": 0.7326696515083313,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.16666666666666666,
+          "gripErrorsM": [
+            7.093719658341118e-07,
+            6.756506185935824e-07
+          ],
+          "meshMinZ": 0.025070147588849068,
+          "weaponMinZ": 0.73309326171875,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.16875,
+          "gripErrorsM": [
+            9.54147136441983e-07,
+            3.4445466207419475e-07
+          ],
+          "meshMinZ": 0.025148622691631317,
+          "weaponMinZ": 0.7335556149482727,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.17083333333333334,
+          "gripErrorsM": [
+            3.67295487693171e-07,
+            2.534225458354524e-07
+          ],
+          "meshMinZ": 0.025357728824019432,
+          "weaponMinZ": 0.734018087387085,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.17291666666666666,
+          "gripErrorsM": [
+            7.606003760211438e-07,
+            3.712842895046201e-07
+          ],
+          "meshMinZ": 0.025700638070702553,
+          "weaponMinZ": 0.7344793677330017,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.175,
+          "gripErrorsM": [
+            5.97746597101935e-07,
+            1.9089968913688778e-07
+          ],
+          "meshMinZ": 0.02617630921304226,
+          "weaponMinZ": 0.7349408268928528,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.17708333333333334,
+          "gripErrorsM": [
+            7.312299819121773e-07,
+            2.432714799453388e-07
+          ],
+          "meshMinZ": 0.026311274617910385,
+          "weaponMinZ": 0.7354413866996765,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.17916666666666667,
+          "gripErrorsM": [
+            4.832298905295884e-07,
+            2.0033084671603387e-07
+          ],
+          "meshMinZ": 0.02655840665102005,
+          "weaponMinZ": 0.7359421849250793,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.18125,
+          "gripErrorsM": [
+            1.1068125239439629e-06,
+            4.448657643447669e-07
+          ],
+          "meshMinZ": 0.02691916935145855,
+          "weaponMinZ": 0.7364422678947449,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.18333333333333332,
+          "gripErrorsM": [
+            7.441098355774725e-07,
+            3.4285140417773127e-07
+          ],
+          "meshMinZ": 0.027393348515033722,
+          "weaponMinZ": 0.7369424104690552,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.18541666666666667,
+          "gripErrorsM": [
+            8.006536353914327e-07,
+            4.312129751285246e-07
+          ],
+          "meshMinZ": 0.02755371667444706,
+          "weaponMinZ": 0.7373637557029724,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.1875,
+          "gripErrorsM": [
+            3.6181372609550593e-07,
+            5.345702846366022e-07
+          ],
+          "meshMinZ": 0.02780498005449772,
+          "weaponMinZ": 0.737785279750824,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.18958333333333333,
+          "gripErrorsM": [
+            7.805083288470606e-07,
+            4.6661869222696126e-07
+          ],
+          "meshMinZ": 0.02814544178545475,
+          "weaponMinZ": 0.7382060289382935,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.19166666666666668,
+          "gripErrorsM": [
+            4.7811964006645e-07,
+            4.0865174096178633e-07
+          ],
+          "meshMinZ": 0.028577221557497978,
+          "weaponMinZ": 0.7386266589164734,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.19375,
+          "gripErrorsM": [
+            7.541320930786518e-07,
+            6.393504461925998e-07
+          ],
+          "meshMinZ": 0.028729556128382683,
+          "weaponMinZ": 0.7385863661766052,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.19583333333333333,
+          "gripErrorsM": [
+            6.740639749124687e-07,
+            6.167022753687567e-07
+          ],
+          "meshMinZ": 0.028956295922398567,
+          "weaponMinZ": 0.738545835018158,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.19791666666666666,
+          "gripErrorsM": [
+            8.874717412159634e-07,
+            3.3047986809335513e-07
+          ],
+          "meshMinZ": 0.029254501685500145,
+          "weaponMinZ": 0.7385053038597107,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2,
+          "gripErrorsM": [
+            5.062044483510967e-07,
+            4.6555283380593215e-07
+          ],
+          "meshMinZ": 0.02962678112089634,
+          "weaponMinZ": 0.7384647727012634,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.20208333333333334,
+          "gripErrorsM": [
+            7.498876125257662e-07,
+            4.661207265557999e-07
+          ],
+          "meshMinZ": 0.029827812686562538,
+          "weaponMinZ": 0.7381488680839539,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.20416666666666666,
+          "gripErrorsM": [
+            6.060327172140211e-07,
+            2.995799419923065e-07
+          ],
+          "meshMinZ": 0.03011091612279415,
+          "weaponMinZ": 0.7378331422805786,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.20625,
+          "gripErrorsM": [
+            8.451730556778451e-07,
+            2.1042648268524953e-07
+          ],
+          "meshMinZ": 0.03047441877424717,
+          "weaponMinZ": 0.7375172972679138,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.20833333333333334,
+          "gripErrorsM": [
+            9.548377599478242e-07,
+            3.672530523594125e-07
+          ],
+          "meshMinZ": 0.030920127406716347,
+          "weaponMinZ": 0.7372015118598938,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.21041666666666667,
+          "gripErrorsM": [
+            1.079410497743941e-06,
+            2.8261621895161776e-07
+          ],
+          "meshMinZ": 0.03119913674890995,
+          "weaponMinZ": 0.7368559241294861,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2125,
+          "gripErrorsM": [
+            8.420660067354719e-07,
+            3.8306528425371537e-07
+          ],
+          "meshMinZ": 0.031590744853019714,
+          "weaponMinZ": 0.7365105152130127,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.21458333333333332,
+          "gripErrorsM": [
+            1.0893146325646083e-06,
+            1.6441223426046256e-07
+          ],
+          "meshMinZ": 0.03209548816084862,
+          "weaponMinZ": 0.7361649870872498,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.21666666666666667,
+          "gripErrorsM": [
+            7.388129800591691e-07,
+            3.0964908773648387e-07
+          ],
+          "meshMinZ": 0.032712530344724655,
+          "weaponMinZ": 0.7358195185661316,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.21875,
+          "gripErrorsM": [
+            9.86380969543314e-07,
+            1.2359272542436467e-07
+          ],
+          "meshMinZ": 0.033010706305503845,
+          "weaponMinZ": 0.7356892228126526,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.22083333333333333,
+          "gripErrorsM": [
+            7.215364171469819e-07,
+            1.5041364158110633e-07
+          ],
+          "meshMinZ": 0.03341362252831459,
+          "weaponMinZ": 0.7355589270591736,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.22291666666666668,
+          "gripErrorsM": [
+            1.0833887811310709e-06,
+            1.414660290691954e-07
+          ],
+          "meshMinZ": 0.03391889110207558,
+          "weaponMinZ": 0.7354283928871155,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.225,
+          "gripErrorsM": [
+            1.1929540578395117e-06,
+            1.3514129182113002e-07
+          ],
+          "meshMinZ": 0.03452887758612633,
+          "weaponMinZ": 0.7352980971336365,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.22708333333333333,
+          "gripErrorsM": [
+            1.3428844806406819e-06,
+            3.121042453809106e-07
+          ],
+          "meshMinZ": 0.03472518175840378,
+          "weaponMinZ": 0.7356278300285339,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.22916666666666666,
+          "gripErrorsM": [
+            1.4764103766976067e-06,
+            4.073202924040979e-07
+          ],
+          "meshMinZ": 0.03501030057668686,
+          "weaponMinZ": 0.7359578013420105,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.23125,
+          "gripErrorsM": [
+            9.890224796701772e-07,
+            3.9918445492814166e-07
+          ],
+          "meshMinZ": 0.03536409139633179,
+          "weaponMinZ": 0.7362874746322632,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.23333333333333334,
+          "gripErrorsM": [
+            1.7572159193561607e-07,
+            4.808114586296017e-07
+          ],
+          "meshMinZ": 0.03580772876739502,
+          "weaponMinZ": 0.7366171479225159,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.23541666666666666,
+          "gripErrorsM": [
+            4.822200872088792e-07,
+            6.177870577782828e-07
+          ],
+          "meshMinZ": 0.03673987835645676,
+          "weaponMinZ": 0.7376242280006409,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2375,
+          "gripErrorsM": [
+            6.273105698761872e-07,
+            1.4102081381341592e-07
+          ],
+          "meshMinZ": 0.03781140595674515,
+          "weaponMinZ": 0.7386316061019897,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.23958333333333334,
+          "gripErrorsM": [
+            8.081819616737232e-07,
+            2.868473529815674e-07
+          ],
+          "meshMinZ": 0.038958705961704254,
+          "weaponMinZ": 0.7396382689476013,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.24166666666666667,
+          "gripErrorsM": [
+            5.139854454714724e-07,
+            4.416403922952092e-07
+          ],
+          "meshMinZ": 0.04025034233927727,
+          "weaponMinZ": 0.7406449913978577,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.24375,
+          "gripErrorsM": [
+            9.030756046760295e-07,
+            8.678587266097277e-07
+          ],
+          "meshMinZ": 0.04584061726927757,
+          "weaponMinZ": 0.7416388392448425,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.24583333333333332,
+          "gripErrorsM": [
+            5.966515003300138e-07,
+            3.66928093472345e-07
+          ],
+          "meshMinZ": 0.051544833928346634,
+          "weaponMinZ": 0.7426328063011169,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.24791666666666667,
+          "gripErrorsM": [
+            7.341846881019253e-07,
+            8.789203529272865e-07
+          ],
+          "meshMinZ": 0.0573655441403389,
+          "weaponMinZ": 0.7436259984970093,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.25,
+          "gripErrorsM": [
+            5.440996590361457e-07,
+            1.2699156190242872e-07
+          ],
+          "meshMinZ": 0.06329922378063202,
+          "weaponMinZ": 0.7446193695068359,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2520833333333333,
+          "gripErrorsM": [
+            1.0909695658217965e-06,
+            8.975476056766134e-07
+          ],
+          "meshMinZ": 0.0696144551038742,
+          "weaponMinZ": 0.7452632784843445,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.25416666666666665,
+          "gripErrorsM": [
+            1.1995102141230558e-06,
+            1.5657579482232312e-07
+          ],
+          "meshMinZ": 0.07602766901254654,
+          "weaponMinZ": 0.7459073066711426,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.25625,
+          "gripErrorsM": [
+            9.056842692769005e-07,
+            7.65740307756886e-07
+          ],
+          "meshMinZ": 0.06791962683200836,
+          "weaponMinZ": 0.7465502023696899,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.25833333333333336,
+          "gripErrorsM": [
+            7.50627507119356e-07,
+            4.0970678514171297e-07
+          ],
+          "meshMinZ": 0.059901800006628036,
+          "weaponMinZ": 0.7471930384635925,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2604166666666667,
+          "gripErrorsM": [
+            1.1200198502575373e-06,
+            9.740587894539491e-07
+          ],
+          "meshMinZ": 0.049103524535894394,
+          "weaponMinZ": 0.7475672364234924,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2625,
+          "gripErrorsM": [
+            1.1032898640878659e-06,
+            1.698993779866603e-07
+          ],
+          "meshMinZ": 0.04000888392329216,
+          "weaponMinZ": 0.7479414343833923,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.26458333333333334,
+          "gripErrorsM": [
+            1.022827959087985e-06,
+            6.325648234471422e-07
+          ],
+          "meshMinZ": 0.029462343081831932,
+          "weaponMinZ": 0.748314380645752,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.26666666666666666,
+          "gripErrorsM": [
+            3.727199020755058e-07,
+            7.706602860341121e-07
+          ],
+          "meshMinZ": 0.02350534498691559,
+          "weaponMinZ": 0.7486874461174011,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.26875,
+          "gripErrorsM": [
+            9.072305708874739e-07,
+            7.227087182135392e-07
+          ],
+          "meshMinZ": 0.017454495653510094,
+          "weaponMinZ": 0.7427734136581421,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2708333333333333,
+          "gripErrorsM": [
+            3.756637116060922e-07,
+            5.288469132848227e-07
+          ],
+          "meshMinZ": 0.0114059429615736,
+          "weaponMinZ": 0.7368596196174622,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.27291666666666664,
+          "gripErrorsM": [
+            9.777183895298418e-07,
+            1.0833103194283813e-06
+          ],
+          "meshMinZ": 0.007944054901599884,
+          "weaponMinZ": 0.7334954738616943,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.275,
+          "gripErrorsM": [
+            5.984629877812625e-07,
+            3.25296990509573e-08
+          ],
+          "meshMinZ": 0.004483729600906372,
+          "weaponMinZ": 0.7301316261291504,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.27708333333333335,
+          "gripErrorsM": [
+            1.008996785714042e-06,
+            9.775196525728824e-07
+          ],
+          "meshMinZ": 0.002832977334037423,
+          "weaponMinZ": 0.728930652141571,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2791666666666667,
+          "gripErrorsM": [
+            1.1216588649375688e-06,
+            6.009188865448348e-07
+          ],
+          "meshMinZ": 0.0011854644399136305,
+          "weaponMinZ": 0.7277296185493469,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.28125,
+          "gripErrorsM": [
+            1.4248748417243445e-06,
+            1.1608464244512928e-06
+          ],
+          "meshMinZ": 0.0006560145411640406,
+          "weaponMinZ": 0.7276496291160583,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2833333333333333,
+          "gripErrorsM": [
+            1.1023602319797358e-06,
+            1.5823715951776065e-07
+          ],
+          "meshMinZ": 0.0001300510484725237,
+          "weaponMinZ": 0.7275697588920593,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.28541666666666665,
+          "gripErrorsM": [
+            1.3473518072824042e-06,
+            1.3544132978437394e-06
+          ],
+          "meshMinZ": 5.2223214879631996e-05,
+          "weaponMinZ": 0.7280115485191345,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2875,
+          "gripErrorsM": [
+            9.973834307085456e-07,
+            3.4436274017055695e-07
+          ],
+          "meshMinZ": 3.641960211098194e-05,
+          "weaponMinZ": 0.7284533381462097,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.28958333333333336,
+          "gripErrorsM": [
+            1.039589632172887e-06,
+            1.004585849683474e-06
+          ],
+          "meshMinZ": 3.2066600397229195e-05,
+          "weaponMinZ": 0.7290465235710144,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.2916666666666667,
+          "gripErrorsM": [
+            1.2605580922729247e-07,
+            7.542240991172759e-07
+          ],
+          "meshMinZ": 6.0983700677752495e-05,
+          "weaponMinZ": 0.7296397089958191,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.29375,
+          "gripErrorsM": [
+            1.0376939727255292e-06,
+            1.0016598350445933e-06
+          ],
+          "meshMinZ": 4.059029743075371e-05,
+          "weaponMinZ": 0.7306226491928101,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.29583333333333334,
+          "gripErrorsM": [
+            1.2014624324620511e-06,
+            3.363712294431723e-07
+          ],
+          "meshMinZ": 6.936420686542988e-05,
+          "weaponMinZ": 0.7316055297851562,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.29791666666666666,
+          "gripErrorsM": [
+            1.2172125961187222e-06,
+            1.241455437293116e-06
+          ],
+          "meshMinZ": 4.921457730233669e-05,
+          "weaponMinZ": 0.7324880361557007,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3,
+          "gripErrorsM": [
+            4.081021091364039e-07,
+            2.430305843099965e-07
+          ],
+          "meshMinZ": 7.809605449438095e-05,
+          "weaponMinZ": 0.7333704829216003,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3020833333333333,
+          "gripErrorsM": [
+            8.7586518590895e-07,
+            1.0742538447436988e-06
+          ],
+          "meshMinZ": 4.695192910730839e-05,
+          "weaponMinZ": 0.7342261672019958,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.30416666666666664,
+          "gripErrorsM": [
+            2.3821476517242442e-07,
+            5.050070361333655e-07
+          ],
+          "meshMinZ": 9.063840843737125e-05,
+          "weaponMinZ": 0.7350817918777466,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.30625,
+          "gripErrorsM": [
+            1.086482687820058e-06,
+            1.0668908828914707e-06
+          ],
+          "meshMinZ": -3.279512748122215e-05,
+          "weaponMinZ": 0.7364146113395691,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.30833333333333335,
+          "gripErrorsM": [
+            7.488574814515605e-07,
+            4.6279142087770003e-07
+          ],
+          "meshMinZ": 1.0848278179764748e-05,
+          "weaponMinZ": 0.7377476096153259,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3104166666666667,
+          "gripErrorsM": [
+            1.625934520894806e-06,
+            1.2900696977544821e-06
+          ],
+          "meshMinZ": 0.0002734260633587837,
+          "weaponMinZ": 0.7411242127418518,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3125,
+          "gripErrorsM": [
+            1.0830300526594033e-06,
+            4.300734308261219e-07
+          ],
+          "meshMinZ": -3.3993273973464966e-08,
+          "weaponMinZ": 0.7445006370544434,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3145833333333333,
+          "gripErrorsM": [
+            1.2270986929218187e-06,
+            1.3146052783704037e-06
+          ],
+          "meshMinZ": -0.0003429048229008913,
+          "weaponMinZ": 0.7462055087089539,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.31666666666666665,
+          "gripErrorsM": [
+            6.246502077198977e-07,
+            2.84710657660447e-07
+          ],
+          "meshMinZ": -3.119930624961853e-08,
+          "weaponMinZ": 0.7479102611541748,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.31875,
+          "gripErrorsM": [
+            8.792395406453832e-07,
+            1.2732429699619997e-06
+          ],
+          "meshMinZ": -0.0002508014440536499,
+          "weaponMinZ": 0.7472788691520691,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.32083333333333336,
+          "gripErrorsM": [
+            3.596834822331967e-07,
+            2.862419592186592e-07
+          ],
+          "meshMinZ": -1.9418075680732727e-07,
+          "weaponMinZ": 0.7466476559638977,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.3229166666666667,
+          "gripErrorsM": [
+            1.0681535078248864e-06,
+            1.501712528671799e-06
+          ],
+          "meshMinZ": -0.00035018613561987877,
+          "weaponMinZ": 0.7460141777992249,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.325,
+          "gripErrorsM": [
+            8.598261344858295e-07,
+            1.698993779866603e-07
+          ],
+          "meshMinZ": -1.103617250919342e-07,
+          "weaponMinZ": 0.7453808188438416,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.32708333333333334,
+          "gripErrorsM": [
+            9.457909751780763e-07,
+            1.0542044988699249e-06
+          ],
+          "meshMinZ": 8.99492297321558e-05,
+          "weaponMinZ": 0.7443808913230896,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.32916666666666666,
+          "gripErrorsM": [
+            6.068565358105425e-07,
+            2.2626347301990113e-07
+          ],
+          "meshMinZ": -1.073349267244339e-07,
+          "weaponMinZ": 0.7433809638023376,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.33125,
+          "gripErrorsM": [
+            1.1192994113007735e-06,
+            1.1797412688627555e-06
+          ],
+          "meshMinZ": -0.00021632341668009758,
+          "weaponMinZ": 0.7423789501190186,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3333333333333333,
+          "gripErrorsM": [
+            1.0848209096909342e-06,
+            1.6049041769309353e-07
+          ],
+          "meshMinZ": -4.4587068259716034e-07,
+          "weaponMinZ": 0.7413768172264099,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.33541666666666664,
+          "gripErrorsM": [
+            1.1840622928226605e-06,
+            8.357944287288284e-07
+          ],
+          "meshMinZ": -0.00019032624550163746,
+          "weaponMinZ": 0.740277886390686,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3375,
+          "gripErrorsM": [
+            7.774708520305867e-07,
+            6.342299895223357e-07
+          ],
+          "meshMinZ": -1.1641532182693481e-09,
+          "weaponMinZ": 0.7391788959503174,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.33958333333333335,
+          "gripErrorsM": [
+            1.3629179606722179e-06,
+            8.450745296067868e-07
+          ],
+          "meshMinZ": -0.00015722238458693027,
+          "weaponMinZ": 0.7380774617195129,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3416666666666667,
+          "gripErrorsM": [
+            1.2334494684590995e-06,
+            3.29514509253144e-07
+          ],
+          "meshMinZ": 2.8638169169425964e-07,
+          "weaponMinZ": 0.736975908279419,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.34375,
+          "gripErrorsM": [
+            1.243824446721525e-06,
+            6.592079866218962e-07
+          ],
+          "meshMinZ": -4.4998712837696075e-05,
+          "weaponMinZ": 0.7360888123512268,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3458333333333333,
+          "gripErrorsM": [
+            5.084202446355809e-07,
+            1.698993779866603e-07
+          ],
+          "meshMinZ": 2.5164568796753883e-05,
+          "weaponMinZ": 0.7352015972137451,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.34791666666666665,
+          "gripErrorsM": [
+            9.104429625039395e-07,
+            6.513294830552968e-07
+          ],
+          "meshMinZ": 7.200147956609726e-05,
+          "weaponMinZ": 0.7343125939369202,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.35,
+          "gripErrorsM": [
+            6.798450666132723e-07,
+            1.55572690202453e-07
+          ],
+          "meshMinZ": 0.0002278229221701622,
+          "weaponMinZ": 0.7334235906600952,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.35208333333333336,
+          "gripErrorsM": [
+            8.90367761508464e-07,
+            5.448738519809651e-07
+          ],
+          "meshMinZ": 0.00020583951845765114,
+          "weaponMinZ": 0.7327296733856201,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3541666666666667,
+          "gripErrorsM": [
+            8.436281585722211e-07,
+            3.8298086027997663e-07
+          ],
+          "meshMinZ": 0.0002570892684161663,
+          "weaponMinZ": 0.7320355772972107,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.35625,
+          "gripErrorsM": [
+            1.111566948902829e-06,
+            4.172491438565601e-07
+          ],
+          "meshMinZ": 0.00026270095258951187,
+          "weaponMinZ": 0.7313404679298401,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.35833333333333334,
+          "gripErrorsM": [
+            6.713821694420887e-07,
+            4.382721312700134e-07
+          ],
+          "meshMinZ": 0.0003387313336133957,
+          "weaponMinZ": 0.7306455969810486,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.36041666666666666,
+          "gripErrorsM": [
+            1.1000666190228538e-06,
+            7.297386338693165e-07
+          ],
+          "meshMinZ": 0.00022848439402878284,
+          "weaponMinZ": 0.7301271557807922,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3625,
+          "gripErrorsM": [
+            5.311936098593765e-07,
+            4.3322419405301307e-07
+          ],
+          "meshMinZ": 0.00018816115334630013,
+          "weaponMinZ": 0.7296087145805359,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3645833333333333,
+          "gripErrorsM": [
+            9.270828571171602e-07,
+            7.18701093784373e-07
+          ],
+          "meshMinZ": 0.00011555477976799011,
+          "weaponMinZ": 0.729089617729187,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.36666666666666664,
+          "gripErrorsM": [
+            5.607799400585113e-07,
+            4.02762289304179e-07
+          ],
+          "meshMinZ": 0.00011259107850492,
+          "weaponMinZ": 0.7285704016685486,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.36875,
+          "gripErrorsM": [
+            1.137173466518947e-06,
+            6.518406471767891e-07
+          ],
+          "meshMinZ": 3.474671393632889e-05,
+          "weaponMinZ": 0.728208601474762,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.37083333333333335,
+          "gripErrorsM": [
+            9.939476638448806e-07,
+            4.1511503370708236e-07
+          ],
+          "meshMinZ": 3.1202565878629684e-05,
+          "weaponMinZ": 0.7278470396995544,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3729166666666667,
+          "gripErrorsM": [
+            1.1863572843393843e-06,
+            4.385095527637649e-07
+          ],
+          "meshMinZ": -1.8457183614373207e-05,
+          "weaponMinZ": 0.7274850010871887,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.375,
+          "gripErrorsM": [
+            8.798805260338981e-07,
+            2.3984042708307315e-07
+          ],
+          "meshMinZ": 6.421003490686417e-06,
+          "weaponMinZ": 0.7271230220794678,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3770833333333333,
+          "gripErrorsM": [
+            8.757384194395005e-07,
+            3.040165567860479e-07
+          ],
+          "meshMinZ": -3.158370964229107e-05,
+          "weaponMinZ": 0.7268997430801392,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.37916666666666665,
+          "gripErrorsM": [
+            2.2527998138578018e-07,
+            2.0981025457872038e-07
+          ],
+          "meshMinZ": 7.296912372112274e-07,
+          "weaponMinZ": 0.7266765236854553,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.38125,
+          "gripErrorsM": [
+            9.790641242846968e-07,
+            4.1783079185515503e-07
+          ],
+          "meshMinZ": -3.5246601328253746e-05,
+          "weaponMinZ": 0.7264524102210999,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.38333333333333336,
+          "gripErrorsM": [
+            4.919675688653024e-07,
+            2.2940046069533605e-07
+          ],
+          "meshMinZ": -1.3364478945732117e-07,
+          "weaponMinZ": 0.726228654384613,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3854166666666667,
+          "gripErrorsM": [
+            9.724381371950759e-07,
+            2.969970021843128e-07
+          ],
+          "meshMinZ": -3.003026358783245e-05,
+          "weaponMinZ": 0.726124107837677,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3875,
+          "gripErrorsM": [
+            2.3205448959516394e-07,
+            1.938583229669584e-07
+          ],
+          "meshMinZ": -5.264300853013992e-07,
+          "weaponMinZ": 0.7260196805000305,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.38958333333333334,
+          "gripErrorsM": [
+            7.892781619334106e-07,
+            3.8356020199004103e-07
+          ],
+          "meshMinZ": -2.9481947422027588e-05,
+          "weaponMinZ": 0.7259147763252258,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.39166666666666666,
+          "gripErrorsM": [
+            6.183645263666988e-07,
+            1.0956407464930968e-07
+          ],
+          "meshMinZ": 9.112991392612457e-07,
+          "weaponMinZ": 0.7258099913597107,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.39375,
+          "gripErrorsM": [
+            1.20377612932329e-06,
+            3.25872417220906e-07
+          ],
+          "meshMinZ": -2.2775493562221527e-06,
+          "weaponMinZ": 0.72580486536026,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.3958333333333333,
+          "gripErrorsM": [
+            8.580225902718116e-07,
+            3.567147829987576e-07
+          ],
+          "meshMinZ": 5.7491473853588104e-05,
+          "weaponMinZ": 0.7257999777793884,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.39791666666666664,
+          "gripErrorsM": [
+            1.5162080251030966e-06,
+            4.74751673811388e-07
+          ],
+          "meshMinZ": 0.00020481133833527565,
+          "weaponMinZ": 0.7257943749427795,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4,
+          "gripErrorsM": [
+            7.257339752844525e-07,
+            4.82982127269274e-07
+          ],
+          "meshMinZ": 0.00041443249210715294,
+          "weaponMinZ": 0.7257888317108154,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.40208333333333335,
+          "gripErrorsM": [
+            1.2942060079922787e-06,
+            5.385203169982528e-07
+          ],
+          "meshMinZ": 0.0010654979851096869,
+          "weaponMinZ": 0.7258588671684265,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4041666666666667,
+          "gripErrorsM": [
+            2.6389810280971116e-07,
+            2.473603978907172e-07
+          ],
+          "meshMinZ": 0.001797212054952979,
+          "weaponMinZ": 0.7259289622306824,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.40625,
+          "gripErrorsM": [
+            1.1992672290601503e-06,
+            3.3618552007313007e-07
+          ],
+          "meshMinZ": 0.0033165698405355215,
+          "weaponMinZ": 0.7259979844093323,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4083333333333333,
+          "gripErrorsM": [
+            9.677602272490424e-07,
+            2.394640249012142e-07
+          ],
+          "meshMinZ": 0.004932860843837261,
+          "weaponMinZ": 0.7260670065879822,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.41041666666666665,
+          "gripErrorsM": [
+            1.899240534268141e-06,
+            4.5517193914262993e-07
+          ],
+          "meshMinZ": 0.006605413742363453,
+          "weaponMinZ": 0.7261796593666077,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4125,
+          "gripErrorsM": [
+            1.234270532850062e-06,
+            2.548762929901082e-07
+          ],
+          "meshMinZ": 0.008359448052942753,
+          "weaponMinZ": 0.726292610168457,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.41458333333333336,
+          "gripErrorsM": [
+            1.6994021427567368e-06,
+            2.2696772533249583e-07
+          ],
+          "meshMinZ": 0.010483869351446629,
+          "weaponMinZ": 0.7264047265052795,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4166666666666667,
+          "gripErrorsM": [
+            6.59965431176707e-07,
+            3.81437711005515e-07
+          ],
+          "meshMinZ": 0.0126950116828084,
+          "weaponMinZ": 0.7265167832374573,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.41875,
+          "gripErrorsM": [
+            1.5932063176649304e-06,
+            3.650784492492676e-07
+          ],
+          "meshMinZ": 0.014238194562494755,
+          "weaponMinZ": 0.7266676425933838,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.42083333333333334,
+          "gripErrorsM": [
+            7.822133894652607e-07,
+            4.510525127549562e-07
+          ],
+          "meshMinZ": 0.015847664326429367,
+          "weaponMinZ": 0.7268186211585999,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.42291666666666666,
+          "gripErrorsM": [
+            1.5663162368078826e-06,
+            3.542161480938588e-07
+          ],
+          "meshMinZ": 0.017247594892978668,
+          "weaponMinZ": 0.7269684672355652,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.425,
+          "gripErrorsM": [
+            4.4705035758886937e-07,
+            2.1181805395825952e-07
+          ],
+          "meshMinZ": 0.018710678443312645,
+          "weaponMinZ": 0.7271183133125305,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4270833333333333,
+          "gripErrorsM": [
+            1.652299588060377e-06,
+            2.3111816300818472e-07
+          ],
+          "meshMinZ": 0.019293377175927162,
+          "weaponMinZ": 0.7273049354553223,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.42916666666666664,
+          "gripErrorsM": [
+            7.214017689470924e-07,
+            3.8787768384442606e-07
+          ],
+          "meshMinZ": 0.019932858645915985,
+          "weaponMinZ": 0.7274916768074036,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.43125,
+          "gripErrorsM": [
+            1.762515115978419e-06,
+            4.881694093609204e-07
+          ],
+          "meshMinZ": 0.02015402540564537,
+          "weaponMinZ": 0.7276774048805237,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.43333333333333335,
+          "gripErrorsM": [
+            7.253131601030209e-07,
+            5.981962542715357e-07
+          ],
+          "meshMinZ": 0.02036234922707081,
+          "weaponMinZ": 0.7278631329536438,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4354166666666667,
+          "gripErrorsM": [
+            1.7929137585226119e-06,
+            3.8759134796792293e-07
+          ],
+          "meshMinZ": 0.020381750538945198,
+          "weaponMinZ": 0.728084146976471,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4375,
+          "gripErrorsM": [
+            4.0112659010685486e-07,
+            1.284009809763289e-07
+          ],
+          "meshMinZ": 0.0204598568379879,
+          "weaponMinZ": 0.7283051609992981,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4395833333333333,
+          "gripErrorsM": [
+            1.593963959983414e-06,
+            4.660634450028364e-07
+          ],
+          "meshMinZ": 0.020589737221598625,
+          "weaponMinZ": 0.728524386882782,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.44166666666666665,
+          "gripErrorsM": [
+            6.868515037370134e-07,
+            2.640492490927778e-07
+          ],
+          "meshMinZ": 0.02077842503786087,
+          "weaponMinZ": 0.7287437915802002,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.44375,
+          "gripErrorsM": [
+            1.7756323735302594e-06,
+            5.523614441240453e-07
+          ],
+          "meshMinZ": 0.020791471004486084,
+          "weaponMinZ": 0.728996753692627,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.44583333333333336,
+          "gripErrorsM": [
+            6.506473062092703e-07,
+            3.3692774339303415e-07
+          ],
+          "meshMinZ": 0.02086564712226391,
+          "weaponMinZ": 0.7292496562004089,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4479166666666667,
+          "gripErrorsM": [
+            1.708897493699962e-06,
+            5.328207064148881e-07
+          ],
+          "meshMinZ": 0.020991429686546326,
+          "weaponMinZ": 0.7295011878013611,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.45,
+          "gripErrorsM": [
+            4.957051345024729e-07,
+            2.0971101440545274e-07
+          ],
+          "meshMinZ": 0.02117859572172165,
+          "weaponMinZ": 0.7297528386116028,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.45208333333333334,
+          "gripErrorsM": [
+            1.2561701534213775e-06,
+            3.081200194619926e-07
+          ],
+          "meshMinZ": 0.02119046449661255,
+          "weaponMinZ": 0.7300363183021545,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.45416666666666666,
+          "gripErrorsM": [
+            2.2868094347102214e-07,
+            2.6512449009207017e-07
+          ],
+          "meshMinZ": 0.021266574040055275,
+          "weaponMinZ": 0.7303197979927063,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.45625,
+          "gripErrorsM": [
+            1.6763485551122467e-06,
+            3.697057372007697e-07
+          ],
+          "meshMinZ": 0.02139420248568058,
+          "weaponMinZ": 0.7306015491485596,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4583333333333333,
+          "gripErrorsM": [
+            8.463073308250709e-07,
+            2.1963421960150713e-07
+          ],
+          "meshMinZ": 0.021586144343018532,
+          "weaponMinZ": 0.7308836579322815,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.46041666666666664,
+          "gripErrorsM": [
+            1.6608654384902684e-06,
+            2.9748723140738797e-07
+          ],
+          "meshMinZ": 0.021605178713798523,
+          "weaponMinZ": 0.7311968207359314,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4625,
+          "gripErrorsM": [
+            2.6941473545784677e-07,
+            4.150983177776372e-07
+          ],
+          "meshMinZ": 0.021690774708986282,
+          "weaponMinZ": 0.7315102219581604,
+          "bodyOrientationErrorDeg": 0.05595291023658669
+        },
+        {
+          "time": 0.46458333333333335,
+          "gripErrorsM": [
+            1.5979063770511533e-06,
+            3.0321666218526114e-07
+          ],
+          "meshMinZ": 0.02182765118777752,
+          "weaponMinZ": 0.7318216562271118,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4666666666666667,
+          "gripErrorsM": [
+            5.471105968876403e-07,
+            2.499000702984396e-07
+          ],
+          "meshMinZ": 0.022031011059880257,
+          "weaponMinZ": 0.7321332693099976,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.46875,
+          "gripErrorsM": [
+            1.568211161441517e-06,
+            3.709049885602305e-07
+          ],
+          "meshMinZ": 0.02214065194129944,
+          "weaponMinZ": 0.7324750423431396,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4708333333333333,
+          "gripErrorsM": [
+            4.49700559686581e-07,
+            1.758400160253934e-07
+          ],
+          "meshMinZ": 0.02215728722512722,
+          "weaponMinZ": 0.7328168749809265,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.47291666666666665,
+          "gripErrorsM": [
+            1.3770390843876233e-06,
+            1.228781230931777e-07
+          ],
+          "meshMinZ": 0.02219940908253193,
+          "weaponMinZ": 0.733157217502594,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.475,
+          "gripErrorsM": [
+            6.038217541078273e-07,
+            4.853754483134249e-07
+          ],
+          "meshMinZ": 0.022289639338850975,
+          "weaponMinZ": 0.7334979176521301,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.47708333333333336,
+          "gripErrorsM": [
+            1.4557176622287042e-06,
+            2.6151431761360534e-07
+          ],
+          "meshMinZ": 0.022191576659679413,
+          "weaponMinZ": 0.7338678240776062,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4791666666666667,
+          "gripErrorsM": [
+            6.041893742393219e-07,
+            4.172990311664476e-07
+          ],
+          "meshMinZ": 0.02217802405357361,
+          "weaponMinZ": 0.7342381477355957,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.48125,
+          "gripErrorsM": [
+            9.780430246247016e-07,
+            4.4318430798483603e-07
+          ],
+          "meshMinZ": 0.022252323105931282,
+          "weaponMinZ": 0.7346075177192688,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.48333333333333334,
+          "gripErrorsM": [
+            1.202668879729355e-07,
+            1.9173486877169864e-07
+          ],
+          "meshMinZ": 0.022412708029150963,
+          "weaponMinZ": 0.7349767088890076,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.48541666666666666,
+          "gripErrorsM": [
+            8.508700863263536e-07,
+            3.871614470892007e-07
+          ],
+          "meshMinZ": 0.022322386503219604,
+          "weaponMinZ": 0.735375702381134,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4875,
+          "gripErrorsM": [
+            6.618867014203313e-07,
+            2.6151431761360534e-07
+          ],
+          "meshMinZ": 0.02235027402639389,
+          "weaponMinZ": 0.7357746958732605,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.4895833333333333,
+          "gripErrorsM": [
+            1.1517248732633472e-06,
+            7.338349120166144e-07
+          ],
+          "meshMinZ": 0.022499114274978638,
+          "weaponMinZ": 0.7361724972724915,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.49166666666666664,
+          "gripErrorsM": [
+            5.991235111803917e-07,
+            5.772276911911081e-07
+          ],
+          "meshMinZ": 0.022768210619688034,
+          "weaponMinZ": 0.7365702986717224,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.49375,
+          "gripErrorsM": [
+            7.638957331926486e-07,
+            4.945664870497493e-07
+          ],
+          "meshMinZ": 0.02272178791463375,
+          "weaponMinZ": 0.7369987368583679,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.49583333333333335,
+          "gripErrorsM": [
+            2.980756061682675e-07,
+            1.210576058124894e-07
+          ],
+          "meshMinZ": 0.02280973084270954,
+          "weaponMinZ": 0.7374271750450134,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.4979166666666667,
+          "gripErrorsM": [
+            9.005826694486433e-07,
+            1.813187230175429e-07
+          ],
+          "meshMinZ": 0.023034514859318733,
+          "weaponMinZ": 0.7378543019294739,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5,
+          "gripErrorsM": [
+            8.666425708479074e-07,
+            2.8529497978904533e-07
+          ],
+          "meshMinZ": 0.023396043106913567,
+          "weaponMinZ": 0.7382814288139343,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5020833333333333,
+          "gripErrorsM": [
+            8.505764536148031e-07,
+            2.3704675242205015e-07
+          ],
+          "meshMinZ": 0.023413386195898056,
+          "weaponMinZ": 0.7387393712997437,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5041666666666667,
+          "gripErrorsM": [
+            4.308471767545033e-07,
+            3.248487317054218e-07
+          ],
+          "meshMinZ": 0.023560479283332825,
+          "weaponMinZ": 0.7391975522041321,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.50625,
+          "gripErrorsM": [
+            8.976635624068399e-07,
+            3.127691261254603e-07
+          ],
+          "meshMinZ": 0.023839782923460007,
+          "weaponMinZ": 0.7396544218063354,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5083333333333333,
+          "gripErrorsM": [
+            7.69146155238695e-07,
+            1.7059226545475887e-07
+          ],
+          "meshMinZ": 0.024251120164990425,
+          "weaponMinZ": 0.7401115894317627,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5104166666666666,
+          "gripErrorsM": [
+            7.91291033539446e-07,
+            2.4027400458748785e-07
+          ],
+          "meshMinZ": 0.024327261373400688,
+          "weaponMinZ": 0.7405999898910522,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5125,
+          "gripErrorsM": [
+            7.579318029767742e-07,
+            2.606904810208217e-07
+          ],
+          "meshMinZ": 0.024514982476830482,
+          "weaponMinZ": 0.7410885691642761,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.5145833333333333,
+          "gripErrorsM": [
+            9.987391433574994e-07,
+            3.778737338776049e-07
+          ],
+          "meshMinZ": 0.02481500804424286,
+          "weaponMinZ": 0.7415766716003418,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5166666666666667,
+          "gripErrorsM": [
+            6.820461251007094e-07,
+            3.601799000880665e-07
+          ],
+          "meshMinZ": 0.025227898731827736,
+          "weaponMinZ": 0.7420647740364075,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.51875,
+          "gripErrorsM": [
+            1.0072937150903763e-06,
+            2.086495155832238e-07
+          ],
+          "meshMinZ": 0.025335779413580894,
+          "weaponMinZ": 0.7424657940864563,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5208333333333334,
+          "gripErrorsM": [
+            1.320104660908529e-06,
+            4.962332786722992e-07
+          ],
+          "meshMinZ": 0.025534138083457947,
+          "weaponMinZ": 0.7428667545318604,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5229166666666667,
+          "gripErrorsM": [
+            1.0984526341259609e-06,
+            1.4136482746161726e-07
+          ],
+          "meshMinZ": 0.02582174353301525,
+          "weaponMinZ": 0.7432680726051331,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.525,
+          "gripErrorsM": [
+            4.3501438429936765e-07,
+            2.6658610497139163e-07
+          ],
+          "meshMinZ": 0.026200054213404655,
+          "weaponMinZ": 0.743669331073761,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5270833333333333,
+          "gripErrorsM": [
+            4.929925941413873e-07,
+            1.3374777936202467e-07
+          ],
+          "meshMinZ": 0.026309359818696976,
+          "weaponMinZ": 0.7436011433601379,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5291666666666667,
+          "gripErrorsM": [
+            3.28587973770396e-07,
+            3.921476338044028e-07
+          ],
+          "meshMinZ": 0.026492390781641006,
+          "weaponMinZ": 0.743533194065094,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.53125,
+          "gripErrorsM": [
+            5.897037173445261e-07,
+            2.1139176128970247e-07
+          ],
+          "meshMinZ": 0.02674657292664051,
+          "weaponMinZ": 0.7434647679328918,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5333333333333333,
+          "gripErrorsM": [
+            3.804951403869337e-07,
+            2.3324006561187697e-07
+          ],
+          "meshMinZ": 0.027074577286839485,
+          "weaponMinZ": 0.7433964610099792,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5354166666666667,
+          "gripErrorsM": [
+            5.30942090759562e-07,
+            2.79967400849699e-07
+          ],
+          "meshMinZ": 0.027224892750382423,
+          "weaponMinZ": 0.7430458664894104,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5375,
+          "gripErrorsM": [
+            3.7371922147227685e-07,
+            3.919883500923486e-07
+          ],
+          "meshMinZ": 0.027457019314169884,
+          "weaponMinZ": 0.7426953911781311,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5395833333333333,
+          "gripErrorsM": [
+            3.515665622088476e-07,
+            2.573418027038953e-07
+          ],
+          "meshMinZ": 0.02776980958878994,
+          "weaponMinZ": 0.7423444390296936,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5416666666666666,
+          "gripErrorsM": [
+            2.583375341830523e-07,
+            1.5597359400584043e-07
+          ],
+          "meshMinZ": 0.028164373710751534,
+          "weaponMinZ": 0.7419936060905457,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.54375,
+          "gripErrorsM": [
+            3.041306557042275e-07,
+            1.5418382053505537e-07
+          ],
+          "meshMinZ": 0.028378402814269066,
+          "weaponMinZ": 0.7416057586669922,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5458333333333333,
+          "gripErrorsM": [
+            5.324982910171797e-07,
+            2.4122513193729634e-07
+          ],
+          "meshMinZ": 0.028704123571515083,
+          "weaponMinZ": 0.7412180304527283,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5479166666666667,
+          "gripErrorsM": [
+            5.858189265459454e-07,
+            2.5531151429832634e-07
+          ],
+          "meshMinZ": 0.029142329469323158,
+          "weaponMinZ": 0.7408300042152405,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.55,
+          "gripErrorsM": [
+            5.193140191341443e-07,
+            4.168498304445437e-07
+          ],
+          "meshMinZ": 0.02969253621995449,
+          "weaponMinZ": 0.7404419779777527,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.5520833333333334,
+          "gripErrorsM": [
+            6.084238501510232e-07,
+            2.432874123343184e-07
+          ],
+          "meshMinZ": 0.029928678646683693,
+          "weaponMinZ": 0.7402626872062683,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5541666666666667,
+          "gripErrorsM": [
+            6.188917057900186e-07,
+            2.467706078541159e-07
+          ],
+          "meshMinZ": 0.030269088223576546,
+          "weaponMinZ": 0.7400832772254944,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.55625,
+          "gripErrorsM": [
+            5.163123337673698e-07,
+            2.9730057273400985e-07
+          ],
+          "meshMinZ": 0.03071129508316517,
+          "weaponMinZ": 0.7399033904075623,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5583333333333333,
+          "gripErrorsM": [
+            3.675976331325997e-07,
+            1.5787497237635472e-07
+          ],
+          "meshMinZ": 0.031257715076208115,
+          "weaponMinZ": 0.7397236227989197,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5604166666666667,
+          "gripErrorsM": [
+            7.88926425842531e-07,
+            4.150983177776372e-07
+          ],
+          "meshMinZ": 0.03141188248991966,
+          "weaponMinZ": 0.7399974465370178,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5625,
+          "gripErrorsM": [
+            7.320574591065342e-07,
+            5.405651672845201e-07
+          ],
+          "meshMinZ": 0.03165476769208908,
+          "weaponMinZ": 0.7402713894844055,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5645833333333333,
+          "gripErrorsM": [
+            1.0451431231176082e-06,
+            2.502330485544602e-07
+          ],
+          "meshMinZ": 0.03196671977639198,
+          "weaponMinZ": 0.7405446767807007,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5666666666666667,
+          "gripErrorsM": [
+            4.0091895420029596e-07,
+            2.961781503304982e-07
+          ],
+          "meshMinZ": 0.032367803156375885,
+          "weaponMinZ": 0.740818202495575,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.56875,
+          "gripErrorsM": [
+            1.2250938722561296e-06,
+            2.123415470123291e-07
+          ],
+          "meshMinZ": 0.03328720107674599,
+          "weaponMinZ": 0.7417626976966858,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5708333333333333,
+          "gripErrorsM": [
+            7.43811372723813e-07,
+            4.2016584666439475e-07
+          ],
+          "meshMinZ": 0.03434564173221588,
+          "weaponMinZ": 0.7427072525024414,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5729166666666666,
+          "gripErrorsM": [
+            1.0614462789879744e-06,
+            1.734961721628162e-07
+          ],
+          "meshMinZ": 0.03547905385494232,
+          "weaponMinZ": 0.7436514496803284,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.575,
+          "gripErrorsM": [
+            2.4801174369611135e-07,
+            2.0624116861323131e-07
+          ],
+          "meshMinZ": 0.036756839603185654,
+          "weaponMinZ": 0.7445957064628601,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5770833333333333,
+          "gripErrorsM": [
+            1.6291927957026894e-06,
+            1.7572159193561607e-07
+          ],
+          "meshMinZ": 0.0423106886446476,
+          "weaponMinZ": 0.7455206513404846,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5791666666666667,
+          "gripErrorsM": [
+            1.1446344696661702e-06,
+            1.9556887072930765e-07
+          ],
+          "meshMinZ": 0.047978516668081284,
+          "weaponMinZ": 0.7464458346366882,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.58125,
+          "gripErrorsM": [
+            1.669380062990387e-06,
+            2.0553341841896955e-07
+          ],
+          "meshMinZ": 0.05376317724585533,
+          "weaponMinZ": 0.7473704218864441,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5833333333333334,
+          "gripErrorsM": [
+            4.846887578752814e-07,
+            1.5879527841468985e-07
+          ],
+          "meshMinZ": 0.0596601776778698,
+          "weaponMinZ": 0.7482951283454895,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5854166666666667,
+          "gripErrorsM": [
+            1.4400078207046613e-06,
+            2.825578051626898e-07
+          ],
+          "meshMinZ": 0.06593532115221024,
+          "weaponMinZ": 0.7488648295402527,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5875,
+          "gripErrorsM": [
+            3.7371922147227685e-07,
+            2.4586915969848633e-07
+          ],
+          "meshMinZ": 0.07230803370475769,
+          "weaponMinZ": 0.7494344115257263,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5895833333333333,
+          "gripErrorsM": [
+            1.5302964757293439e-06,
+            2.03224743857769e-07
+          ],
+          "meshMinZ": 0.07128459215164185,
+          "weaponMinZ": 0.7500029802322388,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5916666666666667,
+          "gripErrorsM": [
+            8.513979625096437e-07,
+            1.3457530638715954e-07
+          ],
+          "meshMinZ": 0.06297510862350464,
+          "weaponMinZ": 0.7505715489387512,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.59375,
+          "gripErrorsM": [
+            2.147856011956167e-06,
+            2.899271645636748e-07
+          ],
+          "meshMinZ": 0.051545146852731705,
+          "weaponMinZ": 0.7508661150932312,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5958333333333333,
+          "gripErrorsM": [
+            1.1549496430401033e-06,
+            2.4314476359010817e-07
+          ],
+          "meshMinZ": 0.04218047857284546,
+          "weaponMinZ": 0.7511605620384216,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.5979166666666667,
+          "gripErrorsM": [
+            2.202881680009597e-06,
+            3.073985315244831e-07
+          ],
+          "meshMinZ": 0.03171926736831665,
+          "weaponMinZ": 0.7496569752693176,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6,
+          "gripErrorsM": [
+            8.902118820693401e-07,
+            1.645887049613485e-07
+          ],
+          "meshMinZ": 0.02498500980436802,
+          "weaponMinZ": 0.7481533885002136,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6020833333333333,
+          "gripErrorsM": [
+            2.423072255897255e-06,
+            3.2816403427042423e-07
+          ],
+          "meshMinZ": 0.018613094463944435,
+          "weaponMinZ": 0.7417814135551453,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6041666666666666,
+          "gripErrorsM": [
+            6.421345897440684e-07,
+            2.6863450374185958e-08
+          ],
+          "meshMinZ": 0.012242508120834827,
+          "weaponMinZ": 0.7354093790054321,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.60625,
+          "gripErrorsM": [
+            2.6143364328634884e-06,
+            4.2996047654161934e-07
+          ],
+          "meshMinZ": 0.008528180420398712,
+          "weaponMinZ": 0.7317075729370117,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6083333333333333,
+          "gripErrorsM": [
+            1.6713491155742095e-06,
+            2.84710657660447e-07
+          ],
+          "meshMinZ": 0.004815424792468548,
+          "weaponMinZ": 0.7280056476593018,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6104166666666667,
+          "gripErrorsM": [
+            2.9483595842790363e-06,
+            2.978601978367667e-07
+          ],
+          "meshMinZ": 0.00305144558660686,
+          "weaponMinZ": 0.7266073822975159,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6125,
+          "gripErrorsM": [
+            9.828626208754489e-07,
+            2.7112846036149205e-07
+          ],
+          "meshMinZ": 0.00129090272821486,
+          "weaponMinZ": 0.7252091765403748,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6145833333333334,
+          "gripErrorsM": [
+            2.5425106287002563e-06,
+            1.8189185285171422e-07
+          ],
+          "meshMinZ": 0.0007185975555330515,
+          "weaponMinZ": 0.7250029444694519,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6166666666666667,
+          "gripErrorsM": [
+            7.668761398894565e-07,
+            2.7038525509274086e-07
+          ],
+          "meshMinZ": 0.0001495399046689272,
+          "weaponMinZ": 0.7247965335845947,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.61875,
+          "gripErrorsM": [
+            2.798737611765205e-06,
+            2.8361180887631e-07
+          ],
+          "meshMinZ": 6.296439096331596e-05,
+          "weaponMinZ": 0.7252091765403748,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6208333333333333,
+          "gripErrorsM": [
+            1.0978677637513095e-06,
+            1.564621925354004e-07
+          ],
+          "meshMinZ": 2.6758527383208275e-05,
+          "weaponMinZ": 0.7256218791007996,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6229166666666667,
+          "gripErrorsM": [
+            2.886405311350452e-06,
+            4.7650234660875734e-07
+          ],
+          "meshMinZ": 2.0444858819246292e-05,
+          "weaponMinZ": 0.7261184453964233,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.625,
+          "gripErrorsM": [
+            9.662389799784842e-07,
+            2.482564312450012e-07
+          ],
+          "meshMinZ": 5.0226692110300064e-05,
+          "weaponMinZ": 0.7266148328781128,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6270833333333333,
+          "gripErrorsM": [
+            2.8217371145257387e-06,
+            5.535535699429127e-07
+          ],
+          "meshMinZ": 2.9469840228557587e-05,
+          "weaponMinZ": 0.7275170683860779,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6291666666666667,
+          "gripErrorsM": [
+            9.863387604420506e-07,
+            2.619385098106704e-07
+          ],
+          "meshMinZ": 5.8228615671396255e-05,
+          "weaponMinZ": 0.7284192442893982,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.63125,
+          "gripErrorsM": [
+            2.6227902311758118e-06,
+            6.576904805315102e-07
+          ],
+          "meshMinZ": 3.761681728065014e-05,
+          "weaponMinZ": 0.7292214035987854,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6333333333333333,
+          "gripErrorsM": [
+            5.558677410508627e-07,
+            3.752016518120221e-07
+          ],
+          "meshMinZ": 6.646313704550266e-05,
+          "weaponMinZ": 0.7300235629081726,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6354166666666666,
+          "gripErrorsM": [
+            2.8677307946172687e-06,
+            5.375917885326524e-07
+          ],
+          "meshMinZ": 3.56561504304409e-05,
+          "weaponMinZ": 0.730796754360199,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6375,
+          "gripErrorsM": [
+            1.2151200868521446e-06,
+            1.9288947382568745e-07
+          ],
+          "meshMinZ": 7.965019904077053e-05,
+          "weaponMinZ": 0.7315701842308044,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6395833333333333,
+          "gripErrorsM": [
+            3.0536566105208884e-06,
+            4.329678483536135e-07
+          ],
+          "meshMinZ": 0.0007494178134948015,
+          "weaponMinZ": 0.7347308397293091,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6416666666666667,
+          "gripErrorsM": [
+            9.843863741847732e-07,
+            1.9715903136729064e-07
+          ],
+          "meshMinZ": -1.3993121683597565e-07,
+          "weaponMinZ": 0.7378917336463928,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.64375,
+          "gripErrorsM": [
+            2.6169050713089127e-06,
+            2.7559595909985424e-07
+          ],
+          "meshMinZ": -4.67691570520401e-05,
+          "weaponMinZ": 0.7414378523826599,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6458333333333334,
+          "gripErrorsM": [
+            7.134903515908269e-07,
+            4.164334718132651e-07
+          ],
+          "meshMinZ": -2.9103830456733704e-07,
+          "weaponMinZ": 0.7449838519096375,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6479166666666667,
+          "gripErrorsM": [
+            2.771535867127924e-06,
+            3.2985126407710693e-07
+          ],
+          "meshMinZ": -0.00028019119054079056,
+          "weaponMinZ": 0.7468557953834534,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.65,
+          "gripErrorsM": [
+            9.035269048537987e-07,
+            2.42601933407261e-07
+          ],
+          "meshMinZ": 1.1431984603404999e-07,
+          "weaponMinZ": 0.7487277388572693,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6520833333333333,
+          "gripErrorsM": [
+            2.5864596913482243e-06,
+            2.8672637648722316e-07
+          ],
+          "meshMinZ": -0.0005435391794890165,
+          "weaponMinZ": 0.7479944825172424,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6541666666666667,
+          "gripErrorsM": [
+            5.075460242535684e-07,
+            7.365248452154613e-07
+          ],
+          "meshMinZ": -3.0011869966983795e-07,
+          "weaponMinZ": 0.7472612261772156,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.65625,
+          "gripErrorsM": [
+            3.0878235565004404e-06,
+            3.41936196213324e-07
+          ],
+          "meshMinZ": -0.00011545117013156414,
+          "weaponMinZ": 0.7465261220932007,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6583333333333333,
+          "gripErrorsM": [
+            1.3941199032710948e-06,
+            2.54658403407225e-07
+          ],
+          "meshMinZ": 1.5366822481155396e-08,
+          "weaponMinZ": 0.7457910180091858,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6604166666666667,
+          "gripErrorsM": [
+            2.486823112297559e-06,
+            4.6255146160516616e-07
+          ],
+          "meshMinZ": -2.4782493710517883e-06,
+          "weaponMinZ": 0.7446885108947754,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6625,
+          "gripErrorsM": [
+            5.525624033172415e-07,
+            1.454295314546163e-07
+          ],
+          "meshMinZ": -2.761371433734894e-07,
+          "weaponMinZ": 0.7435860633850098,
+          "bodyOrientationErrorDeg": 0.03956468205889273
+        },
+        {
+          "time": 0.6645833333333333,
+          "gripErrorsM": [
+            2.319220606922786e-06,
+            3.68935418222545e-07
+          ],
+          "meshMinZ": -0.00022451812401413918,
+          "weaponMinZ": 0.7424814105033875,
+          "bodyOrientationErrorDeg": 0
+        },
+        {
+          "time": 0.6666666666666666,
+          "gripErrorsM": [
+            1.3319879520859906e-06,
+            1.7285507556975158e-07
+          ],
+          "meshMinZ": -2.6775524020195007e-08,
+          "weaponMinZ": 0.7413768172264099,
+          "bodyOrientationErrorDeg": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "base": "assets-3d/tactical-suit-evaluation/models/TacticalSuit_Quaternius_Rifle.glb",
+  "baseSha256": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7",
+  "bodyGeometryMaterialsSkinsAndNodesCopiedExactly": true,
+  "addedAnimationNames": [
+    "SU_Project_TacticalSprint_Rifle",
+    "SU_Project_Idle_Rifle"
+  ],
+  "newFile": "assets-3d/infantry-animation-integration/models/TacticalSuit_Integrated.glb"
+}

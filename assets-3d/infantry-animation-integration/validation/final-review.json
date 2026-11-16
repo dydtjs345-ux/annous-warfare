@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-16",
+  "visuallyInspected": true,
+  "outputs": [
+    "sprint-roles-side.jpg",
+    "sprint-roles-iso.jpg",
+    "idle-iso.png"
+  ],
+  "findings": {
+    "identity": "Both sprint panels intentionally use the actual green Tactical Suit; separate appearance page compares original USMC to actual Suit.",
+    "tacticalSprint": "Existing SR motion visibly retained on external body; more upright and restrained torso than imported candidate.",
+    "emergencyCandidate": "Quaternius full-body forward lean/counterrotation retained, controlled rifle; separate fast forward escape candidate only.",
+    "idle": "Actual model standing with rifle controlled by both hands.",
+    "contacts": "Exported rifle and finger alignment inspected; runtime crossfade wrist constraints verified separately by CPU, not visually in browser.",
+    "browser": "Not tested; required managed CUA tool unavailable."
+  },
+  "modelSha256": "dedb449bc98f55fd2d1f96b414476e85d3b26ba62a57180db8278dbc1d665126",
+  "htmlReferencedIdsExist": true
+}

@@ -1,9 +1,9 @@
 """Validate actual exported GLB playback, including between-key hand alignment."""
-import bpy,json,math
+import bpy,json,math,os
 from pathlib import Path
 from mathutils import Vector,Matrix,Quaternion
-ROOT=Path(__file__).resolve().parents[1];refs=json.loads((ROOT/'validation/rifle-reference.json').read_text())['actions'];authored=json.loads((ROOT/'validation/retarget-grips.json').read_text())
-bpy.ops.wm.read_factory_settings(use_empty=True);s=bpy.context.scene;s.render.fps=240;bpy.ops.import_scene.gltf(filepath=str(ROOT/'models/TacticalSuit_Quaternius_Rifle.glb'))
+ROOT=Path(__file__).resolve().parents[1];PROJECT_IDLE=os.environ.get('AW_SUIT_SOURCE')=='project-idle';LEGACY=os.environ.get('AW_SUIT_SOURCE')in['project-sprint','project-idle'];OUT=ROOT.parent/'infantry-animation-integration'if LEGACY else ROOT;refs=json.loads((ROOT/'validation/rifle-reference.json').read_text())['actions'];authored=json.loads((OUT/'validation/project-idle-retarget.json'if PROJECT_IDLE else OUT/'validation/project-sprint-retarget.json'if LEGACY else ROOT/'validation/retarget-grips.json').read_text())
+bpy.ops.wm.read_factory_settings(use_empty=True);s=bpy.context.scene;s.render.fps=240;bpy.ops.import_scene.gltf(filepath=str(OUT/'models/TacticalSuit_Integrated.glb'if LEGACY else ROOT/'models/TacticalSuit_Quaternius_Rifle.glb'))
 objects=[o for o in bpy.data.objects if not any(c.name=='glTF_not_exported'for c in o.users_collection)];rig=next(o for o in objects if o.type=='ARMATURE');weapon=bpy.data.objects.get('Weapon');assert weapon;tracks={};rest={o:o.matrix_basis.copy()for o in objects}
 for o in objects:
  if o.animation_data:
@@ -11,9 +11,9 @@ for o in objects:
   for tr in o.animation_data.nla_tracks:
    tr.mute=True
    for st in tr.strips:tracks.setdefault(tr.name,[]).append((o,st.action))
-report={'source':'Exported TacticalSuit_Quaternius_Rifle.glb, reimported into Blender','sampleHz':480,'bones':len(rig.data.bones),'characterMesh':'Actual Tactical Suit; original USMC body absent','actions':{}}
-for action,D in [('walk',4/3),('sprint',2/3)]:
- name='SU_Quaternius_'+('Walk'if action=='walk'else'Sprint')+'_Rifle';pairs=[pair for tr,pairs in tracks.items()if tr==name or tr.startswith(name+'_')for pair in pairs];assert pairs
+report={'source':('Exported TacticalSuit_Integrated.glb'if LEGACY else'Exported TacticalSuit_Quaternius_Rifle.glb')+', reimported into Blender','sampleHz':480,'bones':len(rig.data.bones),'characterMesh':'Actual Tactical Suit; original USMC body absent','actions':{}}
+for action,D in ([('walk',2.4)]if PROJECT_IDLE else[('sprint',2/3)]if LEGACY else[('walk',4/3),('sprint',2/3)]):
+ name='SU_Project_Idle_Rifle'if PROJECT_IDLE else'SU_Project_TacticalSprint_Rifle'if LEGACY else'SU_Quaternius_'+('Walk'if action=='walk'else'Sprint')+'_Rifle';pairs=[pair for tr,pairs in tracks.items()if tr==name or tr.startswith(name+'_')for pair in pairs];assert pairs
  rows=[]
  for i in range(round(D*480)+1):
   t=i/480
@@ -39,6 +39,6 @@ for action,D in [('walk',4/3),('sprint',2/3)]:
     bone=next(b for b in rig.pose.bones if part+'_'in b.name);q=(rig.matrix_world@bone.matrix).to_quaternion().normalized();eq=Quaternion(expected[key]).normalized();bodyError=max(bodyError,math.degrees(2*math.acos(min(1,abs(q.dot(eq))))))
   rows.append({'time':t,'gripErrorsM':errors,'meshMinZ':low,'weaponMinZ':min((weapon.matrix_world@v.co).z for v in weapon.data.vertices),'bodyOrientationErrorDeg':bodyError})
  result={'duration':D,'maxWristErrorM':max(max(r['gripErrorsM'])for r in rows),'minimumMeshZ':min(r['meshMinZ']for r in rows),'minimumWeaponZ':min(r['weaponMinZ']for r in rows),'maxBodyOrientationErrorDeg':max(r['bodyOrientationErrorDeg']for r in rows),'frames':rows};report['actions'][action]=result;print('REIMPORTED',action,{k:v for k,v in result.items()if k!='frames'},flush=True)
- (ROOT/'validation/reimport-partial.json').write_text(json.dumps(report,indent=2)+'\n')
+ (OUT/'validation/project-idle-reimport-partial.json'if PROJECT_IDLE else OUT/'validation/project-sprint-reimport-partial.json'if LEGACY else ROOT/'validation/reimport-partial.json').write_text(json.dumps(report,indent=2)+'\n')
  assert result['maxWristErrorM']<.003,result['maxWristErrorM'];assert result['minimumMeshZ']>-.004,result['minimumMeshZ'];assert result['minimumWeaponZ']>.15
-(ROOT/'validation/reimport.json').write_text(json.dumps(report,indent=2)+'\n')
+(OUT/'validation/project-idle-reimport.json'if PROJECT_IDLE else OUT/'validation/project-sprint-reimport.json'if LEGACY else ROOT/'validation/reimport.json').write_text(json.dumps(report,indent=2)+'\n')
