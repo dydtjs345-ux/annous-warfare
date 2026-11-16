@@ -1,0 +1,8 @@
+{
+  "baseCommit": "b350f9e469f77c2ea5f56041a7e216538c3f470e",
+  "filesCompared": 919,
+  "unchangedFiles": 918,
+  "onlyPriorFileChanged": "assets-3d/open-asset-evaluation/preview/index.html",
+  "change": "Text clarification: old preview compares motions on original models; link to actual model review.",
+  "originalModelAnimationGameAIMapFilesUnchanged": true
+}

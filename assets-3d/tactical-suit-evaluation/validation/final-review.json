@@ -1,0 +1,42 @@
+{
+  "visuallyInspected": true,
+  "reviewDate": "2026-11-16",
+  "source": "Final exported GLB reimported into Blender; rendered phase sequences inspected, not browser playback.",
+  "modelSha256": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7",
+  "inspected": [
+    "appearance-side.jpg",
+    "appearance-iso.jpg",
+    "walk-side-comparison.jpg",
+    "walk-iso-comparison.jpg",
+    "sprint-side-comparison.jpg",
+    "sprint-iso-comparison.jpg",
+    "grip-left.png",
+    "grip-right.png"
+  ],
+  "findings": {
+    "appearance": "Actual DanlyVostok green suit, cap, balaclava and equipment on right; original tan USMC on left.",
+    "walk": "Alternating support, pelvis/chest movement retained; both hands on controlled rifle.",
+    "sprint": "Source full-body motion retained and rifle hands constrained. Large athletic torso rotation and faster travel remain; emergency-retreat evaluation candidate, not replacement tactical sprint.",
+    "ground": "Small residual between-key boot penetration, maximum 2.52 mm; not perfect contact.",
+    "hands": "Opposing close-ups show support fingers around handguard and firing hand at grip; no detached support hand. Exhaustive mesh collision not certified.",
+    "crawl": "No licensed imported crawl acquired. Existing original crawl remains unchanged."
+  },
+  "metrics": {
+    "walk": {
+      "duration": 1.3333333333333333,
+      "maxWristErrorM": 1.1512205637176165e-06,
+      "minimumMeshZ": -3.1115952879190445e-05,
+      "minimumWeaponZ": 0.8500280976295471,
+      "maxBodyOrientationErrorDeg": 0.03956468205889273
+    },
+    "sprint": {
+      "duration": 0.6666666666666666,
+      "maxWristErrorM": 4.384407834022509e-05,
+      "minimumMeshZ": -0.0025171912275254726,
+      "minimumWeaponZ": 0.6215052008628845,
+      "maxBodyOrientationErrorDeg": 0.05595291023658669
+    }
+  },
+  "browserVerified": false,
+  "physicalSafariVerified": false
+}

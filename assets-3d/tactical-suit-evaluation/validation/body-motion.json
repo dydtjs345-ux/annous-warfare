@@ -1,0 +1,14 @@
+{
+  "walk": {
+    "pelvisAngleRangeDeg": 6.265891889856065,
+    "chestRelativePelvisRangeDeg": 11.323498892712658,
+    "minimumAuthoredSoleZ": -2.964399755001068e-06,
+    "maxPelvisHeightCleanupM": 0.020815160566316715
+  },
+  "sprint": {
+    "pelvisAngleRangeDeg": 10.540460631116888,
+    "chestRelativePelvisRangeDeg": 60.428041228643266,
+    "minimumAuthoredSoleZ": -9.704381227493286e-07,
+    "maxPelvisHeightCleanupM": 0.0662913900358254
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Military tactical suit (LowPolyGameReady)",
+  "sketchfabUid": "ef698ce36b1545a78ce592dd3db4c7ed",
+  "author": {
+    "username": "1799danly",
+    "displayName": "DanlyVostok",
+    "profileUrl": "https://sketchfab.com/1799danly"
+  },
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "listing": "https://sketchfab.com/3d-models/military-tactical-suit-lowpolygameready-ef698ce36b1545a78ce592dd3db4c7ed",
+  "listingMetadataRetrieved": "2026-11-11",
+  "officialDownload": {
+    "url": "https://api.sketchfab.com/v3/models/ef698ce36b1545a78ce592dd3db4c7ed/download",
+    "status": 401,
+    "reason": "Authentication required; no authenticated original archive downloaded."
+  },
+  "acquiredMirror": {
+    "repository": "https://github.com/cktang88/3d-fps",
+    "commit": "130ac2a5c856401ec36e7d35afcfefe40c5801f4",
+    "path": "public/assets/models/characters/soldier_tac.glb",
+    "sha256": "fe02bc307077d7a5a74069d085893988d93751495871c84082256e60bf9bfc9e",
+    "bytes": 4532132,
+    "embeddedCreatorLicenseSourceMatchListing": true
+  },
+  "importStatus": "Successful actual external-character import after documented unit/bind normalization. Prior preview did not import it.",
+  "actualExternalBody": true,
+  "originalUSMCBodySubstituted": false,
+  "animationsAcquired": [
+    "Quaternius UAL1 Standard RM Walk_Loop",
+    "Quaternius UAL1 Standard RM Sprint_Loop"
+  ],
+  "forwardCrawlAcquired": false
+}

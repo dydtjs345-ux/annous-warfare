@@ -1,0 +1,22 @@
+{
+  "engine": "Three.js 0.170 CPU AnimationMixer; no browser/GPU; geometry/textures omitted",
+  "sampleHz": 480,
+  "actions": {
+    "walk": {
+      "duration": 1.3333333730697632,
+      "tracks": 263,
+      "playbackRate": 1,
+      "weight": 1,
+      "maxWristErrorM": 0.000001133298547991391,
+      "wholeSceneClipIncludesWeapon": true
+    },
+    "sprint": {
+      "duration": 0.6666666865348816,
+      "tracks": 263,
+      "playbackRate": 1,
+      "weight": 1,
+      "maxWristErrorM": 0.000044185008369656786,
+      "wholeSceneClipIncludesWeapon": true
+    }
+  }
+}

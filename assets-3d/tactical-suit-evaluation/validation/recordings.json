@@ -1,0 +1,126 @@
+[
+  {
+    "file": "walk-side.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "sha256": "66df46327f14602147ad40a8a3e1a3081acca65da1d8057f08b89c8dd18528e3",
+    "captures": [
+      {
+        "mode": "motion",
+        "action": "walk",
+        "view": "side",
+        "kind": "original",
+        "frames": 32,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "preserved-USMC-112592f71ac7"
+      },
+      {
+        "mode": "motion",
+        "action": "walk",
+        "view": "side",
+        "kind": "suit",
+        "frames": 32,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+      }
+    ],
+    "sameCamera": true,
+    "sameDisplayHeightM": 1.74,
+    "nativePlaybackSpeed": 1,
+    "rootTranslation": "Native imported trajectory; original retains existing game movement speed. No gait retiming."
+  },
+  {
+    "file": "walk-iso.mp4",
+    "frames": 32,
+    "fps": 24,
+    "duration": 1.3333333333333333,
+    "sha256": "79fdab61183c8a021d87a38141711f1cdbf113fcc7a42e359e4d963f849b2acb",
+    "captures": [
+      {
+        "mode": "motion",
+        "action": "walk",
+        "view": "iso",
+        "kind": "original",
+        "frames": 32,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "preserved-USMC-112592f71ac7"
+      },
+      {
+        "mode": "motion",
+        "action": "walk",
+        "view": "iso",
+        "kind": "suit",
+        "frames": 32,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+      }
+    ],
+    "sameCamera": true,
+    "sameDisplayHeightM": 1.74,
+    "nativePlaybackSpeed": 1,
+    "rootTranslation": "Native imported trajectory; original retains existing game movement speed. No gait retiming."
+  },
+  {
+    "file": "sprint-side.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "sha256": "17da0114bbdc09e127c508cd46c6e34d46d0f49e8bde07965b97029bbda1da87",
+    "captures": [
+      {
+        "mode": "motion",
+        "action": "sprint",
+        "view": "side",
+        "kind": "original",
+        "frames": 16,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "preserved-USMC-112592f71ac7"
+      },
+      {
+        "mode": "motion",
+        "action": "sprint",
+        "view": "side",
+        "kind": "suit",
+        "frames": 16,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+      }
+    ],
+    "sameCamera": true,
+    "sameDisplayHeightM": 1.74,
+    "nativePlaybackSpeed": 1,
+    "rootTranslation": "Native imported trajectory; original retains existing game movement speed. No gait retiming."
+  },
+  {
+    "file": "sprint-iso.mp4",
+    "frames": 16,
+    "fps": 24,
+    "duration": 0.6666666666666666,
+    "sha256": "98619d976a6315bf56cd5b47542052ec7f6ea0f6f47aaf5905da7156b61eb468",
+    "captures": [
+      {
+        "mode": "motion",
+        "action": "sprint",
+        "view": "iso",
+        "kind": "original",
+        "frames": 16,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "preserved-USMC-112592f71ac7"
+      },
+      {
+        "mode": "motion",
+        "action": "sprint",
+        "view": "iso",
+        "kind": "suit",
+        "frames": 16,
+        "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+        "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+      }
+    ],
+    "sameCamera": true,
+    "sameDisplayHeightM": 1.74,
+    "nativePlaybackSpeed": 1,
+    "rootTranslation": "Native imported trajectory; original retains existing game movement speed. No gait retiming."
+  }
+]

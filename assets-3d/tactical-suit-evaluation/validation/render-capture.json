@@ -1,0 +1,110 @@
+[
+  {
+    "mode": "appearance",
+    "action": "walk",
+    "view": "iso",
+    "kind": "original",
+    "frames": 1,
+    "renderer": "9fae10241432a8c478eedc119c64ab5764ff871a5d7fb2760e2d453678625763",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "appearance",
+    "action": "walk",
+    "view": "iso",
+    "kind": "suit",
+    "frames": 1,
+    "renderer": "9fae10241432a8c478eedc119c64ab5764ff871a5d7fb2760e2d453678625763",
+    "model": "8c98efe246647a8edfeb1542525e6ed4cf152013bd93e82d256c5c04b4285983"
+  },
+  {
+    "mode": "appearance",
+    "action": "walk",
+    "view": "side",
+    "kind": "original",
+    "frames": 1,
+    "renderer": "9fae10241432a8c478eedc119c64ab5764ff871a5d7fb2760e2d453678625763",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "appearance",
+    "action": "walk",
+    "view": "side",
+    "kind": "suit",
+    "frames": 1,
+    "renderer": "9fae10241432a8c478eedc119c64ab5764ff871a5d7fb2760e2d453678625763",
+    "model": "8c98efe246647a8edfeb1542525e6ed4cf152013bd93e82d256c5c04b4285983"
+  },
+  {
+    "mode": "motion",
+    "action": "sprint",
+    "view": "iso",
+    "kind": "original",
+    "frames": 16,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "sprint",
+    "view": "iso",
+    "kind": "suit",
+    "frames": 16,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "sprint",
+    "view": "side",
+    "kind": "original",
+    "frames": 16,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "sprint",
+    "view": "side",
+    "kind": "suit",
+    "frames": 16,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "walk",
+    "view": "iso",
+    "kind": "original",
+    "frames": 32,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "walk",
+    "view": "iso",
+    "kind": "suit",
+    "frames": 32,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "walk",
+    "view": "side",
+    "kind": "original",
+    "frames": 32,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "preserved-USMC-112592f71ac7"
+  },
+  {
+    "mode": "motion",
+    "action": "walk",
+    "view": "side",
+    "kind": "suit",
+    "frames": 32,
+    "renderer": "5af7997d511b230a6687a0d0abf25b7a5e4159a1e344406ff57a863626b78786",
+    "model": "b1a1d002478a9a573b98d6069242356b37df4223afbdc345360451acbc545ac7"
+  }
+]
