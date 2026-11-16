@@ -1,0 +1,26 @@
+{
+  "authored": {
+    "idle": {
+      "pelvisAngleRangeDeg": 3.3297639809981026,
+      "chestRelativePelvisRangeDeg": 5.0642147241293225,
+      "maximumPelvisReachCleanupM": 0
+    },
+    "walk": {
+      "pelvisAngleRangeDeg": 16.084146768607724,
+      "chestRelativePelvisRangeDeg": 16.084145217483528,
+      "maximumPelvisReachCleanupM": 0
+    }
+  },
+  "legacy": {
+    "idle": {
+      "pelvisAngleRangeDeg": 0.0,
+      "chestRelativePelvisRangeDeg": 1.3860034719490582,
+      "maximumPelvisReachCleanupM": 0
+    },
+    "walk": {
+      "pelvisAngleRangeDeg": 0.0,
+      "chestRelativePelvisRangeDeg": 1.3860034719490582,
+      "maximumPelvisReachCleanupM": 0
+    }
+  }
+}

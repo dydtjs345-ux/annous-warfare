@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-16",
+  "zenRepositoryCommit": "f19adc2ece4cab0f89c9236223abb97d4d2badea",
+  "ufbxCommit": "26a482ae66871d7de36eb722aa060bce95bce274",
+  "ufbxVersion": "0.23.1",
+  "legacyFBXParsingSucceeded": true,
+  "parsed": [
+    {
+      "file": "Zen-RevolverCrouchAimIdle.fbx",
+      "version": 6000,
+      "nodes": 108,
+      "bones": 98,
+      "take": "RevolverCrouchAimIdle",
+      "duration": 3.2
+    },
+    {
+      "file": "Zen-RevolverIdleL_LC.fbx",
+      "version": 6000,
+      "nodes": 107,
+      "bones": 97,
+      "take": "RevolverIdleL_LC",
+      "duration": 0.1
+    },
+    {
+      "file": "Zen-ShotgunAimIdle.fbx",
+      "version": 6000,
+      "nodes": 107,
+      "bones": 97,
+      "take": "ShotgunAimIdle",
+      "duration": 2.5666666
+    }
+  ],
+  "integrated": false,
+  "remaining": "Axis/bind/root-height and actual motion/skin conversion need review; parsed data is not a validated rifle clip.",
+  "observedCrouchTake": {
+    "pelvisDefaultY": 0.53,
+    "pelvisFrame0Y": 0.53,
+    "ankleDefaultY": 0.07637,
+    "ankleFrame0Y": 0.34097,
+    "rootAndTrajectoryTranslationsRemainZero": true
+  },
+  "otherSources": "Quaternius actual source/inventory recovered and rechecked. Kevin local source/license and Rokoko gate remain as documented in previous research; no purchases or bypasses."
+}

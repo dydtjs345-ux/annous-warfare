@@ -1,0 +1,12 @@
+{
+  "base": "assets-3d/infantry-animation-integration/models/TacticalSuit_Integrated.glb",
+  "baseSha256": "dedb449bc98f55fd2d1f96b414476e85d3b26ba62a57180db8278dbc1d665126",
+  "bodyGeometryMaterialsSkinsAndNodesCopiedExactly": true,
+  "addedAnimationNames": [
+    "P2_Legacy_CrouchIdle_Rifle",
+    "P2_Legacy_CrouchWalk_Rifle",
+    "P2_Quaternius_CrouchIdle_Rifle",
+    "P2_Quaternius_CrouchWalk_Rifle"
+  ],
+  "newFile": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb"
+}

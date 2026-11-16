@@ -1,0 +1,146 @@
+{
+  "feet": {
+    "Left": {
+      "error": 9.612523518605629e-7,
+      "restWorldYUp": [
+        0.11148317850277095,
+        0.002219967582783433,
+        0.05651450902248005
+      ],
+      "influences": [
+        {
+          "bone": "mixamorigLeftToeBase_066",
+          "local": [
+            0.06766142124718838,
+            0.037284646262320156,
+            -0.037634223028887956
+          ],
+          "weight": 0.7655576467514038
+        },
+        {
+          "bone": "mixamorigLeftFoot_065",
+          "local": [
+            0.0690274487613679,
+            0.20143428021373078,
+            -0.00448080459675293
+          ],
+          "weight": 0.16447696089744568
+        },
+        {
+          "bone": "mixamorigLeftToe_End_067",
+          "local": [
+            0.06675597519316034,
+            -0.06702583338192789,
+            -0.039218070171082774
+          ],
+          "weight": 0.0699654072523117
+        }
+      ]
+    },
+    "Right": {
+      "error": 0.0000011192890691866605,
+      "restWorldYUp": [
+        -0.2322272864204175,
+        0.0022417976379480787,
+        0.07948654033821972
+      ],
+      "influences": [
+        {
+          "bone": "mixamorigRightToeBase_060",
+          "local": [
+            0.0687136871276185,
+            0.0681184073067935,
+            -0.03466767056468433
+          ],
+          "weight": 0.8796226978302002
+        },
+        {
+          "bone": "mixamorigRightToe_End_061",
+          "local": [
+            0.0695033257080454,
+            -0.03619187658620125,
+            -0.03305645203825375
+          ],
+          "weight": 0.07858160138130188
+        },
+        {
+          "bone": "mixamorigRightFoot_059",
+          "local": [
+            0.06885567039765422,
+            0.22552029457823747,
+            0.014892846121400183
+          ],
+          "weight": 0.04179564118385315
+        }
+      ]
+    }
+  },
+  "states": {
+    "CrouchIdle": {
+      "clip": "P2_Quaternius_CrouchIdle_Rifle",
+      "duration": 2.933333333333333,
+      "contactPlan": {
+        "Left": {
+          "sourceForefootHeightFloorM": 0.014592539519071579,
+          "contactIntervalsS": [],
+          "continuousContact": true,
+          "sourceCycleTravelM": [
+            0,
+            0,
+            0
+          ],
+          "sourceContactThresholdM": 0.017592539519071578
+        },
+        "Right": {
+          "sourceForefootHeightFloorM": 0.01518535427749157,
+          "contactIntervalsS": [],
+          "continuousContact": true,
+          "sourceCycleTravelM": [
+            0,
+            0,
+            0
+          ],
+          "sourceContactThresholdM": 0.01818535427749157
+        }
+      }
+    },
+    "CrouchWalk": {
+      "clip": "P2_Quaternius_CrouchWalk_Rifle",
+      "duration": 2,
+      "contactPlan": {
+        "Left": {
+          "sourceForefootHeightFloorM": 0.014592878520488739,
+          "contactIntervalsS": [
+            [
+              1.9958333333333333,
+              3.1916666666666664
+            ]
+          ],
+          "continuousContact": false,
+          "sourceCycleTravelM": [
+            -2.9802322387695312e-8,
+            -1.4999990463256836,
+            -1.0617077350616455e-7
+          ],
+          "sourceContactThresholdM": 0.017592878520488738
+        },
+        "Right": {
+          "sourceForefootHeightFloorM": 0.014425157569348812,
+          "contactIntervalsS": [
+            [
+              1.125,
+              2.0708333333333333
+            ]
+          ],
+          "continuousContact": false,
+          "sourceCycleTravelM": [
+            -1.4901161193847656e-8,
+            -1.4999992847442627,
+            7.450580596923828e-8
+          ],
+          "sourceContactThresholdM": 0.01742515756934881
+        }
+      }
+    }
+  }
+}
