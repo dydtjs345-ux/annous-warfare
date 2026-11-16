@@ -1,0 +1,23 @@
+{
+  "models": [
+    {
+      "profile": "USMC",
+      "bytes": 15625036,
+      "sha256": "112592f71ac7650c722b0f119b645b3bfea8578f9c42482ab2d25c980aa30fef"
+    },
+    {
+      "profile": "Russian",
+      "bytes": 15785884,
+      "sha256": "46d44c1bbdf59108456bca85d1304b7c07f945b4a9657ecc8c1fe6834817cc46"
+    },
+    {
+      "profile": "TacticalSuit",
+      "bytes": 4530116,
+      "sha256": "dedb449bc98f55fd2d1f96b414476e85d3b26ba62a57180db8278dbc1d665126"
+    }
+  ],
+  "compiledPreviewFilesExist": true,
+  "koreanDocumentLanguage": true,
+  "browserExecuted": false,
+  "noKevinOrRokokoOrZenRawAssetsInOutput": true
+}

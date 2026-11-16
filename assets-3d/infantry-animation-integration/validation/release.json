@@ -1,0 +1,19 @@
+{
+  "projectId": "appgprj_6af0d17863348191b4ea48163f305325",
+  "savedVersionId": "appgprj_6af0d17863348191b4ea48163f305325~appgver_dc3c163bb82c8191aea464557c99412e",
+  "versionNumber": 17,
+  "siteSourceCommit": "6ce6ab63ea24aedb31d3adf76f9d8eb34368e01b",
+  "implementationCommit": "04103dec776129d0d5508ff96d64ff582e58a8a3",
+  "archiveContentHash": "sha256:b0de810e35989cd9d4060873ce8a54579e2a18c90113dfc6bfeeca754e1011c5",
+  "archiveFiles": 201,
+  "savedSuccessfully": true,
+  "deploymentStatus": "succeeded",
+  "deploymentId": "appgdep_6afb668eccd88191ae6a75ddb69491ff",
+  "siteURL": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site",
+  "unifiedPreviewURL": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/infantry-integration/",
+  "characterComparisonURL": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/tactical-suit-review/",
+  "anonymousHTTPVerified": true,
+  "anonymousVerifiedFiles": 199,
+  "previousSiteFilesPreserved": 156,
+  "gameMainRechecked": "b381e6017d01fa34f14e889ff639347db9e5feae"
+}
