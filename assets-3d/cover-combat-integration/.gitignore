@@ -1,0 +1,4 @@
+__pycache__/
+models/*_Baked.glb
+source/*.blend
+validation/*-partial.json

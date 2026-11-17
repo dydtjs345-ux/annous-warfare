@@ -1,0 +1,370 @@
+[
+  {
+    "path": "assets-3d/open-asset-evaluation/source/UAL1_Standard_RM.glb",
+    "sha256": "be684571ed655a1b892c2c07e6e2aeca053b606c442d34004adaf1d944090d01",
+    "clips": [
+      {
+        "name": "A_TPose",
+        "duration": 2.5
+      },
+      {
+        "name": "Crouch_Fwd_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Crouch_Idle_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Dance_Loop",
+        "duration": 1
+      },
+      {
+        "name": "Death01",
+        "duration": 2.4000000953674316
+      },
+      {
+        "name": "Driving_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Fixing_Kneeling",
+        "duration": 5.199999809265137
+      },
+      {
+        "name": "Hit_Chest",
+        "duration": 0.3333333432674408
+      },
+      {
+        "name": "Hit_Head",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Idle_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Talking_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Idle_Torch_Loop",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "Interact",
+        "duration": 2
+      },
+      {
+        "name": "Jog_Fwd_Loop",
+        "duration": 0.9333333373069763
+      },
+      {
+        "name": "Jump_Land",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "Jump_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Jump_Start",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "PickUp_Table",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Pistol_Aim_Down",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Aim_Neutral",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Aim_Up",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Idle_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Pistol_Reload",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Pistol_Shoot",
+        "duration": 0.6333333253860474
+      },
+      {
+        "name": "Punch_Cross",
+        "duration": 1
+      },
+      {
+        "name": "Punch_Jab",
+        "duration": 0.8666666746139526
+      },
+      {
+        "name": "Push_Loop",
+        "duration": 2.6666667461395264
+      },
+      {
+        "name": "Roll",
+        "duration": 1.4666666984558105
+      },
+      {
+        "name": "Sitting_Enter",
+        "duration": 1.2999999523162842
+      },
+      {
+        "name": "Sitting_Exit",
+        "duration": 1.0333333015441895
+      },
+      {
+        "name": "Sitting_Idle_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Sitting_Talking_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Spell_Simple_Enter",
+        "duration": 0.5333333611488342
+      },
+      {
+        "name": "Spell_Simple_Exit",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Spell_Simple_Idle_Loop",
+        "duration": 2.0999999046325684
+      },
+      {
+        "name": "Spell_Simple_Shoot",
+        "duration": 0.5
+      },
+      {
+        "name": "Sprint_Loop",
+        "duration": 0.6666666865348816
+      },
+      {
+        "name": "Swim_Fwd_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Swim_Idle_Loop",
+        "duration": 3.3333332538604736
+      },
+      {
+        "name": "Sword_Attack",
+        "duration": 1.5333333015441895
+      },
+      {
+        "name": "Sword_Idle",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Walk_Formal_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Walk_Loop",
+        "duration": 1.3333333730697632
+      }
+    ]
+  },
+  {
+    "path": "/workspace/open-asset-downloads/ual1-oga/Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+    "sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c",
+    "clips": [
+      {
+        "name": "A_TPose",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Crouch_Fwd_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Crouch_Idle_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Dance_Loop",
+        "duration": 1
+      },
+      {
+        "name": "Death01",
+        "duration": 2.4000000953674316
+      },
+      {
+        "name": "Driving_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Fixing_Kneeling",
+        "duration": 5.199999809265137
+      },
+      {
+        "name": "Hit_Chest",
+        "duration": 0.3333333432674408
+      },
+      {
+        "name": "Hit_Head",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Idle_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Talking_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Idle_Torch_Loop",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "Interact",
+        "duration": 2
+      },
+      {
+        "name": "Jog_Fwd_Loop",
+        "duration": 0.9333333373069763
+      },
+      {
+        "name": "Jump_Land",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "Jump_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Jump_Start",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "PickUp_Table",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Pistol_Aim_Down",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Aim_Neutral",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Aim_Up",
+        "duration": 0.1666666716337204
+      },
+      {
+        "name": "Pistol_Idle_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Pistol_Reload",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Pistol_Shoot",
+        "duration": 0.6333333253860474
+      },
+      {
+        "name": "Punch_Cross",
+        "duration": 1
+      },
+      {
+        "name": "Punch_Enter",
+        "duration": 0.8666666746139526
+      },
+      {
+        "name": "Punch_Jab",
+        "duration": 0.8666666746139526
+      },
+      {
+        "name": "Push_Loop",
+        "duration": 2.6666667461395264
+      },
+      {
+        "name": "Roll",
+        "duration": 1.4666666984558105
+      },
+      {
+        "name": "Roll_RM",
+        "duration": 1.4666666984558105
+      },
+      {
+        "name": "Sitting_Enter",
+        "duration": 1.2999999523162842
+      },
+      {
+        "name": "Sitting_Exit",
+        "duration": 1.0333333015441895
+      },
+      {
+        "name": "Sitting_Idle_Loop",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Sitting_Talking_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "Spell_Simple_Enter",
+        "duration": 0.5333333611488342
+      },
+      {
+        "name": "Spell_Simple_Exit",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Spell_Simple_Idle_Loop",
+        "duration": 2.0999999046325684
+      },
+      {
+        "name": "Spell_Simple_Shoot",
+        "duration": 0.5
+      },
+      {
+        "name": "Sprint_Loop",
+        "duration": 0.6666666865348816
+      },
+      {
+        "name": "Swim_Fwd_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Swim_Idle_Loop",
+        "duration": 3.3333332538604736
+      },
+      {
+        "name": "Sword_Attack",
+        "duration": 1.5333333015441895
+      },
+      {
+        "name": "Sword_Attack_RM",
+        "duration": 1.5333333015441895
+      },
+      {
+        "name": "Sword_Idle",
+        "duration": 1.6666666269302368
+      },
+      {
+        "name": "Walk_Formal_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Walk_Loop",
+        "duration": 1.3333333730697632
+      }
+    ]
+  }
+]

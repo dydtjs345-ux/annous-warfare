@@ -1,0 +1,9 @@
+# Cover-combat asset credits
+
+Actual character: **Military tactical suit (LowPolyGameReady)** by **DanlyVostok / 1799danly**, **CC BY 4.0**. Original model: https://sketchfab.com/3d-models/military-tactical-suit-lowpolygameready-ef698ce36b1545a78ce592dd3db4c7ed ; creator https://sketchfab.com/1799danly ; license https://creativecommons.org/licenses/by/4.0/ . Existing credited mirror/normalization provenance remains in the original tactical-suit evaluation folder. This work derives new cover motion tracks; it does not replace the approved body appearance or claim endorsement.
+
+Cover motion is **derived project motion**, based on the existing `Lower_AimStance`, `FB_AimIdle_Upper` and `FB_Recoil_Shot` clips, with retargeting, explicit balance/lean/stance adjustments, head/sight alignment and arm/leg/finger constraints. These are not untouched Quaternius, Rokoko, Kevin Iglesias or ZenXChaos cover clips. The existing project M16A4 and AK-74M and faction-specific grip references are reused as authorized inputs; no new independent external weapon license is asserted.
+
+Approved existing Quaternius motion remains preserved in the M16 derivative: Universal Animation Library 1 Standard RM, CC0 1.0, https://quaternius.com/packs/universalanimationlibrary.html . Its walking/sprint and Phase 2 crouch tracks are not overwritten. No newly acquired professional cover clip is claimed.
+
+Three.js runtime: MIT License, full text retained as `Three-MIT.txt`. Source inventories, access restrictions and reasons for not shipping other evaluated motion packs are documented in the source report.
