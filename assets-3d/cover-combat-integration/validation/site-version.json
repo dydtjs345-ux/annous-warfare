@@ -1,0 +1,12 @@
+{
+  "projectId": "appgprj_6af0d17863348191b4ea48163f305325",
+  "versionId": "appgprj_6af0d17863348191b4ea48163f305325~appgver_7fb979ad93a4819186fe11218b1ec195",
+  "versionNumber": 19,
+  "sourceSiteCommit": "959e056294f372cbfb0bb7a683a161f395399938",
+  "featureImplementationCommit": "7677b95598bd9ab0393ea3bac5a53b9fdb9af0e5",
+  "audiencePreserved": "public",
+  "deploymentId": "appgdep_6afbfdce068c8191924f67f42973de16",
+  "deploymentStatus": "succeeded",
+  "verifiedHttpsUrl": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/cover-combat/",
+  "deploymentUpdatedAt": "2026-11-17T07:10:31.181619+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "implementedClipCount": 104,
+  "requestedActionTypes": 10,
+  "weapons": [
+    "M16A4",
+    "AK74M"
+  ],
+  "stances": [
+    "Stand",
+    "Crouch"
+  ],
+  "originalEightClipsAndBinaryPrefixUnchanged": true,
+  "oldRepositoryFilesBytePreserved": 1085,
+  "publicHttpsVerified": true,
+  "browserGpuTested": false,
+  "physicalSafariTested": false,
+  "reports": {
+    "asset-merge.json": "b632d47bb99f25a20de7656f82f39141425e1066cf751e7d51fd21fd8b9c0c50",
+    "controller.json": "0b655bbbed6ccddc5632d50b5227bbe92de906597bfe151218ca208b82574c4d",
+    "preservation.json": "f61400bf12625c7a827dab84b0760f89aefceffe2b2fd9e8d2df0ed60e7a0cc7",
+    "media.json": "19eb30965fb91887df10b3df18b5da52fe98b741d72c0747e6f87e2c6578beba",
+    "exit-contacts.json": "f90d819a3b99878f04a0b4a986e28f651a0aaaa908c37bedce67a2aed7d478d5",
+    "exit-isolation.json": "7af82e2fb9735b771bc9972ff48f2fc7a961ecf55c21242c2c9afe93811ad80b",
+    "M16A4-export.json": "036df8cc7488221056c79858135f562d3a4461ad2770758cd83228384d0c760b",
+    "AK74M-export.json": "4267bea8f0b85242351df66509dba2ada21485cc6e36126f7e6eb2c7d3fc6fe8",
+    "M16A4-export-240-Left.json": "b3f4b0998c8de3d1558d8616648f966339c14e10644373925ad4696938b89dc3",
+    "AK74M-export-240-Low.json": "b8eb4608cd6422159160a3fc957a0e6c03d2e8acb1c74c9ce9dcc58e4eb34049",
+    "M16A4-export-120-Exit.json": "cffe60cd75ef688f8bb2f14a5f840c14cd54cda77262d8074434fb3e24efeaa4",
+    "AK74M-export-120-Exit.json": "4114478443818813594622058749630af2e8f99aff64e1d25acd0235f38c71ce",
+    "AK74M-export-240-Exit.json": "909aa9a6bec6ae2cce8fdfe49d0e7c99a7b84764eb9e68152c0d34dd178a9dd7",
+    "deployment-http.json": "c8c455e1db12c112c997f61834c7e7346a60bdc710b2daa8aed520614cc3f572",
+    "site-version.json": "ce131aa7dca770f3c75fd1e942759af300a29eecb4ddd4bbdbe23366a41ef170",
+    "build.json": "110f63963cd9fd66290016042b6faf47767a16a7101343730a4ad49b17354a94"
+  }
+}

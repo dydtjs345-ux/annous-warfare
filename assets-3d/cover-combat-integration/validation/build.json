@@ -63,8 +63,8 @@
     },
     {
       "path": "manifest.json",
-      "bytes": 60108,
-      "sha256": "9c092a5d973d8e5b1bb1a187f483088fa6085cc1f1ecc4b21866c5e6b4c7ae07"
+      "bytes": 60146,
+      "sha256": "40aa7301bec6d657bf616deacdf3c7b8ec25be087ed8f727287018173e208a39"
     },
     {
       "path": "models/AK74M_Cover.animation.b9ba0bf1d795.glb",
@@ -107,7 +107,7 @@
       "sha256": "cfb07080a1c902b746ac4a44b33cdfdff679110139453c4e5786c5a8293dc84d"
     }
   ],
-  "totalBytes": 29452839,
+  "totalBytes": 29452877,
   "initial3DBytes": 16258532,
   "controllerValidated": true,
   "browserGpuTested": false,
