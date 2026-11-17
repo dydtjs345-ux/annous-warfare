@@ -1,0 +1,31 @@
+{
+  "recordings": [
+    {
+      "file": "priority-iso.mp4",
+      "sha256": "79c86601650caf774c5a2ff55310648bce21bcbbf9ed7bb060a8e86cb45eb0f4",
+      "framesSampled": 85,
+      "sampleHz": 12,
+      "playbackSpeed": 1,
+      "method": "Final combined GLB reimported and evaluated at actual times in Blender; opaque cover; no browser screen capture"
+    },
+    {
+      "file": "priority-side.mp4",
+      "sha256": "d2f87518d3dfa22d4144b9926a5fbe214b801438d87d5c1e73da2bb6fa154336",
+      "framesSampled": 85,
+      "sampleHz": 12,
+      "playbackSpeed": 1,
+      "method": "Final combined GLB reimported and evaluated at actual times in Blender; opaque cover; no browser screen capture"
+    },
+    {
+      "file": "cover-exit.mp4",
+      "sha256": "8c0d0be6a88b2daeea5500b75fb887a80c40ae6c4ceee8984358160ee43850ed",
+      "framesSampled": 53,
+      "sampleHz": 12,
+      "playbackSpeed": 1,
+      "method": "Final GLB standing M16 and crouched AK exit playback, opaque cover, offline Blender render"
+    }
+  ],
+  "visuallyInspected": true,
+  "browserScreenshot": false,
+  "remarks": "Visual inspection of final exported cover and exit pose sequences with opaque geometry; standing M16 and crouched AK exit contacts reviewed. Offline renders, not browser captures."
+}

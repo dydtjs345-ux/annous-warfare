@@ -1,0 +1,37 @@
+{
+  "beforePeakMPerS": 0.8938658577,
+  "after": {
+    "CV_M16A4_Stand_Exit": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023208176738904834,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    },
+    "CV_M16A4_Stand_ExitRight": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023207507134132856,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    },
+    "CV_M16A4_Stand_ExitLow": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023205313843893422,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    },
+    "CV_M16A4_Crouch_Exit": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023207512803173912,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    },
+    "CV_M16A4_Crouch_ExitRight": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023206887048203416,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    },
+    "CV_M16A4_Crouch_ExitLow": {
+      "maxSupportMarkerHorizontalSpeedMPerS": 0.023201768680437714,
+      "sampleHz": 120,
+      "supportCondition": "Actual forefoot skin marker Y < 10mm for both adjacent frames"
+    }
+  },
+  "pelvisSpineAndCoreCoverClipsUnchanged": true,
+  "maxContactCorrectionM": 0.07072219082909711
+}

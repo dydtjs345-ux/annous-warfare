@@ -8,15 +8,20 @@ def rot(x=0,y=0,z=0):return Euler(tuple(math.radians(v)for v in (x,y,z)),'XYZ').
 def worldpoint(r,n):return r.matrix_world@r.pose.bones[n].head
 def worldq(r,n):return(r.matrix_world@r.pose.bones[n].matrix).to_quaternion().normalized()
 class CoverRig:
- def __init__(self,kind='M16A4'):
+ def __init__(self,kind='M16A4',keep_approved=False):
   self.kind=kind;self.ref=json.loads((ROOT/'validation/project-rifle-source.json').read_text())['factions'][kind]
   bpy.ops.wm.read_factory_settings(use_empty=True);bpy.ops.import_scene.gltf(filepath=str(ROOT.parent/'phase2-crouch/models/TacticalSuit_Phase2.glb'))
   self.objects=set(bpy.data.objects);self.rig=next(o for o in self.objects if o.type=='ARMATURE');self.rig.name='TacticalSuitRig';self.weapon=bpy.data.objects['Weapon'];self.mag=bpy.data.objects['Magazine']
+  self.approved={};self.approvedFPS=bpy.context.scene.render.fps
   for o in self.objects:
    if o.animation_data:
     o.animation_data.action=None
-    for tr in list(o.animation_data.nla_tracks):o.animation_data.nla_tracks.remove(tr)
-  for a in list(bpy.data.actions):bpy.data.actions.remove(a)
+    for tr in list(o.animation_data.nla_tracks):
+     if keep_approved:
+      for st in tr.strips:self.approved.setdefault(tr.name,[]).append(('rig'if o.type=='ARMATURE'else o.name,st.action))
+     o.animation_data.nla_tracks.remove(tr)
+  if not keep_approved:
+   for a in list(bpy.data.actions):bpy.data.actions.remove(a)
   for b in self.rig.pose.bones:b.rotation_mode='QUATERNION';b.matrix_basis=Matrix.Identity(4)
   bpy.context.view_layer.update()
   if kind=='AK74M':
@@ -43,7 +48,7 @@ class CoverRig:
    low=min((o.matrix_world@o.data.vertices[i].co).z for o,i in vs);front=min((o.matrix_world@o.data.vertices[i].co).y for o,i in vs if(o.matrix_world@o.data.vertices[i].co).z<low+.003)
    self.landmarks[side]=min([(o,i)for o,i in vs if(o.matrix_world@o.data.vertices[i].co).z<low+.003 and(o.matrix_world@o.data.vertices[i].co).y<front+.015],key=lambda v:abs((v[0].matrix_world@v[0].data.vertices[v[1]].co).x-self.rest[side+'ToeBase']['p'].x))
   self.sourcePath=ROOT.parent/'tactical-combat/source'/('USMC_Tactical.blend'if kind=='M16A4'else'Russian_Tactical.blend')
-  with bpy.data.libraries.load(str(self.sourcePath),link=False)as(f,t):t.objects=['InfantryRig'];t.actions=['Lower_AimStance','FB_AimIdle_Upper','FB_Recoil_Shot']
+  with bpy.data.libraries.load(str(self.sourcePath),link=False)as(f,t):t.objects=['InfantryRig'];t.actions=['Lower_AimStance','FB_AimIdle_Upper','FB_Recoil_Shot','Turn_Left','Turn_Right','Upper_Turn_Left','Upper_Turn_Right']
   self.src=t.objects[0];bpy.context.scene.collection.objects.link(self.src);self.src.hide_render=True;self.actions={a.name:a for a in t.actions}
   for b in self.src.pose.bones:b.rotation_mode='QUATERNION';b.matrix_basis=Matrix.Identity(4)
   if self.src.animation_data:
@@ -87,9 +92,12 @@ class CoverRig:
      for i,v in enumerate(values):target[i]+=v-base[i]
   self.update()
  def solve(self,a,b,c,goal,pole):
-  A=self.p(a);l1=(self.rest[b]['p']-self.rest[a]['p']).length;l2=(self.rest[c]['p']-self.rest[b]['p']).length;v=goal-A;L=v.length;u=v.normalized();safe=max(abs(l1-l2)+1e-5,min(L,l1+l2-1e-5));along=(l1*l1-l2*l2+safe*safe)/(2*safe);p=pole-A;p=(p-u*p.dot(u)).normalized();B=A+u*along+p*math.sqrt(max(0,l1*l1-along*along))
+  A=self.p(a);l1=(self.rest[b]['p']-self.rest[a]['p']).length;l2=(self.rest[c]['p']-self.rest[b]['p']).length;v=goal-A;L=v.length;u=v.normalized();safe=max(abs(l1-l2)+1e-5,min(L,l1+l2-1e-5));along=(l1*l1-l2*l2+safe*safe)/(2*safe);p=pole-A;p=(p-u*p.dot(u)).normalized();height=math.sqrt(max(0,l1*l1-along*along))
+  if 'UpLeg'in a and A.z+u.z*along+p.z*height<.15:
+   up=Vector((0,0,1));up=(up-u*up.dot(u)).normalized();side=u.cross(up).normalized();tilt=max(-1,min(1,(.15-A.z-u.z*along)/max(1e-8,height*up.z)));sign=1 if p.dot(side)>=0 else-1;p=up*tilt+side*sign*math.sqrt(max(0,1-tilt*tilt))
+  B=A+u*along+p*height
   for start,end,target in [(a,b,B),(b,c,A+u*safe)]:self.orient(start,(self.p(end)-self.p(start)).normalized().rotation_difference((target-self.p(start)).normalized())@self.q(start))
-  return max(0,L-l1-l2),(self.p(c)-goal).length
+  return max(0,L-l1-l2,abs(l1-l2)-L),(self.p(c)-goal).length
  def skinpoint(self,side):
   o,i=self.landmarks[side];e=o.evaluated_get(bpy.context.evaluated_depsgraph_get());m=e.to_mesh();p=e.matrix_world@m.vertices[i].co;e.to_mesh_clear();return p
  def bootmin(self,side):
@@ -129,7 +137,7 @@ class CoverRig:
   headLean=lean*.75;headTarget=rot(0,headLean,aimYaw)@self.rest['Head']['q'];self.orient('Head',headTarget)
   headDelta=headTarget@self.rest['Head']['q'].inverted();eye=self.p('Head')+headDelta@Vector((-.030,-.080,.075));Q=rot(0,headLean,aimYaw);sight=Vector((0,.13 if self.kind=='M16A4'else .09,.195 if self.kind=='M16A4'else .125));forward=Q@Vector((0,-1,0));aimP=eye+forward*.075-Q@sight
   center=(self.p('LeftArm')+self.p('RightArm'))/2
-  readyQ=rot(28,lean*.5,10+aimYaw);readyP=center+Vector((-.13,-.05,-.13));readyP.z=max(readyP.z,.35)
+  readyQ=rot(28,lean*.5,10+aimYaw);readyP=center+Vector((-.13,-.11,-.13));readyP.z=max(readyP.z,.35)
   if blind:
    self.orient('Head',rot(18*u,0,0)@self.rest['Head']['q']);Q=rot(-5,side*8 if style=='BlindCorner'else 20,side*55 if style=='BlindCorner'else 0)
    exposed=Vector((side*.25,center.y-.15,center.z+.08))if style=='BlindCorner'else Vector((-.035,center.y+.10,coverH+.035));P=readyP.lerp(exposed,v);Q=readyQ.slerp(Q,v)
@@ -138,12 +146,21 @@ class CoverRig:
   # Reuse actual project FB_Recoil_Shot data, with a controlled two-hand rifle constraint.
   if shotAge is not None:
    rows=self.ref['recoil'];f=min(len(rows)-1,shotAge*60);a=int(f);b=min(len(rows)-1,a+1);mix=f-a;D=Vector(rows[a]['translation']).lerp(Vector(rows[b]['translation']),mix);DQ=Quaternion(rows[a]['quaternion']).slerp(Quaternion(rows[b]['quaternion']),mix);P+=Q@D;Q=Q@DQ
+  initialP=P.copy()
+  # Project only infeasible wrist targets into both real arm reach intervals.
+  # Translation fitting never stretches limbs; endpoint aiming poses already fit.
+  for _ in range(12):
+   changed=False
+   for s,label in [('Left','L'),('Right','R')]:
+    goal=P+Q@Vector(self.ref['hands'][label]['wrist']);v=goal-self.p(s+'Arm');d=v.length;l1=(self.rest[s+'ForeArm']['p']-self.rest[s+'Arm']['p']).length;l2=(self.rest[s+'Hand']['p']-self.rest[s+'ForeArm']['p']).length;target=max(abs(l1-l2)+.001,min(d,l1+l2-.001))
+    if abs(target-d)>1e-7:P+=v.normalized()*(target-d);changed=True
+   if not changed:break
   self.weapon.matrix_world=Matrix.Translation(P)@Q.to_matrix().to_4x4();self.update();errors=[];reach=[]
   for s,label,sgn in [('Left','L',1),('Right','R',-1)]:
    d=self.ref['hands'][label];goal=self.weapon.matrix_world@Vector(d['wrist']);pole=center+rot(0,0,yaw)@Vector((sgn*.40,.04,-.30));r,e=self.solve(s+'Arm',s+'ForeArm',s+'Hand',goal,pole);reach.append(r);errors.append(e);H=Q@Quaternion(d['handFrame']);self.orient(s+'Hand',H@self.handCorrections[s]);normal=H@Vector((0,0,1))
    for di,digit in enumerate(['Thumb','Index','Middle','Ring','Pinky'],1):
     for ph in range(1,4):key=f'{s}Hand{digit}{ph}';self.orient(key,self.frame(Q@Vector(d['fingerDirections'][f'{di}-{ph}']),normal)@self.fingerCorrections[key])
-  self.update();return {'amount':u,'hips':list(self.p('Hips')),'eye':list(eye),'weaponP':list(P),'wristErrorsM':errors,'armReachExcessM':reach,'bootMinZ':[self.bootmin(s)for s in ['Left','Right']],'headJointZ':self.p('Head').z,'armsMarginM':[((self.rest[s+'ForeArm']['p']-self.rest[s+'Arm']['p']).length+(self.rest[s+'Hand']['p']-self.rest[s+'ForeArm']['p']).length-(self.weapon.matrix_world@Vector(self.ref['hands'][label]['wrist'])-self.p(s+'Arm')).length)for s,label in [('Left','L'),('Right','R')]],'coverH':coverH}
+  self.update();return {'armFitCorrectionM':(P-initialP).length,'amount':u,'hips':list(self.p('Hips')),'eye':list(eye),'weaponP':list(P),'wristErrorsM':errors,'armReachExcessM':reach,'bootMinZ':[self.bootmin(s)for s in ['Left','Right']],'headJointZ':self.p('Head').z,'armsMarginM':[((self.rest[s+'ForeArm']['p']-self.rest[s+'Arm']['p']).length+(self.rest[s+'Hand']['p']-self.rest[s+'ForeArm']['p']).length-(self.weapon.matrix_world@Vector(self.ref['hands'][label]['wrist'])-self.p(s+'Arm')).length)for s,label in [('Left','L'),('Right','R')]],'coverH':coverH}
 if __name__=='__main__':
  r=CoverRig(os.environ.get('CV_WEAPON','M16A4'));rows=[]
  for stance in ['Stand','Crouch']:

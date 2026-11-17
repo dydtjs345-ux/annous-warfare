@@ -366,5 +366,366 @@
         "duration": 1.3333333730697632
       }
     ]
+  },
+  {
+    "path": "/workspace/open-asset-downloads/ual2/Universal Animation Library 2[Standard]/Female Mannequin/Unreal-Godot/Mannequin_F.glb",
+    "sha256": "2ee6cc3fe888d9b144afa8cc4b2ab7bfc5d13a0d5b7548df777f61f64ad65fa6",
+    "clips": []
+  },
+  {
+    "path": "/workspace/open-asset-downloads/ual2/Universal Animation Library 2[Standard]/Unreal-Godot/UAL2_Standard.glb",
+    "sha256": "8cee20ab1bc55130092447e810e26df22dd2803eccc54f52137a7d54d7ab88a8",
+    "clips": [
+      {
+        "name": "A_TPose",
+        "duration": 2.5
+      },
+      {
+        "name": "Chest_Open",
+        "duration": 1.3666666746139526
+      },
+      {
+        "name": "ClimbUp_1m",
+        "duration": 0.6666666865348816
+      },
+      {
+        "name": "Consume",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Farm_Harvest",
+        "duration": 2.5
+      },
+      {
+        "name": "Farm_PlantSeed",
+        "duration": 2.7666666507720947
+      },
+      {
+        "name": "Farm_Watering",
+        "duration": 3.799999952316284
+      },
+      {
+        "name": "Hit_Knockback",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Idle_FoldArms_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Lantern_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_No_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Rail_Call",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Rail_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Shield_Break",
+        "duration": 1.0666667222976685
+      },
+      {
+        "name": "Idle_Shield_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_TalkingPhone_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "LayToIdle",
+        "duration": 1.5333333015441895
+      },
+      {
+        "name": "Melee_Hook",
+        "duration": 0.46666666865348816
+      },
+      {
+        "name": "Melee_Hook_Rec",
+        "duration": 0.6000000238418579
+      },
+      {
+        "name": "NinjaJump_Idle_Loop",
+        "duration": 2
+      },
+      {
+        "name": "NinjaJump_Land",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "NinjaJump_Start",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "OverhandThrow",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Shield_Dash",
+        "duration": 1.100000023841858
+      },
+      {
+        "name": "Shield_OneShot",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Slide_Exit",
+        "duration": 0.5
+      },
+      {
+        "name": "Slide_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Slide_Start",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Sword_Block",
+        "duration": 1.2333333492279053
+      },
+      {
+        "name": "Sword_Dash",
+        "duration": 1.5666667222976685
+      },
+      {
+        "name": "Sword_Heavy_Combo",
+        "duration": 4.333333492279053
+      },
+      {
+        "name": "Sword_Regular_A",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Sword_Regular_A_Rec",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "Sword_Regular_B",
+        "duration": 0.5333333611488342
+      },
+      {
+        "name": "Sword_Regular_B_Rec",
+        "duration": 1.0333333015441895
+      },
+      {
+        "name": "Sword_Regular_C",
+        "duration": 2
+      },
+      {
+        "name": "Sword_Regular_Combo",
+        "duration": 3
+      },
+      {
+        "name": "TreeChopping_Loop",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "Walk_Carry_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Yes",
+        "duration": 2.5
+      },
+      {
+        "name": "Zombie_Idle_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Zombie_Scratch",
+        "duration": 1.7999999523162842
+      },
+      {
+        "name": "Zombie_Walk_Fwd_Loop",
+        "duration": 1.3333333730697632
+      }
+    ]
+  },
+  {
+    "path": "/workspace/open-asset-downloads/ual2/Universal Animation Library 2[Standard]/Unreal-Godot/UAL2_Standard_RM.glb",
+    "sha256": "814eee878f82934992d3ea746c539df25e981487109c591f5efbb8dd03286f99",
+    "clips": [
+      {
+        "name": "A_TPose",
+        "duration": 2.5
+      },
+      {
+        "name": "Chest_Open",
+        "duration": 1.3666666746139526
+      },
+      {
+        "name": "ClimbUp_1m",
+        "duration": 0.6666666865348816
+      },
+      {
+        "name": "Consume",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Farm_Harvest",
+        "duration": 2.5
+      },
+      {
+        "name": "Farm_PlantSeed",
+        "duration": 2.7666666507720947
+      },
+      {
+        "name": "Farm_Watering",
+        "duration": 3.799999952316284
+      },
+      {
+        "name": "Hit_Knockback",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Idle_FoldArms_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Lantern_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_No_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Rail_Call",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Rail_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_Shield_Break",
+        "duration": 1.0666667222976685
+      },
+      {
+        "name": "Idle_Shield_Loop",
+        "duration": 2.5
+      },
+      {
+        "name": "Idle_TalkingPhone_Loop",
+        "duration": 2.933333396911621
+      },
+      {
+        "name": "LayToIdle",
+        "duration": 1.5333333015441895
+      },
+      {
+        "name": "Melee_Hook",
+        "duration": 0.46666666865348816
+      },
+      {
+        "name": "Melee_Hook_Rec",
+        "duration": 0.6000000238418579
+      },
+      {
+        "name": "NinjaJump_Idle_Loop",
+        "duration": 2
+      },
+      {
+        "name": "NinjaJump_Land",
+        "duration": 1.2666666507720947
+      },
+      {
+        "name": "NinjaJump_Start",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "OverhandThrow",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Shield_Dash",
+        "duration": 1.100000023841858
+      },
+      {
+        "name": "Shield_OneShot",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Slide_Exit",
+        "duration": 0.5
+      },
+      {
+        "name": "Slide_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Slide_Start",
+        "duration": 0.8333333134651184
+      },
+      {
+        "name": "Sword_Block",
+        "duration": 1.2333333492279053
+      },
+      {
+        "name": "Sword_Dash",
+        "duration": 1.5666667222976685
+      },
+      {
+        "name": "Sword_Heavy_Combo",
+        "duration": 4.333333492279053
+      },
+      {
+        "name": "Sword_Regular_A",
+        "duration": 0.4333333373069763
+      },
+      {
+        "name": "Sword_Regular_A_Rec",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "Sword_Regular_B",
+        "duration": 0.5333333611488342
+      },
+      {
+        "name": "Sword_Regular_B_Rec",
+        "duration": 1.0333333015441895
+      },
+      {
+        "name": "Sword_Regular_C",
+        "duration": 2
+      },
+      {
+        "name": "Sword_Regular_Combo",
+        "duration": 3
+      },
+      {
+        "name": "TreeChopping_Loop",
+        "duration": 0.9666666388511658
+      },
+      {
+        "name": "Walk_Carry_Loop",
+        "duration": 2
+      },
+      {
+        "name": "Yes",
+        "duration": 2.5
+      },
+      {
+        "name": "Zombie_Idle_Loop",
+        "duration": 1.3333333730697632
+      },
+      {
+        "name": "Zombie_Scratch",
+        "duration": 1.7999999523162842
+      },
+      {
+        "name": "Zombie_Walk_Fwd_Loop",
+        "duration": 1.3333333730697632
+      }
+    ]
   }
 ]

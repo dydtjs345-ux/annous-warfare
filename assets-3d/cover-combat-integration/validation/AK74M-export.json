@@ -1,0 +1,426 @@
+{
+  "weapon": "AK74M",
+  "method": "Final merged base and selective motion patch GLB, reimported into Blender and sampled between keys. Actual deformed mesh bounds/vertices checked against parametric obstacles.",
+  "sampleHz": 120,
+  "clips": {
+    "CV_AK74M_Stand_ProtectedCorner": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.921477472783334e-07,
+      "maxSourcePointMismatchM": 1.0325222925329974e-06,
+      "minimumBodyZ": 0.0009991165716201067,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_ProtectedLow": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 8.86118070104736e-07,
+      "maxSourcePointMismatchM": 1.5758144637804573e-06,
+      "minimumBodyZ": 0.0009994579013437033,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LeftEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 8.683682849605957e-07,
+      "maxSourcePointMismatchM": 1.689313962561592e-06,
+      "minimumBodyZ": 0.0009992874693125486,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LeftFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.151130032703368e-07,
+      "maxSourcePointMismatchM": 1.333550535142242e-06,
+      "minimumBodyZ": 0.0009999044705182314,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LeftReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 7.705499812273917e-07,
+      "maxSourcePointMismatchM": 1.2545606466047781e-06,
+      "minimumBodyZ": 0.000998982461169362,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LeftAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.077659420393656e-07,
+      "maxSourcePointMismatchM": 1.333550535142242e-06,
+      "minimumBodyZ": 0.0009999044705182314,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_RightEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.0549611703922985e-06,
+      "maxSourcePointMismatchM": 1.7715818071057752e-06,
+      "minimumBodyZ": 0.0009988599922508001,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_RightFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.929882225781721e-07,
+      "maxSourcePointMismatchM": 1.9226793659232446e-06,
+      "minimumBodyZ": 0.000999094219878316,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_RightReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.095539410870748e-06,
+      "maxSourcePointMismatchM": 1.8138608793640041e-06,
+      "minimumBodyZ": 0.000999178970232606,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_RightAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.598131170262076e-07,
+      "maxSourcePointMismatchM": 1.9226793659232446e-06,
+      "minimumBodyZ": 0.000999094219878316,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LowEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.0191307655667362e-06,
+      "maxSourcePointMismatchM": 1.510222924187638e-06,
+      "minimumBodyZ": 0.0009993778076022863,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LowFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.589026588045214e-07,
+      "maxSourcePointMismatchM": 1.0751360809433828e-06,
+      "minimumBodyZ": 0.0009991300757974386,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LowReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 8.15659945998714e-07,
+      "maxSourcePointMismatchM": 1.7262621021788523e-06,
+      "minimumBodyZ": 0.0009990271646529436,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_LowAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.420049048816445e-07,
+      "maxSourcePointMismatchM": 1.0751360809433828e-06,
+      "minimumBodyZ": 0.0009991300757974386,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindOverEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.2831070107377842e-06,
+      "maxSourcePointMismatchM": 1.4904016733604784e-06,
+      "minimumBodyZ": 0.0009991785045713186,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindOverFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 9.330959869882709e-07,
+      "maxSourcePointMismatchM": 1.4536283710304987e-06,
+      "minimumBodyZ": 0.0009991803672164679,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindOverReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.3130789607799175e-06,
+      "maxSourcePointMismatchM": 1.7555090237262916e-06,
+      "minimumBodyZ": 0.000999250216409564,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindLeftEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.1477763898165055e-06,
+      "maxSourcePointMismatchM": 1.6839023632526454e-06,
+      "minimumBodyZ": 0.000999300042167306,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindLeftFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 9.632018846161028e-07,
+      "maxSourcePointMismatchM": 1.6222551244639915e-06,
+      "minimumBodyZ": 0.0009994215797632933,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindLeftReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.1132324336084674e-06,
+      "maxSourcePointMismatchM": 1.520592548856202e-06,
+      "minimumBodyZ": 0.0009987333323806524,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindRightEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 8.84715270665395e-07,
+      "maxSourcePointMismatchM": 1.9360673179884276e-06,
+      "minimumBodyZ": 0.0009987798985093832,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindRightFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.151130032703368e-07,
+      "maxSourcePointMismatchM": 2.1150934525855474e-06,
+      "minimumBodyZ": 0.0009990648832172155,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Stand_BlindRightReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 9.593617083322926e-07,
+      "maxSourcePointMismatchM": 2.08256519439878e-06,
+      "minimumBodyZ": 0.0009990341495722532,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_ProtectedCorner": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 8.396708472897018e-07,
+      "maxSourcePointMismatchM": 1.2785376624684543e-06,
+      "minimumBodyZ": 0.0009992716368287802,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_ProtectedLow": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 8.583460123569409e-07,
+      "maxSourcePointMismatchM": 1.9309380703581834e-06,
+      "minimumBodyZ": 0.000999943120405078,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LeftEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 9.334361412147179e-07,
+      "maxSourcePointMismatchM": 2.185869883885995e-06,
+      "minimumBodyZ": 0.0009992329869419336,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LeftFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.957833959352189e-07,
+      "maxSourcePointMismatchM": 2.0308018354227373e-06,
+      "minimumBodyZ": 0.0009999119210988283,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LeftReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 8.722033560248236e-07,
+      "maxSourcePointMismatchM": 1.9874874478324944e-06,
+      "minimumBodyZ": 0.0009990280959755182,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LeftAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 7.737132898418409e-07,
+      "maxSourcePointMismatchM": 2.0308018354227373e-06,
+      "minimumBodyZ": 0.0009999119210988283,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_RightEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.2964866598937635e-06,
+      "maxSourcePointMismatchM": 2.478056617669237e-06,
+      "minimumBodyZ": 0.0009987966623157263,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_RightFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.976544803809897e-07,
+      "maxSourcePointMismatchM": 2.532124196569092e-06,
+      "minimumBodyZ": 0.000999051844701171,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_RightReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 7.396741894478117e-07,
+      "maxSourcePointMismatchM": 2.52915140368895e-06,
+      "minimumBodyZ": 0.0009989843238145113,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_RightAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.265579474457693e-07,
+      "maxSourcePointMismatchM": 2.532124196569092e-06,
+      "minimumBodyZ": 0.000999051844701171,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LowEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 9.597309633195083e-07,
+      "maxSourcePointMismatchM": 1.9527631978512393e-06,
+      "minimumBodyZ": 0.000999242765828967,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LowFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.362187551088558e-07,
+      "maxSourcePointMismatchM": 1.2029557243482155e-06,
+      "minimumBodyZ": 0.000999427167698741,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LowReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 8.340741124252274e-07,
+      "maxSourcePointMismatchM": 1.6949317499802341e-06,
+      "minimumBodyZ": 0.0009994844440370798,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_LowAim": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 6.617635087479098e-07,
+      "maxSourcePointMismatchM": 1.2029557243482155e-06,
+      "minimumBodyZ": 0.000999427167698741,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindOverEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.3289265002471145e-06,
+      "maxSourcePointMismatchM": 1.9132338179809653e-06,
+      "minimumBodyZ": 0.0009993973653763533,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindOverFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 8.581135650539426e-07,
+      "maxSourcePointMismatchM": 1.966596282300956e-06,
+      "minimumBodyZ": 0.0009994462598115206,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindOverReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.4600096599955428e-06,
+      "maxSourcePointMismatchM": 2.0745971934806996e-06,
+      "minimumBodyZ": 0.0009994858410209417,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindLeftEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.4422792275037884e-06,
+      "maxSourcePointMismatchM": 2.044498118688151e-06,
+      "minimumBodyZ": 0.0009991961997002363,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindLeftFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 1.0116341157253789e-06,
+      "maxSourcePointMismatchM": 1.9562040084620155e-06,
+      "minimumBodyZ": 0.0009998076129704714,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindLeftReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.0749512193722386e-06,
+      "maxSourcePointMismatchM": 1.974363057487718e-06,
+      "minimumBodyZ": 0.0009989507962018251,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindRightEnter": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.0564072057465375e-06,
+      "maxSourcePointMismatchM": 2.525794137101499e-06,
+      "minimumBodyZ": 0.0009986336808651686,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindRightFire": {
+      "duration": 2.4,
+      "samples": 289,
+      "maxWristErrorM": 8.024520884654677e-07,
+      "maxSourcePointMismatchM": 2.513105416008499e-06,
+      "minimumBodyZ": 0.000998936826363206,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_AK74M_Crouch_BlindRightReturn": {
+      "duration": 2,
+      "samples": 241,
+      "maxWristErrorM": 1.103994038223711e-06,
+      "maxSourcePointMismatchM": 2.5073994688481427e-06,
+      "minimumBodyZ": 0.0009989042300730944,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    }
+  },
+  "maxWristErrorM": 1.4600096599955428e-06,
+  "maxSourcePointMismatchM": 2.532124196569092e-06,
+  "minimumBodyZ": 0.0009986336808651686,
+  "obstacleIntersectionSamples": 0,
+  "blockedFireSamples": 0
+}

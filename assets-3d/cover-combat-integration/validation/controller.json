@@ -1,0 +1,930 @@
+{
+  "method": "Actual preview CoverAnimator + Three.js AnimationMixer, CPU only; no browser GPU or Safari test",
+  "clips": {
+    "CV_M16A4_Stand_ProtectedCorner": {
+      "gripErrorM": 4.4337574933895123e-8,
+      "footErrorM": 3.897695659530737e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00009233737607274824,
+      "maxGroundedFootSpeedMPerS": 2.6722290240982034e-8
+    },
+    "CV_M16A4_Stand_ProtectedLow": {
+      "gripErrorM": 6.886468552211815e-8,
+      "footErrorM": 0.0000011613468834711783,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00009197871226539027,
+      "maxGroundedFootSpeedMPerS": 6.481483805345529e-8
+    },
+    "CV_M16A4_Stand_LeftEnter": {
+      "gripErrorM": 1.290755782073402e-7,
+      "footErrorM": 1.9521418771095314e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.0134490831857438,
+      "maxGroundedFootSpeedMPerS": 1.745187568127624e-7
+    },
+    "CV_M16A4_Stand_LeftFire": {
+      "gripErrorM": 1.0702223988502025e-7,
+      "footErrorM": 2.0081673906205877e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005499076995795645,
+      "maxGroundedFootSpeedMPerS": 2.9504946209762225e-8
+    },
+    "CV_M16A4_Stand_LeftReturn": {
+      "gripErrorM": 1.1867840386115797e-7,
+      "footErrorM": 1.9705009921003113e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013449083110277553,
+      "maxGroundedFootSpeedMPerS": 1.7893406674669452e-7
+    },
+    "CV_M16A4_Stand_LeftAim": {
+      "gripErrorM": 1.095789698815692e-7,
+      "footErrorM": 2.0081673906205877e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002544612699133111,
+      "maxGroundedFootSpeedMPerS": 2.9504946209762225e-8
+    },
+    "CV_M16A4_Stand_RightEnter": {
+      "gripErrorM": 1.6886666319479573e-7,
+      "footErrorM": 6.435899127240886e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006635471872143984,
+      "maxGroundedFootSpeedMPerS": 1.1766179740864167e-7
+    },
+    "CV_M16A4_Stand_RightFire": {
+      "gripErrorM": 8.768485832949307e-8,
+      "footErrorM": 6.947407293979947e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005432823107893243,
+      "maxGroundedFootSpeedMPerS": 5.130507663975942e-8
+    },
+    "CV_M16A4_Stand_RightReturn": {
+      "gripErrorM": 8.292228074239942e-8,
+      "footErrorM": 6.975775956812609e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006635465254581428,
+      "maxGroundedFootSpeedMPerS": 1.2114323795668057e-7
+    },
+    "CV_M16A4_Stand_RightAim": {
+      "gripErrorM": 7.275590708215891e-8,
+      "footErrorM": 6.947407293979947e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002462199616061698,
+      "maxGroundedFootSpeedMPerS": 5.130507663975942e-8
+    },
+    "CV_M16A4_Stand_LowEnter": {
+      "gripErrorM": 1.7087738627892803e-7,
+      "footErrorM": 0.000001155804951557393,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.030039328623938714,
+      "maxGroundedFootSpeedMPerS": 0.000002949458628021588
+    },
+    "CV_M16A4_Stand_LowFire": {
+      "gripErrorM": 1.297525000980968e-7,
+      "footErrorM": 2.9790142246938125e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005353864602324395,
+      "maxGroundedFootSpeedMPerS": 3.804007217020106e-8
+    },
+    "CV_M16A4_Stand_LowReturn": {
+      "gripErrorM": 1.460038273001494e-7,
+      "footErrorM": 0.0000011514321637236956,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.03003930729258384,
+      "maxGroundedFootSpeedMPerS": 0.000002955792956951685
+    },
+    "CV_M16A4_Stand_LowAim": {
+      "gripErrorM": 1.2326851460507026e-7,
+      "footErrorM": 2.9790142246938125e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00025097929680560887,
+      "maxGroundedFootSpeedMPerS": 3.804007217020106e-8
+    },
+    "CV_M16A4_Stand_BlindOverEnter": {
+      "gripErrorM": 1.4129574585684987e-7,
+      "footErrorM": 0.0000011508600392438996,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011800699270211653,
+      "maxGroundedFootSpeedMPerS": 8.155146074753195e-7
+    },
+    "CV_M16A4_Stand_BlindOverFire": {
+      "gripErrorM": 1.5371822816383132e-7,
+      "footErrorM": 5.036569234514163e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004309750035728438,
+      "maxGroundedFootSpeedMPerS": 7.765976778294688e-8
+    },
+    "CV_M16A4_Stand_BlindOverReturn": {
+      "gripErrorM": 1.1786949332267994e-7,
+      "footErrorM": 0.000001177596552587501,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011800698120088717,
+      "maxGroundedFootSpeedMPerS": 0.000003828144711832076
+    },
+    "CV_M16A4_Stand_BlindLeftEnter": {
+      "gripErrorM": 1.4016024299130374e-7,
+      "footErrorM": 2.1533172383104895e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013935289111314792,
+      "maxGroundedFootSpeedMPerS": 2.0352747203655205e-7
+    },
+    "CV_M16A4_Stand_BlindLeftFire": {
+      "gripErrorM": 5.6977605712241946e-8,
+      "footErrorM": 2.190131644541206e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004023622922123119,
+      "maxGroundedFootSpeedMPerS": 2.2157879187800618e-8
+    },
+    "CV_M16A4_Stand_BlindLeftReturn": {
+      "gripErrorM": 1.2943592304619308e-7,
+      "footErrorM": 2.156869448637706e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013935388582412703,
+      "maxGroundedFootSpeedMPerS": 2.0202346574013398e-7
+    },
+    "CV_M16A4_Stand_BlindRightEnter": {
+      "gripErrorM": 1.9021289672976614e-7,
+      "footErrorM": 8.295493560284691e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006427201244709878,
+      "maxGroundedFootSpeedMPerS": 1.3762162077588944e-7
+    },
+    "CV_M16A4_Stand_BlindRightFire": {
+      "gripErrorM": 1.3459679509267117e-7,
+      "footErrorM": 7.825033426133567e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.003939682110484569,
+      "maxGroundedFootSpeedMPerS": 3.636758386277876e-8
+    },
+    "CV_M16A4_Stand_BlindRightReturn": {
+      "gripErrorM": 9.448339990571373e-8,
+      "footErrorM": 7.64910465344216e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006427194538082967,
+      "maxGroundedFootSpeedMPerS": 1.3650947555500174e-7
+    },
+    "CV_M16A4_Stand_Exit": {
+      "gripErrorM": 1.590781910724463e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550295346118373,
+      "maxGroundedFootSpeedMPerS": 0.01160886503623755
+    },
+    "CV_M16A4_Stand_ExitRight": {
+      "gripErrorM": 1.1809380588457593e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550292979831548,
+      "maxGroundedFootSpeedMPerS": 0.011602691584802411
+    },
+    "CV_M16A4_Stand_ExitLow": {
+      "gripErrorM": 1.0780341127494366e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550297478626991,
+      "maxGroundedFootSpeedMPerS": 0.011606964171161312
+    },
+    "CV_M16A4_Crouch_ProtectedCorner": {
+      "gripErrorM": 7.755877598707188e-8,
+      "footErrorM": 5.180430297384175e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00009226466832850094,
+      "maxGroundedFootSpeedMPerS": 6.882553373670604e-8
+    },
+    "CV_M16A4_Crouch_ProtectedLow": {
+      "gripErrorM": 4.92441603699328e-8,
+      "footErrorM": 0.000002592714163819507,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00006087233157139627,
+      "maxGroundedFootSpeedMPerS": 6.84492361920127e-8
+    },
+    "CV_M16A4_Crouch_LeftEnter": {
+      "gripErrorM": 1.6474544497718367e-7,
+      "footErrorM": 7.557139884091922e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013764062556434498,
+      "maxGroundedFootSpeedMPerS": 3.877056777571779e-7
+    },
+    "CV_M16A4_Crouch_LeftFire": {
+      "gripErrorM": 1.907386680134591e-7,
+      "footErrorM": 7.616219355901111e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005650386929442351,
+      "maxGroundedFootSpeedMPerS": 8.407900844029503e-8
+    },
+    "CV_M16A4_Crouch_LeftReturn": {
+      "gripErrorM": 1.7669124914343344e-7,
+      "footErrorM": 7.537635881776718e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013764014501668332,
+      "maxGroundedFootSpeedMPerS": 3.688448407528384e-7
+    },
+    "CV_M16A4_Crouch_LeftAim": {
+      "gripErrorM": 1.3582128091592697e-7,
+      "footErrorM": 7.616219355901111e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002536969014475854,
+      "maxGroundedFootSpeedMPerS": 8.407900844029503e-8
+    },
+    "CV_M16A4_Crouch_RightEnter": {
+      "gripErrorM": 1.3647891844033427e-7,
+      "footErrorM": 5.081613844919707e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.0068727792382896145,
+      "maxGroundedFootSpeedMPerS": 5.250284487231478e-7
+    },
+    "CV_M16A4_Crouch_RightFire": {
+      "gripErrorM": 8.687653472292471e-8,
+      "footErrorM": 2.1383750147728277e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005596531505768531,
+      "maxGroundedFootSpeedMPerS": 5.830143165975017e-8
+    },
+    "CV_M16A4_Crouch_RightReturn": {
+      "gripErrorM": 1.006226652659358e-7,
+      "footErrorM": 5.112055951116386e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006872754692354329,
+      "maxGroundedFootSpeedMPerS": 5.2043505841007e-7
+    },
+    "CV_M16A4_Crouch_RightAim": {
+      "gripErrorM": 7.587954248324219e-8,
+      "footErrorM": 2.1383750147728277e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002460972409691742,
+      "maxGroundedFootSpeedMPerS": 5.830143165975017e-8
+    },
+    "CV_M16A4_Crouch_LowEnter": {
+      "gripErrorM": 1.3985783848254808e-7,
+      "footErrorM": 0.000002599288160363349,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.04708231017196387,
+      "maxGroundedFootSpeedMPerS": 0.00000524303727395268
+    },
+    "CV_M16A4_Crouch_LowFire": {
+      "gripErrorM": 1.402558460078898e-7,
+      "footErrorM": 5.697841254196868e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005353844317517522,
+      "maxGroundedFootSpeedMPerS": 6.200428939086863e-8
+    },
+    "CV_M16A4_Crouch_LowReturn": {
+      "gripErrorM": 1.62395442712958e-7,
+      "footErrorM": 0.000002605073730416048,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.04708244072976099,
+      "maxGroundedFootSpeedMPerS": 0.00000452294926519055
+    },
+    "CV_M16A4_Crouch_LowAim": {
+      "gripErrorM": 1.2408777636405262e-7,
+      "footErrorM": 5.697841254196868e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002509580144286698,
+      "maxGroundedFootSpeedMPerS": 6.200428939086863e-8
+    },
+    "CV_M16A4_Crouch_BlindOverEnter": {
+      "gripErrorM": 1.3959704328762767e-7,
+      "footErrorM": 0.000002593892910164047,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011214235266208183,
+      "maxGroundedFootSpeedMPerS": 0.0000011084100558313031
+    },
+    "CV_M16A4_Crouch_BlindOverFire": {
+      "gripErrorM": 1.3877013205929031e-7,
+      "footErrorM": 0.000002017958512979572,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00430973033831613,
+      "maxGroundedFootSpeedMPerS": 8.214182680222212e-7
+    },
+    "CV_M16A4_Crouch_BlindOverReturn": {
+      "gripErrorM": 1.450068991237011e-7,
+      "footErrorM": 0.0000024987846188930264,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011214240711232806,
+      "maxGroundedFootSpeedMPerS": 0.0000011179175490736888
+    },
+    "CV_M16A4_Crouch_BlindLeftEnter": {
+      "gripErrorM": 1.1255859508054292e-7,
+      "footErrorM": 8.671232196253061e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.014746635274723868,
+      "maxGroundedFootSpeedMPerS": 5.701908339523923e-7
+    },
+    "CV_M16A4_Crouch_BlindLeftFire": {
+      "gripErrorM": 1.0301992887135768e-7,
+      "footErrorM": 8.756054844074292e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004127032252131319,
+      "maxGroundedFootSpeedMPerS": 5.785820672315196e-8
+    },
+    "CV_M16A4_Crouch_BlindLeftReturn": {
+      "gripErrorM": 2.8931064437994737e-7,
+      "footErrorM": 8.72184358929121e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.014746740685910656,
+      "maxGroundedFootSpeedMPerS": 5.57856437537458e-7
+    },
+    "CV_M16A4_Crouch_BlindRightEnter": {
+      "gripErrorM": 1.4174276466429474e-7,
+      "footErrorM": 5.081613844919707e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006388043585543625,
+      "maxGroundedFootSpeedMPerS": 6.165263857283526e-7
+    },
+    "CV_M16A4_Crouch_BlindRightFire": {
+      "gripErrorM": 1.2042268557006973e-7,
+      "footErrorM": 1.761329244981567e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004040151068401283,
+      "maxGroundedFootSpeedMPerS": 6.73846758889125e-8
+    },
+    "CV_M16A4_Crouch_BlindRightReturn": {
+      "gripErrorM": 1.0106873812229564e-7,
+      "footErrorM": 5.138570254207816e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006388025229188049,
+      "maxGroundedFootSpeedMPerS": 6.172988289723679e-7
+    },
+    "CV_M16A4_Crouch_Exit": {
+      "gripErrorM": 7.795337567278192e-8,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550298716958169,
+      "maxGroundedFootSpeedMPerS": 0.011605522133311428
+    },
+    "CV_M16A4_Crouch_ExitRight": {
+      "gripErrorM": 2.7116309963759147e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550299716989409,
+      "maxGroundedFootSpeedMPerS": 0.011600015456427436
+    },
+    "CV_M16A4_Crouch_ExitLow": {
+      "gripErrorM": 1.182523277729131e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04550295549699451,
+      "maxGroundedFootSpeedMPerS": 0.011608117385530624
+    },
+    "CV_AK74M_Stand_ProtectedCorner": {
+      "gripErrorM": 4.848172807400242e-8,
+      "footErrorM": 3.8976934695307923e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00010295316885432145,
+      "maxGroundedFootSpeedMPerS": 2.6722249052595537e-8
+    },
+    "CV_AK74M_Stand_ProtectedLow": {
+      "gripErrorM": 5.5427469804687346e-8,
+      "footErrorM": 0.0000011613464974188146,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00009197999676887892,
+      "maxGroundedFootSpeedMPerS": 6.481482691410675e-8
+    },
+    "CV_AK74M_Stand_LeftEnter": {
+      "gripErrorM": 1.5465347778124608e-7,
+      "footErrorM": 1.9521418771095314e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013939647642020395,
+      "maxGroundedFootSpeedMPerS": 1.745187568127624e-7
+    },
+    "CV_AK74M_Stand_LeftFire": {
+      "gripErrorM": 1.1379170167628567e-7,
+      "footErrorM": 2.0081673906205877e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005761214330064707,
+      "maxGroundedFootSpeedMPerS": 2.9504946209762225e-8
+    },
+    "CV_AK74M_Stand_LeftReturn": {
+      "gripErrorM": 1.2643085005298616e-7,
+      "footErrorM": 1.9705009921003113e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013939644446513126,
+      "maxGroundedFootSpeedMPerS": 1.7893406674669452e-7
+    },
+    "CV_AK74M_Stand_LeftAim": {
+      "gripErrorM": 1.0006696053278661e-7,
+      "footErrorM": 2.0081673906205877e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00025443862609131595,
+      "maxGroundedFootSpeedMPerS": 2.9504946209762225e-8
+    },
+    "CV_AK74M_Stand_RightEnter": {
+      "gripErrorM": 1.2244287128685656e-7,
+      "footErrorM": 6.435899127240886e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006593470730813016,
+      "maxGroundedFootSpeedMPerS": 1.1766179740864167e-7
+    },
+    "CV_AK74M_Stand_RightFire": {
+      "gripErrorM": 8.031736870586453e-8,
+      "footErrorM": 6.947407293979947e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0057060752586551656,
+      "maxGroundedFootSpeedMPerS": 5.130507663975942e-8
+    },
+    "CV_AK74M_Stand_RightReturn": {
+      "gripErrorM": 7.93698614803597e-8,
+      "footErrorM": 6.975775956812609e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.0065934685781172415,
+      "maxGroundedFootSpeedMPerS": 1.2114323795668057e-7
+    },
+    "CV_AK74M_Stand_RightAim": {
+      "gripErrorM": 7.345282337495974e-8,
+      "footErrorM": 6.947407293979947e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002462042614311842,
+      "maxGroundedFootSpeedMPerS": 5.130507663975942e-8
+    },
+    "CV_AK74M_Stand_LowEnter": {
+      "gripErrorM": 2.3611796069597808e-7,
+      "footErrorM": 0.000001155804951557393,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.01686437539268834,
+      "maxGroundedFootSpeedMPerS": 0.000002949458628021588
+    },
+    "CV_AK74M_Stand_LowFire": {
+      "gripErrorM": 1.1810251984088351e-7,
+      "footErrorM": 2.9790142246938125e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005631139140389234,
+      "maxGroundedFootSpeedMPerS": 3.804007217020106e-8
+    },
+    "CV_AK74M_Stand_LowReturn": {
+      "gripErrorM": 1.6799277740593427e-7,
+      "footErrorM": 0.0000011514321637236956,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.016864363041616513,
+      "maxGroundedFootSpeedMPerS": 0.000002955792956951685
+    },
+    "CV_AK74M_Stand_LowAim": {
+      "gripErrorM": 1.1176422329920287e-7,
+      "footErrorM": 2.9790142246938125e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002509862750957772,
+      "maxGroundedFootSpeedMPerS": 3.804007217020106e-8
+    },
+    "CV_AK74M_Stand_BlindOverEnter": {
+      "gripErrorM": 1.4457042014319512e-7,
+      "footErrorM": 0.0000011508600392438996,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011666831241307171,
+      "maxGroundedFootSpeedMPerS": 8.155146074753195e-7
+    },
+    "CV_AK74M_Stand_BlindOverFire": {
+      "gripErrorM": 1.2347409271868377e-7,
+      "footErrorM": 5.036569234514163e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0045090048170794254,
+      "maxGroundedFootSpeedMPerS": 7.765976778294688e-8
+    },
+    "CV_AK74M_Stand_BlindOverReturn": {
+      "gripErrorM": 1.185721585430864e-7,
+      "footErrorM": 0.000001177596552587501,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011666817959480694,
+      "maxGroundedFootSpeedMPerS": 0.000003828144711832076
+    },
+    "CV_AK74M_Stand_BlindLeftEnter": {
+      "gripErrorM": 1.2203904011803948e-7,
+      "footErrorM": 2.1533172383104895e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.014697400899040822,
+      "maxGroundedFootSpeedMPerS": 2.0352747203655205e-7
+    },
+    "CV_AK74M_Stand_BlindLeftFire": {
+      "gripErrorM": 6.802000762582936e-8,
+      "footErrorM": 2.190131644541206e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0042164408065528845,
+      "maxGroundedFootSpeedMPerS": 2.2157879187800618e-8
+    },
+    "CV_AK74M_Stand_BlindLeftReturn": {
+      "gripErrorM": 1.5632703896481947e-7,
+      "footErrorM": 2.156869448637706e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.014697440207655139,
+      "maxGroundedFootSpeedMPerS": 2.0202346574013398e-7
+    },
+    "CV_AK74M_Stand_BlindRightEnter": {
+      "gripErrorM": 1.6819099219312764e-7,
+      "footErrorM": 8.295493560284691e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006539346827397773,
+      "maxGroundedFootSpeedMPerS": 1.3762162077588944e-7
+    },
+    "CV_AK74M_Stand_BlindRightFire": {
+      "gripErrorM": 1.4077325729025044e-7,
+      "footErrorM": 7.825033426133567e-8,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004112243874889074,
+      "maxGroundedFootSpeedMPerS": 3.636758386277876e-8
+    },
+    "CV_AK74M_Stand_BlindRightReturn": {
+      "gripErrorM": 9.570559872154768e-8,
+      "footErrorM": 7.64910465344216e-8,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006539306279941052,
+      "maxGroundedFootSpeedMPerS": 1.3650947555500174e-7
+    },
+    "CV_AK74M_Stand_Exit": {
+      "gripErrorM": 1.823909061401317e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04558725899061058,
+      "maxGroundedFootSpeedMPerS": 0.01160886503623755
+    },
+    "CV_AK74M_Stand_ExitRight": {
+      "gripErrorM": 8.964262118983017e-8,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04558723533418451,
+      "maxGroundedFootSpeedMPerS": 0.011602691584802411
+    },
+    "CV_AK74M_Stand_ExitLow": {
+      "gripErrorM": 1.1170498612249773e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04558726706325667,
+      "maxGroundedFootSpeedMPerS": 0.011606964171161312
+    },
+    "CV_AK74M_Crouch_ProtectedCorner": {
+      "gripErrorM": 6.777151311727751e-8,
+      "footErrorM": 5.180430297384175e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00009188373212625242,
+      "maxGroundedFootSpeedMPerS": 6.882553373670604e-8
+    },
+    "CV_AK74M_Crouch_ProtectedLow": {
+      "gripErrorM": 4.9364340972581614e-8,
+      "footErrorM": 0.000002592714163819507,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0000917626241062697,
+      "maxGroundedFootSpeedMPerS": 6.84492361920127e-8
+    },
+    "CV_AK74M_Crouch_LeftEnter": {
+      "gripErrorM": 1.6128549250057735e-7,
+      "footErrorM": 7.557139884091922e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.013565843104963466,
+      "maxGroundedFootSpeedMPerS": 3.877056777571779e-7
+    },
+    "CV_AK74M_Crouch_LeftFire": {
+      "gripErrorM": 1.554177750447952e-7,
+      "footErrorM": 7.616219355901111e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00589405153829627,
+      "maxGroundedFootSpeedMPerS": 8.407900844029503e-8
+    },
+    "CV_AK74M_Crouch_LeftReturn": {
+      "gripErrorM": 1.8610114308100885e-7,
+      "footErrorM": 7.537635881776718e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.01356584405665036,
+      "maxGroundedFootSpeedMPerS": 3.688448407528384e-7
+    },
+    "CV_AK74M_Crouch_LeftAim": {
+      "gripErrorM": 1.2906112899034714e-7,
+      "footErrorM": 7.616219355901111e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002536935155751243,
+      "maxGroundedFootSpeedMPerS": 8.407900844029503e-8
+    },
+    "CV_AK74M_Crouch_RightEnter": {
+      "gripErrorM": 9.057778701905971e-8,
+      "footErrorM": 5.081613844919707e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.0066557575980586035,
+      "maxGroundedFootSpeedMPerS": 5.250284487231478e-7
+    },
+    "CV_AK74M_Crouch_RightFire": {
+      "gripErrorM": 8.376107660768109e-8,
+      "footErrorM": 2.1383750147728277e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00585179916254646,
+      "maxGroundedFootSpeedMPerS": 5.830143165975017e-8
+    },
+    "CV_AK74M_Crouch_RightReturn": {
+      "gripErrorM": 8.948392948448076e-8,
+      "footErrorM": 5.112055951116386e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006655761977411681,
+      "maxGroundedFootSpeedMPerS": 5.2043505841007e-7
+    },
+    "CV_AK74M_Crouch_RightAim": {
+      "gripErrorM": 8.690693354046377e-8,
+      "footErrorM": 2.1383750147728277e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.00024609316861606037,
+      "maxGroundedFootSpeedMPerS": 5.830143165975017e-8
+    },
+    "CV_AK74M_Crouch_LowEnter": {
+      "gripErrorM": 1.3375931384606063e-7,
+      "footErrorM": 0.000002599288160363349,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.015062540837851041,
+      "maxGroundedFootSpeedMPerS": 0.00000524303727395268
+    },
+    "CV_AK74M_Crouch_LowFire": {
+      "gripErrorM": 1.1815861127798398e-7,
+      "footErrorM": 5.697841254196868e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.005631160196198408,
+      "maxGroundedFootSpeedMPerS": 6.200428939086863e-8
+    },
+    "CV_AK74M_Crouch_LowReturn": {
+      "gripErrorM": 1.3415094483029484e-7,
+      "footErrorM": 0.000002605073730416048,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.015062588165589719,
+      "maxGroundedFootSpeedMPerS": 0.00000452294926519055
+    },
+    "CV_AK74M_Crouch_LowAim": {
+      "gripErrorM": 1.1815943936258958e-7,
+      "footErrorM": 5.697841254196868e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0002509606640753516,
+      "maxGroundedFootSpeedMPerS": 6.200428939086863e-8
+    },
+    "CV_AK74M_Crouch_BlindOverEnter": {
+      "gripErrorM": 1.1474718503427606e-7,
+      "footErrorM": 0.000002593892910164047,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.011090622152578267,
+      "maxGroundedFootSpeedMPerS": 0.0000011084100558313031
+    },
+    "CV_AK74M_Crouch_BlindOverFire": {
+      "gripErrorM": 1.213301745183337e-7,
+      "footErrorM": 0.000002017958512979572,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004508972609166784,
+      "maxGroundedFootSpeedMPerS": 8.214182680222212e-7
+    },
+    "CV_AK74M_Crouch_BlindOverReturn": {
+      "gripErrorM": 1.656914132551201e-7,
+      "footErrorM": 0.0000024987846188930264,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.01109072359844339,
+      "maxGroundedFootSpeedMPerS": 0.0000011179175490736888
+    },
+    "CV_AK74M_Crouch_BlindLeftEnter": {
+      "gripErrorM": 1.0729926783909805e-7,
+      "footErrorM": 8.671232196253061e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.015618119147432788,
+      "maxGroundedFootSpeedMPerS": 5.701908339523923e-7
+    },
+    "CV_AK74M_Crouch_BlindLeftFire": {
+      "gripErrorM": 8.935213696200941e-8,
+      "footErrorM": 8.756054844074292e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.0043146715037776845,
+      "maxGroundedFootSpeedMPerS": 5.785820672315196e-8
+    },
+    "CV_AK74M_Crouch_BlindLeftReturn": {
+      "gripErrorM": 2.7382708719008524e-7,
+      "footErrorM": 8.72184358929121e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.015618114008191766,
+      "maxGroundedFootSpeedMPerS": 5.57856437537458e-7
+    },
+    "CV_AK74M_Crouch_BlindRightEnter": {
+      "gripErrorM": 1.1018858158592628e-7,
+      "footErrorM": 5.081613844919707e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.006499722385124464,
+      "maxGroundedFootSpeedMPerS": 6.165263857283526e-7
+    },
+    "CV_AK74M_Crouch_BlindRightFire": {
+      "gripErrorM": 1.245678035000404e-7,
+      "footErrorM": 1.761329244981567e-7,
+      "frames": 145,
+      "maxWristStepAt60HzM": 0.004207537237968026,
+      "maxGroundedFootSpeedMPerS": 6.73846758889125e-8
+    },
+    "CV_AK74M_Crouch_BlindRightReturn": {
+      "gripErrorM": 1.2104361965432568e-7,
+      "footErrorM": 5.138570254207816e-7,
+      "frames": 121,
+      "maxWristStepAt60HzM": 0.0064997371498241715,
+      "maxGroundedFootSpeedMPerS": 6.172988289723679e-7
+    },
+    "CV_AK74M_Crouch_Exit": {
+      "gripErrorM": 8.422738844607855e-8,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.04558726320347086,
+      "maxGroundedFootSpeedMPerS": 0.011605522133311428
+    },
+    "CV_AK74M_Crouch_ExitRight": {
+      "gripErrorM": 2.056144480945904e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.045587240748409835,
+      "maxGroundedFootSpeedMPerS": 0.011600015456427436
+    },
+    "CV_AK74M_Crouch_ExitLow": {
+      "gripErrorM": 1.2009634293747832e-7,
+      "footErrorM": 0,
+      "frames": 261,
+      "maxWristStepAt60HzM": 0.045587264514526285,
+      "maxGroundedFootSpeedMPerS": 0.011608117385530624
+    }
+  },
+  "sequences": [
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "Left",
+      "maxGripErrorM": 1.290755782073402e-7,
+      "maxFootErrorM": 2.0081681982828967e-7,
+      "maxWristStepAt60HzM": 0.0134490831857438
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "Right",
+      "maxGripErrorM": 1.6886666319479573e-7,
+      "maxFootErrorM": 6.969321798087528e-8,
+      "maxWristStepAt60HzM": 0.006635471872143984
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "Low",
+      "maxGripErrorM": 1.7087738627892803e-7,
+      "maxFootErrorM": 0.0000011577586098775815,
+      "maxWristStepAt60HzM": 0.030039328623938714
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "BlindOver",
+      "maxGripErrorM": 1.5371822816383132e-7,
+      "maxFootErrorM": 0.000001177595090050276,
+      "maxWristStepAt60HzM": 0.011800699270211653
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "BlindLeft",
+      "maxGripErrorM": 1.4016024299130374e-7,
+      "maxFootErrorM": 2.190135950126067e-7,
+      "maxWristStepAt60HzM": 0.013935388582412703
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Stand",
+      "family": "BlindRight",
+      "maxGripErrorM": 1.9021289672976614e-7,
+      "maxFootErrorM": 8.295486604093356e-8,
+      "maxWristStepAt60HzM": 0.006427201244709878
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "Left",
+      "maxGripErrorM": 1.9073679756868093e-7,
+      "maxFootErrorM": 7.61636491411175e-7,
+      "maxWristStepAt60HzM": 0.013764062556434498
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "Right",
+      "maxGripErrorM": 1.3647891844033427e-7,
+      "maxFootErrorM": 5.145137241238545e-7,
+      "maxWristStepAt60HzM": 0.0068727792382896145
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "Low",
+      "maxGripErrorM": 1.62395442712958e-7,
+      "maxFootErrorM": 0.0000026051030860088725,
+      "maxWristStepAt60HzM": 0.04708244072976099
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "BlindOver",
+      "maxGripErrorM": 1.6021381234711798e-7,
+      "maxFootErrorM": 0.000002592695382298864,
+      "maxWristStepAt60HzM": 0.011214240711232806
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "BlindLeft",
+      "maxGripErrorM": 2.8931064437994737e-7,
+      "maxFootErrorM": 8.756058726486425e-7,
+      "maxWristStepAt60HzM": 0.014746740685910656
+    },
+    {
+      "kind": "M16A4",
+      "stance": "Crouch",
+      "family": "BlindRight",
+      "maxGripErrorM": 1.4174276466429474e-7,
+      "maxFootErrorM": 5.145137241238545e-7,
+      "maxWristStepAt60HzM": 0.006388043585543625
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "Left",
+      "maxGripErrorM": 1.5465347778124608e-7,
+      "maxFootErrorM": 2.0081681982828967e-7,
+      "maxWristStepAt60HzM": 0.013939647642020395
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "Right",
+      "maxGripErrorM": 1.2244287128685656e-7,
+      "maxFootErrorM": 6.969329889294014e-8,
+      "maxWristStepAt60HzM": 0.006593470730813016
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "Low",
+      "maxGripErrorM": 2.3611796069597808e-7,
+      "maxFootErrorM": 0.0000011577586098775815,
+      "maxWristStepAt60HzM": 0.01686437539268834
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "BlindOver",
+      "maxGripErrorM": 1.4457042014319512e-7,
+      "maxFootErrorM": 0.000001177595090050276,
+      "maxWristStepAt60HzM": 0.011666831241307171
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "BlindLeft",
+      "maxGripErrorM": 1.5632703896481947e-7,
+      "maxFootErrorM": 2.190135950126067e-7,
+      "maxWristStepAt60HzM": 0.014697440207655139
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Stand",
+      "family": "BlindRight",
+      "maxGripErrorM": 1.6819099219312764e-7,
+      "maxFootErrorM": 8.295486604093356e-8,
+      "maxWristStepAt60HzM": 0.006539346827397773
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "Left",
+      "maxGripErrorM": 1.8610114308100885e-7,
+      "maxFootErrorM": 7.61636491411175e-7,
+      "maxWristStepAt60HzM": 0.01356584405665036
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "Right",
+      "maxGripErrorM": 9.057778701905971e-8,
+      "maxFootErrorM": 5.145137241238545e-7,
+      "maxWristStepAt60HzM": 0.006655761977411681
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "Low",
+      "maxGripErrorM": 1.3415094483029484e-7,
+      "maxFootErrorM": 0.0000026051030860088725,
+      "maxWristStepAt60HzM": 0.015062588165589719
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "BlindOver",
+      "maxGripErrorM": 1.656914132551201e-7,
+      "maxFootErrorM": 0.000002592695327490438,
+      "maxWristStepAt60HzM": 0.01109072359844339
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "BlindLeft",
+      "maxGripErrorM": 2.7382708719008524e-7,
+      "maxFootErrorM": 8.756058726486425e-7,
+      "maxWristStepAt60HzM": 0.015618119147432788
+    },
+    {
+      "kind": "AK74M",
+      "stance": "Crouch",
+      "family": "BlindRight",
+      "maxGripErrorM": 1.245678035000404e-7,
+      "maxFootErrorM": 5.145137241238545e-7,
+      "maxWristStepAt60HzM": 0.0064997371498241715
+    }
+  ],
+  "maxGripErrorM": 2.8931064437994737e-7,
+  "maxFootErrorM": 0.000002605073730416048,
+  "controllerSha256": "6305f4df7a0a21bbcbde89f6bfd658ca7402345f24b4615fa01884bd3910addf"
+}

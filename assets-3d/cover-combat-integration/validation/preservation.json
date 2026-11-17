@@ -1,0 +1,7 @@
+{
+  "baselineCommit": "cc66fecc4abd6d34868c53aeaeb6d8ad482c0168",
+  "oldFilesChecked": 1085,
+  "oldFilesBytePreserved": true,
+  "approvedPhase2Sha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c",
+  "modificationScope": "New cover-combat-integration folder only; no AI/map/live entry point modifications"
+}

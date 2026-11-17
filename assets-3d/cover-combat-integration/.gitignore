@@ -1,4 +1,5 @@
 __pycache__/
 models/*_Baked.glb
+models/AK74M_Weapon.glb
 source/*.blend
 validation/*-partial.json

@@ -1,0 +1,22 @@
+{
+  "baseSha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c",
+  "newBaseSha256": "0a22f661c940cadd8642e0e088ed68124d3973910bdc4c0d3b7309d0f47b2550",
+  "originalEightClipsAndDataUnchanged": true,
+  "originalNodesMeshesMaterialsSkinsPrefixUnchanged": true,
+  "patches": {
+    "M16A4": {
+      "file": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+      "sha256": "30cb491a0df6cff2c3d095ccf99ec61a3a6b365123bc7ba706eb9df9168e7cc3",
+      "bytes": 9356096,
+      "clips": 52,
+      "maxBindBasisCorrectionFromIdentity": 0.000029334250494339464
+    },
+    "AK74M": {
+      "file": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+      "sha256": "b9ba0bf1d7955bde8f47bd3fcd9ea2f5ca061f302758a1248f6e7d0b2ec8234d",
+      "bytes": 9322344,
+      "clips": 52,
+      "maxBindBasisCorrectionFromIdentity": 0.000029334250494339464
+    }
+  }
+}

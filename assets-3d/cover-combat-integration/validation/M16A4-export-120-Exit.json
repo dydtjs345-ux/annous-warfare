@@ -1,0 +1,66 @@
+{
+  "weapon": "M16A4",
+  "method": "Final merged base and selective motion patch GLB, reimported into Blender and sampled between keys. Actual deformed mesh bounds/vertices checked against parametric obstacles.",
+  "sampleHz": 120,
+  "clips": {
+    "CV_M16A4_Stand_Exit": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.013990898926296e-06,
+      "maxSourcePointMismatchM": 2.773220296689607e-06,
+      "minimumBodyZ": -0.0015515157648993,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_M16A4_Stand_ExitRight": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.526914651089847e-06,
+      "maxSourcePointMismatchM": 2.2496805728939027e-06,
+      "minimumBodyZ": -0.0015511479528990818,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_M16A4_Stand_ExitLow": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.1557769435444663e-06,
+      "maxSourcePointMismatchM": 2.6905391774235915e-06,
+      "minimumBodyZ": -0.0015508660168317423,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_M16A4_Crouch_Exit": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.020267174757939e-06,
+      "maxSourcePointMismatchM": 2.6498757407913557e-06,
+      "minimumBodyZ": -0.001550961257425515,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_M16A4_Crouch_ExitRight": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.7084426627017767e-06,
+      "maxSourcePointMismatchM": 2.458285168087635e-06,
+      "minimumBodyZ": -0.0015504364379192448,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    },
+    "CV_M16A4_Crouch_ExitLow": {
+      "duration": 4.333333333333333,
+      "samples": 521,
+      "maxWristErrorM": 1.1557769435444663e-06,
+      "maxSourcePointMismatchM": 2.8302891510279758e-06,
+      "minimumBodyZ": -0.0015498865131518547,
+      "obstacleIntersections": [],
+      "blockedFireOrAimSamples": 0
+    }
+  },
+  "maxWristErrorM": 1.7084426627017767e-06,
+  "maxSourcePointMismatchM": 2.8302891510279758e-06,
+  "minimumBodyZ": -0.0015515157648993,
+  "obstacleIntersectionSamples": 0,
+  "blockedFireSamples": 0
+}
