@@ -1,0 +1,18 @@
+{
+  "project_id": "appgprj_6af0d17863348191b4ea48163f305325",
+  "siteSourceCommit": "7e89e95b66cae428d050e357d9407cff6bdfbf9d",
+  "githubImplementationCommit": "2e155e73929286ed743b1cb88e704a8c2a726570",
+  "archive": "/workspace/phase2-crouch-deployment.tar.gz",
+  "archiveSha256": "c19399c9baf7cff729121c8420519924d5e186f6afb6c751a39d2faf02f79fcb",
+  "archiveBytes": 83038007,
+  "preview": "https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/phase2-crouch/",
+  "olderRuntimeFilesPreserved": 200,
+  "savedVersionId": "appgprj_6af0d17863348191b4ea48163f305325~appgver_c3de72a1b6c881919738deb75bf5a0c8",
+  "savedVersionNumber": 18,
+  "nativeArchiveContentHash": "sha256:f790f421d33e28c234dea57e2acb29559e19f2aa46430d3b64a46925f1f301ef",
+  "deploymentId": "appgdep_6afba1080d608191925311d3f81996a4",
+  "deploymentStatus": "succeeded",
+  "deployedAt": "2026-11-17T00:34:36.472894+00:00",
+  "anonymousHttpsVerifiedFiles": 225,
+  "protectedGithubMain": "b381e6017d01fa34f14e889ff639347db9e5feae"
+}

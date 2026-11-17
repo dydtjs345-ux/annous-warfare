@@ -1,0 +1,16 @@
+{
+  "allCatalogStatesResolveToActualClips": true,
+  "statesPerProfile": {
+    "TacticalSuit": 6,
+    "TacticalSuitBaseline": 6,
+    "USMC": 44,
+    "Russian": 44
+  },
+  "sevenCategories": true,
+  "sameActualSuitForMotionComparison": true,
+  "noMissingActionReplacedWithPlaceholder": true,
+  "protectedOldRoutesReferenced": true,
+  "localLinkValidation": true,
+  "browserGpuTested": false,
+  "physicalSafariTested": false
+}

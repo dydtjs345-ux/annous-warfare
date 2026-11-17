@@ -1,0 +1,140 @@
+{
+  "out": "/workspace/phase2-crouch-dist",
+  "implementationCommit": "2e155e73929286ed743b1cb88e704a8c2a726570",
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 630966,
+      "sha256": "4a34a405ac18e1387d9e636d61633d486abd512621ac79613c27b347bed9c5d3"
+    },
+    {
+      "path": "contact-data.json",
+      "bytes": 3726,
+      "sha256": "32768a3b70a7714d952e9983ad096e7033d36dc3686f001a68d791abc701d820"
+    },
+    {
+      "path": "images/controller-transition-iso.jpg",
+      "bytes": 146326,
+      "sha256": "a5cb7aead7ca7bb4e4df79e0573a77157090cdb4a907ba6651544a6306f74e17"
+    },
+    {
+      "path": "images/grip-hands-right.jpg",
+      "bytes": 101124,
+      "sha256": "22b2e92d7fb557d2369b4b08108959fca2763bc41a15b1a43e7fdab9973573a3"
+    },
+    {
+      "path": "images/grip-hands.jpg",
+      "bytes": 87907,
+      "sha256": "c40d86744d8114df0ea03267c0e36bee6b55627b16ba855f8721021ff4ea80bd"
+    },
+    {
+      "path": "images/idle-iso.jpg",
+      "bytes": 356359,
+      "sha256": "87b8306d1936c82771c864ae75e118747b56b2c0f69265804b3e56b8081f61fb"
+    },
+    {
+      "path": "images/idle-side.jpg",
+      "bytes": 273881,
+      "sha256": "e046569dabc69f8002aab91a4a0666967342aefafee82ec251a9a9e1b4b0fdad"
+    },
+    {
+      "path": "images/walk-iso-poster.jpg",
+      "bytes": 98802,
+      "sha256": "fe6c058804782500aa13adc3d9cd247d1600f158aeeb4d859036a53a711ca02e"
+    },
+    {
+      "path": "images/walk-iso.jpg",
+      "bytes": 360080,
+      "sha256": "495fed72616f9d943d1e467fc0bb86d614bf11798f84687c01052a5f5a1add7c"
+    },
+    {
+      "path": "images/walk-side.jpg",
+      "bytes": 274947,
+      "sha256": "d3fdb984c118e4b99d1aad54d7887c3de9eb5c19d7a62d86b2eeefcc64bb3eba"
+    },
+    {
+      "path": "index.html",
+      "bytes": 5997,
+      "sha256": "8cd4c5d0a0d50c2f14e5dd84e1039d25a9bbcfc4caca939e1735da521c033272"
+    },
+    {
+      "path": "licenses/ATTRIBUTION.md",
+      "bytes": 2745,
+      "sha256": "26a8d7f4e56d711977954001e491ea53b0e620d9d296b833d81ccc4055733599"
+    },
+    {
+      "path": "licenses/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "licenses/Quaternius-UAL1-License.txt",
+      "bytes": 332,
+      "sha256": "6d01f55c6e4c49a2c9963e147e561945ae2c83958c8ca667d90a6bffdbfac061"
+    },
+    {
+      "path": "licenses/Three-MIT.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "path": "licenses/ZenXChaos-Unlicense.txt",
+      "bytes": 1210,
+      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd"
+    },
+    {
+      "path": "licenses/ufbx-LICENSE.txt",
+      "bytes": 2631,
+      "sha256": "0dd48ebadf52273c736256325c8f078c03c8bb4facee22a4122de0ad3f615391"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 33566,
+      "sha256": "7453419bd95ac442f804f891cd6000e8935a2360f836ce1f30e20adccc0e1245"
+    },
+    {
+      "path": "models/TacticalSuit_Phase2.2549b894883a.glb",
+      "bytes": 5534192,
+      "sha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c"
+    },
+    {
+      "path": "recordings/idle-iso.mp4",
+      "bytes": 343431,
+      "sha256": "838ff1aea8d61966f60f24db30b194d9fc2f078961a5ea3280a83d48654f7ace"
+    },
+    {
+      "path": "recordings/idle-side.mp4",
+      "bytes": 305247,
+      "sha256": "d7e45184d377410feed11869a65c65c0b112f84e134fb9e01afe7d557c2d2251"
+    },
+    {
+      "path": "recordings/walk-iso.mp4",
+      "bytes": 648808,
+      "sha256": "011bea3caa67e2f4d09fd2d8ab2d3d49b3d3f9feccdc53745ecd7abe84266ce2"
+    },
+    {
+      "path": "recordings/walk-side.mp4",
+      "bytes": 476784,
+      "sha256": "0a2d5dfac2367c47b5e401fd91311f0638e7d209fd7bb17527e7c2ccd042693a"
+    },
+    {
+      "path": "report.md",
+      "bytes": 12835,
+      "sha256": "6e4e69859db1e9ef11c0ef8e3235772b0ff7530032015bb7a72fa39aa0971053"
+    },
+    {
+      "path": "research.json",
+      "bytes": 12460,
+      "sha256": "6faaff92047763b312fcf2862ec4055effce9cf3286710c3247150affd3547cc"
+    },
+    {
+      "path": "style.css",
+      "bytes": 2253,
+      "sha256": "5387552f9a8dcefb6d085d35b4f48c755b081dc92eeef86f97ab199aa8adea40"
+    }
+  ],
+  "totalBytes": 9736347,
+  "modelBytes": 5534192,
+  "browserGpuTested": false,
+  "physicalSafariTested": false
+}
