@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-17",
+  "method": "Actual final GLB rendered in Blender; extracted side/isometric frame sequences and close-ups inspected. Actual CPU Three.js controller pose matrices also rendered with skin/rigid-weapon position cross-checks. No video-URL-only inference, browser screenshot or physical Safari claim.",
+  "modelSha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c",
+  "walk": {
+    "views": [
+      "side",
+      "fixed 30-degree isometric"
+    ],
+    "inspectedTimesS": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1,
+      1.25,
+      1.5,
+      1.75
+    ],
+    "observations": [
+      "Authored deep crouch has visible pelvis/waist motion and alternating planted/swing feet.",
+      "Chest stays relatively steady while pelvis rotates beneath it; legacy comparison is upright and visibly more rigid.",
+      "Rifle remains controlled in low-ready carry; this is not a dedicated aiming pose.",
+      "No gross skin collapse observed in inspected views; deep forward lean remains a style limitation requiring user review."
+    ]
+  },
+  "idle": {
+    "views": [
+      "side",
+      "fixed 30-degree isometric"
+    ],
+    "inspectedTimesS": [
+      0,
+      0.375,
+      0.75,
+      1.125,
+      1.5,
+      1.875,
+      2.25,
+      2.625
+    ],
+    "observations": [
+      "Both feet retain ground support; subtle torso/pelvis breathing visible in the source-driven sequence.",
+      "No visible rifle separation or major pose jump across inspected cycle phases."
+    ]
+  },
+  "weapon": {
+    "views": [
+      "left/front grip close-up",
+      "rear/right grip close-up"
+    ],
+    "observations": [
+      "Support hand wraps the handguard and right hand remains at the pistol grip.",
+      "Ground clearance is measured separately on the final skinned asset.",
+      "Wrist-point constraints do not establish perfect fingertip collision or equipment collision."
+    ]
+  },
+  "transitions": {
+    "view": "30-degree isometric",
+    "actualControllerPoseFrames": 14,
+    "observations": [
+      "Idle-to-walk blend and cycle-aligned walk-to-idle stop inspected at start/end and intermediate poses.",
+      "No gross root jump, frozen torso or floating weapon observed in the corrected controller-pose review."
+    ],
+    "reviewRendererCorrection": "Initial offline rigid-weapon mapping incorrectly calibrated from Blender imported first-animation pose rather than the glTF default transform. Corrected to direct coordinate conversion and verified sampled actual weapon/magazine vertices. Final review only uses corrected frames.",
+    "maxRigidWeaponRenderVsControllerErrorM": 3.6117188963330183e-07
+  },
+  "assessment": "Two new imported/contact-retargeted crouch loops ready for user visual review; Stage A remains partial. No new external prone/crawl, cover or armed crouch actions claimed.",
+  "browserGpuTested": false,
+  "physicalSafariTested": false,
+  "limitations": [
+    "Not a centre-of-mass/force simulation.",
+    "Source style is a deep stealth crouch; approval for military crouch style pending.",
+    "No exhaustive fingertip, equipment or arbitrary-obstacle collision verification."
+  ],
+  "publishedReviewMedia": [
+    {
+      "file": "controller-transition-iso.jpg",
+      "sha256": "a5cb7aead7ca7bb4e4df79e0573a77157090cdb4a907ba6651544a6306f74e17"
+    },
+    {
+      "file": "grip-hands-right.jpg",
+      "sha256": "22b2e92d7fb557d2369b4b08108959fca2763bc41a15b1a43e7fdab9973573a3"
+    },
+    {
+      "file": "grip-hands.jpg",
+      "sha256": "c40d86744d8114df0ea03267c0e36bee6b55627b16ba855f8721021ff4ea80bd"
+    },
+    {
+      "file": "idle-iso.jpg",
+      "sha256": "87b8306d1936c82771c864ae75e118747b56b2c0f69265804b3e56b8081f61fb"
+    },
+    {
+      "file": "idle-iso.mp4",
+      "sha256": "838ff1aea8d61966f60f24db30b194d9fc2f078961a5ea3280a83d48654f7ace"
+    },
+    {
+      "file": "idle-side.jpg",
+      "sha256": "e046569dabc69f8002aab91a4a0666967342aefafee82ec251a9a9e1b4b0fdad"
+    },
+    {
+      "file": "idle-side.mp4",
+      "sha256": "d7e45184d377410feed11869a65c65c0b112f84e134fb9e01afe7d557c2d2251"
+    },
+    {
+      "file": "walk-iso-poster.jpg",
+      "sha256": "fe6c058804782500aa13adc3d9cd247d1600f158aeeb4d859036a53a711ca02e"
+    },
+    {
+      "file": "walk-iso.jpg",
+      "sha256": "495fed72616f9d943d1e467fc0bb86d614bf11798f84687c01052a5f5a1add7c"
+    },
+    {
+      "file": "walk-iso.mp4",
+      "sha256": "011bea3caa67e2f4d09fd2d8ab2d3d49b3d3f9feccdc53745ecd7abe84266ce2"
+    },
+    {
+      "file": "walk-side.jpg",
+      "sha256": "d3fdb984c118e4b99d1aad54d7887c3de9eb5c19d7a62d86b2eeefcc64bb3eba"
+    },
+    {
+      "file": "walk-side.mp4",
+      "sha256": "0a2d5dfac2367c47b5e401fd91311f0638e7d209fd7bb17527e7c2ccd042693a"
+    }
+  ]
+}

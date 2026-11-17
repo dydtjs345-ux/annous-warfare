@@ -1,0 +1,132 @@
+{
+  "frames": [
+    {
+      "time": 0,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 9.841717982721534e-07,
+        "Right": 6.539212667559218e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 2.9802322387695312e-08
+    },
+    {
+      "time": 1.5,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.121122874681581e-06,
+        "Right": 5.839832565036594e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 6.143906154658885e-08
+    },
+    {
+      "time": 1.5333333333333334,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.091469629195528e-06,
+        "Right": 6.513216697985611e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 6.674406255472048e-08
+    },
+    {
+      "time": 1.5666666666666667,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0133885493671115e-06,
+        "Right": 6.417172419626426e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 6.143906154658885e-08
+    },
+    {
+      "time": 1.6,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0194103335735856e-06,
+        "Right": 6.430558563050693e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 1.2338530392705795e-07
+    },
+    {
+      "time": 1.7,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 9.274477790994932e-07,
+        "Right": 6.080331135720958e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 3.0321666218526114e-08
+    },
+    {
+      "time": 2,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 9.266475047575682e-07,
+        "Right": 6.802608576506317e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 8.429369702178807e-08
+    },
+    {
+      "time": 3.3,
+      "state": "CrouchWalk",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0325977885169039e-06,
+        "Right": 7.870411755234284e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 1.7188894741325568e-07
+    },
+    {
+      "time": 5.5,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0944772969002942e-06,
+        "Right": 9.548260643999123e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 1.2731557704981462e-07
+    },
+    {
+      "time": 5.533333333333333,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.120458471260786e-06,
+        "Right": 7.559965107213177e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 2.467706078541159e-07
+    },
+    {
+      "time": 5.566666666666666,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.027306214275325e-06,
+        "Right": 1.0338725379167298e-06
+      },
+      "rigidWeaponVsActualControllerErrorM": 2.458096219275858e-07
+    },
+    {
+      "time": 5.6,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0275493458952622e-06,
+        "Right": 9.71072083113069e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 2.4279056605726573e-07
+    },
+    {
+      "time": 5.7,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.0396860189946495e-06,
+        "Right": 9.468196324323445e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 3.6117188963330183e-07
+    },
+    {
+      "time": 6,
+      "state": "CrouchIdle",
+      "skinVsActualControllerErrorM": {
+        "Left": 1.066525893730041e-06,
+        "Right": 9.176640203006615e-07
+      },
+      "rigidWeaponVsActualControllerErrorM": 2.974653634028052e-07
+    }
+  ],
+  "browserGpuTested": false,
+  "method": "Actual Three.js controller matrices, mapped to exported Blender skin with verified rest-basis offsets"
+}

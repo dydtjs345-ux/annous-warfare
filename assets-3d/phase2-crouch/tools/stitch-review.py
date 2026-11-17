@@ -18,7 +18,8 @@ for action in ['walk','idle']:
   sheet=Image.new('RGB',(1024,2336))
   for row,i in enumerate([0,N//4,N//2,3*N//4]):sheet.paste(Image.open(dest/f'{i:04d}.png'),(0,584*row))
   sheet.save(OUT/f'{action}-{view}.jpg',quality=93)
+  if action=='walk'and view=='iso':Image.open(dest/'0000.png').save(OUT/'walk-iso-poster.jpg',quality=94)
   meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(movie)]));s=meta['streams'][0];assert int(s['nb_frames'])==N and s['r_frame_rate']=='24/1'and s['codec_name']=='h264'and s['pix_fmt']=='yuv420p'
   report.append({'file':movie.name,'frames':N,'fps':24,'durationS':N/24,'sha256':hashlib.sha256(movie.read_bytes()).hexdigest(),'sameActualExternalCharacter':True,'sameCameraScaleLighting':True,'nativeTiming':True,'realGroundTranslation':action=='walk','worldSpaceMetreGrid':True,'renderedFromFinalGlb':True,'runtimeBlendingIncluded':False})
-for view in ['hands','hands-right']:Image.open(CACHE/f'walk-{view}-authored/0000.png').save(OUT/f'grip-{view}.jpg',quality=95)
+for view in ['hands','hands-right']:Image.open(CACHE/f'walk-{view}-authored/0000.png').convert('RGB').save(OUT/f'grip-{view}.jpg',quality=95)
 (ROOT/'validation/recordings.json').write_text(json.dumps(report,indent=2)+'\n');print('Encoded',len(report),'native-speed comparisons.')

@@ -1,0 +1,58 @@
+[
+  {
+    "file": "walk-side.mp4",
+    "frames": 48,
+    "fps": 24,
+    "durationS": 2.0,
+    "sha256": "0a2d5dfac2367c47b5e401fd91311f0638e7d209fd7bb17527e7c2ccd042693a",
+    "sameActualExternalCharacter": true,
+    "sameCameraScaleLighting": true,
+    "nativeTiming": true,
+    "realGroundTranslation": true,
+    "worldSpaceMetreGrid": true,
+    "renderedFromFinalGlb": true,
+    "runtimeBlendingIncluded": false
+  },
+  {
+    "file": "walk-iso.mp4",
+    "frames": 48,
+    "fps": 24,
+    "durationS": 2.0,
+    "sha256": "011bea3caa67e2f4d09fd2d8ab2d3d49b3d3f9feccdc53745ecd7abe84266ce2",
+    "sameActualExternalCharacter": true,
+    "sameCameraScaleLighting": true,
+    "nativeTiming": true,
+    "realGroundTranslation": true,
+    "worldSpaceMetreGrid": true,
+    "renderedFromFinalGlb": true,
+    "runtimeBlendingIncluded": false
+  },
+  {
+    "file": "idle-side.mp4",
+    "frames": 72,
+    "fps": 24,
+    "durationS": 3.0,
+    "sha256": "d7e45184d377410feed11869a65c65c0b112f84e134fb9e01afe7d557c2d2251",
+    "sameActualExternalCharacter": true,
+    "sameCameraScaleLighting": true,
+    "nativeTiming": true,
+    "realGroundTranslation": false,
+    "worldSpaceMetreGrid": true,
+    "renderedFromFinalGlb": true,
+    "runtimeBlendingIncluded": false
+  },
+  {
+    "file": "idle-iso.mp4",
+    "frames": 72,
+    "fps": 24,
+    "durationS": 3.0,
+    "sha256": "838ff1aea8d61966f60f24db30b194d9fc2f078961a5ea3280a83d48654f7ace",
+    "sameActualExternalCharacter": true,
+    "sameCameraScaleLighting": true,
+    "nativeTiming": true,
+    "realGroundTranslation": false,
+    "worldSpaceMetreGrid": true,
+    "renderedFromFinalGlb": true,
+    "runtimeBlendingIncluded": false
+  }
+]
