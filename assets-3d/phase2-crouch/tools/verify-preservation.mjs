@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {parse} from '../../tactical-suit-evaluation/tools/glb.mjs';
+const root='assets-3d/phase2-crouch',baseline=JSON.parse(fs.readFileSync(root+'/validation/baseline-files.json'));
+for(const[path,id]of Object.entries(baseline.gitBlobIds)){const b=fs.readFileSync(path),actual=createHash('sha1').update(Buffer.from(`blob ${b.length}\0`)).update(b).digest('hex');assert.equal(actual,id,'Protected baseline changed: '+path);}
+const source=fs.readFileSync('assets-3d/infantry-animation-integration/models/TacticalSuit_Integrated.glb'),final=fs.readFileSync(root+'/models/TacticalSuit_Phase2.glb'),b=parse('assets-3d/infantry-animation-integration/models/TacticalSuit_Integrated.glb'),a=parse(root+'/models/TacticalSuit_Phase2.glb');
+for(const key of['nodes','meshes','skins','materials','textures','images','samplers','scenes','scene'])assert.deepEqual(a.j[key],b.j[key],key);
+for(const key of['accessors','bufferViews','animations'])assert.deepEqual(a.j[key].slice(0,b.j[key].length),b.j[key],key);
+assert.deepEqual(a.bin.subarray(0,b.bin.length),b.bin,'Original binary payload must remain exactly intact');
+const report={baseCommit:baseline.commit,allBaselineFilesUnchanged:Object.keys(baseline.gitBlobIds).length,sourceSha256:createHash('sha256').update(source).digest('hex'),phase2Sha256:createHash('sha256').update(final).digest('hex'),approvedClipsUnchanged:b.j.animations.map(a=>a.name),geometryRigEquipmentAttachmentsUnchanged:true,originalSamplerAndBinaryPrefixByteIdentical:true,addedClips:a.j.animations.slice(b.j.animations.length).map(a=>a.name)};fs.writeFileSync(root+'/validation/preservation.json',JSON.stringify(report,null,2)+'\n');console.log(report);

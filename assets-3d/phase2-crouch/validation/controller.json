@@ -1,0 +1,26 @@
+{
+  "engine": "Actual Phase 2 controller, CPU Three.js. Skin point evaluated from real approved geometry skin bindings. No browser/GPU/mobile claim.",
+  "headings": 8,
+  "playbackStepsS": [
+    0.016666666666666666,
+    0.03333333333333333,
+    0.016666666666666666,
+    0.05
+  ],
+  "speedCases": [
+    "60Hz 1x",
+    "30Hz 1x",
+    "30Hz 0.5x",
+    "20Hz 1x"
+  ],
+  "maxContactErrorM": 7.335217526272491e-7,
+  "maxWristErrorM": 5.393993232538161e-7,
+  "maxRootCorrectionM": 0.03241601705608675,
+  "maxFrameTravelM": 0.05273912181631874,
+  "maxLegLengthErrorM": 0.0000013246452978399326,
+  "minSkinY": 0.001057068990298473,
+  "maxSkinY": 0.002218240760690066,
+  "sourceProxyComparisonM": 0.0000026440885836146897,
+  "controllerSha256": "2d7286014b6c7db600fa938b57af7823fd34096d7132ecc8a9eb48ff09cfd5c0",
+  "catalogSha256": "15e16df453ca3afdd2201f2c3c131a3c7e70eb236a61116817c1c159452c13f3"
+}

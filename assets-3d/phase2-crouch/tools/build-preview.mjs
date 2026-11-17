@@ -1,0 +1,23 @@
+import fs from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import {build} from 'esbuild';
+import {catalog,labels,categories} from '../preview/catalog.js';
+const root=resolve('assets-3d/phase2-crouch'),out=resolve(process.env.P2_OUT||'/workspace/phase2-crouch-dist'),hash=b=>createHash('sha256').update(b).digest('hex');
+const validation=JSON.parse(await fs.readFile(resolve(root,'validation/controller.json')));
+for(const [name,key] of [['controller','controllerSha256'],['catalog','catalogSha256']])if(hash(await fs.readFile(resolve(root,'preview',name+'.js')))!==validation[key])throw Error('Controller validation is stale: '+name);
+await fs.rm(out,{force:true,recursive:true});for(const name of ['models','recordings','images','licenses'])await fs.mkdir(resolve(out,name),{recursive:true});
+const old=JSON.parse(await fs.readFile('/workspace/sites/infantry-tactical-preview/dist/infantry-integration/manifest.json'));
+const bytes=await fs.readFile(resolve(root,'models/TacticalSuit_Phase2.glb')),filename='TacticalSuit_Phase2.'+hash(bytes).slice(0,12)+'.glb';await fs.writeFile(resolve(out,'models',filename),bytes);
+const manifest={revision:'phase2-authored-crouch-1',branch:'feat/phase2-authored-crouch',implementationCommit:process.env.AW_COMMIT||null,models:{},states:catalog,labels,categories,stageA:'PARTIAL: two authored crouch loops; stance entry/exit and armed crouch actions missing.',stagesBCD:'No new professional prone/crawl/cover/reload motions integrated.',approvedBaseline:'420a0556b8bb4e66b4e94f18e916fa5b64b79776',approvedClipsBytePreserved:true,aiConnected:false,browserGpuTested:false,physicalSafariTested:false,licenses:{character:'CC-BY-4.0 / DanlyVostok',newMotion:'CC0-1.0 / Quaternius'},validation:{controllerSha256:validation.controllerSha256,catalogSha256:validation.catalogSha256}};
+for(const profile of ['TacticalSuit','TacticalSuitBaseline'])manifest.models[profile]={label:profile==='TacticalSuit'?'실제 Tactical Suit · Quaternius CC0 + 접촉 보정':'실제 Tactical Suit · 기존 프로젝트 동작 비교',path:'models/'+filename,sha256:hash(bytes),bytes:bytes.length,joints:87,originalUSMCBodyIncluded:false};
+for(const profile of ['USMC','Russian']){const source=old.models[profile];for(const [path,digest]of[[source.path,source.sha256],['/infantry-integration/'+source.crawlPatch,source.crawlPatchSha256]])if(hash(await fs.readFile(resolve('/workspace/sites/infantry-tactical-preview/dist','.'+path)))!==digest)throw Error('Preserved original asset mismatch');manifest.models[profile]={...source,label:(profile==='USMC'?'원본 USMC · M16A4':'원본 러시아 · AK-74M')+' · 기존·미승인 클립',crawlPatch:'/infantry-integration/'+source.crawlPatch};}
+for(const name of ['index.html','style.css'])await fs.copyFile(resolve(root,'preview',name),resolve(out,name));
+await build({entryPoints:[resolve(root,'preview/app.js')],outfile:resolve(out,'app.js'),bundle:true,format:'esm',platform:'browser',target:['safari15.4','chrome100'],minify:true,legalComments:'eof'});
+await fs.copyFile(resolve(root,'validation/skin-bindings.json'),resolve(out,'contact-data.json'));
+await fs.copyFile(resolve(root,'README.md'),resolve(out,'report.md'));await fs.copyFile(resolve(root,'research.json'),resolve(out,'research.json'));
+for(const name of await fs.readdir(resolve(root,'licenses')))await fs.copyFile(resolve(root,'licenses',name),resolve(out,'licenses',name));
+for(const name of await fs.readdir(resolve(root,'review')))await fs.copyFile(resolve(root,'review',name),resolve(out,name.endsWith('.mp4')?'recordings':'images',name));
+await fs.writeFile(resolve(out,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+const all=[];async function walk(dir){for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=resolve(dir,e.name);if(e.isDirectory())await walk(p);else{const b=await fs.readFile(p);all.push({path:p.slice(out.length+1),bytes:b.length,sha256:hash(b)});}}}await walk(out);
+await fs.writeFile(resolve(root,'validation/build.json'),JSON.stringify({out,implementationCommit:manifest.implementationCommit,files:all,totalBytes:all.reduce((n,f)=>n+f.bytes,0),modelBytes:bytes.length,browserGpuTested:false,physicalSafariTested:false},null,2)+'\n');console.log(out,all.length,'files',bytes.length,'model bytes');

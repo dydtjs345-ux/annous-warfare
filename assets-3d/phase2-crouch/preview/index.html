@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase 2 · 외부 모션 보병 검토</title><link rel="stylesheet" href="style.css">
+<main>
+<header><p class="eyebrow">AUTONOMOUS WARFARE / ANIMATION LAB</p><h1>앉은 자세 · 외부 모션 비교</h1><p>같은 실제 Tactical Suit에 기존 동작과 Quaternius 동작을 적용했습니다. 현재 새로 검증한 동작은 <strong>앉은 대기·앉은 보행 2개</strong>입니다.</p><nav><a href="/infantry-integration/">기존 승인 이동 미리보기</a><a href="/tactical-suit-review/">외부 캐릭터 외형 비교</a><a href="report.md">검증·미완료 보고서</a><a href="research.json">다운로드·라이선스 평가</a><a href="licenses/ATTRIBUTION.md">출처·크레딧</a></nav></header>
+<div class="notice">Stage A 부분 완료 · 기립↔앉기, 낮은 자세 사격·재장전의 적합한 외부 원본은 아직 검증되지 않았습니다. 비활성 동작은 대체 모션을 재생하지 않습니다. 기존 포복·엄폐는 원본 진영 선택 시에만 “기존·미승인”으로 확인할 수 있습니다.</div>
+<div class="controls">
+<label>왼쪽<select id="left"><option value="TacticalSuitBaseline">실제 Tactical Suit · 기존 동작</option><option value="TacticalSuit">실제 Tactical Suit · Quaternius</option><option value="USMC">원본 USMC · 기존 클립</option><option value="Russian">원본 러시아 · 기존 클립</option></select></label>
+<label>오른쪽<select id="right"><option value="TacticalSuit">실제 Tactical Suit · Quaternius</option><option value="TacticalSuitBaseline">실제 Tactical Suit · 기존 동작</option><option value="Russian">원본 러시아 · 기존 클립</option><option value="USMC">원본 USMC · 기존 클립</option></select></label>
+<label>분류<select id="category"></select></label><label>동작<select id="state"></select></label>
+<label>시점<select id="view"><option value="iso">고정 30° 등각</option><option value="side">측면</option><option value="free">자유 검사</option></select></label>
+<label>방향<select id="heading"><option value="225">북</option><option value="180">북동</option><option value="135">동</option><option value="90">남동</option><option value="45">남</option><option value="0" selected>남서</option><option value="315">서</option><option value="270">북서</option></select></label>
+<label>속도<select id="speed"><option value="1">1× 원래 속도</option><option value="0.5">0.5× 검사</option></select></label>
+<label>표시 크기<select id="scale"><option value="320">확대 검사 · 약 320px</option><option value="120">약 120px</option><option value="80">약 80px</option><option value="60">약 60px</option></select></label>
+<label class="check"><input type="checkbox" id="contact">손·총기·발 접촉 표시</label><button id="play">일시 정지</button><button id="restart">다시 시작</button>
+</div>
+<div id="actions" class="action-list" aria-label="분류별 실제 동작"></div>
+<div class="controls"><button id="crouch-demo">앉은 대기 → 보행 → 정지</button><button id="movement-demo">승인 이동 클립 시연</button><button id="comparison">같은 외부 모델 비교로 복귀</button></div>
+<p id="status" role="status">자료 불러오는 중…</p><div id="panels"></div>
+<p class="note">동작을 직접 선택하면 해당 클립의 처음부터 검사합니다. 연속 시연은 접촉을 유지하며 블렌딩합니다. 기립↔앉기 전환 클립을 완성한 것으로 표시하지 않습니다. 기존 보행 약 0.48m/s, Quaternius 보행 약 0.70m/s · 같은 카메라·크기·1× 재생, 각 원본의 주기와 이동량 유지.</p>
+<section class="recordings"><h2>실제 GLB 렌더 비교</h2><p>왼쪽 기존 동작 / 오른쪽 Quaternius · 둘 다 같은 실제 외부 캐릭터. 모바일에서 3D가 무거우면 아래 영상과 프레임을 사용하세요.</p>
+<div class="controls"><button data-recording="walk-side">앉은 보행 · 측면</button><button data-recording="walk-iso">앉은 보행 · 30° 등각</button><button data-recording="idle-side">앉은 대기 · 측면</button><button data-recording="idle-iso">앉은 대기 · 30° 등각</button></div>
+<video id="review-video" controls loop muted playsinline preload="none" poster="images/walk-iso.jpg"></video><p id="review-status"></p>
+<div class="frames"><a href="images/walk-side.jpg"><img src="images/walk-side.jpg" alt="측면 앉은 보행, 기존과 외부 모션의 4단계 비교" loading="lazy"></a><a href="images/walk-iso.jpg"><img src="images/walk-iso.jpg" alt="30도 등각 앉은 보행, 기존과 외부 모션의 4단계 비교" loading="lazy"></a></div>
+</section>
+<footer><p>캐릭터: DanlyVostok — Military tactical suit (LowPolyGameReady), CC BY 4.0. 새 동작: Quaternius UAL1 Standard RM, CC0. 리그 리타기팅·총기/발 접촉 보정 적용. 원본 프로젝트 동작은 비교·보존용입니다.</p><p>수동 애니메이션 검토 전용 · 전투 AI·지도 변경 없음 · 브라우저 GPU 및 실제 iPhone Safari 검증은 이 환경에서 수행하지 못했습니다.</p></footer>
+</main><script type="module" src="app.js"></script></html>

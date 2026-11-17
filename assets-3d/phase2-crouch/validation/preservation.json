@@ -1,0 +1,20 @@
+{
+  "baseCommit": "420a0556b8bb4e66b4e94f18e916fa5b64b79776",
+  "allBaselineFilesUnchanged": 1016,
+  "sourceSha256": "dedb449bc98f55fd2d1f96b414476e85d3b26ba62a57180db8278dbc1d665126",
+  "phase2Sha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c",
+  "approvedClipsUnchanged": [
+    "SU_Quaternius_Walk_Rifle",
+    "SU_Quaternius_Sprint_Rifle",
+    "SU_Project_TacticalSprint_Rifle",
+    "SU_Project_Idle_Rifle"
+  ],
+  "geometryRigEquipmentAttachmentsUnchanged": true,
+  "originalSamplerAndBinaryPrefixByteIdentical": true,
+  "addedClips": [
+    "P2_Legacy_CrouchIdle_Rifle",
+    "P2_Legacy_CrouchWalk_Rifle",
+    "P2_Quaternius_CrouchIdle_Rifle",
+    "P2_Quaternius_CrouchWalk_Rifle"
+  ]
+}

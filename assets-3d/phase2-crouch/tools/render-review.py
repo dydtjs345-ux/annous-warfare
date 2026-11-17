@@ -3,6 +3,7 @@ import bpy,os,math,json
 from pathlib import Path
 from mathutils import Vector,Matrix
 ROOT=Path(__file__).resolve().parents[1];kind=os.environ.get('SU_KIND','suit');mode=os.environ.get('SU_MODE','motion');action=os.environ.get('SU_ACTION','walk');view=os.environ.get('SU_VIEW','iso');N=int(os.environ.get('SU_FRAMES','1'));time0=float(os.environ.get('SU_TIME','.2'))
+if action=='idle'and N>1:N=max(N,72)
 bpy.ops.wm.read_factory_settings(use_empty=True);s=bpy.context.scene;s.render.fps=60;s.render.engine='CYCLES';s.cycles.samples=16;s.cycles.use_denoising=False;s.render.use_persistent_data=True;s.render.resolution_x=512;s.render.resolution_y=512;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.world=bpy.data.worlds.new('World');s.world.color=(.18,.22,.26)
 path=ROOT/'models/TacticalSuit_Phase2.glb'
 bpy.ops.import_scene.gltf(filepath=str(path));objects=[o for o in bpy.data.objects if not any(c.name=='glTF_not_exported'for c in o.users_collection)];rig=next(o for o in objects if o.type=='ARMATURE');tracks={}
@@ -51,7 +52,16 @@ else:speed=0 if action=='idle'else speed
 assembly=bpy.data.objects.new('ReviewWorldTranslation',None);s.collection.objects.link(assembly)
 for o in objects:
  if o.parent not in objects:o.parent=assembly
-bpy.ops.mesh.primitive_plane_add(size=300);floor=bpy.context.object;floor.location.z=-.006;m=bpy.data.materials.new('StudioGround');m.diffuse_color=(.16,.20,.23,1);m.use_nodes=True;m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.16,.20,.23,1);m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=1;floor.data.materials.append(m)
+bpy.ops.mesh.primitive_plane_add(size=300);floor=bpy.context.object;floor.location.z=-.0005;m=bpy.data.materials.new('StudioGround');m.diffuse_color=(.16,.20,.23,1);m.use_nodes=True;m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(.16,.20,.23,1);m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=1;floor.data.materials.append(m)
+# World-space metre grid makes native ground translation visible in both panels.
+gridmat=bpy.data.materials.new('MetreGrid');gridmat.diffuse_color=(.22,.27,.30,1)
+vertices=[];faces=[]
+for axis in range(2):
+ for k in range(-15,16):
+  a=len(vertices);w=.004
+  vertices.extend([(k-w,-15,-.0003),(k+w,-15,-.0003),(k+w,15,-.0003),(k-w,15,-.0003)]if axis==0 else[(-15,k-w,-.0003),(15,k-w,-.0003),(15,k+w,-.0003),(-15,k+w,-.0003)])
+  faces.append((a,a+1,a+2,a+3))
+gridmesh=bpy.data.meshes.new('MetreGrid');gridmesh.from_pydata(vertices,[],faces);grid=bpy.data.objects.new('MetreGrid',gridmesh);s.collection.objects.link(grid);grid.data.materials.append(gridmat)
 lights=[]
 for pos,power in [((2,-3,6),1100),((-3,2,4),900)]:
  bpy.ops.object.light_add(type='AREA',location=pos);o=bpy.context.object;o.data.energy=power;o.data.size=4;lights.append((o,Vector(pos)))

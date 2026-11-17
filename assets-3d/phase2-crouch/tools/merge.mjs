@@ -1,4 +1,4 @@
-// Append only the reused project sprint tracks to a new derivative of the validated suit.
+// Append new authored and explicitly labeled legacy crouch tracks to a separate approved-suit derivative.
 import fs from'node:fs';import{createHash}from'node:crypto';import{parse,write}from'../../tactical-suit-evaluation/tools/glb.mjs';
 const root='assets-3d/phase2-crouch',basePath='assets-3d/infantry-animation-integration/models/TacticalSuit_Integrated.glb',a=parse(basePath),names=new Map(a.j.nodes.map((n,i)=>[n.name,i])),added=[];
 for(const file of ['TacticalSuit_LegacyCrouch.glb','TacticalSuit_AuthoredCrouch.glb']){const b=parse(root+'/models/'+file),used=new Set();
