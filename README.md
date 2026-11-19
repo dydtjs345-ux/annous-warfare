@@ -1,5 +1,11 @@
 # Autonomous Warfare v0.3.4
 
+## Real-time individual path-command prototype
+
+Open **`path-command.html`** (locally: `http://localhost:5173/annous-warfare/path-command.html?seed=7`). The separate entry controls six USMC soldiers with player-drawn routes at continuous 1× speed. Select a soldier, tap **경로 그리기**, drag a route, then release to commit. **지도 이동** restores pan/zoom. **사격 금지 / 자율 사격**, four movement profiles, route cancellation, selection and status are individual. The original `index.html` remains the autonomous spectator prototype. No main merge or existing live deployment is required.
+
+[Implementation, tests, controls and limitations](reports/path-command/implementation.md). Run `npm run test:commands`, `npm test`, and `npm run build`. Chromium mobile touch QA passed; physical iPhone Safari is unverified. Moving fire uses the retained forward-only atlas with a bounded forward firing cone, rather than claiming a new independent torso rig.
+
 ## v0.3.4 — live SE full-body animation
 
 USMC rifleman **#1** now defaults to **v0.3.3 Animated** in the actual battle. The corrected v0.3.3 PNG cels move the legs, torso, both arms, hands and rifle together. Real movement, direct target acquisition and shot events drive walking, raising, aiming, recoil and lowering. The default **1.3×** visual setting is **39px** before camera zoom; 1.0×/1.5× remain available.

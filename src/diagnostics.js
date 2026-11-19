@@ -1,9 +1,12 @@
+import { commandFireBlock } from "./path-command.js";
 import { squadThreats, uncertainThreats } from "./intelligence.js";
 import { protectionAt, exposure, positionScore } from "./tactics.js";
 import { sight } from "./world.js";
 import { searchDiagnostic } from "./search.js";
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export function firingStatus(battle, u, enemy) {
+  const commandBlock = commandFireBlock(u, enemy);
+  if (commandBlock) return { permitted: false, reason: commandBlock };
   if (!u.active)
     return {
       permitted: false,

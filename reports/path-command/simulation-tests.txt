@@ -1,0 +1,23 @@
+✔ opt-in mode preserves original autonomous prototype and six command owners (32.42053ms)
+✔ dense route simplification retains a deliberate bend and exact endpoint (0.727276ms)
+✔ walls, low barriers, building corners, bounds and malformed coordinates reject visibly (1.07067ms)
+✔ six simultaneous independent routes reach exact fractional endpoints (112.989075ms)
+✔ replacement and cancellation affect only the addressed soldier (19.333956ms)
+✔ temporary occupancy stops without replanning and resumes the retained route (65.238328ms)
+✔ new terrain obstruction never creates an alternate route (18.85659ms)
+✔ suppression, leg injury, reload and incapacitation retain and resume route (94.046326ms)
+✔ hold fire remains absolute under direct contact and incoming pressure (94.186533ms)
+✔ moving fire uses shared combat events and moving accuracy penalty without stopping path (1.342065ms)
+✔ full realtime simulation drives moving-fire presentation while enemy AI reacts (24.673978ms)
+✔ sprint disables fire and modes do not change route or firing permission (0.676382ms)
+✔ LOS and range gate friendly fire, enemy knowledge stays observation based (8.216046ms)
+✔ rear contact cannot redirect movement or instantly twist the body (0.445042ms)
+✔ moving-fire atlas gait is not reset by recoil and lower body follows travel (0.283901ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 494.792354

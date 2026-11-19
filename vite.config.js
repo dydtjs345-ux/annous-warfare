@@ -4,7 +4,7 @@ export default defineConfig({
   base: "/annous-warfare/",
   build: {
     rollupOptions: {
-      input: { main: "index.html", animation: "animation-preview.html" },
+      input: { main: "index.html", animation: "animation-preview.html", command: "path-command.html" },
     },
   },
 });

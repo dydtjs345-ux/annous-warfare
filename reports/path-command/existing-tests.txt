@@ -1,0 +1,502 @@
+
+> autonomous-warfare@0.3.4 test
+> node test/simulation.test.js && node test/coordination.test.js && node test/presentation.test.js && node test/cover-mount.test.js && node test/stability.test.js && node test/cover-medic.test.js && node test/navigation-followup.test.js && node test/urban-grenades.test.js && node test/urban-navigation.test.js && node test/expanded-world.test.js && node test/search.test.js && node test/view.test.js && node test/postures.test.js && node test/suppressive-fire.test.js && node test/fire-movement.test.js && node test/security.test.js && node test/crossings.test.js && node test/grenade-visuals.test.js && node test/readability.test.js && node test/korean-inspector.test.js && node test/hybrid-visuals.test.js && node test/motion-presentation.test.js && node test/urban-environment.test.js && node test/soldier-prototype.test.js && node test/soldier-v031.test.js && node test/usmc-se-animation.test.js && node test/usmc-proportions.test.js && node test/live-usmc.test.js
+
+✔ squads have required roles and independent ammunition (4.110238ms)
+✔ walls occlude sight, cover is directional, paths avoid obstacles (2.637546ms)
+✔ incapacitation ends elimination (31.511473ms)
+✔ seeded autonomous battle fires, moves and finishes (2520.940058ms)
+✔ empty magazines reload from finite reserves (34.234085ms)
+✔ medic treats and restores a nearby incapacitated casualty (98.136557ms)
+✔ 200 seeds: every soldier leaves spawn and all squad orders remain navigable (3857.425478ms)
+✔ 100 seeds: no active soldiers overlap or enter obstacles during battle (131094.727324ms)
+✔ opposing soldiers cannot stack at a shared destination (6.880048ms)
+✔ formation assigns distinct navigable destinations around a common order (5.001185ms)
+✔ blocked random orders and fractional contact positions resolve to reachable cells (3.460808ms)
+✔ collision replan makes progress around a stationary soldier (2.790165ms)
+✔ holding at an assigned position and reloading are legitimate waits (8.819916ms)
+✔ movement completes the final fractional step within a rounded goal cell (0.415555ms)
+✔ incoming misses suppress nearby enemies, respect walls, decay, and reduce accuracy (3.36049ms)
+✔ cover selection improves score, is reachable, and holds advantageous cover (1.923933ms)
+✔ flanks require pressure or stalled progress, safe access and covering fire (3.206549ms)
+✔ no flank without a leader, contacts, or a protected route; medics never flank (4.935672ms)
+✔ maneuver orders remain committed, expire, and use only recent squad sightings (2.129982ms)
+✔ local cover choices do not jitter and leave a support element stationary (8.148392ms)
+✔ 30 seeded tactical battles complete with finite suppression and separated soldiers (40959.869538ms)
+✔ committed maneuvers abort when suppressive support is lost (2.058192ms)
+✔ a covering element fires while only a minority reposition (36.170848ms)
+✔ medics reject exposed casualty routes under known threats (0.999138ms)
+✔ pressure prevents blind exposure even without a located threat (5.064452ms)
+✔ confirmed sightings are instantly available to every living squad member, including casualties (0.691441ms)
+✔ last-known snapshots decay, never follow hidden enemies, and expire (0.433702ms)
+✔ a visibly empty last-known location is marked cleared without instantly discarding the snapshot (0.207866ms)
+✔ incoming fire shares a coarse direction without an enemy identity or position (1.776839ms)
+✔ shared knowledge cannot create a firing solution through walls (0.283423ms)
+✔ reactions and aiming take time; target assignments stay independent (4.787605ms)
+✔ incoming fire prompts delayed local support without inventing a contact (10.979454ms)
+✔ casualty reports reach the squad and trigger reassessment and delayed covering (13.775102ms)
+✔ medics cannot treat through house walls (11.493262ms)
+✔ treatment progress resets after interruption or changing patients (5.695363ms)
+✔ flank cooldown applies from assignment and persists after cancellation (0.984039ms)
+✔ the compact inspector displays actual state, objective, suppression and injuries (2.068012ms)
+✔ approximate bearings and low-confidence sightings cannot authorize flanks (1.272991ms)
+✔ clearing all contacts retains the maneuver cancellation cooldown (0.957525ms)
+✔ continuous radio refresh cannot indefinitely hold a healthy rifleman without a firing opportunity (135.198855ms)
+✔ a protected direct firing lane remains stationary and effective without forced movement (32.978053ms)
+✔ observed firing survives LOS loss as a frozen, attributed last-known snapshot (0.361266ms)
+✔ contact expiry is configurable and independent of radio consumption (0.600505ms)
+✔ independent reacquisition updates coordinates, observer and timestamp only on direct observation (0.411609ms)
+✔ out-of-range sticky targets do not exclude a valid in-range enemy (0.23229ms)
+✔ brief LOS flicker preserves acquisition progress, but prolonged loss requires reaiming (0.169585ms)
+✔ LOS is symmetric at wall corners across 2000 seeded ray pairs (7.89163ms)
+✔ blocked cover assignments release their slot and reject the ineffective goal (2.30796ms)
+✔ unreachable terrain objectives fail explicitly instead of silently returning empty paths (5.870768ms)
+✔ regrouping has entry/exit hysteresis instead of switching objectives at one distance (0.981842ms)
+✔ five seeded last-enemy searches reacquire a wall-hidden survivor without knowing its position (96.534342ms)
+✔ genuine ammunition stalemates remain possible and expose their reason (60.436308ms)
+✔ unsafe/unreachable reacquisition is diagnosed rather than forcing a charge (148.651373ms)
+✔ inspection never substitutes a hidden enemy location for the known snapshot (2.864688ms)
+✔ tactical destinations use reported snapshots instead of hidden physical enemy positions (0.751978ms)
+✔ both sides in strong directional cover can finish without forced relocation (44.609291ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 179353.345475
+✔ a 14.9-tile radio contact generates an accessible observation approach and real movement (199.414499ms)
+✔ recon orders persist while travel makes progress instead of being replaced by fresh timestamps (24.958277ms)
+✔ unreachable observation positions are rejected with an actual planner explanation (1.57539ms)
+✔ a failed destination is excluded while alternative observation positions remain available (26.903815ms)
+✔ recon and overwatch are distinct squad tasks and influence real AI actions (85.584663ms)
+✔ a dead scout causes bounded task redistribution without an attacker position (65.905235ms)
+✔ leader loss selects a deterministic acting commander and does not disable assignments (99.799911ms)
+✔ command fallback uses existing roles only: rifleman, LMG, then medic (0.463793ms)
+✔ casualty response without enemy identification assigns local observation rather than a fictitious contact (37.480795ms)
+✔ expired intelligence permits coarse-sector search without hidden-coordinate tracking (11.83435ms)
+✔ one-versus-one and four-versus-one lost-contact scenarios can reacquire and finish (3402.659699ms)
+✔ a strong covered firing lane is preserved instead of generating unnecessary recon (88.194485ms)
+✔ fractional-cell navigation escapes an incapacitated teammate while retaining separation (4.448226ms)
+✔ inspection reports actual assignment owner, destination, progress and casualty response (61.283105ms)
+✔ coarse search sectors centered on a wall use a static-map observation anchor (4.4474ms)
+✔ an armed medic may recon when other fighters are out of ammo and no casualty care is actionable (100.005003ms)
+✔ rejected rifleman candidates do not permanently starve a reachable acting observer (109.070974ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4354.723989
+✔ engagement labels alone never create firing flashes or recoil (2.951593ms)
+✔ real ammunition expenditure emits one shot and drives a short firing effect (18.691141ms)
+✔ rifle and LMG firing cadences remain simulation-driven (95.181673ms)
+✔ reload animation and progress correspond to the actual reload interval (26.014578ms)
+✔ queued or blocked routes do not produce fake walking (1.155942ms)
+✔ cover postures require real directional protection against a known lane (4.172574ms)
+✔ suppression and leg injuries produce distinct restrained visual modifiers (0.394257ms)
+✔ medic kneeling and completion feedback match actual treatment and healing (10.557788ms)
+✔ incapacitation and death override pending firing or movement animations (5.155808ms)
+✔ activity priorities are mutually exclusive even when movement and combat overlap (0.342618ms)
+✔ activity counters partition active time without double counting across five seeds (9182.190191ms)
+✔ observing/waiting is not automatically useful contribution (0.496093ms)
+✔ rendering is read-only, pauses freeze effects and restart resets their identity (3.328117ms)
+✔ 1x/2x/4x render grouping leaves simulation, activity and elapsed effects consistent (147.732426ms)
+✔ match completion stops activity totals and does not leave ghost walking (1.276445ms)
+✔ inspector exposes cumulative activity and preparation/passive distinctions (6.16435ms)
+✔ gait transitions do not flicker at short grid-end steps and stop on actual rest (0.396209ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9542.22497
+✔ first contact evaluates meaningful reachable cover without waiting for heavy suppression (5.422828ms)
+✔ protected gunner holds a real firing lane rather than chasing marginal cover (1.374532ms)
+✔ cover commitments do not suppress urgent self preservation or significant direction changes (1.680495ms)
+✔ two nonurgent cover relocations preserve squad fire support; urgent pressure overrides budget (6.953716ms)
+✔ cover objectives persist, finish, and retain hysteresis under unchanged threats (3.726265ms)
+✔ unsupported soldiers still fire and protected soldiers do not abandon valid engagement (77.919778ms)
+✔ aligned low wall deploys with real timer and no bonus or shots during deployment (0.820546ms)
+✔ fences, solid walls, side obstacles, and absent direct targets cannot authorize mounting (0.288538ms)
+✔ a new solid obstruction prevents mounted fire and starts unmounting (1.172263ms)
+✔ unmounting delays actual movement and does not poison pathfinding (0.518919ms)
+✔ flanked or heavily suppressed gunner relinquishes support and can reposition (1.08397ms)
+✔ mounted LMG generates modestly stronger real incoming-fire pressure (0.564948ms)
+✔ incapacitation and death cancel mounting without combat/unmount animations or firing (0.89853ms)
+✔ mount poses and inspector consume actual states; supported flashes require actual shot events (2.219335ms)
+✔ fixed seeds retain initiative, medic/leader systems, mounting and exclusive activity at all playback groupings (17206.635103ms)
+✔ supported shots spend real ammunition, animate mounted recoil, and deployment is preparation (6.385565ms)
+✔ initial six-versus-six engagement keeps fire active alongside actual cover movement (773.542167ms)
+✔ a directly observed unprotected flank prevents remounting on a still-visible frontal target (0.697487ms)
+✔ reloading does not bypass first-contact cover assessment or change reload timing (1.294141ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18113.796477
+✔ a mobile injured survivor can receive a safe observation task after squad-wide lack of progress (32.574436ms)
+✔ injury fallback preserves waiting for recent progress, severe mobility injuries and suppression (1.161757ms)
+✔ a fit medic is not permanently reserved for an armed but unreachable injured investigator (16.532036ms)
+✔ movement keeps actual shot and visible engagement aim rather than turning the gun backward (0.792992ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.988958
+✔ a useful in-flight cover journey is not readmitted against a newly full movement budget (7.1038ms)
+✔ an unsafe committed endpoint can be replaced immediately after a flank (1.875503ms)
+✔ protected nearby care can proceed under visible contact without altering heal speed (30.461134ms)
+✔ exposed or heavily pressured medics retain combat/survival priority (17.076497ms)
+✔ active care pauses patient travel but preserves its squad assignment and firing ability (0.56442ms)
+✔ treatment follow-up is stable for a willing moving patient and continues real covered firing (33.499846ms)
+✔ safe treatment keeps its patient unless a new incapacitated casualty needs priority (0.431061ms)
+✔ medics request and receive leader reassignment instead of abandoning recon (6.179923ms)
+✔ an approaching medic can abandon a distant moving patient for meaningfully nearer safe care (1.527938ms)
+✔ a medic with no casualty care needed retains normal autonomous combat (14.764762ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.258985
+✔ real treatment suspends the recon no-movement watchdog while preserving its assignment (48.598988ms)
+✔ failed casualty approaches retain separate retry exclusions instead of alternating every tick (11.924398ms)
+✔ a materially changed origin or casualty position allows a failed approach to be reassessed (1.414412ms)
+✔ a completed patient resumes its objective even if the medic still has the previous treatment state (1.026843ms)
+✔ sub-tile oscillation across changing goals fails as no net progress rather than walking forever (6.111776ms)
+✔ ordinary navigation continues progressing with healthy and injured gait speeds (1.482852ms)
+✔ a valid squad recon route wins over stale personal cover after visual contact is lost (3.796446ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.626217
+✔ three urban arrangements keep every walkable cell reachable (7.982035ms)
+✔ horizontal and vertical low lines protect directionally but permit bullets over them (0.810724ms)
+✔ vehicles and crate stacks block movement and bullet sight; materials have distinct protection (0.532363ms)
+✔ long barricades retain detours and multiple distinct usable firing positions (2.126469ms)
+✔ LMG may mount aligned low barricades but not vehicles or crates (1.096511ms)
+✔ frag fuse delays damage, then causes distance-scaled friendly fire and body injuries (22.596343ms)
+✔ solid walls stop direct fragmentation, low barriers attenuate it with the shared ray geometry (0.330013ms)
+✔ friendly risk includes the swept route beyond the first waypoint (1.220744ms)
+✔ grenades require confirmed own sight and a justified opportunity; medics do not throw (0.886762ms)
+✔ one preparing squad member reserves the opportunity, preventing simultaneous grenade spam (0.698263ms)
+✔ real release consumes one grenade after preparation and exposes a throw pose without a rifle flash (1.882495ms)
+✔ emergency evasion preserves the squad assignment and ends after the observed blast (2.250076ms)
+✔ medic navigation and shared barricade slots retain collision spacing (1.095475ms)
+✔ two grounded grenades do not continually reset reaction deadlines or expose unseen shooters (1.354967ms)
+✔ unseen grenades do not grant reaction knowledge through walls (0.34826ms)
+✔ pending ordnance resolves before victory, including a grenade thrown by a killed soldier (3.959221ms)
+✔ quiet short urban care can cross one exposed cell; recent fire and suppression still reject it (0.833013ms)
+✔ grenade preparation has an authoritative pose and does not create fake muzzle flashes (0.633902ms)
+✔ new scenarios remain deterministic under fixed seeds and render grouping (4341.417109ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4411.442706
+✔ medic congestion replan can detour around a vehicle toward its occupied patient endpoint (20.998062ms)
+✔ a held pocket fails safely; recovery can retain useful cover without moving the LMG (8.074406ms)
+✔ ordinary occupied movement goals do not receive the medical endpoint exception (10.460307ms)
+✔ medical timing and healing remain identical in legacy and urban modes (7.911887ms)
+✔ urban contact cases retain terrain and soldier separation at the browser timestep (17296.588381ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17362.872472
+✔ expanded layouts have 54×44 dimensions, one connected free component, and no building interiors (31.294906ms)
+✔ four layouts are distinct and generation is reproducible without combat RNG (6.383654ms)
+✔ all three spawn configurations are separated, navigable, and initially unknown (208.788779ms)
+✔ legacy dimensions, geometry and spawn coordinates restore after an expanded match (2.682379ms)
+✔ expanded low cover preserves directional firing and sealed blocks stop bullets (2.414658ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 262.18035
+✔ unseen enemy relocation cannot change initial squad search intentions or assignments (109.11946ms)
+✔ exploration memory records personal line of sight rather than clearing unseen districts (12.32345ms)
+✔ search orders persist and two distinct scouts travel while support elements retain local roles (19.160214ms)
+✔ search movement increases legitimately observed landmark coverage (77.212366ms)
+✔ direct contacts share snapshots, decay after LOS loss and return to search without hidden tracking (139.812029ms)
+✔ audible fire gives an uncertain bearing, never an enemy identity or coordinate (15.172635ms)
+✔ medic treatment takes priority during search and resumes squad activity afterward (32.19925ms)
+✔ dead leaders pass authority deterministically without losing search memory (136.608786ms)
+✔ ammunition exhaustion is diagnosed without revealing or forcing enemy positions (30.365383ms)
+✔ expanded simulation and presentation are deterministic at 1×, 2× and 4× grouping (2837.916943ms)
+✔ arrived escorts refresh obsolete support points without replacing a useful search objective (15.601843ms)
+✔ search escorts adopt the new search lead even when succession occurs nearby (15.927156ms)
+✔ failed search movement defers unreachable landmarks and selects a reachable alternative (16.908649ms)
+✔ independent reacquisition refreshes the shared snapshot only at the newly visible position (14.518077ms)
+✔ a one-versus-one search can discover an initially unknown opponent (43.36219ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3538.790513
+✔ dynamic isometric projection round-trips legacy and expanded corner coordinates (1.230313ms)
+✔ map overview fits every corner in portrait and landscape, while squad focus stays readable (0.313036ms)
+✔ camera centers are clamped at each map edge (0.170298ms)
+✔ soldiers can be picked at every expanded spawn and zoom after a pan (3.305739ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13.994123
+✔ full cover hides only along an actual protective low obstacle and cannot fire (6.141272ms)
+✔ peek and sustained exposures use real clear lanes, expire, and remain vulnerable (1.021198ms)
+✔ reload and suppression shelter ends; expired contact does not create a permanent hold (0.701111ms)
+✔ concealed observed enemies remain plausible rather than being declared empty or tracked (0.900399ms)
+✔ solid cover blocks a peek; movement and incapacitation cannot retain hiding or firing (3.121592ms)
+✔ a newly known flank breaks full shelter; a full posture cannot display a lingering muzzle flash (1.106248ms)
+✔ full cover cannot hide from a nearby observer on the same side of a barricade (0.611553ms)
+✔ a medic can treat a nearby casualty on the same protected side while both are low (34.637871ms)
+✔ protection in the new tactical model never samples past a close attacker; legacy compatibility stays explicit (0.95457ms)
+✔ full-cover reloading and supported postures remain visually tucked and cannot flash (0.731161ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62.27349
+✔ last-known suppression spends real ammo without a direct enemy and has a finite budget (4.250495ms)
+✔ aiming does not read an unseen enemy location; protected hidden bodies take pressure but no guaranteed damage (1.310925ms)
+✔ stale, cleared, solid-obstructed and friend-occupied remembered lanes are rejected (0.343587ms)
+✔ search, recon, medic care, full cover and weapon handling take priority over speculative fire (0.268512ms)
+✔ a casualty cannot retain an active suppression-task diagnostic (12.362798ms)
+✔ stopped suppressive fire records an actual friendly-lane rejection rather than the old positive reason (0.580826ms)
+✔ arm injuries reduce remembered-lane hit probability while ammunition and near-miss pressure remain real (1.068279ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.813921
+✔ a conditional flank receives real support roles while medics retain care autonomy (14.965937ms)
+✔ missing support cancels within a bounded interval instead of trapping both elements (5.787708ms)
+✔ a maneuver assignment releases cyclic full cover but never removes grenade or injury priorities (0.985046ms)
+✔ two-survivor planning is optional, geometry-constrained, and command succession remains authoritative (2.552929ms)
+✔ a late support gap gets its own bounded recovery interval rather than using maneuver age (3.660651ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41.950108
+✔ directional security scans reveal rear approaches only through actual observation and LOS (6.519414ms)
+✔ actual movement direction is independent of observation and weapon facing (7.048961ms)
+✔ loose column uses geometric clearance with hysteresis, without locking the lead objective (4.972063ms)
+✔ exploration memory does not mark unseen rear landmarks cleared; rotating observation can reveal them (2.741285ms)
+✔ new formation targets remain distinct, reachable and nonblocking during autonomous search (83.717877ms)
+✔ extended loose-column support does not continually reset an arrived follower objective (16.687031ms)
+✔ search does not complete an observation objective while looking away from its area (24.285804ms)
+✔ cone-first observation is equivalent to the original LOS-first rule across deterministic map rays (6.929582ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 162.830148
+✔ only a bounded across-road segment is classified, not endless travel along a street (8.393888ms)
+✔ a protected waiting element observes while two cross and keeps its destination (4.088581ms)
+✔ completed and dead reservations release slots; no crossers can permanently lock the squad (4.577358ms)
+✔ grenade evasion, danger at the entry and unknown threats never force a procedural wait (2.211446ms)
+✔ retreat behind an entry is not falsely counted as a completed crossing (2.502439ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29.140337
+✔ grenade effects require real events, are consumed once, and linger independently of projectile removal (1.523009ms)
+✔ effects pause, reset on restart, remain bounded and never mutate the simulation events (0.667483ms)
+✔ grenade presentation and all speed groupings preserve complete-match authoritative outcomes (7568.435506ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7595.483849
+✔ cues read authoritative states without mutation (1.43293ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10.064115
+✔ Korean state labels and fallback are explicit (2.451705ms)
+✔ history is bounded, deduplicated, and never writes soldier state (1.071161ms)
+✔ unknown enemies cannot leak from battlefield or raw memory into panel (0.396652ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11.749571
+✔ smoke, casings and impact dust require real events and do not mutate them (1.69591ms)
+✔ effects pause, reset, expire and enforce a fixed cap (0.616035ms)
+✔ urban decoration is reproducible and cannot change supplied geometry (1.647193ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13.267709
+✔ linear tick positions interpolate without extrapolation or soldier writes (3.338542ms)
+✔ shortest-angle motion crosses the wrap boundary rather than rotating backward (0.756843ms)
+✔ stationary scan turns settle and hold without invented scan targets (2.560661ms)
+✔ pause freezes world-space pose across alpha and speed changes (0.579512ms)
+✔ real firing forces exact shot direction and full concealment tucks immediately (0.637412ms)
+✔ incapacitation and teleport boundaries do not slide (1.42715ms)
+✔ restart discards prior-unit interpolation buffers (0.41872ms)
+✔ reload and cyclic treatment phases interpolate from real progress only (0.553948ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17.030731
+✔ window quads stay on either correctly sloping wall plane below roof and inside corners (1.74918ms)
+✔ visual grouping covers each physical cell once without mutating collision map (8.802225ms)
+✔ street fittings are deterministic and anchored to existing solid foundation cells (3.924747ms)
+✔ cover painters do not write geometry and remain inside fixed local bounds (1.18895ms)
+✔ selected occlusion requires actual projected overlap and foreground depth (0.884411ms)
+✔ cache owns static textures once, culls without repainting, and frees them (0.833054ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.49945
+✔ only nonleader USMC rifleman #1 is eligible at three bounded display sizes (2.738592ms)
+✔ asset metadata, transparent PNGs and eight-direction frame names agree (0.840124ms)
+✔ asset URLs respect GitHub Pages base and do not depend on a backend (0.534466ms)
+✔ weapon direction stays continuous while sprite direction and gait index remain bounded (1.003335ms)
+✔ active asset rendering never mutates battle and real flashes use exact projected shot axis (2.83992ms)
+✔ disabled, dead, incapacitated and unsupported action states retain stock rendering (1.236345ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19.845769
+✔ new anatomy has more torso and shorter relative legs than v030 (0.966906ms)
+✔ trimmed atlas retains consistent logical frames, pivots and complete walk/run/crouch/prone families (1.790777ms)
+✔ metadata-driven adapter preserves feet, isolates #1 and keeps actual muzzle alignment across banks (3.082628ms)
+✔ new PNGs are RGBA, native dimensions match the rig, and direction layers stay independent (0.661852ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14.161068
+✔ SE original atlas has complete bodies, transparent RGBA and a consistent source/foot pivot (10.71134ms)
+✔ complete demo reaches all ordered phases and only two preview shot cues (5.594412ms)
+✔ pause freezes the complete pose and 1x/2x/4x render grouping stays frame-equivalent (2.151987ms)
+✔ raise/lower keep the entire terminal pose and never snap back when held (0.905999ms)
+✔ frame stepping preserves short recoil cels and does not invent motion in held aim (0.45675ms)
+✔ low-ready and raising/lowering frames cannot show firing flashes (1.176229ms)
+✔ camera-tracked travel is derived from the pose clock without seek or pause drift (0.261935ms)
+✔ short shot cues survive 1x/2x/4x rendering without changing the body clip (7.849893ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36.919199
+✔ refined SE atlas retains 24 complete registered cells and the exact v032 comparison source (13.63975ms)
+✔ 39px/4x comparisons fit side by side on iPhone and large magnifications stack safely (5.808096ms)
+✔ both versions share a ground origin, frame and nominal height without anisotropic body scaling (0.259582ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26.447582
+✔ actual traveled distance drives whole-body walking; elapsed idle time never invents gait (2.131871ms)
+✔ real target acquisition raises before the authoritative aim deadline (0.461314ms)
+✔ only real shot events create recoil, and a real shot overrides unfinished raising (0.523364ms)
+✔ engagement loss lowers, settles to idle and resumes distance-paced walking (0.633876ms)
+✔ paused observations are stable and repeated event buffers do not replay shots (2.269063ms)
+✔ SE spatial hysteresis prevents jitter while an unsupported turn immediately falls back (1.864329ms)
+✔ independent non-SE travel and a mismatched fixed-barrel aim use legacy rendering (0.347078ms)
+✔ movement during shouldering/lowering never plays a planted-foot cel over moving feet (0.441008ms)
+✔ reload, medical, concealment, suppression, injury postures and casualties retain legacy support (0.628709ms)
+✔ finished/restarted battles cannot retain ghost firing or stale events (0.551868ms)
+✔ live observations do not modify simulation input and diagnostic history is bounded (0.928045ms)
+✔ one SE full-body image uses the corrected atlas, uniform 39px scale and real muzzle anchor (0.669385ms)
+✔ Pages-safe live preload and real-event trace origin preserve the shot endpoint (3.025868ms)
+✔ inspection reports the actual renderer/pose on fallback rather than an undrawn candidate (0.677725ms)
+✔ missing SE texture and other identities safely fall back without drawing a wrong soldier (0.604313ms)
+✔ real autonomous 6v6 matches drive the full SE sequence and resume walking after fallback (2589.130008ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2621.357641

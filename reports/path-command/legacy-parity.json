@@ -1,0 +1,77 @@
+{
+  "base": "922fc66",
+  "cases": [
+    {
+      "map": "legacy",
+      "seed": 7,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "legacy",
+      "seed": 31,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "legacy",
+      "seed": 32,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "legacy",
+      "seed": 78,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "legacy",
+      "seed": 155,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "legacy",
+      "seed": 2049,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 7,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 31,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 32,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 78,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 155,
+      "seconds": 60,
+      "identical": true
+    },
+    {
+      "map": "expanded",
+      "seed": 2049,
+      "seconds": 60,
+      "identical": true
+    }
+  ]
+}

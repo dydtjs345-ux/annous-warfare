@@ -5,12 +5,13 @@ const delta=(a,b)=>Math.atan2(Math.sin(b-a),Math.cos(b-a));
 const fallbackPoses=new Set(['dead','incapacitated','treating','fullCover','crawling','grenadePrep','grenadeThrow','deploying','unmounting','mounted','mountedFiring']);
 export function observeInfantry(b,u,m,fx,view,clock,record={},sprint='new'){
  const p=u.presentation;
- const fallback=m.tucked?"fullCover":m.crawl?"crawling":fallbackPoses.has(m.pose)?m.pose:null;
+ const fallback=u.command?.profile==="stealth" && m.moving?"stealth crouch fallback":m.tucked?"fullCover":m.crawl?"crawling":fallbackPoses.has(m.pose)?m.pose:null;
  const shot=m.flash && p.lastShotAt!=null;
  const aimed=shot || ['Aiming','Engaging'].includes(u.state) && p.direct;
  const moving=!!m.moving;
  let animation=p.reloading?'Reload':moving?(aimed?(shot?'MovingFire':'AimWalk'):p.brisk?(sprint==='old'?'OldSprint':'Sprint'):'Walk'):shot?'Fire':aimed?'Aim':'Idle';
- const heading=moving&&!aimed?(view.movementHeading??u.movementHeading??u.facing):(m.renderDirection??u.facing);
+ if(u.command && moving && u.command.profile!=="sprint" && !aimed) animation="Walk";
+ const heading=moving&&u.command?u.bodyHeading:moving&&!aimed?(view.movementHeading??u.movementHeading??u.facing):(m.renderDirection??u.facing);
  const old=record.base,now=clock;
  if(old!==animation){
   const locomotion=new Set(['Walk','Sprint','OldSprint','AimWalk','MovingFire']);

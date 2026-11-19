@@ -24,6 +24,7 @@ const CROUCHED = new Set([
   "suppressed",
   "holdingCover",
   "observingCover",
+  "stealth",
 ]);
 const AIMING = new Set(["Engaging", "Aiming"]);
 const PURPOSEFUL_MOVEMENT = new Set([
@@ -96,6 +97,7 @@ export function visualState(battle, u, fx, out = {}) {
   else if (p.covered)
     out.pose = p.observing ? "observingCover" : "holdingCover";
   else out.pose = p.observing ? "observing" : "idle";
+  if (u.command?.profile === "stealth" && u.active && out.moving && !p.reloading) out.pose = "stealth";
   out.tucked = u.active && u.posture?.mode === "full";
   out.combat = u.active && !out.tucked && !NO_COMBAT.has(out.pose);
   out.flash = out.combat && fx.shot > 0;

@@ -1,3 +1,4 @@
+import { initializeCommands, stepCommand } from "./path-command.js";
 import { crossingPermit } from "./crossings.js";
 import { updateSecurity } from "./security.js";
 import { coordinateFireMovement } from "./fire-movement.js";
@@ -67,6 +68,7 @@ export const parts = [
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 export class Battle {
   constructor(random = Math.random, options = {}) {
+    this.playerCommands = options.playerCommands === true;
     this.world = {
       kind: options.map ?? "legacy",
       variant: options.variant ?? 0,
@@ -139,6 +141,7 @@ export class Battle {
     initializePresentation(this);
     initializeGrenades(this, options.grenades ?? false);
     initializeSearch(this);
+    initializeCommands(this);
   }
   injury(u, p, damage) {
     const wasActive = u.active,
@@ -185,12 +188,18 @@ export class Battle {
     for (const u of this.units) decaySuppression(u, dt);
     updateGrenades(this);
     for (const u of this.units) {
+      if (u.command) {
+        updateSecurity(this, u);
+        u.facing = u.bodyHeading;
+        continue;
+      }
       updatePosture(this, u);
       updateSecurity(this, u);
     }
     perceive(this);
     for (const u of this.units) if (!u.dead) adoptContact(this, u);
     for (let team = 0; team < 2; team++) {
+      if (this.playerCommands && team === 0) continue;
       updateSearchState(this, team);
       coordinateSquad(this, team);
       updateSquadTactics(this, team);
@@ -213,6 +222,7 @@ export class Battle {
     }
     for (const u of this.units) {
       u.hit = Math.max(0, u.hit - dt);
+      if (u.command) { stepCommand(this, u, dt); continue; }
       if (!u.active) continue;
       u.decisionReason = null;
       u.decisionSource = "personal decision";
@@ -326,48 +336,7 @@ export class Battle {
         u.assignmentPause = "direct enemy contact";
         u.state = "Engaging";
         u.order = "Engage visible enemy";
-        if (firingStatus(this, u, enemy).permitted) {
-          u.firedAt = this.time;
-          u.ammo--;
-          u.cooldown = u.role === "LMG" ? 0.2 : 0.65;
-          this.shots.push({
-            a: { x: u.x, y: u.y },
-            b: { x: enemy.x, y: enemy.y },
-            life: 0.09,
-          });
-          emitVisualEvent(this, "shot", u, {
-            x: u.x,
-            y: u.y,
-            targetX: enemy.x,
-            targetY: enemy.y,
-            angle: u.facing,
-            weapon: u.role === "LMG" ? "LMG" : "rifle",
-            supported: u.mount?.state === "mounted",
-          });
-          incomingFire(this, u, enemy);
-          markObservedFire(this, u);
-          if (this.searchEnabled) reportGunfire(this, u);
-          const arms = (u.health["left arm"] + u.health["right arm"]) / 200;
-          const chance = Math.max(
-            0.06,
-            (0.72 - dist(u, enemy) * 0.033) *
-              (0.4 + 0.6 * arms) *
-              accuracyFactor(u) *
-              mountBonus(u, "accuracy") *
-              (1 - cover(enemy, u)),
-          );
-          if (this.random() < chance) {
-            const roll = this.random();
-            const p =
-              roll < 0.12
-                ? "head"
-                : roll < 0.55
-                  ? "torso"
-                  : parts[2 + Math.floor(this.random() * 4)];
-            this.squads[u.team].lastProgress = this.time;
-            this.injury(enemy, p, p === "head" ? 65 : 28 + this.random() * 24);
-          }
-        }
+        this.fireAt(u, enemy);
         if (this.time < u.aimAt) {
           u.state = "Aiming";
           u.order = "Acquire visible target";
@@ -490,7 +459,7 @@ export class Battle {
         u.suppressionTask.active = false;
         u.suppressionTask.reason = `Current action: ${u.state}`;
       }
-      if (u.active) updateProgress(this, u);
+      if (u.active && !u.command) updateProgress(this, u);
       refreshDiagnostics(this, u);
     }
     finishPresentationStep(this, dt);
@@ -504,6 +473,50 @@ export class Battle {
           : counts[0]
             ? "USMC victory"
             : "Russian infantry victory";
+  }
+  fireAt(u, enemy, accuracy = 1, shotAngle = u.facing) {
+    if (firingStatus(this, u, enemy).permitted) {
+      u.firedAt = this.time;
+      u.ammo--;
+      u.cooldown = u.role === "LMG" ? 0.2 : 0.65;
+      this.shots.push({
+        a: { x: u.x, y: u.y },
+        b: { x: enemy.x, y: enemy.y },
+        life: 0.09,
+      });
+      emitVisualEvent(this, "shot", u, {
+        x: u.x,
+        y: u.y,
+        targetX: enemy.x,
+        targetY: enemy.y,
+        angle: shotAngle,
+        weapon: u.role === "LMG" ? "LMG" : "rifle",
+        supported: u.mount?.state === "mounted",
+      });
+      incomingFire(this, u, enemy);
+      markObservedFire(this, u);
+      if (this.searchEnabled) reportGunfire(this, u);
+      const arms = (u.health["left arm"] + u.health["right arm"]) / 200;
+      const chance = Math.max(
+        0.06,
+        (0.72 - dist(u, enemy) * 0.033) *
+          (0.4 + 0.6 * arms) *
+          accuracyFactor(u) *
+          mountBonus(u, "accuracy") *
+          (1 - cover(enemy, u)) * accuracy,
+      );
+      if (this.random() < chance) {
+        const roll = this.random();
+        const p =
+          roll < 0.12
+            ? "head"
+            : roll < 0.55
+              ? "torso"
+              : parts[2 + Math.floor(this.random() * 4)];
+        this.squads[u.team].lastProgress = this.time;
+        this.injury(enemy, p, p === "head" ? 65 : 28 + this.random() * 24);
+      }
+    }
   }
   // Assign nearby distinct cells without changing the squad's tactical objective.
   formationGoal(u, goal) {

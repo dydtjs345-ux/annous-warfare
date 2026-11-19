@@ -1,0 +1,49 @@
+# Individual soldier path command
+
+Feature branch: `feat/individual-path-command`. Recovery base: `922fc66` (`feat/cover-peek-fire-integration`, latest repository commit when recovered). Its playable Phaser integration uses the existing `ceffb85` infantry 6v6 adapter and `66d3892` atlas manifest. Main's live spectator entry and the existing Sites infantry previews were not deployed over. No map geometry, character model, GLB, texture, or animation asset was changed or rebuilt.
+
+Isolated test deployment: **https://autonomous-warfare-path-command.companionablejellyfish2.chatgpt.site** (owner-only access). Native deployment succeeded; saved version 1, deployment `appgdep_6aff8a916f6881918ec15e608b9eba13`. The separate static source commit is `2180ef73e947a8956803219ce6c94ed148c7034b`. It is a copy of this feature build with the command entry as its index, not a replacement of GitHub Pages.
+
+## Play and controls
+
+Run `npm ci`, `npm run dev`, then open `/annous-warfare/path-command.html?seed=7`. The expanded 54×44 map, separated existing spawns, 6v6 roles and enemy AI are retained. Existing `?map=legacy`, `?map=urban`, `seed`, `layout`, and `spawn` parameters remain available. The original `/annous-warfare/` entry remains autonomous.
+
+- Tap a friendly sprite's generous 44px screen region or its numbered roster button. Overlapping hit regions resolve to the closest soldier; the roster is always an exact alternative. Selection does not modify any soldier's order.
+- Tap **경로 그리기**, then drag on the battlefield. The first segment connects the soldier's current position to the beginning of the stroke. Release confirms a green preview. Bends and the fractional destination are retained. The selected remaining route is gold; other routes are subdued teal; destinations are circles.
+- Invalid terrain/boundary segments are red and rejected with Korean feedback. Invalid replacements retain the previous route. Committing a valid replacement affects only the selected soldier. The soldier continues the old route while a new stroke is being drawn; validation reconnects from its position at release.
+- **지도 이동** separates map dragging from drawing. Two-finger zoom aborts an active draft and enters map mode. Touch cancellation, lost focus, hidden document and pointer release outside the canvas discard drafts. Mouse wheel does not move the camera during a draft. There is no tactical pause, slow motion or speed control in this entry.
+- **경로 취소** removes the selected remaining route. Fire permission and movement profile are independent of cancellation. **병사 보기** centers the camera on the selected unit. **재시작** starts a fresh battle with the next seed.
+- **사격 금지** never fires, including when threatened. **자율 사격** uses confirmed visible targets, actual range, aim delay, ammunition, obstruction and cover rules. Changing permission does not affect the route or profile.
+- **은닉 / 정찰 / 전투 / 전력질주** use 0.72 / 1.05 / 1.45 / 2.8 tiles/s before the existing leg-health speed factor. Recon retains the existing observation-sector system at controlled speed. Stealth uses the existing procedural crouched posture fallback; the game has no new footstep/noise model. Sprint retains `OldSprint`, rather than silently promoting the rebuilt candidate or later review-only clips; sprint firing is disabled.
+- Live status always includes the current interruption, ammunition and visible-enemy count, including while command feedback is present. Landscape moves the panel to the side. Buttons are at least 44px tall; safe-area padding and pinch/pan remain supported.
+
+## Simulation contract
+
+`Battle({playerCommands:true})` grants commands only to team 0. Team 0 never runs squad coordination, search destinations, cover seeking, flanking, grenade evasion/throws, autonomous casualty pursuit, regrouping, mounting or BFS route replanning. Existing observation/intelligence, damage, suppression and enemy AI remain shared. Observation scans cannot rotate the commanded body's travel orientation. `index.html` does not enable player commands.
+
+Touch routes undergo finite-coordinate and point-count checks, conservative body-width terrain sweeps and iterative RDP simplification with 0.08-tile tolerance. Simplification never makes an invalid stroke valid; if its shortcut would cut an obstacle, the validated original points are retained. All impassable cells, including low barriers in the existing navigation grid, block movement. No nearest-goal substitution occurs. At execution, swept terrain and soldier occupancy are checked again. A blockage stops movement with its reason and retains the route. Soldiers do not detour around occupied choke points; the player can replace a path or clear the obstruction.
+
+Severe suppression above 0.8, leg health total below 70, incapacitation and reload stop movement. Suppression decays using the existing system; restored mobility, recovered activity, completed reload or cleared occupancy resumes the remaining route. Damage's existing incapacitation/death thresholds and finite ammunition are unchanged. Reload is stationary because the retained full-body reload clips constrain movement. No random refusal or voluntary route change exists.
+
+Both AI and commanded soldiers call the same extracted `Battle.fireAt` implementation. It preserves existing shot events, pressure, cover, arm injury, weapon intervals, ammunition and hit location calculations. Moving accuracy multiplies the original formula by 0.7 / 0.65 / 0.55 for stealth / recon / combat. Sprint never fires. Moving fire does not pause or clear the route. Existing aim-walk/moving-fire clips share stride phase; shot recoil cannot restart the gait.
+
+## Animation limitations and incomplete features
+
+The existing eight-direction game atlases contain composed forward movement/fire, rather than a runtime independently rotatable upper-body rig. While moving, body heading follows travel, with bounded turning and a brief direction transition at a sharp bend. Fire is eligible only within 22.5° of travel and a compatible baked heading. A lateral or rear target cannot cause side-sliding, instant body rotation or a new route. At the destination, the body turns gradually to engage. This **does not implement free lateral/backward moving fire or arbitrary independent torso aiming**. Those require validated source integration beyond the available game atlases; no new assets were fabricated.
+
+Stealth crouch, hit/injury, incapacitation/death and unsupported LMG reload use the existing procedural renderer. Ordinary rifle idle, walk, aim, moving fire, stationary fire, reload, and the preserved previous sprint use the current baked assets. Later cover/crawl/sprint candidates were not auto-approved. No animation approval is inferred from repository recency. The external Tactical Suit and review-only authored clips were not substituted into gameplay.
+
+Friendly medics follow player routes and do not independently travel to casualties; a player-commanded treatment action is not implemented in this task. Enemy medical behavior remains unchanged. There is no special path persistence across page reload, route undo, multi-unit gesture, auto-pan during drawing, or new patrol/search system. Physically opposing routes can remain blocked until the player resolves congestion. The existing spectator visibility still shows both teams; enemy AI knowledge remains LOS/intelligence limited.
+
+## Validation
+
+- Existing suite: **274/274** tests passed across 28 files (full log retained as `existing-tests.txt`).
+- New command suite: **15/15** passed (`simulation-tests.txt`). Covers six soldiers moving simultaneously and exact fractional arrival, preserved bends, route replacement/cancellation, obstacle/corner/boundary rejection, dynamic obstruction, occupancy stop/resume, severe suppression, leg injury, reload, incapacitation recovery, hold fire under contact, sprint restriction, LOS/range, bounded orientation, full-simulation moving-fire presentation and retained recoil stride.
+- Original prototype parity: **12 paired 60-second runs** across legacy/expanded maps and seeds 7, 31, 32, 78, 155, 2049 matched every unit field and visual event (`legacy-parity.json`). No-command combat RNG and behavior are preserved.
+- Chromium mobile emulation: portrait 390×844, landscape 844×390, actual CDP touch strokes, sprite/roster selection, per-soldier fire/profile isolation, six independent routes, invalid replacement, cancellation, touchcancel and pinch conflict checks passed. All 12 existing units rendered together at map view; no page errors or failed resource loads (`browser.json`, screenshots).
+- Software-rendered browser measured roughly 28–30 FPS with 12 units in the final scripted checks. This is environment-specific, not an iPhone performance guarantee. Initial close view only renders on-screen units, as before.
+- `npm run build` and the isolated relative-base preview build passed. Vite retains its existing large-bundle warning.
+- Playwright WebKit 26 was acquired, but cannot start because the environment lacks its system libraries. The system package helper is unavailable. **WebKit behavior and physical iPhone Safari remain unverified.**
+- The managed Sites preview daemon could not bind its local port (`EPERM`). The Sites source-workflow helper was also absent from both the filesystem and skill snapshot. The isolated static build was therefore synchronized with ordinary authenticated Git and packaged with `git archive`; existing game deployment configuration was not changed. Local game Chromium checks above are separate from managed Sites preview QA.
+
+Reproduce command tests with `npm run test:commands`; browser checks with `npm run dev` followed by `npm run test:commands:browser` (uses the environment's installed Playwright). `AW_TEST_URL` may point the script at a reachable test entry. No mutation/debug command API is exposed in the game; `awSnapshot` is read-only.

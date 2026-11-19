@@ -1,3 +1,4 @@
+import { CommandControls } from "./command-controls.js";
 import { InfantryRenderer, preloadInfantry } from "./infantry/renderer.js";
 import { LiveUSMCRenderer, preloadLiveUSMC } from "./live-usmc-renderer.js";
 import {
@@ -35,6 +36,7 @@ import { Battle } from "./simulation.js";
 import { W, H, houses, obstacles, inside, streetAt } from "./world.js";
 
 const params = new URLSearchParams(location.search);
+const pathCommand = document.body.dataset.pathCommand === "true";
 const infantryTest = document.body.dataset.infantryTest === "true";
 const mapMode = ["legacy", "urban"].includes(params.get("map"))
   ? params.get("map")
@@ -63,6 +65,7 @@ class Battlefield extends Phaser.Scene {
     this.liveVisual = new LiveUSMCRenderer(this);
     if (infantryTest) {
       this.infantry = new InfantryRenderer(this);
+      if (pathCommand) this.infantry.sprint = "old";
       this.infantry.enabled = params.get("quality") !== "legacy";
       document.querySelector("#infantry-quality").value = this.infantry.enabled ? "sprites" : "legacy";
       document.querySelector("#infantry-quality").onchange = e => { const url = new URL(location.href); url.searchParams.set("quality", e.target.value); location.assign(url); };
@@ -107,13 +110,16 @@ class Battlefield extends Phaser.Scene {
     this.grenadeVisuals = new GrenadeVisuals();
     this.input.addPointer(2);
     this.newMatch();
+    if (pathCommand) this.commands = new CommandControls(this);
     this.input.on("pointerdown", (p) => {
+      if (this.commands?.down(p)) return;
       this.down = { x: p.x, y: p.y };
       this.gestureMoved =
         this.input.manager.pointers.filter((p) => p.isDown).length > 1;
       this.lastTouches = null;
     });
     this.input.on("pointermove", (p) => {
+      if (this.commands?.move(p)) return;
       const c = this.cameras.main,
         pointers = this.input.manager.pointers.filter((p) => p.isDown);
       if (this.down && Math.hypot(p.x - this.down.x, p.y - this.down.y) > 8)
@@ -139,6 +145,7 @@ class Battlefield extends Phaser.Scene {
       }
     });
     this.input.on("pointerup", (p) => {
+      if (this.commands?.up(p)) return;
       this.lastTouches = null;
       if (
         this.down &&
@@ -149,13 +156,16 @@ class Battlefield extends Phaser.Scene {
           w = c.getWorldPoint(p.x, p.y);
         const picked = pickSoldier(
           this.motion.battle === this.battle
-            ? this.motion.views
-            : this.battle.units,
+            ? this.motion.views.filter(u => !pathCommand || u.team === 0)
+            : this.battle.units.filter(u => !pathCommand || u.team === 0),
           w,
           c.zoom,
           this.iso,
         );
-        if (picked) this.selected = this.battle.units[picked.id];
+        if (picked) {
+          if (this.commands) this.commands.select(this.battle.units[picked.id]);
+          else this.selected = this.battle.units[picked.id];
+        }
         else if (this.prototypeVisual.enabled) {
           const u = this.battle.units[1],
             v = this.motion.position(u);
@@ -169,6 +179,7 @@ class Battlefield extends Phaser.Scene {
       }
     });
     this.input.on("wheel", (_, __, ___, dy) => {
+      if (this.commands?.draft) return;
       this.freeCamera();
       const c = this.cameras.main;
       c.setZoom(
@@ -199,6 +210,7 @@ class Battlefield extends Phaser.Scene {
       );
     }
     document.querySelector("#pause").onclick = () => {
+      if (pathCommand) return;
       this.paused = !this.paused;
       document.querySelector("#pause").textContent = this.paused
         ? "계속"
@@ -207,6 +219,7 @@ class Battlefield extends Phaser.Scene {
     document.querySelectorAll("[data-speed]").forEach(
       (button) =>
         (button.onclick = () => {
+          if (pathCommand) return;
           this.speed = Number(button.dataset.speed);
           document
             .querySelectorAll("[data-speed]")
@@ -288,6 +301,10 @@ class Battlefield extends Phaser.Scene {
               x: u.x,
               y: u.y,
               state: u.state,
+              command: u.command ? structuredClone(u.command) : null,
+              ammo: u.ammo,
+              health: { ...u.health },
+              suppression: u.suppression,
               renderX: rendered.x,
               renderY: rendered.y,
               renderDirection: model?.renderDirection,
@@ -322,13 +339,13 @@ class Battlefield extends Phaser.Scene {
         : Math.floor(this.seed / 4) % 3;
     this.battle = new Battle(
       () => (r = (r * 1664525 + 1013904223) >>> 0) / 4294967296,
-      { map: mapMode, variant, spawn, grenades: mapMode !== "legacy" },
+      { map: mapMode, variant, spawn, grenades: mapMode !== "legacy", playerCommands: pathCommand },
     );
     this.geometry = projection(W, H);
     this.iso = this.geometry.project;
     this.acc = 0;
     this.paused = false;
-    this.selected = null;
+    this.selected = pathCommand ? this.battle.units[0] : null;
     this.viewMode = "USMC";
     document.querySelector("#pause").textContent = "일시정지";
     document.querySelector("#outcome").hidden = true;
@@ -540,6 +557,7 @@ class Battlefield extends Phaser.Scene {
     g.strokePoints([...roof, roof[0]]);
   }
   update(_, delta) {
+    if (pathCommand) { this.paused = false; this.speed = 1; }
     if (!this.paused) {
       this.acc += Math.min(delta / 1000, 0.1) * this.speed;
       while (this.acc >= 0.05) {
@@ -702,7 +720,7 @@ class Battlefield extends Phaser.Scene {
             this.rendererStatus,
             document.querySelector("#inspect").classList.contains("expanded"),
           );
-      document.querySelector("#inspect").hidden = !this.selected;
+      document.querySelector("#inspect").hidden = pathCommand || !this.selected;
       const phases = this.battle.squads
         .map((q) => ko(q.search?.phase))
         .filter(Boolean)
@@ -715,6 +733,7 @@ class Battlefield extends Phaser.Scene {
       const s = this.infantry.snapshot(), fallbacks = s.units.filter(u => u.fallback);
       document.querySelector("#infantry-status").textContent = `${s.enabled ? "3D → 2D sprites" : "Legacy fallback"} · ${s.units.filter(u=>u.visible).length}/12 new visuals · ${s.fps.toFixed(0)} FPS (this device) · fallback: ${[...new Set(fallbacks.map(u=>u.fallback))].join(", ") || "none"}`;
     }
+    this.commands?.draw();
     if (this.battle.result) {
       const o = document.querySelector("#outcome");
       o.hidden = false;
