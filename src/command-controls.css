@@ -22,5 +22,8 @@ body[data-path-command] canvas{image-rendering:auto}
   #command-panel{position:absolute;right:env(safe-area-inset-right,0px);top:env(safe-area-inset-top,0px);bottom:env(safe-area-inset-bottom,0px);width:240px;overflow-y:auto}
   #soldier-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
   .command-row{flex-wrap:wrap}.command-row button{flex:1 0 45%}
+  .command-profiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .command-profiles #movement-mode{width:100%}
+  .command-profiles #command-restart{grid-column:1/-1}
   body[data-path-command] header em{display:none}
 }

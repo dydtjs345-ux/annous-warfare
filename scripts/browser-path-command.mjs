@@ -23,6 +23,10 @@ for(const [engine,api] of [['chromium',chromium],['webkit',webkit]]){
     assert.equal((await page.evaluate(()=>awSnapshot())).selected,0);
     await page.screenshot({path:`${out}/${engine}-portrait.png`});
     await page.setViewportSize({width:844,height:390});await page.waitForTimeout(200);
+    assert.ok((await page.locator('#movement-mode').boundingBox()).width>=90,'landscape movement selector remains usable');
+    await page.locator('#movement-mode').selectOption('sprint');
+    assert.equal((await page.evaluate(()=>awSnapshot())).units[0].command.profile,'sprint');
+    await page.locator('#movement-mode').selectOption('combat');
     const cdp=engine==='chromium'?await page.context().newCDPSession(page):null;
     const stroke=async(points)=>{
       const b=await page.locator('canvas').first().boundingBox(),state=await page.evaluate(()=>awSnapshot());
