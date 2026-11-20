@@ -66,6 +66,9 @@ class Battlefield extends Phaser.Scene {
       this.infantry.enabled = params.get("quality") !== "legacy";
       document.querySelector("#infantry-quality").value = this.infantry.enabled ? "sprites" : "legacy";
       document.querySelector("#infantry-quality").onchange = e => { const url = new URL(location.href); url.searchParams.set("quality", e.target.value); location.assign(url); };
+      import("./infantry/inspector.js").then(({attachInspector})=>attachInspector(this));
+      document.querySelector("#infantry-model").value=params.get("model")==="suit"?"suit":"original";
+      document.querySelector("#infantry-model").onchange=e=>{const url=new URL(location.href);url.searchParams.set("model",e.target.value);location.assign(url);};
       document.querySelector("#infantry-sprint").onchange = e => { this.infantry.sprint = e.target.value; };
     }
     this.prototypeMode = "v033";
@@ -713,7 +716,7 @@ class Battlefield extends Phaser.Scene {
     if (infantryTest && this.time.now >= (this.nextInfantryUI ?? 0)) {
       this.nextInfantryUI = this.time.now + 500;
       const s = this.infantry.snapshot(), fallbacks = s.units.filter(u => u.fallback);
-      document.querySelector("#infantry-status").textContent = `${s.enabled ? "3D → 2D sprites" : "Legacy fallback"} · ${s.units.filter(u=>u.visible).length}/12 new visuals · ${s.fps.toFixed(0)} FPS (this device) · fallback: ${[...new Set(fallbacks.map(u=>u.fallback))].join(", ") || "none"}`;
+      document.querySelector("#infantry-status").textContent = `${s.enabled ? "통합 보병 아틀라스" : "기존 표시"} · ${s.units.filter(u=>u.visible).length}/12 보병 · ${s.fps.toFixed(0)} FPS (현재 브라우저) · 대체: ${[...new Set(fallbacks.map(u=>u.fallback))].join(", ") || "없음"}`;
     }
     if (this.battle.result) {
       const o = document.querySelector("#outcome");

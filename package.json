@@ -17,7 +17,9 @@
     "audit:search": "node scripts/audit-v025.mjs",
     "build:infantry": "vite build --config vite.infantry.config.js && node tools/infantry/stage.mjs",
     "bake:infantry": "node tools/infantry/bake.mjs",
-    "test:infantry": "node scripts/validate-infantry.mjs"
+    "test:infantry": "node scripts/validate-infantry.mjs",
+    "test:complete-infantry": "node test/complete-infantry.test.js && node scripts/test-complete-rigs.mjs && node scripts/validate-infantry.mjs",
+    "build:complete-infantry": "npm run build:infantry"
   },
   "dependencies": {
     "phaser": "^3.90.0"

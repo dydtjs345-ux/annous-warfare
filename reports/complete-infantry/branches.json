@@ -1,0 +1,152 @@
+[
+  {
+    "ref": "origin/feat/cover-peek-fire-integration",
+    "head": "922fc66519efbe9ed60509dc79cd205df89e20dc",
+    "commit": "922fc66 Record verified cover preview deployment and validation limits",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/crawl-torso-weight-transfer",
+    "head": "cfded5ca6e77bd508dbf175287a988776092362a",
+    "commit": "cfded5c Record verified three-way crawl torso preview deployment",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/individual-path-command",
+    "head": "ce09a734d7cfdd7b289dd264a5562f8744ea35fc",
+    "commit": "ce09a73 Keep movement mode controls usable in landscape and record final deployment",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/infantry-6v6-integration",
+    "head": "ceffb8534caa5a6ff8a3afe55858e175012c8cd9",
+    "commit": "ceffb85 Integrate infantry animation atlases into isolated autonomous 6v6 test",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/infantry-animation-pages",
+    "head": "afce5d00289324f08a8f72afc74640ecf4c4b614",
+    "commit": "afce5d0 Add six-soldier squad readability preview and publish isolated public site",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/infantry-preview-ko",
+    "head": "3da1cd575a06064b78963f85e54f6ee9698c81ec",
+    "commit": "3da1cd5 Localize existing infantry preview in Korean with English language selector",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/infantry-sprint-rebuild",
+    "head": "66d3892efb33224fa322a96e6ef59a514255f6bd",
+    "commit": "66d3892 Rebuild infantry sprint and verify Korean OLD/NEW preview",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/infantry-tactical-animations",
+    "head": "aa650ce1b74390a70a46df76439a5420191a3898",
+    "commit": "aa650ce Add shared-rig tactical infantry animations and Korean review demo",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/open-animation-asset-evaluation",
+    "head": "b350f9e469f77c2ea5f56041a7e216538c3f470e",
+    "commit": "b350f9e Record verified comparison deployment and browser verification limits",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/pages-animation-subpath",
+    "head": "6f0b221180a15bf79194d17e4f31eed9e69f6f8d",
+    "commit": "6f0b221 Stage standalone animation preview beneath existing Pages game without changing game bytes",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/phase2-authored-crouch",
+    "head": "cc66fecc4abd6d34868c53aeaeb6d8ad482c0168",
+    "commit": "cc66fec Record verified Phase 2 preview deployment and remaining authored-animation gaps",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/russian-infantry-base",
+    "head": "1ab40c26b6e02fedd161b7711ecec1e7ecef71dd",
+    "commit": "1ab40c2 Add shared-rig Russian infantry base and interchangeable AK-74M",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/shared-infantry-combat-animation",
+    "head": "a1d280461f94456c905b677b213a6ee31245b1d0",
+    "commit": "a1d2804 Add shared infantry combat animation layers and moving-fire previews",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/tactical-reload-polish",
+    "head": "a93cbae7f0476c7aee2559e39e9cfa8a20057d70",
+    "commit": "a93cbae Refine full-body reload handling and mobile comparison entry",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/tactical-reload-v2",
+    "head": "8a6335e0594219673331869b7edffcf47dda2339",
+    "commit": "8a6335e Add coordinated tactical reloads and Korean original comparison preview",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/tactical-suit-character-comparison",
+    "head": "420a0556b8bb4e66b4e94f18e916fa5b64b79776",
+    "commit": "420a055 Record verified infantry preview deployment and exact remaining asset work",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/feat/v022-combat-animations",
+    "head": "956dc173ec8b1f6eb91b51ed800d805b44ee80b7",
+    "commit": "956dc17 Implement v0.2.2 authoritative combat animations and activity visualization",
+    "mergedIntoMain": true
+  },
+  {
+    "ref": "origin/feat/v027-tactical-infantry-overhaul",
+    "head": "233fc82f2287aa0e9dc942e1a77c2b5300a8955f",
+    "commit": "233fc82 docs: record v0.2.7 push verification and PR permission result",
+    "mergedIntoMain": true
+  },
+  {
+    "ref": "origin/feat/v032-usmc-animation-prototype",
+    "head": "4eda1ba720f94623895749ec69f7eb1f65381a0b",
+    "commit": "4eda1ba docs: record SE visual-review delivery and remaining art work",
+    "mergedIntoMain": true
+  },
+  {
+    "ref": "origin/feat/v034-live-combat-animation",
+    "head": "4d4d00cd428c34752ee80f809d40e1d67568bb3f",
+    "commit": "4d4d00c Document delivery, comparison link and GitHub PR API limitation",
+    "mergedIntoMain": true
+  },
+  {
+    "ref": "origin/feat/v035-rifleman-animation-foundation",
+    "head": "9626d592d0ac98238923445e5031a8b0e9abf6ca",
+    "commit": "9626d59 Record verified public interactive preview URL and mobile comparison checks",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/fix/infantry-navigation-spacing",
+    "head": "b565452fb18575f678239915ee0604d33f8eeae5",
+    "commit": "b565452 Fix unreachable infantry orders and soldier stacking",
+    "mergedIntoMain": true
+  },
+  {
+    "ref": "origin/fix/infantry-upper-body-motion",
+    "head": "5481fc8407e0f137628bae5529283ead5af74c82",
+    "commit": "5481fc8 Fix rigid infantry upper-body source motion and verify public playback",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/integration/v035-infantry-6v6-test",
+    "head": "9626d592d0ac98238923445e5031a8b0e9abf6ca",
+    "commit": "9626d59 Record verified public interactive preview URL and mobile comparison checks",
+    "mergedIntoMain": false
+  },
+  {
+    "ref": "origin/main",
+    "head": "b381e6017d01fa34f14e889ff639347db9e5feae",
+    "commit": "b381e60 Merge pull request #21 from dydtjs345-ux/feat/v034-live-combat-animation",
+    "mergedIntoMain": true
+  }
+]

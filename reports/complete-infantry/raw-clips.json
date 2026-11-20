@@ -1,0 +1,2754 @@
+[
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Lower_Idle",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Lower_AimStance",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Lower_Walk",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Lower_Sprint",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Lower_AimWalk",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Start_Walk",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Stop_Walk",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Walk_To_Sprint",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Sprint_To_Walk",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Sprint_Stop",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Turn_Left",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Turn_Right",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Upper_Turn_Left",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Upper_Turn_Right",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Upper_LowReady",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Upper_Sprint",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Weapon_Raise",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Weapon_Lower",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Upper_Aim",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Recoil_Shot",
+    "duration": 0.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Reload",
+    "duration": 3.4,
+    "tracks": 187,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Reload_Tactical",
+    "duration": 3.7,
+    "tracks": 189,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "Reload_Tactical_Lower",
+    "duration": 3.7,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Walk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Walk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Sprint_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Sprint_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_AimWalk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_AimWalk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_AimIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_LowReady_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Recoil_Shot",
+    "duration": 0.2,
+    "tracks": 12,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Reload_Lower",
+    "duration": 3.7,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "FB_Reload_Upper",
+    "duration": 3.7,
+    "tracks": 189,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_Sprint_Lower",
+    "duration": 0.6666666666666666,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_Sprint_Upper",
+    "duration": 0.6666666666666666,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_IdleToSprint_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_IdleToSprint_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_WalkToSprint_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_WalkToSprint_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_SprintToWalk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_SprintToWalk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_SprintToStop_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "SR_SprintToStop_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlForward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlForward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlBackward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlBackward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneToCrawl_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneToCrawl_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlToProneAim_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrawlToProneAim_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchWalk_Lower",
+    "duration": 1.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchWalk_Upper",
+    "duration": 1.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_StandProne_Lower",
+    "duration": 1.4666666666666666,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_StandProne_Upper",
+    "duration": 1.4666666666666666,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_WalkProne_Lower",
+    "duration": 1.3333333333333333,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_WalkProne_Upper",
+    "duration": 1.3333333333333333,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_SprintProne_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_SprintProne_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneCrouch_Lower",
+    "duration": 1.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneCrouch_Upper",
+    "duration": 1.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneStand_Lower",
+    "duration": 2.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_ProneStand_Upper",
+    "duration": 2.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_StandCrouch_Lower",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_StandCrouch_Upper",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchStand_Lower",
+    "duration": 1,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CrouchStand_Upper",
+    "duration": 1,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAimLeft_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAimLeft_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAimRight_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAimRight_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverFireLeft_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverFireLeft_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverFireRight_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverFireRight_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAboveAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAboveAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAboveFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverAboveFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverEnter_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverEnter_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverExit_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverExit_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLeanLeft_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLeanLeft_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLeanRight_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLeanRight_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverReturnLeft_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverReturnLeft_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverReturnRight_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverReturnRight_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverRise_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverRise_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLower_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "clip": "TC_CoverLower_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Lower_Idle",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Lower_AimStance",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Lower_Walk",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Lower_Sprint",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Lower_AimWalk",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Start_Walk",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Stop_Walk",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Walk_To_Sprint",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Sprint_To_Walk",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Sprint_Stop",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Turn_Left",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Turn_Right",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Upper_Turn_Left",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Upper_Turn_Right",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Upper_LowReady",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Upper_Sprint",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Weapon_Raise",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Weapon_Lower",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Upper_Aim",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Recoil_Shot",
+    "duration": 0.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Reload",
+    "duration": 3.8,
+    "tracks": 189,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Reload_Tactical",
+    "duration": 4.1,
+    "tracks": 189,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "Reload_Tactical_Lower",
+    "duration": 4.1,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Walk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Walk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Sprint_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Sprint_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_AimWalk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_AimWalk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_AimIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_LowReady_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Recoil_Shot",
+    "duration": 0.2,
+    "tracks": 12,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Reload_Lower",
+    "duration": 4.1,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "FB_Reload_Upper",
+    "duration": 4.1,
+    "tracks": 189,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_Sprint_Lower",
+    "duration": 0.6666666666666666,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_Sprint_Upper",
+    "duration": 0.6666666666666666,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_IdleToSprint_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_IdleToSprint_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_WalkToSprint_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_WalkToSprint_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_SprintToWalk_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_SprintToWalk_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_SprintToStop_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "SR_SprintToStop_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlForward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlForward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlBackward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlBackward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneToCrawl_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneToCrawl_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlToProneAim_Lower",
+    "duration": 0.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrawlToProneAim_Upper",
+    "duration": 0.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchWalk_Lower",
+    "duration": 1.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchWalk_Upper",
+    "duration": 1.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_StandProne_Lower",
+    "duration": 1.4666666666666666,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_StandProne_Upper",
+    "duration": 1.4666666666666666,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_WalkProne_Lower",
+    "duration": 1.3333333333333333,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_WalkProne_Upper",
+    "duration": 1.3333333333333333,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_SprintProne_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_SprintProne_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneCrouch_Lower",
+    "duration": 1.8,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneCrouch_Upper",
+    "duration": 1.8,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneStand_Lower",
+    "duration": 2.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_ProneStand_Upper",
+    "duration": 2.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_StandCrouch_Lower",
+    "duration": 0.9,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_StandCrouch_Upper",
+    "duration": 0.9,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchStand_Lower",
+    "duration": 1,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CrouchStand_Upper",
+    "duration": 1,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverIdle_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverIdle_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAimLeft_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAimLeft_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAimRight_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAimRight_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverFireLeft_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverFireLeft_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverFireRight_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverFireRight_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAboveAim_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAboveAim_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAboveFire_Lower",
+    "duration": 0.6,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverAboveFire_Upper",
+    "duration": 0.6,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverEnter_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverEnter_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverExit_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverExit_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLeanLeft_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLeanLeft_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLeanRight_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLeanRight_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverReturnLeft_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverReturnLeft_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverReturnRight_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverReturnRight_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverRise_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverRise_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLower_Lower",
+    "duration": 1.2,
+    "tracks": 123,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "clip": "TC_CoverLower_Upper",
+    "duration": 1.2,
+    "tracks": 183,
+    "rigJoints": 163,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "SU_Quaternius_Walk_Rifle",
+    "duration": 1.3333333333333333,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "SU_Quaternius_Sprint_Rifle",
+    "duration": 0.6666666666666666,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "SU_Project_TacticalSprint_Rifle",
+    "duration": 0.6666666666666666,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "SU_Project_Idle_Rifle",
+    "duration": 2.4,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "P2_Legacy_CrouchIdle_Rifle",
+    "duration": 2.4,
+    "tracks": 262,
+    "rigJoints": 87,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "P2_Legacy_CrouchWalk_Rifle",
+    "duration": 1.6,
+    "tracks": 262,
+    "rigJoints": 87,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "P2_Quaternius_CrouchIdle_Rifle",
+    "duration": 2.933333333333333,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "clip": "P2_Quaternius_CrouchWalk_Rifle",
+    "duration": 2,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "SU_Quaternius_Walk_Rifle",
+    "duration": 1.3333333333333333,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "SU_Quaternius_Sprint_Rifle",
+    "duration": 0.6666666666666666,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "SU_Project_TacticalSprint_Rifle",
+    "duration": 0.6666666666666666,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "SU_Project_Idle_Rifle",
+    "duration": 2.4,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "P2_Legacy_CrouchIdle_Rifle",
+    "duration": 2.4,
+    "tracks": 262,
+    "rigJoints": 87,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "P2_Legacy_CrouchWalk_Rifle",
+    "duration": 1.6,
+    "tracks": 262,
+    "rigJoints": 87,
+    "status": "Preserved source alternative; not automatically selected"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "P2_Quaternius_CrouchIdle_Rifle",
+    "duration": 2.933333333333333,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "clip": "P2_Quaternius_CrouchWalk_Rifle",
+    "duration": 2,
+    "tracks": 263,
+    "rigJoints": 87,
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_ProtectedCorner",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_ProtectedLow",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LeftAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_RightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_RightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_RightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_RightAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LowEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LowFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LowReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_LowAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindOverEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindOverFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindOverReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindLeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindLeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindLeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindRightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindRightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_BlindRightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_ProtectedCorner",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_ProtectedLow",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LeftAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_RightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_RightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_RightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_RightAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LowEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LowFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LowReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_LowAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindOverEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindOverFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindOverReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindLeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindLeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindLeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindRightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindRightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_BlindRightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_Exit",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_ExitRight",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Stand_ExitLow",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_Exit",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_ExitRight",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/M16A4_Cover.animation.glb",
+    "clip": "CV_M16A4_Crouch_ExitLow",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_ProtectedCorner",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_ProtectedLow",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LeftAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_RightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_RightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_RightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_RightAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LowEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LowFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LowReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_LowAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindOverEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindOverFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindOverReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindLeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindLeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindLeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindRightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindRightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_BlindRightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_ProtectedCorner",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_ProtectedLow",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LeftAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_RightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_RightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_RightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_RightAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LowEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LowFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LowReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_LowAim",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindOverEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindOverFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindOverReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindLeftEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindLeftFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindLeftReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindRightEnter",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindRightFire",
+    "duration": 2.4,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_BlindRightReturn",
+    "duration": 2,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "Excluded from selection and gameplay"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_Exit",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_ExitRight",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Stand_ExitLow",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_Exit",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_ExitRight",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/cover-combat-integration/models/AK74M_Cover.animation.glb",
+    "clip": "CV_AK74M_Crouch_ExitLow",
+    "duration": 4.333333333333333,
+    "tracks": 264,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/crawl-torso/models/USMC_CrawlForward.animation.glb",
+    "clip": "TC_CrawlForward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/crawl-torso/models/USMC_CrawlForward.animation.glb",
+    "clip": "TC_CrawlForward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/crawl-torso/models/Russian_CrawlForward.animation.glb",
+    "clip": "TC_CrawlForward_Lower",
+    "duration": 2.4,
+    "tracks": 123,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  },
+  {
+    "asset": "assets-3d/crawl-torso/models/Russian_CrawlForward.animation.glb",
+    "clip": "TC_CrawlForward_Upper",
+    "duration": 2.4,
+    "tracks": 183,
+    "rigJoints": "animation patch; same target hierarchy",
+    "status": "See action/model inventory; not all are automatic"
+  }
+]

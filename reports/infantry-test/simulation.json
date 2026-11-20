@@ -13,17 +13,35 @@
       "result": "Russian infantry victory",
       "time": 109.74999999999591,
       "seen": {
-        "Sprint": 8507,
-        "Idle": 8565,
-        "TurnLeft": 2425,
-        "TurnRight": 2904,
-        "Stop": 1189,
-        "Aim": 1609,
-        "Fire": 372,
-        "Raise": 422,
-        "Walk": 156,
-        "MovingFire": 45,
-        "Reload": 146
+        "Sprint": 8438,
+        "Idle": 879,
+        "TurnLeft": 1752,
+        "TurnRight": 2085,
+        "Stop": 932,
+        "Aim": 1230,
+        "Fire": 270,
+        "suppressed": 590,
+        "Raise": 219,
+        "firing": 109,
+        "treating": 168,
+        "seekingCover": 39,
+        "observing": 189,
+        "limping": 190,
+        "incapacitated": 4776,
+        "MovingFire": 41,
+        "aiming": 216,
+        "dead": 2687,
+        "fullCover": 716,
+        "deploying": 83,
+        "holdingCover": 116,
+        "mounted": 202,
+        "unmounting": 56,
+        "mountedFiring": 42,
+        "observingCover": 160,
+        "reloading": 85,
+        "Reload": 54,
+        "grenadePrep": 15,
+        "grenadeThrow": 1
       },
       "events": {
         "shot": 251,
@@ -95,6 +113,14 @@
           "speed": 0,
           "brisk": true
         },
+        "suppressed": {
+          "seed": 7,
+          "time": 23.900000000000205,
+          "id": 1,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
         "Raise": {
           "seed": 7,
           "time": 25.200000000000223,
@@ -103,13 +129,53 @@
           "speed": 0,
           "brisk": true
         },
-        "Walk": {
+        "firing": {
           "seed": 7,
-          "time": 33.500000000000234,
+          "time": 29.700000000000287,
+          "id": 1,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "treating": {
+          "seed": 7,
+          "time": 30.950000000000305,
+          "id": 11,
+          "aiState": "Treating",
+          "speed": 0,
+          "brisk": true
+        },
+        "seekingCover": {
+          "seed": 7,
+          "time": 31.000000000000306,
+          "id": 0,
+          "aiState": "Seeking cover",
+          "speed": 1.24430861263491,
+          "brisk": true
+        },
+        "observing": {
+          "seed": 7,
+          "time": 32.3500000000003,
+          "id": 11,
+          "aiState": "Awaiting coordination",
+          "speed": 0,
+          "brisk": true
+        },
+        "limping": {
+          "seed": 7,
+          "time": 32.70000000000028,
           "id": 0,
           "aiState": "Reacquiring contact",
-          "speed": 0.4533529456319775,
-          "brisk": false
+          "speed": 1.2443086126348697,
+          "brisk": true
+        },
+        "incapacitated": {
+          "seed": 7,
+          "time": 35.9000000000001,
+          "id": 1,
+          "aiState": "Incapacitated",
+          "speed": 0,
+          "brisk": true
         },
         "MovingFire": {
           "seed": 7,
@@ -119,24 +185,121 @@
           "speed": 1.700000000000017,
           "brisk": true
         },
-        "Reload": {
+        "aiming": {
+          "seed": 7,
+          "time": 36.40000000000007,
+          "id": 2,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "dead": {
+          "seed": 7,
+          "time": 36.60000000000006,
+          "id": 0,
+          "aiState": "Eliminated",
+          "speed": 0.2567445797013488,
+          "brisk": false
+        },
+        "fullCover": {
+          "seed": 7,
+          "time": 41.1499999999998,
+          "id": 4,
+          "aiState": "Full cover",
+          "speed": 0,
+          "brisk": true
+        },
+        "deploying": {
+          "seed": 7,
+          "time": 43.59999999999966,
+          "id": 4,
+          "aiState": "Deploying LMG",
+          "speed": 0,
+          "brisk": true
+        },
+        "holdingCover": {
+          "seed": 7,
+          "time": 43.59999999999966,
+          "id": 10,
+          "aiState": "Suppressing last-known",
+          "speed": 0,
+          "brisk": true
+        },
+        "mounted": {
+          "seed": 7,
+          "time": 44.399999999999615,
+          "id": 4,
+          "aiState": "Full cover",
+          "speed": 0,
+          "brisk": true
+        },
+        "unmounting": {
+          "seed": 7,
+          "time": 44.399999999999615,
+          "id": 10,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "mountedFiring": {
+          "seed": 7,
+          "time": 45.84999999999953,
+          "id": 4,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "observingCover": {
+          "seed": 7,
+          "time": 51.6499999999992,
+          "id": 10,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "reloading": {
           "seed": 7,
           "time": 80.14999999999759,
           "id": 10,
           "aiState": "Reloading",
           "speed": 0,
           "brisk": true
+        },
+        "Reload": {
+          "seed": 7,
+          "time": 98.49999999999655,
+          "id": 7,
+          "aiState": "Reloading",
+          "speed": 0,
+          "brisk": true
+        },
+        "grenadePrep": {
+          "seed": 7,
+          "time": 101.1499999999964,
+          "id": 6,
+          "aiState": "Preparing grenade",
+          "speed": 0,
+          "brisk": true
+        },
+        "grenadeThrow": {
+          "seed": 7,
+          "time": 101.89999999999635,
+          "id": 6,
+          "aiState": "Throwing grenade",
+          "speed": 0,
+          "brisk": true
         }
       },
       "fallbacks": {
+        "suppression reaction": 394,
+        "injury movement": 1857,
         "treating": 168,
         "incapacitated": 4776,
         "dead": 2687,
-        "fullCover": 914,
-        "deploying": 54,
-        "unmounting": 21,
-        "mounted": 152,
-        "mountedFiring": 42,
+        "fullCover": 482,
+        "deploying": 1,
+        "mounted": 51,
+        "mountedFiring": 8,
         "grenadePrep": 15,
         "grenadeThrow": 1
       },
@@ -151,16 +314,26 @@
       "result": "Russian infantry victory",
       "time": 72.999999999998,
       "seen": {
-        "Sprint": 7130,
-        "Idle": 3439,
-        "TurnLeft": 2163,
-        "TurnRight": 2384,
-        "Stop": 918,
-        "Aim": 932,
-        "Fire": 216,
-        "Raise": 94,
-        "MovingFire": 14,
-        "Walk": 230
+        "Sprint": 7119,
+        "Idle": 724,
+        "TurnLeft": 1907,
+        "TurnRight": 1993,
+        "Stop": 755,
+        "Aim": 839,
+        "Fire": 199,
+        "suppressed": 81,
+        "treating": 515,
+        "Raise": 82,
+        "fullCover": 45,
+        "aiming": 70,
+        "firing": 17,
+        "idle": 2,
+        "incapacitated": 2268,
+        "MovingFire": 10,
+        "seekingCover": 60,
+        "limping": 185,
+        "observing": 60,
+        "dead": 589
       },
       "events": {
         "shot": 120,
@@ -227,11 +400,67 @@
           "speed": 0,
           "brisk": true
         },
+        "suppressed": {
+          "seed": 19,
+          "time": 23.900000000000205,
+          "id": 1,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": true
+        },
+        "treating": {
+          "seed": 19,
+          "time": 27.950000000000262,
+          "id": 11,
+          "aiState": "Treating",
+          "speed": 0,
+          "brisk": true
+        },
         "Raise": {
           "seed": 19,
           "time": 28.950000000000276,
           "id": 9,
           "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "fullCover": {
+          "seed": 19,
+          "time": 30.450000000000298,
+          "id": 4,
+          "aiState": "Full cover",
+          "speed": 0,
+          "brisk": true
+        },
+        "aiming": {
+          "seed": 19,
+          "time": 32.100000000000314,
+          "id": 9,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "firing": {
+          "seed": 19,
+          "time": 32.15000000000031,
+          "id": 9,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
+        "idle": {
+          "seed": 19,
+          "time": 32.3500000000003,
+          "id": 9,
+          "aiState": "Recovering",
+          "speed": 0,
+          "brisk": true
+        },
+        "incapacitated": {
+          "seed": 19,
+          "time": 33.55000000000023,
+          "id": 0,
+          "aiState": "Incapacitated",
           "speed": 0,
           "brisk": true
         },
@@ -243,18 +472,44 @@
           "speed": 1.4177877290754475,
           "brisk": true
         },
-        "Walk": {
+        "seekingCover": {
           "seed": 19,
-          "time": 37.50000000000001,
+          "time": 36.95000000000004,
           "id": 1,
           "aiState": "Seeking cover",
-          "speed": 0.24771906934396587,
+          "speed": 1.1245407307837112,
+          "brisk": true
+        },
+        "limping": {
+          "seed": 19,
+          "time": 39.59999999999989,
+          "id": 1,
+          "aiState": "Recovering",
+          "speed": 1.1755407307837373,
           "brisk": false
+        },
+        "observing": {
+          "seed": 19,
+          "time": 42.099999999999746,
+          "id": 1,
+          "aiState": "Covering search",
+          "speed": 0,
+          "brisk": false
+        },
+        "dead": {
+          "seed": 19,
+          "time": 47.69999999999943,
+          "id": 3,
+          "aiState": "Eliminated",
+          "speed": 1.2426650485072477,
+          "brisk": true
         }
       },
       "fallbacks": {
+        "suppression reaction": 33,
         "treating": 515,
         "fullCover": 45,
+        "injury movement": 442,
         "incapacitated": 2268,
         "dead": 589
       },
@@ -270,16 +525,24 @@
       "time": 119.99999999999532,
       "seen": {
         "Sprint": 5939,
-        "Idle": 13009,
-        "TurnLeft": 3055,
-        "TurnRight": 3803,
-        "Stop": 930,
-        "Aim": 1285,
+        "Idle": 1034,
+        "TurnLeft": 2795,
+        "TurnRight": 3159,
+        "Stop": 798,
+        "Aim": 1145,
         "Fire": 284,
         "MovingFire": 67,
-        "Raise": 296,
-        "Walk": 40,
-        "Reload": 92
+        "fullCover": 299,
+        "suppressed": 438,
+        "Raise": 277,
+        "dead": 8666,
+        "incapacitated": 3339,
+        "treating": 420,
+        "Walk": 27,
+        "Reload": 92,
+        "Start": 13,
+        "deploying": 1,
+        "unmounting": 7
       },
       "events": {
         "shot": 209,
@@ -357,11 +620,51 @@
           "speed": 1.700000000000017,
           "brisk": true
         },
+        "fullCover": {
+          "seed": 42,
+          "time": 19.150000000000137,
+          "id": 1,
+          "aiState": "Full cover",
+          "speed": 0,
+          "brisk": true
+        },
+        "suppressed": {
+          "seed": 42,
+          "time": 19.800000000000146,
+          "id": 6,
+          "aiState": "Engaging",
+          "speed": 0,
+          "brisk": true
+        },
         "Raise": {
           "seed": 42,
           "time": 20.05000000000015,
           "id": 7,
           "aiState": "Suppressing last-known",
+          "speed": 0,
+          "brisk": true
+        },
+        "dead": {
+          "seed": 42,
+          "time": 22.75000000000019,
+          "id": 6,
+          "aiState": "Eliminated",
+          "speed": 0,
+          "brisk": true
+        },
+        "incapacitated": {
+          "seed": 42,
+          "time": 31.000000000000306,
+          "id": 1,
+          "aiState": "Incapacitated",
+          "speed": 0,
+          "brisk": true
+        },
+        "treating": {
+          "seed": 42,
+          "time": 66.99999999999834,
+          "id": 5,
+          "aiState": "Treating",
           "speed": 0,
           "brisk": true
         },
@@ -380,10 +683,35 @@
           "aiState": "Reloading",
           "speed": 0,
           "brisk": true
+        },
+        "Start": {
+          "seed": 42,
+          "time": 103.34999999999627,
+          "id": 0,
+          "aiState": "Seeking cover",
+          "speed": 1.426380989458147,
+          "brisk": false
+        },
+        "deploying": {
+          "seed": 42,
+          "time": 116.44999999999553,
+          "id": 10,
+          "aiState": "Deploying LMG",
+          "speed": 0,
+          "brisk": true
+        },
+        "unmounting": {
+          "seed": 42,
+          "time": 116.49999999999552,
+          "id": 10,
+          "aiState": "Full cover",
+          "speed": 0,
+          "brisk": true
         }
       },
       "fallbacks": {
         "fullCover": 306,
+        "suppression reaction": 438,
         "dead": 8666,
         "incapacitated": 3339,
         "treating": 420,

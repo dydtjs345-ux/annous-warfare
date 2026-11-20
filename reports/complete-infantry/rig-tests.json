@@ -1,0 +1,758 @@
+{
+  "method": "Actual selected controllers, Three.js CPU mixer; no GPU or physical-device measurements",
+  "profiles": [
+    {
+      "profile": "USMC",
+      "states": [
+        {
+          "state": "Idle",
+          "clips": [
+            "Lower_Idle",
+            "FB_LowReady_Upper"
+          ]
+        },
+        {
+          "state": "Walk",
+          "clips": [
+            "FB_Walk_Lower",
+            "FB_Walk_Upper"
+          ]
+        },
+        {
+          "state": "TacticalSprint",
+          "clips": [
+            "SR_Sprint_Lower",
+            "SR_Sprint_Upper"
+          ]
+        },
+        {
+          "state": "Raise",
+          "clips": [
+            "Lower_AimStance",
+            "Weapon_Raise"
+          ]
+        },
+        {
+          "state": "Aim",
+          "clips": [
+            "Lower_AimStance",
+            "FB_AimIdle_Upper"
+          ]
+        },
+        {
+          "state": "Fire",
+          "clips": [
+            "Lower_AimStance",
+            "FB_AimIdle_Upper"
+          ]
+        },
+        {
+          "state": "AimWalk",
+          "clips": [
+            "FB_AimWalk_Lower",
+            "FB_AimWalk_Upper"
+          ]
+        },
+        {
+          "state": "MovingFire",
+          "clips": [
+            "FB_AimWalk_Lower",
+            "FB_AimWalk_Upper"
+          ]
+        },
+        {
+          "state": "Reload",
+          "clips": [
+            "FB_Reload_Lower",
+            "FB_Reload_Upper"
+          ]
+        },
+        {
+          "state": "StandProne",
+          "clips": [
+            "TC_StandProne_Lower",
+            "TC_StandProne_Upper"
+          ]
+        },
+        {
+          "state": "WalkProne",
+          "clips": [
+            "TC_WalkProne_Lower",
+            "TC_WalkProne_Upper"
+          ]
+        },
+        {
+          "state": "SprintProne",
+          "clips": [
+            "TC_SprintProne_Lower",
+            "TC_SprintProne_Upper"
+          ]
+        },
+        {
+          "state": "ProneIdle",
+          "clips": [
+            "TC_ProneIdle_Lower",
+            "TC_ProneIdle_Upper"
+          ]
+        },
+        {
+          "state": "CrawlForward",
+          "clips": [
+            "TC_CrawlForward_Lower",
+            "TC_CrawlForward_Upper"
+          ]
+        },
+        {
+          "state": "CrawlBackward",
+          "clips": [
+            "TC_CrawlBackward_Lower",
+            "TC_CrawlBackward_Upper"
+          ]
+        },
+        {
+          "state": "ProneAim",
+          "clips": [
+            "TC_ProneAim_Lower",
+            "TC_ProneAim_Upper"
+          ]
+        },
+        {
+          "state": "ProneFire",
+          "clips": [
+            "TC_ProneFire_Lower",
+            "TC_ProneFire_Upper"
+          ]
+        },
+        {
+          "state": "ProneCrouch",
+          "clips": [
+            "TC_ProneCrouch_Lower",
+            "TC_ProneCrouch_Upper"
+          ]
+        },
+        {
+          "state": "ProneStand",
+          "clips": [
+            "TC_ProneStand_Lower",
+            "TC_ProneStand_Upper"
+          ]
+        },
+        {
+          "state": "CrouchIdle",
+          "clips": [
+            "TC_CrouchIdle_Lower",
+            "TC_CrouchIdle_Upper"
+          ]
+        },
+        {
+          "state": "CrouchWalk",
+          "clips": [
+            "TC_CrouchWalk_Lower",
+            "TC_CrouchWalk_Upper"
+          ]
+        },
+        {
+          "state": "CrouchAim",
+          "clips": [
+            "TC_CrouchAim_Lower",
+            "TC_CrouchAim_Upper"
+          ]
+        },
+        {
+          "state": "CrouchFire",
+          "clips": [
+            "TC_CrouchFire_Lower",
+            "TC_CrouchFire_Upper"
+          ]
+        },
+        {
+          "state": "StandCrouch",
+          "clips": [
+            "TC_StandCrouch_Lower",
+            "TC_StandCrouch_Upper"
+          ]
+        },
+        {
+          "state": "CrouchStand",
+          "clips": [
+            "TC_CrouchStand_Lower",
+            "TC_CrouchStand_Upper"
+          ]
+        },
+        {
+          "state": "ProneToCrawl",
+          "clips": [
+            "TC_ProneToCrawl_Lower",
+            "TC_ProneToCrawl_Upper"
+          ]
+        },
+        {
+          "state": "CrawlToProneAim",
+          "clips": [
+            "TC_CrawlToProneAim_Lower",
+            "TC_CrawlToProneAim_Upper"
+          ]
+        },
+        {
+          "state": "CoverEnter",
+          "clips": [
+            "TC_CoverEnter_Lower",
+            "TC_CoverEnter_Upper"
+          ]
+        },
+        {
+          "state": "CoverIdle",
+          "clips": [
+            "TC_CoverIdle_Lower",
+            "TC_CoverIdle_Upper"
+          ]
+        },
+        {
+          "state": "CoverLeanLeft",
+          "clips": [
+            "TC_CoverLeanLeft_Lower",
+            "TC_CoverLeanLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverLeanRight",
+          "clips": [
+            "TC_CoverLeanRight_Lower",
+            "TC_CoverLeanRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverAimLeft",
+          "clips": [
+            "TC_CoverAimLeft_Lower",
+            "TC_CoverAimLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverAimRight",
+          "clips": [
+            "TC_CoverAimRight_Lower",
+            "TC_CoverAimRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverFireLeft",
+          "clips": [
+            "TC_CoverFireLeft_Lower",
+            "TC_CoverFireLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverFireRight",
+          "clips": [
+            "TC_CoverFireRight_Lower",
+            "TC_CoverFireRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverReturnLeft",
+          "clips": [
+            "TC_CoverReturnLeft_Lower",
+            "TC_CoverReturnLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverReturnRight",
+          "clips": [
+            "TC_CoverReturnRight_Lower",
+            "TC_CoverReturnRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverRise",
+          "clips": [
+            "TC_CoverRise_Lower",
+            "TC_CoverRise_Upper"
+          ]
+        },
+        {
+          "state": "CoverAboveAim",
+          "clips": [
+            "TC_CoverAboveAim_Lower",
+            "TC_CoverAboveAim_Upper"
+          ]
+        },
+        {
+          "state": "CoverAboveFire",
+          "clips": [
+            "TC_CoverAboveFire_Lower",
+            "TC_CoverAboveFire_Upper"
+          ]
+        },
+        {
+          "state": "CoverLower",
+          "clips": [
+            "TC_CoverLower_Lower",
+            "TC_CoverLower_Upper"
+          ]
+        },
+        {
+          "state": "CoverExit",
+          "clips": [
+            "TC_CoverExit_Lower",
+            "TC_CoverExit_Upper"
+          ]
+        },
+        {
+          "state": "CrawlTorsoReview",
+          "clips": [
+            "REC_CrawlForward_Lower",
+            "REC_CrawlForward_Upper"
+          ]
+        },
+        {
+          "state": "Lower",
+          "clips": [
+            "Lower_Idle",
+            "Weapon_Lower"
+          ]
+        }
+      ],
+      "sameStateContinuous": true,
+      "noBlindFire": true
+    },
+    {
+      "profile": "Russian",
+      "states": [
+        {
+          "state": "Idle",
+          "clips": [
+            "Lower_Idle",
+            "FB_LowReady_Upper"
+          ]
+        },
+        {
+          "state": "Walk",
+          "clips": [
+            "FB_Walk_Lower",
+            "FB_Walk_Upper"
+          ]
+        },
+        {
+          "state": "TacticalSprint",
+          "clips": [
+            "SR_Sprint_Lower",
+            "SR_Sprint_Upper"
+          ]
+        },
+        {
+          "state": "Raise",
+          "clips": [
+            "Lower_AimStance",
+            "Weapon_Raise"
+          ]
+        },
+        {
+          "state": "Aim",
+          "clips": [
+            "Lower_AimStance",
+            "FB_AimIdle_Upper"
+          ]
+        },
+        {
+          "state": "Fire",
+          "clips": [
+            "Lower_AimStance",
+            "FB_AimIdle_Upper"
+          ]
+        },
+        {
+          "state": "AimWalk",
+          "clips": [
+            "FB_AimWalk_Lower",
+            "FB_AimWalk_Upper"
+          ]
+        },
+        {
+          "state": "MovingFire",
+          "clips": [
+            "FB_AimWalk_Lower",
+            "FB_AimWalk_Upper"
+          ]
+        },
+        {
+          "state": "Reload",
+          "clips": [
+            "FB_Reload_Lower",
+            "FB_Reload_Upper"
+          ]
+        },
+        {
+          "state": "StandProne",
+          "clips": [
+            "TC_StandProne_Lower",
+            "TC_StandProne_Upper"
+          ]
+        },
+        {
+          "state": "WalkProne",
+          "clips": [
+            "TC_WalkProne_Lower",
+            "TC_WalkProne_Upper"
+          ]
+        },
+        {
+          "state": "SprintProne",
+          "clips": [
+            "TC_SprintProne_Lower",
+            "TC_SprintProne_Upper"
+          ]
+        },
+        {
+          "state": "ProneIdle",
+          "clips": [
+            "TC_ProneIdle_Lower",
+            "TC_ProneIdle_Upper"
+          ]
+        },
+        {
+          "state": "CrawlForward",
+          "clips": [
+            "TC_CrawlForward_Lower",
+            "TC_CrawlForward_Upper"
+          ]
+        },
+        {
+          "state": "CrawlBackward",
+          "clips": [
+            "TC_CrawlBackward_Lower",
+            "TC_CrawlBackward_Upper"
+          ]
+        },
+        {
+          "state": "ProneAim",
+          "clips": [
+            "TC_ProneAim_Lower",
+            "TC_ProneAim_Upper"
+          ]
+        },
+        {
+          "state": "ProneFire",
+          "clips": [
+            "TC_ProneFire_Lower",
+            "TC_ProneFire_Upper"
+          ]
+        },
+        {
+          "state": "ProneCrouch",
+          "clips": [
+            "TC_ProneCrouch_Lower",
+            "TC_ProneCrouch_Upper"
+          ]
+        },
+        {
+          "state": "ProneStand",
+          "clips": [
+            "TC_ProneStand_Lower",
+            "TC_ProneStand_Upper"
+          ]
+        },
+        {
+          "state": "CrouchIdle",
+          "clips": [
+            "TC_CrouchIdle_Lower",
+            "TC_CrouchIdle_Upper"
+          ]
+        },
+        {
+          "state": "CrouchWalk",
+          "clips": [
+            "TC_CrouchWalk_Lower",
+            "TC_CrouchWalk_Upper"
+          ]
+        },
+        {
+          "state": "CrouchAim",
+          "clips": [
+            "TC_CrouchAim_Lower",
+            "TC_CrouchAim_Upper"
+          ]
+        },
+        {
+          "state": "CrouchFire",
+          "clips": [
+            "TC_CrouchFire_Lower",
+            "TC_CrouchFire_Upper"
+          ]
+        },
+        {
+          "state": "StandCrouch",
+          "clips": [
+            "TC_StandCrouch_Lower",
+            "TC_StandCrouch_Upper"
+          ]
+        },
+        {
+          "state": "CrouchStand",
+          "clips": [
+            "TC_CrouchStand_Lower",
+            "TC_CrouchStand_Upper"
+          ]
+        },
+        {
+          "state": "ProneToCrawl",
+          "clips": [
+            "TC_ProneToCrawl_Lower",
+            "TC_ProneToCrawl_Upper"
+          ]
+        },
+        {
+          "state": "CrawlToProneAim",
+          "clips": [
+            "TC_CrawlToProneAim_Lower",
+            "TC_CrawlToProneAim_Upper"
+          ]
+        },
+        {
+          "state": "CoverEnter",
+          "clips": [
+            "TC_CoverEnter_Lower",
+            "TC_CoverEnter_Upper"
+          ]
+        },
+        {
+          "state": "CoverIdle",
+          "clips": [
+            "TC_CoverIdle_Lower",
+            "TC_CoverIdle_Upper"
+          ]
+        },
+        {
+          "state": "CoverLeanLeft",
+          "clips": [
+            "TC_CoverLeanLeft_Lower",
+            "TC_CoverLeanLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverLeanRight",
+          "clips": [
+            "TC_CoverLeanRight_Lower",
+            "TC_CoverLeanRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverAimLeft",
+          "clips": [
+            "TC_CoverAimLeft_Lower",
+            "TC_CoverAimLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverAimRight",
+          "clips": [
+            "TC_CoverAimRight_Lower",
+            "TC_CoverAimRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverFireLeft",
+          "clips": [
+            "TC_CoverFireLeft_Lower",
+            "TC_CoverFireLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverFireRight",
+          "clips": [
+            "TC_CoverFireRight_Lower",
+            "TC_CoverFireRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverReturnLeft",
+          "clips": [
+            "TC_CoverReturnLeft_Lower",
+            "TC_CoverReturnLeft_Upper"
+          ]
+        },
+        {
+          "state": "CoverReturnRight",
+          "clips": [
+            "TC_CoverReturnRight_Lower",
+            "TC_CoverReturnRight_Upper"
+          ]
+        },
+        {
+          "state": "CoverRise",
+          "clips": [
+            "TC_CoverRise_Lower",
+            "TC_CoverRise_Upper"
+          ]
+        },
+        {
+          "state": "CoverAboveAim",
+          "clips": [
+            "TC_CoverAboveAim_Lower",
+            "TC_CoverAboveAim_Upper"
+          ]
+        },
+        {
+          "state": "CoverAboveFire",
+          "clips": [
+            "TC_CoverAboveFire_Lower",
+            "TC_CoverAboveFire_Upper"
+          ]
+        },
+        {
+          "state": "CoverLower",
+          "clips": [
+            "TC_CoverLower_Lower",
+            "TC_CoverLower_Upper"
+          ]
+        },
+        {
+          "state": "CoverExit",
+          "clips": [
+            "TC_CoverExit_Lower",
+            "TC_CoverExit_Upper"
+          ]
+        },
+        {
+          "state": "CrawlTorsoReview",
+          "clips": [
+            "REC_CrawlForward_Lower",
+            "REC_CrawlForward_Upper"
+          ]
+        },
+        {
+          "state": "Lower",
+          "clips": [
+            "Lower_Idle",
+            "Weapon_Lower"
+          ]
+        }
+      ],
+      "sameStateContinuous": true,
+      "noBlindFire": true
+    },
+    {
+      "profile": "TacticalSuit",
+      "states": [
+        {
+          "state": "Idle",
+          "clips": [
+            "SU_Project_Idle_Rifle"
+          ]
+        },
+        {
+          "state": "Walk",
+          "clips": [
+            "SU_Quaternius_Walk_Rifle"
+          ]
+        },
+        {
+          "state": "TacticalSprint",
+          "clips": [
+            "SU_Project_TacticalSprint_Rifle"
+          ]
+        },
+        {
+          "state": "EmergencyRetreat",
+          "clips": [
+            "SU_Quaternius_Sprint_Rifle"
+          ]
+        },
+        {
+          "state": "CrouchIdle",
+          "clips": [
+            "P2_Quaternius_CrouchIdle_Rifle"
+          ]
+        },
+        {
+          "state": "CrouchWalk",
+          "clips": [
+            "P2_Quaternius_CrouchWalk_Rifle"
+          ]
+        }
+      ],
+      "sameStateContinuous": true,
+      "noBlindFire": true
+    },
+    {
+      "profile": "SuitCover_M16A4",
+      "states": [
+        "M16A4_Stand_ProtectedCorner",
+        "M16A4_Stand_ProtectedLow",
+        "M16A4_Stand_LeftEnter",
+        "M16A4_Stand_LeftFire",
+        "M16A4_Stand_LeftReturn",
+        "M16A4_Stand_LeftAim",
+        "M16A4_Stand_RightEnter",
+        "M16A4_Stand_RightFire",
+        "M16A4_Stand_RightReturn",
+        "M16A4_Stand_RightAim",
+        "M16A4_Stand_LowEnter",
+        "M16A4_Stand_LowFire",
+        "M16A4_Stand_LowReturn",
+        "M16A4_Stand_LowAim",
+        "M16A4_Crouch_ProtectedCorner",
+        "M16A4_Crouch_ProtectedLow",
+        "M16A4_Crouch_LeftEnter",
+        "M16A4_Crouch_LeftFire",
+        "M16A4_Crouch_LeftReturn",
+        "M16A4_Crouch_LeftAim",
+        "M16A4_Crouch_RightEnter",
+        "M16A4_Crouch_RightFire",
+        "M16A4_Crouch_RightReturn",
+        "M16A4_Crouch_RightAim",
+        "M16A4_Crouch_LowEnter",
+        "M16A4_Crouch_LowFire",
+        "M16A4_Crouch_LowReturn",
+        "M16A4_Crouch_LowAim",
+        "M16A4_Stand_Exit",
+        "M16A4_Stand_ExitRight",
+        "M16A4_Stand_ExitLow",
+        "M16A4_Crouch_Exit",
+        "M16A4_Crouch_ExitRight",
+        "M16A4_Crouch_ExitLow"
+      ],
+      "maxGripErrorM": 1.7571290364361764e-7
+    },
+    {
+      "profile": "SuitCover_AK74M",
+      "states": [
+        "AK74M_Stand_ProtectedCorner",
+        "AK74M_Stand_ProtectedLow",
+        "AK74M_Stand_LeftEnter",
+        "AK74M_Stand_LeftFire",
+        "AK74M_Stand_LeftReturn",
+        "AK74M_Stand_LeftAim",
+        "AK74M_Stand_RightEnter",
+        "AK74M_Stand_RightFire",
+        "AK74M_Stand_RightReturn",
+        "AK74M_Stand_RightAim",
+        "AK74M_Stand_LowEnter",
+        "AK74M_Stand_LowFire",
+        "AK74M_Stand_LowReturn",
+        "AK74M_Stand_LowAim",
+        "AK74M_Crouch_ProtectedCorner",
+        "AK74M_Crouch_ProtectedLow",
+        "AK74M_Crouch_LeftEnter",
+        "AK74M_Crouch_LeftFire",
+        "AK74M_Crouch_LeftReturn",
+        "AK74M_Crouch_LeftAim",
+        "AK74M_Crouch_RightEnter",
+        "AK74M_Crouch_RightFire",
+        "AK74M_Crouch_RightReturn",
+        "AK74M_Crouch_RightAim",
+        "AK74M_Crouch_LowEnter",
+        "AK74M_Crouch_LowFire",
+        "AK74M_Crouch_LowReturn",
+        "AK74M_Crouch_LowAim",
+        "AK74M_Stand_Exit",
+        "AK74M_Stand_ExitRight",
+        "AK74M_Stand_ExitLow",
+        "AK74M_Crouch_Exit",
+        "AK74M_Crouch_ExitRight",
+        "AK74M_Crouch_ExitLow"
+      ],
+      "maxGripErrorM": 1.6799277740593427e-7
+    }
+  ]
+}

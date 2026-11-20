@@ -1,0 +1,38 @@
+[
+  {
+    "path": "assets-3d/tactical-combat/models/USMC_Tactical.glb",
+    "sha256": "112592f71ac7650c722b0f119b645b3bfea8578f9c42482ab2d25c980aa30fef",
+    "matchesSource": true,
+    "joints": [
+      163
+    ],
+    "animationCount": 110
+  },
+  {
+    "path": "assets-3d/tactical-combat/models/Russian_Tactical.glb",
+    "sha256": "46d44c1bbdf59108456bca85d1304b7c07f945b4a9657ecc8c1fe6834817cc46",
+    "matchesSource": true,
+    "joints": [
+      163
+    ],
+    "animationCount": 110
+  },
+  {
+    "path": "assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb",
+    "sha256": "2549b894883ad6f8886060c742638a6c137fd52acb86f87ccbb1c02a0567da1c",
+    "matchesSource": true,
+    "joints": [
+      87
+    ],
+    "animationCount": 8
+  },
+  {
+    "path": "assets-3d/cover-combat-integration/models/TacticalSuit_Cover.glb",
+    "sha256": "0a22f661c940cadd8642e0e088ed68124d3973910bdc4c0d3b7309d0f47b2550",
+    "matchesSource": true,
+    "joints": [
+      87
+    ],
+    "animationCount": 8
+  }
+]

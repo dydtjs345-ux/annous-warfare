@@ -7,16 +7,17 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#0d1720" />
-    <title>Autonomous Warfare · Infantry 6v6 Test</title>
+    <title>Autonomous Warfare · 통합 보병 6v6</title>
   <style>
 [hidden]{display:none!important}.infantry-controls{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:6px 12px;background:#16232e;font-size:11px}.infantry-controls label{display:flex;align-items:center;gap:5px}.infantry-controls select{max-width:140px;background:#243642;color:#e5eeee;border:1px solid #49606e;border-radius:5px;padding:5px}.infantry-controls a{color:#94d4cc}#infantry-status{font-size:10px;padding:4px 12px;color:#a8bbc5}canvas{image-rendering:auto!important}
+#animation-inspector{padding:8px 12px;background:#16232e;color:#d7e5ec;font-size:14px;max-height:50vh;overflow:auto}#animation-inspector p{line-height:1.45}#animation-inspector select,#animation-inspector button{font-size:14px;max-width:100%;margin:4px;padding:6px;background:#243642;color:#e5eeee}#animation-current{white-space:pre-wrap;font-size:13px}#animation-viewport{height:260px;min-width:220px}#animation-viewport canvas{max-width:100%}.infantry-controls{font-size:14px}#infantry-status{font-size:12px}
 </style></head>
   <body data-infantry-test="true">
     <main id="app">
       <header>
         <div>
           <small>ISOLATED TEST · EXISTING COMBAT AI</small>
-          <h1>Autonomous Warfare <em>INFANTRY TEST</em></h1>
+          <h1>Autonomous Warfare <em>통합 보병 검사</em></h1>
         </div>
         <span id="counts"></span>
       </header>
@@ -50,13 +51,22 @@
         ><span>미 해병 #1 · SE 새 동작 / 그 외 기존</span>
       </section>
       <section class="infantry-controls">
-        <label>Visuals <select id="infantry-quality"><option value="sprites">New infantry</option><option value="legacy">Legacy fallback</option></select></label>
-        <label>Sprint <select id="infantry-sprint"><option value="new">Rebuilt · candidate</option><option value="old">Previous</option></select></label>
-        <a href="./infantry-trigger.html">Visual-only triggers</a>
-        <a href="https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/" target="_blank" rel="noopener">Korean 3D preview ↗</a>
+        <label>표시 <select id="infantry-quality"><option value="sprites">통합 보병</option><option value="legacy">기존 저메모리 표시</option></select></label>
+        <label>USMC 모델 <select id="infantry-model"><option value="original">진영 원본 · 전투 클립 지원</option><option value="suit">최신 외부 수트 · 보행/질주만 · 나머지 기존 2D</option></select></label><label>질주 <select id="infantry-sprint"><option value="new">보존된 SR 전술 질주</option></select></label>
+        <a href="./infantry-trigger.html">기본 클립 검사</a>
+        <a href="https://autonomous-warfare-infantry-preview.companionablejellyfish2.chatgpt.site/" target="_blank" rel="noopener">이전 3D 검토</a>
       </section>
-      <div id="infantry-status" role="status">Loading infantry atlases…</div>
-      <nav>
+      <div id="infantry-status" role="status">보병 자산을 불러오는 중…</div>
+      <details id="animation-inspector"><summary>개발자 애니메이션 검사</summary>
+<p>전투: USMC/Russian 원본 진영 모델. 외부 수트는 일반 재장전·사상자 클립이 없어 별도 수동 검사와 선택형 보행/질주 표시를 제공합니다. 수트 선택 시 미지원 동작은 기존 2D USMC로 명시적으로 대체됩니다. 부상·의무·사상자·LMG 특수 동작은 기존 2D 표시로 대체됩니다.</p>
+<label>병사 <select id="animation-soldier"></select></label>
+<pre id="animation-current"></pre>
+<label>수동 검사 모델 <select id="animation-profile"><option value="USMC">USMC · M16A4 · 163본</option><option value="Russian">Russian · AK-74M · 163본</option><option value="TacticalSuit">실제 Military tactical suit · 87본</option><option value="CoverM16">수트 · M16A4 엄폐 후보</option><option value="CoverAK">수트 · AK-74M 엄폐 후보 (러시아 군복 아님)</option></select></label>
+<label>클립 <select id="animation-clip"></select></label>
+<button id="animation-load">수동 3D 검사 시작</button><button id="animation-return">정상 전투 보기로 복귀</button>
+<p id="animation-manual-status">검사 뷰는 전투 상태·위치·난수를 변경하지 않습니다. 3D는 요청 시에만 로드됩니다.</p>
+<div id="animation-viewport" hidden></div>
+</details><nav>
         <button id="pause">일시정지</button
         ><button data-speed="1" class="active">1×</button
         ><button data-speed="2">2×</button><button data-speed="4">4×</button

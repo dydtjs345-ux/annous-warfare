@@ -1,263 +1,327 @@
 {
   "passed": true,
-  "transferBytes": 4291022,
-  "decodedTextureBytes": 125829120,
+  "transferBytes": 4825096,
+  "decodedTextureBytes": 145489920,
   "sheets": [
     {
       "file": "USMC-0.webp",
-      "bytes": 189190,
+      "bytes": 199238,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "66a258cece479b9ad562e7f809d30c72ed0baa0454dfefad401eb95904ebf318"
+      "sha256": "209ba8e1d0f022a75c8205c0877fe675203c4cd208ccdbd4a3b6cc59a65424d7"
     },
     {
       "file": "USMC-1.webp",
-      "bytes": 164392,
+      "bytes": 173256,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "123937005dc6cd39f51710a47ca621c45a5ba33b071c7af2c88c90e3f72f5636"
+      "sha256": "22c581ad9a60b4df87fc4e15d0908c28f71cfbde1b8ffa85f7b9f3415b1c0969"
     },
     {
       "file": "USMC-2.webp",
-      "bytes": 194602,
+      "bytes": 204162,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "d1c5ecdbd0f4f4147ebafee5e1833463af02876a98251baa966cb4ce4a02f4af"
+      "sha256": "5bc07be2b7f731ca4888cc37d914a7065f3edab597eca43bd757b53dc87bfad9"
     },
     {
       "file": "USMC-3.webp",
-      "bytes": 207704,
+      "bytes": 217974,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "7cd81a5f474a9a5b5c1eebf0a51099d8df3bd1d5fb31fd4025ce4244fcccc7bb"
+      "sha256": "62d9f894047afaf92fd6c1ffefae8e442083877d5452ddb9d72024abf56dff3f"
     },
     {
       "file": "USMC-4.webp",
-      "bytes": 191968,
+      "bytes": 201720,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "68e1dfdd844ae404a61447068aa369ea233d93fc66f3a4f8afd0eaea5d6b8b96"
+      "sha256": "ea82eb1b8fd5c43deaf9a3eb666ac99e772cb1fafdfa195edd503a7db3be098f"
     },
     {
       "file": "USMC-5.webp",
-      "bytes": 167504,
+      "bytes": 175336,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "3f25a3c815af8a444168a838198473f225ee6d6cb483fd9e94a0f14d0583081d"
+      "sha256": "db37347441bcc7573ba4a6c83a4bd53a145b65d89067630d4d1743f3fddfa4b0"
     },
     {
       "file": "USMC-6.webp",
-      "bytes": 187926,
+      "bytes": 196660,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "ba2278b6f6bf80d2c39d00bf80891e2c79e2132d997c43c6cf8c64c1eec07bc1"
+      "sha256": "14180afa38cbe6bff7faca07ed485e0143432653654bab558e0c4096956b043c"
     },
     {
       "file": "USMC-7.webp",
-      "bytes": 198850,
+      "bytes": 209100,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "56c85749d1bdacb862a0cf04b94239d7ff9bc0458797eb84f11c24c7b64209d8"
+      "sha256": "11bebda95a15a9c0d15e247d34dff0e7308ad625a510de2ae6c739e801f2e052"
     },
     {
       "file": "Russian-0.webp",
-      "bytes": 179772,
+      "bytes": 189364,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "13cb9cd10dfe5bfae69a3ebf19e4e4e3fea1b73ec3a7e516de363cd2efa07afa"
+      "sha256": "5c627a00e283a61813b67d6aba48cb031136eda9229484b4f854f9a74a35473f"
     },
     {
       "file": "Russian-1.webp",
-      "bytes": 155012,
+      "bytes": 163316,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "bedfbdefd4912b90ead15ab9e02f51a605c6f7591cd5c1568623844d18e70f5c"
+      "sha256": "d8b58199e13ecdf79498bc7451cf4500d01f896a2333e86022c48a48a7339e64"
     },
     {
       "file": "Russian-2.webp",
-      "bytes": 179376,
+      "bytes": 188474,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "a025e6533a3d9e5b07c100ecd7c35dbd39575564de7efa7a6c4fe9d8c905aeb4"
+      "sha256": "fdeb48cfacc7938a6b5439af805170c7b937ea90e82ffff3868d33b99316676e"
     },
     {
       "file": "Russian-3.webp",
-      "bytes": 190324,
+      "bytes": 199970,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "3136d27237724454db708ac04c1bfb09f98980c73aa06f8cb8892eea4f2f0894"
+      "sha256": "a9b38d7f1fb9fed181353444acced46f030a006350162c7470e62a540fb647bf"
     },
     {
       "file": "Russian-4.webp",
-      "bytes": 173792,
+      "bytes": 182436,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "c4d2bb5961742550086204c64b6297592502730a3284e88b6d35572bb6cf92e5"
+      "sha256": "d0947b51ae7c16e895a9faec74ce49be785651fa66ce785d9409de495b6a5742"
     },
     {
       "file": "Russian-5.webp",
-      "bytes": 154532,
+      "bytes": 161784,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "6d9b398828f368285e408cf4b6372c46b90df3a97ecfea87d671faf925bbd98a"
+      "sha256": "5c2639aaac61f03a1090901172fbfb8ce7b2c186218477cc1dae461025f14d9c"
     },
     {
       "file": "Russian-6.webp",
-      "bytes": 173178,
+      "bytes": 181180,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "65b19406bd99ff0a8ad4c5249fbf11a2cb460a5baccdef5acd9e29491437d0c3"
+      "sha256": "c63a3322e95c1ede9c724a3baf58c28fb07f39f65d2230b98ba009dde20d0685"
     },
     {
       "file": "Russian-7.webp",
-      "bytes": 184428,
+      "bytes": 193938,
       "width": 1280,
-      "height": 960,
+      "height": 1056,
       "clippedFrames": 0,
-      "sha256": "30c65e42e0b9f83375b2b568a85805340e2e18dd6be46a42f399e113ae5d6ed2"
+      "sha256": "1cbac025596b1410fac9203b53e32a4ba01c32dd098fe08d612af423b9e9cea0"
     },
     {
       "file": "USMC-LMG-0.webp",
-      "bytes": 90470,
+      "bytes": 94912,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "3ebacb2f2a26b68c82d435c39085c6c3588df218f8938c4be81abce5c205b863"
+      "sha256": "cac51719be581a6f2a0cf155daefb0e9d311a21d629b0c63c012cfaa194fe021"
     },
     {
       "file": "USMC-LMG-1.webp",
-      "bytes": 81988,
+      "bytes": 85912,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "4b6b6728015ef57e1de129dfa04b5fe0e24170e7ffd9a917395775bf92b98fe2"
+      "sha256": "f87338909838d8038e04de4b42ac81392e478f55de7998e35f41fa38261cd6b0"
     },
     {
       "file": "USMC-LMG-2.webp",
-      "bytes": 91698,
+      "bytes": 95810,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "37bd5bf49bf111d5fa203722c84aff6139b7a1ed5b4a1bc4bcc35460a413bc27"
+      "sha256": "f1da69809cb680d8e4fdb0904c0ac478497b91505e194e71aec3257eff843397"
     },
     {
       "file": "USMC-LMG-3.webp",
-      "bytes": 94106,
+      "bytes": 98476,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "25c2bfebb60759f4d6b71bbab96d5a3b024f9aa43d17a6cbad2ccbca3742ee0c"
+      "sha256": "28195334cb136521c652b4c9b40708b109d1380b0901f2f52c7a4b98ebdb9354"
     },
     {
       "file": "USMC-LMG-4.webp",
-      "bytes": 90196,
+      "bytes": 94304,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "f71067d8c16eaac2b6a4309449118fc7aab06a9d9912b3277928f5707f035cc8"
+      "sha256": "6249a4b589a4cc59e1c353a439af638baa132bf0833767ea10d76b271a3da1ae"
     },
     {
       "file": "USMC-LMG-5.webp",
-      "bytes": 82864,
+      "bytes": 86468,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "97537295122d8ad893f391a372e444fcffd649745f015cdd6813e60d5addd27b"
+      "sha256": "5c099d04d0447c8681690ad43e21efa104de2667be18aea5f922f9dba9628663"
     },
     {
       "file": "USMC-LMG-6.webp",
-      "bytes": 89860,
+      "bytes": 93670,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "95119e1a2eede8c5a0fd6073cd0b7af7f827bb9c3b69b7f801256d085ab15ebf"
+      "sha256": "ec6ce1d671f10fd5310955bd0834c6c5847bc1cd62da6b8bde0245d64e09ba00"
     },
     {
       "file": "USMC-LMG-7.webp",
-      "bytes": 93074,
+      "bytes": 97458,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "033b99523e6eaa8a3888bdd084266a55a3905c4b74024fe23b5b35f45c5acf40"
+      "sha256": "bcdda48c1664219a8e4bd91fe89085bcf9529427dd0594fc514f0396606b6591"
     },
     {
       "file": "Russian-LMG-0.webp",
-      "bytes": 87820,
+      "bytes": 91978,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "1b8db7c4f7bbed13b8094a64e28c51ab05d9003f3943a323fdfc94f357c06414"
+      "sha256": "c2423f94aee5ae883c23370bc6e27391b4c2dbf08dae001d0f79990a4014fac6"
     },
     {
       "file": "Russian-LMG-1.webp",
-      "bytes": 78720,
+      "bytes": 82412,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "4d8caec11bbbeda53b616b84a2bdef56d19a682e80f8d187b11a4c38efd692a1"
+      "sha256": "468dddb25fc0a6fae6152ccfbf84d98708d01d05411084e449dc8d815c847907"
     },
     {
       "file": "Russian-LMG-2.webp",
-      "bytes": 87576,
+      "bytes": 91544,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "81f2b01033aa7c28ea42e372b7d99df9436ea6c1edf83ae07c91282d4ff12056"
+      "sha256": "62c4562e515456a708f4b7f07bd2a8eca6b3ead62ccc70dfcec235766b1fc685"
     },
     {
       "file": "Russian-LMG-3.webp",
-      "bytes": 90656,
+      "bytes": 94864,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "751f59eb02a17112149e422e1e66baf33ab9dfeb7ce167fa62062d62ce8a92bb"
+      "sha256": "8be434850836e797999a47c25e476d1758db59866429b54963ea44a7dd04cdea"
     },
     {
       "file": "Russian-LMG-4.webp",
-      "bytes": 85260,
+      "bytes": 89132,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "e10703c29d053deb5d54f7cf6cf8cb8bf249335a32b015c2f5b9998549cec686"
+      "sha256": "8a361910e073c8e7b5ddb31852326f1d2b23a1f560305af5f67faec3c7f3de9f"
     },
     {
       "file": "Russian-LMG-5.webp",
-      "bytes": 78402,
+      "bytes": 81780,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "a8999799d5e675af10bb54371b3b2eb31e4a377f6c4035833f1e812804f690bc"
+      "sha256": "3f23ec646fe151e7ebdc9bb0f5569bac0f02f730d35885625d320c61b4ec554f"
     },
     {
       "file": "Russian-LMG-6.webp",
-      "bytes": 85718,
+      "bytes": 89416,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "eeb4fb1c08a843a231ec86448d3dfacf434ae91d230973489c9f35fb1a543314"
+      "sha256": "613781cacb926188a025ed344ae4d34b15cf01472d850201326b1e75f40780ed"
     },
     {
       "file": "Russian-LMG-7.webp",
-      "bytes": 90064,
+      "bytes": 94354,
       "width": 1280,
       "height": 576,
       "clippedFrames": 0,
-      "sha256": "05dc027f454126a10f9bf34f71a9b76832b22b97df9367337a31d9da8c139405"
+      "sha256": "4484dfabf87c35c0b68c6141154641c67ee329c3b36aeca01d64b2a3c698daa1"
+    },
+    {
+      "file": "TacticalSuit-0.webp",
+      "bytes": 40394,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "75f1276d9c85ef3b734e26d567d12a2fce859e69a38bbc0719d81b28179d0431"
+    },
+    {
+      "file": "TacticalSuit-1.webp",
+      "bytes": 38558,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "81470bdbcc4116aa3b5c1b20d91e04ce61054741eab7dbec0bebbcd7090c7f59"
+    },
+    {
+      "file": "TacticalSuit-2.webp",
+      "bytes": 39344,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "48816c2b6baad347d3bf5358b1b6e9786772474d2b83a3619260328bd7b82c2f"
+    },
+    {
+      "file": "TacticalSuit-3.webp",
+      "bytes": 42354,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "a0d69b8a175998a1ff880f74b6a5db5ee9eb200c138143c41f3cc28237897c10"
+    },
+    {
+      "file": "TacticalSuit-4.webp",
+      "bytes": 42142,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "2f8ae2d8a0f48b4c6632ffdae2876721b4d0b82e933eb9fe5bddaea3d42c592f"
+    },
+    {
+      "file": "TacticalSuit-5.webp",
+      "bytes": 40414,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "580daee88e8dc3ff614858c2dbebba30e9ab2373cee5ec88dff6f7371a3511d6"
+    },
+    {
+      "file": "TacticalSuit-6.webp",
+      "bytes": 40190,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "2ed95db7c7661af43248b1a84ef148c60ef64ed8ab976a0398627245c8fc423e"
+    },
+    {
+      "file": "TacticalSuit-7.webp",
+      "bytes": 41302,
+      "width": 1280,
+      "height": 288,
+      "clippedFrames": 0,
+      "sha256": "49b70ccf25b7b6fed1b8a0b311d5c0e171d540864571ba4a0c9bd342f4e06ff6"
     }
   ]
 }

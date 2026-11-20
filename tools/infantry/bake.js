@@ -1,9 +1,10 @@
 import * as T from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {InfantryAnimator} from '../../assets-3d/infantry-animation-integration/preview/controller.js';
 import {makeRecoilActions} from './motion-system.js';
 // The lower and upper masks are composed in 3D before baking. Shot frames sample
 // additive recoil at the SAME gait phase; switching them never resets the feet.
-const sequences={
+const originalSequences={
  Idle:['Lower_Idle','FB_LowReady_Upper',4],
  Aim:['Lower_AimStance','FB_AimIdle_Upper',4],
  Walk:['FB_Walk_Lower','FB_Walk_Upper',16],
@@ -14,13 +15,16 @@ const sequences={
  Fire:['Lower_AimStance','FB_AimIdle_Upper',4,'recoil'],
  Reload:['FB_Reload_Lower','FB_Reload_Upper',32,'once'],
  Raise:['Lower_AimStance','Weapon_Raise',8,'once'],
+ Start:['Start_Walk','FB_Walk_Upper',8,'once'],
  Stop:['Stop_Walk','FB_LowReady_Upper',8,'once'],
  TurnLeft:['Turn_Left','Upper_Turn_Left',8,'once'],
  TurnRight:['Turn_Right','Upper_Turn_Right',8,'once'],
 };
 const width=80,height=96,cols=16;
 window.bakeFaction=async (faction,lmg=false,anchorsOnly=false)=>{
- const gltf=await new GLTFLoader().loadAsync(`/assets-3d/sprint-rebuild/models/${faction}_SprintReview.glb`);
+ const suit=faction==='TacticalSuit',sequences=suit?{Idle:['SU_Project_Idle_Rifle',null,4],Walk:['SU_Quaternius_Walk_Rifle',null,16],Sprint:['SU_Project_TacticalSprint_Rifle',null,16]}:originalSequences;
+ const gltf=await new GLTFLoader().loadAsync(suit?'/assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb':`/assets-3d/sprint-rebuild/models/${faction}_SprintReview.glb`);
+ if(suit){const adapter=new InfantryAnimator(gltf.scene,gltf.animations,'TacticalSuit');gltf.animations=[...adapter.clips.values()];adapter.mixer.stopAllAction();adapter.mixer.uncacheRoot(gltf.scene);}
  const model=gltf.scene,scene=new T.Scene();scene.add(model);
  if(lmg)for(const name of ["Weapon","Magazine","SpareMagazine"])model.getObjectByName(name).visible=false;
  scene.add(new T.HemisphereLight(0xc4d8ee,0x434232,1.2));
@@ -30,9 +34,9 @@ window.bakeFaction=async (faction,lmg=false,anchorsOnly=false)=>{
  const frameCount=Object.values(sequences).reduce((n,s)=>n+(lmg?Math.max(4,s[2]/2):s[2]),0),rows=Math.ceil(frameCount/cols);
  const renderer=new T.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});renderer.setPixelRatio(1);renderer.setSize(cols*width,rows*height);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.setClearColor(0,0);
  const mixer=new T.AnimationMixer(model),clips=new Map(gltf.animations.map(c=>[c.name,c]));
- const recoil=makeRecoilActions(mixer,clips,true)[0];
+ const recoil=suit?null:makeRecoilActions(mixer,clips,true)[0];
  const anchor=new T.Vector3(0,0,0).project(camera);
- const manifest={faction,weapon:faction==='USMC'?'M16A4':'AK-74M',width,height,cols,rows,standingHeight:1.8*Math.cos(Math.PI/6)/3.2*height,anchor:[(anchor.x+1)*width/2,(1-anchor.y)*height/2],sequences:{},sheets:[],muzzles:[],grips:[]};
+ const manifest={faction,weapon:faction==='Russian'?'AK-74M':'M16A4',width,height,cols,rows,standingHeight:1.8*Math.cos(Math.PI/6)/3.2*height,anchor:[(anchor.x+1)*width/2,(1-anchor.y)*height/2],sequences:{},sheets:[],muzzles:[],grips:[]};
  const sheets=[];
  for(let heading=0;heading<8;heading++){
   model.rotation.y=Math.PI/2-heading*Math.PI/4;
@@ -42,13 +46,13 @@ window.bakeFaction=async (faction,lmg=false,anchorsOnly=false)=>{
   for(const [name,[lo,up,originalCount,kind]] of Object.entries(sequences)){
    const count=lmg?Math.max(4,originalCount/2):originalCount;
    mixer.stopAllAction();
-   const lower=mixer.clipAction(clips.get(lo)).reset().play(),upper=mixer.clipAction(clips.get(up)).reset().play();
+   const lower=mixer.clipAction(clips.get(lo)).reset().play(),upper=up?mixer.clipAction(clips.get(up)).reset().play():null;
    const duration=kind==='once'?clips.get(up==='FB_LowReady_Upper'?lo:up).duration:clips.get(lo).duration;
    if(kind==='recoil')recoil.reset().play();
    manifest.sequences[name]={offset,count,duration,lower:lo,upper:up,loop:kind!=='once'};
    for(let frame=0;frame<count;frame++){
     const t=duration*frame/(kind==='once'?count-1:count);
-    lower.time=Math.min(t,clips.get(lo).duration-.0001);upper.time=kind==='once'?Math.min(t,clips.get(up).duration-.0001):t/clips.get(lo).duration*clips.get(up).duration;
+    lower.time=Math.min(t,clips.get(lo).duration-.0001);if(upper)upper.time=kind==='once'?Math.min(t,clips.get(up).duration-.0001):t/clips.get(lo).duration*clips.get(up).duration;
     if(kind==='recoil')recoil.time=.055;
     model.rotation.y=Math.PI/2-heading*Math.PI/4;
     if(name==='TurnLeft'||name==='TurnRight')model.rotation.y-=(name==='TurnLeft'?1:-1)*Math.PI/4*t/duration;

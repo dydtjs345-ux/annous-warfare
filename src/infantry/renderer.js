@@ -2,10 +2,10 @@ import {observeInfantry} from './state.js';
 const base=(import.meta.env.BASE_URL||'/')+'assets/infantry-test/';
 export function preloadInfantry(scene){
  scene.load.json('infantry-manifest',base+'manifest.json');
- for(const faction of ['USMC','Russian','USMC-LMG','Russian-LMG'])for(let h=0;h<8;h++)scene.load.spritesheet(`infantry-${faction}-${h}`,base+`${faction}-${h}.webp`,{frameWidth:80,frameHeight:96});
+ for(const faction of [...['USMC','Russian','USMC-LMG','Russian-LMG'],...(new URLSearchParams(location.search).get('model')==='suit'?['TacticalSuit']:[])])for(let h=0;h<8;h++)scene.load.spritesheet(`infantry-${faction}-${h}`,base+`${faction}-${h}.webp`,{frameWidth:80,frameHeight:96});
 }
 export class InfantryRenderer{
- constructor(scene){this.scene=scene;this.manifest=scene.cache.json.get('infantry-manifest');this.records=[];this.states=[];this.images=[];this.ghosts=[];this.previous=[];this.anchors=new Map();this.enabled=true;this.sprint='new';this.frames=[];this.loadMs=performance.now();}
+ constructor(scene){this.scene=scene;this.manifest=scene.cache.json.get('infantry-manifest');this.records=[];this.states=[];this.images=[];this.ghosts=[];this.previous=[];this.anchors=new Map();this.enabled=true;this.sprint='new';this.external=new URLSearchParams(location.search).get('model')==='suit';this.frames=[];this.readyAtMs=performance.now();}
  update(b,models,effects,motion,clock,delta){
   if(this.battle!==b){this.battle=b;this.records=b.units.map(()=>({}));this.anchors.clear();this.previous=[];}
   this.frames.push(delta);if(this.frames.length>240)this.frames.shift();
@@ -14,10 +14,13 @@ export class InfantryRenderer{
  }
  draw(g,b,u,m,fx,p,view,selected){
   const state=this.states[u.id];if(!state)return false;
-  if(!this.enabled){state.visible=false;state.fallback='manual low-memory renderer';return false;}
-  if(state.fallback || u.role==='LMG' && state.animation==='Reload'){state.visible=false;if(u.role==='LMG')state.fallback='LMG reload source unavailable';return false;}
-  const faction=u.team?'Russian':'USMC',variant=faction+(u.role==='LMG'?'-LMG':''),meta=this.manifest?.factions[variant],seq=meta?.sequences[state.animation],key=`infantry-${variant}-${state.direction}`;
-  if(!seq||!this.scene.textures.exists(key)){state.fallback='asset load failed';return false;}
+  if(!this.enabled){state.visible=false;state.fallback='manual low-memory renderer';state.model='기존 2D 렌더러';return false;}
+  if(state.fallback || u.role==='LMG' && state.animation==='Reload'){state.visible=false;state.model='기존 2D 렌더러 · '+(u.team?'Russian':'USMC');if(!state.fallback&&u.role==='LMG')state.fallback='LMG reload source unavailable';return false;}
+  const faction=u.team?'Russian':'USMC';
+  const suit=this.external&&!u.team&&u.role!=='LMG';
+  if(suit&&!['Idle','Walk','Sprint'].includes(state.animation)){state.visible=false;state.model='기존 2D USMC · 수트 미지원 동작';state.fallback='외부 수트 '+state.animation+' 클립 없음';return false;}
+  const variant=suit?'TacticalSuit':faction+(u.role==='LMG'?'-LMG':''),meta=this.manifest?.factions[variant],seq=meta?.sequences[state.animation],key=`infantry-${variant}-${state.direction}`;
+  if(!seq||!this.scene.textures.exists(key)){state.visible=false;state.model='기존 2D 렌더러';state.fallback='asset load failed';return false;}
   const frame=seq.offset+Math.min(seq.count-1,Math.floor(state.phase*seq.count));
   let image=this.images[u.id];if(!image)image=this.images[u.id]=this.scene.add.image(0,0,key).setOrigin(meta.anchor[0]/80,meta.anchor[1]/96);
   g.setDepth((view.x+view.y)*100+.04);
@@ -64,8 +67,9 @@ export class InfantryRenderer{
   while(this.anchors.size>96)this.anchors.delete(this.anchors.keys().next().value);
   if(u.suppression>.1){g.lineStyle(1,0xf3c875,.3+.6*u.suppression);g.strokeEllipse(p.x,p.y+2,25,12);}
   if(fx.hit>0)image.setTint(0xffb3a0);else image.clearTint();
+  if(suit)state.model='Military tactical suit (DanlyVostok) · M16A4';
   Object.assign(state,{visible:true,faction,frame,texture:key,scale,muzzle,grip});return true;
  }
  shotAnchor(id){return this.anchors.get(id)??null;}
- snapshot(){const sorted=this.frames.slice().sort((a,b)=>a-b),sum=this.frames.reduce((a,b)=>a+b,0);return {method:'pre-rendered isometric GLB atlases',enabled:this.enabled,sprint:this.sprint,loadMs:this.loadMs,fps:sum?1000*this.frames.length/sum:0,p95FrameMs:sorted[Math.floor(sorted.length*.95)]??0,units:this.states.map(s=>({...s})),sourceHashes:this.manifest?.sourceHashes};}
+ snapshot(){const sorted=this.frames.slice().sort((a,b)=>a-b),sum=this.frames.reduce((a,b)=>a+b,0);return {method:'pre-rendered isometric GLB atlases',enabled:this.enabled,sprint:this.sprint,readyAtMs:this.readyAtMs,fps:sum?1000*this.frames.length/sum:0,p95FrameMs:sorted[Math.floor(sorted.length*.95)]??0,units:this.states.map(s=>({...s})),sourceHashes:this.manifest?.sourceHashes};}
 }
