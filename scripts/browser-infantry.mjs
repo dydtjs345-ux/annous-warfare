@@ -12,6 +12,7 @@ for(const engine of ['chromium','webkit']){
 let browser;try{browser=await pw[engine].launch(engine==='chromium'?{executablePath:'/usr/bin/chromium',args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']}:{headless:true});}catch(e){report.cases.push({engine,blocked:e.message});continue;}
 try{
 const errors=[],requests=[],page=await browser.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:1});page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>requests.push({url:r.url(),error:r.failure()}));
+if(process.env.AW_SITE_AUTH)await page.route(origin+'**',route=>route.continue({headers:{...route.request().headers(),'OAI-Sites-Authorization':'Bearer '+process.env.AW_SITE_AUTH}}));
 const started=Date.now();await page.goto(origin+'?seed=7');await page.waitForFunction(()=>window.awSnapshot?.().infantry?.units.length===12,{timeout:60000});const loadWallMs=Date.now()-started;
 await page.locator('#pause').click();
 // Map view includes both squads at their genuine spawn positions.

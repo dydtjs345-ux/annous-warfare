@@ -1,0 +1,66 @@
+{
+  "url": "https://autonomous-warfare-complete-infantry.companionablejellyfish2.chatgpt.site/",
+  "physicalIPhone": false,
+  "desktopSoftwareRenderer": true,
+  "profiles": [
+    {
+      "profile": "USMC",
+      "states": [
+        "Reload",
+        "MovingFire",
+        "CrouchWalk",
+        "CrawlTorsoReview",
+        "IdleToSprint"
+      ],
+      "renderedFrames": "27"
+    },
+    {
+      "profile": "Russian",
+      "states": [
+        "Aim",
+        "Reload",
+        "ProneFire"
+      ],
+      "renderedFrames": "26"
+    },
+    {
+      "profile": "TacticalSuit",
+      "states": [
+        "Walk",
+        "TacticalSprint",
+        "EmergencyRetreat",
+        "CrouchWalk"
+      ],
+      "renderedFrames": "30"
+    },
+    {
+      "profile": "CoverM16",
+      "states": [
+        "M16A4_Stand_LeftFire",
+        "M16A4_Crouch_LowFire"
+      ],
+      "renderedFrames": "20"
+    },
+    {
+      "profile": "CoverAK",
+      "states": [
+        "AK74M_Stand_RightFire",
+        "AK74M_Crouch_LowFire"
+      ],
+      "renderedFrames": "23"
+    }
+  ],
+  "overviewRenderedSoldiers": 12,
+  "overview": {
+    "x": 149,
+    "y": -98,
+    "width": 2022,
+    "height": 1267,
+    "zoom": 0.544
+  },
+  "manualDoesNotMutatePausedCombat": true,
+  "suitVisibleUnits": 5,
+  "errors": [],
+  "failedRequests": [],
+  "passed": true
+}

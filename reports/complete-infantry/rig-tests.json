@@ -313,6 +313,7 @@
           ]
         }
       ],
+      "rootVelocities": {},
       "sameStateContinuous": true,
       "noBlindFire": true
     },
@@ -628,6 +629,7 @@
           ]
         }
       ],
+      "rootVelocities": {},
       "sameStateContinuous": true,
       "noBlindFire": true
     },
@@ -671,6 +673,16 @@
           ]
         }
       ],
+      "rootVelocities": {
+        "SU_Quaternius_Walk_Rifle": 0.9091894575069297,
+        "SU_Quaternius_Sprint_Rifle": 7.693144192215685,
+        "SU_Project_TacticalSprint_Rifle": 0,
+        "SU_Project_Idle_Rifle": 0,
+        "P2_Legacy_CrouchIdle_Rifle": 0,
+        "P2_Legacy_CrouchWalk_Rifle": 0,
+        "P2_Quaternius_CrouchIdle_Rifle": 0,
+        "P2_Quaternius_CrouchWalk_Rifle": 0.699376829965188
+      },
       "sameStateContinuous": true,
       "noBlindFire": true
     },

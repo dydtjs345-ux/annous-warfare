@@ -5,3 +5,10 @@ for(const [dead,active,expected]of [[true,false,'dead'],[false,false,'incapacita
 const hurt=observeInfantry({},unit(),{...model,pose:'limping',limp:true},{},{},1,{});assert.equal(hurt.fallback,'injury movement');assert.notEqual(hurt.animation,'Sprint');
 const u=unit();Object.assign(u.presentation,{reloading:false,direct:false,brisk:false});u.state='Moving';const record={};const m={...model,pose:'idle',moving:false,flash:false};observeInfantry({},u,m,{},{},0,record);m.moving=true;m.pose='walking';assert.equal(observeInfantry({},u,m,{},{},.1,record).animation,'Start');const mid=observeInfantry({},u,m,{},{},.3,record);assert.equal(mid.animation,'Start');assert.ok(mid.phase>.3);assert.equal(observeInfantry({},u,m,{},{},.8,record).animation,'Walk');
 console.log('Terminal priority, injury fallback, stable start transition passed');
+// The smaller external rig must complete one gait cycle per native stride,
+// independently of render frame count and of the original faction stride.
+const suitUnit=unit();suitUnit.state='Moving';Object.assign(suitUnit.presentation,{direct:false,reloading:false,brisk:false});
+const suitRecord={},suitModel={pose:'walking',moving:true,renderStride:0,flash:false};const stride=1.212252646141;
+observeInfantry({},suitUnit,suitModel,{}, {},0,suitRecord,'new',{Walk:stride});suitModel.renderStride=stride*.25*Math.PI*2;
+assert.ok(Math.abs(observeInfantry({},suitUnit,suitModel,{}, {},.1,suitRecord,'new',{Walk:stride}).phase-.25)<1e-8);
+console.log('External rig distance-to-native-stride synchronization passed');

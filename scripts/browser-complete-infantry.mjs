@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';import {writeFile,mkdir} from 'node:fs/promises';
+const {chromium}=await import(process.env.AW_PLAYWRIGHT_MODULE||'/opt/codex/cua_node/lib/node_modules/playwright/index.mjs');
+const origin=process.env.AW_TEST_URL;if(!origin)throw Error('Set AW_TEST_URL to the verified separate preview URL');
+const out='reports/complete-infantry';await mkdir(out,{recursive:true});const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const report={url:origin,physicalIPhone:false,desktopSoftwareRenderer:true,profiles:[]};
+try{const page=await browser.newPage({viewport:{width:1100,height:950},deviceScaleFactor:1}),errors=[],failed=[];page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push({url:r.url(),error:r.failure()}));
+if(process.env.AW_SITE_AUTH)await page.route(origin+'**',route=>route.continue({headers:{...route.request().headers(),'OAI-Sites-Authorization':'Bearer '+process.env.AW_SITE_AUTH}}));
+await page.goto(origin+'?seed=7');await page.waitForFunction(()=>window.awSnapshot?.().infantry?.units.length===12,{timeout:60000});await page.locator('#pause').click();
+await page.locator('#focus').click();await page.locator('#focus').click();await page.waitForTimeout(300);
+const before=await page.evaluate(()=>awSnapshot());assert.equal(before.units.length,12);report.overviewRenderedSoldiers=before.infantry.units.filter(s=>s.visible).length;report.overview=before.view;
+await page.locator('#animation-inspector summary').click();await page.locator('#animation-soldier').selectOption('11');await page.waitForFunction(()=>document.querySelector('#animation-current').textContent.includes('Russian'));
+for(const [profile,states]of Object.entries({USMC:['Reload','MovingFire','CrouchWalk','CrawlTorsoReview','IdleToSprint'],Russian:['Aim','Reload','ProneFire'],TacticalSuit:['Walk','TacticalSprint','EmergencyRetreat','CrouchWalk'],CoverM16:['M16A4_Stand_LeftFire','M16A4_Crouch_LowFire'],CoverAK:['AK74M_Stand_RightFire','AK74M_Crouch_LowFire']})){
+await page.locator('#animation-profile').selectOption(profile);await page.waitForFunction(state=>Array.from(document.querySelector('#animation-clip').options).some(o=>o.value===state),states[0]);assert.equal(await page.locator('#animation-clip option').evaluateAll(opts=>opts.filter(o=>/Blind/.test(o.value)).length),0);
+await page.locator('#animation-clip').selectOption(states[0]);await page.locator('#animation-load').click();await page.waitForFunction(p=>document.querySelector('#animation-viewport').dataset.profile===p&&Number(document.querySelector('#animation-viewport').dataset.renderedFrames)>5,profile,{timeout:60000});
+for(const state of states){await page.locator('#animation-clip').selectOption(state);await page.waitForFunction(s=>document.querySelector('#animation-viewport').dataset.state===s,state);await page.waitForTimeout(250);assert(!/실패|누락/.test(await page.locator('#animation-manual-status').textContent()));}
+await page.locator('#animation-viewport').scrollIntoViewIfNeeded();await page.locator('#animation-viewport').screenshot({path:`${out}/${profile}-model.png`});await page.screenshot({path:`${out}/${profile}-manual.png`});report.profiles.push({profile,states,renderedFrames:await page.locator('#animation-viewport').getAttribute('data-rendered-frames')});await page.locator('#animation-return').click();assert.equal(await page.locator('#animation-viewport canvas').count(),0);
+}
+const after=await page.evaluate(()=>awSnapshot());assert.equal(after.time,before.time);const combatOnly=units=>units.map(({screenX,screenY,...u})=>u);assert.deepEqual(combatOnly(after.units),combatOnly(before.units));report.manualDoesNotMutatePausedCombat=true;
+await page.locator('#animation-inspector summary').click();await page.setViewportSize({width:390,height:844});
+await page.screenshot({path:`${out}/phone-default.png`});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+await page.locator('#infantry-model').selectOption('suit');await page.waitForFunction(()=>window.awSnapshot?.().infantry?.units.some(u=>u.visible&&u.model.startsWith('Military tactical suit')),{timeout:60000});const suit=await page.evaluate(()=>awSnapshot());report.suitVisibleUnits=suit.infantry.units.filter(u=>u.visible&&u.model.startsWith('Military tactical suit')).length;assert(report.suitVisibleUnits>0);assert(suit.infantry.units.slice(6).every(u=>!u.model.startsWith('Military tactical suit')));await page.screenshot({path:`${out}/phone-suit.png`});
+report.errors=errors;report.failedRequests=failed;assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);report.passed=true;
+}finally{await browser.close();await writeFile(`${out}/browser.json`,JSON.stringify(report,null,2)+'\n');}
+console.log(JSON.stringify(report,null,2));

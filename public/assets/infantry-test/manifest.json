@@ -21686,7 +21686,8 @@
           "duration": 1.3333333730697632,
           "lower": "SU_Quaternius_Walk_Rifle",
           "upper": null,
-          "loop": true
+          "loop": true,
+          "strideM": 1.2122526461371828
         },
         "Sprint": {
           "offset": 20,
@@ -21694,7 +21695,8 @@
           "duration": 0.6666666865348816,
           "lower": "SU_Project_TacticalSprint_Rifle",
           "upper": null,
-          "loop": true
+          "loop": true,
+          "strideM": 2.1038829009567097
         }
       },
       "sheets": [

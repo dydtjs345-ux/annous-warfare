@@ -9,7 +9,7 @@ export class InfantryRenderer{
  update(b,models,effects,motion,clock,delta){
   if(this.battle!==b){this.battle=b;this.records=b.units.map(()=>({}));this.anchors.clear();this.previous=[];}
   this.frames.push(delta);if(this.frames.length>240)this.frames.shift();
-  this.states=b.units.map(u=>observeInfantry(b,u,models[u.id],effects[u.id],motion.position(u),clock,this.records[u.id],this.sprint));
+  this.states=b.units.map(u=>observeInfantry(b,u,models[u.id],effects[u.id],motion.position(u),clock,this.records[u.id],this.sprint,this.external&&!u.team&&u.role!=='LMG'?Object.fromEntries(Object.entries(this.manifest?.factions.TacticalSuit?.sequences||{}).filter(([,s])=>s.strideM).map(([k,s])=>[k,s.strideM])):{}));
   this.images.forEach(i=>i?.setVisible(false));this.ghosts.forEach(i=>i?.setVisible(false));
  }
  draw(g,b,u,m,fx,p,view,selected){

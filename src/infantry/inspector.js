@@ -4,7 +4,8 @@ export function attachInspector(scene){
  for(const u of scene.battle.units)select.add(new Option(`${u.team?'러시아':'미 해병'} #${u.id} · ${u.role}`,u.id));
  let view=null,loading=null,generation=0;
  const update=()=>{if(!panel.open)return;const s=scene.infantry.states[Number(select.value)];if(!s)return;const suit=s.model?.startsWith('Military tactical suit');const meta=scene.infantry.manifest?.factions[suit?'TacticalSuit':s.faction|| (Number(select.value)<6?'USMC':'Russian')]?.sequences[s.animation];
- $('animation-current').textContent=`현재 모델: ${s.model}\n실제 상태: ${s.aiState} / ${s.trigger}\n요청 동작: ${s.requestedAnimation}\n실제 표시: ${s.fallback?'기존 2D · '+s.fallback:s.animation}\n클립: ${meta&&!s.fallback?meta.lower+(meta.upper?' + '+meta.upper:''):'해당 3D 클립 없음'}\n출처: ${s.fallback?'src/main.js · drawSoldier / main b381e60':suit?'실제 외부 수트 cc66fec; 보행 Quaternius UAL1 CC0; SR 리타기팅 420a055':'Sprint: 66d3892; 기타: 5481fc8 / a93cbae'}\n검토: ${s.visualStatus}\n수동 검사: 별도 복제 모델 · 전투 미변경`;
+ $('animation-current').textContent=`현재 모델: ${s.model}\n실제 상태: ${s.aiState} / ${s.trigger}\n요청 동작: ${s.requestedAnimation}\n실제 표시: ${s.fallback?'기존 2D · '+s.fallback:s.animation}\n클립: ${meta&&!s.fallback?meta.lower+(meta.upper?' + '+meta.upper:''):'해당 3D 클립 없음'}\n출처: ${s.fallback?'src/combat-visuals.js · drawUnit / main b381e60':suit?'실제 외부 수트 cc66fec; 보행 Quaternius UAL1 CC0; SR 리타기팅 420a055':'Sprint: 66d3892; 기타: 5481fc8 / a93cbae'}\n검토: ${s.visualStatus}\n수동 검사: 별도 복제 모델 · 전투 미변경`;
+ if(view)$('animation-manual-status').textContent='수동 전용 · '+view.describe();
  };
  scene.time.addEvent({delay:250,loop:true,callback:update});select.onchange=update;panel.ontoggle=()=>{update();if(!panel.open)close();};
  async function init(){if(!loading)loading=import('./manual-viewer.js');return loading;}
