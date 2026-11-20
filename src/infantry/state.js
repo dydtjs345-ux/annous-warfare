@@ -32,6 +32,6 @@ export function observeInfantry(b,u,m,fx,view,clock,record={},sprint='new',strid
  const stride=strides[animation]??(animation==='Sprint'?2.4:animation==='OldSprint'?2.4:(animation==='AimWalk'||animation==='MovingFire') ? 0.744 : 1.26);
  const traveled=record.lastDistance==null?distance:Math.max(0,distance-record.lastDistance);
  record.lastDistance=distance;record.gaitPhase=((record.gaitPhase??0)+traveled/stride)%1;
- const phase=record.transition?(now-record.started)/({Start:.6,Stop:.6,Raise:.8,TurnLeft:.9,TurnRight:.9}[record.transition]):moving?record.gaitPhase:animation==='Reload'?(m.renderReloadProgress??p.reloadProgress):now/2.4%1;
+ const phase=record.transition?(now-record.started)/({Start:.6,Stop:.6,Raise:.8,TurnLeft:.9,TurnRight:.9}[record.transition]):animation==='Reload'?(m.renderReloadProgress??p.reloadProgress):moving?record.gaitPhase:now/2.4%1;
  return {animation,base:record.base,heading,direction:((Math.round(heading/(Math.PI/4))%8)+8)%8,phase:Math.max(0,Math.min(.999999,phase)),moving,shot,fallback,aiState:u.state,speed:p.speed,brisk:!!p.brisk,reloadProgress:p.reloadProgress,weapon:u.role==='LMG'?'legacy LMG':u.team?'AK-74M':'M16A4',requestedAnimation:terminal||animation,model:u.team?'Russian shared-rig / AK-74M':'USMC shared-rig / M16A4',sprintApproval:'SR preserved; external retarget approved in 420a055; original SR user sign-off not recorded',trigger:terminal||m.pose||u.state,visualStatus:fallback?'기존 렌더러 대체 · 해당 3D 클립 없음':animation==='Sprint'?'보존 SR 검증본 · 원본 사용자 승인 기록 없음':'기존 검증 클립'};
 }

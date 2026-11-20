@@ -64,6 +64,8 @@ npm run build:complete-infantry
 npm run preview:infantry
 ```
 
-Development entry is `/infantry-test.html`; production preview root is `dist-infantry/index.html`. `?model=suit` explicitly selects partial external Suit support, while `?quality=legacy` skips every infantry atlas. The unchanged original source `index.html` is retained. Runtime code tested and deployed is commit `987218b39d95b887e41d4f8ece7b63517c35a0df`; later delivery commits add reports/test tooling and these launch aliases without changing runtime assets.
+Development entry is `/infantry-test.html`; production preview root is `dist-infantry/index.html`. `?model=suit` explicitly selects partial external Suit support, while `?quality=legacy` skips every infantry atlas. The unchanged original source `index.html` is retained. Runtime code tested and deployed is commit `c8a3c2d82ce11d1a4dd5ed6472b771382396e428`; later delivery commits add reports/test tooling and these launch aliases without changing runtime assets.
 
 The final Start composition uses the preserved lower clip's 0.6-second duration, rather than the 1.2-second walking upper layer's period. Only Start atlas cells were recomposed; other source motions and other atlas cells are preserved. Manual Start/Stop finish on their lower transition clip and return to locomotion/idle without an extra upper-loop hold. This is a playback/composition correction, not newly authored motion.
+
+Reload phase has priority over gait phase, including when existing AI movement and reloading overlap. The real interpolated reload counter drives the weapon/magazine composition; moving feet cannot advance or restart a reload. A targeted regression covers this overlap. Combat behavior and timing remain unchanged.

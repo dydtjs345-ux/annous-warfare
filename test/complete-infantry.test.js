@@ -17,3 +17,6 @@ console.log('External rig distance-to-native-stride synchronization passed');
 const atlas=JSON.parse(readFileSync(new URL('../public/assets/infantry-test/manifest.json',import.meta.url)));
 for(const name of ['USMC','Russian','USMC-LMG','Russian-LMG'])assert.ok(Math.abs(atlas.factions[name].sequences.Start.duration-.6)<1e-6,'Start must not hold its lower pose for an extra walking-upper cycle');
 console.log('All faction Start atlas timings match the preserved 0.6-second source');
+
+const movingReload=observeInfantry({},unit(),{...model,renderReloadProgress:.37},{},{},1,{});assert.equal(movingReload.animation,'Reload');assert.equal(movingReload.phase,.37,'A moving soldier must use actual reload progress, not stride phase');
+console.log('Moving reload remains synchronized to the actual reload counter');
