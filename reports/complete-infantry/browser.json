@@ -12,7 +12,7 @@
         "CrawlTorsoReview",
         "IdleToSprint"
       ],
-      "renderedFrames": "27"
+      "renderedFrames": "25"
     },
     {
       "profile": "Russian",
@@ -21,7 +21,7 @@
         "Reload",
         "ProneFire"
       ],
-      "renderedFrames": "26"
+      "renderedFrames": "23"
     },
     {
       "profile": "TacticalSuit",
@@ -31,7 +31,7 @@
         "EmergencyRetreat",
         "CrouchWalk"
       ],
-      "renderedFrames": "30"
+      "renderedFrames": "26"
     },
     {
       "profile": "CoverM16",
@@ -47,9 +47,17 @@
         "AK74M_Stand_RightFire",
         "AK74M_Crouch_LowFire"
       ],
-      "renderedFrames": "23"
+      "renderedFrames": "20"
     }
   ],
+  "build": {
+    "branch": "integration/complete-infantry-visual-system",
+    "sourceCommit": "987218b39d95b887e41d4f8ece7b63517c35a0df",
+    "simulationBase": "b381e6017d01fa34f14e889ff639347db9e5feae",
+    "modelSource": "66d3892",
+    "build": "infantry-6v6-test",
+    "sprint": "candidate awaiting visual approval"
+  },
   "overviewRenderedSoldiers": 12,
   "overview": {
     "x": 149,

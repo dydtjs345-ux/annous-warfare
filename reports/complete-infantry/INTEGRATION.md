@@ -48,8 +48,22 @@ Chromium HTTPS tests loaded twelve faction bodies, real combat, moving fire and 
 
 `browser.json`, `../infantry-test/public-browser.json`, and the adjacent PNGs contain actual published-build evidence. The initial Chromium run had no page exceptions or failed requests. Its cloud software-renderer sample at 4× simulation speed was 34.6–55.0 FPS (median 40.9 across 97 samples); navigation to ready was 2.843 seconds. These are that run's HTTPS/cloud observations, not iPhone or mobile-network benchmarks. Measured JS heap was 25.2 MB used / 60.9 MB allocated at the collection point; it excludes GPU texture allocations and does not establish peak process memory. Final retests, if changed, are authoritative in the JSON.
 
-Atlas files total 4,825,096 bytes including opt-in Suit. Default faction sheets are 4,500,398 bytes with an RGBA8 allocation estimate of 133,693,440 bytes (127.5 MiB); Suit adds 324,698 transfer bytes and 11,796,480 decoded bytes. These estimates exclude mipmaps, driver/browser overhead, framebuffers and source-model inspection. Manual source models/patches total about 60 MiB on disk and load only when explicitly requested, one model/context at a time. The complete deploy artifact is about 42 MiB compressed because it includes those optional originals, not just gameplay textures. WebP integrity and unclipped/nonempty cells pass the atlas compressor's checks.
+Atlas files total 4,857,424 bytes including opt-in Suit. Default faction sheets are 4,532,726 bytes with an RGBA8 allocation estimate of 133,693,440 bytes (127.5 MiB); Suit adds 324,698 transfer bytes and 11,796,480 decoded bytes. These estimates exclude mipmaps, driver/browser overhead, framebuffers and source-model inspection. Manual source models/patches total about 60 MiB on disk and load only when explicitly requested, one model/context at a time. The complete deploy artifact is about 42 MiB compressed because it includes those optional originals, not just gameplay textures. WebP integrity and unclipped/nonempty cells pass the atlas compressor's checks.
 
 Final movement integration uses the actual Suit walk root velocity (0.9091894575 m/s) times its native duration as the walk stride, and the preserved SR leg-length scale for Suit sprint (2.10388290096 m/cycle), instead of borrowing original-rig strides. Manual inspection applies retained controller travel to its own carrier and follows it with the inspection camera, keeping contact calculations in their expected world frame. This does not move any battle soldier or change speed/AI. `rig-tests.json` records extracted native velocities; no new gait/retarget was created.
 
 Desktop WebKit 26 was downloaded successfully, but launching is blocked by seven missing host libraries (`webkit.json`). The scoped system-package helper is absent, so no system configuration was changed. **Physical iPhone Safari, sustained hardware FPS, thermals and memory-pressure behavior remain unverified.** The low-memory legacy start remains available and verified. No tactical pause, path drawing, patrol AI or combat-map geometry is introduced.
+
+## Run this build locally
+
+```sh
+npm ci
+npm run dev:infantry
+# or build a standalone artifact with the consolidated test as its root:
+npm run build:complete-infantry
+npm run preview:infantry
+```
+
+Development entry is `/infantry-test.html`; production preview root is `dist-infantry/index.html`. `?model=suit` explicitly selects partial external Suit support, while `?quality=legacy` skips every infantry atlas. The unchanged original source `index.html` is retained. Runtime code tested and deployed is commit `987218b39d95b887e41d4f8ece7b63517c35a0df`; later delivery commits add reports/test tooling and these launch aliases without changing runtime assets.
+
+The final Start composition uses the preserved lower clip's 0.6-second duration, rather than the 1.2-second walking upper layer's period. Only Start atlas cells were recomposed; other source motions and other atlas cells are preserved. Manual Start/Stop finish on their lower transition clip and return to locomotion/idle without an extra upper-loop hold. This is a playback/composition correction, not newly authored motion.

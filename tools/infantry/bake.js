@@ -21,7 +21,7 @@ const originalSequences={
  TurnRight:['Turn_Right','Upper_Turn_Right',8,'once'],
 };
 const width=80,height=96,cols=16;
-window.bakeFaction=async (faction,lmg=false,anchorsOnly=false)=>{
+window.bakeFaction=async (faction,lmg=false,anchorsOnly=false,onlyAction=null)=>{
  const suit=faction==='TacticalSuit',sequences=suit?{Idle:['SU_Project_Idle_Rifle',null,4],Walk:['SU_Quaternius_Walk_Rifle',null,16],Sprint:['SU_Project_TacticalSprint_Rifle',null,16]}:originalSequences;
  const gltf=await new GLTFLoader().loadAsync(suit?'/assets-3d/phase2-crouch/models/TacticalSuit_Phase2.glb':`/assets-3d/sprint-rebuild/models/${faction}_SprintReview.glb`);
  if(suit){const adapter=new InfantryAnimator(gltf.scene,gltf.animations,'TacticalSuit');gltf.animations=[...adapter.clips.values()];gltf.strides={Walk:adapter.velocities.SU_Quaternius_Walk_Rifle.length()*gltf.animations.find(c=>c.name==='SU_Quaternius_Walk_Rifle').duration,Sprint:2.4*.876617875398629};adapter.mixer.stopAllAction();adapter.mixer.uncacheRoot(gltf.scene);}
@@ -47,9 +47,10 @@ window.bakeFaction=async (faction,lmg=false,anchorsOnly=false)=>{
    const count=lmg?Math.max(4,originalCount/2):originalCount;
    mixer.stopAllAction();
    const lower=mixer.clipAction(clips.get(lo)).reset().play(),upper=up?mixer.clipAction(clips.get(up)).reset().play():null;
-   const duration=kind==='once'?clips.get(up==='FB_LowReady_Upper'?lo:up).duration:clips.get(lo).duration;
+   const duration=kind==='once'?clips.get(up==='FB_LowReady_Upper'||name==='Start'?lo:up).duration:clips.get(lo).duration;
    if(kind==='recoil')recoil.reset().play();
    manifest.sequences[name]={offset,count,duration,lower:lo,upper:up,loop:kind!=='once',...(suit&&gltf.strides[name]?{strideM:gltf.strides[name]}:{})};
+   if(onlyAction&&name!==onlyAction){offset+=count;continue;}
    for(let frame=0;frame<count;frame++){
     const t=duration*frame/(kind==='once'?count-1:count);
     lower.time=Math.min(t,clips.get(lo).duration-.0001);if(upper)upper.time=kind==='once'?Math.min(t,clips.get(up).duration-.0001):t/clips.get(lo).duration*clips.get(up).duration;

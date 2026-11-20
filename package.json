@@ -19,7 +19,9 @@
     "bake:infantry": "node tools/infantry/bake.mjs",
     "test:infantry": "node scripts/validate-infantry.mjs",
     "test:complete-infantry": "node test/complete-infantry.test.js && node scripts/test-complete-rigs.mjs && node scripts/validate-infantry.mjs",
-    "build:complete-infantry": "npm run build:infantry"
+    "build:complete-infantry": "npm run build:infantry",
+    "dev:infantry": "vite --host 0.0.0.0 --open /infantry-test.html",
+    "preview:infantry": "vite preview --host 0.0.0.0 --outDir dist-infantry --base /"
   },
   "dependencies": {
     "phaser": "^3.90.0"

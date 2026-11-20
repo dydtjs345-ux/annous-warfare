@@ -1,0 +1,18 @@
+{
+  "method": "HTTPS Chromium desktop software renderer; 4x simulation speed",
+  "physicalIPhone": false,
+  "loadWallMs": 3147,
+  "fpsMin": 35.84903969384921,
+  "fpsMedian": 37.46230355704573,
+  "fpsMax": 57.778588364034356,
+  "sampleCount": 97,
+  "jsHeap": {
+    "usedJSHeap": 30977092,
+    "totalJSHeap": 75019960
+  },
+  "pageErrors": [],
+  "failedRequests": [],
+  "atlasTransferBytesIncludingOptionalSuit": 4857424,
+  "decodedAtlasBytesIncludingOptionalSuit": 145489920,
+  "twelveInitialBodies": 12
+}

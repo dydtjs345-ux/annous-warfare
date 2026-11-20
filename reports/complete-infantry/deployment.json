@@ -1,0 +1,19 @@
+{
+  "id": "appgdep_6aff978b16608191afa167a899d3419f",
+  "project_id": "appgprj_6aff906bddfc8191b30571f864cf78f1",
+  "title": "Autonomous Warfare · 통합 보병 6v6",
+  "version_id": "appgprj_6aff906bddfc8191b30571f864cf78f1~appgver_4466b97cbc4c8191840ea68dab1a2d16",
+  "type": "publish",
+  "status": "succeeded",
+  "url": "https://autonomous-warfare-complete-infantry.companionablejellyfish2.chatgpt.site",
+  "has_mcp": false,
+  "screenshot_asset_pointer": null,
+  "provider_deployment_id": "release---6aff94f28ac081918db3860230bdfabb",
+  "failure_message": null,
+  "env_set_revision": 0,
+  "updated_at": "2026-11-20T00:43:04.229059+00:00",
+  "codeCommit": "987218b39d95b887e41d4f8ece7b63517c35a0df",
+  "siteSourceCommit": "c4b8e9ed6756153b49ad67e95410c3408df250fb",
+  "githubMainPreserved": "b381e6017d01fa34f14e889ff639347db9e5feae",
+  "access": "owner-private; service authorization used only for QA"
+}

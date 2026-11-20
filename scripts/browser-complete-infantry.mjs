@@ -5,6 +5,7 @@ const out='reports/complete-infantry';await mkdir(out,{recursive:true});const br
 const report={url:origin,physicalIPhone:false,desktopSoftwareRenderer:true,profiles:[]};
 try{const page=await browser.newPage({viewport:{width:1100,height:950},deviceScaleFactor:1}),errors=[],failed=[];page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push({url:r.url(),error:r.failure()}));
 if(process.env.AW_SITE_AUTH)await page.route(origin+'**',route=>route.continue({headers:{...route.request().headers(),'OAI-Sites-Authorization':'Bearer '+process.env.AW_SITE_AUTH}}));
+await page.goto(origin+'build-info.json');report.build=JSON.parse(await page.locator('body').innerText());if(process.env.AW_EXPECTED_COMMIT)assert.equal(report.build.sourceCommit,process.env.AW_EXPECTED_COMMIT);
 await page.goto(origin+'?seed=7');await page.waitForFunction(()=>window.awSnapshot?.().infantry?.units.length===12,{timeout:60000});await page.locator('#pause').click();
 await page.locator('#focus').click();await page.locator('#focus').click();await page.waitForTimeout(300);
 const before=await page.evaluate(()=>awSnapshot());assert.equal(before.units.length,12);report.overviewRenderedSoldiers=before.infantry.units.filter(s=>s.visible).length;report.overview=before.view;

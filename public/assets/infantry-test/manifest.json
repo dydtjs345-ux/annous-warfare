@@ -103,7 +103,7 @@
         "Start": {
           "offset": 132,
           "count": 8,
-          "duration": 1.2000000476837158,
+          "duration": 0.6000000238418579,
           "lower": "Start_Walk",
           "upper": "FB_Walk_Upper",
           "loop": false
@@ -10772,7 +10772,7 @@
         "Start": {
           "offset": 132,
           "count": 8,
-          "duration": 1.2000000476837158,
+          "duration": 0.6000000238418579,
           "lower": "Start_Walk",
           "upper": "FB_Walk_Upper",
           "loop": false
@@ -21441,7 +21441,7 @@
         "Start": {
           "offset": 72,
           "count": 4,
-          "duration": 1.2000000476837158,
+          "duration": 0.6000000238418579,
           "lower": "Start_Walk",
           "upper": "FB_Walk_Upper",
           "loop": false
@@ -21598,7 +21598,7 @@
         "Start": {
           "offset": 72,
           "count": 4,
-          "duration": 1.2000000476837158,
+          "duration": 0.6000000238418579,
           "lower": "Start_Walk",
           "upper": "FB_Walk_Upper",
           "loop": false
