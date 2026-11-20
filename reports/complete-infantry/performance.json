@@ -1,14 +1,14 @@
 {
   "method": "HTTPS Chromium desktop software renderer; 4x simulation speed",
   "physicalIPhone": false,
-  "loadWallMs": 2740,
-  "fpsMin": 22.825404675403735,
-  "fpsMedian": 35.618560832049596,
-  "fpsMax": 57.41403593759802,
+  "loadWallMs": 2618,
+  "fpsMin": 36.521897921295306,
+  "fpsMedian": 39.047183640531635,
+  "fpsMax": 58.21080318588638,
   "sampleCount": 97,
   "jsHeap": {
-    "usedJSHeap": 23489388,
-    "totalJSHeap": 60864184
+    "usedJSHeap": 38418508,
+    "totalJSHeap": 67155640
   },
   "pageErrors": [],
   "failedRequests": [],

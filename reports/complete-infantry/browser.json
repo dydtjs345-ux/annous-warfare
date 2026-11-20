@@ -2,10 +2,59 @@
   "url": "https://autonomous-warfare-complete-infantry.companionablejellyfish2.chatgpt.site/",
   "physicalIPhone": false,
   "desktopSoftwareRenderer": true,
-  "profiles": [],
+  "profiles": [
+    {
+      "profile": "USMC",
+      "states": [
+        "Start",
+        "Stop",
+        "Reload",
+        "MovingFire",
+        "CrouchWalk",
+        "CrawlTorsoReview",
+        "IdleToSprint"
+      ],
+      "renderedFrames": "50"
+    },
+    {
+      "profile": "Russian",
+      "states": [
+        "Aim",
+        "Reload",
+        "ProneFire"
+      ],
+      "renderedFrames": "23"
+    },
+    {
+      "profile": "TacticalSuit",
+      "states": [
+        "Walk",
+        "TacticalSprint",
+        "EmergencyRetreat",
+        "CrouchWalk"
+      ],
+      "renderedFrames": "27"
+    },
+    {
+      "profile": "CoverM16",
+      "states": [
+        "M16A4_Stand_LeftFire",
+        "M16A4_Crouch_LowFire"
+      ],
+      "renderedFrames": "22"
+    },
+    {
+      "profile": "CoverAK",
+      "states": [
+        "AK74M_Stand_RightFire",
+        "AK74M_Crouch_LowFire"
+      ],
+      "renderedFrames": "23"
+    }
+  ],
   "build": {
     "branch": "integration/complete-infantry-visual-system",
-    "sourceCommit": "c8a3c2d82ce11d1a4dd5ed6472b771382396e428",
+    "sourceCommit": "fa100352aba43c3da46dbc01ff5cea11be926e03",
     "simulationBase": "b381e6017d01fa34f14e889ff639347db9e5feae",
     "modelSource": "66d3892",
     "build": "infantry-6v6-test",
@@ -18,5 +67,11 @@
     "width": 2022,
     "height": 1267,
     "zoom": 0.544
-  }
+  },
+  "startStopReturnAtSourceDuration": true,
+  "manualDoesNotMutatePausedCombat": true,
+  "suitVisibleUnits": 5,
+  "errors": [],
+  "failedRequests": [],
+  "passed": true
 }

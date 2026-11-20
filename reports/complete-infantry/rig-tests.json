@@ -311,6 +311,20 @@
             "Lower_Idle",
             "Weapon_Lower"
           ]
+        },
+        {
+          "state": "Start",
+          "clips": [
+            "FB_Walk_Upper",
+            "Start_Walk"
+          ]
+        },
+        {
+          "state": "Stop",
+          "clips": [
+            "FB_LowReady_Upper",
+            "Stop_Walk"
+          ]
         }
       ],
       "rootVelocities": {},
@@ -626,6 +640,20 @@
           "clips": [
             "Lower_Idle",
             "Weapon_Lower"
+          ]
+        },
+        {
+          "state": "Start",
+          "clips": [
+            "FB_Walk_Upper",
+            "Start_Walk"
+          ]
+        },
+        {
+          "state": "Stop",
+          "clips": [
+            "FB_LowReady_Upper",
+            "Stop_Walk"
           ]
         }
       ],
